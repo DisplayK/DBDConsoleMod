@@ -4,14 +4,14 @@ The Console Mod for Dead by Daylight, intended to be used only on the Private Se
 **Works on DBD 5.7.2 and 5.6.2**
 
 Notable Features:
- • Execute commands. (duh)
- • Press V to enable flying.
- • Possess other characters in the game.
- • Change survivors healthstates at will in the Players tab.
- • Set any of 695 gameplay tags, including on other players/bots, in the players tab.
- • Change the speed of the game with the "timedilation" command.
- • Spawn any item in the players tab.
- • Etc.
+- Execute commands. (duh)
+- Press V to enable flying.
+- Possess other characters in the game.
+- Change survivors healthstates at will in the Players tab.
+- Set any of 695 gameplay tags, including on other players/bots, in the players tab.
+- Change the speed of the game with the "timedilation" command.
+- Spawn any item in the players tab.
+- Etc.
 
 Press F10 to open the console window.
 
