@@ -29,6 +29,8 @@ Add these folders to your "Never cook rules" in your project settings;
 
 Alternatively, add the entire DisplayK folder to your never cook rules.
 
+The Console Mod is primarily developed in Unreal Engine 4.25, the 4.27 part of the project is just widget animations at this time.
+
 ## How to use the modloader:
 
 >"The Mod Loader will automatically spawn Actors from following locations
