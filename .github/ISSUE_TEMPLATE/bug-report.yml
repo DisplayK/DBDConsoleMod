@@ -24,8 +24,6 @@ body:
     id: issuedesc
     attributes:
       label: Issue Description
-      description: Describe the issue.
-      placeholder: ...
-      value: "..."
+      description: Describe the issue
     validations:
       required: true
