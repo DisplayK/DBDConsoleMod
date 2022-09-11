@@ -12,6 +12,7 @@ body:
       options:
         - 5.7.2
         - 5.6.2
+        - Both
   - type: input
     id: modversion
     attributes:
