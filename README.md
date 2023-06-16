@@ -18,9 +18,10 @@ Press F10 to open the console window.
 ## Project instructions
 The project no longer uses UE4.25
 
-Righ click the "DeadByDaylight.uproject" file and select "Generate visual studio project files"
-Open "DeadByDaylight.sln" with Visual Studio
-In the "Solution Explorer", under "Game", right click "DeadByDaylight" and select build
+- Righ click the "DeadByDaylight.uproject" file and select "Generate visual studio project files"
+- Open "DeadByDaylight.sln" with Visual Studio
+- In the "Solution Explorer", under "Game", right click "DeadByDaylight" and select build
+
 After it has completed the project is installed and can be opened in UE4.27.2
 
 ## How to use the modloader:
