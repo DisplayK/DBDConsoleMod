@@ -1,12 +1,6 @@
 #include "BloodOrbOverlapRevealToKiller.h"
 
-class UTimerObject;
+UBloodOrbOverlapRevealToKiller::UBloodOrbOverlapRevealToKiller()
+{
 
-UTimerObject* UBloodOrbOverlapRevealToKiller::GetRevealTimer() const {
-    return NULL;
 }
-
-UBloodOrbOverlapRevealToKiller::UBloodOrbOverlapRevealToKiller() {
-    this->_revealTimer = NULL;
-}
-

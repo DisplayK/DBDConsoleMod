@@ -1,5 +1,7 @@
 #include "AccessKey.h"
 
-FAccessKey::FAccessKey() {
+FAccessKey::FAccessKey()
+{
+	this->KeyId = TEXT("");
+	this->Key = TEXT("");
 }
-

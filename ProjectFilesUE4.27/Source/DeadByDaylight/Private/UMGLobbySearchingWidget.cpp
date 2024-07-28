@@ -1,28 +1,36 @@
 #include "UMGLobbySearchingWidget.h"
+#include "TooltipPressedData.h"
+#include "ECurrencyType.h"
 
+void UUMGLobbySearchingWidget::OnRankTooltipTriggered(const FTooltipPressedData& tooltipPressedData)
+{
 
-
-void UUMGLobbySearchingWidget::OnRankTooltipTriggered(const FTooltipPressedData& tooltipPressedData) {
 }
 
-void UUMGLobbySearchingWidget::OnLevelTooltipTriggered(const FTooltipPressedData& tooltipPressedData) {
+void UUMGLobbySearchingWidget::OnLevelTooltipTriggered(const FTooltipPressedData& tooltipPressedData)
+{
+
 }
 
-void UUMGLobbySearchingWidget::OnCurrencyTooltipTriggered(const FTooltipPressedData& tooltipPressedData, ECurrencyType currencyType) {
+void UUMGLobbySearchingWidget::OnCurrencyTooltipTriggered(const FTooltipPressedData& tooltipPressedData, ECurrencyType currencyType)
+{
+
 }
 
-void UUMGLobbySearchingWidget::HandleLeaveButtonClicked() {
+void UUMGLobbySearchingWidget::HandleLeaveButtonClicked()
+{
+
 }
 
-UUMGLobbySearchingWidget::UUMGLobbySearchingWidget() {
-    this->BankAndPlayerInfoWidget = NULL;
-    this->ItemOrPowerText = FText::FromString(TEXT("POWERS"));
-    this->AddonText = FText::FromString(TEXT("ADD-ONS"));
-    this->OfferingText = FText::FromString(TEXT("OFFERINGS"));
-    this->PerksText = FText::FromString(TEXT("PERKS"));
-    this->TextWaitingForPlayers = FText::FromString(TEXT("WAITING FOR PLAYERS"));
-    this->TextEstimatedTimeTitle = FText::FromString(TEXT("ESTIMATED TIME"));
-    this->ButtonCancelSearching = NULL;
-    this->PartySlots = NULL;
+UUMGLobbySearchingWidget::UUMGLobbySearchingWidget()
+{
+	this->BankAndPlayerInfoWidget = NULL;
+	this->ItemOrPowerText = FText::GetEmpty();
+	this->AddonText = FText::GetEmpty();
+	this->OfferingText = FText::GetEmpty();
+	this->PerksText = FText::GetEmpty();
+	this->TextWaitingForPlayers = FText::GetEmpty();
+	this->TextEstimatedTimeTitle = FText::GetEmpty();
+	this->ButtonCancelSearching = NULL;
+	this->PartySlots = NULL;
 }
-

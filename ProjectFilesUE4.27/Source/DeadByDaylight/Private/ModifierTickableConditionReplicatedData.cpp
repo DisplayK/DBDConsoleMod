@@ -1,7 +1,8 @@
 #include "ModifierTickableConditionReplicatedData.h"
 
-FModifierTickableConditionReplicatedData::FModifierTickableConditionReplicatedData() {
-    this->HasCondition = false;
-    this->AuthorityDataSet = false;
+FModifierTickableConditionReplicatedData::FModifierTickableConditionReplicatedData()
+{
+	this->Conditions = TArray<UBaseModifierCondition*>();
+	this->HasCondition = false;
+	this->AuthorityDataSet = false;
 }
-

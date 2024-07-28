@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "WalletHandlerMock.generated.h"
 
 UCLASS()
-class UWalletHandlerMock : public UObject {
-    GENERATED_BODY()
+class UWalletHandlerMock : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UWalletHandlerMock();
+	UWalletHandlerMock();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UWalletHandlerMock) { return 0; }

@@ -1,14 +1,19 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkWaapiUri.generated.h"
 
 USTRUCT(BlueprintType)
-struct AKAUDIO_API FAkWaapiUri {
-    GENERATED_BODY()
+struct FAkWaapiUri
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FString Uri;
-    
-    FAkWaapiUri();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FString Uri;
+
+public:
+	AKAUDIO_API FAkWaapiUri();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkWaapiUri) { return 0; }

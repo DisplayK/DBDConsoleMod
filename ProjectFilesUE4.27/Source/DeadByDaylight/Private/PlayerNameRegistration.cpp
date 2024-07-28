@@ -1,5 +1,6 @@
 #include "PlayerNameRegistration.h"
 
-UPlayerNameRegistration::UPlayerNameRegistration() {
-}
+UPlayerNameRegistration::UPlayerNameRegistration()
+{
 
+}

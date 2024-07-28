@@ -1,22 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EProviderFlag.generated.h"
 
 UENUM()
-enum class EProviderFlag : uint32 {
-    None,
-    Google,
-    DMM,
-    Facebook = 0x4,
-    Nintendo = 0x8,
-    PSN = 0x10,
-    Steam = 0x20,
-    WinGDK = 0x40,
-    Xbox = 0x80,
-    Apple = 0x100,
-    Kraken = 0x200,
-    Stadia = 0x800,
-    GAS3 = 0x4000,
-    Epic = 0x8000,
+enum class EProviderFlag : int64
+{
+	None,
+	Google,
+	DMM,
+	Facebook = 4,
+	Nintendo = 8,
+	PSN = 16,
+	Steam = 32,
+	WinGDK = 64,
+	Xbox = 128,
+	Apple = 256,
+	Kraken = 512,
+	Stadia = 2048,
+	GAS3 = 16384,
+	Epic = 32768,
 };
-

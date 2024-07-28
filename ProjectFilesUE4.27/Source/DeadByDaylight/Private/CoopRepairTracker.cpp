@@ -2,13 +2,17 @@
 
 class ADBDPlayer;
 
-void UCoopRepairTracker::SetHasEverCoopRepaired(const ADBDPlayer* player) {
+void UCoopRepairTracker::SetHasEverCoopRepaired(const ADBDPlayer* player)
+{
+
 }
 
-bool UCoopRepairTracker::HasEverCoopRepaired(const ADBDPlayer* player) const {
-    return false;
+bool UCoopRepairTracker::HasEverCoopRepaired(const ADBDPlayer* player) const
+{
+	return false;
 }
 
-UCoopRepairTracker::UCoopRepairTracker() {
+UCoopRepairTracker::UCoopRepairTracker()
+{
+	this->_coopRepairerHistory = TArray<ADBDPlayer*>();
 }
-

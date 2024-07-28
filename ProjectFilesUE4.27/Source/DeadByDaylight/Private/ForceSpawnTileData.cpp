@@ -1,8 +1,9 @@
 #include "ForceSpawnTileData.h"
 
-FForceSpawnTileData::FForceSpawnTileData() {
-    this->matrixX = 0;
-    this->matrixY = 0;
-    this->rotation = 0;
+FForceSpawnTileData::FForceSpawnTileData()
+{
+	this->name = TEXT("");
+	this->matrixX = 0;
+	this->matrixY = 0;
+	this->rotation = 0;
 }
-

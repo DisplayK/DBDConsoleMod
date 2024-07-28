@@ -1,32 +1,35 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UMGBaseButtonWidget.h"
 #include "UMGAtlantaMatchConfigPageScrollItem.generated.h"
 
-class UImage;
 class UCanvasPanel;
+class UImage;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGAtlantaMatchConfigPageScrollItem : public UUMGBaseButtonWidget {
-    GENERATED_BODY()
-public:
+class UUMGAtlantaMatchConfigPageScrollItem : public UUMGBaseButtonWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export)
-    UCanvasPanel* ImagePanel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export)
-    UCanvasPanel* DefaultPanel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export)
-    UImage* DefaultImage;
-    
-    UPROPERTY(BlueprintReadWrite)
-    float _unselectedOpacity;
-    
-    UPROPERTY(BlueprintReadWrite)
-    float _selectedOpacity;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCanvasPanel* ImagePanel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCanvasPanel* DefaultPanel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UImage* DefaultImage;
+
+	UPROPERTY(BlueprintReadWrite)
+	float _unselectedOpacity;
+
+	UPROPERTY(BlueprintReadWrite)
+	float _selectedOpacity;
+
 public:
-    UUMGAtlantaMatchConfigPageScrollItem();
+	UUMGAtlantaMatchConfigPageScrollItem();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlantaMatchConfigPageScrollItem) { return 0; }

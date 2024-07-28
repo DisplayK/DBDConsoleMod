@@ -1,6 +1,6 @@
 #include "ChainsawHitWithPowerCharge.h"
 
-FChainsawHitWithPowerCharge::FChainsawHitWithPowerCharge() {
-    this->NumPowerCharges = 0;
+FChainsawHitWithPowerCharge::FChainsawHitWithPowerCharge()
+{
+	this->NumPowerCharges = 0;
 }
-

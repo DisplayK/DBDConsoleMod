@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
 #include "EBloodchestType.h"
@@ -6,24 +7,28 @@
 #include "BloodwebChest.generated.h"
 
 USTRUCT(BlueprintType)
-struct FBloodwebChest : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FBloodwebChest: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName ID;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName EventID;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EBloodchestType ChestType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EItemRarity Rarity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<float> GivenItemRarity;
-    
-    DEADBYDAYLIGHT_API FBloodwebChest();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName ID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName EventID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EBloodchestType ChestType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EItemRarity Rarity;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<float> GivenItemRarity;
+
+public:
+	DEADBYDAYLIGHT_API FBloodwebChest();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FBloodwebChest) { return 0; }

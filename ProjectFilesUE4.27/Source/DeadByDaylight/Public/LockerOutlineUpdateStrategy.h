@@ -1,16 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "SourceBasedOutlineUpdateStrategy.h"
 #include "UObject/NoExportTypes.h"
+#include "SourceBasedOutlineUpdateStrategy.h"
 #include "LockerOutlineUpdateStrategy.generated.h"
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API ULockerOutlineUpdateStrategy : public USourceBasedOutlineUpdateStrategy {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API ULockerOutlineUpdateStrategy : public USourceBasedOutlineUpdateStrategy
+{
+	GENERATED_BODY()
+
 public:
-    ULockerOutlineUpdateStrategy();
-    UFUNCTION(BlueprintPure)
-    FLinearColor GetRedColor() const;
-    
+	UFUNCTION(BlueprintPure)
+	FLinearColor GetRedColor() const;
+
+public:
+	ULockerOutlineUpdateStrategy();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ULockerOutlineUpdateStrategy) { return 0; }

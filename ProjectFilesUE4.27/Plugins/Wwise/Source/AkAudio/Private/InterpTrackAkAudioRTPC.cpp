@@ -1,23 +1,8 @@
 #include "InterpTrackAkAudioRTPC.h"
 
-UInterpTrackAkAudioRTPC::UInterpTrackAkAudioRTPC() {
-    this->bPlayOnReverse = false;
-    this->bContinueRTPCOnMatineeEnd = false;
-}
-
-const FString UInterpTrackAkAudioRTPC::GetEdHelperClassName() const
+UInterpTrackAkAudioRTPC::UInterpTrackAkAudioRTPC()
 {
-    return TEXT("UnrealEd.InterpTrackHelper");
+	this->Param = TEXT("");
+	this->bPlayOnReverse = false;
+	this->bContinueRTPCOnMatineeEnd = false;
 }
-
-const FString UInterpTrackAkAudioRTPC::GetSlateHelperClassName() const
-{
-    return TEXT("Matinee.InterpTrackHelper");
-}
-
-#if WITH_EDITORONLY_DATA
-UTexture2D* UInterpTrackAkAudioRTPC::GetTrackIcon() const
-{
-    return TrackIcon;
-}
-#endif

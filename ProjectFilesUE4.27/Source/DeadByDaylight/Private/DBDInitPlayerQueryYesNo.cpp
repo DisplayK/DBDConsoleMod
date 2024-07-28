@@ -1,5 +1,6 @@
 #include "DBDInitPlayerQueryYesNo.h"
 
-UDBDInitPlayerQueryYesNo::UDBDInitPlayerQueryYesNo() {
-}
+UDBDInitPlayerQueryYesNo::UDBDInitPlayerQueryYesNo()
+{
 
+}

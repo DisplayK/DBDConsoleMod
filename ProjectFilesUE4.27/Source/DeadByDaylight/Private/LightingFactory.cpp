@@ -1,5 +1,6 @@
 #include "LightingFactory.h"
 
-ULightingFactory::ULightingFactory() {
+ULightingFactory::ULightingFactory()
+{
+	this->_data = NULL;
 }
-

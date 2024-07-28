@@ -1,6 +1,7 @@
 #include "AISkillPerk.h"
 
-FAISkillPerk::FAISkillPerk() {
-    this->Skill = NULL;
+FAISkillPerk::FAISkillPerk()
+{
+	this->PerkID = FDataTableDropdown{};
+	this->Skill = NULL;
 }
-

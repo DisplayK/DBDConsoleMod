@@ -1,6 +1,7 @@
 #include "CustomSoundFXData.h"
 
-FCustomSoundFXData::FCustomSoundFXData() {
-    this->AudioCategory = EAudioCustomizationCategory::AudioCharacterName;
+FCustomSoundFXData::FCustomSoundFXData()
+{
+	this->AudioCategory = EAudioCustomizationCategory::AudioCharacterName;
+	this->SwitchState = TEXT("");
 }
-

@@ -1,5 +1,6 @@
 #include "BabysitterEffect.h"
 
-UBabysitterEffect::UBabysitterEffect() {
-}
+UBabysitterEffect::UBabysitterEffect()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "DBDPerPlatformFloat.h"
 
-FDBDPerPlatformFloat::FDBDPerPlatformFloat() {
+FDBDPerPlatformFloat::FDBDPerPlatformFloat()
+{
+	this->Value = FPerPlatformFloat{};
 }
-

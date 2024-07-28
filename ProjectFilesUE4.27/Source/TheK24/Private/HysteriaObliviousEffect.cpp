@@ -1,5 +1,6 @@
 #include "HysteriaObliviousEffect.h"
 
-UHysteriaObliviousEffect::UHysteriaObliviousEffect() {
-}
+UHysteriaObliviousEffect::UHysteriaObliviousEffect()
+{
 
+}

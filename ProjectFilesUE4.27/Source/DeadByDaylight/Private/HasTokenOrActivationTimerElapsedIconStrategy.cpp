@@ -1,5 +1,6 @@
 #include "HasTokenOrActivationTimerElapsedIconStrategy.h"
 
-UHasTokenOrActivationTimerElapsedIconStrategy::UHasTokenOrActivationTimerElapsedIconStrategy() {
-}
+UHasTokenOrActivationTimerElapsedIconStrategy::UHasTokenOrActivationTimerElapsedIconStrategy()
+{
 
+}

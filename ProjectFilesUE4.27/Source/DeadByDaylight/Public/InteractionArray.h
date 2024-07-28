@@ -1,18 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "InteractionArray.generated.h"
 
 class UInteractionDefinition;
 
 USTRUCT(BlueprintType)
-struct DEADBYDAYLIGHT_API FInteractionArray {
-    GENERATED_BODY()
-public:
+struct FInteractionArray
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    TArray<TWeakObjectPtr<UInteractionDefinition>> _interactions;
-    
+	UPROPERTY(Transient, Export)
+	TArray<TWeakObjectPtr<UInteractionDefinition>> _interactions;
+
 public:
-    FInteractionArray();
+	DEADBYDAYLIGHT_API FInteractionArray();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FInteractionArray) { return 0; }

@@ -1,5 +1,6 @@
 #include "CamperStateMachine.h"
 
-UCamperStateMachine::UCamperStateMachine() {
-}
+UCamperStateMachine::UCamperStateMachine()
+{
 
+}

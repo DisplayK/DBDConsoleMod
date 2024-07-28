@@ -1,5 +1,6 @@
 #include "MockAuthoritativeActorPoolComponent.h"
 
-UMockAuthoritativeActorPoolComponent::UMockAuthoritativeActorPoolComponent() {
-}
+UMockAuthoritativeActorPoolComponent::UMockAuthoritativeActorPoolComponent()
+{
 
+}

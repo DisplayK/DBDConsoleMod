@@ -1,21 +1,29 @@
 #include "ScreamComponent.h"
+#include "MontagePlaybackDefinition.h"
+#include "ECamperDamageState.h"
 
-class UAkAudioEvent;
-
-bool UScreamComponent::PlayScreamSoundAndAnimation(UAkAudioEvent* audioEvent, bool fireLoudNoiseEvent, FMontagePlaybackDefinition montageDefinition, float audibleRange) {
-    return false;
+bool UScreamComponent::TriggerScreamEventsIfPossible(bool fireLoudNoiseEvent, float audibleRange)
+{
+	return false;
 }
 
-bool UScreamComponent::PlayScreamSound(UAkAudioEvent* audioEvent, bool fireLoudNoiseEvent, float audibleRange) {
-    return false;
+bool UScreamComponent::TriggerScreamEventsAndAndAnimationIfPossible(bool fireLoudNoiseEvent, FMontagePlaybackDefinition montageDefinition, float audibleRange)
+{
+	return false;
 }
 
-bool UScreamComponent::CanScream() const {
-    return false;
+void UScreamComponent::OnDamageStateChanged(ECamperDamageState oldDamageState, ECamperDamageState newDamageState)
+{
+
 }
 
-UScreamComponent::UScreamComponent() {
-    this->_perkManager = NULL;
-    this->_montagePlayer = NULL;
+bool UScreamComponent::CanScream() const
+{
+	return false;
 }
 
+UScreamComponent::UScreamComponent()
+{
+	this->_perkManager = NULL;
+	this->_montagePlayer = NULL;
+}

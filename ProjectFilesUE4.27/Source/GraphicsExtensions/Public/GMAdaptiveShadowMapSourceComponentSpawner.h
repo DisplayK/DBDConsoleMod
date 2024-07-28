@@ -1,30 +1,35 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "GMAdaptiveShadowMapSourceComponentSpawner.generated.h"
 
 UCLASS()
-class GRAPHICSEXTENSIONS_API AGMAdaptiveShadowMapSourceComponentSpawner : public AActor {
-    GENERATED_BODY()
+class GRAPHICSEXTENSIONS_API AGMAdaptiveShadowMapSourceComponentSpawner : public AActor
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bCreateASMSourceComponentOnBeginPlay;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bRemoveCastForCinematicOnlyFlagOnLights;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool bRemoveLightFunctionMaterialOnLights;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 NumLevelPerSource;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 NumPreGeneratedLevelPerSource;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
-    bool bPreviewOnly;
-    
-    AGMAdaptiveShadowMapSourceComponentSpawner();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bCreateASMSourceComponentOnBeginPlay;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bRemoveCastForCinematicOnlyFlagOnLights;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bRemoveLightFunctionMaterialOnLights;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 NumLevelPerSource;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 NumPreGeneratedLevelPerSource;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bPreviewOnly;
+
+public:
+	AGMAdaptiveShadowMapSourceComponentSpawner();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AGMAdaptiveShadowMapSourceComponentSpawner) { return 0; }

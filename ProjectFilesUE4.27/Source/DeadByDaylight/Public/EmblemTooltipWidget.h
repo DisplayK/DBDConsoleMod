@@ -1,38 +1,42 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseTooltipWidget.h"
+#include "UObject/SoftObjectPtr.h"
 #include "EmblemTooltipWidget.generated.h"
 
-class UImage;
+class UUMGTallyEmblemProgressionWidget;
 class UTextBlock;
+class UImage;
 class UVerticalBox;
 class UUMGTallyEmblemProgressBar;
-class UUMGTallyEmblemProgressionWidget;
 
 UCLASS(Abstract, EditInlineNew)
-class UEmblemTooltipWidget : public UBaseTooltipWidget {
-    GENERATED_BODY()
-public:
+class UEmblemTooltipWidget : public UBaseTooltipWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* HeaderBackground;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* SubTitleLabel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* HeaderSmoke;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UVerticalBox* DataContainer;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGTallyEmblemProgressBar* TallyEmblemProgressBar;
-    
-    UPROPERTY(EditDefaultsOnly, NoClear)
-    TSoftClassPtr<UUMGTallyEmblemProgressionWidget> ProgressionDataWidgetClass;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* HeaderBackground;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* SubTitleLabel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* HeaderSmoke;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UVerticalBox* DataContainer;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGTallyEmblemProgressBar* TallyEmblemProgressBar;
+
+	UPROPERTY(EditDefaultsOnly, NoClear)
+	TSoftClassPtr<UUMGTallyEmblemProgressionWidget> ProgressionDataWidgetClass;
+
 public:
-    UEmblemTooltipWidget();
+	UEmblemTooltipWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UEmblemTooltipWidget) { return 0; }

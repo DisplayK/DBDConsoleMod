@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "UObject/NoExportTypes.h"
@@ -7,20 +8,23 @@
 class USkeletalMeshComponent;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class ANIMATIONUTILITIES_API UBoneSocketLocalVelocityEvaluator : public UActorComponent {
-    GENERATED_BODY()
-public:
+class ANIMATIONUTILITIES_API UBoneSocketLocalVelocityEvaluator : public UActorComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
-    USkeletalMeshComponent* _meshComponent;
-    
-    UPROPERTY(EditAnywhere)
-    TArray<FName> _trackedBoneSocketNames;
-    
+	UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+	USkeletalMeshComponent* _meshComponent;
+
+	UPROPERTY(EditAnywhere)
+	TArray<FName> _trackedBoneSocketNames;
+
 public:
-    UBoneSocketLocalVelocityEvaluator();
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
-    FVector GetLocalVelocity(const FName boneSocketName) const;
-    
+	UFUNCTION(BlueprintPure, BlueprintCosmetic)
+	FVector GetLocalVelocity(const FName boneSocketName) const;
+
+public:
+	UBoneSocketLocalVelocityEvaluator();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBoneSocketLocalVelocityEvaluator) { return 0; }

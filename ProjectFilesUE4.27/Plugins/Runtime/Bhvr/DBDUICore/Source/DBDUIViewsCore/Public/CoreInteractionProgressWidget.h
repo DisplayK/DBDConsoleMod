@@ -1,28 +1,34 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "OnHemorrhageAnimationCompleteEvent.h"
 #include "InteractionProgressViewInterface.h"
-#include "CoreBaseHudWidget.h"
-#include "TutorialHighlightViewInterface.h"
 #include "StatusEffectViewData.h"
+#include "TutorialHighlightViewInterface.h"
+#include "CoreBaseHudWidget.h"
 #include "CoreInteractionProgressWidget.generated.h"
 
 class UCoreStatusEffectIcon;
 
 UCLASS(EditInlineNew)
-class UCoreInteractionProgressWidget : public UCoreBaseHudWidget, public IInteractionProgressViewInterface, public ITutorialHighlightViewInterface {
-    GENERATED_BODY()
-public:
+class UCoreInteractionProgressWidget : public UCoreBaseHudWidget, public IInteractionProgressViewInterface, public ITutorialHighlightViewInterface
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, Export)
-    TArray<UCoreStatusEffectIcon*> Proficiencies;
-    
-public:
-    UCoreInteractionProgressWidget();
+	UPROPERTY(BlueprintReadWrite, Export)
+	TArray<UCoreStatusEffectIcon*> Proficiencies;
+
+private:
+	UPROPERTY(BlueprintAssignable)
+	FOnHemorrhageAnimationCompleteEvent _hemorrhageAnimationIsCompleteDelegate;
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void SetProficiencies(const TArray<FStatusEffectViewData>& proficiencyDatas);
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintCallable)
+	void SetProficiencies(const TArray<FStatusEffectViewData>& proficiencyDatas);
+
+public:
+	UCoreInteractionProgressWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreInteractionProgressWidget) { return 0; }

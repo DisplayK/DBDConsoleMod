@@ -1,5 +1,6 @@
 #include "EscapeOutlineUpdateStrategy.h"
 
-UEscapeOutlineUpdateStrategy::UEscapeOutlineUpdateStrategy() {
-}
+UEscapeOutlineUpdateStrategy::UEscapeOutlineUpdateStrategy()
+{
 
+}

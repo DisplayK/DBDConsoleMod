@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ChargeableInteractionDefinition.h"
 #include "AnimationMontageDescriptor.h"
@@ -7,24 +8,27 @@
 class ADBDPlayer;
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class THEONI_API UStartDemonModeInteraction : public UChargeableInteractionDefinition {
-    GENERATED_BODY()
-public:
+class THEONI_API UStartDemonModeInteraction : public UChargeableInteractionDefinition
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditDefaultsOnly)
-    float YawAdjustTime;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FAnimationMontageDescriptor DemonModeActivationMontage;
-    
+	UPROPERTY(EditDefaultsOnly)
+	float YawAdjustTime;
+
+	UPROPERTY(EditDefaultsOnly)
+	FAnimationMontageDescriptor DemonModeActivationMontage;
+
 public:
-    UStartDemonModeInteraction();
-    UFUNCTION(BlueprintCallable)
-    void SetPlayerOwner(const ADBDPlayer* owner);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetPlayerOwner(const ADBDPlayer* owner);
+
 private:
-    UFUNCTION()
-    void OnLevelReadyToPlay();
-    
+	UFUNCTION()
+	void OnLevelReadyToPlay();
+
+public:
+	UStartDemonModeInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UStartDemonModeInteraction) { return 0; }

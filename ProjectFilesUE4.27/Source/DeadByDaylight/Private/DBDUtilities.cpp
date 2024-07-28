@@ -1,374 +1,487 @@
 #include "DBDUtilities.h"
+#include "UObject/NoExportTypes.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Engine/EngineTypes.h"
+#include "UObject/SoftObjectPtr.h"
+#include "EPlayerRole.h"
+#include "EShadowSystem.h"
 
-class UAnimMontage;
-class USphereComponent;
+class UAkAudioBank;
 class UPrimitiveComponent;
-class AActor;
-class UAnimSequence;
 class ADBDPlayerState;
+class USphereComponent;
 class UObject;
-class UMeshComponent;
+class ADBDPlayerCameraManager;
+class ADBDAIPlayerController;
+class AActor;
 class ADBDPlayerControllerBase;
-class UAnimInstance;
-class UTileSpawnPoint;
-class AGenerator;
-class ASlasherPlayer;
-class UBoxComponent;
-class ADBDBasePlayer;
-class USkeletalMeshComponent;
 class ACamperPlayer;
+class UTileSpawnPoint;
+class UDBDGameInstance;
+class UMeshComponent;
+class UActorSpawner;
+class AGenerator;
+class ADBDPlayer;
+class ASlasherPlayer;
+class UAnimMontage;
+class UAnimInstance;
+class ADBDBasePlayer;
+class UActorComponent;
 class UWorld;
 class ADBDGameState;
-class UActorComponent;
-class ADBDPlayer;
 class UMaterialHelper;
 class UMaterialInterface;
-class ADBDPlayerCameraManager;
-class UActorSpawner;
-class ADBDGameMode;
-class UDBDGameInstance;
-class ADBDAIPlayerController;
 class AProceduralLevelBuilder;
-class UAkAudioBank;
+class UBoxComponent;
+class ADBDGameMode;
+class UAnimSequence;
 
-bool UDBDUtilities::WithinRangeExclusive(float min, float max, float value) {
-    return false;
+bool UDBDUtilities::WithinRangeExclusive(float min, float max, float value)
+{
+	return false;
 }
 
-bool UDBDUtilities::WithinRange(float min, float max, float value) {
-    return false;
+bool UDBDUtilities::WithinRange(float min, float max, float value)
+{
+	return false;
 }
 
-float UDBDUtilities::ToAngle_negative180to180(float angle) {
-    return 0.0f;
+float UDBDUtilities::ToAngle_negative180to180(float angle)
+{
+	return 0.0f;
 }
 
-bool UDBDUtilities::SphereTraceSingle(const FVector start, const FVector end, const USphereComponent* sphere, FHitResult& outHitResult, const TArray<AActor*>& ignoredActors) {
-    return false;
+bool UDBDUtilities::SphereTraceSingle(const FVector start, const FVector end, const USphereComponent* sphere, FHitResult& outHitResult, const TArray<AActor*>& ignoredActors)
+{
+	return false;
 }
 
-bool UDBDUtilities::SphereTraceAgainstActor(const FVector start, const FVector end, const USphereComponent* sphere, const AActor* actor, FHitResult& outHitResult) {
-    return false;
+bool UDBDUtilities::SphereTraceAgainstActor(const FVector start, const FVector end, const USphereComponent* sphere, const AActor* actor, FHitResult& outHitResult)
+{
+	return false;
 }
 
-void UDBDUtilities::SetComponentCastHiddenShadow(UPrimitiveComponent* component, bool castShadow) {
+void UDBDUtilities::SetComponentCastHiddenShadow(UPrimitiveComponent* component, bool castShadow)
+{
+
+}
+
+int32 UDBDUtilities::ResolveCharacterIdFromPlayerState(const ADBDPlayerState* playerState)
+{
+	return 0;
 }
 
-int32 UDBDUtilities::ResolveCharacterIdFromPlayerState(const ADBDPlayerState* playerState) {
-    return 0;
+void UDBDUtilities::PrintStringEmbiggened(UObject* WorldContextObject, const FString& InString, FLinearColor TextColor, float Duration, int32 Key, float Scale)
+{
+
 }
 
-void UDBDUtilities::PrintStringEmbiggened(UObject* WorldContextObject, const FString& InString, FLinearColor TextColor, float Duration, int32 Key, float Scale) {
+int64 UDBDUtilities::PointerToInt(UObject* obj)
+{
+	return 0;
 }
 
-int32 UDBDUtilities::PointerToInt(UObject* obj) {
-    return 0;
+bool UDBDUtilities::NormalizeXY(FVector& vector, float tolerance)
+{
+	return false;
 }
+
+void UDBDUtilities::LogString(const FString& inStr)
+{
 
-bool UDBDUtilities::NormalizeXY(FVector& vector, float tolerance) {
-    return false;
 }
 
-void UDBDUtilities::LogString(const FString& inStr) {
+void UDBDUtilities::LogMeshMaterialInfo(const FString& inStr, const UMeshComponent* root)
+{
+
 }
 
-void UDBDUtilities::LogMeshMaterialInfo(const FString& inStr, const UMeshComponent* root) {
+bool UDBDUtilities::IsSteamPIEGame(const UObject* contextObject)
+{
+	return false;
 }
 
-bool UDBDUtilities::IsServer(const UObject* worldContextObject) {
-    return false;
+bool UDBDUtilities::IsServer(const UObject* worldContextObject)
+{
+	return false;
 }
 
-bool UDBDUtilities::IsReplaceDisconnectedPlayersWithBotsActive() {
-    return false;
+bool UDBDUtilities::IsReplaceDisconnectedPlayersWithBotsActive()
+{
+	return false;
 }
 
-bool UDBDUtilities::IsNonViolent() {
-    return false;
+bool UDBDUtilities::IsNonViolent()
+{
+	return false;
 }
 
-bool UDBDUtilities::IsLocallyObservingASurvivor(const UObject* WorldContextObject) {
-    return false;
+bool UDBDUtilities::IsLocallyObservingASurvivor(const UObject* WorldContextObject)
+{
+	return false;
 }
 
-bool UDBDUtilities::IsLocallyObservingAKiller(const UObject* WorldContextObject) {
-    return false;
+bool UDBDUtilities::IsLocallyObservingAKiller(const UObject* WorldContextObject)
+{
+	return false;
 }
 
-bool UDBDUtilities::IsInTutorialLevel() {
-    return false;
+bool UDBDUtilities::IsInTutorialLevel()
+{
+	return false;
 }
 
-bool UDBDUtilities::IsInSurvivorTeam(const UObject* WorldContextObject) {
-    return false;
+bool UDBDUtilities::IsInSurvivorTeam(const UObject* WorldContextObject)
+{
+	return false;
 }
 
-bool UDBDUtilities::IsInKillerTeam(const UObject* WorldContextObject) {
-    return false;
+bool UDBDUtilities::IsInKillerTeam(const UObject* WorldContextObject)
+{
+	return false;
 }
 
-bool UDBDUtilities::HasWalkableSurfaceForward(UObject* WorldContextObject, FVector location, FVector fowardVector, float distance, float raycastStartHeight, float raycastEndHeight, TArray<FHitResult>& outHits, FVector& raycastStart) {
-    return false;
+bool UDBDUtilities::HasWalkableSurfaceForward(UObject* WorldContextObject, FVector location, FVector fowardVector, float distance, float raycastStartHeight, float raycastEndHeight, TArray<FHitResult>& outHits, FVector& raycastStart)
+{
+	return false;
 }
 
-bool UDBDUtilities::HasLineOfSightToTarget(UObject* WorldContextObject, const FVector& startPosition, const FVector& targetPosition, const AActor* ignoredActor, const bool useComplex) {
-    return false;
+bool UDBDUtilities::HasLineOfSightToTarget(UObject* WorldContextObject, const FVector& startPosition, const FVector& targetPosition, const AActor* ignoredActor, const bool useComplex, const bool useDebugLogs)
+{
+	return false;
 }
 
-bool UDBDUtilities::HasFloorForward(UObject* WorldContextObject, FVector location, FVector fowardVector, float distance, float raycastStartHeight, float raycastEndHeight, TArray<FHitResult>& outHits, FVector& raycastStart) {
-    return false;
+bool UDBDUtilities::HasFloorForward(UObject* WorldContextObject, FVector location, FVector fowardVector, float distance, float raycastStartHeight, float raycastEndHeight, TArray<FHitResult>& outHits, FVector& raycastStart)
+{
+	return false;
 }
 
-FRotator UDBDUtilities::GetYawOnly(const FRotator& rotation) {
-    return FRotator{};
+FRotator UDBDUtilities::GetYawOnly(const FRotator& rotation)
+{
+	return FRotator{};
 }
 
-FVector UDBDUtilities::GetXYVector(const FVector& vector) {
-    return FVector{};
+FVector UDBDUtilities::GetXYVector(const FVector& vector)
+{
+	return FVector{};
 }
 
-float UDBDUtilities::GetVelocityXYAngleDegrees(const AActor* actor) {
-    return 0.0f;
+float UDBDUtilities::GetVelocityXYAngleDegrees(const AActor* actor)
+{
+	return 0.0f;
 }
 
-void UDBDUtilities::GetTileSpawnPoints(TArray<UTileSpawnPoint*>& tileSpawnPoints) {
+FTimespan UDBDUtilities::GetTotalPlaytime(const UObject* worldContextObject, bool update)
+{
+	return FTimespan{};
 }
+
+void UDBDUtilities::GetTileSpawnPoints(TArray<UTileSpawnPoint*>& tileSpawnPoints)
+{
 
-TArray<AGenerator*> UDBDUtilities::GetThreeClosestGenerators(const TArray<AGenerator*>& unrevealedGenerators) {
-    return TArray<AGenerator*>();
 }
 
-float UDBDUtilities::GetSlasherTunableValue(UObject* WorldContextObject, FName valueName) {
-    return 0.0f;
+TArray<AGenerator*> UDBDUtilities::GetThreeClosestGenerators(const TArray<AGenerator*>& unrevealedGenerators)
+{
+	return TArray<AGenerator*>();
 }
 
-ASlasherPlayer* UDBDUtilities::GetSlasher(UObject* WorldContextObject) {
-    return NULL;
+float UDBDUtilities::GetSquaredDistanceToKiller(const AActor* survivor)
+{
+	return 0.0f;
 }
 
-FVector UDBDUtilities::GetSimilarVector(FVector vector, float maximumDeviation) {
-    return FVector{};
+float UDBDUtilities::GetSlasherTunableValue(UObject* WorldContextObject, FName valueName)
+{
+	return 0.0f;
 }
 
-float UDBDUtilities::GetPlayRateForMontage(UAnimMontage* montage, float time) {
-    return 0.0f;
+ASlasherPlayer* UDBDUtilities::GetSlasher(UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-float UDBDUtilities::GetPercentOfRange(const float val, const float min, const float max) {
-    return 0.0f;
+FVector UDBDUtilities::GetSimilarVector(FVector vector, float maximumDeviation)
+{
+	return FVector{};
 }
 
-ASlasherPlayer* UDBDUtilities::GetOwningSlasher(const UAnimInstance* animInstance) {
-    return NULL;
+float UDBDUtilities::GetPlayRateForMontage(UAnimMontage* montage, float time)
+{
+	return 0.0f;
 }
 
-ADBDBasePlayer* UDBDUtilities::GetOwningDBDBasePlayer(const UAnimInstance* animInstance) {
-    return NULL;
+float UDBDUtilities::GetPercentOfRange(const float val, const float min, const float max)
+{
+	return 0.0f;
 }
 
-USkeletalMeshComponent* UDBDUtilities::GetOwningCharacterSkeletalMeshComponent(const UAnimInstance* animInstance) {
-    return NULL;
+ASlasherPlayer* UDBDUtilities::GetOwningSlasher(const UAnimInstance* animInstance)
+{
+	return NULL;
 }
 
-ACamperPlayer* UDBDUtilities::GetOwningCamper(const UAnimInstance* animInstance) {
-    return NULL;
+ADBDBasePlayer* UDBDUtilities::GetOwningDBDBasePlayer(const UAnimInstance* animInstance)
+{
+	return NULL;
 }
 
-AActor* UDBDUtilities::GetOuterMostActor(const UAnimInstance* animInstance) {
-    return NULL;
+ACamperPlayer* UDBDUtilities::GetOwningCamper(const UAnimInstance* animInstance)
+{
+	return NULL;
 }
 
-void UDBDUtilities::GetNearbyCampers(UWorld* world, FVector center, float radius, TArray<ACamperPlayer*>& outNearbyCampers, const TArray<AActor*>& ignoredCampers) {
+AActor* UDBDUtilities::GetOuterMostActor(const UAnimInstance* animInstance)
+{
+	return NULL;
 }
 
-bool UDBDUtilities::GetNearbyActorsOfType(UWorld* world, FVector center, float radius, TArray<AActor*>& outNearbyActors, UClass* actorClassType, TEnumAsByte<ECollisionChannel> collisionChannel, AActor* ignoreActor) {
-    return false;
+void UDBDUtilities::GetNearbyCampers(UWorld* world, FVector center, float radius, TArray<ACamperPlayer*>& outNearbyCampers, const TArray<AActor*>& ignoredCampers)
+{
+
 }
 
-float UDBDUtilities::GetMontageLength(UAnimMontage* montage) {
-    return 0.0f;
+bool UDBDUtilities::GetNearbyActorsOfType(UWorld* world, FVector center, float radius, TArray<AActor*>& outNearbyActors, UClass* actorClassType, TEnumAsByte<ECollisionChannel> collisionChannel, AActor* ignoreActor)
+{
+	return false;
 }
 
-TArray<UMaterialHelper*> UDBDUtilities::GetMaterialHelpersAttachedToPlayerMesh(const ADBDPlayer* player) {
-    return TArray<UMaterialHelper*>();
+float UDBDUtilities::GetMontageLength(UAnimMontage* montage)
+{
+	return 0.0f;
 }
 
-FString UDBDUtilities::GetLogStringMaterialInfo(const FString& inStr, const UMaterialInterface* root) {
-    return TEXT("");
+TArray<UMaterialHelper*> UDBDUtilities::GetMaterialHelpersAttachedToPlayerMesh(const ADBDPlayer* player)
+{
+	return TArray<UMaterialHelper*>();
 }
 
-EPlayerRole UDBDUtilities::GetLocallyObservedCharacterRole(const UObject* WorldContextObject) {
-    return EPlayerRole::VE_None;
+FString UDBDUtilities::GetLogStringMaterialInfo(const FString& inStr, const UMaterialInterface* root)
+{
+	return TEXT("");
 }
 
-ADBDPlayer* UDBDUtilities::GetLocallyObservedCharacter(const UObject* WorldContextObject) {
-    return NULL;
+EPlayerRole UDBDUtilities::GetLocallyObservedCharacterRole(const UObject* WorldContextObject)
+{
+	return EPlayerRole::VE_None;
 }
 
-ACamperPlayer* UDBDUtilities::GetLocallyControlledSurvivor(const UObject* WorldContextObject) {
-    return NULL;
+ADBDPlayer* UDBDUtilities::GetLocallyObservedCharacter(const UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-ASlasherPlayer* UDBDUtilities::GetLocallyControlledKiller(const UObject* WorldContextObject) {
-    return NULL;
+ACamperPlayer* UDBDUtilities::GetLocallyControlledSurvivor(const UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-EPlayerRole UDBDUtilities::GetLocallyControlledCharacterRole(const UObject* WorldContextObject) {
-    return EPlayerRole::VE_None;
+ASlasherPlayer* UDBDUtilities::GetLocallyControlledKiller(const UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-ADBDPlayer* UDBDUtilities::GetLocallyControlledCharacter(const UObject* WorldContextObject) {
-    return NULL;
+EPlayerRole UDBDUtilities::GetLocallyControlledCharacterRole(const UObject* WorldContextObject)
+{
+	return EPlayerRole::VE_None;
 }
 
-ADBDPlayerControllerBase* UDBDUtilities::GetLocalDBDPlayerController(const UObject* WorldContextObject) {
-    return NULL;
+ADBDPlayer* UDBDUtilities::GetLocallyControlledCharacter(const UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-ADBDPlayerCameraManager* UDBDUtilities::GetLocalDBDCameraManager(UObject* WorldContextObject) {
-    return NULL;
+ADBDPlayerControllerBase* UDBDUtilities::GetLocalDBDPlayerController(const UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-int32 UDBDUtilities::GetInventoryCountForMultipleCharacters(UObject* worldContextObject, TArray<int32> characterIndexes, FName itemID) {
-    return 0;
+ADBDPlayerCameraManager* UDBDUtilities::GetLocalDBDCameraManager(UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-int32 UDBDUtilities::GetInventoryCount(UObject* worldContextObject, int32 characterIndex, FName itemID) {
-    return 0;
+int32 UDBDUtilities::GetInventoryCountForMultipleCharacters(UObject* worldContextObject, TArray<int32> characterIndexes, FName itemID)
+{
+	return 0;
 }
 
-TSet<ACamperPlayer*> UDBDUtilities::GetInGameSurvivorsByRef(const UObject* WorldContextObject) {
-    return TSet<ACamperPlayer*>();
+int32 UDBDUtilities::GetInventoryCount(UObject* worldContextObject, int32 characterIndex, FName itemID)
+{
+	return 0;
 }
 
-TArray<ACamperPlayer*> UDBDUtilities::GetInGameSurvivors(const UObject* WorldContextObject) {
-    return TArray<ACamperPlayer*>();
+TSet<ACamperPlayer*> UDBDUtilities::GetInGameSurvivorsByRef(const UObject* WorldContextObject)
+{
+	return TSet<ACamperPlayer*>();
 }
 
-TArray<ADBDPlayer*> UDBDUtilities::GetInGamePlayers(const UObject* WorldContextObject) {
-    return TArray<ADBDPlayer*>();
+TArray<ACamperPlayer*> UDBDUtilities::GetInGameSurvivors(const UObject* WorldContextObject)
+{
+	return TArray<ACamperPlayer*>();
 }
 
-FCollisionResponseContainer UDBDUtilities::GetImpactCollisionResponseContainer(const UPrimitiveComponent* primitive) {
-    return FCollisionResponseContainer{};
+TArray<ADBDPlayer*> UDBDUtilities::GetInGamePlayers(const UObject* WorldContextObject)
+{
+	return TArray<ADBDPlayer*>();
 }
 
-TEnumAsByte<ECollisionChannel> UDBDUtilities::GetImpactCollisionObjectType(const UPrimitiveComponent* primitive) {
-    return ECC_WorldStatic;
+FCollisionResponseContainer UDBDUtilities::GetImpactCollisionResponseContainer(const UPrimitiveComponent* primitive)
+{
+	return FCollisionResponseContainer{};
 }
 
-FText UDBDUtilities::GetFormattedNumberText(float value, int32 maxDecimals, int32 minDecimals, bool leadingZero) {
-    return FText::GetEmpty();
+TEnumAsByte<ECollisionChannel> UDBDUtilities::GetImpactCollisionObjectType(const UPrimitiveComponent* primitive)
+{
+	return ECC_WorldStatic;
 }
 
-FString UDBDUtilities::GetFormattedNumberString(float value, int32 maxDecimals, int32 minDecimals, bool leadingZero) {
-    return TEXT("");
+FText UDBDUtilities::GetFormattedNumberText(float value, int32 maxDecimals, int32 minDecimals, bool leadingZero)
+{
+	return FText::GetEmpty();
 }
 
-FVector UDBDUtilities::GetFloorLocationAt(UObject* WorldContextObject, FVector location, float raycastStartHeight, float raycastEndHeight, bool useComplex) {
-    return FVector{};
+FString UDBDUtilities::GetFormattedNumberString(float value, int32 maxDecimals, int32 minDecimals, bool leadingZero)
+{
+	return TEXT("");
 }
 
-AActor* UDBDUtilities::GetFirstActorWithTag(FName tag, const TArray<AActor*>& actorsArray) {
-    return NULL;
+FVector UDBDUtilities::GetFloorLocationAt(UObject* WorldContextObject, FVector location, float raycastStartHeight, float raycastEndHeight, bool useComplex)
+{
+	return FVector{};
 }
 
-float UDBDUtilities::GetEndGameTunableValue(UObject* worldContextObject, FName valueName) {
-    return 0.0f;
+AActor* UDBDUtilities::GetFirstActorWithTag(FName tag, const TArray<AActor*>& actorsArray)
+{
+	return NULL;
 }
 
-float UDBDUtilities::GetDistanceToNearestHookedSurvivor(const ADBDPlayer* player) {
-    return 0.0f;
+float UDBDUtilities::GetEndGameTunableValue(UObject* worldContextObject, FName valueName)
+{
+	return 0.0f;
 }
 
-ADBDGameState* UDBDUtilities::GetDBDGameState(const UObject* worldContextObject) {
-    return NULL;
+float UDBDUtilities::GetDistanceToNearestHookedSurvivor(const ADBDPlayer* player)
+{
+	return 0.0f;
 }
 
-ADBDGameMode* UDBDUtilities::GetDBDGameMode(const UObject* worldContextObject) {
-    return NULL;
+ADBDGameState* UDBDUtilities::GetDBDGameState(const UObject* worldContextObject)
+{
+	return NULL;
 }
 
-UDBDGameInstance* UDBDUtilities::GetDBDGameInstance(const UObject* WorldContextObject) {
-    return NULL;
+ADBDGameMode* UDBDUtilities::GetDBDGameMode(const UObject* worldContextObject)
+{
+	return NULL;
 }
 
-ADBDAIPlayerController* UDBDUtilities::GetDBDAIPlayerController(ADBDPlayer* player) {
-    return NULL;
+UDBDGameInstance* UDBDUtilities::GetDBDGameInstance(const UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-FName UDBDUtilities::GetCurrentCharacterName(const UObject* WorldContextObject) {
-    return NAME_None;
+ADBDAIPlayerController* UDBDUtilities::GetDBDAIPlayerController(ADBDPlayer* player)
+{
+	return NULL;
 }
 
-FString UDBDUtilities::GetComponentOwnerName(UActorComponent* actorComponent) {
-    return TEXT("");
+FName UDBDUtilities::GetCurrentCharacterName(const UObject* WorldContextObject)
+{
+	return NAME_None;
 }
 
-FTransform UDBDUtilities::GetClosestSnapTransformOnOrbit(const FVector& centerPoint, const FVector& orbitterPosition, const float distance) {
-    return FTransform{};
+FString UDBDUtilities::GetComponentOwnerName(UActorComponent* actorComponent)
+{
+	return TEXT("");
 }
 
-FVector UDBDUtilities::GetClosestPointOnOrbit(const FVector& centerPoint, const FVector& orbitterPosition, const float distance) {
-    return FVector{};
+FTransform UDBDUtilities::GetClosestSnapTransformOnOrbit(const FVector& centerPoint, const FVector& orbitterPosition, const float distance)
+{
+	return FTransform{};
 }
 
-AProceduralLevelBuilder* UDBDUtilities::GetBuilder(const UObject* WorldContextObject) {
-    return NULL;
+FVector UDBDUtilities::GetClosestPointOnOrbit(const FVector& centerPoint, const FVector& orbitterPosition, const float distance)
+{
+	return FVector{};
 }
 
-float UDBDUtilities::GetAnimSequenceLength(const UAnimSequence* sequence) {
-    return 0.0f;
+AProceduralLevelBuilder* UDBDUtilities::GetBuilder(const UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-void UDBDUtilities::GetActorSpawners(TArray<UActorSpawner*>& actorSpawners) {
+float UDBDUtilities::GetAnimSequenceLength(const UAnimSequence* sequence)
+{
+	return 0.0f;
 }
 
-FString UDBDUtilities::GetActorOwnerName(AActor* actor) {
-    return TEXT("");
+void UDBDUtilities::GetActorSpawners(TArray<UActorSpawner*>& actorSpawners)
+{
+
 }
 
-EShadowSystem UDBDUtilities::GetActiveShadowSystem() {
-    return EShadowSystem::CascadedShadowMap;
+FString UDBDUtilities::GetActorOwnerName(AActor* actor)
+{
+	return TEXT("");
 }
 
-AActor* UDBDUtilities::FindParentOfClass(AActor* InChild, UClass* InClass) {
-    return NULL;
+EShadowSystem UDBDUtilities::GetActiveShadowSystem()
+{
+	return EShadowSystem::CascadedShadowMap;
 }
 
-bool UDBDUtilities::FindFloorSingle(UObject* WorldContextObject, FVector location, float raycastLength, FHitResult& outHit) {
-    return false;
+AActor* UDBDUtilities::FindParentOfClass(AActor* InChild, UClass* InClass)
+{
+	return NULL;
 }
 
-float UDBDUtilities::DistanceFromPointToPane(const FVector point, const FPlane plane) {
-    return 0.0f;
+bool UDBDUtilities::FindFloorSingle(UObject* WorldContextObject, FVector location, float raycastLength, FHitResult& outHit)
+{
+	return false;
 }
 
-UObject* UDBDUtilities::DBDLoadAudioBankByAssetPtr(TSoftObjectPtr<UAkAudioBank> bank, AActor* caller) {
-    return NULL;
+float UDBDUtilities::DistanceFromPointToPane(const FVector point, const FPlane plane)
+{
+	return 0.0f;
 }
 
-void UDBDUtilities::DBDLoadAudioBankAsync(UAkAudioBank* bank, AActor* caller) {
+UObject* UDBDUtilities::DBDLoadAudioBankByAssetPtr(TSoftObjectPtr<UAkAudioBank> bank, AActor* caller)
+{
+	return NULL;
 }
+
+void UDBDUtilities::DBDLoadAudioBankAsync(UAkAudioBank* bank, AActor* caller)
+{
 
-void UDBDUtilities::DBDLoadAudioBank(UAkAudioBank* bank, AActor* caller) {
 }
 
-bool UDBDUtilities::DBDCapsuleTraceSingle(UObject* WorldContextObject, const FVector Start, const FVector End, float Radius, float HalfHeight, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, const TArray<AActor*>& ActorsToIgnore, TEnumAsByte<EDrawDebugTrace::Type> DrawDebugType, FHitResult& OutHit, bool bIgnoreSelf) {
-    return false;
+void UDBDUtilities::DBDLoadAudioBank(UAkAudioBank* bank, AActor* caller)
+{
+
 }
 
-void UDBDUtilities::CrashGameCausingInterrupt() {
+bool UDBDUtilities::DBDCapsuleTraceSingle(UObject* WorldContextObject, const FVector Start, const FVector End, float Radius, float HalfHeight, TEnumAsByte<ECollisionChannel> TraceChannel, bool bTraceComplex, const TArray<AActor*>& ActorsToIgnore, TEnumAsByte<EDrawDebugTrace::Type> DrawDebugType, FHitResult& OutHit, bool bIgnoreSelf)
+{
+	return false;
 }
+
+void UDBDUtilities::CrashGameCausingInterrupt()
+{
 
-bool UDBDUtilities::BoxTraceAgainstActor(const FVector start, const FVector end, const UBoxComponent* box, const AActor* actor, FHitResult& outHitResult) {
-    return false;
 }
 
-UActorComponent* UDBDUtilities::AddComponentToActor(UClass* compClass, FName compName, AActor* actor) {
-    return NULL;
+bool UDBDUtilities::BoxTraceAgainstActor(const FVector start, const FVector end, const UBoxComponent* box, const AActor* actor, FHitResult& outHitResult)
+{
+	return false;
 }
 
-UDBDUtilities::UDBDUtilities() {
+UActorComponent* UDBDUtilities::AddComponentToActor(UClass* compClass, FName compName, AActor* actor)
+{
+	return NULL;
 }
 
+UDBDUtilities::UDBDUtilities()
+{
+
+}

@@ -1,5 +1,6 @@
 #include "TooltipPressedData.h"
 
-FTooltipPressedData::FTooltipPressedData() {
+FTooltipPressedData::FTooltipPressedData()
+{
+	this->touchPosition = FVector2D{};
 }
-

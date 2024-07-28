@@ -1,9 +1,13 @@
 #include "UMGStatusEffectsWidget.h"
 
-void UUMGStatusEffectsWidget::RemoveExistingStatusEffect(const FString& statusEffectID) {
+void UUMGStatusEffectsWidget::RemoveExistingStatusEffect(const FString& statusEffectID)
+{
+
 }
 
-UUMGStatusEffectsWidget::UUMGStatusEffectsWidget() {
-    this->StatusEffectsBox = NULL;
+UUMGStatusEffectsWidget::UUMGStatusEffectsWidget()
+{
+	this->AtlantaStatusEffectIconClass = NULL;
+	this->StatusEffectsBox = NULL;
+	this->_statusEffectsMap = TMap<FName, UUMGStatusEffectIcon*>();
 }
-

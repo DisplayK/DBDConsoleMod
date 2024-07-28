@@ -1,5 +1,6 @@
 #include "ZombieAcquirePatrolAreaBTService.h"
 
-UZombieAcquirePatrolAreaBTService::UZombieAcquirePatrolAreaBTService() {
-}
+UZombieAcquirePatrolAreaBTService::UZombieAcquirePatrolAreaBTService()
+{
 
+}

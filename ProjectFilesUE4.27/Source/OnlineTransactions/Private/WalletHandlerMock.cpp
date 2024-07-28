@@ -1,5 +1,6 @@
 #include "WalletHandlerMock.h"
 
-UWalletHandlerMock::UWalletHandlerMock() {
-}
+UWalletHandlerMock::UWalletHandlerMock()
+{
 
+}

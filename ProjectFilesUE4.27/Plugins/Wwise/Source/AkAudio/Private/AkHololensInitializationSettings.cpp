@@ -1,8 +1,11 @@
 #include "AkHololensInitializationSettings.h"
 
-void UAkHololensInitializationSettings::MigrateMultiCoreRendering(bool NewValue) {
+void UAkHololensInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
+{
+
 }
 
-UAkHololensInitializationSettings::UAkHololensInitializationSettings() {
-}
+UAkHololensInitializationSettings::UAkHololensInitializationSettings()
+{
 
+}

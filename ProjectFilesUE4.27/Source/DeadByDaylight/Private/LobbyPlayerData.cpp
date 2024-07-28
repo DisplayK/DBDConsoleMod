@@ -1,5 +1,5 @@
 #include "LobbyPlayerData.h"
 
-FLobbyPlayerData::FLobbyPlayerData() {
+FLobbyPlayerData::FLobbyPlayerData()
+{
 }
-

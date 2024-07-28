@@ -1,5 +1,6 @@
 #include "UMGUtilities.h"
 
-UUMGUtilities::UUMGUtilities() {
-}
+UUMGUtilities::UUMGUtilities()
+{
 
+}

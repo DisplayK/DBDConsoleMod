@@ -1,21 +1,25 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "UObject/SoftObjectPtr.h"
 #include "SubstitutionElements.generated.h"
 
 class AActor;
 
 USTRUCT(BlueprintType)
-struct FSubstitutionElements {
-    GENERATED_BODY()
-public:
+struct FSubstitutionElements
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditAnywhere)
-    TSoftClassPtr<AActor> _elementToReplace;
-    
-    UPROPERTY(EditAnywhere)
-    TSoftClassPtr<AActor> _elementToReplaceWith;
-    
+	UPROPERTY(EditAnywhere)
+	TSoftClassPtr<AActor> _elementToReplace;
+
+	UPROPERTY(EditAnywhere)
+	TSoftClassPtr<AActor> _elementToReplaceWith;
+
 public:
-    DEADBYDAYLIGHT_API FSubstitutionElements();
+	DEADBYDAYLIGHT_API FSubstitutionElements();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FSubstitutionElements) { return 0; }

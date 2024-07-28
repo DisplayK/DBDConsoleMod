@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Particles/ParticleSystemComponent.h"
 #include "DBDAggregateParticleSystemComponent.generated.h"
@@ -6,23 +7,25 @@
 class USceneComponent;
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UDBDAggregateParticleSystemComponent : public UParticleSystemComponent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UDBDAggregateParticleSystemComponent : public UParticleSystemComponent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float CullAngle;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float EndFadeDistance;
-    
-    UPROPERTY(Export, Transient)
-    TSet<USceneComponent*> LocatorComponentCache;
-    
-    UPROPERTY(Transient)
-    bool PendingReset;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float CullAngle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float EndFadeDistance;
+
+	UPROPERTY(Transient, Export)
+	TSet<USceneComponent*> LocatorComponentCache;
+
+	UPROPERTY(Transient)
+	bool PendingReset;
+
 public:
-    UDBDAggregateParticleSystemComponent();
+	UDBDAggregateParticleSystemComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDAggregateParticleSystemComponent) { return 0; }

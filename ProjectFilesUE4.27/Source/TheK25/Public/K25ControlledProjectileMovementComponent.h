@@ -1,37 +1,40 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDTunableRowHandle.h"
 #include "PhysicsBasedProjectileMovementComponent.h"
 #include "TunableStat.h"
+#include "DBDTunableRowHandle.h"
 #include "K25ControlledProjectileMovementComponent.generated.h"
 
 class UCurveFloat;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UK25ControlledProjectileMovementComponent : public UPhysicsBasedProjectileMovementComponent {
-    GENERATED_BODY()
-public:
+class UK25ControlledProjectileMovementComponent : public UPhysicsBasedProjectileMovementComponent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FDBDTunableRowHandle _projectileBaseSpeed;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FDBDTunableRowHandle _baseProjectileMaximumDistance;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FDBDTunableRowHandle _projectileSpeedIncreaseTime;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FTunableStat _maximumTravelDistanceStat;
-    
-    UPROPERTY(EditAnywhere)
-    UCurveFloat* _projectileSpeedIncreaseMultiplier;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FDBDTunableRowHandle _projectileBaseSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FDBDTunableRowHandle _baseProjectileMaximumDistance;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FDBDTunableRowHandle _projectileSpeedIncreaseTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FTunableStat _maximumTravelDistanceStat;
+
+	UPROPERTY(EditAnywhere)
+	UCurveFloat* _projectileSpeedIncreaseMultiplier;
+
 private:
-    UPROPERTY(Transient)
-    float _totaldistanceTravelled;
-    
+	UPROPERTY(Transient)
+	float _totaldistanceTravelled;
+
 public:
-    UK25ControlledProjectileMovementComponent();
+	UK25ControlledProjectileMovementComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UK25ControlledProjectileMovementComponent) { return 0; }

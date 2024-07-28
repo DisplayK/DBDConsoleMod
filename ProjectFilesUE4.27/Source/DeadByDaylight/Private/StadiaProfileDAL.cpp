@@ -1,5 +1,6 @@
 #include "StadiaProfileDAL.h"
 
-UStadiaProfileDAL::UStadiaProfileDAL() {
-}
+UStadiaProfileDAL::UStadiaProfileDAL()
+{
 
+}

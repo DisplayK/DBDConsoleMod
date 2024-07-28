@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "Styling/SlateColor.h"
@@ -8,29 +9,31 @@ class UImage;
 class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGTallyEmblemProgressionWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGTallyEmblemProgressionWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* PositiveIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* NegativeIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* PercentText;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* DescriptionText;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FSlateColor WarningPercentColor;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FSlateColor WarningDescriptionColor;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* PositiveIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* NegativeIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* PercentText;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* DescriptionText;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FSlateColor WarningPercentColor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FSlateColor WarningDescriptionColor;
+
 public:
-    UUMGTallyEmblemProgressionWidget();
+	UUMGTallyEmblemProgressionWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGTallyEmblemProgressionWidget) { return 0; }

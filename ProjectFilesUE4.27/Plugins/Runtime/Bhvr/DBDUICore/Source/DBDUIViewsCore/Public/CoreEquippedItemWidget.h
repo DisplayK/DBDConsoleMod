@@ -1,22 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "CoreBaseHudWidget.h"
 #include "EquippedItemViewInterface.h"
+#include "CoreBaseHudWidget.h"
 #include "CoreEquippedItemWidget.generated.h"
 
 class UAkAudioEvent;
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreEquippedItemWidget : public UCoreBaseHudWidget, public IEquippedItemViewInterface {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSCORE_API UCoreEquippedItemWidget : public UCoreBaseHudWidget, public IEquippedItemViewInterface
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkAudioEvent* ItemDisappearSfx;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UAkAudioEvent* ItemDisappearSfx;
+
 public:
-    UCoreEquippedItemWidget();
-    
-    // Fix for true pure virtual functions not being implemented
+	UCoreEquippedItemWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreEquippedItemWidget) { return 0; }

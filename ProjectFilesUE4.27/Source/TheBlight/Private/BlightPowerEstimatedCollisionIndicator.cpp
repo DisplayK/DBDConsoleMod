@@ -1,7 +1,6 @@
 #include "BlightPowerEstimatedCollisionIndicator.h"
 
+ABlightPowerEstimatedCollisionIndicator::ABlightPowerEstimatedCollisionIndicator()
+{
 
-
-ABlightPowerEstimatedCollisionIndicator::ABlightPowerEstimatedCollisionIndicator() {
 }
-

@@ -1,5 +1,6 @@
 #include "ExitGateSwitchesRestrictedPlacementAreaStrategy.h"
 
-UExitGateSwitchesRestrictedPlacementAreaStrategy::UExitGateSwitchesRestrictedPlacementAreaStrategy() {
-}
+UExitGateSwitchesRestrictedPlacementAreaStrategy::UExitGateSwitchesRestrictedPlacementAreaStrategy()
+{
 
+}

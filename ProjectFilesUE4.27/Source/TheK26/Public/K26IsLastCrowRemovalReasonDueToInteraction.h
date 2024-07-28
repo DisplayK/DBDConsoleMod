@@ -1,44 +1,48 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EventDrivenModifierCondition.h"
 #include "FK26AttachedCrowRemovalReason.h"
 #include "K26IsLastCrowRemovalReasonDueToInteraction.generated.h"
 
 class AK26AttachedCrow;
-class UK26PowerStatusHandlerComponent;
 class ACamperPlayer;
+class UK26PowerStatusHandlerComponent;
 class ASlasherPlayer;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UK26IsLastCrowRemovalReasonDueToInteraction : public UEventDrivenModifierCondition {
-    GENERATED_BODY()
-public:
+class UK26IsLastCrowRemovalReasonDueToInteraction : public UEventDrivenModifierCondition
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_OwningAttachedCrow)
-    AK26AttachedCrow* _owningAttachedCrow;
-    
-    UPROPERTY(Export, Transient)
-    UK26PowerStatusHandlerComponent* _statusHandlerComponent;
-    
-public:
-    UK26IsLastCrowRemovalReasonDueToInteraction();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+	UPROPERTY(ReplicatedUsing=OnRep_OwningAttachedCrow, Transient)
+	AK26AttachedCrow* _owningAttachedCrow;
+
+	UPROPERTY(Transient, Export)
+	UK26PowerStatusHandlerComponent* _statusHandlerComponent;
+
 private:
-    UFUNCTION()
-    void OnSurvivorStatusIndicatorSet(AK26AttachedCrow* attachedCrow);
-    
-    UFUNCTION()
-    void OnRep_OwningAttachedCrow();
-    
-    UFUNCTION()
-    void OnLastRemovalReasonSet(FK26AttachedCrowRemovalReason lastCrowRemovalReason);
-    
-    UFUNCTION()
-    void Authority_OnSurvivorStatusIndicatorSet(const ACamperPlayer* survivor, AK26AttachedCrow* attachedCrow);
-    
-    UFUNCTION()
-    void Authority_OnKillerSet(ASlasherPlayer* killer);
-    
+	UFUNCTION()
+	void OnSurvivorStatusIndicatorSet(AK26AttachedCrow* attachedCrow);
+
+	UFUNCTION()
+	void OnRep_OwningAttachedCrow();
+
+	UFUNCTION()
+	void OnLastRemovalReasonSet(FK26AttachedCrowRemovalReason lastCrowRemovalReason);
+
+	UFUNCTION()
+	void Authority_OnSurvivorStatusIndicatorSet(const ACamperPlayer* survivor, AK26AttachedCrow* attachedCrow);
+
+	UFUNCTION()
+	void Authority_OnKillerSet(ASlasherPlayer* killer);
+
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UK26IsLastCrowRemovalReasonDueToInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UK26IsLastCrowRemovalReasonDueToInteraction) { return 0; }

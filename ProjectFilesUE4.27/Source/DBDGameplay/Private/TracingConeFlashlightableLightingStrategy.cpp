@@ -1,6 +1,6 @@
 #include "TracingConeFlashlightableLightingStrategy.h"
 
-UTracingConeFlashlightableLightingStrategy::UTracingConeFlashlightableLightingStrategy() {
-    this->_aroundConeCircleTraceCount = 8;
+UTracingConeFlashlightableLightingStrategy::UTracingConeFlashlightableLightingStrategy()
+{
+	this->_aroundConeCircleTraceCount = 8;
 }
-

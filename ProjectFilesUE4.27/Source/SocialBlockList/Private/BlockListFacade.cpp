@@ -1,5 +1,6 @@
 #include "BlockListFacade.h"
 
-UBlockListFacade::UBlockListFacade() {
-}
+UBlockListFacade::UBlockListFacade()
+{
 
+}

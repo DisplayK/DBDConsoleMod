@@ -2,10 +2,12 @@
 
 class ACollectable;
 
-ACollectable* UDropItemInteraction::GetItem() const {
-    return NULL;
+ACollectable* UDropItemInteraction::GetItem() const
+{
+	return NULL;
 }
 
-UDropItemInteraction::UDropItemInteraction() {
-}
+UDropItemInteraction::UDropItemInteraction()
+{
 
+}

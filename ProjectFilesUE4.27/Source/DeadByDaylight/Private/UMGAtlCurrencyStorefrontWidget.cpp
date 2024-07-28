@@ -1,14 +1,15 @@
 #include "UMGAtlCurrencyStorefrontWidget.h"
 
-
-UUMGAtlCurrencyStorefrontWidget::UUMGAtlCurrencyStorefrontWidget() {
-    this->AuricCellsCanvasPanel = NULL;
-    this->AuricCellsGridPanel = NULL;
-    this->BottomPurchaseBox = NULL;
-    this->BottomRightPurchaseRichText = NULL;
-    this->BottomTimer = NULL;
-    this->AuricsBgR = NULL;
-    this->AuricsBgL = NULL;
-    this->EventItemsPackContainerBox = NULL;
+UUMGAtlCurrencyStorefrontWidget::UUMGAtlCurrencyStorefrontWidget()
+{
+	this->AuricCellsCanvasPanel = NULL;
+	this->AuricCellsGridPanel = NULL;
+	this->BottomPurchaseBox = NULL;
+	this->BottomRightPurchaseRichText = NULL;
+	this->BottomTimer = NULL;
+	this->AuricsBgR = NULL;
+	this->AuricsBgL = NULL;
+	this->EventItemsPackContainerBox = NULL;
+	this->EventItemsPackWidgetClass = NULL;
+	this->_auricCellButtons = TArray<UUMGStoreAuricCellButton*>();
 }
-

@@ -1,5 +1,6 @@
 #include "TestEventDrivenModifierCondition.h"
 
-UTestEventDrivenModifierCondition::UTestEventDrivenModifierCondition() {
-}
+UTestEventDrivenModifierCondition::UTestEventDrivenModifierCondition()
+{
 
+}

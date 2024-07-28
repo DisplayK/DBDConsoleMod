@@ -1,5 +1,6 @@
 #include "EmblemAnalyticsComponent.h"
 
-UEmblemAnalyticsComponent::UEmblemAnalyticsComponent() {
-}
+UEmblemAnalyticsComponent::UEmblemAnalyticsComponent()
+{
 
+}

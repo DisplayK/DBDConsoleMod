@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "TunableStat.h"
@@ -8,26 +9,29 @@
 class ATormentTrailPoint;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class THEEXECUTIONER_API UTormentTrailDetectorComponent : public UActorComponent {
-    GENERATED_BODY()
-public:
+class THEEXECUTIONER_API UTormentTrailDetectorComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Transient)
-    TArray<ATormentTrailPoint*> _overlappedTrailPoints;
-    
-    UPROPERTY(Replicated)
-    FTagStateBool _isInTormentTrail;
-    
-    UPROPERTY(Replicated)
-    FTagStateBool _isInTormentTrailEffect;
-    
+	UPROPERTY(Transient)
+	TArray<ATormentTrailPoint*> _overlappedTrailPoints;
+
+	UPROPERTY(Replicated)
+	FTagStateBool _isInTormentTrail;
+
+	UPROPERTY(Replicated)
+	FTagStateBool _isInTormentTrailEffect;
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    FTunableStat _inTormentTrailLastingEffectTime;
-    
+	UPROPERTY(EditDefaultsOnly)
+	FTunableStat _inTormentTrailLastingEffectTime;
+
 public:
-    UTormentTrailDetectorComponent();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UTormentTrailDetectorComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTormentTrailDetectorComponent) { return 0; }

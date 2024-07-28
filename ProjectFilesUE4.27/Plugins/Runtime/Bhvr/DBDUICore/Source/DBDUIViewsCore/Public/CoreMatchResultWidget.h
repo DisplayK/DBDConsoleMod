@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "CoreBaseHudWidget.h"
 #include "MatchResultViewInterface.h"
+#include "CoreBaseHudWidget.h"
 #include "CoreMatchResultWidget.generated.h"
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreMatchResultWidget : public UCoreBaseHudWidget, public IMatchResultViewInterface {
-    GENERATED_BODY()
+class DBDUIVIEWSCORE_API UCoreMatchResultWidget : public UCoreBaseHudWidget, public IMatchResultViewInterface
+{
+	GENERATED_BODY()
+
 public:
-    UCoreMatchResultWidget();
-    
-    // Fix for true pure virtual functions not being implemented
+	UCoreMatchResultWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreMatchResultWidget) { return 0; }

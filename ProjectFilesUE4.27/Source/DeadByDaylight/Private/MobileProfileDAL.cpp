@@ -1,5 +1,6 @@
 #include "MobileProfileDAL.h"
 
-UMobileProfileDAL::UMobileProfileDAL() {
-}
+UMobileProfileDAL::UMobileProfileDAL()
+{
 
+}

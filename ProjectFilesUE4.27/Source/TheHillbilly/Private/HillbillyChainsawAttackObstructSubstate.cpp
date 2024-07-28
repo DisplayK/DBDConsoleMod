@@ -1,5 +1,6 @@
 #include "HillbillyChainsawAttackObstructSubstate.h"
 
-UHillbillyChainsawAttackObstructSubstate::UHillbillyChainsawAttackObstructSubstate() {
-}
+UHillbillyChainsawAttackObstructSubstate::UHillbillyChainsawAttackObstructSubstate()
+{
 
+}

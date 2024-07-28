@@ -1,6 +1,6 @@
 #include "UMGPromoPackCharacterWidget.h"
 
-UUMGPromoPackCharacterWidget::UUMGPromoPackCharacterWidget() {
-    this->OwnedPanel = NULL;
+UUMGPromoPackCharacterWidget::UUMGPromoPackCharacterWidget()
+{
+	this->OwnedPanel = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "StateTagEvaluatorCondition.h"
 
-UStateTagEvaluatorCondition::UStateTagEvaluatorCondition() {
-}
+UStateTagEvaluatorCondition::UStateTagEvaluatorCondition()
+{
 
+}

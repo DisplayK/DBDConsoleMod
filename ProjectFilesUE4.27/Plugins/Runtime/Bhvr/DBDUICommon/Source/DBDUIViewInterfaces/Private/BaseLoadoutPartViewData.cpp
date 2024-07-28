@@ -1,6 +1,9 @@
 #include "BaseLoadoutPartViewData.h"
 
-FBaseLoadoutPartViewData::FBaseLoadoutPartViewData() {
-    this->Rarity = EItemRarity::Common;
+FBaseLoadoutPartViewData::FBaseLoadoutPartViewData()
+{
+	this->ItemId = NAME_None;
+	this->IconTexture = NULL;
+	this->DisplayName = TEXT("");
+	this->Rarity = EItemRarity::Common;
 }
-

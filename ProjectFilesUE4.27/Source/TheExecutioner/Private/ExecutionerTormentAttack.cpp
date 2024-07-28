@@ -2,15 +2,22 @@
 
 class ADBDPlayer;
 
-void UExecutionerTormentAttack::Server_TormentTryHitTargetNotInCoolDown_Implementation(ADBDPlayer* target) {
-}
-bool UExecutionerTormentAttack::Server_TormentTryHitTargetNotInCoolDown_Validate(ADBDPlayer* target) {
-    return true;
+void UExecutionerTormentAttack::Server_TormentTryHitTargetNotInCoolDown_Implementation(ADBDPlayer* target)
+{
+
 }
 
-void UExecutionerTormentAttack::Multicast_TormentHitTarget_Implementation(ADBDPlayer* target) {
+bool UExecutionerTormentAttack::Server_TormentTryHitTargetNotInCoolDown_Validate(ADBDPlayer* target)
+{
+	return true;
 }
 
-UExecutionerTormentAttack::UExecutionerTormentAttack() {
+void UExecutionerTormentAttack::Multicast_TormentHitTarget_Implementation(ADBDPlayer* target, bool hitCosmeticOnly)
+{
+
 }
 
+UExecutionerTormentAttack::UExecutionerTormentAttack()
+{
+
+}

@@ -1,5 +1,6 @@
 #include "SimpleSpawnEffectsOnAllSurvivorsAddon.h"
 
-USimpleSpawnEffectsOnAllSurvivorsAddon::USimpleSpawnEffectsOnAllSurvivorsAddon() {
+USimpleSpawnEffectsOnAllSurvivorsAddon::USimpleSpawnEffectsOnAllSurvivorsAddon()
+{
+	this->_statusEffectsSpawnParams = TArray<FSimpleSpawnEffectsOnAllSurvivorsAddonParams>();
 }
-

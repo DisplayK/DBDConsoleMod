@@ -1,5 +1,6 @@
 #include "DBDOutlineComponentTranslucentConfiguration.h"
 
-UDBDOutlineComponentTranslucentConfiguration::UDBDOutlineComponentTranslucentConfiguration() {
-}
+UDBDOutlineComponentTranslucentConfiguration::UDBDOutlineComponentTranslucentConfiguration()
+{
 
+}

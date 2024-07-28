@@ -1,5 +1,6 @@
 #include "AkWinGDKPlatformInfo.h"
 
-UAkWinGDKPlatformInfo::UAkWinGDKPlatformInfo() {
-}
+UAkWinGDKPlatformInfo::UAkWinGDKPlatformInfo()
+{
 
+}

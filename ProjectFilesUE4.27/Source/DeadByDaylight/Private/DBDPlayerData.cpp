@@ -1,80 +1,111 @@
 #include "DBDPlayerData.h"
+#include "EInputInteractionType.h"
+#include "UObject/NoExportTypes.h"
 #include "Net/UnrealNetwork.h"
 
-void UDBDPlayerData::SetRenderingFeaturesCompleted() {
+void UDBDPlayerData::SetRenderingFeaturesCompleted()
+{
+
 }
 
-void UDBDPlayerData::SetLoadoutSpawned() {
+void UDBDPlayerData::SetLoadoutSpawned()
+{
+
 }
 
-void UDBDPlayerData::SetIntroCompleted() {
+void UDBDPlayerData::SetIntroCompleted()
+{
+
 }
 
-void UDBDPlayerData::SetCampaignDataSynced() {
+void UDBDPlayerData::SetCampaignDataSynced()
+{
+
 }
 
-void UDBDPlayerData::Server_SetIntroCompleted_Implementation() {
-}
-bool UDBDPlayerData::Server_SetIntroCompleted_Validate() {
-    return true;
+void UDBDPlayerData::Server_SetIntroCompleted_Implementation()
+{
+
 }
 
-void UDBDPlayerData::Server_RenderingFeaturesCompleted_Implementation() {
-}
-bool UDBDPlayerData::Server_RenderingFeaturesCompleted_Validate() {
-    return true;
-}
-
-void UDBDPlayerData::Server_LoadoutSpawned_Implementation() {
-}
-bool UDBDPlayerData::Server_LoadoutSpawned_Validate() {
-    return true;
+bool UDBDPlayerData::Server_SetIntroCompleted_Validate()
+{
+	return true;
 }
 
-void UDBDPlayerData::Server_CampaignDataSynced_Implementation() {
-}
-bool UDBDPlayerData::Server_CampaignDataSynced_Validate() {
-    return true;
+void UDBDPlayerData::Server_RenderingFeaturesCompleted_Implementation()
+{
+
 }
 
-bool UDBDPlayerData::IsLoadoutSpawned() const {
-    return false;
+bool UDBDPlayerData::Server_RenderingFeaturesCompleted_Validate()
+{
+	return true;
 }
 
-bool UDBDPlayerData::IsIntroCompleted() {
-    return false;
+void UDBDPlayerData::Server_LoadoutSpawned_Implementation()
+{
+
 }
 
-bool UDBDPlayerData::IsCampaignDataSynced() const {
-    return false;
+bool UDBDPlayerData::Server_LoadoutSpawned_Validate()
+{
+	return true;
 }
 
-bool UDBDPlayerData::GetUseInputPressed() const {
-    return false;
+void UDBDPlayerData::Server_CampaignDataSynced_Implementation()
+{
+
 }
 
-bool UDBDPlayerData::GetLeftRightInputMashed() const {
-    return false;
+bool UDBDPlayerData::Server_CampaignDataSynced_Validate()
+{
+	return true;
 }
 
-bool UDBDPlayerData::GetInteractionInputMashed() const {
-    return false;
+bool UDBDPlayerData::IsLoadoutSpawned() const
+{
+	return false;
 }
 
-FRotator UDBDPlayerData::GetControlRotation() const {
-    return FRotator{};
+bool UDBDPlayerData::IsIntroCompleted()
+{
+	return false;
 }
 
-bool UDBDPlayerData::DidRenderingFeaturesComplete() const {
-    return false;
+bool UDBDPlayerData::IsInteractionInputPressed(EInputInteractionType interactionType) const
+{
+	return false;
 }
 
-void UDBDPlayerData::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UDBDPlayerData, _controlRotation);
+bool UDBDPlayerData::IsCampaignDataSynced() const
+{
+	return false;
 }
 
-UDBDPlayerData::UDBDPlayerData() {
+bool UDBDPlayerData::GetUseInputPressed() const
+{
+	return false;
 }
 
+FRotator UDBDPlayerData::GetControlRotation() const
+{
+	return FRotator{};
+}
+
+bool UDBDPlayerData::DidRenderingFeaturesComplete() const
+{
+	return false;
+}
+
+void UDBDPlayerData::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UDBDPlayerData, _controlRotation);
+}
+
+UDBDPlayerData::UDBDPlayerData()
+{
+
+}

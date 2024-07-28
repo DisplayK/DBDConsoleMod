@@ -1,6 +1,7 @@
 #include "LoadingImagesDataProvider.h"
 
-ULoadingImagesDataProvider::ULoadingImagesDataProvider() {
-    this->_owningDynamicContentHolder = NULL;
+ULoadingImagesDataProvider::ULoadingImagesDataProvider()
+{
+	this->_cachedLoadingImages = TMap<FName, FLoadingImages>();
+	this->_owningDynamicContentHolder = NULL;
 }
-

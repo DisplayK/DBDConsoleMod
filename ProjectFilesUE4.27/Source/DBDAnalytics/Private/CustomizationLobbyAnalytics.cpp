@@ -1,5 +1,6 @@
 #include "CustomizationLobbyAnalytics.h"
 
-FCustomizationLobbyAnalytics::FCustomizationLobbyAnalytics() {
+FCustomizationLobbyAnalytics::FCustomizationLobbyAnalytics()
+{
+	this->LobbyId = TEXT("");
 }
-

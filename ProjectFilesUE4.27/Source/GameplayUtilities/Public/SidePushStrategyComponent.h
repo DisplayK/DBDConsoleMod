@@ -1,21 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BasePushStrategyComponent.h"
 #include "SidePushStrategyComponent.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class GAMEPLAYUTILITIES_API USidePushStrategyComponent : public UBasePushStrategyComponent {
-    GENERATED_BODY()
+class GAMEPLAYUTILITIES_API USidePushStrategyComponent : public UBasePushStrategyComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditAnywhere)
-    float _maxImpulseStrength;
-    
-    UPROPERTY(EditAnywhere)
-    float _minImpulseStrength;
-    
-    UPROPERTY(EditAnywhere)
-    float _detectorCapsuleInflation;
-    
-    USidePushStrategyComponent();
+	UPROPERTY(EditAnywhere)
+	float _maxImpulseStrength;
+
+	UPROPERTY(EditAnywhere)
+	float _minImpulseStrength;
+
+	UPROPERTY(EditAnywhere)
+	float _detectorCapsuleInflation;
+
+public:
+	USidePushStrategyComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USidePushStrategyComponent) { return 0; }

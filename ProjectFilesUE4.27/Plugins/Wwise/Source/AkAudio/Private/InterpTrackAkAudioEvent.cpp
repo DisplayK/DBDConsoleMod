@@ -1,22 +1,7 @@
 #include "InterpTrackAkAudioEvent.h"
 
-UInterpTrackAkAudioEvent::UInterpTrackAkAudioEvent() {
-    this->bContinueEventOnMatineeEnd = false;
-}
-
-const FString UInterpTrackAkAudioEvent::GetEdHelperClassName() const
+UInterpTrackAkAudioEvent::UInterpTrackAkAudioEvent()
 {
-    return TEXT("UnrealEd.InterpTrackHelper");
+	this->Events = TArray<FAkAudioEventTrackKey>();
+	this->bContinueEventOnMatineeEnd = false;
 }
-
-const FString UInterpTrackAkAudioEvent::GetSlateHelperClassName() const
-{
-    return TEXT("Matinee.InterpTrackHelper");
-}
-
-#if WITH_EDITORONLY_DATA
-UTexture2D* UInterpTrackAkAudioEvent::GetTrackIcon() const
-{
-    return TrackIcon;
-}
-#endif

@@ -1,13 +1,18 @@
 #include "CoreOnboardingTutorialPanelWidget.h"
 
+void UCoreOnboardingTutorialPanelWidget::NextPendingButtonUpdated()
+{
 
-
-void UCoreOnboardingTutorialPanelWidget::NextPendingButtonUpdated() {
 }
 
-void UCoreOnboardingTutorialPanelWidget::CheckNextPendingButtonUpdate() {
+void UCoreOnboardingTutorialPanelWidget::CheckNextPendingButtonUpdate()
+{
+
 }
 
-UCoreOnboardingTutorialPanelWidget::UCoreOnboardingTutorialPanelWidget() {
+UCoreOnboardingTutorialPanelWidget::UCoreOnboardingTutorialPanelWidget()
+{
+	this->TutorialButtons = TArray<UCoreOnboardingTutorialButtonWidget*>();
+	this->LoadingWidget = NULL;
+	this->_pendingData = TArray<FPendingStepData>();
 }
-

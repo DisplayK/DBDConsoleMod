@@ -1,5 +1,6 @@
 #include "CharacterCollisionsUtilities.h"
 
-UCharacterCollisionsUtilities::UCharacterCollisionsUtilities() {
-}
+UCharacterCollisionsUtilities::UCharacterCollisionsUtilities()
+{
 
+}

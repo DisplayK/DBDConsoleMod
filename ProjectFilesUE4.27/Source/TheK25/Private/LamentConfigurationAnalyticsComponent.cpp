@@ -1,5 +1,6 @@
 #include "LamentConfigurationAnalyticsComponent.h"
 
-ULamentConfigurationAnalyticsComponent::ULamentConfigurationAnalyticsComponent() {
-}
+ULamentConfigurationAnalyticsComponent::ULamentConfigurationAnalyticsComponent()
+{
 
+}

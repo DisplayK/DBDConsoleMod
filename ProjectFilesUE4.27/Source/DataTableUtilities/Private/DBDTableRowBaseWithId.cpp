@@ -1,5 +1,6 @@
 #include "DBDTableRowBaseWithId.h"
 
-FDBDTableRowBaseWithId::FDBDTableRowBaseWithId() {
+FDBDTableRowBaseWithId::FDBDTableRowBaseWithId()
+{
+	this->Id = NAME_None;
 }
-

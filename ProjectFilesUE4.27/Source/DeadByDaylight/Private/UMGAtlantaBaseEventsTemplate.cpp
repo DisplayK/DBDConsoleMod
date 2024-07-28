@@ -1,5 +1,6 @@
 #include "UMGAtlantaBaseEventsTemplate.h"
 
-UUMGAtlantaBaseEventsTemplate::UUMGAtlantaBaseEventsTemplate() {
-}
+UUMGAtlantaBaseEventsTemplate::UUMGAtlantaBaseEventsTemplate()
+{
 
+}

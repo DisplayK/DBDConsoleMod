@@ -1,5 +1,7 @@
 #include "EdgeObjectHandlingStrategy.h"
 
-UEdgeObjectHandlingStrategy::UEdgeObjectHandlingStrategy() {
+UEdgeObjectHandlingStrategy::UEdgeObjectHandlingStrategy()
+{
+	this->_edgeObjectSpawners = TArray<UActorSpawner*>();
+	this->_edgeObjectBlockers = TArray<UActorSpawner*>();
 }
-

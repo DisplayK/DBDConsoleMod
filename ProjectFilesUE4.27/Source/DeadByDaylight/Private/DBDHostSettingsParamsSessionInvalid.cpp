@@ -1,5 +1,6 @@
 #include "DBDHostSettingsParamsSessionInvalid.h"
 
-UDBDHostSettingsParamsSessionInvalid::UDBDHostSettingsParamsSessionInvalid() {
-}
+UDBDHostSettingsParamsSessionInvalid::UDBDHostSettingsParamsSessionInvalid()
+{
 
+}

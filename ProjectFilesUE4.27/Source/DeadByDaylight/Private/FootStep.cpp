@@ -1,6 +1,6 @@
 #include "FootStep.h"
 
-FFootStep::FFootStep() {
-    this->Decal = NULL;
+FFootStep::FFootStep()
+{
+	this->Decal = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "MeatHookStateMachine.h"
 
-UMeatHookStateMachine::UMeatHookStateMachine() {
-}
+UMeatHookStateMachine::UMeatHookStateMachine()
+{
 
+}

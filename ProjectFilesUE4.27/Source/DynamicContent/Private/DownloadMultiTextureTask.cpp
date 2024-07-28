@@ -2,10 +2,14 @@
 
 class UDownloadingTextureTask;
 
-void UDownloadMultiTextureTask::OnTextureDownloadComplete(UDownloadingTextureTask* taskCompleted) {
+void UDownloadMultiTextureTask::OnTextureDownloadComplete(UDownloadingTextureTask* taskCompleted)
+{
+
 }
 
-UDownloadMultiTextureTask::UDownloadMultiTextureTask() {
-    this->_remainingTasks = 0;
+UDownloadMultiTextureTask::UDownloadMultiTextureTask()
+{
+	this->_downloadingTasks = TArray<UDownloadingTextureTask*>();
+	this->_downloadedTextures = TMap<FName, UTexture2DDynamic*>();
+	this->_remainingTasks = 0;
 }
-

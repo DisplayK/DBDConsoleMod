@@ -1,21 +1,30 @@
 #include "LevelReadyToPlayPlayerComponent.h"
 #include "Net/UnrealNetwork.h"
 
-void ULevelReadyToPlayPlayerComponent::Server_SetIsReadyToPlay_Implementation(bool readyToPlay) {
-}
-bool ULevelReadyToPlayPlayerComponent::Server_SetIsReadyToPlay_Validate(bool readyToPlay) {
-    return true;
+void ULevelReadyToPlayPlayerComponent::Server_SetIsReadyToPlay_Implementation(bool readyToPlay)
+{
+
 }
 
-void ULevelReadyToPlayPlayerComponent::OnRep_LevelReadyToPlayRequirementsTarget() {
+bool ULevelReadyToPlayPlayerComponent::Server_SetIsReadyToPlay_Validate(bool readyToPlay)
+{
+	return true;
 }
 
-void ULevelReadyToPlayPlayerComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(ULevelReadyToPlayPlayerComponent, _levelReadyToPlayRequirementsTarget);
+void ULevelReadyToPlayPlayerComponent::OnRep_LevelReadyToPlayRequirementsTarget()
+{
+
 }
 
-ULevelReadyToPlayPlayerComponent::ULevelReadyToPlayPlayerComponent() {
+void ULevelReadyToPlayPlayerComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ULevelReadyToPlayPlayerComponent, _levelReadyToPlayRequirementsTarget);
 }
 
+ULevelReadyToPlayPlayerComponent::ULevelReadyToPlayPlayerComponent()
+{
+	this->_levelReadyToPlayRequirementsTarget = TArray<FLevelReadyToPlayRequirements>();
+	this->_levelReadyToPlayRequirementState = TArray<FLevelReadyToPlayRequirements>();
+}

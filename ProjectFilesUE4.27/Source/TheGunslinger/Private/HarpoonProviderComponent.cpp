@@ -1,5 +1,6 @@
 #include "HarpoonProviderComponent.h"
 
-UHarpoonProviderComponent::UHarpoonProviderComponent() {
-}
+UHarpoonProviderComponent::UHarpoonProviderComponent()
+{
 
+}

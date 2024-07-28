@@ -1,101 +1,106 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "RedEnvelopeData.h"
 #include "Interactable.h"
 #include "DBDTunableRowHandle.h"
-#include "UObject/NoExportTypes.h"
 #include "RedEnvelope.generated.h"
 
-class UInteractor;
-class ADBDPlayerState;
 class URedEnvelopeInteraction;
-class UChargeableComponent;
-class UPrimitiveComponent;
-class UStaticMeshComponent;
-class UDBDOutlineComponent;
 class ULunar2022EventComponent;
+class ADBDPlayerState;
+class UInteractor;
+class UChargeableComponent;
+class UDBDOutlineComponent;
+class UPrimitiveComponent;
 class ADBDPlayer;
+class UStaticMeshComponent;
+class URedEnvelopeOutlineUpdateStrategy;
 
 UCLASS()
-class LUNAR2022_API ARedEnvelope : public AInteractable {
-    GENERATED_BODY()
-public:
+class LUNAR2022_API ARedEnvelope : public AInteractable
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient, ReplicatedUsing=OnRep_OwnerPlayerState)
-    ADBDPlayerState* _ownerPlayerState;
-    
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing=OnRep_OwnerPlayerState, Transient)
+	ADBDPlayerState* _ownerPlayerState;
+
 private:
-    UPROPERTY(BlueprintReadOnly, Export, NoClear, VisibleAnywhere, meta=(AllowPrivateAccess=true))
-    URedEnvelopeInteraction* _redEnvelopeInteraction;
-    
-    UPROPERTY(BlueprintReadOnly, Export, NoClear, VisibleAnywhere, meta=(AllowPrivateAccess=true))
-    URedEnvelopeInteraction* _redEnvelopeInteractionKiller;
-    
-    UPROPERTY(Export, NoClear, VisibleAnywhere)
-    UChargeableComponent* _redEnvelopeInteractionChargeable;
-    
-    UPROPERTY(Export, NoClear, VisibleAnywhere)
-    UChargeableComponent* _redEnvelopeInteractionChargeableKiller;
-    
-    UPROPERTY(BlueprintReadOnly, Export, NoClear, VisibleAnywhere, meta=(AllowPrivateAccess=true))
-    UInteractor* _redEnvelopeInteractor;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Export, NoClear, meta=(AllowPrivateAccess=true))
-    UPrimitiveComponent* _redEnvelopeInteractionZone;
-    
-    UPROPERTY(BlueprintReadOnly, Export, NoClear, VisibleAnywhere, meta=(AllowPrivateAccess=true))
-    UDBDOutlineComponent* _outlineComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
-    UStaticMeshComponent* _redEnvelopeMesh;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _redEnvelopeInteractionSecondsToCharge;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _redEnvelopeInteractionSecondsToChargeKiller;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor _auraColorOwner;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor _auraColorNonOwner;
-    
-    UPROPERTY(Export, Transient)
-    TWeakObjectPtr<ULunar2022EventComponent> _eventComponent;
-    
-public:
-    ARedEnvelope();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+	UPROPERTY(ReplicatedUsing=OnRep_RedEnvelopeData)
+	FRedEnvelopeData _redEnvelopeData;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, NoClear, Export, meta=(AllowPrivateAccess=true))
+	URedEnvelopeInteraction* _redEnvelopeInteraction;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, NoClear, Export, meta=(AllowPrivateAccess=true))
+	URedEnvelopeInteraction* _redEnvelopeInteractionKiller;
+
+	UPROPERTY(VisibleAnywhere, NoClear, Export)
+	UChargeableComponent* _redEnvelopeInteractionChargeable;
+
+	UPROPERTY(VisibleAnywhere, NoClear, Export)
+	UChargeableComponent* _redEnvelopeInteractionChargeableKiller;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, NoClear, Export, meta=(AllowPrivateAccess=true))
+	UInteractor* _redEnvelopeInteractor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, NoClear, Export, meta=(AllowPrivateAccess=true))
+	UPrimitiveComponent* _redEnvelopeInteractionZone;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, NoClear, Export, meta=(AllowPrivateAccess=true))
+	UDBDOutlineComponent* _outlineComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Export, meta=(AllowPrivateAccess=true))
+	UStaticMeshComponent* _redEnvelopeMesh;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _redEnvelopeInteractionSecondsToCharge;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _redEnvelopeInteractionSecondsToChargeKiller;
+
+	UPROPERTY(Transient, Export)
+	TWeakObjectPtr<ULunar2022EventComponent> _eventComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, NoClear, Export, meta=(AllowPrivateAccess=true))
+	URedEnvelopeOutlineUpdateStrategy* _redEnvelopeOutlineUpdateStrategy;
+
 private:
-    UFUNCTION()
-    void OnRep_OwnerPlayerState();
-    
+	UFUNCTION()
+	void OnRep_RedEnvelopeData();
+
+	UFUNCTION()
+	void OnRep_OwnerPlayerState();
+
 public:
-    UFUNCTION()
-    void OnLocallyObservedChanged();
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_HandleOnInteractionComplete(const ADBDPlayer* interactingPlayer, bool ownerWasInteractingPlayer, bool isJackpot);
-    
+	UFUNCTION()
+	void OnLocallyObservedChanged();
+
 protected:
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_SetBackgroundVFX(bool isOwner);
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_OnTriggerDisappearingVFX(const ADBDPlayer* interactingPlayer, bool isOwner, bool isJackpot);
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_OnInteractionUpdate(const ADBDPlayer* interactingPlayer, const float chargePercent, bool isOwner);
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_OnInteractionStopped(const ADBDPlayer* interactingPlayer, bool isOwner);
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_OnInteractionStart(const ADBDPlayer* interactingPlayer, bool isOwner);
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_OnAddEmberEffect(const ADBDPlayer* owningPlayer);
-    
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_SetBackgroundVFX(bool isOwner);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnTriggerDisappearingVFX(const ADBDPlayer* interactingPlayer, bool isOwner, bool isJackpot);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnInteractionUpdate(const ADBDPlayer* interactingPlayer, const float chargePercent, bool isOwner);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnInteractionStopped(const ADBDPlayer* interactingPlayer, bool isOwner);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnInteractionStart(const ADBDPlayer* interactingPlayer, bool isOwner);
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnAddEmberEffect(const ADBDPlayer* owningPlayer);
+
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	ARedEnvelope();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ARedEnvelope) { return 0; }

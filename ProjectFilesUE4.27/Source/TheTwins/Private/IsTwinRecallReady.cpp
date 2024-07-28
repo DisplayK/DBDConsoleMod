@@ -1,8 +1,11 @@
 #include "IsTwinRecallReady.h"
 
-void UIsTwinRecallReady::OnLevelReadyToPlay() {
+void UIsTwinRecallReady::OnLevelReadyToPlay()
+{
+
 }
 
-UIsTwinRecallReady::UIsTwinRecallReady() {
-}
+UIsTwinRecallReady::UIsTwinRecallReady()
+{
 
+}

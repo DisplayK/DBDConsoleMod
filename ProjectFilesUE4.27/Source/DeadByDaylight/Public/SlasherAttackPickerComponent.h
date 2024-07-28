@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "SlasherAttackPickerComponent.generated.h"
 
 UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API USlasherAttackPickerComponent : public UActorComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API USlasherAttackPickerComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    USlasherAttackPickerComponent();
+	USlasherAttackPickerComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USlasherAttackPickerComponent) { return 0; }

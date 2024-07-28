@@ -2,9 +2,12 @@
 
 class AK24Power;
 
-void UActivateK24PowerInteraction::SetK24Power(AK24Power* k24Power) {
+void UActivateK24PowerInteraction::SetK24Power(AK24Power* k24Power)
+{
+
 }
 
-UActivateK24PowerInteraction::UActivateK24PowerInteraction() {
-}
+UActivateK24PowerInteraction::UActivateK24PowerInteraction()
+{
 
+}

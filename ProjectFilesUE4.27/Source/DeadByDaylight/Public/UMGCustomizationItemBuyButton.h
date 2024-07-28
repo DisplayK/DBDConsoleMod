@@ -1,35 +1,37 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "UMGCustomizationItemPriceWidget.h"
 #include "ECurrencyType.h"
-#include "UObject/NoExportTypes.h"
+#include "UMGCustomizationItemPriceWidget.h"
 #include "UMGCustomizationItemBuyButton.generated.h"
 
 class UImage;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGCustomizationItemBuyButton : public UUMGCustomizationItemPriceWidget {
-    GENERATED_BODY()
-public:
+class UUMGCustomizationItemBuyButton : public UUMGCustomizationItemPriceWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* CurrencyColorStripe;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<ECurrencyType, FColor> _currencyStripeColors;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor _disabledOpacity;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor _enabledOpacity;
-    
-public:
-    UUMGCustomizationItemBuyButton();
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* CurrencyColorStripe;
+
+	UPROPERTY(EditDefaultsOnly)
+	TMap<ECurrencyType, FColor> _currencyStripeColors;
+
+	UPROPERTY(EditDefaultsOnly)
+	FLinearColor _disabledOpacity;
+
+	UPROPERTY(EditDefaultsOnly)
+	FLinearColor _enabledOpacity;
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void BroadcastUnlockWithCurrency();
-    
+	UFUNCTION(BlueprintCallable)
+	void BroadcastUnlockWithCurrency();
+
+public:
+	UUMGCustomizationItemBuyButton();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGCustomizationItemBuyButton) { return 0; }

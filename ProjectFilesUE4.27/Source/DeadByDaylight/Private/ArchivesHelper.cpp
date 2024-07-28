@@ -1,5 +1,6 @@
 #include "ArchivesHelper.h"
 
-UArchivesHelper::UArchivesHelper() {
-}
+UArchivesHelper::UArchivesHelper()
+{
 
+}

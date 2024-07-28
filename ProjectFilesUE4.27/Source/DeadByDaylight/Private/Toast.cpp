@@ -1,8 +1,11 @@
 #include "Toast.h"
 
-FToast::FToast() {
-    this->DisplayDuration = 0.00f;
-    this->Lifetime = 0.00f;
-    this->DelayBeforeInteraction = 0.00f;
+FToast::FToast()
+{
+	this->DisplayDuration = 0.0f;
+	this->Lifetime = 0.0f;
+	this->ToastText = FText::GetEmpty();
+	this->ButtonsData = TMap<EToastInputType, FToastButton>();
+	this->DelayBeforeInteraction = 0.0f;
+	this->ToastIcon = NULL;
 }
-

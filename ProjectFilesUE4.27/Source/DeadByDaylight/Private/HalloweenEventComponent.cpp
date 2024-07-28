@@ -1,35 +1,48 @@
 #include "HalloweenEventComponent.h"
 #include "Net/UnrealNetwork.h"
+#include "GameplayTagContainer.h"
+#include "GameEventData.h"
 
 class USectionnedChargeableComponent;
 
-void UHalloweenEventComponent::Server_SpawnVial_Implementation(float initialCharge) {
-}
-bool UHalloweenEventComponent::Server_SpawnVial_Validate(float initialCharge) {
-    return true;
+void UHalloweenEventComponent::Server_SpawnVial_Implementation(float initialCharge)
+{
+
 }
 
-void UHalloweenEventComponent::OnRep_Vial() {
+bool UHalloweenEventComponent::Server_SpawnVial_Validate(float initialCharge)
+{
+	return true;
 }
 
-void UHalloweenEventComponent::OnFinishedPlaying(FGameplayTag gameEventType, const FGameEventData& gameEventData) {
+void UHalloweenEventComponent::OnRep_Vial()
+{
+
 }
 
-bool UHalloweenEventComponent::IsVialFull() const {
-    return false;
+void UHalloweenEventComponent::OnFinishedPlaying(FGameplayTag gameEventType, const FGameEventData& gameEventData)
+{
+
 }
 
-USectionnedChargeableComponent* UHalloweenEventComponent::GetVial() const {
-    return NULL;
+bool UHalloweenEventComponent::IsVialFull() const
+{
+	return false;
 }
 
-void UHalloweenEventComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UHalloweenEventComponent, _toxinVialComponent);
+USectionnedChargeableComponent* UHalloweenEventComponent::GetVial() const
+{
+	return NULL;
 }
 
-UHalloweenEventComponent::UHalloweenEventComponent() {
-    this->_toxinVialComponent = NULL;
+void UHalloweenEventComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UHalloweenEventComponent, _toxinVialComponent);
 }
 
+UHalloweenEventComponent::UHalloweenEventComponent()
+{
+	this->_toxinVialComponent = NULL;
+}

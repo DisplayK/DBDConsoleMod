@@ -1,5 +1,6 @@
 #include "ImmediateUndetectableEffect.h"
 
-UImmediateUndetectableEffect::UImmediateUndetectableEffect() {
-}
+UImmediateUndetectableEffect::UImmediateUndetectableEffect()
+{
 
+}

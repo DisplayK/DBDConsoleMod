@@ -1,5 +1,6 @@
 #include "CoreTutorialMysteryNoteWidget.h"
 
-UCoreTutorialMysteryNoteWidget::UCoreTutorialMysteryNoteWidget() {
-}
+UCoreTutorialMysteryNoteWidget::UCoreTutorialMysteryNoteWidget()
+{
 
+}

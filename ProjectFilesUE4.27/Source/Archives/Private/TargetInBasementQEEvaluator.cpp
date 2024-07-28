@@ -1,5 +1,6 @@
 #include "TargetInBasementQEEvaluator.h"
 
-UTargetInBasementQEEvaluator::UTargetInBasementQEEvaluator() {
-}
+UTargetInBasementQEEvaluator::UTargetInBasementQEEvaluator()
+{
 
+}

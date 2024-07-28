@@ -1,12 +1,13 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EJoinPartyMethod.generated.h"
 
-UENUM()
-enum class EJoinPartyMethod {
-    None,
-    PlatformInvitation,
-    InGameInvitation,
-    JoinRequest,
+UENUM(BlueprintType)
+enum class EJoinPartyMethod : uint8
+{
+	None,
+	PlatformInvitation,
+	InGameInvitation,
+	JoinRequest,
 };
-

@@ -1,5 +1,6 @@
 #include "OrModifierCondition.h"
 
-UOrModifierCondition::UOrModifierCondition() {
-}
+UOrModifierCondition::UOrModifierCondition()
+{
 
+}

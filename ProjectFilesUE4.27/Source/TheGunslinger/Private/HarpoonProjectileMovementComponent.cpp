@@ -1,5 +1,6 @@
 #include "HarpoonProjectileMovementComponent.h"
 
-UHarpoonProjectileMovementComponent::UHarpoonProjectileMovementComponent() {
-}
+UHarpoonProjectileMovementComponent::UHarpoonProjectileMovementComponent()
+{
 
+}

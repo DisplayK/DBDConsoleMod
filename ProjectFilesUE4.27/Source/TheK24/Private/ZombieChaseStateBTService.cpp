@@ -1,5 +1,6 @@
 #include "ZombieChaseStateBTService.h"
 
-UZombieChaseStateBTService::UZombieChaseStateBTService() {
-}
+UZombieChaseStateBTService::UZombieChaseStateBTService()
+{
 
+}

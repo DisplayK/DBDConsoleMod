@@ -1,6 +1,6 @@
 #include "AtlantaHudLookBackJoystick.h"
 
-UAtlantaHudLookBackJoystick::UAtlantaHudLookBackJoystick() {
-    this->TutorialAnimContainer = NULL;
+UAtlantaHudLookBackJoystick::UAtlantaHudLookBackJoystick()
+{
+	this->TutorialAnimContainer = NULL;
 }
-

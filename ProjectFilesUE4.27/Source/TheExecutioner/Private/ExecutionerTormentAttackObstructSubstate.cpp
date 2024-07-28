@@ -1,5 +1,6 @@
 #include "ExecutionerTormentAttackObstructSubstate.h"
 
-UExecutionerTormentAttackObstructSubstate::UExecutionerTormentAttackObstructSubstate() {
-}
+UExecutionerTormentAttackObstructSubstate::UExecutionerTormentAttackObstructSubstate()
+{
 
+}

@@ -1,7 +1,7 @@
 #include "FoliageActor.h"
 #include "FoliageDensityHISM.h"
 
-AFoliageActor::AFoliageActor() {
-    this->_foliageHISM = CreateDefaultSubobject<UFoliageDensityHISM>(TEXT("HISM"));
+AFoliageActor::AFoliageActor()
+{
+	this->_foliageHISM = CreateDefaultSubobject<UFoliageDensityHISM>(TEXT("HISM"));
 }
-

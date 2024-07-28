@@ -1,17 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "DisplayStandCurrencyRequesterComponent.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UDisplayStandCurrencyRequesterComponent : public UActorComponent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UDisplayStandCurrencyRequesterComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditInstanceOnly)
-    UClass* _menuCurrencyDisplayableClass;
-    
+	UPROPERTY(EditInstanceOnly)
+	UClass* _menuCurrencyDisplayableClass;
+
 public:
-    UDisplayStandCurrencyRequesterComponent();
+	UDisplayStandCurrencyRequesterComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDisplayStandCurrencyRequesterComponent) { return 0; }

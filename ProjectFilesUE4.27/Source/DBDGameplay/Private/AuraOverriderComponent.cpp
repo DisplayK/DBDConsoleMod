@@ -1,13 +1,19 @@
 #include "AuraOverriderComponent.h"
+#include "UObject/NoExportTypes.h"
 
 class AActor;
 
-void UAuraOverriderComponent::ResetAura(const AActor* actor) {
+void UAuraOverriderComponent::ResetAura(const AActor* actor)
+{
+
 }
 
-void UAuraOverriderComponent::ForceShowAura(const AActor* actor, const FLinearColor& color, bool isAlwaysVisible, const float minimumOutlineDistance) {
+void UAuraOverriderComponent::ForceShowAura(const AActor* actor, const FLinearColor& color, bool isAlwaysVisible, const float minimumOutlineDistance)
+{
+
 }
 
-UAuraOverriderComponent::UAuraOverriderComponent() {
-}
+UAuraOverriderComponent::UAuraOverriderComponent()
+{
 
+}

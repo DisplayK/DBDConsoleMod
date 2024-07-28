@@ -2,10 +2,12 @@
 
 class ATotem;
 
-ATotem* UBlessTotem::GetTotem() const {
-    return NULL;
+ATotem* UBlessTotem::GetTotem() const
+{
+	return NULL;
 }
 
-UBlessTotem::UBlessTotem() {
-}
+UBlessTotem::UBlessTotem()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "PromoPackContentDataAsset.h"
 
-UPromoPackContentDataAsset::UPromoPackContentDataAsset() {
+UPromoPackContentDataAsset::UPromoPackContentDataAsset()
+{
+	this->Data = TMap<EPromoPackContentType, FPromoPackContentTypeData>();
 }
-

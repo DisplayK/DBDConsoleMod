@@ -1,17 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AccessNode.generated.h"
 
 USTRUCT()
-struct FAccessNode {
-    GENERATED_BODY()
+struct FAccessNode
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    FString Id;
-    
-    UPROPERTY()
-    int32 AccessCost;
-    
-    DEADBYDAYLIGHT_API FAccessNode();
+	UPROPERTY()
+	FString Id;
+
+	UPROPERTY()
+	int32 AccessCost;
+
+public:
+	DEADBYDAYLIGHT_API FAccessNode();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAccessNode) { return 0; }

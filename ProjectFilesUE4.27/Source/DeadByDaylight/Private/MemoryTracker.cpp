@@ -1,5 +1,6 @@
 #include "MemoryTracker.h"
 
-AMemoryTracker::AMemoryTracker() {
-}
+AMemoryTracker::AMemoryTracker()
+{
 
+}

@@ -1,8 +1,11 @@
 #include "LocalPlayerTrackerComponent.h"
 
-void ULocalPlayerTrackerComponent::TriggerOnLocallyObservedChanged() {
+void ULocalPlayerTrackerComponent::TriggerOnLocallyObservedChanged()
+{
+
 }
 
-ULocalPlayerTrackerComponent::ULocalPlayerTrackerComponent() {
-}
+ULocalPlayerTrackerComponent::ULocalPlayerTrackerComponent()
+{
 
+}

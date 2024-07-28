@@ -1,5 +1,7 @@
 #include "DBDButton.h"
 
-UDBDButton::UDBDButton() {
+UDBDButton::UDBDButton()
+{
+	this->SendAnalyticsData = false;
+	this->AnalyticsName = TEXT("UNDEFINED");
 }
-

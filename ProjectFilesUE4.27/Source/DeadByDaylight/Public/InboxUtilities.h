@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "InboxUtilities.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API UInboxUtilities : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UInboxUtilities : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UInboxUtilities();
+	UInboxUtilities();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UInboxUtilities) { return 0; }

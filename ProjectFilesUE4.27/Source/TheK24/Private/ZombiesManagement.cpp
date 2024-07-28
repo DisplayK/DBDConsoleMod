@@ -1,12 +1,16 @@
 #include "ZombiesManagement.h"
-#include "ZombiesPatrolAreaManager.h"
 #include "AuthoritativeActorPoolComponent.h"
+#include "ZombiesPatrolAreaManager.h"
 
-void AZombiesManagement::Authority_OnIntroComplete() {
+void AZombiesManagement::Authority_OnIntroComplete()
+{
+
 }
 
-AZombiesManagement::AZombiesManagement() {
-    this->_zombiePool = CreateDefaultSubobject<UAuthoritativeActorPoolComponent>(TEXT("ZombiePool"));
-    this->_zombiesPatrolAreaManager = CreateDefaultSubobject<UZombiesPatrolAreaManager>(TEXT("ZombiesPatrolAreaManager"));
+AZombiesManagement::AZombiesManagement()
+{
+	this->_zombiePool = CreateDefaultSubobject<UAuthoritativeActorPoolComponent>(TEXT("ZombiePool"));
+	this->_zombiesPatrolAreaManager = CreateDefaultSubobject<UZombiesPatrolAreaManager>(TEXT("ZombiesPatrolAreaManager"));
+	this->_spawnedZombiesArray = TArray<AZombieCharacter*>();
+	this->_zombieEscapeDoorPoints = TArray<AZombieEscapeDoorPointsActor*>();
 }
-

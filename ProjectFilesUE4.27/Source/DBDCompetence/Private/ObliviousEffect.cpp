@@ -1,5 +1,6 @@
 #include "ObliviousEffect.h"
 
-UObliviousEffect::UObliviousEffect() {
-}
+UObliviousEffect::UObliviousEffect()
+{
 
+}

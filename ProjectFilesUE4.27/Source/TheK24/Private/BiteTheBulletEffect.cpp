@@ -1,5 +1,6 @@
 #include "BiteTheBulletEffect.h"
 
-UBiteTheBulletEffect::UBiteTheBulletEffect() {
-}
+UBiteTheBulletEffect::UBiteTheBulletEffect()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "StoryDescriptionValidationCommandlet.h"
 
-UStoryDescriptionValidationCommandlet::UStoryDescriptionValidationCommandlet() {
-}
+UStoryDescriptionValidationCommandlet::UStoryDescriptionValidationCommandlet()
+{
 
+}

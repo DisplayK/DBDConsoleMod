@@ -1,5 +1,6 @@
 #include "IsPlayerAbsorbingBloodOrbsCondition.h"
 
-UIsPlayerAbsorbingBloodOrbsCondition::UIsPlayerAbsorbingBloodOrbsCondition() {
-}
+UIsPlayerAbsorbingBloodOrbsCondition::UIsPlayerAbsorbingBloodOrbsCondition()
+{
 
+}

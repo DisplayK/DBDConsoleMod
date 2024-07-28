@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DelegateHandleWrapper.generated.h"
 
-USTRUCT(BlueprintType)
-struct COREUTILITIES_API FDelegateHandleWrapper {
-    GENERATED_BODY()
+USTRUCT()
+struct FDelegateHandleWrapper
+{
+	GENERATED_BODY()
+
 public:
-    FDelegateHandleWrapper();
+	COREUTILITIES_API FDelegateHandleWrapper();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FDelegateHandleWrapper) { return 0; }

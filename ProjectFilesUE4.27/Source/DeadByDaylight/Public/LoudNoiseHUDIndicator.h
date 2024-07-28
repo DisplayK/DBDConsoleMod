@@ -1,43 +1,48 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "LoudNoiseIndicatorData.h"
 #include "Components/SceneComponent.h"
-#include "LoudNoiseAddedEventDelegate.h"
+#include "LoudNoiseAddedEvent.h"
+#include "LoudNoiseIndicatorData.h"
 #include "UObject/NoExportTypes.h"
 #include "LoudNoiseHUDIndicator.generated.h"
 
 class UStaticMesh;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API ULoudNoiseHUDIndicator : public USceneComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API ULoudNoiseHUDIndicator : public USceneComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UStaticMesh* MaskMesh;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UStaticMesh* DistortionMesh;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float EdgePadding;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float CornerRoundness;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float ScreenFadeOutDistance;
-    
-    UPROPERTY(BlueprintAssignable)
-    FLoudNoiseAddedEvent LoudNoiseAddedEvent;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UStaticMesh* MaskMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UStaticMesh* DistortionMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float EdgePadding;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float CornerRoundness;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ScreenFadeOutDistance;
+
+	UPROPERTY(BlueprintAssignable)
+	FLoudNoiseAddedEvent LoudNoiseAddedEvent;
+
 private:
-    UPROPERTY(Transient)
-    TArray<FLoudNoiseIndicatorData> _trackedNoises;
-    
+	UPROPERTY(Transient)
+	TArray<FLoudNoiseIndicatorData> _trackedNoises;
+
 public:
-    ULoudNoiseHUDIndicator();
-    UFUNCTION(BlueprintCallable)
-    void AddTrackedNoise(FVector location, float duration);
-    
+	UFUNCTION(BlueprintCallable)
+	void AddTrackedNoise(FVector location, float duration);
+
+public:
+	ULoudNoiseHUDIndicator();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ULoudNoiseHUDIndicator) { return 0; }

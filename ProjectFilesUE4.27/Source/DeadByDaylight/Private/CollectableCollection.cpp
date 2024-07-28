@@ -1,5 +1,6 @@
 #include "CollectableCollection.h"
 
-UCollectableCollection::UCollectableCollection() {
+UCollectableCollection::UCollectableCollection()
+{
+	this->_collectables = TArray<ACollectable*>();
 }
-

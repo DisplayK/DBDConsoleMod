@@ -1,0 +1,16 @@
+{
+  "FileVersion": "3",
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "BHVR RulerTool",
+  "Description": "Ruler tool",
+  "Category": "ViewportTool",
+  "CreatedBy": "Behaviour Interactive",
+  "CreatedByURL": "http://www.bhvr.com/",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": false,
+  "CanContainContent": true,
+  "Installed": false
+}

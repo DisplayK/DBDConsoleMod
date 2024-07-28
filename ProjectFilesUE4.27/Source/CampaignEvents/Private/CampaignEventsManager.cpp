@@ -1,5 +1,6 @@
 #include "CampaignEventsManager.h"
 
-UCampaignEventsManager::UCampaignEventsManager() {
-}
+UCampaignEventsManager::UCampaignEventsManager()
+{
 
+}

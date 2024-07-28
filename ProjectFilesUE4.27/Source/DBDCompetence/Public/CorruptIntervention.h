@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Perk.h"
 #include "UObject/NoExportTypes.h"
@@ -7,36 +8,45 @@
 class AGenerator;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DBDCOMPETENCE_API UCorruptIntervention : public UPerk {
-    GENERATED_BODY()
-public:
+class DBDCOMPETENCE_API UCorruptIntervention : public UPerk
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditDefaultsOnly, EditFixedSize)
-    uint8 _blockedGeneratorCount[3];
-    
-    UPROPERTY(EditDefaultsOnly, EditFixedSize)
-    float _generatorBlockDuration[3];
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor _generatorAuraColorForKiller;
-    
+	UPROPERTY(EditDefaultsOnly, EditFixedSize)
+	uint8 _blockedGeneratorCount;
+
+	UPROPERTY(EditDefaultsOnly, EditFixedSize)
+	float _generatorBlockDuration;
+
+	UPROPERTY(EditDefaultsOnly)
+	FLinearColor _generatorAuraColorForKiller;
+
 private:
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_BlockedGenerators)
-    TArray<AGenerator*> _blockedGenerators;
-    
+	UPROPERTY(ReplicatedUsing=OnRep_BlockedGenerators, Transient)
+	TArray<AGenerator*> _blockedGenerators;
+
+private:
+	UFUNCTION()
+	void OnRep_BlockedGenerators();
+
+	UFUNCTION()
+	void LevelReadyToBlockedGenerators();
+
+	UFUNCTION(BlueprintPure)
+	float GetGeneratorBlockDuration() const;
+
+	UFUNCTION()
+	void Authority_TryActivatePerk();
+
+	UFUNCTION()
+	void Authority_OnLevelReadyToPlay();
+
 public:
-    UCorruptIntervention();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
-private:
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_ActivatePerk();
-    
-    UFUNCTION()
-    void OnRep_BlockedGenerators();
-    
-    UFUNCTION()
-    void Local_OnIntroCompleted();
-    
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UCorruptIntervention();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCorruptIntervention) { return 0; }

@@ -1,8 +1,11 @@
 #include "ObjectPlacementValidationWithRestrictionStrategy.h"
 
-void UObjectPlacementValidationWithRestrictionStrategy::OnLevelReadyToPlay() {
+void UObjectPlacementValidationWithRestrictionStrategy::OnLevelReadyToPlay()
+{
+
 }
 
-UObjectPlacementValidationWithRestrictionStrategy::UObjectPlacementValidationWithRestrictionStrategy() {
+UObjectPlacementValidationWithRestrictionStrategy::UObjectPlacementValidationWithRestrictionStrategy()
+{
+	this->_restrictedAreas = TArray<URestrictedPlacementAreaStrategy*>();
 }
-

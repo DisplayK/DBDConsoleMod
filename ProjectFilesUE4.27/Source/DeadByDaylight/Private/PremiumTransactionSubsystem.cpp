@@ -1,5 +1,6 @@
 #include "PremiumTransactionSubsystem.h"
 
-UPremiumTransactionSubsystem::UPremiumTransactionSubsystem() {
-}
+UPremiumTransactionSubsystem::UPremiumTransactionSubsystem()
+{
 
+}

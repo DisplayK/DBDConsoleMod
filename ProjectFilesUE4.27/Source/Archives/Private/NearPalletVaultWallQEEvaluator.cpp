@@ -1,5 +1,6 @@
 #include "NearPalletVaultWallQEEvaluator.h"
 
-UNearPalletVaultWallQEEvaluator::UNearPalletVaultWallQEEvaluator() {
-}
+UNearPalletVaultWallQEEvaluator::UNearPalletVaultWallQEEvaluator()
+{
 
+}

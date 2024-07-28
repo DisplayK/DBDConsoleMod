@@ -1,5 +1,6 @@
 #include "KillStandingInteractionDefinition.h"
 
-UKillStandingInteractionDefinition::UKillStandingInteractionDefinition() {
+UKillStandingInteractionDefinition::UKillStandingInteractionDefinition()
+{
+	this->_slasherFacingTolerance = 90.000000;
 }
-

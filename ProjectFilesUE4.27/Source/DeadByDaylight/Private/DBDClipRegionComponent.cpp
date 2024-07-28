@@ -3,15 +3,17 @@
 class UMaterialInstanceDynamic;
 class UDBDClipRegionComponent;
 
+void UDBDClipRegionComponent::ApplyClipToDynamicMaterial(UMaterialInstanceDynamic* dynamicInstanceToClip, int32 InRegionID)
+{
 
-
-void UDBDClipRegionComponent::ApplyClipToDynamicMaterial(UMaterialInstanceDynamic* dynamicInstanceToClip, int32 InRegionID) {
 }
 
+void UDBDClipRegionComponent::ApplyArrayOfClipsToDynamicMaterial(TArray<UDBDClipRegionComponent*> InRegions, UMaterialInstanceDynamic* dynamicInstanceToClip)
+{
 
-void UDBDClipRegionComponent::ApplyArrayOfClipsToDynamicMaterial(TArray<UDBDClipRegionComponent*> InRegions, UMaterialInstanceDynamic* dynamicInstanceToClip) {
 }
 
-UDBDClipRegionComponent::UDBDClipRegionComponent() {
+UDBDClipRegionComponent::UDBDClipRegionComponent()
+{
+	this->AffectedMaterialsAndVariants = TArray<FAffectedMaterialAndVariant>();
 }
-

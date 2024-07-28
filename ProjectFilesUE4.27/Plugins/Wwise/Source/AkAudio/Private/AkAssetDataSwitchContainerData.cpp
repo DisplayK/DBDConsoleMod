@@ -1,6 +1,9 @@
 #include "AkAssetDataSwitchContainerData.h"
 
-UAkAssetDataSwitchContainerData::UAkAssetDataSwitchContainerData() {
-    this->DefaultGroupValue = NULL;
+UAkAssetDataSwitchContainerData::UAkAssetDataSwitchContainerData()
+{
+	this->GroupValue = NULL;
+	this->DefaultGroupValue = NULL;
+	this->MediaList = TArray<UAkMediaAsset*>();
+	this->Children = TArray<UAkAssetDataSwitchContainerData*>();
 }
-

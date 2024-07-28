@@ -1,5 +1,6 @@
 #include "SpawnPopulationHandler.h"
 
-FSpawnPopulationHandler::FSpawnPopulationHandler() {
+FSpawnPopulationHandler::FSpawnPopulationHandler()
+{
+	this->_allAvailableSpawners = TArray<USceneComponent*>();
 }
-

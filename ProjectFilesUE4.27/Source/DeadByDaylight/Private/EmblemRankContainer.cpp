@@ -1,5 +1,6 @@
 #include "EmblemRankContainer.h"
 
-UEmblemRankContainer::UEmblemRankContainer() {
-}
+UEmblemRankContainer::UEmblemRankContainer()
+{
 
+}

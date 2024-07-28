@@ -1,5 +1,6 @@
 #include "DBDLocatorComponent.h"
 
-UDBDLocatorComponent::UDBDLocatorComponent() {
-}
+UDBDLocatorComponent::UDBDLocatorComponent()
+{
 
+}

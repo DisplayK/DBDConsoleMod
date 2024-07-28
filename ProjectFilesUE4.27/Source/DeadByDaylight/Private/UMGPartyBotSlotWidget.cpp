@@ -1,18 +1,23 @@
 #include "UMGPartyBotSlotWidget.h"
 
-void UUMGPartyBotSlotWidget::HandleInvitePartyButtonEvent() {
+void UUMGPartyBotSlotWidget::HandleInvitePartyButtonEvent()
+{
+
 }
 
-void UUMGPartyBotSlotWidget::HandleEditButtonEvent() {
+void UUMGPartyBotSlotWidget::HandleEditButtonEvent()
+{
+
 }
 
-UUMGPartyBotSlotWidget::UUMGPartyBotSlotWidget() {
-    this->RoleText = NULL;
-    this->BotDifficultyText = NULL;
-    this->CharacterNameText = NULL;
-    this->EditButton = NULL;
-    this->EditIcon = NULL;
-    this->InvitePartyButton = NULL;
-    this->InvitePartyCanvas = NULL;
+UUMGPartyBotSlotWidget::UUMGPartyBotSlotWidget()
+{
+	this->RoleText = NULL;
+	this->BotDifficultyText = NULL;
+	this->CharacterNameText = NULL;
+	this->EditButton = NULL;
+	this->EditIcon = NULL;
+	this->InvitePartyButton = NULL;
+	this->InvitePartyCanvas = NULL;
+	this->DifficultyColors = TMap<EAIDifficultyLevel, FSlateColor>();
 }
-

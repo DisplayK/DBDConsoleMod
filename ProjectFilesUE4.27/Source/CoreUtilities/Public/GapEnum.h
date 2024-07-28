@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GapEnum.generated.h"
 
-UENUM()
-enum class GapEnum {
-    Value1,
-    Value2 = 0x2,
-    Value3,
+UENUM(BlueprintType)
+enum class GapEnum : uint8
+{
+	Value1,
+	Value2 = 2,
+	Value3,
 };
-

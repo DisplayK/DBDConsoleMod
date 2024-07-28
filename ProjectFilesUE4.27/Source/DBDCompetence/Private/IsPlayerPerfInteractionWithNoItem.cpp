@@ -1,9 +1,11 @@
 #include "IsPlayerPerfInteractionWithNoItem.h"
 
-void UIsPlayerPerfInteractionWithNoItem::OnCollectableChargeStateChange(bool empty) {
+void UIsPlayerPerfInteractionWithNoItem::OnCollectableChargeStateChange(bool empty)
+{
+
 }
 
-UIsPlayerPerfInteractionWithNoItem::UIsPlayerPerfInteractionWithNoItem() {
-    this->_itemType = ELoadoutItemType::None;
+UIsPlayerPerfInteractionWithNoItem::UIsPlayerPerfInteractionWithNoItem()
+{
+	this->_itemType = ELoadoutItemType::None;
 }
-

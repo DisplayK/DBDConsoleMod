@@ -1,8 +1,11 @@
 #include "AtlantaPartyFlowHandler.h"
 
-void UAtlantaPartyFlowHandler::DisplayPartyFlowHandlerInfo() {
+void UAtlantaPartyFlowHandler::DisplayPartyFlowHandlerInfo()
+{
+
 }
 
-UAtlantaPartyFlowHandler::UAtlantaPartyFlowHandler() {
-}
+UAtlantaPartyFlowHandler::UAtlantaPartyFlowHandler()
+{
 
+}

@@ -1,61 +1,42 @@
 #include "SurvivorMadnessEffect.h"
 #include "Net/UnrealNetwork.h"
 
-void USurvivorMadnessEffect::Server_AddMadness_Implementation(float madnessToAdd) {
-}
-bool USurvivorMadnessEffect::Server_AddMadness_Validate(float madnessToAdd) {
-    return true;
-}
+void USurvivorMadnessEffect::OnRep_MadnessAmount()
+{
 
-
-void USurvivorMadnessEffect::OnStaticBlastReceived() {
 }
 
+void USurvivorMadnessEffect::Multicast_OnMadnessTierChanged_Implementation(const int32 newMadnessTier, const int32 oldMadnessTier)
+{
 
-void USurvivorMadnessEffect::OnSnapOutOfIt() {
 }
 
+void USurvivorMadnessEffect::Multicast_MadnessIntermittentScream_Implementation()
+{
 
-void USurvivorMadnessEffect::OnShockTherapyReceived() {
 }
 
-
-
-void USurvivorMadnessEffect::Multicast_UpdateMadnessPlayerTags_Implementation(int32 newMadness) {
-}
-bool USurvivorMadnessEffect::Multicast_UpdateMadnessPlayerTags_Validate(int32 newMadness) {
-    return true;
+int32 USurvivorMadnessEffect::GetMadnessTier() const
+{
+	return 0;
 }
 
-void USurvivorMadnessEffect::Multicast_OnMadnessTierUp_Implementation() {
-}
-bool USurvivorMadnessEffect::Multicast_OnMadnessTierUp_Validate() {
-    return true;
-}
+void USurvivorMadnessEffect::Authority_AddMadness(float amountToAdd)
+{
 
-void USurvivorMadnessEffect::Multicast_OnMadnessTierDown_Implementation() {
-}
-bool USurvivorMadnessEffect::Multicast_OnMadnessTierDown_Validate() {
-    return true;
 }
 
-float USurvivorMadnessEffect::GetMadnessValue() const {
-    return 0.0f;
+void USurvivorMadnessEffect::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(USurvivorMadnessEffect, _madnessAmount);
 }
 
-int32 USurvivorMadnessEffect::GetMadnessTier() const {
-    return 0;
+USurvivorMadnessEffect::USurvivorMadnessEffect()
+{
+	this->_madnessAmount = 0.000000;
+	this->_madnessThresholds = TArray<FDBDTunableRowHandle>();
+	this->_insaneSkillCheckChances = TArray<FDBDTunableRowHandle>();
+	this->madnessStatusViewId = NAME_None;
 }
-
-
-
-void USurvivorMadnessEffect::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(USurvivorMadnessEffect, _madness);
-}
-
-USurvivorMadnessEffect::USurvivorMadnessEffect() {
-    this->_madness = 0.00f;
-}
-

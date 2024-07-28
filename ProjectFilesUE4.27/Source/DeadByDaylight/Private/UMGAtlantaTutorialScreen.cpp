@@ -1,5 +1,6 @@
 #include "UMGAtlantaTutorialScreen.h"
 
-UUMGAtlantaTutorialScreen::UUMGAtlantaTutorialScreen() {
-}
+UUMGAtlantaTutorialScreen::UUMGAtlantaTutorialScreen()
+{
 
+}

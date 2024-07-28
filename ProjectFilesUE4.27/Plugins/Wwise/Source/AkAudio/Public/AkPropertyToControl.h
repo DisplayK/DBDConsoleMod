@@ -1,14 +1,19 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkPropertyToControl.generated.h"
 
 USTRUCT(BlueprintType)
-struct AKAUDIO_API FAkPropertyToControl {
-    GENERATED_BODY()
+struct FAkPropertyToControl
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FString ItemProperty;
-    
-    FAkPropertyToControl();
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FString ItemProperty;
+
+public:
+	AKAUDIO_API FAkPropertyToControl();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkPropertyToControl) { return 0; }

@@ -1,5 +1,6 @@
 #include "StorefrontConfiguration.h"
 
-UStorefrontConfiguration::UStorefrontConfiguration() {
+UStorefrontConfiguration::UStorefrontConfiguration()
+{
+	this->States = TMap<EStorefrontState, FStorefrontStateData>();
 }
-

@@ -1,32 +1,39 @@
 #include "ReleaseConjoinedTwin.h"
 #include "Net/UnrealNetwork.h"
+#include "GameplayTagContainer.h"
+#include "GameEventData.h"
 
-class AConjoinedTwin;
 class ADBDPlayer;
+class AConjoinedTwin;
 
-void UReleaseConjoinedTwin::OnTwinSet(AConjoinedTwin* twin) {
+void UReleaseConjoinedTwin::OnTwinSet(AConjoinedTwin* twin)
+{
+
 }
 
-void UReleaseConjoinedTwin::OnRep_ReleaseAnimationWentToTheEnd() {
+void UReleaseConjoinedTwin::OnRep_ReleaseAnimationWentToTheEnd()
+{
+
 }
 
-void UReleaseConjoinedTwin::OnPowerCollected(ADBDPlayer* collector) {
+void UReleaseConjoinedTwin::OnPowerCollected(ADBDPlayer* collector)
+{
+
 }
 
-void UReleaseConjoinedTwin::OnKillerStunned(const FGameplayTag gameEventType, const FGameEventData& gameEventData) {
+void UReleaseConjoinedTwin::OnKillerStunned(const FGameplayTag gameEventType, const FGameEventData& gameEventData)
+{
+
 }
 
+void UReleaseConjoinedTwin::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-
-
-
-void UReleaseConjoinedTwin::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UReleaseConjoinedTwin, _releaseAnimationWentToTheEnd);
+	DOREPLIFETIME(UReleaseConjoinedTwin, _releaseAnimationWentToTheEnd);
 }
 
-UReleaseConjoinedTwin::UReleaseConjoinedTwin() {
-    this->_releaseAnimationWentToTheEnd = false;
+UReleaseConjoinedTwin::UReleaseConjoinedTwin()
+{
+	this->_releaseAnimationWentToTheEnd = false;
 }
-

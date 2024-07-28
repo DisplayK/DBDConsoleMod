@@ -1,19 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "ECurrencyType.h"
 #include "CurrencyConversion.h"
+#include "ECurrencyType.h"
 #include "DBDCurrencyConversionTunables.generated.h"
 
 UCLASS(BlueprintType)
-class UDBDCurrencyConversionTunables : public UDataAsset {
-    GENERATED_BODY()
-public:
+class UDBDCurrencyConversionTunables : public UDataAsset
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TMap<ECurrencyType, FCurrencyConversion> Currencies;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TMap<ECurrencyType, FCurrencyConversion> Currencies;
+
 public:
-    UDBDCurrencyConversionTunables();
+	UDBDCurrencyConversionTunables();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDCurrencyConversionTunables) { return 0; }

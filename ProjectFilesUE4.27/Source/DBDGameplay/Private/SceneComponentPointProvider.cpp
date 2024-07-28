@@ -1,6 +1,6 @@
 #include "SceneComponentPointProvider.h"
 
-USceneComponentPointProvider::USceneComponentPointProvider() {
-    this->_sceneComponent = NULL;
+USceneComponentPointProvider::USceneComponentPointProvider()
+{
+	this->_sceneComponent = NULL;
 }
-

@@ -1,5 +1,5 @@
 #include "FastTimer.h"
 
-FFastTimer::FFastTimer() {
+FFastTimer::FFastTimer()
+{
 }
-

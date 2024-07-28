@@ -1,24 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Engine/NetSerialization.h"
 #include "Engine/NetSerialization.h"
 #include "LaunchInfo.generated.h"
 
 USTRUCT(BlueprintType)
-struct PROJECTILE_API FLaunchInfo {
-    GENERATED_BODY()
-public:
+struct FLaunchInfo
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly)
-    FVector_NetQuantize StartPosition;
-    
-    UPROPERTY(BlueprintReadOnly)
-    FVector_NetQuantizeNormal Direction;
-    
-    UPROPERTY(BlueprintReadOnly)
-    float Speed;
-    
+	UPROPERTY(BlueprintReadOnly)
+	FVector_NetQuantize StartPosition;
+
+	UPROPERTY(BlueprintReadOnly)
+	FVector_NetQuantizeNormal Direction;
+
+	UPROPERTY(BlueprintReadOnly)
+	float Speed;
+
 public:
-    FLaunchInfo();
+	PROJECTILE_API FLaunchInfo();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FLaunchInfo) { return 0; }

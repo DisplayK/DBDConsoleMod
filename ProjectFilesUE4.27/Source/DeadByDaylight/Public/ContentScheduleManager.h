@@ -1,19 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "ContentScheduleManager.generated.h"
 
 class UObjectLibrary;
 
 UCLASS()
-class DEADBYDAYLIGHT_API UContentScheduleManager : public UObject {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UContentScheduleManager : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UObjectLibrary* _availableMapLibrary;
-    
+	UPROPERTY(Transient)
+	UObjectLibrary* _availableMapLibrary;
+
 public:
-    UContentScheduleManager();
+	UContentScheduleManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UContentScheduleManager) { return 0; }

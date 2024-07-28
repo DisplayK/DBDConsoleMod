@@ -1,24 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDLocatorComponent.h"
 #include "DBDAggregateParticleLocatorComponent.generated.h"
 
-class UParticleSystem;
 class UParticleSystemComponent;
+class UParticleSystem;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UDBDAggregateParticleLocatorComponent : public UDBDLocatorComponent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UDBDAggregateParticleLocatorComponent : public UDBDLocatorComponent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UParticleSystem* Template;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UParticleSystem* Template;
+
 private:
-    UPROPERTY(Export, Transient)
-    UParticleSystemComponent* _particleComponent;
-    
+	UPROPERTY(Transient, Export)
+	UParticleSystemComponent* _particleComponent;
+
 public:
-    UDBDAggregateParticleLocatorComponent();
+	UDBDAggregateParticleLocatorComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDAggregateParticleLocatorComponent) { return 0; }

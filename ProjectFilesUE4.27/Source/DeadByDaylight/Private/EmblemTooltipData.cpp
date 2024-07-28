@@ -1,5 +1,6 @@
 #include "EmblemTooltipData.h"
 
-FEmblemTooltipData::FEmblemTooltipData() {
+FEmblemTooltipData::FEmblemTooltipData()
+{
+	this->EmblemSlotData = FEmblemSlotData{};
 }
-

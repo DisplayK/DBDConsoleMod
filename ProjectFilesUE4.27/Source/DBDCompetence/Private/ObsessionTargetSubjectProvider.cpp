@@ -1,5 +1,6 @@
 #include "ObsessionTargetSubjectProvider.h"
 
-UObsessionTargetSubjectProvider::UObsessionTargetSubjectProvider() {
-}
+UObsessionTargetSubjectProvider::UObsessionTargetSubjectProvider()
+{
 
+}

@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "AddonViewData.h"
 #include "ItemViewData.h"
+#include "AddonViewData.h"
 #include "ItemBundleViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FItemBundleViewData {
-    GENERATED_BODY()
+struct FItemBundleViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FItemViewData Item;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FAddonViewData Addon1;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FAddonViewData Addon2;
-    
-    DBDUIVIEWINTERFACES_API FItemBundleViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FItemViewData Item;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAddonViewData Addon1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAddonViewData Addon2;
+
+public:
+	DBDUIVIEWINTERFACES_API FItemBundleViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FItemBundleViewData) { return 0; }

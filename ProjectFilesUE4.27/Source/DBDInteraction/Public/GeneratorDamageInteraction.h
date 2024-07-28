@@ -1,18 +1,28 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ChargeableInteractionDefinition.h"
+#include "DBDTunableRowHandle.h"
 #include "GeneratorDamageInteraction.generated.h"
 
 class ADBDPlayer;
 class AGenerator;
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class UGeneratorDamageInteraction : public UChargeableInteractionDefinition {
-    GENERATED_BODY()
+class DBDINTERACTION_API UGeneratorDamageInteraction : public UChargeableInteractionDefinition
+{
+	GENERATED_BODY()
+
+private:
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _baseImmediateDamagePercent;
+
 public:
-    UGeneratorDamageInteraction();
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable, BlueprintPure=false)
-    void Authority_DamageGenerator(ADBDPlayer* damageBy, AGenerator* generator) const;
-    
+	UFUNCTION(BlueprintPure=false, BlueprintCallable, BlueprintAuthorityOnly)
+	void Authority_DamageGenerator(ADBDPlayer* damageBy, AGenerator* generator) const;
+
+public:
+	UGeneratorDamageInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UGeneratorDamageInteraction) { return 0; }

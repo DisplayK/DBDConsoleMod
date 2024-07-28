@@ -1,11 +1,16 @@
 #include "ArchiveWidgetScreen.h"
 
-void UArchiveWidgetScreen::OnRewardsButtonClick() {
+void UArchiveWidgetScreen::OnRewardsButtonClick()
+{
+
 }
 
-void UArchiveWidgetScreen::OnQuestsButtonClick() {
+void UArchiveWidgetScreen::OnQuestsButtonClick()
+{
+
 }
 
-UArchiveWidgetScreen::UArchiveWidgetScreen() {
-}
+UArchiveWidgetScreen::UArchiveWidgetScreen()
+{
 
+}

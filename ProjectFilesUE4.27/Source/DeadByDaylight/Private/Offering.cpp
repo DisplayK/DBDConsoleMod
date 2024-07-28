@@ -1,5 +1,5 @@
 #include "Offering.h"
 
-FOffering::FOffering() {
+FOffering::FOffering()
+{
 }
-

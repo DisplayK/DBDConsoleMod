@@ -1,5 +1,6 @@
 #include "BonusPointEventsManager.h"
 
-UBonusPointEventsManager::UBonusPointEventsManager() {
-}
+UBonusPointEventsManager::UBonusPointEventsManager()
+{
 
+}

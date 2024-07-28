@@ -1,5 +1,6 @@
 #include "BloodWebRingPersistentData.h"
 
-FBloodWebRingPersistentData::FBloodWebRingPersistentData() {
+FBloodWebRingPersistentData::FBloodWebRingPersistentData()
+{
+	this->NodeData = TArray<FBloodwebNode>();
 }
-

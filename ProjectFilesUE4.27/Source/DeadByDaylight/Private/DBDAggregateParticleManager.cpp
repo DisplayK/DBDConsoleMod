@@ -1,5 +1,6 @@
 #include "DBDAggregateParticleManager.h"
 
-ADBDAggregateParticleManager::ADBDAggregateParticleManager() {
-}
+ADBDAggregateParticleManager::ADBDAggregateParticleManager()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "EmblemRankUtilities.h"
 
-UEmblemRankUtilities::UEmblemRankUtilities() {
-}
+UEmblemRankUtilities::UEmblemRankUtilities()
+{
 
+}

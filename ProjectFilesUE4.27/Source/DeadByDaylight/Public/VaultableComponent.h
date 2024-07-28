@@ -1,31 +1,31 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "OnVaultEventDelegate.h"
-#include "GameplayTagContainer.h"
+#include "OnVaultEvent.h"
 #include "VaultableComponent.generated.h"
 
 class ADBDPlayer;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UVaultableComponent : public UActorComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UVaultableComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintAssignable)
-    FOnVaultEvent OnVault;
-    
-protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FGameplayTag _vaultableScoreEvent;
-    
+	UPROPERTY(BlueprintAssignable)
+	FOnVaultEvent OnVault;
+
 public:
-    UVaultableComponent();
-    UFUNCTION(BlueprintCallable)
-    void SignalVault(ADBDPlayer* survivor, float interactionTime);
-    
+	UFUNCTION(BlueprintCallable)
+	void SignalVault(ADBDPlayer* survivor, float interactionTime);
+
 private:
-    UFUNCTION()
-    void OnChaseEnded(ADBDPlayer* survivor, float chaseTimer);
-    
+	UFUNCTION()
+	void OnChaseEnded(ADBDPlayer* survivor, float chaseTimer);
+
+public:
+	UVaultableComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UVaultableComponent) { return 0; }

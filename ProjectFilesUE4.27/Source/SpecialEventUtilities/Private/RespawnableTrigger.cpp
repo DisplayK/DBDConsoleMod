@@ -1,5 +1,6 @@
 #include "RespawnableTrigger.h"
 
-URespawnableTrigger::URespawnableTrigger() {
-}
+URespawnableTrigger::URespawnableTrigger()
+{
 
+}

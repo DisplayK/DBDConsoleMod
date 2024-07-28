@@ -1,5 +1,5 @@
 #include "EACClientAuthChallengeAnalytics.h"
 
-FEACClientAuthChallengeAnalytics::FEACClientAuthChallengeAnalytics() {
+FEACClientAuthChallengeAnalytics::FEACClientAuthChallengeAnalytics()
+{
 }
-

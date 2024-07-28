@@ -1,6 +1,6 @@
 #include "TemplatePresenter.h"
 
-UTemplatePresenter::UTemplatePresenter() {
-    this->TemplateWidgetClass = NULL;
+UTemplatePresenter::UTemplatePresenter()
+{
+	this->TemplateWidgetClass = NULL;
 }
-

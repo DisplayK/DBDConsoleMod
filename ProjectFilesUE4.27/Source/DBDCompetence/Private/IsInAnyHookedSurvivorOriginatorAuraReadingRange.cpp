@@ -1,5 +1,6 @@
 #include "IsInAnyHookedSurvivorOriginatorAuraReadingRange.h"
 
-UIsInAnyHookedSurvivorOriginatorAuraReadingRange::UIsInAnyHookedSurvivorOriginatorAuraReadingRange() {
-}
+UIsInAnyHookedSurvivorOriginatorAuraReadingRange::UIsInAnyHookedSurvivorOriginatorAuraReadingRange()
+{
 
+}

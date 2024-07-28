@@ -1,5 +1,6 @@
 #include "InstigatorInBasementPercentQEEvaluator.h"
 
-UInstigatorInBasementPercentQEEvaluator::UInstigatorInBasementPercentQEEvaluator() {
-}
+UInstigatorInBasementPercentQEEvaluator::UInstigatorInBasementPercentQEEvaluator()
+{
 
+}

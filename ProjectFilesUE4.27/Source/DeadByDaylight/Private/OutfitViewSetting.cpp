@@ -1,5 +1,8 @@
 #include "OutfitViewSetting.h"
 
-FOutfitViewSetting::FOutfitViewSetting() {
+FOutfitViewSetting::FOutfitViewSetting()
+{
+	this->Label = NAME_None;
+	this->OutfitDropdown = FOutfitDropdown{};
+	this->Settings = FScreenshotViewSetting{};
 }
-

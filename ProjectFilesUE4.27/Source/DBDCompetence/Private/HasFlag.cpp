@@ -1,5 +1,6 @@
 #include "HasFlag.h"
 
-UHasFlag::UHasFlag() {
-}
+UHasFlag::UHasFlag()
+{
 
+}

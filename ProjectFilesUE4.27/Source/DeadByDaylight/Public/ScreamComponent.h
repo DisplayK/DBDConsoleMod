@@ -1,34 +1,43 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "MontagePlaybackDefinition.h"
+#include "Components/ActorComponent.h"
+#include "ECamperDamageState.h"
 #include "ScreamComponent.generated.h"
 
-class UAkAudioEvent;
 class UPerkManager;
 class UMontagePlayer;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UScreamComponent : public UActorComponent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UScreamComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UPerkManager* _perkManager;
-    
-    UPROPERTY(Export, Transient)
-    UMontagePlayer* _montagePlayer;
-    
+	UPROPERTY(Transient, Export)
+	UPerkManager* _perkManager;
+
+	UPROPERTY(Transient, Export)
+	UMontagePlayer* _montagePlayer;
+
 public:
-    UScreamComponent();
-    UFUNCTION(BlueprintCallable)
-    bool PlayScreamSoundAndAnimation(UAkAudioEvent* audioEvent, bool fireLoudNoiseEvent, FMontagePlaybackDefinition montageDefinition, float audibleRange);
-    
-    UFUNCTION(BlueprintCallable)
-    bool PlayScreamSound(UAkAudioEvent* audioEvent, bool fireLoudNoiseEvent, float audibleRange);
-    
-    UFUNCTION(BlueprintPure)
-    bool CanScream() const;
-    
+	UFUNCTION(BlueprintCallable)
+	bool TriggerScreamEventsIfPossible(bool fireLoudNoiseEvent, float audibleRange);
+
+	UFUNCTION(BlueprintCallable)
+	bool TriggerScreamEventsAndAndAnimationIfPossible(bool fireLoudNoiseEvent, FMontagePlaybackDefinition montageDefinition, float audibleRange);
+
+private:
+	UFUNCTION()
+	void OnDamageStateChanged(ECamperDamageState oldDamageState, ECamperDamageState newDamageState);
+
+public:
+	UFUNCTION(BlueprintPure)
+	bool CanScream() const;
+
+public:
+	UScreamComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UScreamComponent) { return 0; }

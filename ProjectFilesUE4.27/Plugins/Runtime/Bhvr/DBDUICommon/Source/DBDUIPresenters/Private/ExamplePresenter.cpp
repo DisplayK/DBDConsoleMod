@@ -1,9 +1,11 @@
 #include "ExamplePresenter.h"
 
-void UExamplePresenter::OnButtonClick() {
+void UExamplePresenter::OnButtonClick()
+{
+
 }
 
-UExamplePresenter::UExamplePresenter() {
-    this->ExampleWidgetClass = NULL;
+UExamplePresenter::UExamplePresenter()
+{
+	this->ExampleWidgetClass = NULL;
 }
-

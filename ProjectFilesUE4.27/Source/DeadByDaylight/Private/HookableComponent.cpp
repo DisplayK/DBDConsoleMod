@@ -1,18 +1,46 @@
 #include "HookableComponent.h"
 
-void UHookableComponent::Multicast_SetDrainTimerPercentLeft_Implementation(float percentTime) {
+void UHookableComponent::Multicast_SetDrainTimerPercentLeft_Implementation(float percentTime)
+{
+
 }
 
-void UHookableComponent::Multicast_DebugSetHookDrainStage_Implementation(int32 drainStage) {
+void UHookableComponent::Multicast_DebugSetHookDrainStage_Implementation(int32 drainStage)
+{
+
 }
 
-float UHookableComponent::GetDrainTimerPercentLeft() const {
-    return 0.0f;
+int32 UHookableComponent::GetHookedCount() const
+{
+	return 0;
 }
 
-void UHookableComponent::Authority_SetDrainTimerPercentLeft(float percentTime) {
+float UHookableComponent::GetDrainTimerPercentLeft() const
+{
+	return 0.0f;
 }
 
-UHookableComponent::UHookableComponent() {
+void UHookableComponent::Authority_SetDrainTimerPercentLeft(float percentTime)
+{
+
 }
 
+void UHookableComponent::Authority_DebugSetHookEscapeAutoSuccess(const bool success)
+{
+
+}
+
+void UHookableComponent::Authority_DebugSetHookEscapeAutoFail(const bool fail)
+{
+
+}
+
+void UHookableComponent::Authority_DebugSetHookDrainStage(int32 drainStage)
+{
+
+}
+
+UHookableComponent::UHookableComponent()
+{
+
+}

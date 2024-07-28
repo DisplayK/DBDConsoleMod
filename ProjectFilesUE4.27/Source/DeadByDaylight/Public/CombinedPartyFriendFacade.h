@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "CombinedPartyFriendFacade.generated.h"
 
 UCLASS()
-class UCombinedPartyFriendFacade : public UObject {
-    GENERATED_BODY()
+class UCombinedPartyFriendFacade : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UCombinedPartyFriendFacade();
+	UCombinedPartyFriendFacade();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCombinedPartyFriendFacade) { return 0; }

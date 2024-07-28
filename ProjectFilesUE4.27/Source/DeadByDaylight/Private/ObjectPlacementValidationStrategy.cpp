@@ -1,5 +1,6 @@
 #include "ObjectPlacementValidationStrategy.h"
 
-UObjectPlacementValidationStrategy::UObjectPlacementValidationStrategy() {
-}
+UObjectPlacementValidationStrategy::UObjectPlacementValidationStrategy()
+{
 
+}

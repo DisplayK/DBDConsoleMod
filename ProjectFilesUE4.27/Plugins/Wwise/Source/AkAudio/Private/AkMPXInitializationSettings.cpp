@@ -1,5 +1,6 @@
 #include "AkMPXInitializationSettings.h"
 
-UAkMPXInitializationSettings::UAkMPXInitializationSettings() {
-}
+UAkMPXInitializationSettings::UAkMPXInitializationSettings()
+{
 
+}

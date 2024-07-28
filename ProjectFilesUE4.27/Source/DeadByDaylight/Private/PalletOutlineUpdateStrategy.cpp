@@ -1,5 +1,6 @@
 #include "PalletOutlineUpdateStrategy.h"
 
-UPalletOutlineUpdateStrategy::UPalletOutlineUpdateStrategy() {
-}
+UPalletOutlineUpdateStrategy::UPalletOutlineUpdateStrategy()
+{
 
+}

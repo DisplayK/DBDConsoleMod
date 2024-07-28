@@ -1,5 +1,6 @@
 #include "SlashAttack.h"
 
-USlashAttack::USlashAttack() {
-}
+USlashAttack::USlashAttack()
+{
 
+}

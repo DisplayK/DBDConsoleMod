@@ -2,12 +2,17 @@
 
 class ACamperPlayer;
 
-void ULivingSurvivorsCountQEEvaluator::OnSurvivorRemoved(ACamperPlayer* survivorRemoved) {
+void ULivingSurvivorsCountQEEvaluator::OnSurvivorRemoved(ACamperPlayer* survivorRemoved)
+{
+
 }
 
-void ULivingSurvivorsCountQEEvaluator::OnSurvivorAdded(ACamperPlayer* survivorAdded) {
+void ULivingSurvivorsCountQEEvaluator::OnSurvivorAdded(ACamperPlayer* survivorAdded)
+{
+
 }
 
-ULivingSurvivorsCountQEEvaluator::ULivingSurvivorsCountQEEvaluator() {
-}
+ULivingSurvivorsCountQEEvaluator::ULivingSurvivorsCountQEEvaluator()
+{
 
+}

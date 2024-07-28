@@ -1,5 +1,6 @@
 #include "TunableStat.h"
 
-FTunableStat::FTunableStat() {
+FTunableStat::FTunableStat()
+{
+	this->_baseValue = FDBDTunableRowHandle{};
 }
-

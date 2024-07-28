@@ -1,5 +1,6 @@
 #include "AndModifierCondition.h"
 
-UAndModifierCondition::UAndModifierCondition() {
-}
+UAndModifierCondition::UAndModifierCondition()
+{
 
+}

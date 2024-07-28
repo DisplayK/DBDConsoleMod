@@ -1,5 +1,6 @@
 #include "EACClientViolationAnalytics.h"
 
-FEACClientViolationAnalytics::FEACClientViolationAnalytics() {
+FEACClientViolationAnalytics::FEACClientViolationAnalytics()
+{
+	this->ViolationCase = TEXT("");
 }
-

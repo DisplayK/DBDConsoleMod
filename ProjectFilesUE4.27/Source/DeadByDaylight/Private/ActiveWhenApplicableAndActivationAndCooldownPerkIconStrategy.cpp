@@ -1,5 +1,6 @@
 #include "ActiveWhenApplicableAndActivationAndCooldownPerkIconStrategy.h"
 
-UActiveWhenApplicableAndActivationAndCooldownPerkIconStrategy::UActiveWhenApplicableAndActivationAndCooldownPerkIconStrategy() {
-}
+UActiveWhenApplicableAndActivationAndCooldownPerkIconStrategy::UActiveWhenApplicableAndActivationAndCooldownPerkIconStrategy()
+{
 
+}

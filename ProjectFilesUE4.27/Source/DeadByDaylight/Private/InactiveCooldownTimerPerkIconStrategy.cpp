@@ -1,5 +1,6 @@
 #include "InactiveCooldownTimerPerkIconStrategy.h"
 
-UInactiveCooldownTimerPerkIconStrategy::UInactiveCooldownTimerPerkIconStrategy() {
-}
+UInactiveCooldownTimerPerkIconStrategy::UInactiveCooldownTimerPerkIconStrategy()
+{
 
+}

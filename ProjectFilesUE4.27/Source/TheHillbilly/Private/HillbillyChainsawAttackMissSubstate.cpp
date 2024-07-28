@@ -1,5 +1,6 @@
 #include "HillbillyChainsawAttackMissSubstate.h"
 
-UHillbillyChainsawAttackMissSubstate::UHillbillyChainsawAttackMissSubstate() {
-}
+UHillbillyChainsawAttackMissSubstate::UHillbillyChainsawAttackMissSubstate()
+{
 
+}

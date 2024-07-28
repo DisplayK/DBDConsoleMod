@@ -1,8 +1,11 @@
 #include "FearMarketManager.h"
 
-void UFearMarketManager::ReceivedFearMarketData(bool success) {
+void UFearMarketManager::ReceivedFearMarketData(bool success)
+{
+
 }
 
-UFearMarketManager::UFearMarketManager() {
+UFearMarketManager::UFearMarketManager()
+{
+	this->_gameInstance = NULL;
 }
-

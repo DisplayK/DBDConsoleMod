@@ -1,5 +1,8 @@
 #include "RecommendationsGenerator.h"
 
-URecommendationsGenerator::URecommendationsGenerator() {
+URecommendationsGenerator::URecommendationsGenerator()
+{
+	this->_shopManager = NULL;
+	this->_gameInstance = NULL;
+	this->_filters = TMap<FString, URecommendationsFilter*>();
 }
-

@@ -1,8 +1,7 @@
 #include "AkWindowsAdvancedInitializationSettings.h"
 
-FAkWindowsAdvancedInitializationSettings::FAkWindowsAdvancedInitializationSettings() {
-    this->AudioAPI = 0;
-    this->GlobalFocus = false;
-    this->UseHeadMountedDisplayAudioDevice = false;
+FAkWindowsAdvancedInitializationSettings::FAkWindowsAdvancedInitializationSettings()
+{
+	this->UseHeadMountedDisplayAudioDevice = false;
+	this->MaxSystemAudioObjects = 0;
 }
-

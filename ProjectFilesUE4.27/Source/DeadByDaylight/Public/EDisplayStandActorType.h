@@ -1,12 +1,13 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EDisplayStandActorType.generated.h"
 
-UENUM()
-enum class EDisplayStandActorType {
-    None,
-    Character,
-    Hook,
-    Charm,
+UENUM(BlueprintType)
+enum class EDisplayStandActorType : uint8
+{
+	None,
+	Character,
+	Hook,
+	Charm,
 };
-

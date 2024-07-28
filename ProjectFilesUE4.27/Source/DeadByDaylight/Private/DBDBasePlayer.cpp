@@ -1,53 +1,85 @@
 #include "DBDBasePlayer.h"
+#include "UObject/NoExportTypes.h"
+#include "GameplayTagContainer.h"
+#include "Chaos/ChaosEngineInterface.h"
 
 class UAkComponent;
+class UCustomizedSkeletalMesh;
 class UCustomizedAudioComponent;
 
-bool ADBDBasePlayer::TeleportWithClothHandling(const FVector& location, const FRotator& rotation, bool checkCollisions) {
-    return false;
+bool ADBDBasePlayer::TeleportWithClothHandling(const FVector& location, const FRotator& rotation, bool checkCollisions)
+{
+	return false;
 }
 
-void ADBDBasePlayer::Multicast_SwapCosmetics_Implementation(FName cosmeticId) {
+void ADBDBasePlayer::Multicast_SwapCosmetics_Implementation(FName cosmeticId)
+{
+
 }
 
-bool ADBDBasePlayer::GetShowBlindDebugInfo() const {
-    return false;
+bool ADBDBasePlayer::GetShowBlindDebugInfo() const
+{
+	return false;
 }
 
-FGameplayTagContainer ADBDBasePlayer::GetSemanticTag() const {
-    return FGameplayTagContainer{};
+FGameplayTagContainer ADBDBasePlayer::GetSemanticTag() const
+{
+	return FGameplayTagContainer{};
 }
 
-FString ADBDBasePlayer::GetRightFootAudioSurfaceName() const {
-    return TEXT("");
+TEnumAsByte<EPhysicalSurface> ADBDBasePlayer::GetRightFootSurfaceType() const
+{
+	return SurfaceType_Default;
 }
 
-FString ADBDBasePlayer::GetLeftFootAudioSurfaceName() const {
-    return TEXT("");
+FString ADBDBasePlayer::GetRightFootAudioSurfaceName() const
+{
+	return TEXT("");
 }
 
-UCustomizedAudioComponent* ADBDBasePlayer::GetCustomizedAudio() const {
-    return NULL;
+TEnumAsByte<EPhysicalSurface> ADBDBasePlayer::GetLeftFootSurfaceType() const
+{
+	return SurfaceType_Default;
 }
 
-FName ADBDBasePlayer::GetCharacterName() const {
-    return NAME_None;
+FString ADBDBasePlayer::GetLeftFootAudioSurfaceName() const
+{
+	return TEXT("");
 }
 
-int32 ADBDBasePlayer::GetCharacterIndex() const {
-    return 0;
+UCustomizedSkeletalMesh* ADBDBasePlayer::GetCustomizedSkeletalMesh_Implementation() const
+{
+	return NULL;
 }
 
-UAkComponent* ADBDBasePlayer::GetAudioComponent() const {
-    return NULL;
+UCustomizedAudioComponent* ADBDBasePlayer::GetCustomizedAudio() const
+{
+	return NULL;
 }
 
-void ADBDBasePlayer::DBD_SwapCosmetics(FName cosmeticId) {
+FName ADBDBasePlayer::GetCharacterName() const
+{
+	return NAME_None;
 }
 
-ADBDBasePlayer::ADBDBasePlayer() {
-    this->_leftFootGroundDetector = NULL;
-    this->_rightFootGroundDetector = NULL;
-    this->_characterIndex = 0;
+int32 ADBDBasePlayer::GetCharacterIndex() const
+{
+	return 0;
 }
 
+UAkComponent* ADBDBasePlayer::GetAudioComponent() const
+{
+	return NULL;
+}
+
+void ADBDBasePlayer::DBD_SwapCosmetics(FName cosmeticId)
+{
+
+}
+
+ADBDBasePlayer::ADBDBasePlayer()
+{
+	this->_leftFootGroundDetector = NULL;
+	this->_rightFootGroundDetector = NULL;
+	this->_characterIndex = 0;
+}

@@ -1,16 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "InstantActionList.generated.h"
 
 class UBaseReversibleInstantActionHandler;
 
-USTRUCT(BlueprintType)
-struct FInstantActionList {
-    GENERATED_BODY()
+USTRUCT()
+struct FInstantActionList
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    TArray<UBaseReversibleInstantActionHandler*> Actions;
-    
-    REVERSIBLEACTIONSYSTEM_API FInstantActionList();
+	UPROPERTY()
+	TArray<UBaseReversibleInstantActionHandler*> Actions;
+
+public:
+	REVERSIBLEACTIONSYSTEM_API FInstantActionList();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FInstantActionList) { return 0; }

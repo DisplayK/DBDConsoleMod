@@ -1,5 +1,6 @@
 #include "RoundRobinTicker.h"
 
-URoundRobinTicker::URoundRobinTicker() {
-}
+URoundRobinTicker::URoundRobinTicker()
+{
 
+}

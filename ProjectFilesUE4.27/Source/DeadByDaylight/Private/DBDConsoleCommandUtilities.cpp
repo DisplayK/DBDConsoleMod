@@ -1,5 +1,6 @@
 #include "DBDConsoleCommandUtilities.h"
 
-UDBDConsoleCommandUtilities::UDBDConsoleCommandUtilities() {
-}
+UDBDConsoleCommandUtilities::UDBDConsoleCommandUtilities()
+{
 
+}

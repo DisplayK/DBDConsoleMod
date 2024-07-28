@@ -1,35 +1,38 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "Navigation/PathFollowingComponent.h"
 #include "AICharacterBehaviour.h"
 #include "AITypes.h"
-#include "Navigation/PathFollowingComponent.h"
 #include "AIMoveToInteract.generated.h"
 
-class UAIMoveToInteractData;
-class ADBDPlayer;
-class ADBDAIPlayerController;
 class UAICharacterBehaviourData;
+class UAIMoveToInteractData;
+class ADBDAIPlayerController;
+class ADBDPlayer;
 
 UCLASS()
-class UAIMoveToInteract : public UAICharacterBehaviour {
-    GENERATED_BODY()
-public:
+class UAIMoveToInteract : public UAICharacterBehaviour
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UAIMoveToInteractData* _aiMoveToInteractData;
-    
-    UPROPERTY(Transient)
-    ADBDAIPlayerController* _aiController;
-    
-public:
-    UAIMoveToInteract();
+	UPROPERTY(Transient)
+	UAIMoveToInteractData* _aiMoveToInteractData;
+
+	UPROPERTY(Transient)
+	ADBDAIPlayerController* _aiController;
+
 private:
-    UFUNCTION()
-    void InteractionPointReached(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult::Type> Result);
-    
+	UFUNCTION()
+	void InteractionPointReached(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult::Type> Result);
+
 public:
-    UFUNCTION()
-    void Init(ADBDPlayer* character, UAICharacterBehaviourData* behaviourData);
-    
+	UFUNCTION()
+	void Init(ADBDPlayer* character, UAICharacterBehaviourData* behaviourData);
+
+public:
+	UAIMoveToInteract();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAIMoveToInteract) { return 0; }

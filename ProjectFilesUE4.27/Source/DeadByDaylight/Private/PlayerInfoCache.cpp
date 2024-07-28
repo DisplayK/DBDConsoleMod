@@ -1,5 +1,5 @@
 #include "PlayerInfoCache.h"
 
-FPlayerInfoCache::FPlayerInfoCache() {
+FPlayerInfoCache::FPlayerInfoCache()
+{
 }
-

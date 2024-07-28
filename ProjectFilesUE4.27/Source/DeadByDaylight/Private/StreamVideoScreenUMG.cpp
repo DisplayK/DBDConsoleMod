@@ -1,8 +1,11 @@
 #include "StreamVideoScreenUMG.h"
 
-void UStreamVideoScreenUMG::OnCloseTriggered() {
+void UStreamVideoScreenUMG::OnCloseTriggered()
+{
+
 }
 
-UStreamVideoScreenUMG::UStreamVideoScreenUMG() {
+UStreamVideoScreenUMG::UStreamVideoScreenUMG()
+{
+	this->_streamVideoManager = NULL;
 }
-

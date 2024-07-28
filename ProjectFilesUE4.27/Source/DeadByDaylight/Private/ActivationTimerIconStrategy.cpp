@@ -1,5 +1,6 @@
 #include "ActivationTimerIconStrategy.h"
 
-UActivationTimerIconStrategy::UActivationTimerIconStrategy() {
-}
+UActivationTimerIconStrategy::UActivationTimerIconStrategy()
+{
 
+}

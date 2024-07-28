@@ -1,89 +1,61 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DoctorStatusData.h"
-#include "NightmareStatusData.h"
 #include "EPlayerStatus.h"
 #include "EObsessionUIState.h"
-#include "ExecutionerStatusData.h"
-#include "GhostStatusData.h"
-#include "PigStatusData.h"
-#include "PlagueStatusData.h"
-#include "TwinsStatusData.h"
-#include "TricksterStatusData.h"
-#include "K24StatusData.h"
-#include "K25StatusData.h"
-#include "K26StatusData.h"
+#include "EConnectionQuality.h"
 #include "PlayerStatusViewData.generated.h"
 
 class UTexture2D;
+class UKillerStatusData;
 
 USTRUCT(BlueprintType)
-struct FPlayerStatusViewData {
-    GENERATED_BODY()
+struct FPlayerStatusViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FString PlayerName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    UTexture2D* PlayerPortraitIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    UTexture2D* PlayerPortraitIconOverride;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EPlayerStatus PlayerStatusState;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float TimerProgress;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsDeepWound;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsBroken;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsLocalPlayerAKiller;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EObsessionUIState ObsessionState;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 DrainStage;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FDoctorStatusData DoctorStatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FExecutionerStatusData ExecutionerStatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGhostStatusData GhostStatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FNightmareStatusData NightmareStatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FPigStatusData PigStatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FPlagueStatusData PlagueStatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FTwinsStatusData TwinsStatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FTricksterStatusData TricksterStatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FK24StatusData K24StatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FK25StatusData K25StatusData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FK26StatusData K26StatusData;
-    
-    DBDUIVIEWINTERFACES_API FPlayerStatusViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString PlayerName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UTexture2D* PlayerPortraitIcon;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	UTexture2D* PlayerPortraitIconOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EPlayerStatus PlayerStatusState;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float TimerProgress;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsDeepWound;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsBroken;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsLocalPlayerAKiller;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EObsessionUIState ObsessionState;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 DrainStage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EConnectionQuality ConnectionQualityStatus;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UKillerStatusData* KillerStatusData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float CampProgress;
+
+public:
+	DBDUIVIEWINTERFACES_API FPlayerStatusViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FPlayerStatusViewData) { return 0; }

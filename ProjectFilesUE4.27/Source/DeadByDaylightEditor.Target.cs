@@ -1,10 +1,12 @@
-﻿using UnrealBuildTool;
+using UnrealBuildTool;
 
 public class DeadByDaylightEditorTarget : TargetRules {
 	public DeadByDaylightEditorTarget(TargetInfo Target) : base(Target) {
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
+
 		ExtraModuleNames.AddRange(new string[] {
+			"Achievements",
 			"Activation",
 			"AnimationUtilities",
 			"Anniversary",
@@ -13,17 +15,21 @@ public class DeadByDaylightEditorTarget : TargetRules {
 			"AudioUtilities",
 			"CampaignEvents",
 			"Competence",
+			"CoreCommonUIUtils",
 			"CoreUtilities",
 			"Customization",
 			"DataTableUtilities",
 			"DBDAnalytics",
 			"DBDAnimation",
+			"DBDAnimationBudgetAllocator",
 			"DBDAttack",
 			"DBDAudio",
 			"DBDBots",
 			"DBDCompetence",
+			"DBDCosmetic",
 			"DBDGameplay",
 			"DBDGameplayPresenter",
+			"DBDGraphics",
 			"DBDInput",
 			"DBDInteraction",
 			"DBDMetaGameplay",
@@ -43,9 +49,11 @@ public class DeadByDaylightEditorTarget : TargetRules {
 			"GraphicsExtensions",
 			"Halloween2020",
 			"Halloween2021",
+			"Halloween2022",
 			"InputUtilities",
 			"Interaction",
 			"Lunar2022",
+			"Lunar2023",
 			"MatchHistory",
 			"MathUtilities",
 			"NetEaseAnalytics",
@@ -68,6 +76,8 @@ public class DeadByDaylightEditorTarget : TargetRules {
 			"ScaleformUI",
 			"SharedAuthenticationUtilities",
 			"SignificanceUtilities",
+			"SimpleStateMachine",
+			"SnowmanWinterEvent",
 			"SocialBlockList",
 			"SocialParty",
 			"SpecialEventUtilities",
@@ -91,10 +101,14 @@ public class DeadByDaylightEditorTarget : TargetRules {
 			"TheK24",
 			"TheK25",
 			"TheK26",
+			"TheK28",
+			"TheK29",
+			"TheK30",
 			"TheLegion",
 			"TheNightmare",
 			"TheNurse",
 			"TheOni",
+			"TheOnryo",
 			"ThePig",
 			"ThePlague",
 			"TheShape",
@@ -108,7 +122,6 @@ public class DeadByDaylightEditorTarget : TargetRules {
 			"UIBackendData",
 			"UnitTestUtilities",
 			"VFXUtilities",
-			"Winter2021",
 			"WwiseUtilities",
 		});
 	}

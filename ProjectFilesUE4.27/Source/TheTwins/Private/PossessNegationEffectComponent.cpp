@@ -1,8 +1,11 @@
 #include "PossessNegationEffectComponent.h"
 
-void UPossessNegationEffectComponent::OnLevelReadyToPlay() {
+void UPossessNegationEffectComponent::OnLevelReadyToPlay()
+{
+
 }
 
-UPossessNegationEffectComponent::UPossessNegationEffectComponent() {
-}
+UPossessNegationEffectComponent::UPossessNegationEffectComponent()
+{
 
+}

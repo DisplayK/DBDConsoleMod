@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "DBDTableRowBase.h"
+#include "UObject/NoExportTypes.h"
 #include "MenuCharacterUIData.generated.h"
 
 USTRUCT(BlueprintType)
-struct DEADBYDAYLIGHT_API FMenuCharacterUIData : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FMenuCharacterUIData: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 CharacterIndex;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector offsetMainMenuForwardPosition;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector offsetMainMenuBackwardPosition;
-    
-    FMenuCharacterUIData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 CharacterIndex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector offsetMainMenuForwardPosition;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector offsetMainMenuBackwardPosition;
+
+public:
+	DEADBYDAYLIGHT_API FMenuCharacterUIData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FMenuCharacterUIData) { return 0; }

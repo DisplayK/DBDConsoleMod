@@ -1,17 +1,19 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "RewardViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct DBDUIVIEWINTERFACES_API FRewardViewData {
-    GENERATED_BODY()
+struct FRewardViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    bool IsLocked;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    bool IsHighlighted;
-    
-    FRewardViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsHighlighted;
+
+public:
+	DBDUIVIEWINTERFACES_API FRewardViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FRewardViewData) { return 0; }

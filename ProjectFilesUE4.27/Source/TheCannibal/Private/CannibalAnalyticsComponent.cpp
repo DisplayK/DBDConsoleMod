@@ -1,5 +1,6 @@
 #include "CannibalAnalyticsComponent.h"
 
-UCannibalAnalyticsComponent::UCannibalAnalyticsComponent() {
-}
+UCannibalAnalyticsComponent::UCannibalAnalyticsComponent()
+{
 
+}

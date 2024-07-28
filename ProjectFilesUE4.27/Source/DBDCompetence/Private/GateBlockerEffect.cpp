@@ -1,9 +1,11 @@
 #include "GateBlockerEffect.h"
 
-void UGateBlockerEffect::RemoveCantEscapeFlag() {
+void UGateBlockerEffect::RemoveCantEscapeFlag()
+{
+
 }
 
-UGateBlockerEffect::UGateBlockerEffect() {
-    this->_blockGateLingeringTime = 0.00f;
+UGateBlockerEffect::UGateBlockerEffect()
+{
+	this->_blockGateLingeringTime = 0.000000;
 }
-

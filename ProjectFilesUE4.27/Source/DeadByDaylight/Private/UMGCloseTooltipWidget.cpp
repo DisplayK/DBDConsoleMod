@@ -1,9 +1,11 @@
 #include "UMGCloseTooltipWidget.h"
 
-void UUMGCloseTooltipWidget::HandleCloseTooltipButton() {
+void UUMGCloseTooltipWidget::HandleCloseTooltipButton()
+{
+
 }
 
-UUMGCloseTooltipWidget::UUMGCloseTooltipWidget() {
-    this->FullScreenButton = NULL;
+UUMGCloseTooltipWidget::UUMGCloseTooltipWidget()
+{
+	this->FullScreenButton = NULL;
 }
-

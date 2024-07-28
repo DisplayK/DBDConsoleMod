@@ -1,5 +1,6 @@
 #include "TestCollectable.h"
 
-ATestCollectable::ATestCollectable() {
-}
+ATestCollectable::ATestCollectable()
+{
 
+}

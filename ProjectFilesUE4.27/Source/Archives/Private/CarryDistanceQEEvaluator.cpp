@@ -1,5 +1,6 @@
 #include "CarryDistanceQEEvaluator.h"
 
-UCarryDistanceQEEvaluator::UCarryDistanceQEEvaluator() {
-}
+UCarryDistanceQEEvaluator::UCarryDistanceQEEvaluator()
+{
 
+}

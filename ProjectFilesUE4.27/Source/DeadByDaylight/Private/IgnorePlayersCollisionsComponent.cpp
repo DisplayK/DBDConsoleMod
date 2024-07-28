@@ -1,5 +1,6 @@
 #include "IgnorePlayersCollisionsComponent.h"
 
-UIgnorePlayersCollisionsComponent::UIgnorePlayersCollisionsComponent() {
-}
+UIgnorePlayersCollisionsComponent::UIgnorePlayersCollisionsComponent()
+{
 
+}

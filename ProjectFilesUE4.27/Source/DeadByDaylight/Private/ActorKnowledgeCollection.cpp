@@ -1,54 +1,80 @@
 #include "ActorKnowledgeCollection.h"
 #include "Net/UnrealNetwork.h"
+#include "EKnowledgeSharingType.h"
 
-class AActor;
 class ACharacter;
+class AActor;
 
-void UActorKnowledgeCollection::Local_SetAvailable(bool value) {
+void UActorKnowledgeCollection::OnRep_Actors()
+{
+
 }
 
-bool UActorKnowledgeCollection::IsAvailable(const ACharacter* character) const {
-    return false;
+void UActorKnowledgeCollection::Local_SetAvailable(bool value)
+{
+
 }
 
-bool UActorKnowledgeCollection::Contains(AActor* actor) const {
-    return false;
+bool UActorKnowledgeCollection::IsAvailable(const ACharacter* character) const
+{
+	return false;
 }
 
-void UActorKnowledgeCollection::Authority_SetSharingType(EKnowledgeSharingType value) {
+bool UActorKnowledgeCollection::Contains(AActor* actor) const
+{
+	return false;
 }
 
-void UActorKnowledgeCollection::Authority_SetPossessor(ACharacter* possessor) {
+void UActorKnowledgeCollection::Authority_SetSharingType(EKnowledgeSharingType value)
+{
+
 }
 
-void UActorKnowledgeCollection::Authority_SetAvailable(bool value) {
+void UActorKnowledgeCollection::Authority_SetPossessor(ACharacter* possessor)
+{
+
 }
 
-void UActorKnowledgeCollection::Authority_Remove(AActor* actor) {
+void UActorKnowledgeCollection::Authority_SetAvailable(bool value)
+{
+
 }
 
-void UActorKnowledgeCollection::Authority_Empty() {
+void UActorKnowledgeCollection::Authority_Remove(AActor* actor)
+{
+
 }
 
-void UActorKnowledgeCollection::Authority_Append(const TArray<AActor*>& actors) {
+void UActorKnowledgeCollection::Authority_Empty()
+{
+
 }
 
-bool UActorKnowledgeCollection::Authority_Add(AActor* actor) {
-    return false;
+void UActorKnowledgeCollection::Authority_Append(const TArray<AActor*>& actors)
+{
+
 }
 
-void UActorKnowledgeCollection::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UActorKnowledgeCollection, _actors);
-    DOREPLIFETIME(UActorKnowledgeCollection, _available);
-    DOREPLIFETIME(UActorKnowledgeCollection, _possessor);
-    DOREPLIFETIME(UActorKnowledgeCollection, _sharing);
+bool UActorKnowledgeCollection::Authority_Add(AActor* actor)
+{
+	return false;
 }
 
-UActorKnowledgeCollection::UActorKnowledgeCollection() {
-    this->_available = false;
-    this->_possessor = NULL;
-    this->_sharing = EKnowledgeSharingType::Possessor;
+void UActorKnowledgeCollection::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UActorKnowledgeCollection, _actors);
+	DOREPLIFETIME(UActorKnowledgeCollection, _available);
+	DOREPLIFETIME(UActorKnowledgeCollection, _possessor);
+	DOREPLIFETIME(UActorKnowledgeCollection, _sharing);
 }
 
+UActorKnowledgeCollection::UActorKnowledgeCollection()
+{
+	this->_actors = TArray<AActor*>();
+	this->_previousActors = TArray<AActor*>();
+	this->_available = false;
+	this->_possessor = NULL;
+	this->_sharing = EKnowledgeSharingType::Possessor;
+}

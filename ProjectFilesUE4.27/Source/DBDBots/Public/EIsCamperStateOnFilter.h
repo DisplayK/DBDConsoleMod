@@ -1,10 +1,11 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EIsCamperStateOnFilter.generated.h"
 
-UENUM()
-enum class EIsCamperStateOnFilter : uint8 {
-    OnBlackboardKey,
-    OnOthersThanSelf,
+UENUM(BlueprintType)
+enum class EIsCamperStateOnFilter : uint8
+{
+	OnBlackboardKey,
+	OnOthersThanSelf,
 };
-

@@ -1,5 +1,6 @@
 #include "BaseHitValidationConfigurator.h"
 
-UBaseHitValidationConfigurator::UBaseHitValidationConfigurator() {
-}
+UBaseHitValidationConfigurator::UBaseHitValidationConfigurator()
+{
 
+}

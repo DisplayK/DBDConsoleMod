@@ -1,5 +1,6 @@
 #include "MatchHandler.h"
 
-UMatchHandler::UMatchHandler() {
-}
+UMatchHandler::UMatchHandler()
+{
 
+}

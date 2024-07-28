@@ -1,5 +1,5 @@
 #include "ComponentSweepInfo.h"
 
-FComponentSweepInfo::FComponentSweepInfo() {
+FComponentSweepInfo::FComponentSweepInfo()
+{
 }
-

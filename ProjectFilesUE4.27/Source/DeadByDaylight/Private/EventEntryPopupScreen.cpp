@@ -1,5 +1,6 @@
 #include "EventEntryPopupScreen.h"
 
-UEventEntryPopupScreen::UEventEntryPopupScreen() {
-}
+UEventEntryPopupScreen::UEventEntryPopupScreen()
+{
 
+}

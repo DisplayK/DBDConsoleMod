@@ -1,5 +1,6 @@
 #include "TrailPointOutlineUpdateStrategy.h"
 
-UTrailPointOutlineUpdateStrategy::UTrailPointOutlineUpdateStrategy() {
-}
+UTrailPointOutlineUpdateStrategy::UTrailPointOutlineUpdateStrategy()
+{
 
+}

@@ -1,7 +1,9 @@
 #include "PlayerStatusEffectUpdateAnalytics.h"
 
-FPlayerStatusEffectUpdateAnalytics::FPlayerStatusEffectUpdateAnalytics() {
-    this->ElapsedMatchTime = 0;
-    this->NbOfConcurrentStatusEffects = 0;
+FPlayerStatusEffectUpdateAnalytics::FPlayerStatusEffectUpdateAnalytics()
+{
+	this->MatchId = TEXT("");
+	this->ElapsedMatchTime = 0;
+	this->NbOfConcurrentStatusEffects = 0;
+	this->StatusEffects = TArray<FString>();
 }
-

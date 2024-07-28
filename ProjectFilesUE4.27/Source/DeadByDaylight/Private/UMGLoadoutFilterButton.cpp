@@ -1,16 +1,19 @@
 #include "UMGLoadoutFilterButton.h"
+#include "UObject/SoftObjectPtr.h"
 
 class UTexture2D;
 
+void UUMGLoadoutFilterButton::OnActionButtonClick()
+{
 
-
-void UUMGLoadoutFilterButton::OnActionButtonClick() {
 }
 
-void UUMGLoadoutFilterButton::InitFilterButton(const FName& filterName, const TSoftObjectPtr<UTexture2D> filterTexture) {
+void UUMGLoadoutFilterButton::InitFilterButton(const FName& filterName, const TSoftObjectPtr<UTexture2D> filterTexture)
+{
+
 }
 
-UUMGLoadoutFilterButton::UUMGLoadoutFilterButton() {
-    this->ActionButton = NULL;
+UUMGLoadoutFilterButton::UUMGLoadoutFilterButton()
+{
+	this->ActionButton = NULL;
 }
-

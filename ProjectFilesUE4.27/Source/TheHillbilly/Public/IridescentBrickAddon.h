@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "OnEventBaseAddon.h"
 #include "IridescentBrickAddon.generated.h"
@@ -6,14 +7,16 @@
 class UStatusEffect;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UIridescentBrickAddon : public UOnEventBaseAddon {
-    GENERATED_BODY()
-public:
+class UIridescentBrickAddon : public UOnEventBaseAddon
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UStatusEffect* _undetectableStatusEffect;
-    
+	UPROPERTY(Transient, Export)
+	UStatusEffect* _undetectableStatusEffect;
+
 public:
-    UIridescentBrickAddon();
+	UIridescentBrickAddon();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UIridescentBrickAddon) { return 0; }

@@ -1,11 +1,20 @@
 #include "AkLateReverbComponent.h"
 
-UAkLateReverbComponent::UAkLateReverbComponent() {
-    this->bEnable = true;
-    this->AuxBus = NULL;
-    this->SendLevel = 1.00f;
-    this->FadeRate = 0.50f;
-    this->Priority = 1.00f;
-    this->NextLowerPriorityComponent = NULL;
+class UAkAcousticTextureSetComponent;
+
+void UAkLateReverbComponent::AssociateAkTextureSetComponent(UAkAcousticTextureSetComponent* textureSetComponent)
+{
+
 }
 
+UAkLateReverbComponent::UAkLateReverbComponent()
+{
+	this->bEnable = true;
+	this->SendLevel = 1.000000;
+	this->FadeRate = 0.500000;
+	this->Priority = 1.000000;
+	this->AutoAssignAuxBus = true;
+	this->AuxBus = NULL;
+	this->AuxBusName = TEXT("");
+	this->AuxBusManual = NULL;
+}

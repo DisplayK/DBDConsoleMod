@@ -1,16 +1,19 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "WalletUpdateTracker.generated.h"
 
 USTRUCT()
-struct DEADBYDAYLIGHT_API FWalletUpdateTracker {
-    GENERATED_BODY()
-public:
+struct FWalletUpdateTracker
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY()
-    TMap<FString, int32> _walletChangeMap;
-    
+	UPROPERTY()
+	TMap<FString, int32> _walletChangeMap;
+
 public:
-    FWalletUpdateTracker();
+	DEADBYDAYLIGHT_API FWalletUpdateTracker();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FWalletUpdateTracker) { return 0; }

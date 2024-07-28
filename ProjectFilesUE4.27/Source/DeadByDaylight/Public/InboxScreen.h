@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ScreenBase.h"
 #include "InboxMessageUIData.h"
@@ -7,23 +8,25 @@
 class UUMGInboxScreen;
 
 UCLASS()
-class UInboxScreen : public UScreenBase {
-    GENERATED_BODY()
-public:
+class UInboxScreen : public UScreenBase
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UUMGInboxScreen* _umgScreen;
-    
-    UPROPERTY(Transient)
-    TArray<FInboxMessageUIData> _newsMessages;
-    
-    UPROPERTY(Transient)
-    TArray<FInboxMessageUIData> _rewardsMessages;
-    
-    UPROPERTY(Transient)
-    TArray<FInboxMessageUIData> _socialMessages;
-    
+	UPROPERTY(Transient, Export)
+	UUMGInboxScreen* _umgScreen;
+
+	UPROPERTY(Transient)
+	TArray<FInboxMessageUIData> _newsMessages;
+
+	UPROPERTY(Transient)
+	TArray<FInboxMessageUIData> _rewardsMessages;
+
+	UPROPERTY(Transient)
+	TArray<FInboxMessageUIData> _socialMessages;
+
 public:
-    UInboxScreen();
+	UInboxScreen();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UInboxScreen) { return 0; }

@@ -1,41 +1,44 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "StatusEffect.h"
+#include "Templates/SubclassOf.h"
 #include "BlessedStatusEffect.generated.h"
 
 class UBlessedVignetteController;
-class ATotem;
 class ACamperPlayer;
+class ATotem;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UBlessedStatusEffect : public UStatusEffect {
-    GENERATED_BODY()
-public:
+class UBlessedStatusEffect : public UStatusEffect
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<UBlessedVignetteController> _vignetteControllerBlueprint;
-    
-public:
-    UBlessedStatusEffect();
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UBlessedVignetteController> _vignetteControllerBlueprint;
+
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintImplementableEvent)
-    void OnExitBoonRange();
-    
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintImplementableEvent)
-    void OnEnterBoonRange();
-    
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
+	void OnExitBoonRange();
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
+	void OnEnterBoonRange();
+
 public:
-    UFUNCTION(BlueprintPure)
-    ATotem* GetBoundTotem() const;
-    
+	UFUNCTION(BlueprintPure)
+	ATotem* GetBoundTotem() const;
+
 protected:
-    UFUNCTION(BlueprintPure)
-    float GetBoonTotemBlessingRange() const;
-    
+	UFUNCTION(BlueprintPure)
+	float GetBoonTotemBlessingRange() const;
+
 private:
-    UFUNCTION()
-    void Authority_OnSurvivorRemovedFromGame(ACamperPlayer* survivor);
-    
+	UFUNCTION()
+	void Authority_OnSurvivorRemovedFromGame(ACamperPlayer* survivor);
+
+public:
+	UBlessedStatusEffect();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBlessedStatusEffect) { return 0; }

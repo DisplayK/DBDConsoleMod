@@ -1,5 +1,6 @@
 #include "DreamSnareOutlineUpdateStrategy.h"
 
-UDreamSnareOutlineUpdateStrategy::UDreamSnareOutlineUpdateStrategy() {
-}
+UDreamSnareOutlineUpdateStrategy::UDreamSnareOutlineUpdateStrategy()
+{
 
+}

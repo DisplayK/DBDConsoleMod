@@ -1,5 +1,6 @@
 #include "AkAcousticTexture.h"
 
-UAkAcousticTexture::UAkAcousticTexture() {
-}
+UAkAcousticTexture::UAkAcousticTexture()
+{
 
+}

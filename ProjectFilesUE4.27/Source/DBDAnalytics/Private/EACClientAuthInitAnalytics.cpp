@@ -1,5 +1,5 @@
 #include "EACClientAuthInitAnalytics.h"
 
-FEACClientAuthInitAnalytics::FEACClientAuthInitAnalytics() {
+FEACClientAuthInitAnalytics::FEACClientAuthInitAnalytics()
+{
 }
-

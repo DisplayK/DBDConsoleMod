@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EditorCollectionMetadata.generated.h"
 
 USTRUCT(BlueprintType)
-struct ANIMATIONUTILITIES_API FEditorCollectionMetadata {
-    GENERATED_BODY()
+struct FEditorCollectionMetadata
+{
+	GENERATED_BODY()
+
 public:
-    FEditorCollectionMetadata();
+	ANIMATIONUTILITIES_API FEditorCollectionMetadata();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FEditorCollectionMetadata) { return 0; }

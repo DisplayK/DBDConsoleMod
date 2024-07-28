@@ -1,5 +1,5 @@
 #include "ItemTooltipData.h"
 
-FItemTooltipData::FItemTooltipData() {
+FItemTooltipData::FItemTooltipData()
+{
 }
-

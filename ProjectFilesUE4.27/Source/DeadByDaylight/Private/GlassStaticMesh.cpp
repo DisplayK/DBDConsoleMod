@@ -1,5 +1,6 @@
 #include "GlassStaticMesh.h"
 
-UGlassStaticMesh::UGlassStaticMesh() {
-}
+UGlassStaticMesh::UGlassStaticMesh()
+{
 
+}

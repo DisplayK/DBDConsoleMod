@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UMGBaseLandingPageStorefrontWidget.h"
 #include "UMGAtlLandingPageStorefrontWidget.generated.h"
@@ -6,18 +7,20 @@
 class UUMGBaseButtonWidget;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGAtlLandingPageStorefrontWidget : public UUMGBaseLandingPageStorefrontWidget {
-    GENERATED_BODY()
-public:
+class UUMGAtlLandingPageStorefrontWidget : public UUMGBaseLandingPageStorefrontWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    UUMGBaseButtonWidget* AtlantaRedeemCodeBtn;
-    
-public:
-    UUMGAtlLandingPageStorefrontWidget();
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGBaseButtonWidget* AtlantaRedeemCodeBtn;
+
 protected:
-    UFUNCTION()
-    void OnPromoCodeButtonPressed();
-    
+	UFUNCTION()
+	void OnPromoCodeButtonPressed();
+
+public:
+	UUMGAtlLandingPageStorefrontWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlLandingPageStorefrontWidget) { return 0; }

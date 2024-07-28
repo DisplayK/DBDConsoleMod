@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PlayerDataForQuestConditions.generated.h"
 
 USTRUCT()
-struct DEADBYDAYLIGHT_API FPlayerDataForQuestConditions {
-    GENERATED_BODY()
+struct FPlayerDataForQuestConditions
+{
+	GENERATED_BODY()
+
 public:
-    FPlayerDataForQuestConditions();
+	DEADBYDAYLIGHT_API FPlayerDataForQuestConditions();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FPlayerDataForQuestConditions) { return 0; }

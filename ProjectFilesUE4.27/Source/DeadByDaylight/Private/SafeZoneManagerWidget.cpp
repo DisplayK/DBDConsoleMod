@@ -1,6 +1,6 @@
 #include "SafeZoneManagerWidget.h"
 
-USafeZoneManagerWidget::USafeZoneManagerWidget() {
-    this->SafeZonePanel = NULL;
+USafeZoneManagerWidget::USafeZoneManagerWidget()
+{
+	this->SafeZonePanel = NULL;
 }
-

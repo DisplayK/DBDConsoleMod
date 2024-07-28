@@ -1,5 +1,6 @@
 #include "MatchConfigDifficultyDataAsset.h"
 
-UMatchConfigDifficultyDataAsset::UMatchConfigDifficultyDataAsset() {
+UMatchConfigDifficultyDataAsset::UMatchConfigDifficultyDataAsset()
+{
+	this->DifficultiesData = TMap<ECustomMatchDifficulty, FMatchConfigDifficultyData>();
 }
-

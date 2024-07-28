@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UMGTallyListElementWidget.h"
 #include "UMGTallyCharacterProgressionWidget.generated.h"
@@ -8,56 +9,59 @@ class UTextBlock;
 class UImage;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGTallyCharacterProgressionWidget : public UUMGTallyListElementWidget {
-    GENERATED_BODY()
-public:
+class UUMGTallyCharacterProgressionWidget : public UUMGTallyListElementWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGTallyCharacterProgressionBar* CharacterProgressionBar;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TextCharacterCurrentExperience;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TextExperienceForNextLevel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TextExperienceEarned;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TextCurrentLevel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* CharacterPicture;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* PrestigeIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TextCharacterName;
-    
-    UPROPERTY(EditAnywhere)
-    int32 ExperiencePerSecond;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGTallyCharacterProgressionBar* CharacterProgressionBar;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TextCharacterCurrentExperience;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TextExperienceForNextLevel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TextExperienceEarned;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TextCurrentLevel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* CharacterPicture;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* PrestigeIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TextCharacterName;
+
+	UPROPERTY(EditAnywhere)
+	int32 ExperiencePerSecond;
+
 public:
-    UUMGTallyCharacterProgressionWidget();
-    UFUNCTION(BlueprintCallable)
-    void StartSequence();
-    
+	UFUNCTION(BlueprintCallable)
+	void StartSequence();
+
 private:
-    UFUNCTION()
-    void StartNewLevel();
-    
+	UFUNCTION()
+	void StartNewLevel();
+
 public:
-    UFUNCTION(BlueprintCallable)
-    void SetWidgetToFinalState();
-    
+	UFUNCTION(BlueprintCallable)
+	void SetWidgetToFinalState();
+
 private:
-    UFUNCTION()
-    void OnFullBarOut();
-    
-    UFUNCTION()
-    void OnFullBarIn();
-    
+	UFUNCTION()
+	void OnFullBarOut();
+
+	UFUNCTION()
+	void OnFullBarIn();
+
+public:
+	UUMGTallyCharacterProgressionWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGTallyCharacterProgressionWidget) { return 0; }

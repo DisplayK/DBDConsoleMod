@@ -1,6 +1,6 @@
 #include "KillerBeingPossessedInteraction.h"
 
-UKillerBeingPossessedInteraction::UKillerBeingPossessedInteraction() {
-    this->_wakeUpSpeedCurve = NULL;
+UKillerBeingPossessedInteraction::UKillerBeingPossessedInteraction()
+{
+	this->_wakeUpSpeedCurve = NULL;
 }
-

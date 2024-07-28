@@ -1,5 +1,6 @@
 #include "AkWinAnvilInitializationSettings.h"
 
-UAkWinAnvilInitializationSettings::UAkWinAnvilInitializationSettings() {
-}
+UAkWinAnvilInitializationSettings::UAkWinAnvilInitializationSettings()
+{
 
+}

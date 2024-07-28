@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "SpecialEventsContainer.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API USpecialEventsContainer : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API USpecialEventsContainer : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    USpecialEventsContainer();
+	USpecialEventsContainer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USpecialEventsContainer) { return 0; }

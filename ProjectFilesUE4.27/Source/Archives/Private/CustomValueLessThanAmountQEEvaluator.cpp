@@ -1,5 +1,6 @@
 #include "CustomValueLessThanAmountQEEvaluator.h"
 
-UCustomValueLessThanAmountQEEvaluator::UCustomValueLessThanAmountQEEvaluator() {
-}
+UCustomValueLessThanAmountQEEvaluator::UCustomValueLessThanAmountQEEvaluator()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "AkStadiaInitializationSettings.h"
 
-UAkStadiaInitializationSettings::UAkStadiaInitializationSettings() {
-}
+UAkStadiaInitializationSettings::UAkStadiaInitializationSettings()
+{
 
+}

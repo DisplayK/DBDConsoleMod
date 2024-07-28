@@ -1,24 +1,22 @@
 {
-	"FileVersion": 3,
-	"Version": 1,
-	"VersionName": "1.0",
-	"FriendlyName": "Crusader Plugin",
-	"Description": "BHVR custom plugin for WH40kEC",
-	"Category": "Editor",
-	"CreatedBy": "Behaviour Interactive",
-	"CreatedByURL": "http://www.bhvr.com/",
-	"DocsURL": "",
-	"MarketplaceURL": "",
-	"SupportURL": "",
-	"EnabledByDefault": true,
-	"CanContainContent": false,
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
-	"Installed": false,
-	"Plugins": [
-		{
-			"Name": "OnlineSubsystem",
-			"Enabled": true
-		}
-	]
+  "FileVersion": "3",
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Crusader Plugin",
+  "Description": "BHVR custom plugin for WH40kEC",
+  "Category": "Editor",
+  "CreatedBy": "Behaviour Interactive",
+  "CreatedByURL": "http://www.bhvr.com/",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": true,
+  "CanContainContent": false,
+  "Installed": false,
+  "Plugins": [
+    {
+      "Name": "OnlineSubsystem",
+      "Enabled": true
+    }
+  ]
 }

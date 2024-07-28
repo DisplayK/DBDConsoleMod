@@ -1,5 +1,6 @@
 #include "HasItemRarityQEEvaluator.h"
 
-UHasItemRarityQEEvaluator::UHasItemRarityQEEvaluator() {
-}
+UHasItemRarityQEEvaluator::UHasItemRarityQEEvaluator()
+{
 
+}

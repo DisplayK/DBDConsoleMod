@@ -1,5 +1,6 @@
 #include "PromoCodeManager.h"
 
-UPromoCodeManager::UPromoCodeManager() {
-}
+UPromoCodeManager::UPromoCodeManager()
+{
 
+}

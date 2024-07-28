@@ -1,5 +1,7 @@
 #include "AtlantaRitualSet.h"
 
-FAtlantaRitualSet::FAtlantaRitualSet() {
+FAtlantaRitualSet::FAtlantaRitualSet()
+{
+	this->Instances = TArray<FAtlantaRitualInstance>();
+	this->RewardItems = TArray<FRewardItem>();
 }
-

@@ -1,5 +1,6 @@
 #include "SplinteredStatesSubsystem.h"
 
-USplinteredStatesSubsystem::USplinteredStatesSubsystem() {
-}
+USplinteredStatesSubsystem::USplinteredStatesSubsystem()
+{
 
+}

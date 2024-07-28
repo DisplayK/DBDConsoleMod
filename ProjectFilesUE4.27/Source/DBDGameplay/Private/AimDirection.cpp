@@ -1,5 +1,5 @@
 #include "AimDirection.h"
 
-FAimDirection::FAimDirection() {
+FAimDirection::FAimDirection()
+{
 }
-

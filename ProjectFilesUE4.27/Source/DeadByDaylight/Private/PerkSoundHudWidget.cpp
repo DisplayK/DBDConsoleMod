@@ -1,6 +1,6 @@
 #include "PerkSoundHudWidget.h"
 
-UPerkSoundHudWidget::UPerkSoundHudWidget() {
-    this->PerkIcons = NULL;
+UPerkSoundHudWidget::UPerkSoundHudWidget()
+{
+	this->PerkIcons = NULL;
 }
-

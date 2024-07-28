@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ESpawnerStrategyType.generated.h"
 
-UENUM()
-enum class ESpawnerStrategyType : uint8 {
-    None,
-    NoAccumulation,
-    LimitAccumulation,
+UENUM(BlueprintType)
+enum class ESpawnerStrategyType : uint8
+{
+	None,
+	NoAccumulation,
+	LimitAccumulation,
 };
-

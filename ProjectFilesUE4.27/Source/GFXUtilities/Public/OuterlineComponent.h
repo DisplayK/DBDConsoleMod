@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
 #include "OuterlineComponent.generated.h"
@@ -8,33 +9,36 @@ class UMaterialInterface;
 class UMaterialInstanceDynamic;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class GFXUTILITIES_API UOuterlineComponent : public USceneComponent {
-    GENERATED_BODY()
-public:
+class GFXUTILITIES_API UOuterlineComponent : public USceneComponent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditDefaultsOnly)
-    UMaterialInterface* CloneCustomDepthMaterial;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UMaterialInterface* CloneTranslucentMaterial;
-    
+	UPROPERTY(EditDefaultsOnly)
+	UMaterialInterface* CloneCustomDepthMaterial;
+
+	UPROPERTY(EditDefaultsOnly)
+	UMaterialInterface* CloneTranslucentMaterial;
+
 private:
-    UPROPERTY(Transient)
-    UMaterialInstanceDynamic* _cloneCustomDepthMaterialDynamic;
-    
-    UPROPERTY(Transient)
-    UMaterialInstanceDynamic* _cloneTranslucentMaterialDynamic;
-    
-    UPROPERTY(Export, Transient)
-    USkeletalMeshComponent* _customDepthSkeletalMesh;
-    
-    UPROPERTY(Export, Transient)
-    USkeletalMeshComponent* _overlaySkeletalMesh;
-    
+	UPROPERTY(Transient)
+	UMaterialInstanceDynamic* _cloneCustomDepthMaterialDynamic;
+
+	UPROPERTY(Transient)
+	UMaterialInstanceDynamic* _cloneTranslucentMaterialDynamic;
+
+	UPROPERTY(Transient, Export)
+	USkeletalMeshComponent* _customDepthSkeletalMesh;
+
+	UPROPERTY(Transient, Export)
+	USkeletalMeshComponent* _overlaySkeletalMesh;
+
 public:
-    UOuterlineComponent();
-    UFUNCTION(BlueprintCallable)
-    void SetIntensity(float intensity);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetIntensity(float intensity);
+
+public:
+	UOuterlineComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UOuterlineComponent) { return 0; }

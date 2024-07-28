@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Tile.h"
 #include "BorderElements.h"
@@ -7,17 +8,20 @@
 class UMapData;
 
 UCLASS()
-class ABorderTile : public ATile {
-    GENERATED_BODY()
+class ABorderTile : public ATile
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FBorderElements> Borders;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FBorderElements> Borders;
+
 private:
-    UPROPERTY()
-    UMapData* _map;
-    
+	UPROPERTY()
+	UMapData* _map;
+
 public:
-    ABorderTile();
+	ABorderTile();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ABorderTile) { return 0; }

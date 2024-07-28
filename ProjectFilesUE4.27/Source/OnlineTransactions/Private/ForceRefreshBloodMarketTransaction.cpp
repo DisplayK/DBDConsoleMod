@@ -1,5 +1,6 @@
 #include "ForceRefreshBloodMarketTransaction.h"
 
-UForceRefreshBloodMarketTransaction::UForceRefreshBloodMarketTransaction() {
-}
+UForceRefreshBloodMarketTransaction::UForceRefreshBloodMarketTransaction()
+{
 
+}

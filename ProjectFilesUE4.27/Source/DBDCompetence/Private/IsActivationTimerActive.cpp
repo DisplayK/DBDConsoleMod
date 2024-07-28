@@ -1,5 +1,6 @@
 #include "IsActivationTimerActive.h"
 
-UIsActivationTimerActive::UIsActivationTimerActive() {
-}
+UIsActivationTimerActive::UIsActivationTimerActive()
+{
 
+}

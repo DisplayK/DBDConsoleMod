@@ -1,26 +1,28 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ELevelBuildingState.generated.h"
 
-UENUM()
-enum class ELevelBuildingState {
-    NotInitialized,
-    WaitingForInitialSync,
-    SyncSeeds,
-    GetAvailableItems,
-    PendingGettingItems,
-    GettingLevelsDone,
-    PendingPremadeMapStreaming,
-    GetThemedTiles,
-    PendingGettingTiles,
-    SpawnRequiredTiles,
-    SpawningLevelTiles,
-    SpawnInterTileElements,
-    PendingInterTileElementsSpawning,
-    SpawningActors,
-    SpawningMultiPassActors,
-    StallingForRemotes,
-    BuildingDone,
-    BuildingStateCount,
+UENUM(BlueprintType)
+enum class ELevelBuildingState : uint8
+{
+	NotInitialized,
+	WaitingForInitialSync,
+	SyncSeeds,
+	GetAvailableItems,
+	PendingGettingItems,
+	GettingLevelsDone,
+	PendingPremadeMapStreaming,
+	GetThemedTiles,
+	PendingGettingTiles,
+	SpawnEscapeTiles,
+	SpawnBasementTile,
+	SpawningLevelTiles,
+	SpawnInterTileElements,
+	PendingInterTileElementsSpawning,
+	SpawningActors,
+	SpawningMultiPassActors,
+	StallingForRemotes,
+	BuildingDone,
+	BuildingStateCount,
 };
-

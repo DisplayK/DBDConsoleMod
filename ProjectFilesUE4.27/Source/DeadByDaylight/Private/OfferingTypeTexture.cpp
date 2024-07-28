@@ -1,5 +1,7 @@
 #include "OfferingTypeTexture.h"
 
-FOfferingTypeTexture::FOfferingTypeTexture() {
+FOfferingTypeTexture::FOfferingTypeTexture()
+{
+	this->Type = NAME_None;
+	this->TextureBack = FSoftObjectPath{};
 }
-

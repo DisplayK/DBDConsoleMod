@@ -1,8 +1,11 @@
 #include "PurpleGlyphBloodTrailComponent.h"
 
-void UPurpleGlyphBloodTrailComponent::DeactivateGlyphBloodTrail() {
+void UPurpleGlyphBloodTrailComponent::DeactivateGlyphBloodTrail()
+{
+
 }
 
-UPurpleGlyphBloodTrailComponent::UPurpleGlyphBloodTrailComponent() {
-}
+UPurpleGlyphBloodTrailComponent::UPurpleGlyphBloodTrailComponent()
+{
 
+}

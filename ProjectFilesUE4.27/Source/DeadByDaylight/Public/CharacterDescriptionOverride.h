@@ -1,34 +1,40 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
+#include "UObject/SoftObjectPtr.h"
 #include "CharacterDescriptionOverride.generated.h"
 
+class ADBDMenuPlayer;
 class UTexture2D;
 class ADBDPlayer;
-class ADBDMenuPlayer;
 
 USTRUCT(BlueprintType)
-struct DEADBYDAYLIGHT_API FCharacterDescriptionOverride : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FCharacterDescriptionOverride: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName RequiredItemId;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText DisplayNameOverride;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSoftObjectPtr<UTexture2D> HudIconOverride;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSoftClassPtr<ADBDMenuPlayer> MenuBlueprint;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSoftClassPtr<ADBDPlayer> GameBlueprint;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName IconFilePathOverride;
-    
-    FCharacterDescriptionOverride();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FName> RequiredItemIds;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText DisplayNameOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSoftObjectPtr<UTexture2D> HudIconOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSoftClassPtr<ADBDMenuPlayer> MenuBlueprint;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSoftClassPtr<ADBDPlayer> GameBlueprint;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName IconFilePathOverride;
+
+public:
+	DEADBYDAYLIGHT_API FCharacterDescriptionOverride();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCharacterDescriptionOverride) { return 0; }

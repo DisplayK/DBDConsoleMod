@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkMidiEventBase.h"
 #include "AkMidiNoteOnOff.generated.h"
 
 USTRUCT(BlueprintType)
-struct FAkMidiNoteOnOff : public FAkMidiEventBase {
-    GENERATED_BODY()
+struct FAkMidiNoteOnOff: public FAkMidiEventBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint8 Note;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint8 Velocity;
-    
-    AKAUDIO_API FAkMidiNoteOnOff();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	uint8 Note;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	uint8 Velocity;
+
+public:
+	AKAUDIO_API FAkMidiNoteOnOff();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkMidiNoteOnOff) { return 0; }

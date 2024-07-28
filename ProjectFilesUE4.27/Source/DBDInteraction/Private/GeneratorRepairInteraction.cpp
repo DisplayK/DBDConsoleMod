@@ -1,14 +1,39 @@
 #include "GeneratorRepairInteraction.h"
 
+class ADBDPlayer;
 class AGenerator;
 
-void UGeneratorRepairInteraction::SetIsObstructed(bool obstructed) {
+void UGeneratorRepairInteraction::SetIsObstructed(bool obstructed)
+{
+
 }
 
-AGenerator* UGeneratorRepairInteraction::GetOwningGenerator() const {
-    return NULL;
+bool UGeneratorRepairInteraction::IsObstructed()
+{
+	return false;
 }
 
-UGeneratorRepairInteraction::UGeneratorRepairInteraction() {
+bool UGeneratorRepairInteraction::IsInteractionPossibleInternal(const ADBDPlayer* player) const
+{
+	return false;
 }
 
+bool UGeneratorRepairInteraction::IsBeingRepaired()
+{
+	return false;
+}
+
+AGenerator* UGeneratorRepairInteraction::GetOwningGenerator() const
+{
+	return NULL;
+}
+
+float UGeneratorRepairInteraction::GetInteractionChargeSpeedMultiplier_Implementation(const ADBDPlayer* character) const
+{
+	return 0.0f;
+}
+
+UGeneratorRepairInteraction::UGeneratorRepairInteraction()
+{
+
+}

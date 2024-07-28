@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "IsOwningPlayerInRangeFromHook.h"
 #include "IsOwningPlayerInHookRangeWhenKillerCarry.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UIsOwningPlayerInHookRangeWhenKillerCarry : public UIsOwningPlayerInRangeFromHook {
-    GENERATED_BODY()
+class UIsOwningPlayerInHookRangeWhenKillerCarry : public UIsOwningPlayerInRangeFromHook
+{
+	GENERATED_BODY()
+
 public:
-    UIsOwningPlayerInHookRangeWhenKillerCarry();
+	UIsOwningPlayerInHookRangeWhenKillerCarry();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UIsOwningPlayerInHookRangeWhenKillerCarry) { return 0; }

@@ -1,5 +1,11 @@
 #include "MoveToGroundComponent.h"
 
-UMoveToGroundComponent::UMoveToGroundComponent() {
+void UMoveToGroundComponent::MoveOwnerToGround()
+{
+
 }
 
+UMoveToGroundComponent::UMoveToGroundComponent()
+{
+
+}

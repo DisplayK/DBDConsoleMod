@@ -1,6 +1,6 @@
 #include "OniDashHitDiffInTimeQEEvaluator.h"
 
-UOniDashHitDiffInTimeQEEvaluator::UOniDashHitDiffInTimeQEEvaluator() {
-    this->_previousTarget = NULL;
+UOniDashHitDiffInTimeQEEvaluator::UOniDashHitDiffInTimeQEEvaluator()
+{
+	this->_previousTarget = NULL;
 }
-

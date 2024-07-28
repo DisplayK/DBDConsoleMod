@@ -1,5 +1,7 @@
 #include "SaveValidationData.h"
 
-FSaveValidationData::FSaveValidationData() {
+FSaveValidationData::FSaveValidationData()
+{
+	this->PlayerUID = TEXT("");
+	this->CharacterData = TArray<int32>();
 }
-

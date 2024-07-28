@@ -1,6 +1,6 @@
 #include "KillerIsLowOnAmmo.h"
 
-UKillerIsLowOnAmmo::UKillerIsLowOnAmmo() {
-    this->_ammoThreshold = 0;
+UKillerIsLowOnAmmo::UKillerIsLowOnAmmo()
+{
+	this->_ammoThreshold = 0;
 }
-

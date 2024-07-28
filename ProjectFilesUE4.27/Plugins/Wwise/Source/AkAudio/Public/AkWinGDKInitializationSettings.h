@@ -1,27 +1,34 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "AkWinGDKAdvancedInitializationSettings.h"
-#include "UObject/Object.h"
+#include "AkPlatformInitialisationSettingsBase.h"
+#include "UObject/NoExportTypes.h"
 #include "AkCommonInitializationSettingsWithSampleRate.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
+#include "AkWinGDKAdvancedInitializationSettings.h"
 #include "AkWinGDKInitializationSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
-class AKAUDIO_API UAkWinGDKInitializationSettings : public UObject {
-    GENERATED_BODY()
+UCLASS()
+class AKAUDIO_API UAkWinGDKInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommonInitializationSettingsWithSampleRate CommonSettings;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
-    
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
-    FAkWinGDKAdvancedInitializationSettings AdvancedSettings;
-    
-    UAkWinGDKInitializationSettings();
-    UFUNCTION()
-    void MigrateMultiCoreRendering(bool NewValue);
-    
+	UPROPERTY(EditAnywhere)
+	FAkCommonInitializationSettingsWithSampleRate CommonSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkWinGDKAdvancedInitializationSettings AdvancedSettings;
+
+public:
+	UFUNCTION()
+	void MigrateMultiCoreRendering(bool NewValue);
+
+public:
+	UAkWinGDKInitializationSettings();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkWinGDKInitializationSettings) { return 0; }

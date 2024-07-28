@@ -1,23 +1,28 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
-#include "EPromptPriority.h"
 #include "EPromptType.h"
+#include "EPromptPriority.h"
 #include "GameNotificationData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FGameNotificationData : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FGameNotificationData: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EPromptType PromptType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EPromptPriority Priority;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText Content;
-    
-    DEADBYDAYLIGHT_API FGameNotificationData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EPromptType PromptType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EPromptPriority Priority;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Content;
+
+public:
+	DEADBYDAYLIGHT_API FGameNotificationData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FGameNotificationData) { return 0; }

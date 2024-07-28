@@ -1,5 +1,5 @@
 #include "StorefrontStateData.h"
 
-FStorefrontStateData::FStorefrontStateData() {
+FStorefrontStateData::FStorefrontStateData()
+{
 }
-

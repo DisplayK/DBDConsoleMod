@@ -1,5 +1,9 @@
 #include "SpecialEventEntryPopupData.h"
 
-FSpecialEventEntryPopupData::FSpecialEventEntryPopupData() {
+FSpecialEventEntryPopupData::FSpecialEventEntryPopupData()
+{
+	this->Title = FText::GetEmpty();
+	this->Description = FText::GetEmpty();
+	this->ImagePath = TEXT("");
+	this->ImageBannerText = FText::GetEmpty();
 }
-

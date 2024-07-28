@@ -1,203 +1,346 @@
 #include "AkGameplayStatics.h"
+#include "UObject/NoExportTypes.h"
+#include "AkOutputSettings.h"
+#include "OnAkBankCallback.h"
+#include "Engine/LatentActionManager.h"
+#include "AkActionOnEventType.h"
+#include "OnSetCurrentAudioCultureCallback.h"
+#include "ERTPCValueType.h"
+#include "PanningRule.h"
+#include "EAkCurveInterpolation.h"
+#include "AkMultiPositionType.h"
+#include "AkChannelMask.h"
+#include "AkChannelConfiguration.h"
+#include "OnAkPostEventCallback.h"
+#include "AkExternalSourceInfo.h"
+#include "Engine/EngineTypes.h"
 
 class AActor;
-class UAkAuxBus;
+class UAkPortalComponent;
 class UAkAudioBank;
-class UObject;
+class UAkTrigger;
+class UAkAuxBus;
 class UAkAudioEvent;
+class UAkAudioType;
 class UAkComponent;
+class UObject;
 class UAkSwitchValue;
 class UAkStateValue;
 class UAkRtpc;
-class UAkTrigger;
 class UAkMediaAsset;
 class USceneComponent;
-class UAkAudioType;
 
-void UAkGameplayStatics::UseReverbVolumes(bool inUseReverbVolumes, AActor* Actor) {
+void UAkGameplayStatics::UseReverbVolumes(bool inUseReverbVolumes, AActor* Actor)
+{
+
 }
 
-void UAkGameplayStatics::UseEarlyReflections(AActor* Actor, UAkAuxBus* AuxBus, int32 Order, float BusSendGain, float MaxPathLength, bool SpotReflectors, const FString& AuxBusName) {
+void UAkGameplayStatics::UseEarlyReflections(AActor* Actor, UAkAuxBus* AuxBus, int32 Order, float BusSendGain, float MaxPathLength, bool SpotReflectors, const FString& AuxBusName)
+{
+
 }
 
-void UAkGameplayStatics::UnloadBankByName(const FString& BankName) {
+void UAkGameplayStatics::UnloadBankByName(const FString& BankName)
+{
+
 }
 
-void UAkGameplayStatics::UnloadBankAsync(UAkAudioBank* Bank, const FOnAkBankCallback& BankUnloadedCallback) {
+void UAkGameplayStatics::UnloadBankAsync(UAkAudioBank* Bank, const FOnAkBankCallback& BankUnloadedCallback)
+{
+
 }
 
-void UAkGameplayStatics::UnloadBank(UAkAudioBank* Bank, const FString& BankName, FLatentActionInfo LatentInfo, UObject* WorldContextObject) {
+void UAkGameplayStatics::UnloadBank(UAkAudioBank* Bank, const FString& BankName, FLatentActionInfo LatentInfo, UObject* WorldContextObject)
+{
+
 }
 
-void UAkGameplayStatics::StopProfilerCapture() {
+void UAkGameplayStatics::StopProfilerCapture()
+{
+
 }
 
-void UAkGameplayStatics::StopOutputCapture() {
+void UAkGameplayStatics::StopOutputCapture()
+{
+
 }
 
-void UAkGameplayStatics::StopAllAmbientSounds(UObject* WorldContextObject) {
+void UAkGameplayStatics::StopAllAmbientSounds(UObject* WorldContextObject)
+{
+
 }
 
-void UAkGameplayStatics::StopAll() {
+void UAkGameplayStatics::StopAll()
+{
+
 }
 
-void UAkGameplayStatics::StopActor(AActor* Actor) {
+void UAkGameplayStatics::StopActor(AActor* Actor)
+{
+
 }
 
-void UAkGameplayStatics::StartProfilerCapture(const FString& Filename) {
+void UAkGameplayStatics::StartProfilerCapture(const FString& Filename)
+{
+
 }
 
-void UAkGameplayStatics::StartOutputCapture(const FString& Filename) {
+void UAkGameplayStatics::StartOutputCapture(const FString& Filename)
+{
+
 }
 
-void UAkGameplayStatics::StartAllAmbientSounds(UObject* WorldContextObject) {
+void UAkGameplayStatics::StartAllAmbientSounds(UObject* WorldContextObject)
+{
+
 }
 
-UAkComponent* UAkGameplayStatics::SpawnAkComponentAtLocation(UObject* WorldContextObject, UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation, bool AutoPost, const FString& EventName, bool AutoDestroy) {
-    return NULL;
+UAkComponent* UAkGameplayStatics::SpawnAkComponentAtLocation(UObject* WorldContextObject, UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation, bool AutoPost, const FString& EventName, bool AutoDestroy)
+{
+	return NULL;
 }
 
-void UAkGameplayStatics::SetSwitch(UAkSwitchValue* SwitchValue, AActor* Actor, FName SwitchGroup, FName SwitchState) {
+void UAkGameplayStatics::SetSwitch(UAkSwitchValue* SwitchValue, AActor* Actor, FName SwitchGroup, FName SwitchState)
+{
+
 }
 
-void UAkGameplayStatics::SetState(UAkStateValue* StateValue, FName StateGroup, FName State) {
+void UAkGameplayStatics::SetState(UAkStateValue* StateValue, FName StateGroup, FName State)
+{
+
 }
 
-void UAkGameplayStatics::SetSpeakerAngles(const TArray<float>& SpeakerAngles, float HeightAngle, const FString& DeviceShareset) {
+void UAkGameplayStatics::SetSpeakerAngles(const TArray<float>& SpeakerAngles, float HeightAngle, const FString& DeviceShareset)
+{
+
 }
 
-void UAkGameplayStatics::SetRTPCValue(UAkRtpc* RTPCValue, float Value, int32 InterpolationTimeMs, AActor* Actor, FName RTPC) {
+void UAkGameplayStatics::SetRTPCValue(UAkRtpc* RTPCValue, float Value, int32 InterpolationTimeMs, AActor* Actor, FName RTPC)
+{
+
 }
 
-void UAkGameplayStatics::SetReflectionsOrder(int32 Order, bool RefreshPaths) {
+void UAkGameplayStatics::SetReflectionsOrder(int32 Order, bool RefreshPaths)
+{
+
 }
 
-void UAkGameplayStatics::SetPanningRule(PanningRule PanRule) {
+void UAkGameplayStatics::SetPortalToPortalObstruction(UAkPortalComponent* PortalComponent0, UAkPortalComponent* PortalComponent1, float ObstructionValue)
+{
+
 }
 
-void UAkGameplayStatics::SetOutputBusVolume(float BusVolume, AActor* Actor) {
+void UAkGameplayStatics::SetPortalObstructionAndOcclusion(UAkPortalComponent* PortalComponent, float ObstructionValue, float OcclusionValue)
+{
+
 }
 
-void UAkGameplayStatics::SetOcclusionScalingFactor(float ScalingFactor) {
+void UAkGameplayStatics::SetPanningRule(PanningRule PanRule)
+{
+
 }
 
-void UAkGameplayStatics::SetOcclusionRefreshInterval(float RefreshInterval, AActor* Actor) {
+void UAkGameplayStatics::SetOutputBusVolume(float BusVolume, AActor* Actor)
+{
+
 }
 
-void UAkGameplayStatics::SetMultiplePositions(UAkComponent* GameObjectAkComponent, TArray<FTransform> Positions, AkMultiPositionType MultiPositionType) {
+void UAkGameplayStatics::SetOcclusionScalingFactor(float ScalingFactor)
+{
+
 }
 
-void UAkGameplayStatics::SetMultipleChannelMaskEmitterPositions(UAkComponent* GameObjectAkComponent, TArray<FAkChannelMask> ChannelMasks, TArray<FTransform> Positions, AkMultiPositionType MultiPositionType) {
+void UAkGameplayStatics::SetOcclusionRefreshInterval(float RefreshInterval, AActor* Actor)
+{
+
 }
 
-void UAkGameplayStatics::SetMultipleChannelEmitterPositions(UAkComponent* GameObjectAkComponent, TArray<AkChannelConfiguration> ChannelMasks, TArray<FTransform> Positions, AkMultiPositionType MultiPositionType) {
+void UAkGameplayStatics::SetMultiplePositions(UAkComponent* GameObjectAkComponent, TArray<FTransform> Positions, AkMultiPositionType MultiPositionType)
+{
+
 }
 
-void UAkGameplayStatics::SetCurrentAudioCultureAsync(const FString& AudioCulture, const FOnSetCurrentAudioCultureCallback& Completed) {
+void UAkGameplayStatics::SetMultipleChannelMaskEmitterPositions(UAkComponent* GameObjectAkComponent, TArray<FAkChannelMask> ChannelMasks, TArray<FTransform> Positions, AkMultiPositionType MultiPositionType)
+{
+
 }
 
-void UAkGameplayStatics::SetCurrentAudioCulture(const FString& AudioCulture, FLatentActionInfo LatentInfo, UObject* WorldContextObject) {
+void UAkGameplayStatics::SetMultipleChannelEmitterPositions(UAkComponent* GameObjectAkComponent, TArray<AkChannelConfiguration> ChannelMasks, TArray<FTransform> Positions, AkMultiPositionType MultiPositionType)
+{
+
 }
 
-void UAkGameplayStatics::SetBusConfig(const FString& BusName, AkChannelConfiguration ChannelConfiguration) {
+void UAkGameplayStatics::SetGameObjectToPortalObstruction(UAkComponent* GameObjectAkComponent, UAkPortalComponent* PortalComponent, float ObstructionValue)
+{
+
 }
 
-void UAkGameplayStatics::PostTrigger(UAkTrigger* TriggerValue, AActor* Actor, FName Trigger) {
+void UAkGameplayStatics::SetCurrentAudioCultureAsync(const FString& AudioCulture, const FOnSetCurrentAudioCultureCallback& Completed)
+{
+
 }
 
-void UAkGameplayStatics::PostEventByName(const FString& EventName, AActor* Actor, bool bStopWhenAttachedToDestroyed) {
+void UAkGameplayStatics::SetCurrentAudioCulture(const FString& AudioCulture, FLatentActionInfo LatentInfo, UObject* WorldContextObject)
+{
+
 }
 
-int32 UAkGameplayStatics::PostEventAttached(UAkAudioEvent* AkEvent, AActor* Actor, FName AttachPointName, bool bStopWhenAttachedToDestroyed, const FString& EventName) {
-    return 0;
+void UAkGameplayStatics::SetBusConfig(const FString& BusName, AkChannelConfiguration ChannelConfiguration)
+{
+
 }
 
-void UAkGameplayStatics::PostEventAtLocationByName(const FString& EventName, FVector Location, FRotator Orientation, UObject* WorldContextObject) {
+void UAkGameplayStatics::ResetRTPCValue(UAkRtpc* RTPCValue, int32 InterpolationTimeMs, AActor* Actor, FName RTPC)
+{
+
 }
 
-int32 UAkGameplayStatics::PostEventAtLocation(UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation, const FString& EventName, UObject* WorldContextObject) {
-    return 0;
+void UAkGameplayStatics::ReplaceMainOutput(const FAkOutputSettings& MainOutputSettings)
+{
+
 }
 
-int32 UAkGameplayStatics::PostEvent(UAkAudioEvent* AkEvent, AActor* Actor, int32 CallbackMask, const FOnAkPostEventCallback& PostEventCallback, const TArray<FAkExternalSourceInfo>& ExternalSources, bool bStopWhenAttachedToDestroyed, const FString& EventName) {
-    return 0;
+void UAkGameplayStatics::PostTrigger(UAkTrigger* TriggerValue, AActor* Actor, FName Trigger)
+{
+
 }
 
-void UAkGameplayStatics::PostAndWaitForEndOfEventAsync(UAkAudioEvent* AkEvent, AActor* Actor, int32& PlayingID, bool bStopWhenAttachedToDestroyed, const TArray<FAkExternalSourceInfo>& ExternalSources, FLatentActionInfo LatentInfo) {
+void UAkGameplayStatics::PostEventByName(const FString& EventName, AActor* Actor, bool bStopWhenAttachedToDestroyed)
+{
+
 }
 
-int32 UAkGameplayStatics::PostAndWaitForEndOfEvent(UAkAudioEvent* AkEvent, AActor* Actor, bool bStopWhenAttachedToDestroyed, const TArray<FAkExternalSourceInfo>& ExternalSources, const FString& EventName, FLatentActionInfo LatentInfo) {
-    return 0;
+int32 UAkGameplayStatics::PostEventAttached(UAkAudioEvent* AkEvent, AActor* Actor, FName AttachPointName, bool bStopWhenAttachedToDestroyed, const FString& EventName)
+{
+	return 0;
 }
 
-void UAkGameplayStatics::LoadInitBank() {
+void UAkGameplayStatics::PostEventAtLocationByName(const FString& EventName, FVector Location, FRotator Orientation, UObject* WorldContextObject)
+{
+
 }
 
-void UAkGameplayStatics::LoadBanks(const TArray<UAkAudioBank*>& SoundBanks, bool SynchronizeSoundBanks) {
+int32 UAkGameplayStatics::PostEventAtLocation(UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation, const FString& EventName, UObject* WorldContextObject)
+{
+	return 0;
 }
 
-void UAkGameplayStatics::LoadBankByName(const FString& BankName) {
+int32 UAkGameplayStatics::PostEvent(UAkAudioEvent* AkEvent, AActor* Actor, int32 CallbackMask, const FOnAkPostEventCallback& PostEventCallback, const TArray<FAkExternalSourceInfo>& ExternalSources, bool bStopWhenAttachedToDestroyed, const FString& EventName)
+{
+	return 0;
 }
 
-void UAkGameplayStatics::LoadBankAsync(UAkAudioBank* Bank, const FOnAkBankCallback& BankLoadedCallback) {
+void UAkGameplayStatics::PostAndWaitForEndOfEventAsync(UAkAudioEvent* AkEvent, AActor* Actor, int32& PlayingID, bool bStopWhenAttachedToDestroyed, const TArray<FAkExternalSourceInfo>& ExternalSources, FLatentActionInfo LatentInfo)
+{
+
 }
 
-void UAkGameplayStatics::LoadBank(UAkAudioBank* Bank, const FString& BankName, FLatentActionInfo LatentInfo, UObject* WorldContextObject) {
+int32 UAkGameplayStatics::PostAndWaitForEndOfEvent(UAkAudioEvent* AkEvent, AActor* Actor, bool bStopWhenAttachedToDestroyed, const TArray<FAkExternalSourceInfo>& ExternalSources, const FString& EventName, FLatentActionInfo LatentInfo)
+{
+	return 0;
 }
 
-bool UAkGameplayStatics::IsGame(UObject* WorldContextObject) {
-    return false;
+void UAkGameplayStatics::LoadInitBank()
+{
+
 }
 
-bool UAkGameplayStatics::IsEditor() {
-    return false;
+void UAkGameplayStatics::LoadBanks(const TArray<UAkAudioBank*>& SoundBanks, bool SynchronizeSoundBanks)
+{
+
 }
 
-void UAkGameplayStatics::GetSpeakerAngles(TArray<float>& SpeakerAngles, float& HeightAngle, const FString& DeviceShareset) {
+void UAkGameplayStatics::LoadBankByName(const FString& BankName)
+{
+
 }
 
-void UAkGameplayStatics::GetRTPCValue(UAkRtpc* RTPCValue, int32 PlayingID, ERTPCValueType InputValueType, float& Value, ERTPCValueType& OutputValueType, AActor* Actor, FName RTPC) {
+void UAkGameplayStatics::LoadBankAsync(UAkAudioBank* Bank, const FOnAkBankCallback& BankLoadedCallback)
+{
+
 }
 
-float UAkGameplayStatics::GetOcclusionScalingFactor() {
-    return 0.0f;
+void UAkGameplayStatics::LoadBank(UAkAudioBank* Bank, const FString& BankName, FLatentActionInfo LatentInfo, UObject* WorldContextObject)
+{
+
 }
 
-FString UAkGameplayStatics::GetCurrentAudioCulture() {
-    return TEXT("");
+bool UAkGameplayStatics::IsGame(UObject* WorldContextObject)
+{
+	return false;
 }
 
-TArray<FString> UAkGameplayStatics::GetAvailableAudioCultures() {
-    return TArray<FString>();
+bool UAkGameplayStatics::IsEditor()
+{
+	return false;
 }
 
-UObject* UAkGameplayStatics::GetAkMediaAssetUserData(const UAkMediaAsset* Instance, const UClass* Type) {
-    return NULL;
+void UAkGameplayStatics::GetSpeakerAngles(TArray<float>& SpeakerAngles, float& HeightAngle, const FString& DeviceShareset)
+{
+
 }
 
-UAkComponent* UAkGameplayStatics::GetAkComponent(USceneComponent* AttachToComponent, bool& ComponentCreated, FName AttachPointName, FVector Location, TEnumAsByte<EAttachLocation::Type> LocationType) {
-    return NULL;
+void UAkGameplayStatics::GetRTPCValue(UAkRtpc* RTPCValue, int32 PlayingID, ERTPCValueType InputValueType, float& Value, ERTPCValueType& OutputValueType, AActor* Actor, FName RTPC)
+{
+
 }
 
-UObject* UAkGameplayStatics::GetAkAudioTypeUserData(const UAkAudioType* Instance, const UClass* Type) {
-    return NULL;
+float UAkGameplayStatics::GetOcclusionScalingFactor()
+{
+	return 0.0f;
 }
 
-void UAkGameplayStatics::ExecuteActionOnPlayingID(AkActionOnEventType ActionType, int32 PlayingID, int32 TransitionDuration, EAkCurveInterpolation FadeCurve) {
+FString UAkGameplayStatics::GetCurrentAudioCulture()
+{
+	return TEXT("");
 }
 
-void UAkGameplayStatics::ExecuteActionOnEvent(UAkAudioEvent* AkEvent, AkActionOnEventType ActionType, AActor* Actor, int32 TransitionDuration, EAkCurveInterpolation FadeCurve, int32 PlayingID) {
+TArray<FString> UAkGameplayStatics::GetAvailableAudioCultures()
+{
+	return TArray<FString>();
 }
 
-void UAkGameplayStatics::ClearBanks() {
+UObject* UAkGameplayStatics::GetAkMediaAssetUserData(const UAkMediaAsset* Instance, const UClass* Type)
+{
+	return NULL;
 }
 
-void UAkGameplayStatics::CancelEventCallback(const FOnAkPostEventCallback& PostEventCallback) {
+UAkComponent* UAkGameplayStatics::GetAkComponent(USceneComponent* AttachToComponent, bool& ComponentCreated, FName AttachPointName, FVector Location, TEnumAsByte<EAttachLocation::Type> LocationType)
+{
+	return NULL;
 }
 
-void UAkGameplayStatics::AddOutputCaptureMarker(const FString& MarkerText) {
+UObject* UAkGameplayStatics::GetAkAudioTypeUserData(const UAkAudioType* Instance, const UClass* Type)
+{
+	return NULL;
 }
 
-UAkGameplayStatics::UAkGameplayStatics() {
+void UAkGameplayStatics::ExecuteActionOnPlayingID(AkActionOnEventType ActionType, int32 PlayingID, int32 TransitionDuration, EAkCurveInterpolation FadeCurve)
+{
+
 }
 
+void UAkGameplayStatics::ExecuteActionOnEvent(UAkAudioEvent* AkEvent, AkActionOnEventType ActionType, AActor* Actor, int32 TransitionDuration, EAkCurveInterpolation FadeCurve, int32 PlayingID)
+{
+
+}
+
+void UAkGameplayStatics::ClearBanks()
+{
+
+}
+
+void UAkGameplayStatics::CancelEventCallback(const FOnAkPostEventCallback& PostEventCallback)
+{
+
+}
+
+void UAkGameplayStatics::AddOutputCaptureMarker(const FString& MarkerText)
+{
+
+}
+
+UAkGameplayStatics::UAkGameplayStatics()
+{
+
+}

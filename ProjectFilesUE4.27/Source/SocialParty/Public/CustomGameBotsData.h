@@ -1,17 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "CustomGameBot.h"
 #include "CustomGameBotsData.generated.h"
 
 USTRUCT(BlueprintType)
-struct SOCIALPARTY_API FCustomGameBotsData {
-    GENERATED_BODY()
-public:
+struct FCustomGameBotsData
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY()
-    TArray<FCustomGameBot> _bots;
-    
+	UPROPERTY()
+	TArray<FCustomGameBot> _bots;
+
 public:
-    FCustomGameBotsData();
+	SOCIALPARTY_API FCustomGameBotsData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCustomGameBotsData) { return 0; }

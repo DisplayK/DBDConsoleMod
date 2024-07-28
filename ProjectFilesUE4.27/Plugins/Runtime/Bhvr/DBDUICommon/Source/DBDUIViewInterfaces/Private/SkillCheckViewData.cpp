@@ -1,14 +1,17 @@
 #include "SkillCheckViewData.h"
 
-FSkillCheckViewData::FSkillCheckViewData() {
-    this->HitAreaStart = 0.00f;
-    this->HitAreaLength = 0.00f;
-    this->BonusAreaStart = 0.00f;
-    this->BonusAreaLength = 0.00f;
-    this->IsHexed = false;
-    this->IsSpectating = false;
-    this->IsReversed = false;
-    this->IsMirrored = false;
-    this->IsInsane = false;
+FSkillCheckViewData::FSkillCheckViewData()
+{
+	this->InputKey = FKey{};
+	this->InputKey2 = FKey{};
+	this->HitAreaStart = 0.0f;
+	this->HitAreaLength = 0.0f;
+	this->BonusAreaStart = 0.0f;
+	this->BonusAreaLength = 0.0f;
+	this->IsHexed = false;
+	this->IsSpectating = false;
+	this->IsReversed = false;
+	this->IsMirrored = false;
+	this->IsInsane = false;
+	this->IsContinuousSkillCheck = false;
 }
-

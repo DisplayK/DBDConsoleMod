@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DateTimer.generated.h"
 
 USTRUCT()
-struct SYSTEMUTILITIES_API FDateTimer {
-    GENERATED_BODY()
+struct FDateTimer
+{
+	GENERATED_BODY()
+
 public:
-    FDateTimer();
+	SYSTEMUTILITIES_API FDateTimer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FDateTimer) { return 0; }

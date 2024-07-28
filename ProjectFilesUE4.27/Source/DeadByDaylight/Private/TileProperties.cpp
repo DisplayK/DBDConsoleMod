@@ -1,5 +1,5 @@
 #include "TileProperties.h"
 
-FTileProperties::FTileProperties() {
+FTileProperties::FTileProperties()
+{
 }
-

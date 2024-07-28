@@ -1,31 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "UIComponent.h"
+#include "EPresenterPhase.h"
 #include "PresenterGroup.generated.h"
 
-class UContextObserver;
-class UFocusHandler;
-class UPawnObserver;
-class URootContainer;
+class UPresenter;
 
-UCLASS(Abstract)
-class DBDUIPRESENTERS_API APresenterGroup : public AActor {
-    GENERATED_BODY()
+UCLASS(BlueprintType, Abstract, EditInlineNew)
+class DBDUIPRESENTERS_API UPresenterGroup : public UUIComponent
+{
+	GENERATED_BODY()
+
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EPresenterPhase WidgetInstantiationPhase;
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UContextObserver* ContextObserver;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UFocusHandler* FocusHandler;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UPawnObserver* PawnObserver;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    URootContainer* RootContainer;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Export)
+	TArray<UUIComponent*> _components;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Export)
+	TArray<UPresenter*> _presenters;
+
 public:
-    APresenterGroup();
+	UPresenterGroup();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPresenterGroup) { return 0; }

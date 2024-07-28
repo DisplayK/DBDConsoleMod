@@ -1,5 +1,6 @@
 #include "SubscriptionRewardMap.h"
 
-FSubscriptionRewardMap::FSubscriptionRewardMap() {
+FSubscriptionRewardMap::FSubscriptionRewardMap()
+{
+	this->RewardsByClaimType = TMap<ESubscriptionClaimType, FSubscriptionReward>();
 }
-

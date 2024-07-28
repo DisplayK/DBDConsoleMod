@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "FlashlightUtilities.generated.h"
 
 UCLASS()
-class DBDGAMEPLAY_API UFlashlightUtilities : public UObject {
-    GENERATED_BODY()
+class DBDGAMEPLAY_API UFlashlightUtilities : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UFlashlightUtilities();
+	UFlashlightUtilities();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UFlashlightUtilities) { return 0; }

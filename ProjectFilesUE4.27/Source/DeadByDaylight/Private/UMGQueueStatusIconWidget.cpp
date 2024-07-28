@@ -1,6 +1,6 @@
 #include "UMGQueueStatusIconWidget.h"
 
-UUMGQueueStatusIconWidget::UUMGQueueStatusIconWidget() {
-    this->StatusIndicator = NULL;
+UUMGQueueStatusIconWidget::UUMGQueueStatusIconWidget()
+{
+	this->StatusIndicator = NULL;
 }
-

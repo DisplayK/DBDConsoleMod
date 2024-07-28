@@ -1,5 +1,5 @@
 #include "SDKEndMessage.h"
 
-FSDKEndMessage::FSDKEndMessage() {
+FSDKEndMessage::FSDKEndMessage()
+{
 }
-

@@ -1,5 +1,6 @@
 #include "DBDCharacterPusherComponent.h"
 
-UDBDCharacterPusherComponent::UDBDCharacterPusherComponent() {
-}
+UDBDCharacterPusherComponent::UDBDCharacterPusherComponent()
+{
 
+}

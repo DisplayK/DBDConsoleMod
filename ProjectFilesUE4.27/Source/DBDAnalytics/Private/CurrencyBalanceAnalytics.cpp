@@ -1,6 +1,7 @@
 #include "CurrencyBalanceAnalytics.h"
 
-FCurrencyBalanceAnalytics::FCurrencyBalanceAnalytics() {
-    this->CurrencyBalance = 0;
+FCurrencyBalanceAnalytics::FCurrencyBalanceAnalytics()
+{
+	this->CurrencyName = TEXT("");
+	this->CurrencyBalance = 0;
 }
-

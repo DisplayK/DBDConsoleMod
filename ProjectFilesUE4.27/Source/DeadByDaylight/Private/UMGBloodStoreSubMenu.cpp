@@ -1,14 +1,17 @@
 #include "UMGBloodStoreSubMenu.h"
 
+void UUMGBloodStoreSubMenu::BroadcastExpiredBloodWeb()
+{
 
-void UUMGBloodStoreSubMenu::BroadcastExpiredBloodWeb() {
 }
 
-void UUMGBloodStoreSubMenu::BroadcastCharacterRoleButtonClicked() {
+void UUMGBloodStoreSubMenu::BroadcastCharacterRoleButtonClicked()
+{
+
 }
 
-UUMGBloodStoreSubMenu::UUMGBloodStoreSubMenu() {
-    this->SurvivorTimer = NULL;
-    this->KillerTimer = NULL;
+UUMGBloodStoreSubMenu::UUMGBloodStoreSubMenu()
+{
+	this->SurvivorTimer = NULL;
+	this->KillerTimer = NULL;
 }
-

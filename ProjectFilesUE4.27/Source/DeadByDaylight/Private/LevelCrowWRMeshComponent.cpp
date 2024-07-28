@@ -1,5 +1,6 @@
 #include "LevelCrowWRMeshComponent.h"
 
-ULevelCrowWRMeshComponent::ULevelCrowWRMeshComponent() {
-}
+ULevelCrowWRMeshComponent::ULevelCrowWRMeshComponent()
+{
 
+}

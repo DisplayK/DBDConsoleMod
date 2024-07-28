@@ -1,5 +1,6 @@
 #include "DBDPrimaryDataAsset.h"
 
-UDBDPrimaryDataAsset::UDBDPrimaryDataAsset() {
-}
+UDBDPrimaryDataAsset::UDBDPrimaryDataAsset()
+{
 
+}

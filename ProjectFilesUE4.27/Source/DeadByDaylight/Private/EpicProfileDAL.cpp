@@ -1,5 +1,6 @@
 #include "EpicProfileDAL.h"
 
-UEpicProfileDAL::UEpicProfileDAL() {
-}
+UEpicProfileDAL::UEpicProfileDAL()
+{
 
+}

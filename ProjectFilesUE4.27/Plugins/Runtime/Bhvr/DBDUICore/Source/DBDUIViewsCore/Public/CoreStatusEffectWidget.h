@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "StatusEffectViewInterface.h"
@@ -9,45 +10,45 @@ class UCoreStatusEffectIcon;
 class UGridPanel;
 
 UCLASS(EditInlineNew)
-class UCoreStatusEffectWidget : public UCoreBaseHudWidget, public IStatusEffectViewInterface {
-    GENERATED_BODY()
-public:
+class UCoreStatusEffectWidget : public UCoreBaseHudWidget, public IStatusEffectViewInterface
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, NoClear)
-    int32 InactiveThreshold;
-    
-    UPROPERTY(EditDefaultsOnly, NoClear)
-    int32 PrepooledItemAmount;
-    
-    UPROPERTY(EditDefaultsOnly, NoClear)
-    int32 ItemsByColumn;
-    
-    UPROPERTY(EditDefaultsOnly, NoClear)
-    float EvenColumnOffset;
-    
-    UPROPERTY(EditAnywhere, NoClear)
-    TSubclassOf<UCoreStatusEffectIcon> CoreStatusEffectIconClass;
-    
-    UPROPERTY(BlueprintReadWrite, Export)
-    UGridPanel* StatusEffectContainer;
-    
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, NoClear)
+	int32 InactiveThreshold;
+
+	UPROPERTY(EditDefaultsOnly, NoClear)
+	int32 PrepooledItemAmount;
+
+	UPROPERTY(EditDefaultsOnly, NoClear)
+	int32 ItemsByColumn;
+
+	UPROPERTY(EditDefaultsOnly, NoClear)
+	float EvenColumnOffset;
+
+	UPROPERTY(EditAnywhere, NoClear)
+	TSubclassOf<UCoreStatusEffectIcon> CoreStatusEffectIconClass;
+
+	UPROPERTY(BlueprintReadWrite, meta=(BindWidgetOptional))
+	UGridPanel* StatusEffectContainer;
+
 private:
-    UPROPERTY(Export, Transient)
-    TArray<UCoreStatusEffectIcon*> _statusEffectPool;
-    
-    UPROPERTY(Transient)
-    TArray<FName> _statusEffectOrder;
-    
-    UPROPERTY(BlueprintReadOnly, Export, Transient, meta=(AllowPrivateAccess=true))
-    TMap<FName, UCoreStatusEffectIcon*> _statusEffectMap;
-    
-public:
-    UCoreStatusEffectWidget();
+	UPROPERTY(Transient, Export)
+	TArray<UCoreStatusEffectIcon*> _statusEffectPool;
+
+	UPROPERTY(Transient)
+	TArray<FName> _statusEffectOrder;
+
+	UPROPERTY(BlueprintReadOnly, Transient, Export, meta=(AllowPrivateAccess=true))
+	TMap<FName, UCoreStatusEffectIcon*> _statusEffectMap;
+
 protected:
-    UFUNCTION(BlueprintPure)
-    TMap<FName, UCoreStatusEffectIcon*> GetStatusEffectMap() const;
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintPure)
+	TMap<FName, UCoreStatusEffectIcon*> GetStatusEffectMap() const;
+
+public:
+	UCoreStatusEffectWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreStatusEffectWidget) { return 0; }

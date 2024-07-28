@@ -1,5 +1,6 @@
 #include "CombinedPartyFriendFacade.h"
 
-UCombinedPartyFriendFacade::UCombinedPartyFriendFacade() {
-}
+UCombinedPartyFriendFacade::UCombinedPartyFriendFacade()
+{
 
+}

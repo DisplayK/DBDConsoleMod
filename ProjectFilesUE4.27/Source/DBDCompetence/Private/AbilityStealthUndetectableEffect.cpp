@@ -1,5 +1,6 @@
 #include "AbilityStealthUndetectableEffect.h"
 
-UAbilityStealthUndetectableEffect::UAbilityStealthUndetectableEffect() {
-}
+UAbilityStealthUndetectableEffect::UAbilityStealthUndetectableEffect()
+{
 
+}

@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameplayModifierCache.generated.h"
 
 USTRUCT()
-struct COMPETENCE_API FGameplayModifierCache {
-    GENERATED_BODY()
+struct FGameplayModifierCache
+{
+	GENERATED_BODY()
+
 public:
-    FGameplayModifierCache();
+	COMPETENCE_API FGameplayModifierCache();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FGameplayModifierCache) { return 0; }

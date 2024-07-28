@@ -1,5 +1,6 @@
 #include "AkXboxOneAnvilInitializationSettings.h"
 
-UAkXboxOneAnvilInitializationSettings::UAkXboxOneAnvilInitializationSettings() {
-}
+UAkXboxOneAnvilInitializationSettings::UAkXboxOneAnvilInitializationSettings()
+{
 
+}

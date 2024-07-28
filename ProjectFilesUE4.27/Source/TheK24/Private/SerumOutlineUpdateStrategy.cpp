@@ -1,5 +1,6 @@
 #include "SerumOutlineUpdateStrategy.h"
 
-USerumOutlineUpdateStrategy::USerumOutlineUpdateStrategy() {
-}
+USerumOutlineUpdateStrategy::USerumOutlineUpdateStrategy()
+{
 
+}

@@ -1,30 +1,34 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "AIDetectedStimulus.generated.h"
 
 class AActor;
 
-USTRUCT(BlueprintType)
-struct FAIDetectedStimulus {
-    GENERATED_BODY()
+USTRUCT()
+struct FAIDetectedStimulus
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    TWeakObjectPtr<AActor> Instigator;
-    
-    UPROPERTY()
-    FVector Location;
-    
-    UPROPERTY()
-    FRotator Rotation;
-    
-    UPROPERTY()
-    FVector Velocity;
-    
-    UPROPERTY()
-    float AtTime;
-    
-    DEADBYDAYLIGHT_API FAIDetectedStimulus();
+	UPROPERTY()
+	TWeakObjectPtr<AActor> Instigator;
+
+	UPROPERTY()
+	FVector Location;
+
+	UPROPERTY()
+	FRotator Rotation;
+
+	UPROPERTY()
+	FVector Velocity;
+
+	UPROPERTY()
+	float AtTime;
+
+public:
+	DEADBYDAYLIGHT_API FAIDetectedStimulus();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAIDetectedStimulus) { return 0; }

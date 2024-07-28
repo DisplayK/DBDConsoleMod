@@ -1,5 +1,6 @@
 #include "GeneratorIndicatorWidget.h"
 
-UGeneratorIndicatorWidget::UGeneratorIndicatorWidget() {
-}
+UGeneratorIndicatorWidget::UGeneratorIndicatorWidget()
+{
 
+}

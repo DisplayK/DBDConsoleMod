@@ -1,5 +1,6 @@
 #include "BaseLacerationLevelCondition.h"
 
-UBaseLacerationLevelCondition::UBaseLacerationLevelCondition() {
-}
+UBaseLacerationLevelCondition::UBaseLacerationLevelCondition()
+{
 
+}

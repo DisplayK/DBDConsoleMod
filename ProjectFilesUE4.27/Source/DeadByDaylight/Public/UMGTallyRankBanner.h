@@ -1,30 +1,34 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGTallyRankBanner.generated.h"
 
 class UUMGTallyPipsContainer;
-class UUMGRankBanner;
 class UImage;
+class UUMGRankBanner;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGTallyRankBanner : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGTallyRankBanner : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGTallyPipsContainer* PipsContainerWidget;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGRankBanner* RankBanner;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* SmokeBackground;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGTallyPipsContainer* PipsContainerWidget;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGRankBanner* RankBanner;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* SmokeBackground;
+
 public:
-    UUMGTallyRankBanner();
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetAsLocked(bool locked);
-    
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetAsLocked(bool locked);
+
+public:
+	UUMGTallyRankBanner();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGTallyRankBanner) { return 0; }

@@ -1,5 +1,6 @@
 #include "AlertKillerRevealEffect.h"
 
-UAlertKillerRevealEffect::UAlertKillerRevealEffect() {
-}
+UAlertKillerRevealEffect::UAlertKillerRevealEffect()
+{
 
+}

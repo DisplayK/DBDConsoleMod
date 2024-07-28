@@ -1,51 +1,70 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ScrollBox.h"
 #include "EShowScrollDisplayPrompt.h"
 #include "EControlMode.h"
 #include "DBDScrollBox.generated.h"
 
-class UCoreInputPromptTextWidget;
+class UCoreKeyListenerInputPromptWidget;
+class URetainerBox;
 
 UCLASS()
-class DBDUIVIEWSCORE_API UDBDScrollBox : public UScrollBox {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSCORE_API UDBDScrollBox : public UScrollBox
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly, NoClear)
-    bool _useControllerScroll;
-    
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly, NoClear)
-    bool _shouldScrollOnMouseOver;
-    
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly, NoClear)
-    float _scrollSpeed;
-    
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly, Export, NoClear)
-    UCoreInputPromptTextWidget* _displayPrompt;
-    
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly, NoClear)
-    FText _displayPromptText;
-    
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly, NoClear)
-    EShowScrollDisplayPrompt _showDisplayPrompt;
-    
-public:
-    UDBDScrollBox();
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, NoClear)
+	bool _useControllerScroll;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, NoClear)
+	bool _shouldScrollOnMouseOver;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, NoClear)
+	float _scrollSpeed;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, NoClear, meta=(BindWidgetOptional))
+	UCoreKeyListenerInputPromptWidget* _displayPrompt;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, NoClear)
+	FText _displayPromptText;
+
+	UPROPERTY(EditInstanceOnly, BlueprintReadOnly, NoClear)
+	EShowScrollDisplayPrompt _showDisplayPrompt;
+
+	UPROPERTY(EditInstanceOnly, NoClear)
+	bool IsUsingSmoothMask;
+
+	UPROPERTY(EditInstanceOnly, NoClear, meta=(BindWidgetOptional))
+	URetainerBox* SmoothMaskRetainerBox;
+
+private:
+	UFUNCTION()
+	void UpdateSmoothMask(float currentOffset);
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void UpdateDisplayPrompt();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnControlModeChanged(EControlMode controlMode);
-    
+	UFUNCTION(BlueprintCallable)
+	void UpdateDisplayPrompt();
+
 public:
-    UFUNCTION(BlueprintCallable)
-    bool IsMouseOver();
-    
+	UFUNCTION(BlueprintCallable)
+	void SetDisplayPrompt(UCoreKeyListenerInputPromptWidget* displayPrompt);
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void HandleControllerInput(float analogValue);
-    
+	UFUNCTION(BlueprintCallable)
+	void OnControlModeChanged(EControlMode controlMode);
+
+public:
+	UFUNCTION(BlueprintCallable)
+	bool IsMouseOver();
+
+protected:
+	UFUNCTION(BlueprintCallable)
+	void HandleControllerInput(float analogValue);
+
+public:
+	UDBDScrollBox();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDScrollBox) { return 0; }

@@ -1,5 +1,6 @@
 #include "LamentConfigurationOutlineStrategy.h"
 
-ULamentConfigurationOutlineStrategy::ULamentConfigurationOutlineStrategy() {
-}
+ULamentConfigurationOutlineStrategy::ULamentConfigurationOutlineStrategy()
+{
 
+}

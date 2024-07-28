@@ -1,5 +1,6 @@
 #include "TallyUIUtilities.h"
 
-UTallyUIUtilities::UTallyUIUtilities() {
-}
+UTallyUIUtilities::UTallyUIUtilities()
+{
 
+}

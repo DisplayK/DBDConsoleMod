@@ -1,5 +1,6 @@
 #include "PounceAttackHittingSubstate.h"
 
-UPounceAttackHittingSubstate::UPounceAttackHittingSubstate() {
-}
+UPounceAttackHittingSubstate::UPounceAttackHittingSubstate()
+{
 
+}

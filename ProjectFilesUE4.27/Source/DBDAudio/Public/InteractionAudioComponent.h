@@ -1,28 +1,32 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "NonTunableStat.h"
 #include "InteractionAudioComponent.generated.h"
 
-class UAkAudioEvent;
 class UAkComponent;
+class UAkAudioEvent;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DBDAUDIO_API UInteractionAudioComponent : public UActorComponent {
-    GENERATED_BODY()
-public:
+class DBDAUDIO_API UInteractionAudioComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
-    UAkComponent* _audioComponent;
-    
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UAkComponent* _audioComponent;
+
 private:
-    UPROPERTY(EditAnywhere)
-    FNonTunableStat _audioRadius;
-    
+	UPROPERTY(EditAnywhere)
+	FNonTunableStat _audioRadius;
+
 public:
-    UInteractionAudioComponent();
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic)
-    bool PostAkEvent(UAkAudioEvent* akEvent);
-    
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic)
+	bool PostAkEvent(UAkAudioEvent* akEvent);
+
+public:
+	UInteractionAudioComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UInteractionAudioComponent) { return 0; }

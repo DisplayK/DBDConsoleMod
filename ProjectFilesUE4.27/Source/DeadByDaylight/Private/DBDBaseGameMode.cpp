@@ -1,5 +1,6 @@
 #include "DBDBaseGameMode.h"
 
-ADBDBaseGameMode::ADBDBaseGameMode() {
-}
+ADBDBaseGameMode::ADBDBaseGameMode()
+{
 
+}

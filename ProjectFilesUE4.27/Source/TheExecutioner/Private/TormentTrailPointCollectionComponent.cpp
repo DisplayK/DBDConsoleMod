@@ -2,9 +2,12 @@
 
 class ATormentTrailPoint;
 
-void UTormentTrailPointCollectionComponent::OnTrailAcquireChanged(ATormentTrailPoint* trailPoint, bool value) {
+void UTormentTrailPointCollectionComponent::OnTrailAcquireChanged(ATormentTrailPoint* trailPoint, bool value)
+{
+
 }
 
-UTormentTrailPointCollectionComponent::UTormentTrailPointCollectionComponent() {
-}
+UTormentTrailPointCollectionComponent::UTormentTrailPointCollectionComponent()
+{
 
+}

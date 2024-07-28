@@ -1,5 +1,6 @@
 #include "KnivesProvider.h"
 
-UKnivesProvider::UKnivesProvider() {
-}
+UKnivesProvider::UKnivesProvider()
+{
 
+}

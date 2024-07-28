@@ -1,5 +1,6 @@
 #include "RichTextNestedTagsDecorator.h"
 
-URichTextNestedTagsDecorator::URichTextNestedTagsDecorator() : URichTextBlockDecorator(FObjectInitializer::Get()) {
-}
+URichTextNestedTagsDecorator::URichTextNestedTagsDecorator() : URichTextBlockDecorator(FObjectInitializer::Get())
+{
 
+}

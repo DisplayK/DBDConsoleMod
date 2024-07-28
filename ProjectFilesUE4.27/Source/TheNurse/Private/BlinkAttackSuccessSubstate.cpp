@@ -1,5 +1,6 @@
 #include "BlinkAttackSuccessSubstate.h"
 
-UBlinkAttackSuccessSubstate::UBlinkAttackSuccessSubstate() {
-}
+UBlinkAttackSuccessSubstate::UBlinkAttackSuccessSubstate()
+{
 
+}

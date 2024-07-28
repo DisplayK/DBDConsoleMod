@@ -1,6 +1,7 @@
 #include "BasePerkAnalytics.h"
 
-FBasePerkAnalytics::FBasePerkAnalytics() {
-    this->ElapsedMatchTime = 0.00f;
+FBasePerkAnalytics::FBasePerkAnalytics()
+{
+	this->MatchId = TEXT("");
+	this->ElapsedMatchTime = 0.0f;
 }
-

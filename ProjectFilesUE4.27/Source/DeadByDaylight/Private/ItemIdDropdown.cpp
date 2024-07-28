@@ -1,5 +1,6 @@
 #include "ItemIdDropdown.h"
 
-FItemIdDropdown::FItemIdDropdown() {
+FItemIdDropdown::FItemIdDropdown()
+{
+	this->ItemID = NAME_None;
 }
-

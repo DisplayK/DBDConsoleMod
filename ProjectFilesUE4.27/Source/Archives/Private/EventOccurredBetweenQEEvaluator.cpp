@@ -1,6 +1,6 @@
 #include "EventOccurredBetweenQEEvaluator.h"
 
-UEventOccurredBetweenQEEvaluator::UEventOccurredBetweenQEEvaluator() {
-    this->outerEventsDifferentTargets = false;
+UEventOccurredBetweenQEEvaluator::UEventOccurredBetweenQEEvaluator()
+{
+	this->outerEventsDifferentTargets = false;
 }
-

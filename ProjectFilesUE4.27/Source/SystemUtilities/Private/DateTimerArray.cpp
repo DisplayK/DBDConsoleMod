@@ -1,5 +1,5 @@
 #include "DateTimerArray.h"
 
-FDateTimerArray::FDateTimerArray() {
+FDateTimerArray::FDateTimerArray()
+{
 }
-

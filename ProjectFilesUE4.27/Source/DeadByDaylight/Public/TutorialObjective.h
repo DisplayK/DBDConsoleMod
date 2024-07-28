@@ -1,32 +1,37 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "ETutorialObjectivePlayerActionMapping.h"
 #include "DBDTableRowBase.h"
 #include "EInteractionPromptType.h"
+#include "ETutorialObjectivePlayerActionMapping.h"
 #include "TutorialObjective.generated.h"
 
 USTRUCT(BlueprintType)
-struct FTutorialObjective : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FTutorialObjective: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText Description;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsCompletionAnalyticEnabled;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EInteractionPromptType InteractionPromptType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    ETutorialObjectivePlayerActionMapping PlayerAction;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EInteractionPromptType SecondaryInteractionPromptType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    ETutorialObjectivePlayerActionMapping SecondaryPlayerAction;
-    
-    DEADBYDAYLIGHT_API FTutorialObjective();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsCompletionAnalyticEnabled;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EInteractionPromptType InteractionPromptType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ETutorialObjectivePlayerActionMapping PlayerAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EInteractionPromptType SecondaryInteractionPromptType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ETutorialObjectivePlayerActionMapping SecondaryPlayerAction;
+
+public:
+	DEADBYDAYLIGHT_API FTutorialObjective();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FTutorialObjective) { return 0; }

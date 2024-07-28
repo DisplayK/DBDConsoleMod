@@ -1,5 +1,6 @@
 #include "SurvivorFootstepsPerceptionComponent.h"
 
-USurvivorFootstepsPerceptionComponent::USurvivorFootstepsPerceptionComponent() {
-}
+USurvivorFootstepsPerceptionComponent::USurvivorFootstepsPerceptionComponent()
+{
 
+}

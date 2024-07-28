@@ -1,7 +1,7 @@
 #include "UMGGhostfaceSpecific.h"
 
-UUMGGhostfaceSpecific::UUMGGhostfaceSpecific() {
-    this->LeftLeanImage = NULL;
-    this->RightLeanImage = NULL;
+UUMGGhostfaceSpecific::UUMGGhostfaceSpecific()
+{
+	this->LeftLeanImage = NULL;
+	this->RightLeanImage = NULL;
 }
-

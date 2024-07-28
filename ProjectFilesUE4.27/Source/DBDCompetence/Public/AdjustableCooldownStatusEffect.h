@@ -1,18 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "StatusEffect.h"
 #include "GameplayTagContainer.h"
 #include "AdjustableCooldownStatusEffect.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DBDCOMPETENCE_API UAdjustableCooldownStatusEffect : public UStatusEffect {
-    GENERATED_BODY()
-public:
+class DBDCOMPETENCE_API UAdjustableCooldownStatusEffect : public UStatusEffect
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FGameplayTag CooldownModifierType;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FGameplayTag CooldownModifierType;
+
 public:
-    UAdjustableCooldownStatusEffect();
+	UAdjustableCooldownStatusEffect();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAdjustableCooldownStatusEffect) { return 0; }

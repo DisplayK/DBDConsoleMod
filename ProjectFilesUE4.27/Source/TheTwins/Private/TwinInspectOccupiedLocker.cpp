@@ -1,5 +1,6 @@
 #include "TwinInspectOccupiedLocker.h"
 
-UTwinInspectOccupiedLocker::UTwinInspectOccupiedLocker() {
-}
+UTwinInspectOccupiedLocker::UTwinInspectOccupiedLocker()
+{
 
+}

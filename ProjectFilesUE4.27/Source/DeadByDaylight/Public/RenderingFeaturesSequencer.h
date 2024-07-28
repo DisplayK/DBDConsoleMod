@@ -1,23 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "RenderingFeaturesSequencer.generated.h"
 
 class ADBDAggregateCullDistanceVolumes;
 class UWorld;
 
 UCLASS()
-class DEADBYDAYLIGHT_API URenderingFeaturesSequencer : public UObject {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API URenderingFeaturesSequencer : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    ADBDAggregateCullDistanceVolumes* _aggregateCullDistanceVolumes;
-    
-    UPROPERTY(Transient)
-    UWorld* _world;
-    
+	UPROPERTY(Transient)
+	ADBDAggregateCullDistanceVolumes* _aggregateCullDistanceVolumes;
+
+	UPROPERTY(Transient)
+	UWorld* _world;
+
 public:
-    URenderingFeaturesSequencer();
+	URenderingFeaturesSequencer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const URenderingFeaturesSequencer) { return 0; }

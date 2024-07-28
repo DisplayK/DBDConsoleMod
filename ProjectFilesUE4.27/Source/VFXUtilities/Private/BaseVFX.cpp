@@ -1,6 +1,6 @@
 #include "BaseVFX.h"
 
-ABaseVFX::ABaseVFX() {
-    this->_shouldLoadOnServer = false;
+ABaseVFX::ABaseVFX()
+{
+	this->_shouldLoadOnServer = false;
 }
-

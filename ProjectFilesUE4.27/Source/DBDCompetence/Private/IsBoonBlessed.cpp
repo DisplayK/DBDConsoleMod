@@ -1,5 +1,6 @@
 #include "IsBoonBlessed.h"
 
-UIsBoonBlessed::UIsBoonBlessed() {
-}
+UIsBoonBlessed::UIsBoonBlessed()
+{
 
+}

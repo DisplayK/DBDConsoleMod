@@ -1,12 +1,13 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EFlurryOfKnivesInteractionState.generated.h"
 
-UENUM()
-enum class EFlurryOfKnivesInteractionState {
-    Charging,
-    Aiming,
-    Throwing,
-    Finished,
+UENUM(BlueprintType)
+enum class EFlurryOfKnivesInteractionState : uint8
+{
+	Charging,
+	Aiming,
+	Throwing,
+	Finished,
 };
-

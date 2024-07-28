@@ -1,18 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Perception/AISenseEvent.h"
 #include "AITrailEvent.h"
+#include "Perception/AISenseEvent.h"
 #include "AISenseEvent_Trail.generated.h"
 
 UCLASS(BlueprintType, EditInlineNew)
-class DEADBYDAYLIGHT_API UAISenseEvent_Trail : public UAISenseEvent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UAISenseEvent_Trail : public UAISenseEvent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FAITrailEvent Event;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAITrailEvent Event;
+
 public:
-    UAISenseEvent_Trail();
+	UAISenseEvent_Trail();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAISenseEvent_Trail) { return 0; }

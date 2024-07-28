@@ -1,6 +1,6 @@
 #include "DoctorStatusData.h"
 
-FDoctorStatusData::FDoctorStatusData() {
-    this->AfflictionLevel = EAfflictionLevel::Off;
+UDoctorStatusData::UDoctorStatusData()
+{
+	this->AfflictionLevel = EAfflictionLevel::Off;
 }
-

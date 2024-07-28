@@ -1,22 +1,25 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "EdgeObjectHandlingStrategy.generated.h"
 
 class UActorSpawner;
 
 UCLASS()
-class UEdgeObjectHandlingStrategy : public UObject {
-    GENERATED_BODY()
-public:
+class UEdgeObjectHandlingStrategy : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    TArray<UActorSpawner*> _edgeObjectSpawners;
-    
-    UPROPERTY(Export, Transient)
-    TArray<UActorSpawner*> _edgeObjectBlockers;
-    
+	UPROPERTY(Transient, Export)
+	TArray<UActorSpawner*> _edgeObjectSpawners;
+
+	UPROPERTY(Transient, Export)
+	TArray<UActorSpawner*> _edgeObjectBlockers;
+
 public:
-    UEdgeObjectHandlingStrategy();
+	UEdgeObjectHandlingStrategy();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UEdgeObjectHandlingStrategy) { return 0; }

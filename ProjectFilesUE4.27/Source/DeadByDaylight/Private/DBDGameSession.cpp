@@ -1,5 +1,6 @@
 #include "DBDGameSession.h"
 
-ADBDGameSession::ADBDGameSession() {
-}
+ADBDGameSession::ADBDGameSession()
+{
 
+}

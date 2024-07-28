@@ -1,5 +1,6 @@
 #include "ShopTransactionItemProducts.h"
 
-FShopTransactionItemProducts::FShopTransactionItemProducts() {
+FShopTransactionItemProducts::FShopTransactionItemProducts()
+{
+	this->items = TArray<FShopTransactionItem>();
 }
-

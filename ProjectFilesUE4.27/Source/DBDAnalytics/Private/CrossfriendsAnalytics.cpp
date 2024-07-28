@@ -1,5 +1,7 @@
 #include "CrossfriendsAnalytics.h"
 
-FCrossfriendsAnalytics::FCrossfriendsAnalytics() {
+FCrossfriendsAnalytics::FCrossfriendsAnalytics()
+{
+	this->Action = TEXT("");
+	this->TargetKrakenUserId = TEXT("");
 }
-

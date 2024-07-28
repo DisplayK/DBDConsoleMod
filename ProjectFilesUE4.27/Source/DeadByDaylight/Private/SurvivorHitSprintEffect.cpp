@@ -1,5 +1,6 @@
 #include "SurvivorHitSprintEffect.h"
 
-USurvivorHitSprintEffect::USurvivorHitSprintEffect() {
-}
+USurvivorHitSprintEffect::USurvivorHitSprintEffect()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "ModifierSubjectProvider.h"
 
-UModifierSubjectProvider::UModifierSubjectProvider() {
-}
+UModifierSubjectProvider::UModifierSubjectProvider()
+{
 
+}

@@ -1,6 +1,7 @@
 #include "LegionKillerAnalytics.h"
 
-FLegionKillerAnalytics::FLegionKillerAnalytics() {
-    this->Pallet = 0;
+FLegionKillerAnalytics::FLegionKillerAnalytics()
+{
+	this->MatchId = TEXT("");
+	this->Pallet = 0;
 }
-

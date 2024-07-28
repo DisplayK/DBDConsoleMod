@@ -1,5 +1,6 @@
 #include "CustomizationHelper.h"
 
-UCustomizationHelper::UCustomizationHelper() {
-}
+UCustomizationHelper::UCustomizationHelper()
+{
 
+}

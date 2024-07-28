@@ -1,6 +1,6 @@
 #include "DedicatedServerStartupInitializer.h"
 
-UDedicatedServerStartupInitializer::UDedicatedServerStartupInitializer() {
-    this->_dbdTimeUtilities = NULL;
+UDedicatedServerStartupInitializer::UDedicatedServerStartupInitializer()
+{
+	this->_dbdTimeUtilities = NULL;
 }
-

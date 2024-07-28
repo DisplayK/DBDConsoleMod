@@ -1,6 +1,7 @@
 #include "ExternalTexture.h"
 
-FExternalTexture::FExternalTexture() {
-    this->Texture = NULL;
+FExternalTexture::FExternalTexture()
+{
+	this->Resource = TEXT("");
+	this->Texture = NULL;
 }
-

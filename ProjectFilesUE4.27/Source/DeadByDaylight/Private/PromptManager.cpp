@@ -1,5 +1,6 @@
 #include "PromptManager.h"
 
-UPromptManager::UPromptManager() {
-}
+UPromptManager::UPromptManager()
+{
 
+}

@@ -1,34 +1,39 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
 #include "EInventoryItemType.h"
 #include "LevelUpDetails.generated.h"
 
 USTRUCT(BlueprintType)
-struct FLevelUpDetails : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FLevelUpDetails: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 Level;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 Prestige;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText Title;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText Description;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName ItemId;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EInventoryItemType ItemType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 AssociatedCharacter;
-    
-    DEADBYDAYLIGHT_API FLevelUpDetails();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Level;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Prestige;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Title;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName ItemId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EInventoryItemType ItemType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 AssociatedCharacter;
+
+public:
+	DEADBYDAYLIGHT_API FLevelUpDetails();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FLevelUpDetails) { return 0; }

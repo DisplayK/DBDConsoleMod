@@ -1,5 +1,6 @@
 #include "LingeringStateTagStatusEffect.h"
 
-ULingeringStateTagStatusEffect::ULingeringStateTagStatusEffect() {
-}
+ULingeringStateTagStatusEffect::ULingeringStateTagStatusEffect()
+{
 
+}

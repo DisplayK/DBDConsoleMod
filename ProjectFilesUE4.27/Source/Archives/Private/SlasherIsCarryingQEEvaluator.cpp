@@ -1,5 +1,6 @@
 #include "SlasherIsCarryingQEEvaluator.h"
 
-USlasherIsCarryingQEEvaluator::USlasherIsCarryingQEEvaluator() {
-}
+USlasherIsCarryingQEEvaluator::USlasherIsCarryingQEEvaluator()
+{
 
+}

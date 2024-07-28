@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EOwnership.generated.h"
 
-UENUM()
-enum class EOwnership {
-    Owned,
-    NotOwned,
-    Any,
+UENUM(BlueprintType)
+enum class EOwnership : uint8
+{
+	Owned,
+	NotOwned,
+	Any,
 };
-

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
 #include "EStorefrontState.h"
@@ -6,12 +7,16 @@
 #include "StorefrontConfiguration.generated.h"
 
 UCLASS(BlueprintType)
-class UStorefrontConfiguration : public UDataAsset {
-    GENERATED_BODY()
+class UStorefrontConfiguration : public UDataAsset
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TMap<EStorefrontState, FStorefrontStateData> States;
-    
-    UStorefrontConfiguration();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TMap<EStorefrontState, FStorefrontStateData> States;
+
+public:
+	UStorefrontConfiguration();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UStorefrontConfiguration) { return 0; }

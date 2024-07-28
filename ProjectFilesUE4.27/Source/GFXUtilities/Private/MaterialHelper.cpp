@@ -2,12 +2,17 @@
 
 class UMeshComponent;
 
-void UMaterialHelper::RefreshMeshes() {
+void UMaterialHelper::RefreshMeshes()
+{
+
 }
 
-void UMaterialHelper::RefreshMesh(UMeshComponent* mc) {
+void UMaterialHelper::RefreshMesh(UMeshComponent* mc)
+{
+
 }
 
-UMaterialHelper::UMaterialHelper() {
-}
+UMaterialHelper::UMaterialHelper()
+{
 
+}

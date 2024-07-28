@@ -1,5 +1,6 @@
 #include "VisualLoggerExt.h"
 
-UVisualLoggerExt::UVisualLoggerExt() {
-}
+UVisualLoggerExt::UVisualLoggerExt()
+{
 
+}

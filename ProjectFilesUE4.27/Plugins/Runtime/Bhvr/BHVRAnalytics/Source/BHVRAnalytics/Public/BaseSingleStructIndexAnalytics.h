@@ -1,14 +1,19 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseSingleStructIndexAnalytics.generated.h"
 
 USTRUCT()
-struct BHVRANALYTICS_API FBaseSingleStructIndexAnalytics {
-    GENERATED_BODY()
+struct FBaseSingleStructIndexAnalytics
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    FString SessionGuid;
-    
-    FBaseSingleStructIndexAnalytics();
+	UPROPERTY()
+	FString SessionGuid;
+
+public:
+	BHVRANALYTICS_API FBaseSingleStructIndexAnalytics();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FBaseSingleStructIndexAnalytics) { return 0; }

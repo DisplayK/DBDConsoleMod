@@ -1,6 +1,8 @@
 #include "CheatValidatedAnalytics.h"
 
-FCheatValidatedAnalytics::FCheatValidatedAnalytics() {
-    this->Validated = false;
+FCheatValidatedAnalytics::FCheatValidatedAnalytics()
+{
+	this->Command = TEXT("");
+	this->Type = TEXT("");
+	this->Validated = false;
 }
-

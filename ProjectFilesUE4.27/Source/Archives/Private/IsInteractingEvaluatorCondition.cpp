@@ -1,5 +1,6 @@
 #include "IsInteractingEvaluatorCondition.h"
 
-UIsInteractingEvaluatorCondition::UIsInteractingEvaluatorCondition() {
-}
+UIsInteractingEvaluatorCondition::UIsInteractingEvaluatorCondition()
+{
 
+}

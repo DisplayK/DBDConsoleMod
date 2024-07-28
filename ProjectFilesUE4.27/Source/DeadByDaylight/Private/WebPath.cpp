@@ -1,5 +1,5 @@
 #include "WebPath.h"
 
-FWebPath::FWebPath() {
+FWebPath::FWebPath()
+{
 }
-

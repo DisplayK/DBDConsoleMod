@@ -1,5 +1,6 @@
 #include "OutlineColourConfiguration.h"
 
-FOutlineColourConfiguration::FOutlineColourConfiguration() {
+FOutlineColourConfiguration::FOutlineColourConfiguration()
+{
+	this->ColourValue = FLinearColor{};
 }
-

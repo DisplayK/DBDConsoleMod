@@ -1,6 +1,7 @@
 #include "GFxEngine.h"
 
-UGFxEngine::UGFxEngine() {
-    this->RefCount = 0;
+UGFxEngine::UGFxEngine()
+{
+	this->GCReferences = TArray<FGCReference>();
+	this->RefCount = 0;
 }
-

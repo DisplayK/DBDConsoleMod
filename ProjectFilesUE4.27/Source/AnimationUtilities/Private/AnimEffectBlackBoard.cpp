@@ -1,5 +1,6 @@
 #include "AnimEffectBlackBoard.h"
 
-UAnimEffectBlackBoard::UAnimEffectBlackBoard() {
-}
+UAnimEffectBlackBoard::UAnimEffectBlackBoard()
+{
 
+}

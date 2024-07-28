@@ -1,6 +1,6 @@
 #include "UMGRefundDataWidget.h"
 
+UUMGRefundDataWidget::UUMGRefundDataWidget()
+{
 
-UUMGRefundDataWidget::UUMGRefundDataWidget() {
 }
-

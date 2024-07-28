@@ -1,16 +1,23 @@
 #include "UMGInboxMessageEntryWidget.h"
+#include "InboxMessageUIData.h"
+#include "InboxMessageElapsedTime.h"
 
-void UUMGInboxMessageEntryWidget::UpdateMessageData_Implementation(FInboxMessageUIData messageData) {
+void UUMGInboxMessageEntryWidget::UpdateMessageData_Implementation(FInboxMessageUIData messageData)
+{
+
 }
 
-void UUMGInboxMessageEntryWidget::SetMessageData(const FInboxMessageUIData& messageData) {
+void UUMGInboxMessageEntryWidget::SetMessageData(const FInboxMessageUIData& messageData)
+{
+
 }
 
-FInboxMessageElapsedTime UUMGInboxMessageEntryWidget::GetElapsedTime() {
-    return FInboxMessageElapsedTime{};
+FInboxMessageElapsedTime UUMGInboxMessageEntryWidget::GetElapsedTime()
+{
+	return FInboxMessageElapsedTime{};
 }
 
-UUMGInboxMessageEntryWidget::UUMGInboxMessageEntryWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->_isCurrentSelection = false;
+UUMGInboxMessageEntryWidget::UUMGInboxMessageEntryWidget() : UUserWidget(FObjectInitializer::Get())
+{
+	this->_isCurrentSelection = false;
 }
-

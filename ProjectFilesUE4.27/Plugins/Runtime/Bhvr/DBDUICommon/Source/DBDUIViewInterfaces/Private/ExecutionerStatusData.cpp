@@ -1,6 +1,6 @@
 #include "ExecutionerStatusData.h"
 
-FExecutionerStatusData::FExecutionerStatusData() {
-    this->AgonyProgress = 0.00f;
+UExecutionerStatusData::UExecutionerStatusData()
+{
+	this->AgonyProgress = 0.000000;
 }
-

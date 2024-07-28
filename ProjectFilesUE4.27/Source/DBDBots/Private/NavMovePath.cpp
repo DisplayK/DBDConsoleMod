@@ -1,5 +1,6 @@
 #include "NavMovePath.h"
 
-UNavMovePath::UNavMovePath() {
-}
+UNavMovePath::UNavMovePath()
+{
 
+}

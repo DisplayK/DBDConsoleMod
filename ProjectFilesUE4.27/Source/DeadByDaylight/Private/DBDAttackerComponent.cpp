@@ -1,31 +1,45 @@
 #include "DBDAttackerComponent.h"
+#include "EAttackType.h"
 
-void UDBDAttackerComponent::Server_StoreAttack_Implementation(const EAttackType attackType) {
-}
-bool UDBDAttackerComponent::Server_StoreAttack_Validate(const EAttackType attackType) {
-    return true;
-}
+void UDBDAttackerComponent::Server_StoreAttack_Implementation(const EAttackType attackType)
+{
 
-void UDBDAttackerComponent::Multicast_StoreAttack_Implementation(const EAttackType attackType) {
 }
 
-void UDBDAttackerComponent::Local_RequestAttack(const EAttackType attackType) {
+bool UDBDAttackerComponent::Server_StoreAttack_Validate(const EAttackType attackType)
+{
+	return true;
 }
 
-bool UDBDAttackerComponent::IsAttackTransitionRequested(const EAttackType attackType) const {
-    return false;
+void UDBDAttackerComponent::Multicast_StoreAttack_Implementation(const EAttackType attackType)
+{
+
 }
 
-bool UDBDAttackerComponent::IsAttacking() const {
-    return false;
+void UDBDAttackerComponent::Local_RequestAttack(const EAttackType attackType)
+{
+
 }
 
-bool UDBDAttackerComponent::IsAnyAttackTransitionRequested() const {
-    return false;
+bool UDBDAttackerComponent::IsAttackTransitionRequested(const EAttackType attackType) const
+{
+	return false;
 }
 
-UDBDAttackerComponent::UDBDAttackerComponent() {
-    this->_requestedAttack = NULL;
-    this->_currentAttack = NULL;
+bool UDBDAttackerComponent::IsAttacking() const
+{
+	return false;
 }
 
+bool UDBDAttackerComponent::IsAnyAttackTransitionRequested() const
+{
+	return false;
+}
+
+UDBDAttackerComponent::UDBDAttackerComponent()
+{
+	this->_attacks = TArray<UDBDAttack*>();
+	this->_requestedAttack = NULL;
+	this->_currentAttack = NULL;
+	this->_attackHitDelegates = TArray<FAttackDelegatePair>();
+}

@@ -1,7 +1,11 @@
 #include "ArchiveVignetteVideoAnalytics.h"
 
-FArchiveVignetteVideoAnalytics::FArchiveVignetteVideoAnalytics() {
-    this->VideoTimeSpent = 0.00f;
-    this->WasVideoWatchUntilEnd = false;
+FArchiveVignetteVideoAnalytics::FArchiveVignetteVideoAnalytics()
+{
+	this->ArchiveId = TEXT("");
+	this->VignetteId = TEXT("");
+	this->VideoId = TEXT("");
+	this->StartVideoTimestamp = TEXT("");
+	this->VideoTimeSpent = 0.0;
+	this->WasVideoWatchUntilEnd = false;
 }
-

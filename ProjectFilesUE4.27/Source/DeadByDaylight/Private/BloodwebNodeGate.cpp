@@ -1,5 +1,5 @@
 #include "BloodwebNodeGate.h"
 
-FBloodwebNodeGate::FBloodwebNodeGate() {
+FBloodwebNodeGate::FBloodwebNodeGate()
+{
 }
-

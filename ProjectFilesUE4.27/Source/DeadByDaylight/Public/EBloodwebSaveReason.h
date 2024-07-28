@@ -1,12 +1,13 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EBloodwebSaveReason.generated.h"
 
-UENUM()
-enum class EBloodwebSaveReason {
-    PayToRefresh,
-    PrestigeUp,
-    ShouldRebuild,
-    Cheat,
+UENUM(BlueprintType)
+enum class EBloodwebSaveReason : uint8
+{
+	PayToRefresh,
+	PrestigeUp,
+	ShouldRebuild,
+	Cheat,
 };
-

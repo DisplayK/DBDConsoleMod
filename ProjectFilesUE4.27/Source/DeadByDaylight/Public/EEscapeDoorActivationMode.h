@@ -1,10 +1,11 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EEscapeDoorActivationMode.generated.h"
 
-UENUM()
-enum class EEscapeDoorActivationMode {
-    Standard,
-    Tutorial,
+UENUM(BlueprintType)
+enum class EEscapeDoorActivationMode : uint8
+{
+	Standard,
+	Tutorial,
 };
-

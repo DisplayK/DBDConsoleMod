@@ -1,7 +1,6 @@
 #include "PossessPlayer.h"
 
+UPossessPlayer::UPossessPlayer()
+{
 
-
-UPossessPlayer::UPossessPlayer() {
 }
-

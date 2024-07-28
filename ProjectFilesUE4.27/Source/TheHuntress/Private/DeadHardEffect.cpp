@@ -1,5 +1,6 @@
 #include "DeadHardEffect.h"
 
-UDeadHardEffect::UDeadHardEffect() {
-}
+UDeadHardEffect::UDeadHardEffect()
+{
 
+}

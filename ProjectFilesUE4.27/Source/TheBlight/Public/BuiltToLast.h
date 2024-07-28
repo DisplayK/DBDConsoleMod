@@ -1,30 +1,34 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Perk.h"
 #include "BuiltToLast.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UBuiltToLast : public UPerk {
-    GENERATED_BODY()
-public:
+class UBuiltToLast : public UPerk
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditDefaultsOnly)
-    float _refillPercentage[3];
-    
-    UPROPERTY(EditDefaultsOnly)
-    float _hideDuration[3];
-    
+	UPROPERTY(EditDefaultsOnly)
+	float _refillPercentage;
+
+	UPROPERTY(EditDefaultsOnly)
+	float _hideDuration;
+
 private:
-    UPROPERTY(Replicated, Transient)
-    uint8 _numberOfTimesPerkTriggered;
-    
-public:
-    UBuiltToLast();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+	UPROPERTY(Replicated, Transient)
+	uint8 _numberOfTimesPerkTriggered;
+
 protected:
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void OnBuiltToLastTrigger_Cosmetic();
-    
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void OnBuiltToLastTrigger_Cosmetic();
+
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UBuiltToLast();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBuiltToLast) { return 0; }

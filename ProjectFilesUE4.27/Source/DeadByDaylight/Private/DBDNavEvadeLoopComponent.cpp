@@ -1,21 +1,23 @@
 #include "DBDNavEvadeLoopComponent.h"
 #include "NavigationQueryFilter_EvadeLoop.h"
 
-void UDBDNavEvadeLoopComponent::OnLevelReadyToPlay() {
+void UDBDNavEvadeLoopComponent::OnLevelReadyToPlay()
+{
+
 }
 
-UDBDNavEvadeLoopComponent::UDBDNavEvadeLoopComponent() {
-    this->EvadeDoorFrontPointOffset = 90.00f;
-    this->EvadeDoorSideOffset = 60.00f;
-    this->SideBlockerOffset = 300.00f;
-    this->AutoSnapPointsUpHeight = 20.00f;
-    this->AutoSnapPointsDownHeight = 1000.00f;
-    this->AutoSnapCollisionChannel = ECC_Pawn;
-    this->EvadeLoopFilterClass = UNavigationQueryFilter_EvadeLoop::StaticClass();
-    this->MinSafetyLength = 600.00f;
-    this->MaxSafetyLength = 2300.00f;
-    this->LimitToSide = EAIEvadeLoopSides::Count;
-    this->DebugEditMode = false;
-    this->DrawDebugFilter = false;
+UDBDNavEvadeLoopComponent::UDBDNavEvadeLoopComponent()
+{
+	this->EvadeDoorFrontPointOffset = 90.000000;
+	this->EvadeDoorSideOffset = 60.000000;
+	this->SideBlockerOffset = 300.000000;
+	this->AutoSnapPointsUpHeight = 20.000000;
+	this->AutoSnapPointsDownHeight = 1000.000000;
+	this->AutoSnapCollisionChannel = ECC_Pawn;
+	this->EvadeLoopFilterClass = UNavigationQueryFilter_EvadeLoop::StaticClass();
+	this->MinSafetyLength = 600.000000;
+	this->MaxSafetyLength = 2300.000000;
+	this->LimitToSide = EAIEvadeLoopSides::Left;
+	this->DebugEditMode = false;
+	this->DrawDebugFilter = false;
 }
-

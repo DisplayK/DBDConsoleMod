@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "InputMasher.generated.h"
@@ -6,14 +7,16 @@
 class UInputComponent;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class INPUTUTILITIES_API UInputMasher : public UActorComponent {
-    GENERATED_BODY()
-public:
+class INPUTUTILITIES_API UInputMasher : public UActorComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UInputComponent* _inputComponent;
-    
+	UPROPERTY(Transient, Export)
+	UInputComponent* _inputComponent;
+
 public:
-    UInputMasher();
+	UInputMasher();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UInputMasher) { return 0; }

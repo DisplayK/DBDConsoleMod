@@ -1,5 +1,6 @@
 #include "MatchConfigTabsDataAsset.h"
 
-UMatchConfigTabsDataAsset::UMatchConfigTabsDataAsset() {
+UMatchConfigTabsDataAsset::UMatchConfigTabsDataAsset()
+{
+	this->Data = TMap<ECustomMatchTab, FMatchConfigTabData>();
 }
-

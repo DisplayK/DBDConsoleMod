@@ -1,5 +1,6 @@
 #include "StatusEffectOriginatorSubjectProvider.h"
 
-UStatusEffectOriginatorSubjectProvider::UStatusEffectOriginatorSubjectProvider() {
-}
+UStatusEffectOriginatorSubjectProvider::UStatusEffectOriginatorSubjectProvider()
+{
 
+}

@@ -1,28 +1,31 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "DBDEmblem.h"
+#include "Templates/SubclassOf.h"
 #include "DBDEmblem_SurvivorUnbroken.generated.h"
 
-class UCurveFloat;
 class UDBDRankDesignTunables;
+class UCurveFloat;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UDBDEmblem_SurvivorUnbroken : public UDBDEmblem {
-    GENERATED_BODY()
-public:
+class UDBDEmblem_SurvivorUnbroken : public UDBDEmblem
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UCurveFloat* _pointsForTimeAlive;
-    
-    UPROPERTY(EditAnywhere)
-    TSubclassOf<UDBDRankDesignTunables> _rankTunablesClass;
-    
-public:
-    UDBDEmblem_SurvivorUnbroken();
+	UPROPERTY(Transient)
+	UCurveFloat* _pointsForTimeAlive;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<UDBDRankDesignTunables> _rankTunablesClass;
+
 private:
-    UFUNCTION()
-    void OnIntroCompleted();
-    
+	UFUNCTION()
+	void OnIntroCompleted();
+
+public:
+	UDBDEmblem_SurvivorUnbroken();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDEmblem_SurvivorUnbroken) { return 0; }

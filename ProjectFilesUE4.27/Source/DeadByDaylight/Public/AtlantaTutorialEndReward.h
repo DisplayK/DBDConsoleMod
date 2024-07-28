@@ -1,24 +1,29 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
 #include "AtlantaTutorialEndReward.generated.h"
 
 USTRUCT(BlueprintType)
-struct FAtlantaTutorialEndReward : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FAtlantaTutorialEndReward: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 BloodpointReward;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 AuricCellsRewards;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 FearTokensReward;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FName> CharactersRewards;
-    
-    DEADBYDAYLIGHT_API FAtlantaTutorialEndReward();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 BloodpointReward;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 AuricCellsRewards;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 FearTokensReward;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FName> CharactersRewards;
+
+public:
+	DEADBYDAYLIGHT_API FAtlantaTutorialEndReward();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAtlantaTutorialEndReward) { return 0; }

@@ -2,11 +2,12 @@
 
 class ACamperPlayer;
 
-ACamperPlayer* UHealInteraction::GetTargetSurvivor() const {
-    return NULL;
+ACamperPlayer* UHealInteraction::GetTargetSurvivor() const
+{
+	return NULL;
 }
 
+UHealInteraction::UHealInteraction()
+{
 
-UHealInteraction::UHealInteraction() {
 }
-

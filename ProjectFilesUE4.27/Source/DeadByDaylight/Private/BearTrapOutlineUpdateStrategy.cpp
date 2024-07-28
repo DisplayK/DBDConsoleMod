@@ -2,11 +2,13 @@
 
 class UMapActorComponent;
 
-void UBearTrapOutlineUpdateStrategy::SetOwningBearTrapMapActorComponent(UMapActorComponent* mapActorComponent) {
+void UBearTrapOutlineUpdateStrategy::SetOwningBearTrapMapActorComponent(UMapActorComponent* mapActorComponent)
+{
+
 }
 
-UBearTrapOutlineUpdateStrategy::UBearTrapOutlineUpdateStrategy() {
-    this->KillerOutlineFadeCurve = NULL;
-    this->_owningBearTrapMapActorComponent = NULL;
+UBearTrapOutlineUpdateStrategy::UBearTrapOutlineUpdateStrategy()
+{
+	this->KillerOutlineFadeCurve = NULL;
+	this->_owningBearTrapMapActorComponent = NULL;
 }
-

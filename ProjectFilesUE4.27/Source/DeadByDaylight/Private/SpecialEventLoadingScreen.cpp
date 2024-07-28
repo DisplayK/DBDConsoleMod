@@ -1,8 +1,11 @@
 #include "SpecialEventLoadingScreen.h"
 
-void USpecialEventLoadingScreen::OnLoadingTextTimerComplete() const {
+void USpecialEventLoadingScreen::OnLoadingTextTimerComplete() const
+{
+
 }
 
-USpecialEventLoadingScreen::USpecialEventLoadingScreen() {
-}
+USpecialEventLoadingScreen::USpecialEventLoadingScreen()
+{
 
+}

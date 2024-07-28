@@ -1,5 +1,6 @@
 #include "ManualIconStrategy.h"
 
-UManualIconStrategy::UManualIconStrategy() {
-}
+UManualIconStrategy::UManualIconStrategy()
+{
 
+}

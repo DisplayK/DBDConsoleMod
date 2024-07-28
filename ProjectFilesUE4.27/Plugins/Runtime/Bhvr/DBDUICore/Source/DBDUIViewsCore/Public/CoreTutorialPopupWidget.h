@@ -1,31 +1,32 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "NotifTutoConfirmButtonClickDelegateDelegate.h"
-#include "CoreBaseHudWidget.h"
 #include "TutorialPopupViewInterface.h"
+#include "CoreBaseHudWidget.h"
+#include "NotifTutoConfirmButtonClickDelegate.h"
 #include "CoreTutorialPopupWidget.generated.h"
 
-class UCoreInputSwitcherWidget;
 class UAkAudioEvent;
+class UCoreInputSwitcherWidget;
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreTutorialPopupWidget : public UCoreBaseHudWidget, public ITutorialPopupViewInterface {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSCORE_API UCoreTutorialPopupWidget : public UCoreBaseHudWidget, public ITutorialPopupViewInterface
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCoreInputSwitcherWidget* ProgressionInputSwitcher;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkAudioEvent* ClosePopupSfx;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCoreInputSwitcherWidget* ProgressionInputSwitcher;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UAkAudioEvent* ClosePopupSfx;
+
 private:
-    UPROPERTY(BlueprintCallable)
-    FNotifTutoConfirmButtonClickDelegate _notifTutoConfirmButtonClickDelegate;
-    
+	UPROPERTY()
+	FNotifTutoConfirmButtonClickDelegate _notifTutoConfirmButtonClickDelegate;
+
 public:
-    UCoreTutorialPopupWidget();
-    
-    // Fix for true pure virtual functions not being implemented
+	UCoreTutorialPopupWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreTutorialPopupWidget) { return 0; }

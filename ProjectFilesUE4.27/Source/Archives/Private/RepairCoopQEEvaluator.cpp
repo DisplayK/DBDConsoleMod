@@ -1,5 +1,6 @@
 #include "RepairCoopQEEvaluator.h"
 
-URepairCoopQEEvaluator::URepairCoopQEEvaluator() {
-}
+URepairCoopQEEvaluator::URepairCoopQEEvaluator()
+{
 
+}

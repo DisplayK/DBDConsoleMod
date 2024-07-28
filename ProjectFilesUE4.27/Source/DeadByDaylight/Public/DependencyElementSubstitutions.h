@@ -1,22 +1,25 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "ETileSpawnPointType.h"
 #include "ElementSubstitutions.h"
 #include "SubstitutionElements.h"
+#include "ETileSpawnPointType.h"
 #include "DependencyElementSubstitutions.generated.h"
 
 USTRUCT(BlueprintType)
-struct FDependencyElementSubstitutions : public FElementSubstitutions {
-    GENERATED_BODY()
-public:
+struct FDependencyElementSubstitutions: public FElementSubstitutions
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FSubstitutionElements> _replacements;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
-    ETileSpawnPointType _type;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	TArray<FSubstitutionElements> _replacements;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	ETileSpawnPointType _type;
+
 public:
-    DEADBYDAYLIGHT_API FDependencyElementSubstitutions();
+	DEADBYDAYLIGHT_API FDependencyElementSubstitutions();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FDependencyElementSubstitutions) { return 0; }

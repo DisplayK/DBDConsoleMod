@@ -1,91 +1,94 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGAtlantaPromoCodeRewardItemWidget.generated.h"
 
-class UWidgetAnimation;
 class UPanelWidget;
+class UWidgetAnimation;
 class UImage;
 class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class DEADBYDAYLIGHT_API UUMGAtlantaPromoCodeRewardItemWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UUMGAtlantaPromoCodeRewardItemWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UPanelWidget* CurrencyItem;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* CurrencyIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* CurrencyName;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* CurrencyAmount;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* ItemRarityTint;
-    
-    UPROPERTY()
-    UWidgetAnimation* RevealAnimationSmall;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UPanelWidget* CustomizationItem;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* CustomizationIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* CustomizationName;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* CustomizationRarityTint;
-    
-    UPROPERTY()
-    UWidgetAnimation* RevealAnimationLarge;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UPanelWidget* CharacterPanel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* CharacterPortrait;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* CharacterName;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UPanelWidget* TicketPanel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* TicketRarityTint;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* TicketIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TicketName;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TicketAmount;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UPanelWidget* OfferingPanel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* OfferingRarityTint;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* OfferingIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* OfferingName;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* OfferingAmount;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UPanelWidget* CurrencyItem;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* CurrencyIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* CurrencyName;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* CurrencyAmount;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* ItemRarityTint;
+
+	UPROPERTY()
+	UWidgetAnimation* RevealAnimationSmall;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UPanelWidget* CustomizationItem;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* CustomizationIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* CustomizationName;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* CustomizationRarityTint;
+
+	UPROPERTY()
+	UWidgetAnimation* RevealAnimationLarge;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UPanelWidget* CharacterPanel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* CharacterPortrait;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* CharacterName;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UPanelWidget* TicketPanel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* TicketRarityTint;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* TicketIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TicketName;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TicketAmount;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UPanelWidget* OfferingPanel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* OfferingRarityTint;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* OfferingIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* OfferingName;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* OfferingAmount;
+
 public:
-    UUMGAtlantaPromoCodeRewardItemWidget();
+	UUMGAtlantaPromoCodeRewardItemWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlantaPromoCodeRewardItemWidget) { return 0; }

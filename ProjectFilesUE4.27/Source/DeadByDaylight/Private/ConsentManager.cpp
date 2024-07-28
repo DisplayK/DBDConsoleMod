@@ -1,5 +1,6 @@
 #include "ConsentManager.h"
 
-UConsentManager::UConsentManager() {
-}
+UConsentManager::UConsentManager()
+{
 
+}

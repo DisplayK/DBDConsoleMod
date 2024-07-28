@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "CoreBaseHudWidget.h"
 #include "OfferingInteractionViewInterface.h"
+#include "CoreBaseHudWidget.h"
 #include "CoreOfferingInteractionWidget.generated.h"
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreOfferingInteractionWidget : public UCoreBaseHudWidget, public IOfferingInteractionViewInterface {
-    GENERATED_BODY()
+class DBDUIVIEWSCORE_API UCoreOfferingInteractionWidget : public UCoreBaseHudWidget, public IOfferingInteractionViewInterface
+{
+	GENERATED_BODY()
+
 public:
-    UCoreOfferingInteractionWidget();
-    
-    // Fix for true pure virtual functions not being implemented
+	UCoreOfferingInteractionWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreOfferingInteractionWidget) { return 0; }

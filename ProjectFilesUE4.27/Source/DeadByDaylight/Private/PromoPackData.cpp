@@ -1,5 +1,8 @@
 #include "PromoPackData.h"
 
-FPromoPackData::FPromoPackData() {
+FPromoPackData::FPromoPackData()
+{
+	this->ID = NAME_None;
+	this->PromoPackIcon = NULL;
+	this->UIData = FItemUIData{};
 }
-

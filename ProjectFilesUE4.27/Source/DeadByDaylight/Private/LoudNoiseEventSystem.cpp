@@ -1,5 +1,6 @@
 #include "LoudNoiseEventSystem.h"
 
-ULoudNoiseEventSystem::ULoudNoiseEventSystem() {
-}
+ULoudNoiseEventSystem::ULoudNoiseEventSystem()
+{
 
+}

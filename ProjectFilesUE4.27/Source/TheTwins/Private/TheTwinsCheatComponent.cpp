@@ -2,12 +2,17 @@
 
 class UTwinPossessionComponent;
 
-void UTheTwinsCheatComponent::Multicast_TrySendThePlayerBackInKiller_Implementation(UTwinPossessionComponent* twinPossessionComponent) {
+void UTheTwinsCheatComponent::Multicast_TrySendThePlayerBackInKiller_Implementation(UTwinPossessionComponent* twinPossessionComponent)
+{
+
 }
 
-void UTheTwinsCheatComponent::DBD_TwinDestroyTheTwin() {
+void UTheTwinsCheatComponent::DBD_TwinDestroyTheTwin()
+{
+
 }
 
-UTheTwinsCheatComponent::UTheTwinsCheatComponent() {
-}
+UTheTwinsCheatComponent::UTheTwinsCheatComponent()
+{
 
+}

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "QuestEventEvaluatorBase.h"
 #include "GameplayTagContainer.h"
@@ -7,17 +8,19 @@
 class ADBDPlayer;
 
 UCLASS(Abstract)
-class UReturnTheFavorQEEvaluator : public UQuestEventEvaluatorBase {
-    GENERATED_BODY()
-public:
+class UReturnTheFavorQEEvaluator : public UQuestEventEvaluatorBase
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    TSet<FGameplayTag> _favorToReturnEvents;
-    
-    UPROPERTY(Transient)
-    TSet<TWeakObjectPtr<ADBDPlayer>> _instigatorList;
-    
+	UPROPERTY(EditDefaultsOnly)
+	TSet<FGameplayTag> _favorToReturnEvents;
+
+	UPROPERTY(Transient)
+	TSet<TWeakObjectPtr<ADBDPlayer>> _instigatorList;
+
 public:
-    UReturnTheFavorQEEvaluator();
+	UReturnTheFavorQEEvaluator();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UReturnTheFavorQEEvaluator) { return 0; }

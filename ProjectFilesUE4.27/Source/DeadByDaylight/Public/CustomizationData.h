@@ -1,37 +1,42 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDTableRowBase.h"
-#include "EPlayerRole.h"
 #include "ItemAvailability.h"
-#include "EItemRarity.h"
+#include "EPlayerRole.h"
 #include "ItemUIData.h"
+#include "DBDTableRowBase.h"
+#include "EItemRarity.h"
 #include "CustomizationData.generated.h"
 
-USTRUCT()
-struct FCustomizationData : public FDBDTableRowBase {
-    GENERATED_BODY()
+USTRUCT(BlueprintType)
+struct FCustomizationData: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditAnywhere)
-    FName ID;
-    
-    UPROPERTY(EditAnywhere)
-    int32 AssociatedCharacter;
-    
-    UPROPERTY(EditAnywhere)
-    EPlayerRole AssociatedRole;
-    
-    UPROPERTY(EditAnywhere)
-    EItemRarity Rarity;
-    
-    UPROPERTY(EditAnywhere)
-    FItemUIData UIData;
-    
-    UPROPERTY(EditAnywhere)
-    FItemAvailability Availability;
-    
-    UPROPERTY(EditAnywhere)
-    FString InclusionVersion;
-    
-    DEADBYDAYLIGHT_API FCustomizationData();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FName ID;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int32 AssociatedCharacter;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	EPlayerRole AssociatedRole;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	EItemRarity Rarity;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FItemUIData UIData;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FItemAvailability Availability;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FString InclusionVersion;
+
+public:
+	DEADBYDAYLIGHT_API FCustomizationData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCustomizationData) { return 0; }

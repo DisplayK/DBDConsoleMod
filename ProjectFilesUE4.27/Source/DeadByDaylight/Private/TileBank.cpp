@@ -1,5 +1,6 @@
 #include "TileBank.h"
 
-UTileBank::UTileBank() {
+UTileBank::UTileBank()
+{
+	this->_allTileBlueprints = TArray<ATile*>();
 }
-

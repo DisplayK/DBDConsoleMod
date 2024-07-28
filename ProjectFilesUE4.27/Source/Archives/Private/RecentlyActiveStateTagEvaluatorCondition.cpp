@@ -1,5 +1,6 @@
 #include "RecentlyActiveStateTagEvaluatorCondition.h"
 
-URecentlyActiveStateTagEvaluatorCondition::URecentlyActiveStateTagEvaluatorCondition() {
+URecentlyActiveStateTagEvaluatorCondition::URecentlyActiveStateTagEvaluatorCondition()
+{
+	this->_stateTags = TArray<FGameplayTag>();
 }
-

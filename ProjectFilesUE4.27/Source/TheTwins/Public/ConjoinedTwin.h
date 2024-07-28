@@ -1,106 +1,130 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDPlayer.h"
-#include "DBDTunableRowHandle.h"
 #include "FastTimer.h"
 #include "GameplayTagContainer.h"
-#include "GameEventData.h"
+#include "DBDTunableRowHandle.h"
 #include "FirecrackerEffectData.h"
+#include "Templates/SubclassOf.h"
+#include "GameEventData.h"
 #include "ConjoinedTwin.generated.h"
 
-class URangeToActorsTrackerComponent;
-class UTwinOutlineUpdateStrategy;
-class UAkComponent;
-class UDBDAttackerComponent;
-class UCustomizedAudioComponent;
-class UKillerBlindingFXComponent;
 class UHitValidatorComponent;
-class UAnimationMontageSlave;
+class UDBDAttackerComponent;
+class UTwinOutlineUpdateStrategy;
+class UCustomizedAudioComponent;
 class UHitValidatorConfigurator;
+class UBlindFlashlightTargetFXComponent;
+class URangeToActorsTrackerComponent;
+class UKillerBlindingFXComponent;
+class UAkComponent;
+class UAnimationMontageSlave;
+class UStatusEffect;
 class UTwinFirstPersonViewComponent;
 class UFlashlightableComponent;
-class UBlindFlashlightTargetFXComponent;
-class UFirecrackerEffectHandlerComponent;
 class UTwinPossessNegationEffectComponent;
+class UFirecrackerEffectHandlerComponent;
 
 UCLASS()
-class AConjoinedTwin : public ADBDPlayer {
-    GENERATED_BODY()
-public:
+class AConjoinedTwin : public ADBDPlayer
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export, VisibleAnywhere)
-    URangeToActorsTrackerComponent* _restrictedPossessionAreaTracker;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Export)
-    UTwinOutlineUpdateStrategy* _twinOutlineUpdateStrategy;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Export)
-    UAkComponent* _twinLullabyAudioComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UKillerBlindingFXComponent* _twinBlindingFX;
-    
+	UPROPERTY(VisibleAnywhere, meta=(BindWidgetOptional))
+	URangeToActorsTrackerComponent* _restrictedPossessionAreaTracker;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTwinOutlineUpdateStrategy* _twinOutlineUpdateStrategy;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UAkComponent* _twinLullabyAudioComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UKillerBlindingFXComponent* _twinBlindingFX;
+
 private:
-    UPROPERTY(Export, VisibleAnywhere)
-    UCustomizedAudioComponent* _customizedAudio;
-    
-    UPROPERTY(Export, Transient)
-    UDBDAttackerComponent* _attackerComponent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _maxWalkSpeed;
-    
-    UPROPERTY(Export, VisibleAnywhere)
-    UHitValidatorComponent* _hitValidator;
-    
-    UPROPERTY(Export, VisibleAnywhere)
-    UHitValidatorConfigurator* _hitValidationConfigurator;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _gravityScale;
-    
-    UPROPERTY(Export, Transient)
-    UAnimationMontageSlave* _animationFollower;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _revealDurationOnAttached;
-    
-    UPROPERTY(Export, Transient)
-    UTwinFirstPersonViewComponent* _firstPersonViewComponent;
-    
-    UPROPERTY(Export, VisibleAnywhere)
-    UFlashlightableComponent* _eyesFlashlightable;
-    
-    UPROPERTY(Export, Transient, VisibleAnywhere)
-    UBlindFlashlightTargetFXComponent* _blindFlashlightTargetFXComponent;
-    
-    UPROPERTY(Export, Transient, VisibleAnywhere)
-    UFirecrackerEffectHandlerComponent* _firecrackerEffectHandlerComponent;
-    
-    UPROPERTY(Transient)
-    FFastTimer _flashlightBlindEvasionScoreTimer;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _flashlightEvasionScoreCooldown;
-    
-    UPROPERTY(Export, Transient, VisibleAnywhere)
-    UTwinPossessNegationEffectComponent* _twinPossessNegationEffectComponent;
-    
+	UPROPERTY(VisibleAnywhere, Export)
+	UCustomizedAudioComponent* _customizedAudio;
+
+	UPROPERTY(VisibleAnywhere, Export)
+	UDBDAttackerComponent* _attackerComponent;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _maxWalkSpeed;
+
+	UPROPERTY(VisibleAnywhere, Export)
+	UHitValidatorComponent* _hitValidator;
+
+	UPROPERTY(VisibleAnywhere, Export)
+	UHitValidatorConfigurator* _hitValidationConfigurator;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _gravityScale;
+
+	UPROPERTY(Transient, Export)
+	UAnimationMontageSlave* _animationFollower;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _revealDurationOnAttached;
+
+	UPROPERTY(Transient, Export)
+	UTwinFirstPersonViewComponent* _firstPersonViewComponent;
+
+	UPROPERTY(VisibleAnywhere, Export)
+	UFlashlightableComponent* _eyesFlashlightable;
+
+	UPROPERTY(VisibleAnywhere, Transient, Export)
+	UBlindFlashlightTargetFXComponent* _blindFlashlightTargetFXComponent;
+
+	UPROPERTY(VisibleAnywhere, Transient, Export)
+	UFirecrackerEffectHandlerComponent* _firecrackerEffectHandlerComponent;
+
+	UPROPERTY(Transient)
+	FFastTimer _flashlightBlindEvasionScoreTimer;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _flashlightEvasionScoreCooldown;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UStatusEffect> _twinsBloodhoundEffect;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UStatusEffect> _twinsRevealKillerAuraEffect;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UStatusEffect> _twinsDormantKillerInstinctEffect;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UStatusEffect> _twinsRevealAuraOnAttachedToSurvivorEffect;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UStatusEffect> _twinsRevealAuraOnRecallReadyEffect;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UStatusEffect> _timeDeafenedOnTriggerEffect;
+
+	UPROPERTY(VisibleAnywhere, Transient, Export)
+	UTwinPossessNegationEffectComponent* _twinPossessNegationEffectComponent;
+
 public:
-    AConjoinedTwin();
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_SendAttackInput(bool pressed);
-    
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_SendAttackInput(bool pressed);
+
 private:
-    UFUNCTION()
-    void OnFinishedPlayingEvent(const FGameplayTag gameEventType, const FGameEventData& gameEventData);
-    
+	UFUNCTION()
+	void OnFinishedPlayingEvent(const FGameplayTag gameEventType, const FGameEventData& gameEventData);
+
 protected:
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_OnOnGroundUncontrolledChanged(bool onGroundAndUncontrolled);
-    
-    UFUNCTION()
-    void Authority_OnFirecrackerInRangeBegin(const FFirecrackerEffectData& effectData);
-    
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnOnGroundUncontrolledChanged(bool onGroundAndUncontrolled);
+
+	UFUNCTION()
+	void Authority_OnFirecrackerInRangeBegin(const FFirecrackerEffectData& effectData);
+
+public:
+	AConjoinedTwin();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AConjoinedTwin) { return 0; }

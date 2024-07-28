@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "StillnessTrackerComponent.generated.h"
@@ -6,39 +7,42 @@
 class ADBDPlayer;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UStillnessTrackerComponent : public UActorComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UStillnessTrackerComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float SpeedThreshold;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float DistanceThreshold;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float DistanceDecay;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool DecayWhileMoving;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float StillnessThreshhold;
-    
-    UPROPERTY(EditAnywhere)
-    float StillnessTimerLimit;
-    
-    UPROPERTY(EditAnywhere)
-    float DecaySpeedMultiplier;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SpeedThreshold;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DistanceThreshold;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float DistanceDecay;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool DecayWhileMoving;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float StillnessThreshhold;
+
+	UPROPERTY(EditAnywhere)
+	float StillnessTimerLimit;
+
+	UPROPERTY(EditAnywhere)
+	float DecaySpeedMultiplier;
+
 protected:
-    UPROPERTY(Transient)
-    TWeakObjectPtr<ADBDPlayer> _trackedPlayer;
-    
-public:
-    UStillnessTrackerComponent();
+	UPROPERTY(Transient)
+	TWeakObjectPtr<ADBDPlayer> _trackedPlayer;
+
 private:
-    UFUNCTION()
-    void StartTracking();
-    
+	UFUNCTION()
+	void StartTracking();
+
+public:
+	UStillnessTrackerComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UStillnessTrackerComponent) { return 0; }

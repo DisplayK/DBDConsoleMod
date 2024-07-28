@@ -1,39 +1,43 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDBasePlayer.h"
 #include "K25Husk.generated.h"
 
-class UAnimationMontageSlave;
 class UCustomizedSkeletalMesh;
+class UAnimationMontageSlave;
 class UMontagePlayer;
 
 UCLASS()
-class AK25Husk : public ADBDBasePlayer {
-    GENERATED_BODY()
-public:
+class AK25Husk : public ADBDBasePlayer
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UCustomizedSkeletalMesh* _customizedSkeletalMeshComponent;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UAnimationMontageSlave* _montageFollower;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UMontagePlayer* _montagePlayer;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 _k25CharacterOverrideID;
-    
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCustomizedSkeletalMesh* _customizedSkeletalMeshComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UAnimationMontageSlave* _montageFollower;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UMontagePlayer* _montagePlayer;
+
+	UPROPERTY(EditDefaultsOnly)
+	int32 _k25CharacterOverrideID;
+
 public:
-    AK25Husk();
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_StartDisappearing();
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_StartAppearing();
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_HideHusk();
-    
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_StartDisappearing();
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_StartAppearing();
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_HideHusk();
+
+public:
+	AK25Husk();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AK25Husk) { return 0; }

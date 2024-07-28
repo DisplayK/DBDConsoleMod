@@ -2,10 +2,12 @@
 
 class UK26AmmoHandlerComponent;
 
-void UK26PowerChargePresentationItemProgressComponent::SetDependencies(UK26AmmoHandlerComponent* ammoHandler) {
+void UK26PowerChargePresentationItemProgressComponent::SetDependencies(UK26AmmoHandlerComponent* ammoHandler)
+{
+
 }
 
-UK26PowerChargePresentationItemProgressComponent::UK26PowerChargePresentationItemProgressComponent() {
-    this->_ammoHandler = NULL;
+UK26PowerChargePresentationItemProgressComponent::UK26PowerChargePresentationItemProgressComponent()
+{
+	this->_ammoHandler = NULL;
 }
-

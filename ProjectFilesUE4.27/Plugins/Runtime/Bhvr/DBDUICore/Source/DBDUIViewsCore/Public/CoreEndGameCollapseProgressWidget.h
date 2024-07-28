@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "CoreBaseUserWidget.h"
 #include "CoreEndGameCollapseProgressWidget.generated.h"
@@ -8,27 +9,29 @@ class UCanvasPanel;
 class UHorizontalBoxSlot;
 
 UCLASS(EditInlineNew)
-class UCoreEndGameCollapseProgressWidget : public UCoreBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UCoreEndGameCollapseProgressWidget : public UCoreBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UProgressBar* ProgressBar;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* MarkerLeftCanvas;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* MarkerRightCanvas;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UProgressBar* ProgressBar;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* MarkerLeftCanvas;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* MarkerRightCanvas;
+
 private:
-    UPROPERTY(Export, Transient)
-    UHorizontalBoxSlot* _markerLeftBox;
-    
-    UPROPERTY(Export, Transient)
-    UHorizontalBoxSlot* _markerRightBox;
-    
+	UPROPERTY(Transient, Export)
+	UHorizontalBoxSlot* _markerLeftBox;
+
+	UPROPERTY(Transient, Export)
+	UHorizontalBoxSlot* _markerRightBox;
+
 public:
-    UCoreEndGameCollapseProgressWidget();
+	UCoreEndGameCollapseProgressWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreEndGameCollapseProgressWidget) { return 0; }

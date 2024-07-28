@@ -1,5 +1,6 @@
 #include "BaseCharacterVelocityAdditiveStrategy.h"
 
-UBaseCharacterVelocityAdditiveStrategy::UBaseCharacterVelocityAdditiveStrategy() {
-}
+UBaseCharacterVelocityAdditiveStrategy::UBaseCharacterVelocityAdditiveStrategy()
+{
 
+}

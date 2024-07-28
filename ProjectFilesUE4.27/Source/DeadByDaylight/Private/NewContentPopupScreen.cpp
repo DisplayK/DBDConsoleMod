@@ -1,5 +1,6 @@
 #include "NewContentPopupScreen.h"
 
-UNewContentPopupScreen::UNewContentPopupScreen() {
-}
+UNewContentPopupScreen::UNewContentPopupScreen()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "WeightedWishedObjectMapContainer.h"
 
-FWeightedWishedObjectMapContainer::FWeightedWishedObjectMapContainer() {
+FWeightedWishedObjectMapContainer::FWeightedWishedObjectMapContainer()
+{
+	this->WeightedWishedObjectMap = TMap<UObject*, float>();
 }
-

@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "InteractionDefinition.h"
 #include "EscapeMapInteraction.generated.h"
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DBDINTERACTION_API UEscapeMapInteraction : public UInteractionDefinition {
-    GENERATED_BODY()
+class DBDINTERACTION_API UEscapeMapInteraction : public UInteractionDefinition
+{
+	GENERATED_BODY()
+
 public:
-    UEscapeMapInteraction();
+	UEscapeMapInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UEscapeMapInteraction) { return 0; }

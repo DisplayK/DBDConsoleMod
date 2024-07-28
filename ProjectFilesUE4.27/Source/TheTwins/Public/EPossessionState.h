@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EPossessionState.generated.h"
 
-UENUM()
-enum class EPossessionState {
-    NotPossessed,
-    BeingPossessed,
-    Possessed,
+UENUM(BlueprintType)
+enum class EPossessionState : uint8
+{
+	NotPossessed,
+	BeingPossessed,
+	Possessed,
 };
-

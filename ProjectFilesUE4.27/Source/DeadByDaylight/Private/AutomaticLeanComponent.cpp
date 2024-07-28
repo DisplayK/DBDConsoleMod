@@ -1,57 +1,74 @@
 #include "AutomaticLeanComponent.h"
+#include "ELeanState.h"
 #include "Net/UnrealNetwork.h"
 
-void UAutomaticLeanComponent::Server_SetLeanState_Implementation(ELeanState leanState) {
-}
-bool UAutomaticLeanComponent::Server_SetLeanState_Validate(ELeanState leanState) {
-    return true;
+void UAutomaticLeanComponent::Server_SetLeanState_Implementation(ELeanState leanState)
+{
+
 }
 
-void UAutomaticLeanComponent::OnRep_LeanState() {
+bool UAutomaticLeanComponent::Server_SetLeanState_Validate(ELeanState leanState)
+{
+	return true;
 }
 
-void UAutomaticLeanComponent::Local_Unlean() {
+void UAutomaticLeanComponent::OnRep_LeanState()
+{
+
 }
 
-void UAutomaticLeanComponent::Local_Lean() {
+void UAutomaticLeanComponent::Local_Unlean()
+{
+
 }
 
-bool UAutomaticLeanComponent::IsLeaning() const {
-    return false;
+void UAutomaticLeanComponent::Local_Lean()
+{
+
 }
 
-ELeanState UAutomaticLeanComponent::GetPotentialLeanState() const {
-    return ELeanState::NotLeaning;
+bool UAutomaticLeanComponent::IsLeaning() const
+{
+	return false;
 }
 
-ELeanState UAutomaticLeanComponent::GetLeanState() const {
-    return ELeanState::NotLeaning;
+ELeanState UAutomaticLeanComponent::GetPotentialLeanState() const
+{
+	return ELeanState::NotLeaning;
 }
 
-float UAutomaticLeanComponent::GetAvailableDistanceInFrontOfCamera() const {
-    return 0.0f;
+ELeanState UAutomaticLeanComponent::GetLeanState() const
+{
+	return ELeanState::NotLeaning;
 }
 
-bool UAutomaticLeanComponent::CanInitiateLean() const {
-    return false;
+float UAutomaticLeanComponent::GetAvailableDistanceInFrontOfCamera() const
+{
+	return 0.0f;
 }
 
-void UAutomaticLeanComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UAutomaticLeanComponent, _leanState);
+bool UAutomaticLeanComponent::CanInitiateLean() const
+{
+	return false;
 }
 
-UAutomaticLeanComponent::UAutomaticLeanComponent() {
-    this->_middleSphereTraceLength = 1.00f;
-    this->_sideSphereTraceLength = 1.00f;
-    this->_sphereTraceRadius = 10.00f;
-    this->_standingTraceHeightOffset = 0.00f;
-    this->_crouchingTraceHeightOffset = 0.00f;
-    this->_sideTraceOffset = 0.00f;
-    this->_maxCameraDistance = 50.00f;
-    this->_maxCameraAngle = 45.00f;
-    this->_debugMode = false;
-    this->_leanState = ELeanState::NotLeaning;
+void UAutomaticLeanComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UAutomaticLeanComponent, _leanState);
 }
 
+UAutomaticLeanComponent::UAutomaticLeanComponent()
+{
+	this->_middleSphereTraceLength = 1.000000;
+	this->_sideSphereTraceLength = 1.000000;
+	this->_sphereTraceRadius = 10.000000;
+	this->_standingTraceHeightOffset = 0.000000;
+	this->_crouchingTraceHeightOffset = 0.000000;
+	this->_sideTraceOffset = 0.000000;
+	this->_maxCameraDistance = 50.000000;
+	this->_maxCameraAngle = 45.000000;
+	this->_debugMode = false;
+	this->_leanState = ELeanState::NotLeaning;
+}

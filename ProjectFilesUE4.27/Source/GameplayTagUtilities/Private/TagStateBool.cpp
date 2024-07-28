@@ -1,6 +1,6 @@
 #include "TagStateBool.h"
 
-FTagStateBool::FTagStateBool() {
-    this->_isTrue = false;
+FTagStateBool::FTagStateBool()
+{
+	this->_isTrue = false;
 }
-

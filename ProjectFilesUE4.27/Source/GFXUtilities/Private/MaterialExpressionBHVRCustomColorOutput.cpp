@@ -1,5 +1,6 @@
 #include "MaterialExpressionBHVRCustomColorOutput.h"
 
-UMaterialExpressionBHVRCustomColorOutput::UMaterialExpressionBHVRCustomColorOutput() {
-}
+UMaterialExpressionBHVRCustomColorOutput::UMaterialExpressionBHVRCustomColorOutput()
+{
 
+}

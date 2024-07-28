@@ -1,6 +1,6 @@
 #include "SpiesFromTheShadows.h"
 
-USpiesFromTheShadows::USpiesFromTheShadows() {
-    this->_cooldownDurationSecs = 0.00f;
+USpiesFromTheShadows::USpiesFromTheShadows()
+{
+	this->_cooldownDurationSecs = 0.000000;
 }
-

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "ECustomizationCategory.h"
@@ -7,23 +8,26 @@
 class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGCustomizationTooltipHeaderWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGCustomizationTooltipHeaderWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* Title;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* CollectionName;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* CategoryAndRarityText;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* Title;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* CollectionName;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* CategoryAndRarityText;
+
 public:
-    UUMGCustomizationTooltipHeaderWidget();
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetOutfitComposition(const bool isUnbreakable, const TArray<ECustomizationCategory>& composition);
-    
+	UFUNCTION(BlueprintImplementableEvent)
+	void SetOutfitComposition(const bool isUnbreakable, const TArray<ECustomizationCategory>& composition);
+
+public:
+	UUMGCustomizationTooltipHeaderWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGCustomizationTooltipHeaderWidget) { return 0; }

@@ -1,22 +1,32 @@
 #include "CinematicManager.h"
+#include "Cinematic.h"
 
-void UCinematicManager::PlaySingle(const FCinematic& cinematic) {
+void UCinematicManager::PlaySingle(const FCinematic& cinematic)
+{
+
 }
 
-void UCinematicManager::PlayMultiple(const TArray<FCinematic>& cinematics) {
+void UCinematicManager::PlayMultiple(const TArray<FCinematic>& cinematics)
+{
+
 }
 
-bool UCinematicManager::HasCinematicToPlay() const {
-    return false;
+bool UCinematicManager::HasCinematicToPlay() const
+{
+	return false;
 }
 
-FCinematic UCinematicManager::GetNextCinematicToPlay() {
-    return FCinematic{};
+FCinematic UCinematicManager::GetNextCinematicToPlay()
+{
+	return FCinematic{};
 }
 
-void UCinematicManager::CancelAllCinematicToPlay() {
+void UCinematicManager::CancelAllCinematicToPlay()
+{
+
 }
 
-UCinematicManager::UCinematicManager() {
+UCinematicManager::UCinematicManager()
+{
+	this->_cinematicQueue = TArray<FCinematic>();
 }
-

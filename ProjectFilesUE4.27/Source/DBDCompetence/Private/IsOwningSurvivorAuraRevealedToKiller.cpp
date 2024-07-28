@@ -1,5 +1,6 @@
 #include "IsOwningSurvivorAuraRevealedToKiller.h"
 
-UIsOwningSurvivorAuraRevealedToKiller::UIsOwningSurvivorAuraRevealedToKiller() {
-}
+UIsOwningSurvivorAuraRevealedToKiller::UIsOwningSurvivorAuraRevealedToKiller()
+{
 
+}

@@ -1,6 +1,6 @@
 #include "UMGMenuMarketingBanner.h"
 
-UUMGMenuMarketingBanner::UUMGMenuMarketingBanner() {
-    this->SubTitle = NULL;
+UUMGMenuMarketingBanner::UUMGMenuMarketingBanner()
+{
+	this->SubTitle = NULL;
 }
-

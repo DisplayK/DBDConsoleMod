@@ -1,5 +1,6 @@
 #include "ArmIKSensorDatum.h"
 
-FArmIKSensorDatum::FArmIKSensorDatum() {
+FArmIKSensorDatum::FArmIKSensorDatum()
+{
+	this->ShoulderBoneName = NAME_None;
 }
-

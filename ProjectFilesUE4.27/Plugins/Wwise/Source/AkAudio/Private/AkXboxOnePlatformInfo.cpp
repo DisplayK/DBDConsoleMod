@@ -1,5 +1,6 @@
 #include "AkXboxOnePlatformInfo.h"
 
-UAkXboxOnePlatformInfo::UAkXboxOnePlatformInfo() {
-}
+UAkXboxOnePlatformInfo::UAkXboxOnePlatformInfo()
+{
 
+}

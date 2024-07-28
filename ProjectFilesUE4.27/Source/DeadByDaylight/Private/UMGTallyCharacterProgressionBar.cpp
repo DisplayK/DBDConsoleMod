@@ -1,6 +1,6 @@
 #include "UMGTallyCharacterProgressionBar.h"
 
-UUMGTallyCharacterProgressionBar::UUMGTallyCharacterProgressionBar() {
-    this->ProgressBar = NULL;
+UUMGTallyCharacterProgressionBar::UUMGTallyCharacterProgressionBar()
+{
+	this->ProgressBar = NULL;
 }
-

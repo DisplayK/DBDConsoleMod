@@ -1,5 +1,6 @@
 #include "SceneComponentExt.h"
 
-USceneComponentExt::USceneComponentExt() {
-}
+USceneComponentExt::USceneComponentExt()
+{
 
+}

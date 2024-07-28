@@ -1,31 +1,25 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Perk.h"
 #include "ECamperImmobilizeState.h"
 #include "InnerStrength.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DBDCOMPETENCE_API UInnerStrength : public UPerk {
-    GENERATED_BODY()
-public:
+class DBDCOMPETENCE_API UInnerStrength : public UPerk
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditDefaultsOnly, EditFixedSize)
-    float _hideDuration[3];
-    
+	UPROPERTY(EditDefaultsOnly, EditFixedSize)
+	float _hideDuration;
+
 private:
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_PerkEnabled)
-    bool _perkEnabled;
-    
+	UFUNCTION()
+	void Authority_OnPlayerImmobilizeStateChanged(const ECamperImmobilizeState oldImmobilizeState, const ECamperImmobilizeState newImmobilizeState);
+
 public:
-    UInnerStrength();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
-private:
-    UFUNCTION()
-    void OnRep_PerkEnabled();
-    
-    UFUNCTION()
-    void OnPlayerImmobilizeStateChanged(const ECamperImmobilizeState oldImmobilizeState, const ECamperImmobilizeState newImmobilizeState);
-    
+	UInnerStrength();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UInnerStrength) { return 0; }

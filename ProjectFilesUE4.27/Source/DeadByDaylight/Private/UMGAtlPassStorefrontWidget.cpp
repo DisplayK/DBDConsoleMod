@@ -1,5 +1,6 @@
 #include "UMGAtlPassStorefrontWidget.h"
 
-UUMGAtlPassStorefrontWidget::UUMGAtlPassStorefrontWidget() {
-}
+UUMGAtlPassStorefrontWidget::UUMGAtlPassStorefrontWidget()
+{
 
+}

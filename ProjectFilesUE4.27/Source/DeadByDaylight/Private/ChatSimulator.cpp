@@ -1,5 +1,6 @@
 #include "ChatSimulator.h"
 
-UChatSimulator::UChatSimulator() {
-}
+UChatSimulator::UChatSimulator()
+{
 
+}

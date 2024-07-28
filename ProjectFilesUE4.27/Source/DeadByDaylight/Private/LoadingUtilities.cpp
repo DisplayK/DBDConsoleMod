@@ -1,5 +1,6 @@
 #include "LoadingUtilities.h"
 
-ULoadingUtilities::ULoadingUtilities() {
-}
+ULoadingUtilities::ULoadingUtilities()
+{
 
+}

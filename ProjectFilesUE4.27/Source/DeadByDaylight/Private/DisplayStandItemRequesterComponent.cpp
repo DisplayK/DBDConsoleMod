@@ -2,9 +2,12 @@
 
 class AActor;
 
-void UDisplayStandItemRequesterComponent::LoadItemsOnCharacter(AActor* actor) {
+void UDisplayStandItemRequesterComponent::LoadItemsOnCharacter(AActor* actor)
+{
+
 }
 
-UDisplayStandItemRequesterComponent::UDisplayStandItemRequesterComponent() {
-}
+UDisplayStandItemRequesterComponent::UDisplayStandItemRequesterComponent()
+{
 
+}

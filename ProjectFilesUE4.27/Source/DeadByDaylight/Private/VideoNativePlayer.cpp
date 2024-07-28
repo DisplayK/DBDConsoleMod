@@ -1,5 +1,6 @@
 #include "VideoNativePlayer.h"
 
-AVideoNativePlayer::AVideoNativePlayer() {
-}
+AVideoNativePlayer::AVideoNativePlayer()
+{
 
+}

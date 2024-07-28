@@ -1,7 +1,8 @@
 #include "CoreTestBuildFlagWidget.h"
 
-UCoreTestBuildFlagWidget::UCoreTestBuildFlagWidget() {
-    this->TopLineTextfield = NULL;
-    this->BottomLineTextfield = NULL;
+UCoreTestBuildFlagWidget::UCoreTestBuildFlagWidget()
+{
+	this->HudTestFlagContainer = NULL;
+	this->HudTopLineTextfield = NULL;
+	this->HudBottomLineTextfield = NULL;
 }
-

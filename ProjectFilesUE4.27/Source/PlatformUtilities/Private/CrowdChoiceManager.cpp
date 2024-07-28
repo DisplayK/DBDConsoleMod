@@ -1,5 +1,6 @@
 #include "CrowdChoiceManager.h"
 
-UCrowdChoiceManager::UCrowdChoiceManager() {
-}
+UCrowdChoiceManager::UCrowdChoiceManager()
+{
 
+}

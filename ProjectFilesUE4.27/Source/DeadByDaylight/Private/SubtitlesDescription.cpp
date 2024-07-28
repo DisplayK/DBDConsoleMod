@@ -1,5 +1,7 @@
 #include "SubtitlesDescription.h"
 
-FSubtitlesDescription::FSubtitlesDescription() {
+FSubtitlesDescription::FSubtitlesDescription()
+{
+	this->SubtitlesText = FText::GetEmpty();
+	this->AudioEvent = NULL;
 }
-

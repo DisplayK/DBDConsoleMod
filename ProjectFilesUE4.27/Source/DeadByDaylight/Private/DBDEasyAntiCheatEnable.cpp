@@ -1,5 +1,6 @@
 #include "DBDEasyAntiCheatEnable.h"
 
-UDBDEasyAntiCheatEnable::UDBDEasyAntiCheatEnable() {
-}
+UDBDEasyAntiCheatEnable::UDBDEasyAntiCheatEnable()
+{
 
+}

@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDAttackMissSubstate.h"
 #include "PounceAttackMissSubstate.generated.h"
 
 UCLASS()
-class DBDATTACK_API UPounceAttackMissSubstate : public UDBDAttackMissSubstate {
-    GENERATED_BODY()
+class DBDATTACK_API UPounceAttackMissSubstate : public UDBDAttackMissSubstate
+{
+	GENERATED_BODY()
+
 public:
-    UPounceAttackMissSubstate();
+	UPounceAttackMissSubstate();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPounceAttackMissSubstate) { return 0; }

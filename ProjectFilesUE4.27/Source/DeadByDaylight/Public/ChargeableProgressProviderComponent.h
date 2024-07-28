@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "ChargeableProgressProviderComponent.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UChargeableProgressProviderComponent : public UActorComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UChargeableProgressProviderComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    UChargeableProgressProviderComponent();
+	UChargeableProgressProviderComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UChargeableProgressProviderComponent) { return 0; }

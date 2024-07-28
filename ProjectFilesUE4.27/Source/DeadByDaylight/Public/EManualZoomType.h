@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EManualZoomType.generated.h"
 
-UENUM()
-enum class EManualZoomType {
-    None,
-    TargetZoomValue,
-    CurveFloatProgression,
+UENUM(BlueprintType)
+enum class EManualZoomType : uint8
+{
+	None,
+	TargetZoomValue,
+	CurveFloatProgression,
 };
-

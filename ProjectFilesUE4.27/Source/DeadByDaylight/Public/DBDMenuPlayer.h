@@ -1,86 +1,141 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDBasePlayer.h"
 #include "StandDisplayable.h"
-#include "CharmAttachable.h"
-#include "OnItemEquippedDelegate.h"
-#include "EItemHandPosition.h"
 #include "ECustomizationCategory.h"
+#include "DBDBasePlayer.h"
+#include "CharmAttachable.h"
+#include "OnItemEquipped.h"
+#include "UObject/SoftObjectPtr.h"
+#include "EItemHandPosition.h"
+#include "EGameFlowStep.h"
 #include "DBDMenuPlayer.generated.h"
 
-class UMaterialInterface;
-class USkeletalMeshComponent;
-class UMaterialHelper;
 class AActor;
+class USkeletalMeshComponent;
 class UCharmSpawnerComponent;
+class ADBDMenuPlayer;
+class UMaterialInterface;
+class UMaterialHelper;
+class UCustomizedSkeletalMesh;
 
 UCLASS()
-class DEADBYDAYLIGHT_API ADBDMenuPlayer : public ADBDBasePlayer, public IStandDisplayable, public ICharmAttachable {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API ADBDMenuPlayer : public ADBDBasePlayer, public IStandDisplayable, public ICharmAttachable
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool RoleSelected;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool IsOnline;
-    
-    UPROPERTY(BlueprintAssignable)
-    FOnItemEquipped OnItemEquipped;
-    
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool RoleSelected;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool IsOnline;
+
+	UPROPERTY(BlueprintAssignable)
+	FOnItemEquipped OnItemEquipped;
+
 private:
-    UPROPERTY(EditAnywhere)
-    TSoftObjectPtr<UMaterialInterface> DarkMaterial;
-    
-    UPROPERTY()
-    EItemHandPosition _handPosition;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
-    USkeletalMeshComponent* ItemMesh;
-    
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere, meta=(AllowPrivateAccess=true))
-    UMaterialHelper* MaterialHelper;
-    
-    UPROPERTY()
-    FName _equippedItemName;
-    
-public:
-    ADBDMenuPlayer();
+	UPROPERTY(EditAnywhere)
+	TSoftObjectPtr<UMaterialInterface> DarkMaterial;
+
+	UPROPERTY()
+	EItemHandPosition _handPosition;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Export, meta=(AllowPrivateAccess=true))
+	USkeletalMeshComponent* ItemMesh;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+	UMaterialHelper* MaterialHelper;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Export, meta=(AllowPrivateAccess=true))
+	UCustomizedSkeletalMesh* _customizedSkeletalMeshComponent;
+
+	UPROPERTY()
+	FName _equippedItemName;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	float _blockRotationDuringSpawnAnimationDuration;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	bool _isLocalPlayerCharacter;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	bool _isReady;
+
 private:
-    UFUNCTION()
-    void WrappedOnDestroyed(AActor* DestroyedActor);
-    
+	UFUNCTION()
+	void WrappedOnDestroyed(AActor* DestroyedActor);
+
 public:
-    UFUNCTION(BlueprintPure)
-    bool ShouldShowSpawnAnimation() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool ShouldApplyPositionOffset() const;
-    
+	UFUNCTION(BlueprintPure)
+	bool ShouldShowSpawnAnimation() const;
+
+	UFUNCTION(BlueprintPure)
+	bool ShouldApplyPositionOffset() const;
+
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void RestartInSequence_Internal();
-    
+	UFUNCTION(BlueprintImplementableEvent)
+	void RestartInSequence_Internal();
+
 public:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnCustomizationTransactionCompleted(ECustomizationCategory category);
-    
-    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
-    bool IsInMenuPlayer();
-    
-    UFUNCTION(BlueprintPure)
-    EItemHandPosition GetHandPosition() const;
-    
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnLocalPlayerSpawned();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnLocalPlayerReadyChanged(bool isReady);
+
 protected:
-    UFUNCTION(BlueprintNativeEvent)
-    UCharmSpawnerComponent* GetCharmSpawnerComponent();
-    
-    UFUNCTION(BlueprintNativeEvent)
-    void BeginDestroySequence_Internal();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void BeginCreateSequence();
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnIsReadyChanged(bool isReady);
+
+public:
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnGuestPlayerSpawned(ADBDMenuPlayer* player);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnGuestPlayerReadyChanged(ADBDMenuPlayer* player, bool isReady);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnCustomizationTransactionCompleted(ECustomizationCategory category);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnAllPlayersReadyInOnlineLobby();
+
+	UFUNCTION(BlueprintPure, BlueprintImplementableEvent)
+	bool IsInMenuPlayer();
+
+	UFUNCTION(BlueprintPure)
+	bool GetIsReady() const;
+
+	UFUNCTION(BlueprintPure)
+	bool GetIsLocalPlayerCharacter() const;
+
+	UFUNCTION(BlueprintPure)
+	EItemHandPosition GetHandPosition() const;
+
+protected:
+	UFUNCTION(BlueprintPure)
+	EGameFlowStep GetCurrentMenu() const;
+
+	UFUNCTION(BlueprintNativeEvent)
+	UCharmSpawnerComponent* GetCharmSpawnerComponent();
+
+public:
+	UFUNCTION(BlueprintPure)
+	float GetBlockRotationAfterSpawningTime() const;
+
+	UFUNCTION(BlueprintCallable)
+	void BlockCharacterRotation(bool shouldBlock);
+
+protected:
+	UFUNCTION(BlueprintNativeEvent)
+	void BeginDestroySequence_Internal();
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void BeginCreateSequence();
+
+public:
+	ADBDMenuPlayer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ADBDMenuPlayer) { return 0; }

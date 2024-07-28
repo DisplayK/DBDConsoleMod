@@ -1,6 +1,6 @@
 #include "ActionPredictionKey.h"
 
-FActionPredictionKey::FActionPredictionKey() {
-    this->_keyValue = 0;
+FActionPredictionKey::FActionPredictionKey()
+{
+	this->_keyValue = 0;
 }
-

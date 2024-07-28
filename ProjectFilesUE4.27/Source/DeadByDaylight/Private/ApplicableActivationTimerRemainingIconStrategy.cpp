@@ -1,5 +1,6 @@
 #include "ApplicableActivationTimerRemainingIconStrategy.h"
 
-UApplicableActivationTimerRemainingIconStrategy::UApplicableActivationTimerRemainingIconStrategy() {
-}
+UApplicableActivationTimerRemainingIconStrategy::UApplicableActivationTimerRemainingIconStrategy()
+{
 
+}

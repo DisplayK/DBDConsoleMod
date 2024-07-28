@@ -1,5 +1,6 @@
 #include "ClonedStaticMeshComponent.h"
 
-UClonedStaticMeshComponent::UClonedStaticMeshComponent() {
-}
+UClonedStaticMeshComponent::UClonedStaticMeshComponent()
+{
 
+}

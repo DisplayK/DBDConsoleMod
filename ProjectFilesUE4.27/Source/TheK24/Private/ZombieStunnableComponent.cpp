@@ -1,5 +1,6 @@
 #include "ZombieStunnableComponent.h"
 
-UZombieStunnableComponent::UZombieStunnableComponent() {
-}
+UZombieStunnableComponent::UZombieStunnableComponent()
+{
 
+}

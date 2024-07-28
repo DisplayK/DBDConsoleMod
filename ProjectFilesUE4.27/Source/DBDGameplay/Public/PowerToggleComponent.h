@@ -1,23 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "PowerToggleComponent.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DBDGAMEPLAY_API UPowerToggleComponent : public UActorComponent {
-    GENERATED_BODY()
-public:
+class DBDGAMEPLAY_API UPowerToggleComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_IsInPower)
-    bool _isInPower;
-    
-public:
-    UPowerToggleComponent();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+	UPROPERTY(ReplicatedUsing=OnRep_IsInPower, Transient)
+	bool _isInPower;
+
 private:
-    UFUNCTION()
-    void OnRep_IsInPower() const;
-    
+	UFUNCTION()
+	void OnRep_IsInPower() const;
+
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UPowerToggleComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPowerToggleComponent) { return 0; }

@@ -1,5 +1,7 @@
 #include "LegacySavedDailyRitualContainer.h"
 
-FLegacySavedDailyRitualContainer::FLegacySavedDailyRitualContainer() {
+FLegacySavedDailyRitualContainer::FLegacySavedDailyRitualContainer()
+{
+	this->LastRitualReceivedDate = FDateTime{};
+	this->Rituals = TArray<FLegacySavedDailyRitualInstance>();
 }
-

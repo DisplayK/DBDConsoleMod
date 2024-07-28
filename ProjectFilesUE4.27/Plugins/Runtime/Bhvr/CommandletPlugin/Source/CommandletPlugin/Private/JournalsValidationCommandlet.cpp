@@ -1,5 +1,6 @@
 #include "JournalsValidationCommandlet.h"
 
-UJournalsValidationCommandlet::UJournalsValidationCommandlet() {
-}
+UJournalsValidationCommandlet::UJournalsValidationCommandlet()
+{
 
+}

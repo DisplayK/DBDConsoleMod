@@ -1,5 +1,6 @@
 #include "HasStatusEffectEvaluatorCondition.h"
 
-UHasStatusEffectEvaluatorCondition::UHasStatusEffectEvaluatorCondition() {
+UHasStatusEffectEvaluatorCondition::UHasStatusEffectEvaluatorCondition()
+{
+	this->_statusEffectList = TArray<FName>();
 }
-

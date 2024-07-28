@@ -1,5 +1,6 @@
 #include "UmgPlayableHud.h"
 
-UUmgPlayableHud::UUmgPlayableHud() {
-}
+UUmgPlayableHud::UUmgPlayableHud()
+{
 
+}

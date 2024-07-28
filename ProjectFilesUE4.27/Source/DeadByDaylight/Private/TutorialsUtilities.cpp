@@ -1,22 +1,30 @@
 #include "TutorialsUtilities.h"
 
-class UObject;
 class ATutorialsUtilities;
 class AAIController;
+class UObject;
 
-void ATutorialsUtilities::TriggerTutorialHudFadeOut() {
+void ATutorialsUtilities::TriggerTutorialHudFadeOut()
+{
+
 }
 
-void ATutorialsUtilities::TriggerTutorialHudFadeIn() {
+void ATutorialsUtilities::TriggerTutorialHudFadeIn()
+{
+
 }
 
-ATutorialsUtilities* ATutorialsUtilities::GetTutorialsUtilities(UObject* WorldContextObject) {
-    return NULL;
+ATutorialsUtilities* ATutorialsUtilities::GetTutorialsUtilities(UObject* WorldContextObject)
+{
+	return NULL;
 }
 
-void ATutorialsUtilities::DestroyAI(AAIController* aiController) {
+void ATutorialsUtilities::DestroyAI(AAIController* aiController)
+{
+
 }
 
-ATutorialsUtilities::ATutorialsUtilities() {
-}
+ATutorialsUtilities::ATutorialsUtilities()
+{
 
+}

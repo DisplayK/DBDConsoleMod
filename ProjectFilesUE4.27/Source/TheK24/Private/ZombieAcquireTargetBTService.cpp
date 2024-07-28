@@ -1,5 +1,6 @@
 #include "ZombieAcquireTargetBTService.h"
 
-UZombieAcquireTargetBTService::UZombieAcquireTargetBTService() {
-}
+UZombieAcquireTargetBTService::UZombieAcquireTargetBTService()
+{
 
+}

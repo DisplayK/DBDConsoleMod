@@ -1,5 +1,6 @@
 #include "IsNotSightedByAnyCharacter.h"
 
-UIsNotSightedByAnyCharacter::UIsNotSightedByAnyCharacter() {
-}
+UIsNotSightedByAnyCharacter::UIsNotSightedByAnyCharacter()
+{
 
+}

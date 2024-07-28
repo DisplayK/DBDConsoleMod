@@ -1,13 +1,16 @@
 #include "AtlantaPartyFlowUtilities.h"
 
-bool UAtlantaPartyFlowUtilities::IsCurrentPlayerInParty() {
-    return false;
+bool UAtlantaPartyFlowUtilities::IsCurrentPlayerInParty()
+{
+	return false;
 }
 
-bool UAtlantaPartyFlowUtilities::IsCurrentPlayerAloneInParty() {
-    return false;
+bool UAtlantaPartyFlowUtilities::IsCurrentPlayerAloneInParty()
+{
+	return false;
 }
 
-UAtlantaPartyFlowUtilities::UAtlantaPartyFlowUtilities() {
-}
+UAtlantaPartyFlowUtilities::UAtlantaPartyFlowUtilities()
+{
 
+}

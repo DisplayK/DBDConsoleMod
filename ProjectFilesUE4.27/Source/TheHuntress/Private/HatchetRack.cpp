@@ -1,6 +1,6 @@
 #include "HatchetRack.h"
 
+AHatchetRack::AHatchetRack()
+{
 
-AHatchetRack::AHatchetRack() {
 }
-

@@ -1,5 +1,6 @@
 #include "AtlantaRitualEvaluatorFullLoadout.h"
 
-UAtlantaRitualEvaluatorFullLoadout::UAtlantaRitualEvaluatorFullLoadout() {
-}
+UAtlantaRitualEvaluatorFullLoadout::UAtlantaRitualEvaluatorFullLoadout()
+{
 
+}

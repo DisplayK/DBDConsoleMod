@@ -1,5 +1,6 @@
 #include "SlasherOutlineUpdateStrategy.h"
 
-USlasherOutlineUpdateStrategy::USlasherOutlineUpdateStrategy() {
-}
+USlasherOutlineUpdateStrategy::USlasherOutlineUpdateStrategy()
+{
 
+}

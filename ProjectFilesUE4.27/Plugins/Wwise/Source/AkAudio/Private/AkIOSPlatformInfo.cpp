@@ -1,5 +1,6 @@
 #include "AkIOSPlatformInfo.h"
 
-UAkIOSPlatformInfo::UAkIOSPlatformInfo() {
-}
+UAkIOSPlatformInfo::UAkIOSPlatformInfo()
+{
 
+}

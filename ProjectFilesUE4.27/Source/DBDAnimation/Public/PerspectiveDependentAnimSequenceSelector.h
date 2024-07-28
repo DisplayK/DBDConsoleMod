@@ -1,25 +1,28 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PerspectiveDependentAnimSequenceSelector.generated.h"
 
 class UAnimSequence;
 
 USTRUCT(BlueprintType)
-struct DBDANIMATION_API FPerspectiveDependentAnimSequenceSelector {
-    GENERATED_BODY()
-public:
+struct FPerspectiveDependentAnimSequenceSelector
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly)
-    UAnimSequence* _current;
-    
+	UPROPERTY(BlueprintReadOnly)
+	UAnimSequence* _current;
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    UAnimSequence* _thirdPerson;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAnimSequence* _firstPerson;
-    
+	UPROPERTY(EditDefaultsOnly)
+	UAnimSequence* _thirdPerson;
+
+	UPROPERTY(EditDefaultsOnly)
+	UAnimSequence* _firstPerson;
+
 public:
-    FPerspectiveDependentAnimSequenceSelector();
+	DBDANIMATION_API FPerspectiveDependentAnimSequenceSelector();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FPerspectiveDependentAnimSequenceSelector) { return 0; }

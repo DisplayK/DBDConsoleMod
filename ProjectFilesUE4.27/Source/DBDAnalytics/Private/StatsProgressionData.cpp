@@ -1,6 +1,7 @@
 #include "StatsProgressionData.h"
 
-FStatsProgressionData::FStatsProgressionData() {
-    this->Value = 0.00f;
+FStatsProgressionData::FStatsProgressionData()
+{
+	this->Name = NAME_None;
+	this->Value = 0.0f;
 }
-

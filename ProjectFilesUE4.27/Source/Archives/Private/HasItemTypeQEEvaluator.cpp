@@ -1,5 +1,6 @@
 #include "HasItemTypeQEEvaluator.h"
 
-UHasItemTypeQEEvaluator::UHasItemTypeQEEvaluator() {
-}
+UHasItemTypeQEEvaluator::UHasItemTypeQEEvaluator()
+{
 
+}

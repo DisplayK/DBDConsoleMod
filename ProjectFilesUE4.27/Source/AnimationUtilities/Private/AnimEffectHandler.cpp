@@ -1,11 +1,13 @@
 #include "AnimEffectHandler.h"
 
-class ACharacter;
+class AActor;
 
-bool UAnimEffectHandler::HandleAnimNotify_Implementation(ACharacter* player, const FName& notifyName) const {
-    return false;
+bool UAnimEffectHandler::HandleAnimNotify_Implementation(AActor* player, const FName& notifyName) const
+{
+	return false;
 }
 
-UAnimEffectHandler::UAnimEffectHandler() {
-}
+UAnimEffectHandler::UAnimEffectHandler()
+{
 
+}

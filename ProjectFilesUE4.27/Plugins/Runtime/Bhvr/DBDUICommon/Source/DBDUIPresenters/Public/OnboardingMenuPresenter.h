@@ -1,46 +1,50 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "Presenter.h"
 #include "EOnboardingMenuState.h"
+#include "Presenter.h"
+#include "Templates/SubclassOf.h"
 #include "OnboardingMenuPresenter.generated.h"
 
-class UOnboardingTutorialSubPresenter;
 class UUserWidget;
+class UOnboardingTutorialSubPresenter;
 class UGameManualSubPresenter;
 class USubPresenter;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DBDUIPRESENTERS_API UOnboardingMenuPresenter : public UPresenter {
-    GENERATED_BODY()
+UCLASS(EditInlineNew)
+class DBDUIPRESENTERS_API UOnboardingMenuPresenter : public UPresenter
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSubclassOf<UUserWidget> OnboardingMenuWidgetClass;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TSubclassOf<UUserWidget> OnboardingMenuWidgetClass;
+
 private:
-    UPROPERTY(Export, Transient)
-    UOnboardingTutorialSubPresenter* _onboardingTutorialSubPresenter;
-    
-    UPROPERTY(Export, Transient)
-    UGameManualSubPresenter* _gameManualSubPresenter;
-    
-    UPROPERTY(Export, Transient)
-    USubPresenter* _activeSubPresenter;
-    
+	UPROPERTY(Transient)
+	UOnboardingTutorialSubPresenter* _onboardingTutorialSubPresenter;
+
+	UPROPERTY(Transient)
+	UGameManualSubPresenter* _gameManualSubPresenter;
+
+	UPROPERTY(Transient)
+	USubPresenter* _activeSubPresenter;
+
+private:
+	UFUNCTION()
+	void OnSetUIEnabled(bool enabled);
+
+	UFUNCTION()
+	void OnMenuTabSelectedAgain(EOnboardingMenuState menuState);
+
+	UFUNCTION()
+	void OnMenuTabSelected(EOnboardingMenuState menuState);
+
+	UFUNCTION()
+	void OnBackAction();
+
 public:
-    UOnboardingMenuPresenter();
-private:
-    UFUNCTION()
-    void OnSetUIEnabled(bool enabled);
-    
-    UFUNCTION()
-    void OnMenuTabSelectedAgain(EOnboardingMenuState onboardingMenuState);
-    
-    UFUNCTION()
-    void OnMenuTabSelected(EOnboardingMenuState onboardingMenuState);
-    
-    UFUNCTION()
-    void OnBackAction();
-    
+	UOnboardingMenuPresenter();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UOnboardingMenuPresenter) { return 0; }

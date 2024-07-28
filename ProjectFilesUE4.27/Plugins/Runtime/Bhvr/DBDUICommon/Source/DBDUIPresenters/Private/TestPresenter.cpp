@@ -1,6 +1,6 @@
 #include "TestPresenter.h"
 
-UTestPresenter::UTestPresenter() {
-    this->TestWidgetClass = NULL;
+UTestPresenter::UTestPresenter()
+{
+	this->TestWidgetClass = NULL;
 }
-

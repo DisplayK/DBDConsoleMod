@@ -1,18 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "EvaluatorCondition.h"
-#include "GameplayTagContainer.h"
+#include "BaseRecentEventEvaluatorCondition.h"
 #include "HasEventHappenedEvaluatorCondition.generated.h"
 
 UCLASS()
-class UHasEventHappenedEvaluatorCondition : public UEvaluatorCondition {
-    GENERATED_BODY()
+class UHasEventHappenedEvaluatorCondition : public UBaseRecentEventEvaluatorCondition
+{
+	GENERATED_BODY()
+
 public:
-protected:
-    UPROPERTY(EditAnywhere)
-    FGameplayTag _firstGameEvent;
-    
-public:
-    UHasEventHappenedEvaluatorCondition();
+	UHasEventHappenedEvaluatorCondition();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UHasEventHappenedEvaluatorCondition) { return 0; }

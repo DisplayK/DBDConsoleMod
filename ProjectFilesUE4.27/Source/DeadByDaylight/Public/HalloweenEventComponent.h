@@ -1,40 +1,44 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "GameplayTagContainer.h"
+#include "Components/ActorComponent.h"
 #include "GameEventData.h"
 #include "HalloweenEventComponent.generated.h"
 
 class USectionnedChargeableComponent;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UHalloweenEventComponent : public UActorComponent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UHalloweenEventComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, VisibleAnywhere, ReplicatedUsing=OnRep_Vial)
-    USectionnedChargeableComponent* _toxinVialComponent;
-    
-public:
-    UHalloweenEventComponent();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+	UPROPERTY(VisibleAnywhere, ReplicatedUsing=OnRep_Vial, Export)
+	USectionnedChargeableComponent* _toxinVialComponent;
+
 private:
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_SpawnVial(float initialCharge);
-    
-    UFUNCTION()
-    void OnRep_Vial();
-    
-    UFUNCTION()
-    void OnFinishedPlaying(FGameplayTag gameEventType, const FGameEventData& gameEventData);
-    
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_SpawnVial(float initialCharge);
+
+	UFUNCTION()
+	void OnRep_Vial();
+
+	UFUNCTION()
+	void OnFinishedPlaying(FGameplayTag gameEventType, const FGameEventData& gameEventData);
+
 public:
-    UFUNCTION(BlueprintPure)
-    bool IsVialFull() const;
-    
-    UFUNCTION(BlueprintPure)
-    USectionnedChargeableComponent* GetVial() const;
-    
+	UFUNCTION(BlueprintPure)
+	bool IsVialFull() const;
+
+	UFUNCTION(BlueprintPure)
+	USectionnedChargeableComponent* GetVial() const;
+
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UHalloweenEventComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UHalloweenEventComponent) { return 0; }

@@ -1,6 +1,6 @@
 #include "IridescentBrickAddon.h"
 
-UIridescentBrickAddon::UIridescentBrickAddon() {
-    this->_undetectableStatusEffect = NULL;
+UIridescentBrickAddon::UIridescentBrickAddon()
+{
+	this->_undetectableStatusEffect = NULL;
 }
-

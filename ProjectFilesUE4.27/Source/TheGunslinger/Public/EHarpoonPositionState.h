@@ -1,14 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EHarpoonPositionState.generated.h"
 
-UENUM()
-enum class EHarpoonPositionState {
-    None,
-    LoadedInRifle,
-    FollowingProjectile,
-    ReelBackToRifle,
-    AttachedToPlayer,
-    Animated,
+UENUM(BlueprintType)
+enum class EHarpoonPositionState : uint8
+{
+	None,
+	LoadedInRifle,
+	FollowingProjectile,
+	ReelBackToRifle,
+	AttachedToPlayer,
+	Animated,
 };
-

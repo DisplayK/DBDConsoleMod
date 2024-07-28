@@ -1,23 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "BloodwebDistribution.generated.h"
 
-class UDBDDesignTunables;
 class UBloodwebTunables;
+class UDBDDesignTunables;
 
 UCLASS()
-class DEADBYDAYLIGHT_API UBloodwebDistribution : public UObject {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UBloodwebDistribution : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UDBDDesignTunables* _designTunables;
-    
-    UPROPERTY(Transient)
-    UBloodwebTunables* _bloodwebTunables;
-    
+	UPROPERTY(Transient)
+	UDBDDesignTunables* _designTunables;
+
+	UPROPERTY(Transient)
+	UBloodwebTunables* _bloodwebTunables;
+
 public:
-    UBloodwebDistribution();
+	UBloodwebDistribution();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBloodwebDistribution) { return 0; }

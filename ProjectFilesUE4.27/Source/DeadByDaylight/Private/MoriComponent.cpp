@@ -1,14 +1,21 @@
 #include "MoriComponent.h"
 
-void UMoriComponent::OnMoriUpdateStart() {
+void UMoriComponent::OnMoriUpdateStart()
+{
+
 }
 
-void UMoriComponent::OnMoriFinished() {
+void UMoriComponent::OnMoriFinished()
+{
+
 }
 
-void UMoriComponent::OnMoriChargeCompleted() {
+void UMoriComponent::OnMoriChargeCompleted()
+{
+
 }
 
-UMoriComponent::UMoriComponent() {
+UMoriComponent::UMoriComponent()
+{
+	this->_moriInteractionClasses = TArray<TSubclassOf<UInteractionDefinition>>();
 }
-

@@ -1,20 +1,29 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "CamperDamageResult.generated.h"
 
 class AActor;
 class UGameplayModifierContainer;
+class ACharacter;
 
 USTRUCT()
-struct DEADBYDAYLIGHT_API FCamperDamageResult {
-    GENERATED_BODY()
+struct FCamperDamageResult
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    AActor* DamageSource;
-    
-    UPROPERTY(Export)
-    UGameplayModifierContainer* KOPreventedSource;
-    
-    FCamperDamageResult();
+	UPROPERTY()
+	AActor* DamageSource;
+
+	UPROPERTY()
+	ACharacter* DamagePlayerOwner;
+
+	UPROPERTY(Export)
+	UGameplayModifierContainer* KOPreventedSource;
+
+public:
+	DEADBYDAYLIGHT_API FCamperDamageResult();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCamperDamageResult) { return 0; }

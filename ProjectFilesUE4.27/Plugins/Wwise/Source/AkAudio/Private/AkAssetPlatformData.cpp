@@ -1,6 +1,6 @@
 #include "AkAssetPlatformData.h"
 
-UAkAssetPlatformData::UAkAssetPlatformData() {
-    this->CurrentAssetData = NULL;
+UAkAssetPlatformData::UAkAssetPlatformData()
+{
+	this->CurrentAssetData = NULL;
 }
-

@@ -2,15 +2,22 @@
 
 class ADBDPlayer;
 
-void UIsPlayerPerformingItemInteraction::OnCollectablePickedUp(ADBDPlayer* player) {
+void UIsPlayerPerformingItemInteraction::OnCollectablePickedUp(ADBDPlayer* player)
+{
+
 }
 
-void UIsPlayerPerformingItemInteraction::OnCollectableDropped() {
+void UIsPlayerPerformingItemInteraction::OnCollectableDropped()
+{
+
 }
 
-void UIsPlayerPerformingItemInteraction::OnCollectableChargeStateChange(bool empty) {
+void UIsPlayerPerformingItemInteraction::OnCollectableChargeStateChange(bool empty)
+{
+
 }
 
-UIsPlayerPerformingItemInteraction::UIsPlayerPerformingItemInteraction() {
-}
+UIsPlayerPerformingItemInteraction::UIsPlayerPerformingItemInteraction()
+{
 
+}

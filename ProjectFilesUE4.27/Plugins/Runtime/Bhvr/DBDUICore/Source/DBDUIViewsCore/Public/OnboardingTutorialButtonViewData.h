@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EOnboardingStepStatus.h"
 #include "EOnboardingTutorialButtonStyle.h"
@@ -8,33 +9,37 @@
 class UTexture2D;
 
 USTRUCT(BlueprintType)
-struct FOnboardingTutorialButtonViewData {
-    GENERATED_BODY()
+struct FOnboardingTutorialButtonViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EOnboardingStepStatus StepStatus;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FString StepId;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FString TutorialId;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText Title;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText Description;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UTexture2D* Icon;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FRewardWrapperViewData> RewardsData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EOnboardingTutorialButtonStyle ButtonStyle;
-    
-    DBDUIVIEWSCORE_API FOnboardingTutorialButtonViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EOnboardingStepStatus StepStatus;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString StepId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString TutorialId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Title;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UTexture2D* Icon;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FRewardWrapperViewData> RewardsData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EOnboardingTutorialButtonStyle ButtonStyle;
+
+public:
+	DBDUIVIEWSCORE_API FOnboardingTutorialButtonViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FOnboardingTutorialButtonViewData) { return 0; }

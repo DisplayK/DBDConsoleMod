@@ -1,5 +1,5 @@
 #include "SurvivorHookTimer.h"
 
-FSurvivorHookTimer::FSurvivorHookTimer() {
+FSurvivorHookTimer::FSurvivorHookTimer()
+{
 }
-

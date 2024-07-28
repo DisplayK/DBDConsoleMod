@@ -1,5 +1,6 @@
 #include "TwinStunnableComponent.h"
 
-UTwinStunnableComponent::UTwinStunnableComponent() {
-}
+UTwinStunnableComponent::UTwinStunnableComponent()
+{
 
+}

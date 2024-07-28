@@ -1,5 +1,6 @@
 #include "TwinStateHelperComponent.h"
 
-UTwinStateHelperComponent::UTwinStateHelperComponent() {
-}
+UTwinStateHelperComponent::UTwinStateHelperComponent()
+{
 
+}

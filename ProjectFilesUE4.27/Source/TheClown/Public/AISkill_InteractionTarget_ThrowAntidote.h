@@ -1,27 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AISkill_InteractionTarget_Throw.h"
 #include "AISkill_InteractionTarget_ThrowAntidote.generated.h"
 
 UCLASS(BlueprintType, EditInlineNew)
-class UAISkill_InteractionTarget_ThrowAntidote : public UAISkill_InteractionTarget_Throw {
-    GENERATED_BODY()
-public:
+class UAISkill_InteractionTarget_ThrowAntidote : public UAISkill_InteractionTarget_Throw
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    float _minPathLengthForThrow;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    float _minThrowDistance;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    float _cooldownTime;
-    
-public:
-    UAISkill_InteractionTarget_ThrowAntidote();
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	float _minPathLengthForThrow;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	float _minThrowDistance;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	float _cooldownTime;
+
 protected:
-    UFUNCTION()
-    void OnPathUpdated();
-    
+	UFUNCTION()
+	void OnPathUpdated();
+
+public:
+	UAISkill_InteractionTarget_ThrowAntidote();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAISkill_InteractionTarget_ThrowAntidote) { return 0; }

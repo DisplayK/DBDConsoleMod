@@ -1,5 +1,6 @@
 #include "DBDCamperData.h"
 
-UDBDCamperData::UDBDCamperData() {
-}
+UDBDCamperData::UDBDCamperData()
+{
 
+}

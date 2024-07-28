@@ -1,5 +1,6 @@
 #include "PerkLevelEffectArray.h"
 
-FPerkLevelEffectArray::FPerkLevelEffectArray() {
+FPerkLevelEffectArray::FPerkLevelEffectArray()
+{
+	this->EffectsToSpawn = TArray<FStatusEffectSpawnData>();
 }
-

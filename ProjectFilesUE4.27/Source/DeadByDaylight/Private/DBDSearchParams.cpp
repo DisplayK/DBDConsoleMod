@@ -1,5 +1,5 @@
 #include "DBDSearchParams.h"
 
-FDBDSearchParams::FDBDSearchParams() {
+FDBDSearchParams::FDBDSearchParams()
+{
 }
-

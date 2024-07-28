@@ -1,9 +1,11 @@
 #include "AkSettingsPerUser.h"
 
-UAkSettingsPerUser::UAkSettingsPerUser() {
-    this->WaapiIPAddress = TEXT("127.0.0.1");
-    this->WaapiPort = 8080;
-    this->AutoSyncSelection = true;
-    this->SoundDataGenerationSkipLanguage = false;
+UAkSettingsPerUser::UAkSettingsPerUser()
+{
+	this->EnableAutomaticAssetSynchronization = false;
+	this->WaapiIPAddress = TEXT("127.0.0.1");
+	this->WaapiPort = 8080;
+	this->bAutoConnectToWAAPI = false;
+	this->AutoSyncSelection = true;
+	this->SoundDataGenerationSkipLanguage = false;
 }
-

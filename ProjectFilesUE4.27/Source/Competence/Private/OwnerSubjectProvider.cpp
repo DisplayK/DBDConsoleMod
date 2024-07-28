@@ -1,5 +1,6 @@
 #include "OwnerSubjectProvider.h"
 
-UOwnerSubjectProvider::UOwnerSubjectProvider() {
-}
+UOwnerSubjectProvider::UOwnerSubjectProvider()
+{
 
+}

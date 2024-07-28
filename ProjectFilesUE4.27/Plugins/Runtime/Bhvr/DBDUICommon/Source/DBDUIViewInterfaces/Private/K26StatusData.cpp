@@ -1,6 +1,6 @@
 #include "K26StatusData.h"
 
-FK26StatusData::FK26StatusData() {
-    this->IsCrowAttached = false;
+UK26StatusData::UK26StatusData()
+{
+	this->IsCrowAttached = false;
 }
-

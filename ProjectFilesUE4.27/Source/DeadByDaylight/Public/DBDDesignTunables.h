@@ -1,69 +1,99 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "PerkLevelDefinition.h"
+#include "GameplayTagContainer.h"
+#include "UObject/SoftObjectPtr.h"
+#include "GameEventForwarderInfo.h"
 #include "DBDDesignTunables.generated.h"
 
-class UDBDAtlantaDesignTunables;
 class UDBDTextDesignTunables;
+class UDBDAtlantaDesignTunables;
 class UDBDCoreUMGDesignTunables;
 
-UCLASS(BlueprintType, Transient, Config=Design)
-class DEADBYDAYLIGHT_API UDBDDesignTunables : public UObject {
-    GENERATED_BODY()
+UCLASS(BlueprintType, Transient)
+class DEADBYDAYLIGHT_API UDBDDesignTunables : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    int32 WinStreakThresholdLarge;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    int32 WinStreakThresholdSmall;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    int32 MaxFearTokens;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    int32 QuantityOfItemsToBuyBeforeFreeBloodwebRefresh;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    TArray<FPerkLevelDefinition> PerkLevelDefinitions;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    TSet<FGameplayTag> MetaModifiers;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    TSet<FGameplayTag> RangedSurvivorAuraPerceptionModifiers;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    TSet<FGameplayTag> SurvivorRevelatoryAuraPerceptionModifiers;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    TSet<FGameplayTag> DisruptableAuraReadingFlags;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    bool ShouldUseKillerLobby;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, NoClear)
-    TSoftClassPtr<UDBDTextDesignTunables> TextDesignTunableClass;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    UDBDTextDesignTunables* TextTunables;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, NoClear)
-    TSoftClassPtr<UDBDCoreUMGDesignTunables> CoreUMGDesignTunableClass;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    UDBDCoreUMGDesignTunables* CoreUMGDesignTunables;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, NoClear)
-    TSoftClassPtr<UDBDAtlantaDesignTunables> AtlantaDesignTunableClass;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    UDBDAtlantaDesignTunables* AtlantaDesignTunables;
-    
-    UDBDDesignTunables();
-    UFUNCTION(BlueprintPure)
-    float GetTunableValue(FName ID, bool warnIfRowMissing) const;
-    
+	UPROPERTY(EditAnywhere)
+	int8 EntityDispleasedKills;
+
+	UPROPERTY(EditAnywhere)
+	int8 BrutalKillerKills;
+
+	UPROPERTY(EditAnywhere)
+	int8 RuthlessKillerKills;
+
+	UPROPERTY(EditAnywhere)
+	int8 MercilessKillerKills;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 WinStreakThresholdLarge;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 WinStreakThresholdSmall;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MaxFearTokens;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 QuantityOfItemsToBuyBeforeFreeBloodwebRefresh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FPerkLevelDefinition> PerkLevelDefinitions;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSet<FGameplayTag> MetaModifiers;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSet<FGameplayTag> RangedSurvivorAuraPerceptionModifiers;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSet<FGameplayTag> SurvivorRevelatoryAuraPerceptionModifiers;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSet<FGameplayTag> DisruptableAuraReadingFlags;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	TSoftClassPtr<UDBDTextDesignTunables> TextDesignTunableClass;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	UDBDTextDesignTunables* TextTunables;
+
+	UPROPERTY(EditAnywhere)
+	TArray<FGameEventForwarderInfo> GameEventForwarderInfos;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	TSoftClassPtr<UDBDCoreUMGDesignTunables> CoreUMGDesignTunableClass;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	UDBDCoreUMGDesignTunables* CoreUMGDesignTunables;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	TSoftClassPtr<UDBDAtlantaDesignTunables> AtlantaDesignTunableClass;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	UDBDAtlantaDesignTunables* AtlantaDesignTunables;
+
+private:
+	UPROPERTY(EditDefaultsOnly)
+	bool _overrideDefaultLobby;
+
+	UPROPERTY(EditDefaultsOnly)
+	FName _lobbyOverrideName;
+
+	UPROPERTY(EditDefaultsOnly)
+	TArray<FGameplayTag> _conspicuousActionEvents;
+
+public:
+	UFUNCTION(BlueprintPure)
+	float GetTunableValue(FName ID, bool warnIfRowMissing) const;
+
+public:
+	UDBDDesignTunables();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDDesignTunables) { return 0; }

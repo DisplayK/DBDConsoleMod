@@ -1,5 +1,6 @@
 #include "BlindableComponent.h"
 
-UBlindableComponent::UBlindableComponent() {
-}
+UBlindableComponent::UBlindableComponent()
+{
 
+}

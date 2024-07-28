@@ -1,5 +1,5 @@
 #include "AuthenticationInfo.h"
 
-FAuthenticationInfo::FAuthenticationInfo() {
+FAuthenticationInfo::FAuthenticationInfo()
+{
 }
-

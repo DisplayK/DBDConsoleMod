@@ -1,5 +1,6 @@
 #include "PointsProvider.h"
 
-UPointsProvider::UPointsProvider() {
-}
+UPointsProvider::UPointsProvider()
+{
 
+}

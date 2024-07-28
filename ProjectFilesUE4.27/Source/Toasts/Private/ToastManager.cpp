@@ -1,5 +1,6 @@
 #include "ToastManager.h"
 
-UToastManager::UToastManager() {
-}
+UToastManager::UToastManager()
+{
 
+}

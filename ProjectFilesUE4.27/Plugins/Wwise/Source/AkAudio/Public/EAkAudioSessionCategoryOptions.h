@@ -1,12 +1,13 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EAkAudioSessionCategoryOptions.generated.h"
 
-UENUM()
-enum class EAkAudioSessionCategoryOptions {
-    MixWithOthers,
-    DuckOthers,
-    AllowBluetooth,
-    DefaultToSpeaker,
+UENUM(BlueprintType)
+enum class EAkAudioSessionCategoryOptions : uint8
+{
+	MixWithOthers,
+	DuckOthers,
+	AllowBluetooth,
+	DefaultToSpeaker,
 };
-

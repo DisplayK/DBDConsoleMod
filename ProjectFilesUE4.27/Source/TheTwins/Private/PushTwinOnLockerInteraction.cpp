@@ -1,25 +1,32 @@
 #include "PushTwinOnLockerInteraction.h"
 #include "Net/UnrealNetwork.h"
 
-class AConjoinedTwin;
 class ADBDPlayer;
+class AConjoinedTwin;
 
-void UPushTwinOnLockerInteraction::OnTwinSet(AConjoinedTwin* twin) {
+void UPushTwinOnLockerInteraction::OnTwinSet(AConjoinedTwin* twin)
+{
+
 }
 
-void UPushTwinOnLockerInteraction::OnRep_PushTwinOnLockerChargeable() {
+void UPushTwinOnLockerInteraction::OnRep_PushTwinOnLockerChargeable()
+{
+
 }
 
-void UPushTwinOnLockerInteraction::Authority_OnSurvivorInLockerChanged(ADBDPlayer* oldSurvivor, ADBDPlayer* newSurvivor) {
+void UPushTwinOnLockerInteraction::Authority_OnPlayerInLockerChanged(ADBDPlayer* previousPlayerInLocker, ADBDPlayer* newPlayerInLocker)
+{
+
 }
 
-void UPushTwinOnLockerInteraction::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UPushTwinOnLockerInteraction, _pushTwinOnLockerChargeable);
+void UPushTwinOnLockerInteraction::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UPushTwinOnLockerInteraction, _pushTwinOnLockerChargeable);
 }
 
-UPushTwinOnLockerInteraction::UPushTwinOnLockerInteraction() {
-    this->_pushTwinOnLockerChargeable = NULL;
+UPushTwinOnLockerInteraction::UPushTwinOnLockerInteraction()
+{
+	this->_pushTwinOnLockerChargeable = NULL;
 }
-

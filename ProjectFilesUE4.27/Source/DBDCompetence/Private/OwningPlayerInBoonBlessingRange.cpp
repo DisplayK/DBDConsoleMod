@@ -1,6 +1,6 @@
 #include "OwningPlayerInBoonBlessingRange.h"
 
-UOwningPlayerInBoonBlessingRange::UOwningPlayerInBoonBlessingRange() {
-    this->_boundTotem = NULL;
+UOwningPlayerInBoonBlessingRange::UOwningPlayerInBoonBlessingRange()
+{
+	this->_boundTotem = NULL;
 }
-

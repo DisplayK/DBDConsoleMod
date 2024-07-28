@@ -1,21 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "SecondaryInteractionProperties.h"
 #include "BlightPowerStateDash.h"
+#include "SecondaryInteractionProperties.h"
 #include "BlightPowerStateLethalDash.generated.h"
 
 UCLASS()
-class UBlightPowerStateLethalDash : public UBlightPowerStateDash {
-    GENERATED_BODY()
-public:
+class UBlightPowerStateLethalDash : public UBlightPowerStateDash
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditDefaultsOnly)
-    FSecondaryInteractionProperties _secondaryInteractionProperties;
-    
-    UPROPERTY(EditAnywhere)
-    bool _smashBreakables;
-    
+	UPROPERTY(EditDefaultsOnly)
+	FSecondaryInteractionProperties _secondaryInteractionProperties;
+
+	UPROPERTY(EditAnywhere)
+	bool _smashBreakables;
+
 public:
-    UBlightPowerStateLethalDash();
+	UBlightPowerStateLethalDash();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBlightPowerStateLethalDash) { return 0; }

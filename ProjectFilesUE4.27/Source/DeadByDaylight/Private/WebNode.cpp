@@ -1,5 +1,5 @@
 #include "WebNode.h"
 
-FWebNode::FWebNode() {
+FWebNode::FWebNode()
+{
 }
-

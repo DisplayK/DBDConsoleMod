@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PounceAttackSuccessSubstate.h"
 #include "DBDTunableRowHandle.h"
@@ -7,29 +8,31 @@
 class UCurveFloat;
 
 UCLASS()
-class THELEGION_API UFrenzyAttackSuccessSubstate : public UPounceAttackSuccessSubstate {
-    GENERATED_BODY()
-public:
+class THELEGION_API UFrenzyAttackSuccessSubstate : public UPounceAttackSuccessSubstate
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _healthyTime;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _injuredTime;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _bleedoutTime;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UCurveFloat* _healthyCurve;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UCurveFloat* _injuredCurve;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UCurveFloat* _bleedoutCurve;
-    
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _healthyTime;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _injuredTime;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _bleedoutTime;
+
+	UPROPERTY(EditDefaultsOnly)
+	UCurveFloat* _healthyCurve;
+
+	UPROPERTY(EditDefaultsOnly)
+	UCurveFloat* _injuredCurve;
+
+	UPROPERTY(EditDefaultsOnly)
+	UCurveFloat* _bleedoutCurve;
+
 public:
-    UFrenzyAttackSuccessSubstate();
+	UFrenzyAttackSuccessSubstate();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UFrenzyAttackSuccessSubstate) { return 0; }

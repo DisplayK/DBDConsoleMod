@@ -1,13 +1,17 @@
 #include "DBDObserverPlayer.h"
 #include "DBDPlayerData.h"
 
-void ADBDObserverPlayer::Server_PlayerReady_Implementation() {
-}
-bool ADBDObserverPlayer::Server_PlayerReady_Validate() {
-    return true;
+void ADBDObserverPlayer::Server_PlayerReady_Implementation()
+{
+
 }
 
-ADBDObserverPlayer::ADBDObserverPlayer() {
-    this->_playerData = CreateDefaultSubobject<UDBDPlayerData>(TEXT("PlayerData"));
+bool ADBDObserverPlayer::Server_PlayerReady_Validate()
+{
+	return true;
 }
 
+ADBDObserverPlayer::ADBDObserverPlayer()
+{
+	this->_playerData = CreateDefaultSubobject<UDBDPlayerData>(TEXT("PlayerData"));
+}

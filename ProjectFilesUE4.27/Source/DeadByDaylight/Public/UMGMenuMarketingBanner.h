@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UMGMenuBaseBanner.h"
 #include "UMGMenuMarketingBanner.generated.h"
@@ -6,14 +7,16 @@
 class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGMenuMarketingBanner : public UUMGMenuBaseBanner {
-    GENERATED_BODY()
-public:
+class UUMGMenuMarketingBanner : public UUMGMenuBaseBanner
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* SubTitle;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* SubTitle;
+
 public:
-    UUMGMenuMarketingBanner();
+	UUMGMenuMarketingBanner();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGMenuMarketingBanner) { return 0; }

@@ -1,5 +1,6 @@
 #include "RespawnFurthestFromPlayersStrategy.h"
 
-URespawnFurthestFromPlayersStrategy::URespawnFurthestFromPlayersStrategy() {
-}
+URespawnFurthestFromPlayersStrategy::URespawnFurthestFromPlayersStrategy()
+{
 
+}

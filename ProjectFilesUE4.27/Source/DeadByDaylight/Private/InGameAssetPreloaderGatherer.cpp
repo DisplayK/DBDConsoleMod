@@ -1,5 +1,6 @@
 #include "InGameAssetPreloaderGatherer.h"
 
-UInGameAssetPreloaderGatherer::UInGameAssetPreloaderGatherer() {
-}
+UInGameAssetPreloaderGatherer::UInGameAssetPreloaderGatherer()
+{
 
+}

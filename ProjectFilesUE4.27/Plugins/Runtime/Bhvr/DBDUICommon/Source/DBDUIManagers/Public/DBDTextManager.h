@@ -1,15 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "DBDTextManager.generated.h"
 
 UCLASS(BlueprintType)
-class DBDUIMANAGERS_API UDBDTextManager : public UGameInstanceSubsystem {
-    GENERATED_BODY()
+class DBDUIMANAGERS_API UDBDTextManager : public UGameInstanceSubsystem
+{
+	GENERATED_BODY()
+
 public:
-    UDBDTextManager();
-    UFUNCTION(BlueprintPure)
-    bool GetLargeTextEnabled() const;
-    
+	UFUNCTION(BlueprintPure)
+	bool GetLargeTextEnabled() const;
+
+public:
+	UDBDTextManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDTextManager) { return 0; }

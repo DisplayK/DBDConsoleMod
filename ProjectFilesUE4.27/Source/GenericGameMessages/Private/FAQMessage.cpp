@@ -1,5 +1,5 @@
 #include "FAQMessage.h"
 
-FFAQMessage::FFAQMessage() {
+FFAQMessage::FFAQMessage()
+{
 }
-

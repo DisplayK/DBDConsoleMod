@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGCloseTooltipWidget.generated.h"
@@ -6,18 +7,20 @@
 class UButton;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGCloseTooltipWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGCloseTooltipWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UButton* FullScreenButton;
-    
-public:
-    UUMGCloseTooltipWidget();
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UButton* FullScreenButton;
+
 private:
-    UFUNCTION()
-    void HandleCloseTooltipButton();
-    
+	UFUNCTION()
+	void HandleCloseTooltipButton();
+
+public:
+	UUMGCloseTooltipWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGCloseTooltipWidget) { return 0; }

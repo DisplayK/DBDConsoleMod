@@ -1,5 +1,8 @@
 #include "RewardLayoutWidgetToGenerate.h"
 
-FRewardLayoutWidgetToGenerate::FRewardLayoutWidgetToGenerate() {
+FRewardLayoutWidgetToGenerate::FRewardLayoutWidgetToGenerate()
+{
+	this->CharacterRewardWidget = NULL;
+	this->CurrencyRewardWidget = NULL;
+	this->SpacerWidget = NULL;
 }
-

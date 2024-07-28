@@ -1,6 +1,6 @@
 #include "MovieSceneAkAudioEventTemplate.h"
 
-FMovieSceneAkAudioEventTemplate::FMovieSceneAkAudioEventTemplate() {
-    this->Section = NULL;
+FMovieSceneAkAudioEventTemplate::FMovieSceneAkAudioEventTemplate()
+{
+	this->Section = NULL;
 }
-

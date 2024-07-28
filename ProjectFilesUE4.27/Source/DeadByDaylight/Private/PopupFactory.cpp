@@ -1,6 +1,6 @@
 #include "PopupFactory.h"
 
-UPopupFactory::UPopupFactory() {
-    this->_gameInstance = NULL;
+UPopupFactory::UPopupFactory()
+{
+	this->_gameInstance = NULL;
 }
-

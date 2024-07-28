@@ -1,5 +1,6 @@
 #include "CrownPillarOutlineUpdateStrategy.h"
 
-UCrownPillarOutlineUpdateStrategy::UCrownPillarOutlineUpdateStrategy() {
-}
+UCrownPillarOutlineUpdateStrategy::UCrownPillarOutlineUpdateStrategy()
+{
 
+}

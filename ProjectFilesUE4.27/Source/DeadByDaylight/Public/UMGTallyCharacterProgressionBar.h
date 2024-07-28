@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGTallyCharacterProgressionBar.generated.h"
@@ -6,14 +7,16 @@
 class UProgressBar;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGTallyCharacterProgressionBar : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGTallyCharacterProgressionBar : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UProgressBar* ProgressBar;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UProgressBar* ProgressBar;
+
 public:
-    UUMGTallyCharacterProgressionBar();
+	UUMGTallyCharacterProgressionBar();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGTallyCharacterProgressionBar) { return 0; }

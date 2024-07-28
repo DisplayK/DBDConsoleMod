@@ -1,8 +1,7 @@
 #include "CorrectiveAction.h"
 
-UCorrectiveAction::UCorrectiveAction() {
-    this->_startingTokens[0] = 0.00f;
-    this->_startingTokens[1] = 0.00f;
-    this->_startingTokens[2] = 0.00f;
+UCorrectiveAction::UCorrectiveAction()
+{
+	this->_startingTokens = 0.000000;
+	this->_statusEffectName = NAME_None;
 }
-

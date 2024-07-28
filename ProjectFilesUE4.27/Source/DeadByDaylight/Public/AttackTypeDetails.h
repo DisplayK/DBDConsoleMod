@@ -1,25 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
 #include "EAttackType.h"
 #include "AttackTypeDetails.generated.h"
 
 USTRUCT(BlueprintType)
-struct FAttackTypeDetails : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FAttackTypeDetails: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EAttackType AttackType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsBasicAttack;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 AssociatedCharacter;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText Description;
-    
-    DEADBYDAYLIGHT_API FAttackTypeDetails();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EAttackType AttackType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsBasicAttack;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 AssociatedCharacter;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Description;
+
+public:
+	DEADBYDAYLIGHT_API FAttackTypeDetails();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAttackTypeDetails) { return 0; }

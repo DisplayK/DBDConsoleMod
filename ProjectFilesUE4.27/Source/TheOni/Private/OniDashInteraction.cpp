@@ -2,20 +2,20 @@
 
 class ADBDPlayer;
 
-void UOniDashInteraction::SetPlayerOwner(const ADBDPlayer* player) {
+void UOniDashInteraction::SetPlayerOwner(const ADBDPlayer* player)
+{
+
 }
 
-void UOniDashInteraction::OnLevelReadyToPlay() {
+void UOniDashInteraction::OnLevelReadyToPlay()
+{
+
 }
 
-
-
-
-
-UOniDashInteraction::UOniDashInteraction() {
-    this->_chargingSpeedCurve = NULL;
-    this->_dashingSpeedCurve = NULL;
-    this->_yawAdjustTime = 0.20f;
-    this->_cooldownSpeedCurve = NULL;
+UOniDashInteraction::UOniDashInteraction()
+{
+	this->_chargingSpeedCurve = NULL;
+	this->_dashingSpeedCurve = NULL;
+	this->_yawAdjustTime = 0.200000;
+	this->_cooldownSpeedCurve = NULL;
 }
-

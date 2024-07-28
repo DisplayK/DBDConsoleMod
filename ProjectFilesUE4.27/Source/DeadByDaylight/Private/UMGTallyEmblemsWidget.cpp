@@ -2,11 +2,14 @@
 
 class UUMGTallyEmblemWidget;
 
-TArray<UUMGTallyEmblemWidget*> UUMGTallyEmblemsWidget::GetEmblems() const {
-    return TArray<UUMGTallyEmblemWidget*>();
+TArray<UUMGTallyEmblemWidget*> UUMGTallyEmblemsWidget::GetEmblems() const
+{
+	return TArray<UUMGTallyEmblemWidget*>();
 }
 
-UUMGTallyEmblemsWidget::UUMGTallyEmblemsWidget() {
-    this->EmblemsContainer = NULL;
+UUMGTallyEmblemsWidget::UUMGTallyEmblemsWidget()
+{
+	this->EmblemWidgetClass = NULL;
+	this->EmblemsContainer = NULL;
+	this->_emblems = TArray<UUMGTallyEmblemWidget*>();
 }
-

@@ -1,5 +1,6 @@
 #include "PenaltyTracker.h"
 
-UPenaltyTracker::UPenaltyTracker() {
-}
+UPenaltyTracker::UPenaltyTracker()
+{
 
+}

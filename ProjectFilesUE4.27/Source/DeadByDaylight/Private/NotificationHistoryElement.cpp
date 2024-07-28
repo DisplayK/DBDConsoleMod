@@ -1,5 +1,5 @@
 #include "NotificationHistoryElement.h"
 
-FNotificationHistoryElement::FNotificationHistoryElement() {
+FNotificationHistoryElement::FNotificationHistoryElement()
+{
 }
-

@@ -1,8 +1,11 @@
 #include "AkSwitchInitializationSettings.h"
 
-void UAkSwitchInitializationSettings::MigrateMultiCoreRendering(bool NewValue) {
+void UAkSwitchInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
+{
+
 }
 
-UAkSwitchInitializationSettings::UAkSwitchInitializationSettings() {
-}
+UAkSwitchInitializationSettings::UAkSwitchInitializationSettings()
+{
 
+}

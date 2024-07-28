@@ -3,16 +3,21 @@
 class UMaterialInstanceDynamic;
 class UPostProcessComponent;
 
-void UBlindingFXComponent::SetPostProcessMaterial(UMaterialInstanceDynamic* value) {
+void UBlindingFXComponent::SetPostProcessMaterial(UMaterialInstanceDynamic* value)
+{
+
 }
 
-void UBlindingFXComponent::SetPostProcess(UPostProcessComponent* value) {
+void UBlindingFXComponent::SetPostProcess(UPostProcessComponent* value)
+{
+
 }
 
-UBlindingFXComponent::UBlindingFXComponent() {
-    this->_blindnessMaterialCurve = NULL;
-    this->_blindnessCurve = NULL;
-    this->_postProcess = NULL;
-    this->_postProcessMaterial = NULL;
+UBlindingFXComponent::UBlindingFXComponent()
+{
+	this->_blindnessIntensityParameter = NAME_None;
+	this->_blindnessMaterialCurve = NULL;
+	this->_blindnessCurve = NULL;
+	this->_postProcess = NULL;
+	this->_postProcessMaterial = NULL;
 }
-

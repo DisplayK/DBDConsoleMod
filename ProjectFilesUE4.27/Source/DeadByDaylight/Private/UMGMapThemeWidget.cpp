@@ -1,7 +1,6 @@
 #include "UMGMapThemeWidget.h"
 
+UUMGMapThemeWidget::UUMGMapThemeWidget()
+{
 
-
-UUMGMapThemeWidget::UUMGMapThemeWidget() {
 }
-

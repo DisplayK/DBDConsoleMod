@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DefaultOutlineUpdateStrategy.h"
+#include "SourceBasedOutlineUpdateStrategy.h"
 #include "SearchableOutlineUpdateStrategy.generated.h"
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API USearchableOutlineUpdateStrategy : public UDefaultOutlineUpdateStrategy {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API USearchableOutlineUpdateStrategy : public USourceBasedOutlineUpdateStrategy
+{
+	GENERATED_BODY()
+
 public:
-    USearchableOutlineUpdateStrategy();
+	USearchableOutlineUpdateStrategy();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USearchableOutlineUpdateStrategy) { return 0; }

@@ -1,10 +1,11 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EBloodwebDataSource.generated.h"
 
-UENUM()
-enum class EBloodwebDataSource {
-    ByLevel,
-    ByRing,
+UENUM(BlueprintType)
+enum class EBloodwebDataSource : uint8
+{
+	ByLevel,
+	ByRing,
 };
-

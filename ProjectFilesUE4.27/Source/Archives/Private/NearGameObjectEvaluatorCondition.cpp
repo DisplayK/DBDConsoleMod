@@ -1,5 +1,6 @@
 #include "NearGameObjectEvaluatorCondition.h"
 
-UNearGameObjectEvaluatorCondition::UNearGameObjectEvaluatorCondition() {
-}
+UNearGameObjectEvaluatorCondition::UNearGameObjectEvaluatorCondition()
+{
 
+}

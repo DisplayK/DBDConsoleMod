@@ -1,64 +1,76 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "OnPlayersLoadoutsCreatedDelegate.h"
 #include "DBDBaseMatchGameMode.h"
+#include "OnPlayersLoadoutsCreated.h"
+#include "Templates/SubclassOf.h"
 #include "EGameState.h"
 #include "DBDGameMode.generated.h"
 
+class APlayerState;
+class ADBDPlayerState;
 class APlayerController;
 class APlayerStart;
-class APlayerState;
 
 UCLASS(NonTransient)
-class DEADBYDAYLIGHT_API ADBDGameMode : public ADBDBaseMatchGameMode {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API ADBDGameMode : public ADBDBaseMatchGameMode
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintAssignable)
-    FOnPlayersLoadoutsCreated OnPlayersLoadoutsCreated;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, NoClear)
-    TSubclassOf<APlayerController> _killerPlayerControllerClass;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, NoClear)
-    TSubclassOf<APlayerController> _survivorPlayerControllerClass;
-    
-    UPROPERTY()
-    TArray<APlayerStart*> _initialPlayerStarts;
-    
-private:
-    UPROPERTY(Config, EditAnywhere)
-    int32 KillerCreationPositionOrder;
-    
+	UPROPERTY(BlueprintAssignable)
+	FOnPlayersLoadoutsCreated OnPlayersLoadoutsCreated;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	TSubclassOf<APlayerController> _killerPlayerControllerClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, NoClear)
+	TSubclassOf<APlayerController> _survivorPlayerControllerClass;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<APlayerStart*> _initialPlayerStarts;
+
 public:
-    ADBDGameMode();
-    UFUNCTION(BlueprintCallable)
-    void SetEscapeOpened(bool val);
-    
-    UFUNCTION()
-    void RegisterOnPlayerStateChanged(APlayerState* playerState);
-    
-    UFUNCTION()
-    void OnPlayerGameStateChanged(EGameState playerGameState);
-    
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	int32 KillerCreationPositionOrder;
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void LevelLoaded(const FString& levelName);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetPlayerCount(int32 playerAmount);
+
 public:
-    UFUNCTION(BlueprintPure)
-    bool IsEscapeOpen() const;
-    
+	UFUNCTION(BlueprintCallable)
+	void SetEscapeOpened(bool val);
+
+	UFUNCTION(BlueprintCallable)
+	void RegisterOnPlayerStateChanged(APlayerState* playerState);
+
+	UFUNCTION(BlueprintCallable)
+	void OnPlayerGameStateChanged(ADBDPlayerState* playerState, EGameState playerGameState);
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void HostGame();
-    
-    UFUNCTION(Exec, BlueprintCallable)
-    void DBD_BlockCamperEscape(bool shouldBlock);
-    
-    UFUNCTION(BlueprintPure)
-    bool AreLoadoutsCreated() const;
-    
+	UFUNCTION(BlueprintCallable)
+	void LevelLoaded(const FString& levelName);
+
+public:
+	UFUNCTION(BlueprintPure)
+	bool IsEscapeOpen() const;
+
+protected:
+	UFUNCTION(BlueprintCallable)
+	void InitializeEscapeRequirements();
+
+	UFUNCTION(BlueprintCallable)
+	void HostGame();
+
+	UFUNCTION(Exec)
+	void DBD_BlockCamperEscape(bool shouldBlock);
+
+	UFUNCTION(BlueprintPure)
+	bool AreLoadoutsCreated() const;
+
+public:
+	ADBDGameMode();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ADBDGameMode) { return 0; }

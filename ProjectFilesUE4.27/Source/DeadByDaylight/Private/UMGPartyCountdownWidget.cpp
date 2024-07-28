@@ -1,10 +1,12 @@
 #include "UMGPartyCountdownWidget.h"
 
-void UUMGPartyCountdownWidget::OnUnreadyButtonClicked() {
+void UUMGPartyCountdownWidget::OnUnreadyButtonClicked()
+{
+
 }
 
-UUMGPartyCountdownWidget::UUMGPartyCountdownWidget() {
-    this->UnreadyButton = NULL;
-    this->UnreadyButtonContainer = NULL;
+UUMGPartyCountdownWidget::UUMGPartyCountdownWidget()
+{
+	this->UnreadyButton = NULL;
+	this->UnreadyButtonContainer = NULL;
 }
-

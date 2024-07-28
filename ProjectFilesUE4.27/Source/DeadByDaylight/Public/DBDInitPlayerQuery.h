@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "DBDInitPlayerQuery.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API UDBDInitPlayerQuery : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UDBDInitPlayerQuery : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UDBDInitPlayerQuery();
+	UDBDInitPlayerQuery();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDInitPlayerQuery) { return 0; }

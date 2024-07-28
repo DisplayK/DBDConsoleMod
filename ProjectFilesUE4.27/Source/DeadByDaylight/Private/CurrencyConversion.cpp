@@ -1,5 +1,6 @@
 #include "CurrencyConversion.h"
 
-FCurrencyConversion::FCurrencyConversion() {
+FCurrencyConversion::FCurrencyConversion()
+{
+	this->AmountInOtherCurrency = TMap<ECurrencyType, float>();
 }
-

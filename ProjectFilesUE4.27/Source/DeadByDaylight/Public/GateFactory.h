@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "EGateType.h"
@@ -7,12 +8,16 @@
 class AGate;
 
 UCLASS()
-class AGateFactory : public AActor {
-    GENERATED_BODY()
+class AGateFactory : public AActor
+{
+	GENERATED_BODY()
+
 public:
-    AGateFactory();
-    UFUNCTION(BlueprintCallable)
-    AGate* GetGate(EGateType gateType);
-    
+	UFUNCTION(BlueprintCallable)
+	AGate* GetGate(EGateType gateType);
+
+public:
+	AGateFactory();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AGateFactory) { return 0; }

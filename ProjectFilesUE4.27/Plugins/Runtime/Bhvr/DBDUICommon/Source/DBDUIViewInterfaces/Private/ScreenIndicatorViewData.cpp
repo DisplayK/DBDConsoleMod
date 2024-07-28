@@ -1,9 +1,12 @@
 #include "ScreenIndicatorViewData.h"
 
-FScreenIndicatorViewData::FScreenIndicatorViewData() {
-    this->IsInFront = false;
-    this->Distance = 0.00f;
-    this->IndicatorIcon = NULL;
-    this->IndicatorType = EHudScreenIndicatorType::None;
+FScreenIndicatorViewData::FScreenIndicatorViewData()
+{
+	this->Id = TEXT("");
+	this->IsInFront = false;
+	this->ScreenPosition = FVector2D{};
+	this->ViewportSize = FVector2D{};
+	this->Distance = 0.0f;
+	this->IndicatorIcon = NULL;
+	this->IndicatorType = EHudScreenIndicatorType::None;
 }
-

@@ -1,6 +1,6 @@
 #include "PerkLevelDefinition.h"
 
-FPerkLevelDefinition::FPerkLevelDefinition() {
-    this->CountRequired = 0;
+FPerkLevelDefinition::FPerkLevelDefinition()
+{
+	this->CountRequired = 0;
 }
-

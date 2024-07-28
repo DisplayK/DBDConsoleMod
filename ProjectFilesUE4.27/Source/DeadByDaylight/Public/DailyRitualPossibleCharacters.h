@@ -1,21 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EPlayerRole.h"
 #include "DailyRitualPossibleCharacters.generated.h"
 
 USTRUCT(BlueprintType)
-struct FDailyRitualPossibleCharacters {
-    GENERATED_BODY()
+struct FDailyRitualPossibleCharacters
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<int32> CharacterIDs;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<EPlayerRole> Roles;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<EPlayerRole> SelectOneCharacterFromRoles;
-    
-    DEADBYDAYLIGHT_API FDailyRitualPossibleCharacters();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<int32> CharacterIDs;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<EPlayerRole> Roles;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<EPlayerRole> SelectOneCharacterFromRoles;
+
+public:
+	DEADBYDAYLIGHT_API FDailyRitualPossibleCharacters();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FDailyRitualPossibleCharacters) { return 0; }

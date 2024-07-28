@@ -1,5 +1,7 @@
 #include "LightbornAuraRevealedAnalytics.h"
 
-FLightbornAuraRevealedAnalytics::FLightbornAuraRevealedAnalytics() {
+FLightbornAuraRevealedAnalytics::FLightbornAuraRevealedAnalytics()
+{
+	this->RevealedSurvivorMirrorsId = TEXT("");
+	this->FlashlightedSlasherMirrorsId = TEXT("");
 }
-

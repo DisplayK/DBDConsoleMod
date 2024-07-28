@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PowerViewData.h"
 #include "AddonViewData.h"
 #include "PowerBundleViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FPowerBundleViewData {
-    GENERATED_BODY()
+struct FPowerBundleViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FPowerViewData Power;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FAddonViewData Addon1;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FAddonViewData Addon2;
-    
-    DBDUIVIEWINTERFACES_API FPowerBundleViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FPowerViewData Power;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAddonViewData Addon1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAddonViewData Addon2;
+
+public:
+	DBDUIVIEWINTERFACES_API FPowerBundleViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FPowerBundleViewData) { return 0; }

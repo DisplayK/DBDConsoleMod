@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ActorSpawner.h"
 #include "LightFunctionActorSpawner.generated.h"
@@ -6,14 +7,16 @@
 class UTexture;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class ULightFunctionActorSpawner : public UActorSpawner {
-    GENERATED_BODY()
-public:
+class ULightFunctionActorSpawner : public UActorSpawner
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UTexture* LightFunctionTexture;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UTexture* LightFunctionTexture;
+
 public:
-    ULightFunctionActorSpawner();
+	ULightFunctionActorSpawner();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ULightFunctionActorSpawner) { return 0; }

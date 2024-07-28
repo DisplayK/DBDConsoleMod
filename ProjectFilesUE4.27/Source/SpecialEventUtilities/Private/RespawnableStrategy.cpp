@@ -1,5 +1,6 @@
 #include "RespawnableStrategy.h"
 
-URespawnableStrategy::URespawnableStrategy() {
-}
+URespawnableStrategy::URespawnableStrategy()
+{
 
+}

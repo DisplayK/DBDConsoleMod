@@ -1,11 +1,16 @@
 #include "UmgSpectatorHud.h"
 
-void UUmgSpectatorHud::OnPlayerStatusSelected(const FString& playerName) {
+void UUmgSpectatorHud::OnPlayerStatusSelected(const FString& playerName)
+{
+
 }
 
-void UUmgSpectatorHud::HandleLeaveSpectateClicked() {
+void UUmgSpectatorHud::HandleLeaveSpectateClicked()
+{
+
 }
 
-UUmgSpectatorHud::UUmgSpectatorHud() {
-}
+UUmgSpectatorHud::UUmgSpectatorHud()
+{
 
+}

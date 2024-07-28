@@ -1,5 +1,6 @@
 #include "DBDEasyAntiCheatWindows.h"
 
-UDBDEasyAntiCheatWindows::UDBDEasyAntiCheatWindows() {
-}
+UDBDEasyAntiCheatWindows::UDBDEasyAntiCheatWindows()
+{
 
+}

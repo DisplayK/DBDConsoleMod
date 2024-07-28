@@ -1,5 +1,6 @@
 #include "SelectableTileSpawnPoint.h"
 
-FSelectableTileSpawnPoint::FSelectableTileSpawnPoint() {
+FSelectableTileSpawnPoint::FSelectableTileSpawnPoint()
+{
+	this->ComponentReference = FComponentReference{};
 }
-

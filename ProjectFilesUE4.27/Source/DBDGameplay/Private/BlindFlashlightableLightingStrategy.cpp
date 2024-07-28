@@ -1,5 +1,6 @@
 #include "BlindFlashlightableLightingStrategy.h"
 
-UBlindFlashlightableLightingStrategy::UBlindFlashlightableLightingStrategy() {
-}
+UBlindFlashlightableLightingStrategy::UBlindFlashlightableLightingStrategy()
+{
 
+}

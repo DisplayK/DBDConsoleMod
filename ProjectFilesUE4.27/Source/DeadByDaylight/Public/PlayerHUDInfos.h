@@ -1,25 +1,31 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDTableRowBase.h"
-#include "EPlayerRole.h"
 #include "UObject/NoExportTypes.h"
+#include "EPlayerRole.h"
+#include "DBDTableRowBase.h"
+#include "UObject/SoftObjectPtr.h"
 #include "PlayerHUDInfos.generated.h"
 
 class UUmgPlayerHud;
 
 USTRUCT(BlueprintType)
-struct FPlayerHUDInfos : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FPlayerHUDInfos: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EPlayerRole Role;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSoftClassPtr<UUmgPlayerHud> HUDClass;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FSoftObjectPath TouchInterfaceName;
-    
-    DEADBYDAYLIGHT_API FPlayerHUDInfos();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EPlayerRole Role;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSoftClassPtr<UUmgPlayerHud> HUDClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FSoftObjectPath TouchInterfaceName;
+
+public:
+	DEADBYDAYLIGHT_API FPlayerHUDInfos();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FPlayerHUDInfos) { return 0; }

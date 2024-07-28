@@ -1,5 +1,6 @@
 #include "StartupInitializer.h"
 
-UStartupInitializer::UStartupInitializer() {
-}
+UStartupInitializer::UStartupInitializer()
+{
 
+}

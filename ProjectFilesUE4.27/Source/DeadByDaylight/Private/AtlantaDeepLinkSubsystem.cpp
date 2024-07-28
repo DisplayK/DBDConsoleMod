@@ -1,5 +1,6 @@
 #include "AtlantaDeepLinkSubsystem.h"
 
-UAtlantaDeepLinkSubsystem::UAtlantaDeepLinkSubsystem() {
-}
+UAtlantaDeepLinkSubsystem::UAtlantaDeepLinkSubsystem()
+{
 
+}

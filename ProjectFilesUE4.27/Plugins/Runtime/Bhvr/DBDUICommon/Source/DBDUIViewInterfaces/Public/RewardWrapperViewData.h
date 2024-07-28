@@ -1,27 +1,32 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ERewardType.h"
-#include "CharacterRewardViewData.h"
 #include "CurrencyProgressionRewardViewData.h"
+#include "CharacterRewardViewData.h"
 #include "CustomizationRewardViewData.h"
 #include "RewardWrapperViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct DBDUIVIEWINTERFACES_API FRewardWrapperViewData {
-    GENERATED_BODY()
+struct FRewardWrapperViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    ERewardType RewardType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FCharacterRewardViewData CharacterRewardViewData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FCurrencyProgressionRewardViewData CurrencyProgressionRewardViewData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FCustomizationRewardViewData CustomizationRewardViewData;
-    
-    FRewardWrapperViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ERewardType RewardType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FCharacterRewardViewData CharacterRewardViewData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FCurrencyProgressionRewardViewData CurrencyProgressionRewardViewData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FCustomizationRewardViewData CustomizationRewardViewData;
+
+public:
+	DBDUIVIEWINTERFACES_API FRewardWrapperViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FRewardWrapperViewData) { return 0; }

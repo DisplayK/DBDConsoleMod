@@ -2,54 +2,79 @@
 
 class UTerrorRadiusReceiverComponent;
 
-void UTerrorRadiusEmitterComponent::SetTerrorRadius(float radius) {
+void UTerrorRadiusEmitterComponent::SetTerrorRadius(float radius)
+{
+
 }
 
-void UTerrorRadiusEmitterComponent::SetSimulatedFixedDistance(float distance) {
+void UTerrorRadiusEmitterComponent::SetSimulatedFixedDistance(float distance)
+{
+
 }
 
-void UTerrorRadiusEmitterComponent::SetIsActive(bool active) {
+void UTerrorRadiusEmitterComponent::SetIsFakeTerrorRadius(bool value)
+{
+
 }
 
-void UTerrorRadiusEmitterComponent::SetImitatesAudioOnly(bool imitatesAudioOnly) {
+void UTerrorRadiusEmitterComponent::SetIsActive(bool active)
+{
+
 }
 
-void UTerrorRadiusEmitterComponent::SetGeneratesChaseMusic(bool generatesChaseMusic) {
+void UTerrorRadiusEmitterComponent::SetImitatesAudioOnly(bool imitatesAudioOnly)
+{
+
 }
 
-void UTerrorRadiusEmitterComponent::RemoveEmitterFromList() {
+void UTerrorRadiusEmitterComponent::SetGeneratesChaseMusic(bool generatesChaseMusic)
+{
+
 }
 
-bool UTerrorRadiusEmitterComponent::IsInTerrorRadius(const UTerrorRadiusReceiverComponent* receiver) const {
-    return false;
+void UTerrorRadiusEmitterComponent::RemoveEmitterFromList()
+{
+
 }
 
-float UTerrorRadiusEmitterComponent::GetSimulatedFixedDistance() const {
-    return 0.0f;
+bool UTerrorRadiusEmitterComponent::IsInTerrorRadius(const UTerrorRadiusReceiverComponent* receiver) const
+{
+	return false;
 }
 
-float UTerrorRadiusEmitterComponent::GetRadius() const {
-    return 0.0f;
+float UTerrorRadiusEmitterComponent::GetSimulatedFixedDistance() const
+{
+	return 0.0f;
 }
 
-bool UTerrorRadiusEmitterComponent::GetIsActive() const {
-    return false;
+float UTerrorRadiusEmitterComponent::GetRadius() const
+{
+	return 0.0f;
 }
 
-bool UTerrorRadiusEmitterComponent::GetImitatesAudioOnly() const {
-    return false;
+bool UTerrorRadiusEmitterComponent::GetIsActive() const
+{
+	return false;
 }
 
-bool UTerrorRadiusEmitterComponent::GetGeneratesChaseMusic() const {
-    return false;
+bool UTerrorRadiusEmitterComponent::GetImitatesAudioOnly() const
+{
+	return false;
 }
 
-UTerrorRadiusEmitterComponent::UTerrorRadiusEmitterComponent() {
-    this->_simulatedFixedDistance = -1.00f;
-    this->_imitatesAudioOnly = true;
-    this->_generatesChaseMusic = true;
-    this->_active = true;
-    this->_isFakeTerrorRadius = false;
-    this->_radius = 0.00f;
+bool UTerrorRadiusEmitterComponent::GetGeneratesChaseMusic() const
+{
+	return false;
 }
 
+UTerrorRadiusEmitterComponent::UTerrorRadiusEmitterComponent()
+{
+	this->_simulatedFixedDistance = -1.000000;
+	this->_imitatesAudioOnly = true;
+	this->_generatesChaseMusic = true;
+	this->_active = true;
+	this->_isFakeTerrorRadius = false;
+	this->_radius = 0.000000;
+	this->_receiversInTerrorRadiusMap = TMap<TWeakObjectPtr<UTerrorRadiusReceiverComponent>, bool>();
+	this->_receiversPhysicallyInRadiusRangeMap = TMap<TWeakObjectPtr<UTerrorRadiusReceiverComponent>, bool>();
+}

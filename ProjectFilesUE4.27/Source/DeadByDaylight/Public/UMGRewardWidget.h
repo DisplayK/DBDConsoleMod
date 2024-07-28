@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "RewardItemData.h"
@@ -7,17 +8,20 @@
 class UImage;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGRewardWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGRewardWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* CheckIcon;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* CheckIcon;
+
 public:
-    UUMGRewardWidget();
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void SetData(const FRewardItemData& RewardData);
-    
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+	void SetData(const FRewardItemData& RewardData);
+
+public:
+	UUMGRewardWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGRewardWidget) { return 0; }

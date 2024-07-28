@@ -1,21 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
 #include "OniCustomizationItemAnimInstance.generated.h"
 
 UCLASS(NonTransient)
-class UOniCustomizationItemAnimInstance : public UAnimInstance {
-    GENERATED_BODY()
-public:
+class UOniCustomizationItemAnimInstance : public UAnimInstance
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly)
-    bool _isInDemonMode;
-    
-public:
-    UOniCustomizationItemAnimInstance();
+	UPROPERTY(BlueprintReadOnly)
+	bool _isInDemonMode;
+
 private:
-    UFUNCTION()
-    void SetIsInDemonMode(const bool isInDemonMode);
-    
+	UFUNCTION()
+	void SetIsInDemonMode(const bool isInDemonMode);
+
+public:
+	UOniCustomizationItemAnimInstance();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UOniCustomizationItemAnimInstance) { return 0; }

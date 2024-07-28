@@ -1,6 +1,6 @@
 #include "OpenCurrentCalendarMessage.h"
 
-FOpenCurrentCalendarMessage::FOpenCurrentCalendarMessage() {
-    this->RemainingDailyRewards = 0;
+FOpenCurrentCalendarMessage::FOpenCurrentCalendarMessage()
+{
+	this->RemainingDailyRewards = 0;
 }
-

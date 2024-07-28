@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "PromoPackUtilities.generated.h"
 
 UCLASS()
-class UPromoPackUtilities : public UObject {
-    GENERATED_BODY()
+class UPromoPackUtilities : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPromoPackUtilities();
+	UPromoPackUtilities();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPromoPackUtilities) { return 0; }

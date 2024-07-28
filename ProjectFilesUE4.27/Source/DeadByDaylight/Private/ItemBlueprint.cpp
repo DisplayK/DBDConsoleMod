@@ -1,5 +1,6 @@
 #include "ItemBlueprint.h"
 
-AItemBlueprint::AItemBlueprint() {
-}
+AItemBlueprint::AItemBlueprint()
+{
 
+}

@@ -1,6 +1,6 @@
 #include "FleeComponent.h"
 
-UFleeComponent::UFleeComponent() {
-    this->_threat = NULL;
+UFleeComponent::UFleeComponent()
+{
+	this->_threat = NULL;
 }
-

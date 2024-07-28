@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EAkChannelConfigType.generated.h"
 
-UENUM()
-enum class EAkChannelConfigType : int32 {
-    Anonymous,
-    Standard,
-    Ambisonic,
+UENUM(BlueprintType)
+enum class EAkChannelConfigType : uint8
+{
+	Anonymous,
+	Standard,
+	Ambisonic,
 };
-

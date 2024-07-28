@@ -2,10 +2,12 @@
 
 class UK26AmmoHandlerComponent;
 
-void UK26PowerChargePresentationPowerFadeComponent::SetDependencies(UK26AmmoHandlerComponent* ammoHandler) {
+void UK26PowerChargePresentationPowerFadeComponent::SetDependencies(UK26AmmoHandlerComponent* ammoHandler)
+{
+
 }
 
-UK26PowerChargePresentationPowerFadeComponent::UK26PowerChargePresentationPowerFadeComponent() {
-    this->_ammoHandler = NULL;
+UK26PowerChargePresentationPowerFadeComponent::UK26PowerChargePresentationPowerFadeComponent()
+{
+	this->_ammoHandler = NULL;
 }
-

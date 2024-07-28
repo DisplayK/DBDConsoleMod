@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "DlcHelper.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API UDlcHelper : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UDlcHelper : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UDlcHelper();
+	UDlcHelper();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDlcHelper) { return 0; }

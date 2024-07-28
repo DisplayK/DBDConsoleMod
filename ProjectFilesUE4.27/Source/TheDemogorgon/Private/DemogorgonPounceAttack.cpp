@@ -1,5 +1,6 @@
 #include "DemogorgonPounceAttack.h"
 
-UDemogorgonPounceAttack::UDemogorgonPounceAttack() {
-}
+UDemogorgonPounceAttack::UDemogorgonPounceAttack()
+{
 
+}

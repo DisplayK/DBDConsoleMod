@@ -1,5 +1,6 @@
 #include "DBDEasyAntiCheatLinux.h"
 
-UDBDEasyAntiCheatLinux::UDBDEasyAntiCheatLinux() {
-}
+UDBDEasyAntiCheatLinux::UDBDEasyAntiCheatLinux()
+{
 
+}

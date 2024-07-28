@@ -1,46 +1,51 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "EOnboardingTutorialButtonStyle.h"
 #include "RewardWrapperViewData.h"
 #include "EOnboardingTutorialType.h"
-#include "EOnboardingTutorialButtonStyle.h"
 #include "OnboardingTutorialViewData.generated.h"
 
 class UTexture2D;
 
 USTRUCT(BlueprintType)
-struct DBDUIVIEWINTERFACES_API FOnboardingTutorialViewData {
-    GENERATED_BODY()
+struct FOnboardingTutorialViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    FString TutorialId;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    bool Completed;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    bool MainRewardClaimed;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    TArray<FRewardWrapperViewData> MainRewards;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    TArray<FRewardWrapperViewData> AlternativeRewards;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    EOnboardingTutorialType TutorialType;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
-    EOnboardingTutorialButtonStyle ButtonStyle;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    FText DisplayName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    FText Description;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    UTexture2D* Icon;
-    
-    FOnboardingTutorialViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FString TutorialId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool Completed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool MainRewardClaimed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TArray<FRewardWrapperViewData> MainRewards;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TArray<FRewardWrapperViewData> AlternativeRewards;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	EOnboardingTutorialType TutorialType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Transient)
+	EOnboardingTutorialButtonStyle ButtonStyle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText DisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UTexture2D* Icon;
+
+public:
+	DBDUIVIEWINTERFACES_API FOnboardingTutorialViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FOnboardingTutorialViewData) { return 0; }

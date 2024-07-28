@@ -1,5 +1,6 @@
 #include "CatalogValidationCommandlet.h"
 
-UCatalogValidationCommandlet::UCatalogValidationCommandlet() {
-}
+UCatalogValidationCommandlet::UCatalogValidationCommandlet()
+{
 
+}

@@ -1,5 +1,5 @@
 #include "AtlantaFriendUIData.h"
 
-FAtlantaFriendUIData::FAtlantaFriendUIData() {
+FAtlantaFriendUIData::FAtlantaFriendUIData()
+{
 }
-

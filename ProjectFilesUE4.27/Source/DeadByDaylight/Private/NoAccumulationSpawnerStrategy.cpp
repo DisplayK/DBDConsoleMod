@@ -1,5 +1,6 @@
 #include "NoAccumulationSpawnerStrategy.h"
 
-UNoAccumulationSpawnerStrategy::UNoAccumulationSpawnerStrategy() {
-}
+UNoAccumulationSpawnerStrategy::UNoAccumulationSpawnerStrategy()
+{
 
+}

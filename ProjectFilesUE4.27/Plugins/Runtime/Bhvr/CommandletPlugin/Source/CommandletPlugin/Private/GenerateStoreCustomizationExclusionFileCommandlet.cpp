@@ -1,5 +1,6 @@
 #include "GenerateStoreCustomizationExclusionFileCommandlet.h"
 
-UGenerateStoreCustomizationExclusionFileCommandlet::UGenerateStoreCustomizationExclusionFileCommandlet() {
-}
+UGenerateStoreCustomizationExclusionFileCommandlet::UGenerateStoreCustomizationExclusionFileCommandlet()
+{
 
+}

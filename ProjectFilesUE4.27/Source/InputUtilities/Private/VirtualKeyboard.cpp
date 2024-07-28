@@ -1,5 +1,6 @@
 #include "VirtualKeyboard.h"
 
-UVirtualKeyboard::UVirtualKeyboard() {
-}
+UVirtualKeyboard::UVirtualKeyboard()
+{
 
+}

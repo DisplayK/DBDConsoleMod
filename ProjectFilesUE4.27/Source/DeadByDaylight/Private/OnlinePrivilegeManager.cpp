@@ -1,5 +1,6 @@
 #include "OnlinePrivilegeManager.h"
 
-UOnlinePrivilegeManager::UOnlinePrivilegeManager() {
-}
+UOnlinePrivilegeManager::UOnlinePrivilegeManager()
+{
 
+}

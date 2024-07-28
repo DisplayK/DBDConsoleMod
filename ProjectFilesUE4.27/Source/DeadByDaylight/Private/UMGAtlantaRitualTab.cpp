@@ -1,9 +1,12 @@
 #include "UMGAtlantaRitualTab.h"
 
-void UUMGAtlantaRitualTab::BroadcastOnClaimRewardsButtonPressed(const int32 ritualId) {
+void UUMGAtlantaRitualTab::BroadcastOnClaimRewardsButtonPressed(const int32 ritualId)
+{
+
 }
 
-UUMGAtlantaRitualTab::UUMGAtlantaRitualTab() {
-    this->ContainerBox = NULL;
+UUMGAtlantaRitualTab::UUMGAtlantaRitualTab()
+{
+	this->ContainerBox = NULL;
+	this->_itemWidgetClass = NULL;
 }
-

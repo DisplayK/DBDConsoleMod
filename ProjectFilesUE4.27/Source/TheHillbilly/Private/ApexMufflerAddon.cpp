@@ -1,5 +1,6 @@
 #include "ApexMufflerAddon.h"
 
-UApexMufflerAddon::UApexMufflerAddon() {
-}
+UApexMufflerAddon::UApexMufflerAddon()
+{
 
+}

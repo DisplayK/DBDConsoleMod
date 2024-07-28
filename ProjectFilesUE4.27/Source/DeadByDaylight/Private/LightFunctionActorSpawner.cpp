@@ -1,6 +1,6 @@
 #include "LightFunctionActorSpawner.h"
 
-ULightFunctionActorSpawner::ULightFunctionActorSpawner() {
-    this->LightFunctionTexture = NULL;
+ULightFunctionActorSpawner::ULightFunctionActorSpawner()
+{
+	this->LightFunctionTexture = NULL;
 }
-

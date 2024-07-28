@@ -1,9 +1,10 @@
 #include "FootGroundDetectorComponent.h"
 
-UFootGroundDetectorComponent::UFootGroundDetectorComponent() {
-    this->_footLength = 25.00f;
-    this->_traceRadius = 8.00f;
-    this->_maxWalkableSlopeAngle = 45.00f;
-    this->_movementComp = NULL;
+UFootGroundDetectorComponent::UFootGroundDetectorComponent()
+{
+	this->_hipTransformName = NAME_None;
+	this->_footLength = 25.000000;
+	this->_traceRadius = 8.000000;
+	this->_maxWalkableSlopeAngle = 45.000000;
+	this->_movementComp = NULL;
 }
-

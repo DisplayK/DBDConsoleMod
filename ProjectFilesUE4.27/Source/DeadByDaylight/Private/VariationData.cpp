@@ -1,5 +1,7 @@
 #include "VariationData.h"
 
-FVariationData::FVariationData() {
+FVariationData::FVariationData()
+{
+	this->Tag = FGameplayTag{};
+	this->Name = FText::GetEmpty();
 }
-

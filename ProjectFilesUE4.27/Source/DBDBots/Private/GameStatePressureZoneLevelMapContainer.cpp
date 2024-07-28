@@ -1,5 +1,6 @@
 #include "GameStatePressureZoneLevelMapContainer.h"
 
-FGameStatePressureZoneLevelMapContainer::FGameStatePressureZoneLevelMapContainer() {
+FGameStatePressureZoneLevelMapContainer::FGameStatePressureZoneLevelMapContainer()
+{
+	this->Map = TMap<EAIGameState, EAIPressureZoneLevel>();
 }
-

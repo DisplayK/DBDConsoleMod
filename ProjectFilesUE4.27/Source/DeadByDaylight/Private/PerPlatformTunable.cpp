@@ -1,5 +1,7 @@
 #include "PerPlatformTunable.h"
 
-FPerPlatformTunable::FPerPlatformTunable() {
+FPerPlatformTunable::FPerPlatformTunable()
+{
+	this->Value = FPerPlatformFloat{};
+	this->Description = TEXT("");
 }
-

@@ -1,18 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "AccessKey.h"
+#include "UObject/NoExportTypes.h"
 #include "AccessKeys.generated.h"
 
-UCLASS(Config=Game)
-class UAccessKeys : public UObject {
-    GENERATED_BODY()
-public:
+UCLASS()
+class S3COMMAND_API UAccessKeys : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Config)
-    TArray<FAccessKey> AccessKeys;
-    
+	UPROPERTY()
+	TArray<FAccessKey> AccessKeys;
+
 public:
-    UAccessKeys();
+	UAccessKeys();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAccessKeys) { return 0; }

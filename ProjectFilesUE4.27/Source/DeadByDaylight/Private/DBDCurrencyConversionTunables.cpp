@@ -1,5 +1,6 @@
 #include "DBDCurrencyConversionTunables.h"
 
-UDBDCurrencyConversionTunables::UDBDCurrencyConversionTunables() {
+UDBDCurrencyConversionTunables::UDBDCurrencyConversionTunables()
+{
+	this->Currencies = TMap<ECurrencyType, FCurrencyConversion>();
 }
-

@@ -1,5 +1,6 @@
 #include "ActiveOnTimerOrApplicablePerkIconStrategy.h"
 
-UActiveOnTimerOrApplicablePerkIconStrategy::UActiveOnTimerOrApplicablePerkIconStrategy() {
-}
+UActiveOnTimerOrApplicablePerkIconStrategy::UActiveOnTimerOrApplicablePerkIconStrategy()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "CollectItemFromSearchableInteraction.h"
 
-UCollectItemFromSearchableInteraction::UCollectItemFromSearchableInteraction() {
-}
+UCollectItemFromSearchableInteraction::UCollectItemFromSearchableInteraction()
+{
 
+}

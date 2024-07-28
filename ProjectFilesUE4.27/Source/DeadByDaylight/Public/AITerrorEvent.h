@@ -1,28 +1,33 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "GenericTeamAgentInterface.h"
 #include "AITerrorEvent.generated.h"
 
-class UTerrorRadiusEmitterComponent;
 class AActor;
+class UTerrorRadiusEmitterComponent;
 
 USTRUCT(BlueprintType)
-struct DEADBYDAYLIGHT_API FAITerrorEvent {
-    GENERATED_BODY()
+struct FAITerrorEvent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector Location;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    AActor* Instigator;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UTerrorRadiusEmitterComponent* TerrorEmitter;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGenericTeamId TeamIdentifier;
-    
-    FAITerrorEvent();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector Location;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	AActor* Instigator;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Export)
+	UTerrorRadiusEmitterComponent* TerrorEmitter;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FGenericTeamId TeamIdentifier;
+
+public:
+	DEADBYDAYLIGHT_API FAITerrorEvent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAITerrorEvent) { return 0; }

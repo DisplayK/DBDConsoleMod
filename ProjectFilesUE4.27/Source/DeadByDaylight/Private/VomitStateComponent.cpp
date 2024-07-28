@@ -1,21 +1,29 @@
 #include "VomitStateComponent.h"
+#include "ELinkedVomitState.h"
 
 class UGameplayTagContainerComponent;
 
-void UVomitStateComponent::SetVomitState(ELinkedVomitState newVomitState) {
+void UVomitStateComponent::SetVomitState(ELinkedVomitState newVomitState)
+{
+
 }
 
-void UVomitStateComponent::SetObjectState(UGameplayTagContainerComponent* objectState) {
+void UVomitStateComponent::SetObjectState(UGameplayTagContainerComponent* objectState)
+{
+
 }
 
-bool UVomitStateComponent::IsVomiting() const {
-    return false;
+bool UVomitStateComponent::IsVomiting() const
+{
+	return false;
 }
 
-ELinkedVomitState UVomitStateComponent::getVomitState() const {
-    return ELinkedVomitState::Idle;
+ELinkedVomitState UVomitStateComponent::getVomitState() const
+{
+	return ELinkedVomitState::Idle;
 }
 
-UVomitStateComponent::UVomitStateComponent() {
-}
+UVomitStateComponent::UVomitStateComponent()
+{
 
+}

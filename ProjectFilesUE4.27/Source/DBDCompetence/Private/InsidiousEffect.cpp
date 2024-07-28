@@ -1,5 +1,6 @@
 #include "InsidiousEffect.h"
 
-UInsidiousEffect::UInsidiousEffect() {
-}
+UInsidiousEffect::UInsidiousEffect()
+{
 
+}

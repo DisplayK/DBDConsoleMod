@@ -1,14 +1,17 @@
 #include "AtlantaTooltipManager.h"
 
-void UAtlantaTooltipManager::TryCloseActiveTooltipWithWidget() {
+void UAtlantaTooltipManager::TryCloseActiveTooltipWithWidget()
+{
+
 }
 
-bool UAtlantaTooltipManager::TryCloseActiveTooltip() {
-    return false;
+bool UAtlantaTooltipManager::TryCloseActiveTooltip()
+{
+	return false;
 }
 
-UAtlantaTooltipManager::UAtlantaTooltipManager() {
-    this->_activeTooltip = NULL;
-    this->_closeTooltipWidget = NULL;
+UAtlantaTooltipManager::UAtlantaTooltipManager()
+{
+	this->_activeTooltip = NULL;
+	this->_closeTooltipWidget = NULL;
 }
-

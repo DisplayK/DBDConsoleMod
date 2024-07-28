@@ -1,20 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ChargeableComponent.h"
 #include "SectionnedChargeableComponent.generated.h"
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API USectionnedChargeableComponent : public UChargeableComponent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API USectionnedChargeableComponent : public UChargeableComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    uint8 _sections;
-    
+	UPROPERTY(EditDefaultsOnly)
+	uint8 _sections;
+
 public:
-    USectionnedChargeableComponent();
-    UFUNCTION(BlueprintPure)
-    float GetSectionChargeRemaining() const;
-    
+	UFUNCTION(BlueprintPure)
+	float GetSectionChargeRemaining() const;
+
+public:
+	USectionnedChargeableComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USectionnedChargeableComponent) { return 0; }

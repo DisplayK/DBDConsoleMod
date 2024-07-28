@@ -1,5 +1,6 @@
 #include "UIComponent.h"
 
-UUIComponent::UUIComponent() {
-}
+UUIComponent::UUIComponent()
+{
 
+}

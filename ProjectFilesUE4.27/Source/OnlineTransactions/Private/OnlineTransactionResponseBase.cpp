@@ -1,5 +1,6 @@
 #include "OnlineTransactionResponseBase.h"
 
-UOnlineTransactionResponseBase::UOnlineTransactionResponseBase() {
-}
+UOnlineTransactionResponseBase::UOnlineTransactionResponseBase()
+{
 
+}

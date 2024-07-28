@@ -1,5 +1,6 @@
 #include "IsLifetimeActive.h"
 
-UIsLifetimeActive::UIsLifetimeActive() {
-}
+UIsLifetimeActive::UIsLifetimeActive()
+{
 
+}

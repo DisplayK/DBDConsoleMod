@@ -1,5 +1,6 @@
 #include "DBDAttackMissSubstate.h"
 
-UDBDAttackMissSubstate::UDBDAttackMissSubstate() {
-}
+UDBDAttackMissSubstate::UDBDAttackMissSubstate()
+{
 
+}

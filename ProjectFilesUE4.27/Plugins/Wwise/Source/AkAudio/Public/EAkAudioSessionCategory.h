@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EAkAudioSessionCategory.generated.h"
 
-UENUM()
-enum class EAkAudioSessionCategory : int32 {
-    Ambient,
-    SoloAmbient,
-    PlayAndRecord,
+UENUM(BlueprintType)
+enum class EAkAudioSessionCategory : uint8
+{
+	Ambient,
+	SoloAmbient,
+	PlayAndRecord,
 };
-

@@ -1,5 +1,6 @@
 #include "AkPlatformInfo.h"
 
-UAkPlatformInfo::UAkPlatformInfo() {
-}
+UAkPlatformInfo::UAkPlatformInfo()
+{
 
+}

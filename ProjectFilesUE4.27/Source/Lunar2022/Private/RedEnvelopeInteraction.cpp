@@ -1,5 +1,6 @@
 #include "RedEnvelopeInteraction.h"
 
-URedEnvelopeInteraction::URedEnvelopeInteraction() {
-}
+URedEnvelopeInteraction::URedEnvelopeInteraction()
+{
 
+}

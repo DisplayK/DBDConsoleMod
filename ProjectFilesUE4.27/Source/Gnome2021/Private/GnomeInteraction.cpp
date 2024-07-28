@@ -1,5 +1,6 @@
 #include "GnomeInteraction.h"
 
-UGnomeInteraction::UGnomeInteraction() {
-}
+UGnomeInteraction::UGnomeInteraction()
+{
 
+}

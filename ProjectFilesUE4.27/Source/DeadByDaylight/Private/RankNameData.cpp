@@ -1,6 +1,7 @@
 #include "RankNameData.h"
 
-FRankNameData::FRankNameData() {
-    this->SubRanks = 0;
+FRankNameData::FRankNameData()
+{
+	this->RankName = FText::GetEmpty();
+	this->SubRanks = 0;
 }
-

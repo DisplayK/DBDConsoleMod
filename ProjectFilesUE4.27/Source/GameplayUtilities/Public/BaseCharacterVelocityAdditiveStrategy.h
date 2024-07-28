@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "BaseCharacterVelocityAdditiveStrategy.generated.h"
 
 UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
-class GAMEPLAYUTILITIES_API UBaseCharacterVelocityAdditiveStrategy : public UActorComponent {
-    GENERATED_BODY()
+class GAMEPLAYUTILITIES_API UBaseCharacterVelocityAdditiveStrategy : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    UBaseCharacterVelocityAdditiveStrategy();
+	UBaseCharacterVelocityAdditiveStrategy();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBaseCharacterVelocityAdditiveStrategy) { return 0; }

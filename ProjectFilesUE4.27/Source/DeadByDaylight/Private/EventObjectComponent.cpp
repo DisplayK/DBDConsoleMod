@@ -1,5 +1,6 @@
 #include "EventObjectComponent.h"
 
-UEventObjectComponent::UEventObjectComponent() {
+UEventObjectComponent::UEventObjectComponent()
+{
+	this->_eventId = NAME_None;
 }
-

@@ -1,5 +1,6 @@
 #include "BannerDataProcessor.h"
 
-UBannerDataProcessor::UBannerDataProcessor() {
-}
+UBannerDataProcessor::UBannerDataProcessor()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "IsMaximumInfected.h"
 
-UIsMaximumInfected::UIsMaximumInfected() {
-}
+UIsMaximumInfected::UIsMaximumInfected()
+{
 
+}

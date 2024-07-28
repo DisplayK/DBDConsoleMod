@@ -1,5 +1,6 @@
 #include "AudioCustomMeshComponent.h"
 
-UAudioCustomMeshComponent::UAudioCustomMeshComponent() {
-}
+UAudioCustomMeshComponent::UAudioCustomMeshComponent()
+{
 
+}

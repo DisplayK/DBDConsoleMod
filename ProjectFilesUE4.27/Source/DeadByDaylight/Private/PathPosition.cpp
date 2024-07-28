@@ -1,5 +1,5 @@
 #include "PathPosition.h"
 
-FPathPosition::FPathPosition() {
+FPathPosition::FPathPosition()
+{
 }
-

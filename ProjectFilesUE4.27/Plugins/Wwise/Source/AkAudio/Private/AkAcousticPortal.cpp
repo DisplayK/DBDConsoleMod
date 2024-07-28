@@ -1,18 +1,25 @@
 #include "AkAcousticPortal.h"
+#include "AkPortalComponent.h"
+#include "AkAcousticPortalState.h"
 
-void AAkAcousticPortal::OpenPortal() {
+void AAkAcousticPortal::OpenPortal()
+{
+
 }
 
-AkAcousticPortalState AAkAcousticPortal::GetCurrentState() const {
-    return AkAcousticPortalState::Closed;
+AkAcousticPortalState AAkAcousticPortal::GetCurrentState() const
+{
+	return AkAcousticPortalState::Closed;
 }
 
-void AAkAcousticPortal::ClosePortal() {
+void AAkAcousticPortal::ClosePortal()
+{
+
 }
 
-AAkAcousticPortal::AAkAcousticPortal() {
-    this->InitialState = AkAcousticPortalState::Open;
-    this->ObstructionRefreshInterval = 0.00f;
-    this->ObstructionCollisionChannel = ECC_Visibility;
+AAkAcousticPortal::AAkAcousticPortal()
+{
+	this->Portal = CreateDefaultSubobject<UAkPortalComponent>(TEXT("PortalComponent"));
+	this->InitialState = AkAcousticPortalState::Closed;
+	this->bRequiresStateMigration = false;
 }
-

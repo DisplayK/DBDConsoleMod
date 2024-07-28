@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "StartupInitializerInterface.h"
+#include "UObject/NoExportTypes.h"
 #include "StartupInitializer.generated.h"
 
 UCLASS()
-class STARTUPINITIALIZER_API UStartupInitializer : public UObject, public IStartupInitializerInterface {
-    GENERATED_BODY()
+class STARTUPINITIALIZER_API UStartupInitializer : public UObject, public IStartupInitializerInterface
+{
+	GENERATED_BODY()
+
 public:
-    UStartupInitializer();
-    
-    // Fix for true pure virtual functions not being implemented
+	UStartupInitializer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UStartupInitializer) { return 0; }

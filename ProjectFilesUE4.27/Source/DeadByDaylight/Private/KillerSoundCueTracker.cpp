@@ -1,5 +1,5 @@
 #include "KillerSoundCueTracker.h"
 
-FKillerSoundCueTracker::FKillerSoundCueTracker() {
+FKillerSoundCueTracker::FKillerSoundCueTracker()
+{
 }
-

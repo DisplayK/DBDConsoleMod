@@ -1,5 +1,6 @@
 #include "ExperimentalFeaturesManager.h"
 
-UExperimentalFeaturesManager::UExperimentalFeaturesManager() {
-}
+UExperimentalFeaturesManager::UExperimentalFeaturesManager()
+{
 
+}

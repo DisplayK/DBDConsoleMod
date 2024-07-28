@@ -1,5 +1,6 @@
 #include "MirrorsConfig.h"
 
-UMirrorsConfig::UMirrorsConfig() {
-}
+UMirrorsConfig::UMirrorsConfig()
+{
 
+}

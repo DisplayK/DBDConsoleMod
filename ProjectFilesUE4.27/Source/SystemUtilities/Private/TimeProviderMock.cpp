@@ -1,5 +1,6 @@
 #include "TimeProviderMock.h"
 
-UTimeProviderMock::UTimeProviderMock() {
-}
+UTimeProviderMock::UTimeProviderMock()
+{
 
+}

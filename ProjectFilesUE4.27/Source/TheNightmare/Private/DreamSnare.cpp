@@ -1,5 +1,6 @@
 #include "DreamSnare.h"
 
-ADreamSnare::ADreamSnare() {
-}
+ADreamSnare::ADreamSnare()
+{
 
+}

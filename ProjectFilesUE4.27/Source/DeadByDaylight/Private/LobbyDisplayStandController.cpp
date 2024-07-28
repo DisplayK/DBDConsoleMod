@@ -1,5 +1,6 @@
 #include "LobbyDisplayStandController.h"
 
-ULobbyDisplayStandController::ULobbyDisplayStandController() {
-}
+ULobbyDisplayStandController::ULobbyDisplayStandController()
+{
 
+}

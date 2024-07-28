@@ -1,13 +1,19 @@
 #include "BaseIsPlayerPerformingInteraction.h"
+#include "GameplayTagContainer.h"
 
 class UInteractionDefinition;
 
-void UBaseIsPlayerPerformingInteraction::UpdateIsTrue(UInteractionDefinition* interactionDefinition) {
+void UBaseIsPlayerPerformingInteraction::UpdateIsTrue(UInteractionDefinition* interactionDefinition)
+{
+
 }
 
-void UBaseIsPlayerPerformingInteraction::SetInteractionSemantics(const FGameplayTagContainer& interactionSemantics) {
+void UBaseIsPlayerPerformingInteraction::SetInteractionSemantics(const FGameplayTagContainer& interactionSemantics)
+{
+
 }
 
-UBaseIsPlayerPerformingInteraction::UBaseIsPlayerPerformingInteraction() {
-}
+UBaseIsPlayerPerformingInteraction::UBaseIsPlayerPerformingInteraction()
+{
 
+}

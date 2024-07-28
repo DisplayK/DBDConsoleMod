@@ -1,5 +1,6 @@
 #include "SentryIoBaseSubsystem.h"
 
-USentryIoBaseSubsystem::USentryIoBaseSubsystem() {
-}
+USentryIoBaseSubsystem::USentryIoBaseSubsystem()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "TickInEditorSkeletalMesh.h"
 
-ATickInEditorSkeletalMesh::ATickInEditorSkeletalMesh() {
-}
+ATickInEditorSkeletalMesh::ATickInEditorSkeletalMesh()
+{
 
+}

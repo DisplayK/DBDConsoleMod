@@ -1,6 +1,6 @@
 #include "TormentAttackTrailPoint.h"
 
+ATormentAttackTrailPoint::ATormentAttackTrailPoint()
+{
 
-ATormentAttackTrailPoint::ATormentAttackTrailPoint() {
 }
-

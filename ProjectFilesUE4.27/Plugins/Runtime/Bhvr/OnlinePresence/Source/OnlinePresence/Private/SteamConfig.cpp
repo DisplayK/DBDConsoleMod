@@ -1,5 +1,6 @@
 #include "SteamConfig.h"
 
-USteamConfig::USteamConfig() {
-}
+USteamConfig::USteamConfig()
+{
 
+}

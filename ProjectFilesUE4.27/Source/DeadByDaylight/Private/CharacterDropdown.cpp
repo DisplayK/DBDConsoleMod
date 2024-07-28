@@ -1,6 +1,6 @@
 #include "CharacterDropdown.h"
 
-FCharacterDropdown::FCharacterDropdown() {
-    this->CharacterID = 0;
+FCharacterDropdown::FCharacterDropdown()
+{
+	this->CharacterID = 0;
 }
-

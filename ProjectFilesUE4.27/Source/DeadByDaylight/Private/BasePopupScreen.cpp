@@ -1,5 +1,6 @@
 #include "BasePopupScreen.h"
 
-UBasePopupScreen::UBasePopupScreen() {
-}
+UBasePopupScreen::UBasePopupScreen()
+{
 
+}

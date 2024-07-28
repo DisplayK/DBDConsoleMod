@@ -1,5 +1,6 @@
 #include "SearchOpenedChestInteraction.h"
 
-USearchOpenedChestInteraction::USearchOpenedChestInteraction() {
+USearchOpenedChestInteraction::USearchOpenedChestInteraction()
+{
+	this->_rummagePrioritySources = TArray<FName>();
 }
-

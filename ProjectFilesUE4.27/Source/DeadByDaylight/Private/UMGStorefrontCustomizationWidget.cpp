@@ -1,7 +1,7 @@
 #include "UMGStorefrontCustomizationWidget.h"
 
-UUMGStorefrontCustomizationWidget::UUMGStorefrontCustomizationWidget() {
-    this->CustomizationQuantityText = NULL;
-    this->CustomizationQuantityPanel = NULL;
+UUMGStorefrontCustomizationWidget::UUMGStorefrontCustomizationWidget()
+{
+	this->CustomizationQuantityText = NULL;
+	this->CustomizationQuantityPanel = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "PartyFacade.h"
 
-UPartyFacade::UPartyFacade() {
-}
+UPartyFacade::UPartyFacade()
+{
 
+}

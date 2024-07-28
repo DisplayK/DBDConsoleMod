@@ -1,11 +1,18 @@
 #include "CruelConfinement.h"
 
-UCruelConfinement::UCruelConfinement() {
-    this->_effectiveRadius[0] = 0.00f;
-    this->_effectiveRadius[1] = 0.00f;
-    this->_effectiveRadius[2] = 0.00f;
-    this->_blockDuration[0] = 0.00f;
-    this->_blockDuration[1] = 0.00f;
-    this->_blockDuration[2] = 0.00f;
+float UCruelConfinement::GetEffectiveRadiusAtLevel()
+{
+	return 0.0f;
 }
 
+float UCruelConfinement::GetBlockDurationAtLevel()
+{
+	return 0.0f;
+}
+
+UCruelConfinement::UCruelConfinement()
+{
+	this->_effectiveRadius = 0.000000;
+	this->_blockDuration = 0.000000;
+	this->_blockableLists = TMap<AGenerator*, FWindowBlockableList>();
+}

@@ -1,19 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "EItemAvailability.h"
 #include "BaseLoadoutPartViewData.h"
+#include "EItemAvailability.h"
 #include "OfferingViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FOfferingViewData : public FBaseLoadoutPartViewData {
-    GENERATED_BODY()
+struct FOfferingViewData: public FBaseLoadoutPartViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 StackCount;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EItemAvailability Availability;
-    
-    DBDUIVIEWINTERFACES_API FOfferingViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 StackCount;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EItemAvailability Availability;
+
+public:
+	DBDUIVIEWINTERFACES_API FOfferingViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FOfferingViewData) { return 0; }

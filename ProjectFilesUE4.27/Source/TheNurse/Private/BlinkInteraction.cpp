@@ -1,5 +1,6 @@
 #include "BlinkInteraction.h"
 
-UBlinkInteraction::UBlinkInteraction() {
-}
+UBlinkInteraction::UBlinkInteraction()
+{
 
+}

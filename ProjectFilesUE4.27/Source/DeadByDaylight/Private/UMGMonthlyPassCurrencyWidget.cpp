@@ -1,6 +1,6 @@
 #include "UMGMonthlyPassCurrencyWidget.h"
 
-UUMGMonthlyPassCurrencyWidget::UUMGMonthlyPassCurrencyWidget() {
-    this->CurrencyBackground = NULL;
+UUMGMonthlyPassCurrencyWidget::UUMGMonthlyPassCurrencyWidget()
+{
+	this->CurrencyBackground = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "UMGPromoPackCurrencyWidget.h"
 
-UUMGPromoPackCurrencyWidget::UUMGPromoPackCurrencyWidget() {
-}
+UUMGPromoPackCurrencyWidget::UUMGPromoPackCurrencyWidget()
+{
 
+}

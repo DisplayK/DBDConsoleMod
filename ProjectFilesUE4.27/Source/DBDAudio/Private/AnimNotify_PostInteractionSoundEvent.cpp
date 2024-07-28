@@ -1,6 +1,7 @@
 #include "AnimNotify_PostInteractionSoundEvent.h"
 
-UAnimNotify_PostInteractionSoundEvent::UAnimNotify_PostInteractionSoundEvent() {
-    this->SoundEvent = NULL;
+UAnimNotify_PostInteractionSoundEvent::UAnimNotify_PostInteractionSoundEvent()
+{
+	this->SoundEvent = NULL;
+	this->InteractionAudioClass = NULL;
 }
-

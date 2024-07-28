@@ -1,5 +1,5 @@
 #include "FreeTrialLoginAnalytics.h"
 
-FFreeTrialLoginAnalytics::FFreeTrialLoginAnalytics() {
+FFreeTrialLoginAnalytics::FFreeTrialLoginAnalytics()
+{
 }
-

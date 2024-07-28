@@ -1,5 +1,6 @@
 #include "BHVRAnalytics.h"
 
-UBHVRAnalytics::UBHVRAnalytics() {
-}
+UBHVRAnalytics::UBHVRAnalytics()
+{
 
+}

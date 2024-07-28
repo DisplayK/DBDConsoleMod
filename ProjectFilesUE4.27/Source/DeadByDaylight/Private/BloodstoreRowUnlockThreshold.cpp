@@ -1,6 +1,6 @@
 #include "BloodstoreRowUnlockThreshold.h"
 
-FBloodstoreRowUnlockThreshold::FBloodstoreRowUnlockThreshold() {
-    this->PreviousRowPurchasedItemsCount = 0;
+FBloodstoreRowUnlockThreshold::FBloodstoreRowUnlockThreshold()
+{
+	this->PreviousRowPurchasedItemsCount = 0;
 }
-

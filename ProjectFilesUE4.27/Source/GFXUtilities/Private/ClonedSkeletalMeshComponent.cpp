@@ -1,5 +1,6 @@
 #include "ClonedSkeletalMeshComponent.h"
 
-UClonedSkeletalMeshComponent::UClonedSkeletalMeshComponent() {
-}
+UClonedSkeletalMeshComponent::UClonedSkeletalMeshComponent()
+{
 
+}

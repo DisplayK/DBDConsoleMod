@@ -1,13 +1,14 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EPathBuildResult.generated.h"
 
-UENUM()
-enum class EPathBuildResult {
-    None,
-    Failed,
-    Succeeded,
-    Partial,
-    InProgress,
+UENUM(BlueprintType)
+enum class EPathBuildResult : uint8
+{
+	None,
+	Failed,
+	Succeeded,
+	Partial,
+	InProgress,
 };
-

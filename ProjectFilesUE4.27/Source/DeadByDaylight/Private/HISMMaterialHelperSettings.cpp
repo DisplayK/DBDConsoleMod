@@ -1,5 +1,6 @@
 #include "HISMMaterialHelperSettings.h"
 
-UHISMMaterialHelperSettings::UHISMMaterialHelperSettings() {
+UHISMMaterialHelperSettings::UHISMMaterialHelperSettings()
+{
+	this->_meshMaterialOverride = TMap<UStaticMesh*, TSoftClassPtr<UHierarchicalInstancedStaticMeshComponent>>();
 }
-

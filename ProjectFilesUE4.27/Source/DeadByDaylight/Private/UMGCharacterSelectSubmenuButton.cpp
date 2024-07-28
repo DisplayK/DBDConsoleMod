@@ -1,6 +1,6 @@
 #include "UMGCharacterSelectSubmenuButton.h"
 
-UUMGCharacterSelectSubmenuButton::UUMGCharacterSelectSubmenuButton() {
-    this->NotificationPanel = NULL;
+UUMGCharacterSelectSubmenuButton::UUMGCharacterSelectSubmenuButton()
+{
+	this->NotificationPanel = NULL;
 }
-

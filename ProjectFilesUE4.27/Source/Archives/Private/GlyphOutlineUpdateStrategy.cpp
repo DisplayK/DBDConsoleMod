@@ -1,5 +1,6 @@
 #include "GlyphOutlineUpdateStrategy.h"
 
-UGlyphOutlineUpdateStrategy::UGlyphOutlineUpdateStrategy() {
-}
+UGlyphOutlineUpdateStrategy::UGlyphOutlineUpdateStrategy()
+{
 
+}

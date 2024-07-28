@@ -1,6 +1,7 @@
 #include "AgonyDisplayFxEvent.h"
 
-FAgonyDisplayFxEvent::FAgonyDisplayFxEvent() {
-    this->Protagonist = EProtagonist::Instigator;
+FAgonyDisplayFxEvent::FAgonyDisplayFxEvent()
+{
+	this->GameEvent = FGameplayTag{};
+	this->Protagonist = EProtagonist::Instigator;
 }
-

@@ -1,6 +1,8 @@
 #include "OnboardingStepViewData.h"
 
-FOnboardingStepViewData::FOnboardingStepViewData() {
-    this->Status = EOnboardingStepStatus::Unavailable;
+FOnboardingStepViewData::FOnboardingStepViewData()
+{
+	this->StepId = TEXT("");
+	this->Status = EOnboardingStepStatus::Unavailable;
+	this->Tutorials = TArray<FOnboardingTutorialViewData>();
 }
-

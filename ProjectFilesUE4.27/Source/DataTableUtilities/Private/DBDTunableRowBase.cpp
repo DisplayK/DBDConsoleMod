@@ -1,5 +1,5 @@
 #include "DBDTunableRowBase.h"
 
-FDBDTunableRowBase::FDBDTunableRowBase() {
+FDBDTunableRowBase::FDBDTunableRowBase()
+{
 }
-

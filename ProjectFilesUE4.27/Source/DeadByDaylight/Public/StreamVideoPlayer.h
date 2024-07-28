@@ -1,55 +1,56 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "VideoPlayer.h"
+#include "GameFramework/Actor.h"
 #include "StreamVideoPlayer.generated.h"
 
-class UAudioComponent;
 class UUMGStreamVideoWidget;
+class UAudioComponent;
 class UMediaPlayer;
-class UMediaSoundComponent;
 class UStreamMediaSource;
+class UMediaSoundComponent;
 
 UCLASS()
-class DEADBYDAYLIGHT_API AStreamVideoPlayer : public AActor, public IVideoPlayer {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API AStreamVideoPlayer : public AActor, public IVideoPlayer
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    UMediaPlayer* MediaPlayer;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient)
-    UMediaSoundComponent* SoundComponent;
-    
-    UPROPERTY(Export, Transient)
-    UUMGStreamVideoWidget* StreamVideoWidget;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    UStreamMediaSource* StreamMediaSource;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UMediaPlayer* MediaPlayer;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(BindWidgetOptional))
+	UMediaSoundComponent* SoundComponent;
+
+	UPROPERTY(Transient, meta=(BindWidgetOptional))
+	UUMGStreamVideoWidget* StreamVideoWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	UStreamMediaSource* StreamMediaSource;
+
 private:
-    UPROPERTY(Export, Transient)
-    UAudioComponent* _audioComponent;
-    
+	UPROPERTY(Transient, Export)
+	UAudioComponent* _audioComponent;
+
+private:
+	UFUNCTION()
+	void OnVideoAssetLoaded();
+
+	UFUNCTION()
+	void OnSkipButtonTriggered();
+
+	UFUNCTION()
+	void OnMediaOpened(const FString& openedUrl);
+
+	UFUNCTION()
+	void OnMediaClosed();
+
+	UFUNCTION()
+	void OnEndReached();
+
 public:
-    AStreamVideoPlayer();
-private:
-    UFUNCTION()
-    void OnVideoAssetLoaded();
-    
-    UFUNCTION()
-    void OnSkipButtonTriggered();
-    
-    UFUNCTION()
-    void OnMediaOpened(const FString& openedUrl);
-    
-    UFUNCTION()
-    void OnMediaClosed();
-    
-    UFUNCTION()
-    void OnEndReached();
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	AStreamVideoPlayer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AStreamVideoPlayer) { return 0; }

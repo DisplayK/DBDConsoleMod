@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "AIBotsManager.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API UAIBotsManager : public UGameInstanceSubsystem {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UAIBotsManager : public UGameInstanceSubsystem
+{
+	GENERATED_BODY()
+
 public:
-    UAIBotsManager();
+	UAIBotsManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAIBotsManager) { return 0; }

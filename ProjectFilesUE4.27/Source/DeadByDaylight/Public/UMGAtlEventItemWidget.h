@@ -1,7 +1,8 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "EventItemsContentTypeUIData.h"
 #include "MobileBaseUserWidget.h"
+#include "EventItemsContentTypeUIData.h"
 #include "UMGAtlEventItemWidget.generated.h"
 
 class UImage;
@@ -9,44 +10,46 @@ class UTextBlock;
 class UCanvasPanel;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGAtlEventItemWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGAtlEventItemWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    UImage* SquareImageBackground;
-    
-    UPROPERTY(Export)
-    UImage* SquareRarityBackground;
-    
-    UPROPERTY(Export)
-    UImage* SquareIcon;
-    
-    UPROPERTY(Export)
-    UImage* PortraitImageBackground;
-    
-    UPROPERTY(Export)
-    UImage* PortraitRarityBackground;
-    
-    UPROPERTY(Export)
-    UImage* PortraitIcon;
-    
-    UPROPERTY(Export)
-    UTextBlock* NameText;
-    
-    UPROPERTY(Export)
-    UTextBlock* QuantityText;
-    
-    UPROPERTY(Export)
-    UCanvasPanel* PortraitCanvas;
-    
-    UPROPERTY(Export)
-    UCanvasPanel* SquareCanvas;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FEventItemsContentTypeUIData> ContentTypeUIData;
-    
+	UPROPERTY(meta=(BindWidgetOptional))
+	UImage* SquareImageBackground;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UImage* SquareRarityBackground;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UImage* SquareIcon;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UImage* PortraitImageBackground;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UImage* PortraitRarityBackground;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UImage* PortraitIcon;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* NameText;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* QuantityText;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UCanvasPanel* PortraitCanvas;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UCanvasPanel* SquareCanvas;
+
+	UPROPERTY(EditDefaultsOnly)
+	TArray<FEventItemsContentTypeUIData> ContentTypeUIData;
+
 public:
-    UUMGAtlEventItemWidget();
+	UUMGAtlEventItemWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlEventItemWidget) { return 0; }

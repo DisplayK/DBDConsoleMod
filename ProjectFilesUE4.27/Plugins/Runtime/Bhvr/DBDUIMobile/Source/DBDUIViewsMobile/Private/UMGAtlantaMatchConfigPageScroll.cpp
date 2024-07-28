@@ -1,5 +1,6 @@
 #include "UMGAtlantaMatchConfigPageScroll.h"
 
-UUMGAtlantaMatchConfigPageScroll::UUMGAtlantaMatchConfigPageScroll() {
-}
+UUMGAtlantaMatchConfigPageScroll::UUMGAtlantaMatchConfigPageScroll()
+{
 
+}

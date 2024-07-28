@@ -1,5 +1,6 @@
 #include "ProvingGroundManager.h"
 
-UProvingGroundManager::UProvingGroundManager() {
-}
+UProvingGroundManager::UProvingGroundManager()
+{
 
+}

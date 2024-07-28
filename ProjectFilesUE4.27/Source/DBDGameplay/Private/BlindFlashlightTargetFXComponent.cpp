@@ -1,5 +1,6 @@
 #include "BlindFlashlightTargetFXComponent.h"
 
-UBlindFlashlightTargetFXComponent::UBlindFlashlightTargetFXComponent() {
-}
+UBlindFlashlightTargetFXComponent::UBlindFlashlightTargetFXComponent()
+{
 
+}

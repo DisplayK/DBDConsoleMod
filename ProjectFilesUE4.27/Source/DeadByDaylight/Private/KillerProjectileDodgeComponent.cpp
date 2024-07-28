@@ -2,16 +2,23 @@
 
 class AActor;
 
-void UKillerProjectileDodgeComponent::OnKillerProjectileLaunched() {
+void UKillerProjectileDodgeComponent::OnKillerProjectileLaunched()
+{
+
 }
 
-void UKillerProjectileDodgeComponent::OnKillerProjectileFinishedWithoutCollision() {
+void UKillerProjectileDodgeComponent::OnKillerProjectileFinishedWithoutCollision()
+{
+
 }
 
-void UKillerProjectileDodgeComponent::OnKillerProjectileFinished(AActor* survivorHit) {
+void UKillerProjectileDodgeComponent::OnKillerProjectileFinished(AActor* survivorHit)
+{
+
 }
 
-UKillerProjectileDodgeComponent::UKillerProjectileDodgeComponent() {
-    this->_killerProjectile = NULL;
+UKillerProjectileDodgeComponent::UKillerProjectileDodgeComponent()
+{
+	this->_killerProjectile = NULL;
+	this->_proximitySurvivors = TArray<ACamperPlayer*>();
 }
-

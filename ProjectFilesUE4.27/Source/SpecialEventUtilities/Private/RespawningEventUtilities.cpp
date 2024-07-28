@@ -1,5 +1,6 @@
 #include "RespawningEventUtilities.h"
 
-URespawningEventUtilities::URespawningEventUtilities() {
-}
+URespawningEventUtilities::URespawningEventUtilities()
+{
 
+}

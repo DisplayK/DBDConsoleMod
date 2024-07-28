@@ -1,5 +1,6 @@
 #include "TimedObliviousEffect.h"
 
-UTimedObliviousEffect::UTimedObliviousEffect() {
-}
+UTimedObliviousEffect::UTimedObliviousEffect()
+{
 
+}

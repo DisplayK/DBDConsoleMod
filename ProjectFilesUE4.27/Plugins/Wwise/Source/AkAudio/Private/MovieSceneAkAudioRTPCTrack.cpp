@@ -1,5 +1,6 @@
 #include "MovieSceneAkAudioRTPCTrack.h"
 
-UMovieSceneAkAudioRTPCTrack::UMovieSceneAkAudioRTPCTrack() {
-}
+UMovieSceneAkAudioRTPCTrack::UMovieSceneAkAudioRTPCTrack()
+{
 
+}

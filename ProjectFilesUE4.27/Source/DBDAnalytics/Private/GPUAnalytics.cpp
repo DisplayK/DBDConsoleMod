@@ -1,7 +1,10 @@
 #include "GPUAnalytics.h"
 
-FGPUAnalytics::FGPUAnalytics() {
-    this->AverageMS = 0.00f;
-    this->StdDevMs = 0.00f;
+FGPUAnalytics::FGPUAnalytics()
+{
+	this->MatchId = TEXT("");
+	this->MapName = TEXT("");
+	this->Marker = TEXT("");
+	this->AverageMS = 0.0f;
+	this->StdDevMs = 0.0f;
 }
-

@@ -1,5 +1,6 @@
 #include "MatchHistorySubsystem.h"
 
-UMatchHistorySubsystem::UMatchHistorySubsystem() {
+UMatchHistorySubsystem::UMatchHistorySubsystem()
+{
+	this->_splinteredStatesSubsystem = NULL;
 }
-

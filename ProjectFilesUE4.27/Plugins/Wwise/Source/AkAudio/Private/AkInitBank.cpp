@@ -1,5 +1,7 @@
 #include "AkInitBank.h"
 
-UAkInitBank::UAkInitBank() {
+UAkInitBank::UAkInitBank()
+{
+	this->AvailableAudioCultures = TArray<FString>();
+	this->DefaultLanguage = TEXT("");
 }
-

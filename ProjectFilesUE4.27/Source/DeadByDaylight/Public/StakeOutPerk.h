@@ -1,28 +1,31 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Perk.h"
 #include "StakeOutPerk.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UStakeOutPerk : public UPerk {
-    GENERATED_BODY()
-public:
+class UStakeOutPerk : public UPerk
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<int32> MaxTokensByLevel;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float TokenChargeTime;
-    
-public:
-    UStakeOutPerk();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<int32> MaxTokensByLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float TokenChargeTime;
+
 protected:
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_ConsumeToken();
-    
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_ConsumeToken();
+
 public:
-    UFUNCTION(BlueprintCallable)
-    void Local_BroadcastConsumeToken();
-    
+	UFUNCTION(BlueprintCallable)
+	void Local_BroadcastConsumeToken();
+
+public:
+	UStakeOutPerk();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UStakeOutPerk) { return 0; }

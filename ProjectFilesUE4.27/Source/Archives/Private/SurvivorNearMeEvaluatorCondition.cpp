@@ -1,5 +1,6 @@
 #include "SurvivorNearMeEvaluatorCondition.h"
 
-USurvivorNearMeEvaluatorCondition::USurvivorNearMeEvaluatorCondition() {
-}
+USurvivorNearMeEvaluatorCondition::USurvivorNearMeEvaluatorCondition()
+{
 
+}

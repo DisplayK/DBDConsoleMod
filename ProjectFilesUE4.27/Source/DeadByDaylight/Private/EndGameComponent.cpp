@@ -1,24 +1,37 @@
 #include "EndGameComponent.h"
+#include "GameEventData.h"
 
-void UEndGameComponent::UnpauseEndGameTimer() {
+void UEndGameComponent::UnpauseEndGameTimer()
+{
+
 }
 
-void UEndGameComponent::StartEndGame_Cheat() {
+void UEndGameComponent::StartEndGame_Cheat()
+{
+
 }
 
-void UEndGameComponent::PauseEndGameTimer() {
+void UEndGameComponent::PauseEndGameTimer()
+{
+
 }
 
-bool UEndGameComponent::GetHasEndGameBegun() const {
-    return false;
+bool UEndGameComponent::GetHasEndGameBegun() const
+{
+	return false;
 }
 
-void UEndGameComponent::FireEndGameSacrificeScoreEvent(const FGameEventData gameEventData) {
+void UEndGameComponent::FireEndGameSacrificeScoreEvent(const FGameEventData gameEventData)
+{
+
 }
 
-void UEndGameComponent::DisableEndGameScenario() {
+void UEndGameComponent::DisableEndGameScenario()
+{
+
 }
 
-UEndGameComponent::UEndGameComponent() {
-}
+UEndGameComponent::UEndGameComponent()
+{
 
+}

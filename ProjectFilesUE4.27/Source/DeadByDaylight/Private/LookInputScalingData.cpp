@@ -1,5 +1,5 @@
 #include "LookInputScalingData.h"
 
-FLookInputScalingData::FLookInputScalingData() {
+FLookInputScalingData::FLookInputScalingData()
+{
 }
-

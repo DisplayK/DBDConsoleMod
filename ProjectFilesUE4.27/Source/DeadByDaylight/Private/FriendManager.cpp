@@ -1,5 +1,6 @@
 #include "FriendManager.h"
 
-UFriendManager::UFriendManager() {
-}
+UFriendManager::UFriendManager()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "ShopTransactionItem.h"
 
-FShopTransactionItem::FShopTransactionItem() {
+FShopTransactionItem::FShopTransactionItem()
+{
+	this->item = FShopTransactionItemParameters{};
 }
-

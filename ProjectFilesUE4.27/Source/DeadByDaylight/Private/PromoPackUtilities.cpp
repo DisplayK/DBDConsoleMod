@@ -1,5 +1,6 @@
 #include "PromoPackUtilities.h"
 
-UPromoPackUtilities::UPromoPackUtilities() {
-}
+UPromoPackUtilities::UPromoPackUtilities()
+{
 
+}

@@ -1,6 +1,6 @@
 #include "CoreHudObjectivesWidget.h"
 
-UCoreHudObjectivesWidget::UCoreHudObjectivesWidget() {
-    this->SpecialSpacer = NULL;
+UCoreHudObjectivesWidget::UCoreHudObjectivesWidget()
+{
+	this->SpecialSpacer = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "PumpkinInteraction.h"
 
-UPumpkinInteraction::UPumpkinInteraction() {
-}
+UPumpkinInteraction::UPumpkinInteraction()
+{
 
+}

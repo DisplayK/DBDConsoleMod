@@ -1,5 +1,6 @@
 #include "DBDRecentGameplayEvents.h"
 
-FDBDRecentGameplayEvents::FDBDRecentGameplayEvents() {
+FDBDRecentGameplayEvents::FDBDRecentGameplayEvents()
+{
+	this->_recentGameplayEvents = TMap<EDBDScoreTypes, FDateTime>();
 }
-

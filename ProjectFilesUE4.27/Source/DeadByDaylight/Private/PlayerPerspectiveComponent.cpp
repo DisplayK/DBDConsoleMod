@@ -1,12 +1,24 @@
 #include "PlayerPerspectiveComponent.h"
 
-void UPlayerPerspectiveComponent::UpdateLocallyObserved() {
+class APawn;
+class AController;
+
+void UPlayerPerspectiveComponent::UpdateLocallyObserved()
+{
+
 }
 
-bool UPlayerPerspectiveComponent::IsLocallyObserved() const {
-    return false;
+void UPlayerPerspectiveComponent::OnPawnControllerChanged(APawn* pawn, AController* oldController, AController* newController)
+{
+
 }
 
-UPlayerPerspectiveComponent::UPlayerPerspectiveComponent() {
+bool UPlayerPerspectiveComponent::IsLocallyObserved() const
+{
+	return false;
 }
 
+UPlayerPerspectiveComponent::UPlayerPerspectiveComponent()
+{
+
+}

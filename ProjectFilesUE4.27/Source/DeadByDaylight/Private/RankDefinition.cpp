@@ -1,6 +1,6 @@
 #include "RankDefinition.h"
 
-FRankDefinition::FRankDefinition() {
-    this->PipsRequired = 0;
+FRankDefinition::FRankDefinition()
+{
+	this->PipsRequired = 0;
 }
-

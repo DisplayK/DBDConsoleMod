@@ -1,5 +1,5 @@
 #include "TestableActivationDefinition.h"
 
-FTestableActivationDefinition::FTestableActivationDefinition() {
+FTestableActivationDefinition::FTestableActivationDefinition()
+{
 }
-

@@ -1,8 +1,11 @@
 #include "AkWinGDKInitializationSettings.h"
 
-void UAkWinGDKInitializationSettings::MigrateMultiCoreRendering(bool NewValue) {
+void UAkWinGDKInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
+{
+
 }
 
-UAkWinGDKInitializationSettings::UAkWinGDKInitializationSettings() {
-}
+UAkWinGDKInitializationSettings::UAkWinGDKInitializationSettings()
+{
 
+}

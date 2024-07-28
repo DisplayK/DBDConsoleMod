@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PounceAttackMissSubstate.h"
 #include "OniDemonPowerAttackMissSubstate.generated.h"
 
 UCLASS()
-class THEONI_API UOniDemonPowerAttackMissSubstate : public UPounceAttackMissSubstate {
-    GENERATED_BODY()
+class THEONI_API UOniDemonPowerAttackMissSubstate : public UPounceAttackMissSubstate
+{
+	GENERATED_BODY()
+
 public:
-    UOniDemonPowerAttackMissSubstate();
+	UOniDemonPowerAttackMissSubstate();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UOniDemonPowerAttackMissSubstate) { return 0; }

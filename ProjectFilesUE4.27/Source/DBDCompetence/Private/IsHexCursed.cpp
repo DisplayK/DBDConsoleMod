@@ -1,5 +1,6 @@
 #include "IsHexCursed.h"
 
-UIsHexCursed::UIsHexCursed() {
-}
+UIsHexCursed::UIsHexCursed()
+{
 
+}

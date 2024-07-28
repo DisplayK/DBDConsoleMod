@@ -1,5 +1,6 @@
 #include "GameVersionMessage.h"
 
-FGameVersionMessage::FGameVersionMessage() {
+FGameVersionMessage::FGameVersionMessage()
+{
+	this->Version = TEXT("");
 }
-

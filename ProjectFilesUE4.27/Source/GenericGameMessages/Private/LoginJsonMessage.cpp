@@ -1,6 +1,9 @@
 #include "LoginJsonMessage.h"
 
-FLoginJsonMessage::FLoginJsonMessage() {
-    this->IsNewAccount = false;
+FLoginJsonMessage::FLoginJsonMessage()
+{
+	this->LoginJson = TEXT("");
+	this->LoginType = TEXT("");
+	this->RoleID = TEXT("");
+	this->IsNewAccount = false;
 }
-

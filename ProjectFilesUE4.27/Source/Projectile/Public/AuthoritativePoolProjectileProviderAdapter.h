@@ -1,25 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "ProjectileProvider.h"
+#include "UObject/NoExportTypes.h"
 #include "AuthoritativePoolProjectileProviderAdapter.generated.h"
 
 class UAuthoritativeActorPoolComponent;
 
 UCLASS(BlueprintType)
-class PROJECTILE_API UAuthoritativePoolProjectileProviderAdapter : public UObject, public IProjectileProvider {
-    GENERATED_BODY()
-public:
+class PROJECTILE_API UAuthoritativePoolProjectileProviderAdapter : public UObject, public IProjectileProvider
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UAuthoritativeActorPoolComponent* _pool;
-    
+	UPROPERTY(Transient, Export)
+	UAuthoritativeActorPoolComponent* _pool;
+
 public:
-    UAuthoritativePoolProjectileProviderAdapter();
-    UFUNCTION(BlueprintCallable)
-    void Init(UAuthoritativeActorPoolComponent* pool);
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintCallable)
+	void Init(UAuthoritativeActorPoolComponent* pool);
+
+public:
+	UAuthoritativePoolProjectileProviderAdapter();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAuthoritativePoolProjectileProviderAdapter) { return 0; }

@@ -1,5 +1,6 @@
 #include "SurvivorTormentTrailDetector.h"
 
-USurvivorTormentTrailDetector::USurvivorTormentTrailDetector() {
-}
+USurvivorTormentTrailDetector::USurvivorTormentTrailDetector()
+{
 
+}

@@ -1,8 +1,11 @@
 #include "ProtectionHitComponent.h"
 
-void UProtectionHitComponent::Authority_HandleProtectionScoringEvents() {
+void UProtectionHitComponent::Authority_HandleProtectionScoringEvents()
+{
+
 }
 
-UProtectionHitComponent::UProtectionHitComponent() {
+UProtectionHitComponent::UProtectionHitComponent()
+{
+	this->_nearbyInjuredSurvivors = TArray<ACamperPlayer*>();
 }
-

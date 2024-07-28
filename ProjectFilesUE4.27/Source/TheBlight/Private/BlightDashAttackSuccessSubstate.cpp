@@ -1,5 +1,6 @@
 #include "BlightDashAttackSuccessSubstate.h"
 
-UBlightDashAttackSuccessSubstate::UBlightDashAttackSuccessSubstate() {
-}
+UBlightDashAttackSuccessSubstate::UBlightDashAttackSuccessSubstate()
+{
 
+}

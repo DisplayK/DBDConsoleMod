@@ -1,5 +1,6 @@
 #include "TargetWasTargetedByEventRecentlyEvaluator.h"
 
-UTargetWasTargetedByEventRecentlyEvaluator::UTargetWasTargetedByEventRecentlyEvaluator() {
+UTargetWasTargetedByEventRecentlyEvaluator::UTargetWasTargetedByEventRecentlyEvaluator()
+{
+	this->_gameEventsToTriggerFirst = TArray<FGameplayTag>();
 }
-

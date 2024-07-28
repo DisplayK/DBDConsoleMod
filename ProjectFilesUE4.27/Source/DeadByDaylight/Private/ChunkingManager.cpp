@@ -1,6 +1,6 @@
 #include "ChunkingManager.h"
 
-UChunkingManager::UChunkingManager() {
-    this->_gameInstance = NULL;
+UChunkingManager::UChunkingManager()
+{
+	this->_gameInstance = NULL;
 }
-

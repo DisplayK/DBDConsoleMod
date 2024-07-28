@@ -2,11 +2,14 @@
 
 class ADBDPlayer;
 
-void UDBDEmblem_KillerChaser::OnChaseStart(ADBDPlayer* chasedPlayer) {
+void UDBDEmblem_KillerChaser::OnChaseStart(ADBDPlayer* chasedPlayer)
+{
+
 }
 
-UDBDEmblem_KillerChaser::UDBDEmblem_KillerChaser() {
-    this->_chasePointsByDurationCurve = NULL;
-    this->_rankTunablesClass = NULL;
+UDBDEmblem_KillerChaser::UDBDEmblem_KillerChaser()
+{
+	this->_chasePointsByDurationCurve = NULL;
+	this->_hookedPlayersPenaltyDelay = TMap<ACamperPlayer*, float>();
+	this->_rankTunablesClass = NULL;
 }
-

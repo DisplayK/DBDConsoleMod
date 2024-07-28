@@ -1,5 +1,6 @@
 #include "DBDLobbyHud.h"
 
-ADBDLobbyHud::ADBDLobbyHud() {
-}
+ADBDLobbyHud::ADBDLobbyHud()
+{
 
+}

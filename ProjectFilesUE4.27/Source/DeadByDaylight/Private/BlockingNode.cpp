@@ -1,6 +1,7 @@
 #include "BlockingNode.h"
 
-FBlockingNode::FBlockingNode() {
-    this->BlockingCount = 0;
+FBlockingNode::FBlockingNode()
+{
+	this->Id = TEXT("");
+	this->BlockingCount = 0;
 }
-

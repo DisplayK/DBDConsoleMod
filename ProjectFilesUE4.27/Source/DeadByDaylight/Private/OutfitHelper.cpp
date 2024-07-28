@@ -1,5 +1,6 @@
 #include "OutfitHelper.h"
 
-UOutfitHelper::UOutfitHelper() {
-}
+UOutfitHelper::UOutfitHelper()
+{
 
+}

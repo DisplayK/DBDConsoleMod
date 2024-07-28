@@ -1,5 +1,6 @@
 #include "DBDAttackOpenSubstate.h"
 
-UDBDAttackOpenSubstate::UDBDAttackOpenSubstate() {
-}
+UDBDAttackOpenSubstate::UDBDAttackOpenSubstate()
+{
 
+}

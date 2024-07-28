@@ -1,23 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UMGPromoPackItemWidget.h"
 #include "UMGStorefrontCustomizationWidget.generated.h"
 
-class UTextBlock;
 class UCanvasPanel;
+class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGStorefrontCustomizationWidget : public UUMGPromoPackItemWidget {
-    GENERATED_BODY()
-public:
+class UUMGStorefrontCustomizationWidget : public UUMGPromoPackItemWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* CustomizationQuantityText;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* CustomizationQuantityPanel;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* CustomizationQuantityText;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* CustomizationQuantityPanel;
+
 public:
-    UUMGStorefrontCustomizationWidget();
+	UUMGStorefrontCustomizationWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGStorefrontCustomizationWidget) { return 0; }

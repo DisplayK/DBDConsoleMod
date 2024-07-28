@@ -1,5 +1,6 @@
 #include "HasGameplayTagEvaluatorCondition.h"
 
-UHasGameplayTagEvaluatorCondition::UHasGameplayTagEvaluatorCondition() {
+UHasGameplayTagEvaluatorCondition::UHasGameplayTagEvaluatorCondition()
+{
+	this->_gameplayTagList = TArray<FGameplayTag>();
 }
-

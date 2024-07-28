@@ -1,5 +1,6 @@
 #include "SerializablePlayerStatsProgression.h"
 
-FSerializablePlayerStatsProgression::FSerializablePlayerStatsProgression() {
+FSerializablePlayerStatsProgression::FSerializablePlayerStatsProgression()
+{
+	this->StatsProgression = TArray<FStatsProgressionData>();
 }
-

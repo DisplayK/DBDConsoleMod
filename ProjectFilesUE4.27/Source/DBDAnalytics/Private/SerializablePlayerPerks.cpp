@@ -1,5 +1,6 @@
 #include "SerializablePlayerPerks.h"
 
-FSerializablePlayerPerks::FSerializablePlayerPerks() {
+FSerializablePlayerPerks::FSerializablePlayerPerks()
+{
+	this->Perks = TMap<FName, int32>();
 }
-

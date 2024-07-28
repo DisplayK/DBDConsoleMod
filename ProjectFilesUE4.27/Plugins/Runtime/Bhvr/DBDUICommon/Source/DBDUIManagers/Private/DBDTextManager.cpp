@@ -1,9 +1,11 @@
 #include "DBDTextManager.h"
 
-bool UDBDTextManager::GetLargeTextEnabled() const {
-    return false;
+bool UDBDTextManager::GetLargeTextEnabled() const
+{
+	return false;
 }
 
-UDBDTextManager::UDBDTextManager() {
-}
+UDBDTextManager::UDBDTextManager()
+{
 
+}

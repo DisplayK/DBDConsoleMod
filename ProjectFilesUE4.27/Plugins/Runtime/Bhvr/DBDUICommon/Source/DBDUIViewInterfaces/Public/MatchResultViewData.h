@@ -1,25 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EGameState.h"
-#include "EKillerResult.h"
+#include "EKillerMatchResult.h"
 #include "MatchResultViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct DBDUIVIEWINTERFACES_API FMatchResultViewData {
-    GENERATED_BODY()
+struct FMatchResultViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsSlasher;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EGameState SurvivorResult;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EKillerResult KillerResult;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float Duration;
-    
-    FMatchResultViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsSlasher;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EGameState SurvivorResult;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EKillerMatchResult KillerResult;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Duration;
+
+public:
+	DBDUIVIEWINTERFACES_API FMatchResultViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FMatchResultViewData) { return 0; }

@@ -1,289 +1,375 @@
 #include "AtlantaUtilities.h"
+#include "Styling/SlateBrush.h"
+#include "EPlayerRole.h"
+#include "EOfferingCategory.h"
+#include "UObject/NoExportTypes.h"
+#include "Styling/SlateColor.h"
+#include "EItemRarity.h"
+#include "EAIDifficultyLevel.h"
+#include "ECurrencyType.h"
+#include "EItemAvailability.h"
+#include "EEmblemQuality.h"
+#include "EInputInteractionType.h"
 
-class UImage;
-class UPaperSprite;
 class UTexture2D;
-class ADBDPlayer;
-class UButton;
 class AActor;
+class UImage;
+class UButton;
+class UPaperSprite;
+class ADBDPlayer;
 class UInteractionDefinition;
 
-bool UAtlantaUtilities::ShouldUseQuickRoleSwitch() {
-    return false;
+bool UAtlantaUtilities::ShouldUseQuickRoleSwitch()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseOfflineMatchHistory() {
-    return false;
+bool UAtlantaUtilities::ShouldUseOfflineMatchHistory()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaUI() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaUI()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaStreamVideo() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaStreamVideo()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaRituals() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaRituals()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaRank() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaRank()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaQualitySettings() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaQualitySettings()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaPurchasableOperations() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaPurchasableOperations()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaOutlines() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaOutlines()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaMatchmaking() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaMatchmaking()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaLighting() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaLighting()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaKrakenContentVersion() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaKrakenContentVersion()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaItemAvailability() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaItemAvailability()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaHudEditor() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaHudEditor()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaHudAttackJoystick() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaHudAttackJoystick()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaGameplayValues() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaGameplayValues()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaFriendList() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaFriendList()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaFreeTickets() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaFreeTickets()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaFixedMaps() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaFixedMaps()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaFearMarket() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaFearMarket()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaEntity() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaEntity()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaDreamworldFX() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaDreamworldFX()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaDailyRewards() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaDailyRewards()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaCustomizedHudSettings() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaCustomizedHudSettings()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaCurrencies() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaCurrencies()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaContent() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaContent()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaCharacterProgression() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaCharacterProgression()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaCDNPatching() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaCDNPatching()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaCDNBucketChangelist() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaCDNBucketChangelist()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaCatalog() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaCatalog()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaBundleFilterRules() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaBundleFilterRules()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaBloodweb() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaBloodweb()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldUseAtlantaBackendBloodMarketData() {
-    return false;
+bool UAtlantaUtilities::ShouldUseAtlantaBackendBloodMarketData()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::ShouldSupportMultipleActiveActivatablePerks() {
-    return false;
+bool UAtlantaUtilities::ShouldSupportMultipleActiveActivatablePerks()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::SetImageSlateBrush(UImage* image, const FSlateBrush& brush, bool bMatchSize) {
-    return false;
+bool UAtlantaUtilities::SetImageSlateBrush(UImage* image, const FSlateBrush& brush, bool bMatchSize)
+{
+	return false;
 }
 
-void UAtlantaUtilities::SetImageBrushFromSpritePath(UImage* image, const FString& path) {
-}
+void UAtlantaUtilities::SetImageBrushFromSpritePath(UImage* image, const FString& path)
+{
 
-void UAtlantaUtilities::SetImageBrushFromPath(UImage* image, const FString& path, bool bMatchSize) {
 }
 
-void UAtlantaUtilities::SetImageBrush(UImage* image, UTexture2D* asset, bool bMatchSize) {
+void UAtlantaUtilities::SetImageBrushFromPath(UImage* image, const FString& path, bool bMatchSize)
+{
+
 }
+
+void UAtlantaUtilities::SetImageBrush(UImage* image, UTexture2D* asset, bool bMatchSize)
+{
 
-void UAtlantaUtilities::SetButtonStyle(UButton* button, const FSlateBrush& brush) {
 }
 
-FString UAtlantaUtilities::SecondsToStringWithoutDecimals(const int32 seconds) {
-    return TEXT("");
+void UAtlantaUtilities::SetButtonStyle(UButton* button, const FSlateBrush& brush)
+{
+
 }
 
-FSlateBrush UAtlantaUtilities::MakeBrushFromTexture(UTexture2D* texture) {
-    return FSlateBrush{};
+FString UAtlantaUtilities::SecondsToStringWithoutDecimals(const int32 seconds)
+{
+	return TEXT("");
 }
 
-FSlateBrush UAtlantaUtilities::MakeBrushFromSprite(UPaperSprite* sprite) {
-    return FSlateBrush{};
+FSlateBrush UAtlantaUtilities::MakeBrushFromTexture(UTexture2D* texture)
+{
+	return FSlateBrush{};
 }
 
-UTexture2D* UAtlantaUtilities::LoadTextureByAsset(const FString& path) {
-    return NULL;
+FSlateBrush UAtlantaUtilities::MakeBrushFromSprite(UPaperSprite* sprite)
+{
+	return FSlateBrush{};
 }
 
-bool UAtlantaUtilities::IsTutorialEditorDebuggingEnabled() {
-    return false;
+UTexture2D* UAtlantaUtilities::LoadTextureByAsset(const FString& path)
+{
+	return NULL;
 }
 
-bool UAtlantaUtilities::IsPlayerInteractingWithActor(ADBDPlayer* player, const AActor* actor) {
-    return false;
+bool UAtlantaUtilities::IsTutorialEditorDebuggingEnabled()
+{
+	return false;
 }
 
-bool UAtlantaUtilities::IsInAtlantaTutorialLevel() {
-    return false;
+bool UAtlantaUtilities::IsPlayerInteractingWithActor(ADBDPlayer* player, const AActor* actor)
+{
+	return false;
 }
 
-FString UAtlantaUtilities::GetStoreVersion() {
-    return TEXT("");
+bool UAtlantaUtilities::IsInAtlantaTutorialLevel()
+{
+	return false;
 }
 
-UPaperSprite* UAtlantaUtilities::GetSpriteFromPath(const FString& fullDbPathToImage, const FString& constantDbPathToImageFolder, const FString& constantPathToSpriteFolder) {
-    return NULL;
+FString UAtlantaUtilities::GetStoreVersion()
+{
+	return TEXT("");
 }
 
-UPaperSprite* UAtlantaUtilities::GetSpriteFromFullPath(const FString& fullSpritePath) {
-    return NULL;
+UPaperSprite* UAtlantaUtilities::GetSpriteFromPath(const FString& fullDbPathToImage, const FString& constantDbPathToImageFolder, const FString& constantPathToSpriteFolder)
+{
+	return NULL;
 }
 
-FText UAtlantaUtilities::GetPlayerRoleTextUppercase(const EPlayerRole playerRole) {
-    return FText::GetEmpty();
+UPaperSprite* UAtlantaUtilities::GetSpriteFromFullPath(const FString& fullSpritePath)
+{
+	return NULL;
 }
 
-FText UAtlantaUtilities::GetPlayerRoleText(const EPlayerRole playerRole) {
-    return FText::GetEmpty();
+FText UAtlantaUtilities::GetPlayerRoleTextUppercase(const EPlayerRole playerRole)
+{
+	return FText::GetEmpty();
 }
 
-FColor UAtlantaUtilities::GetPaintColorByRarity(const EItemRarity rarity) {
-    return FColor{};
+FText UAtlantaUtilities::GetPlayerRoleText(const EPlayerRole playerRole)
+{
+	return FText::GetEmpty();
 }
 
-FText UAtlantaUtilities::GetOfferingCategoryText(const EOfferingCategory offeringCategory) {
-    return FText::GetEmpty();
+FColor UAtlantaUtilities::GetPaintColorByRarity(const EItemRarity rarity)
+{
+	return FColor{};
 }
 
-UPaperSprite* UAtlantaUtilities::GetMapSpriteFromPath(const FString& mapSpritePath) {
-    return NULL;
+FText UAtlantaUtilities::GetOfferingCategoryText(const EOfferingCategory offeringCategory)
+{
+	return FText::GetEmpty();
 }
 
-FText UAtlantaUtilities::GetItemRarityText(const EItemRarity rarity) {
-    return FText::GetEmpty();
+UPaperSprite* UAtlantaUtilities::GetMapSpriteFromPath(const FString& mapSpritePath)
+{
+	return NULL;
 }
 
-FText UAtlantaUtilities::GetItemAvailabilityText(const EItemAvailability availability) {
-    return FText::GetEmpty();
+FText UAtlantaUtilities::GetItemRarityText(const EItemRarity rarity)
+{
+	return FText::GetEmpty();
 }
 
-UTexture2D* UAtlantaUtilities::GetIconImageByPath(const FString& iconPath) {
-    return NULL;
+FText UAtlantaUtilities::GetItemAvailabilityText(const EItemAvailability availability)
+{
+	return FText::GetEmpty();
 }
 
-FText UAtlantaUtilities::GetEmblemQualityText(const EEmblemQuality emblemQuality) {
-    return FText::GetEmpty();
+UTexture2D* UAtlantaUtilities::GetIconImageByPath(const FString& iconPath)
+{
+	return NULL;
 }
 
-FColor UAtlantaUtilities::GetEmblemColorByQuality(const EEmblemQuality emblemQuality) {
-    return FColor{};
+FText UAtlantaUtilities::GetEmblemQualityText(const EEmblemQuality emblemQuality)
+{
+	return FText::GetEmpty();
 }
 
-FText UAtlantaUtilities::GetDifficultyLevelText(const EAIDifficultyLevel difficultyLevel) {
-    return FText::GetEmpty();
+FColor UAtlantaUtilities::GetEmblemColorByQuality(const EEmblemQuality emblemQuality)
+{
+	return FColor{};
 }
 
-UInteractionDefinition* UAtlantaUtilities::GetCurrentOrAvailableInteractionOfType(ADBDPlayer* player, EInputInteractionType interactionInputType) {
-    return NULL;
+FText UAtlantaUtilities::GetDifficultyLevelText(const EAIDifficultyLevel difficultyLevel)
+{
+	return FText::GetEmpty();
 }
 
-UInteractionDefinition* UAtlantaUtilities::GetCurrentInteractionOfType(ADBDPlayer* player, EInputInteractionType interactionInputType) {
-    return NULL;
+UInteractionDefinition* UAtlantaUtilities::GetCurrentOrAvailableInteractionOfType(ADBDPlayer* player, EInputInteractionType interactionInputType)
+{
+	return NULL;
 }
 
-UInteractionDefinition* UAtlantaUtilities::GetCurrentInteraction(ADBDPlayer* player) {
-    return NULL;
+UInteractionDefinition* UAtlantaUtilities::GetCurrentInteractionOfType(ADBDPlayer* player, EInputInteractionType interactionInputType)
+{
+	return NULL;
 }
 
-FString UAtlantaUtilities::GetCurrencyUITexturePath(ECurrencyType currencyType) {
-    return TEXT("");
+UInteractionDefinition* UAtlantaUtilities::GetCurrentInteraction(ADBDPlayer* player)
+{
+	return NULL;
 }
 
-FSlateColor UAtlantaUtilities::GetCurrencyColor(ECurrencyType currencyType) {
-    return FSlateColor{};
+FString UAtlantaUtilities::GetCurrencyUITexturePath(ECurrencyType currencyType)
+{
+	return TEXT("");
 }
 
-float UAtlantaUtilities::GetControlsTunableByRole(EPlayerRole playerRole, FName tunableValueName) {
-    return 0.0f;
+FSlateColor UAtlantaUtilities::GetCurrencyColor(ECurrencyType currencyType)
+{
+	return FSlateColor{};
 }
 
-float UAtlantaUtilities::GetControlsTunable(FName tunableValueName) {
-    return 0.0f;
+float UAtlantaUtilities::GetControlsTunableByRole(EPlayerRole playerRole, FName tunableValueName)
+{
+	return 0.0f;
 }
 
-FColor UAtlantaUtilities::GetBackgroundColorByRarity(const EItemRarity rarity) {
-    return FColor{};
+float UAtlantaUtilities::GetControlsTunable(FName tunableValueName)
+{
+	return 0.0f;
 }
 
-UInteractionDefinition* UAtlantaUtilities::GetAvailableInteractionOfType(ADBDPlayer* player, EInputInteractionType interactionInputType) {
-    return NULL;
+FColor UAtlantaUtilities::GetBackgroundColorByRarity(const EItemRarity rarity)
+{
+	return FColor{};
 }
 
-FText UAtlantaUtilities::GetAlantaInteractionDescriptionText(UInteractionDefinition* interaction) {
-    return FText::GetEmpty();
+UInteractionDefinition* UAtlantaUtilities::GetAvailableInteractionOfType(ADBDPlayer* player, EInputInteractionType interactionInputType)
+{
+	return NULL;
 }
 
-UAtlantaUtilities::UAtlantaUtilities() {
+FText UAtlantaUtilities::GetAlantaInteractionDescriptionText(UInteractionDefinition* interaction)
+{
+	return FText::GetEmpty();
 }
 
+UAtlantaUtilities::UAtlantaUtilities()
+{
+
+}

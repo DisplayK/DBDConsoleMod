@@ -1,5 +1,6 @@
 #include "PlayerProfileDAL.h"
 
-UPlayerProfileDAL::UPlayerProfileDAL() {
-}
+UPlayerProfileDAL::UPlayerProfileDAL()
+{
 
+}

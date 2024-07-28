@@ -1,5 +1,6 @@
 #include "BloodwebManagerMock.h"
 
-UBloodwebManagerMock::UBloodwebManagerMock() {
-}
+UBloodwebManagerMock::UBloodwebManagerMock()
+{
 
+}

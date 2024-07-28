@@ -2,9 +2,12 @@
 
 class ASlasherPlayer;
 
-void USpiritHuskOutlineUpdateStrategy::OnSlasherSet(ASlasherPlayer* slasher) {
+void USpiritHuskOutlineUpdateStrategy::OnSlasherSet(ASlasherPlayer* slasher)
+{
+
 }
 
-USpiritHuskOutlineUpdateStrategy::USpiritHuskOutlineUpdateStrategy() {
-}
+USpiritHuskOutlineUpdateStrategy::USpiritHuskOutlineUpdateStrategy()
+{
 
+}

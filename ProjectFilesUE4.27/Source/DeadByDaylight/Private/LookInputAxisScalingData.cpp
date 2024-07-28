@@ -1,5 +1,6 @@
 #include "LookInputAxisScalingData.h"
 
-FLookInputAxisScalingData::FLookInputAxisScalingData() {
+FLookInputAxisScalingData::FLookInputAxisScalingData()
+{
+	this->ScalingTimer = FDBDTimer{};
 }
-

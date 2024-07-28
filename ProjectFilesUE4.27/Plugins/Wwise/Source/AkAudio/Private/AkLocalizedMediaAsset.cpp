@@ -1,5 +1,6 @@
 #include "AkLocalizedMediaAsset.h"
 
-UAkLocalizedMediaAsset::UAkLocalizedMediaAsset() {
-}
+UAkLocalizedMediaAsset::UAkLocalizedMediaAsset()
+{
 
+}

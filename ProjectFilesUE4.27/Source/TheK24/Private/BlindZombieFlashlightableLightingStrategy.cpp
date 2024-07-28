@@ -1,5 +1,6 @@
 #include "BlindZombieFlashlightableLightingStrategy.h"
 
-UBlindZombieFlashlightableLightingStrategy::UBlindZombieFlashlightableLightingStrategy() {
-}
+UBlindZombieFlashlightableLightingStrategy::UBlindZombieFlashlightableLightingStrategy()
+{
 
+}

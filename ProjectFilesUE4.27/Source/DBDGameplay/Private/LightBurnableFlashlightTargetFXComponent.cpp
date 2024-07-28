@@ -1,6 +1,6 @@
 #include "LightBurnableFlashlightTargetFXComponent.h"
 
-ULightBurnableFlashlightTargetFXComponent::ULightBurnableFlashlightTargetFXComponent() {
-    this->_burnable = NULL;
+ULightBurnableFlashlightTargetFXComponent::ULightBurnableFlashlightTargetFXComponent()
+{
+	this->_burnable = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "OutfitDropdown.h"
 
-FOutfitDropdown::FOutfitDropdown() {
+FOutfitDropdown::FOutfitDropdown()
+{
+	this->OutfitId = NAME_None;
 }
-

@@ -1,11 +1,19 @@
 #include "WhiteGlyphSurfaceComponent.h"
+#include "UObject/NoExportTypes.h"
 
 class AGlyph;
 
-AGlyph* UWhiteGlyphSurfaceComponent::GetOwningGlyph() const {
-    return NULL;
+void UWhiteGlyphSurfaceComponent::Multicast_TeleportGlyph_Implementation(FVector location)
+{
+
 }
 
-UWhiteGlyphSurfaceComponent::UWhiteGlyphSurfaceComponent() {
+AGlyph* UWhiteGlyphSurfaceComponent::GetOwningGlyph() const
+{
+	return NULL;
 }
 
+UWhiteGlyphSurfaceComponent::UWhiteGlyphSurfaceComponent()
+{
+
+}

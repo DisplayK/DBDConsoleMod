@@ -1,19 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "EQuadrantSpawnType.h"
 #include "WeightedItem.h"
+#include "EQuadrantSpawnType.h"
 #include "QuadrantSpawnItem.generated.h"
 
 USTRUCT(BlueprintType)
-struct FQuadrantSpawnItem {
-    GENERATED_BODY()
+struct FQuadrantSpawnItem
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EQuadrantSpawnType Type;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FWeightedItem> Elements;
-    
-    DEADBYDAYLIGHT_API FQuadrantSpawnItem();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EQuadrantSpawnType Type;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FWeightedItem> Elements;
+
+public:
+	DEADBYDAYLIGHT_API FQuadrantSpawnItem();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FQuadrantSpawnItem) { return 0; }

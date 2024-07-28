@@ -1,5 +1,6 @@
 #include "AttackableComponent.h"
 
-UAttackableComponent::UAttackableComponent() {
-}
+UAttackableComponent::UAttackableComponent()
+{
 
+}

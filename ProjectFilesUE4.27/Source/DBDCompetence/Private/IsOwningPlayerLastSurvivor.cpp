@@ -1,5 +1,6 @@
 #include "IsOwningPlayerLastSurvivor.h"
 
-UIsOwningPlayerLastSurvivor::UIsOwningPlayerLastSurvivor() {
-}
+UIsOwningPlayerLastSurvivor::UIsOwningPlayerLastSurvivor()
+{
 
+}

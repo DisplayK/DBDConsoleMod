@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "BlinkParams.generated.h"
 
-USTRUCT(BlueprintType)
-struct FBlinkParams {
-    GENERATED_BODY()
+USTRUCT()
+struct FBlinkParams
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    FTransform TargetTransform;
-    
-    UPROPERTY()
-    float Duration;
-    
-    THENURSE_API FBlinkParams();
+	UPROPERTY()
+	FTransform TargetTransform;
+
+	UPROPERTY()
+	float Duration;
+
+public:
+	THENURSE_API FBlinkParams();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FBlinkParams) { return 0; }

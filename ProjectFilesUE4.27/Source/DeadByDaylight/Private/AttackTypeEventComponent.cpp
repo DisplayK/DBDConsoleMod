@@ -1,5 +1,6 @@
 #include "AttackTypeEventComponent.h"
 
-UAttackTypeEventComponent::UAttackTypeEventComponent() {
-}
+UAttackTypeEventComponent::UAttackTypeEventComponent()
+{
 
+}

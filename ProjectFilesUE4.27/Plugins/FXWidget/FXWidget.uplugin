@@ -1,0 +1,29 @@
+{
+  "FileVersion": "3",
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "FXWidget",
+  "Description": "Using Niagara Particles in UMG.",
+  "Category": "Other",
+  "CreatedBy": "Behaviour",
+  "CreatedByURL": "bhvr.com",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": false,
+  "CanContainContent": true,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "FXWidget",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "Niagara",
+      "Enabled": true
+    }
+  ]
+}

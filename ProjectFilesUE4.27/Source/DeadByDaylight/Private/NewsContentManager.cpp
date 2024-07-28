@@ -1,5 +1,6 @@
 #include "NewsContentManager.h"
 
-UNewsContentManager::UNewsContentManager() {
+UNewsContentManager::UNewsContentManager()
+{
+	this->_gameInstance = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "ActiveWhenKOdAndCooldownTimerPerkIconStrategy.h"
 
-UActiveWhenKOdAndCooldownTimerPerkIconStrategy::UActiveWhenKOdAndCooldownTimerPerkIconStrategy() {
-}
+UActiveWhenKOdAndCooldownTimerPerkIconStrategy::UActiveWhenKOdAndCooldownTimerPerkIconStrategy()
+{
 
+}

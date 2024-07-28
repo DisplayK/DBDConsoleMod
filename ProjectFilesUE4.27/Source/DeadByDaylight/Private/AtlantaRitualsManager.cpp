@@ -1,5 +1,6 @@
 #include "AtlantaRitualsManager.h"
 
-UAtlantaRitualsManager::UAtlantaRitualsManager() {
+UAtlantaRitualsManager::UAtlantaRitualsManager()
+{
+	this->_gameInstance = NULL;
 }
-

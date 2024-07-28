@@ -1,6 +1,6 @@
 #include "GenerationParams.h"
 
-FGenerationParams::FGenerationParams() {
-    this->Seed = 0;
+FGenerationParams::FGenerationParams()
+{
+	this->Seed = 0;
 }
-

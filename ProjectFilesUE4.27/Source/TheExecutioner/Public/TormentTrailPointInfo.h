@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "TormentTrailPointInfo.generated.h"
 
 USTRUCT(BlueprintType)
-struct THEEXECUTIONER_API FTormentTrailPointInfo {
-    GENERATED_BODY()
+struct FTormentTrailPointInfo
+{
+	GENERATED_BODY()
+
 public:
-    FTormentTrailPointInfo();
+	THEEXECUTIONER_API FTormentTrailPointInfo();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FTormentTrailPointInfo) { return 0; }

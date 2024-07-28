@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EItemRarity.h"
 #include "UObject/NoExportTypes.h"
 #include "RarityTexture.generated.h"
 
 USTRUCT(BlueprintType)
-struct FRarityTexture {
-    GENERATED_BODY()
+struct FRarityTexture
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName Type;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EItemRarity Rarity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FSoftObjectPath Texture;
-    
-    DEADBYDAYLIGHT_API FRarityTexture();
+	UPROPERTY(EditAnywhere)
+	FName Type;
+
+	UPROPERTY(EditAnywhere)
+	EItemRarity Rarity;
+
+	UPROPERTY(EditAnywhere)
+	FSoftObjectPath Texture;
+
+public:
+	DEADBYDAYLIGHT_API FRarityTexture();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FRarityTexture) { return 0; }

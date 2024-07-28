@@ -1,5 +1,6 @@
 #include "AkWinAnvilPlatformInfo.h"
 
-UAkWinAnvilPlatformInfo::UAkWinAnvilPlatformInfo() {
-}
+UAkWinAnvilPlatformInfo::UAkWinAnvilPlatformInfo()
+{
 
+}

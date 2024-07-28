@@ -1,6 +1,7 @@
 #include "ReplicatedTrailPointList.h"
 
-FReplicatedTrailPointList::FReplicatedTrailPointList() {
-    this->TormentTrailController = NULL;
+FReplicatedTrailPointList::FReplicatedTrailPointList()
+{
+	this->Items = TArray<FReplicatedTrailItem>();
+	this->TormentTrailController = NULL;
 }
-

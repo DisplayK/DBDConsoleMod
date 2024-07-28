@@ -1,5 +1,6 @@
 #include "OnlineTransactionServiceComponent.h"
 
-UOnlineTransactionServiceComponent::UOnlineTransactionServiceComponent() {
-}
+UOnlineTransactionServiceComponent::UOnlineTransactionServiceComponent()
+{
 
+}

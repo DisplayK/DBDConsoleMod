@@ -1,12 +1,14 @@
 #include "NurseHelper.h"
 
-class ADBDPlayer;
 class ABlinkPowerItem;
+class ADBDPlayer;
 
-ABlinkPowerItem* UNurseHelper::GetBlinkPowerItem(ADBDPlayer* player) {
-    return NULL;
+ABlinkPowerItem* UNurseHelper::GetBlinkPowerItem(ADBDPlayer* player)
+{
+	return NULL;
 }
 
-UNurseHelper::UNurseHelper() {
-}
+UNurseHelper::UNurseHelper()
+{
 
+}

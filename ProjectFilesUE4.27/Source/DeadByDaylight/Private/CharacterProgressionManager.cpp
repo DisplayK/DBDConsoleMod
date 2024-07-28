@@ -1,5 +1,6 @@
 #include "CharacterProgressionManager.h"
 
-UCharacterProgressionManager::UCharacterProgressionManager() {
+UCharacterProgressionManager::UCharacterProgressionManager()
+{
+	this->_gameInstance = NULL;
 }
-

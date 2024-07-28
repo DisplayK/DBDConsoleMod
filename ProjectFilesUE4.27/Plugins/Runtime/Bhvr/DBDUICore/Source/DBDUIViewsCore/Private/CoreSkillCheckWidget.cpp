@@ -1,5 +1,6 @@
 #include "CoreSkillCheckWidget.h"
 
-UCoreSkillCheckWidget::UCoreSkillCheckWidget() {
-}
+UCoreSkillCheckWidget::UCoreSkillCheckWidget()
+{
 
+}

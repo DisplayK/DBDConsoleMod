@@ -2,10 +2,12 @@
 
 class AActor;
 
-bool URememberMe::DidLoseHealthState(const AActor* damagedActor, int32 oldHealthStateCount) const {
-    return false;
+bool URememberMe::DidLoseHealthState(const AActor* damagedActor, int32 oldHealthStateCount) const
+{
+	return false;
 }
 
-URememberMe::URememberMe() {
-}
+URememberMe::URememberMe()
+{
 
+}

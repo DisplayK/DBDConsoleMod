@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "InteractionRequest.generated.h"
 
@@ -6,17 +7,19 @@ class UInteractionDefinition;
 class ADBDPlayer;
 
 USTRUCT()
-struct DEADBYDAYLIGHT_API FInteractionRequest {
-    GENERATED_BODY()
-public:
+struct FInteractionRequest
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UInteractionDefinition* _interaction;
-    
-    UPROPERTY(Transient)
-    ADBDPlayer* _requester;
-    
+	UPROPERTY(Transient, Export)
+	UInteractionDefinition* _interaction;
+
+	UPROPERTY(Transient)
+	ADBDPlayer* _requester;
+
 public:
-    FInteractionRequest();
+	DEADBYDAYLIGHT_API FInteractionRequest();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FInteractionRequest) { return 0; }

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTimer.h"
 #include "TargetFocusTimer.generated.h"
@@ -6,20 +7,22 @@
 class ACamperPlayer;
 
 USTRUCT(BlueprintType)
-struct DEADBYDAYLIGHT_API FTargetFocusTimer {
-    GENERATED_BODY()
-public:
+struct FTargetFocusTimer
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    ACamperPlayer* _camper;
-    
-    UPROPERTY()
-    FDBDTimer _cooldownTimer;
-    
-    UPROPERTY()
-    float _totalTime;
-    
+	UPROPERTY(Transient)
+	ACamperPlayer* _camper;
+
+	UPROPERTY()
+	FDBDTimer _cooldownTimer;
+
+	UPROPERTY()
+	float _totalTime;
+
 public:
-    FTargetFocusTimer();
+	DEADBYDAYLIGHT_API FTargetFocusTimer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FTargetFocusTimer) { return 0; }

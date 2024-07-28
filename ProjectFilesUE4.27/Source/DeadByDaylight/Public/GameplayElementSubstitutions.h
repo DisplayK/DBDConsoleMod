@@ -1,22 +1,25 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "EGameplayElementType.h"
 #include "ElementSubstitutions.h"
 #include "SubstitutionElements.h"
-#include "EGameplayElementType.h"
 #include "GameplayElementSubstitutions.generated.h"
 
 USTRUCT(BlueprintType)
-struct FGameplayElementSubstitutions : public FElementSubstitutions {
-    GENERATED_BODY()
-public:
+struct FGameplayElementSubstitutions: public FElementSubstitutions
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FSubstitutionElements> _replacements;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EGameplayElementType _type;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	TArray<FSubstitutionElements> _replacements;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	EGameplayElementType _type;
+
 public:
-    DEADBYDAYLIGHT_API FGameplayElementSubstitutions();
+	DEADBYDAYLIGHT_API FGameplayElementSubstitutions();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FGameplayElementSubstitutions) { return 0; }

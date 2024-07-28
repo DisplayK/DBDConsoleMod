@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "CoreBaseLoadoutPartWidget.h"
 #include "OfferingViewInterface.h"
+#include "CoreBaseLoadoutPartWidget.h"
 #include "CoreOfferingWidget.generated.h"
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreOfferingWidget : public UCoreBaseLoadoutPartWidget, public IOfferingViewInterface {
-    GENERATED_BODY()
+class DBDUIVIEWSCORE_API UCoreOfferingWidget : public UCoreBaseLoadoutPartWidget, public IOfferingViewInterface
+{
+	GENERATED_BODY()
+
 public:
-    UCoreOfferingWidget();
-    
-    // Fix for true pure virtual functions not being implemented
+	UCoreOfferingWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreOfferingWidget) { return 0; }

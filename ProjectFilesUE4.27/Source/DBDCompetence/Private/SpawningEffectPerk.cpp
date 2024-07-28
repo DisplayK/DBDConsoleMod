@@ -1,5 +1,6 @@
 #include "SpawningEffectPerk.h"
 
-USpawningEffectPerk::USpawningEffectPerk() {
-}
+USpawningEffectPerk::USpawningEffectPerk()
+{
 
+}

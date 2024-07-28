@@ -1,5 +1,6 @@
 #include "AkWaapiUri.h"
 
-FAkWaapiUri::FAkWaapiUri() {
+FAkWaapiUri::FAkWaapiUri()
+{
+	this->Uri = TEXT("");
 }
-

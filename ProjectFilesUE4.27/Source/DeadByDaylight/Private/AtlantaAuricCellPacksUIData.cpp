@@ -1,7 +1,9 @@
 #include "AtlantaAuricCellPacksUIData.h"
 
-FAtlantaAuricCellPacksUIData::FAtlantaAuricCellPacksUIData() {
-    this->FirstPurchaseBundleMultiplier = 0;
-    this->IsSet = false;
+FAtlantaAuricCellPacksUIData::FAtlantaAuricCellPacksUIData()
+{
+	this->CurrencyPurchaseData = TArray<FCurrencyPurchaseData>();
+	this->FirstPurchaseBundleMultiplier = 0;
+	this->FirstPurchaseBundleMultiplierEndDate = FDateTime{};
+	this->IsSet = false;
 }
-

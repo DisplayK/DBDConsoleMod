@@ -1,35 +1,42 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDTableRowBase.h"
-#include "EInventoryItemType.h"
 #include "ItemUIData.h"
+#include "DBDTableRowBase.h"
+#include "UObject/SoftObjectPtr.h"
+#include "EInventoryItemType.h"
 #include "BaseItemData.generated.h"
 
-class UDBDPrimaryDataAsset;
 class AActor;
+class UDBDPrimaryDataAsset;
 
-USTRUCT()
-struct FBaseItemData : public FDBDTableRowBase {
-    GENERATED_BODY()
+USTRUCT(BlueprintType)
+struct FBaseItemData: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditAnywhere)
-    FName ID;
-    
-    UPROPERTY(EditAnywhere)
-    EInventoryItemType Type;
-    
-    UPROPERTY(EditAnywhere)
-    FItemUIData UIData;
-    
-    UPROPERTY(EditAnywhere)
-    FText GenericDisplayName;
-    
-    UPROPERTY(EditAnywhere)
-    TSoftClassPtr<AActor> ItemBlueprint;
-    
-    UPROPERTY(EditAnywhere)
-    TSoftObjectPtr<UDBDPrimaryDataAsset> AssetData;
-    
-    DEADBYDAYLIGHT_API FBaseItemData();
+	UPROPERTY(EditAnywhere)
+	EInventoryItemType Type;
+
+	UPROPERTY(EditAnywhere)
+	FItemUIData UIData;
+
+	UPROPERTY(EditAnywhere)
+	FText GenericDisplayName;
+
+	UPROPERTY(EditAnywhere)
+	TSoftClassPtr<AActor> ItemBlueprint;
+
+	UPROPERTY(EditAnywhere)
+	TSoftObjectPtr<UDBDPrimaryDataAsset> AssetData;
+
+protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FString ItemId;
+
+public:
+	DEADBYDAYLIGHT_API FBaseItemData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FBaseItemData) { return 0; }

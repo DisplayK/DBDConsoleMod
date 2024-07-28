@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AuthenticationRequestState.generated.h"
 
 USTRUCT()
-struct SHAREDAUTHENTICATIONUTILITIES_API FAuthenticationRequestState {
-    GENERATED_BODY()
+struct FAuthenticationRequestState
+{
+	GENERATED_BODY()
+
 public:
-    FAuthenticationRequestState();
+	SHAREDAUTHENTICATIONUTILITIES_API FAuthenticationRequestState();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAuthenticationRequestState) { return 0; }

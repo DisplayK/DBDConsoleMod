@@ -1,5 +1,6 @@
 #include "ThanatophobiaEffect.h"
 
-UThanatophobiaEffect::UThanatophobiaEffect() {
-}
+UThanatophobiaEffect::UThanatophobiaEffect()
+{
 
+}

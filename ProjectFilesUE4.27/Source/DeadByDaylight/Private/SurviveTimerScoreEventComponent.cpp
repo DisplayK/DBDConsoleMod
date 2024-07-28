@@ -1,8 +1,11 @@
 #include "SurviveTimerScoreEventComponent.h"
 
-void USurviveTimerScoreEventComponent::Authority_OnGameStarted() {
+void USurviveTimerScoreEventComponent::Authority_OnGameStarted()
+{
+
 }
 
-USurviveTimerScoreEventComponent::USurviveTimerScoreEventComponent() {
-}
+USurviveTimerScoreEventComponent::USurviveTimerScoreEventComponent()
+{
 
+}

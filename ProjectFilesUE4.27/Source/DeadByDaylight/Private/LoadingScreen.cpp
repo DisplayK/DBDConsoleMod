@@ -1,5 +1,11 @@
 #include "LoadingScreen.h"
 
-ULoadingScreen::ULoadingScreen() {
+void ULoadingScreen::OnLoadingTextTimerComplete() const
+{
+
 }
 
+ULoadingScreen::ULoadingScreen()
+{
+
+}

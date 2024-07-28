@@ -1,28 +1,31 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/ScriptInterface.h"
+#include "UObject/NoExportTypes.h"
 #include "BloodwebEntity.generated.h"
 
-class UBloodwebTunables;
 class UDBDGameInstance;
-class UDBDBloodwebDefinitionBase;
 class IDBDBloodwebDefinitionBase;
+class UBloodwebTunables;
 
 UCLASS()
-class UBloodwebEntity : public UObject {
-    GENERATED_BODY()
-public:
+class UBloodwebEntity : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UDBDGameInstance* _gameInstance;
-    
-    UPROPERTY(Transient)
-    UBloodwebTunables* _bloodwebTunables;
-    
-    UPROPERTY(Transient)
-    TScriptInterface<IDBDBloodwebDefinitionBase> _bloodWebDefinition;
-    
+	UPROPERTY(Transient)
+	UDBDGameInstance* _gameInstance;
+
+	UPROPERTY(Transient)
+	UBloodwebTunables* _bloodwebTunables;
+
+	UPROPERTY(Transient)
+	TScriptInterface<IDBDBloodwebDefinitionBase> _bloodWebDefinition;
+
 public:
-    UBloodwebEntity();
+	UBloodwebEntity();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBloodwebEntity) { return 0; }

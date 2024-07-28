@@ -1,58 +1,60 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "SlashableInterface.h"
 #include "GameplayTagContainer.h"
+#include "Components/ActorComponent.h"
 #include "CamperSlashableComponent.generated.h"
 
-class UCapsuleComponent;
 class USlashableActivationSourceCollection;
+class UCapsuleComponent;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UCamperSlashableComponent : public UActorComponent, public ISlashableInterface {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UCamperSlashableComponent : public UActorComponent, public ISlashableInterface
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
-    UCapsuleComponent* _slashableZone;
-    
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
-    UCapsuleComponent* _hookSlashableZone;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    float _standingCapsuleHalfHeight;
-    
-    UPROPERTY(BlueprintReadWrite, VisibleAnywhere)
-    float _crouchCapsuleHalfHeight;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTagContainer _slashableDisablingStateTags;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float _sourceActivationLingerDuration;
-    
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCapsuleComponent* _slashableZone;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCapsuleComponent* _hookSlashableZone;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	float _standingCapsuleHalfHeight;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	float _crouchCapsuleHalfHeight;
+
+	UPROPERTY(EditDefaultsOnly)
+	FGameplayTagContainer _slashableDisablingStateTags;
+
+	UPROPERTY(EditDefaultsOnly)
+	float _sourceActivationLingerDuration;
+
 private:
-    UPROPERTY(Export, Transient)
-    USlashableActivationSourceCollection* _slashableActivationSources;
-    
+	UPROPERTY(Transient, Export)
+	USlashableActivationSourceCollection* _slashableActivationSources;
+
 public:
-    UCamperSlashableComponent();
-    UFUNCTION(BlueprintCallable)
-    void SetUseCrouchSlashableCapsule(bool useCrouchCapsule);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetStandingCapsuleHalfHeight(float height);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetSlashableZone(UCapsuleComponent* zone);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetHookSlashableZone(UCapsuleComponent* zone);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCrouchCapsuleHalfHeight(float height);
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintCallable)
+	void SetUseCrouchSlashableCapsule(bool useCrouchCapsule);
+
+	UFUNCTION(BlueprintCallable)
+	void SetStandingCapsuleHalfHeight(float height);
+
+	UFUNCTION(BlueprintCallable)
+	void SetSlashableZone(UCapsuleComponent* zone);
+
+	UFUNCTION(BlueprintCallable)
+	void SetHookSlashableZone(UCapsuleComponent* zone);
+
+	UFUNCTION(BlueprintCallable)
+	void SetCrouchCapsuleHalfHeight(float height);
+
+public:
+	UCamperSlashableComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCamperSlashableComponent) { return 0; }

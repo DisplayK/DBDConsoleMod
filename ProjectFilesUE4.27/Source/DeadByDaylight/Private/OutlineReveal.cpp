@@ -1,5 +1,6 @@
 #include "OutlineReveal.h"
 
-UOutlineReveal::UOutlineReveal() {
+UOutlineReveal::UOutlineReveal()
+{
+	this->_affectedCharacters = TArray<ADBDPlayer*>();
 }
-

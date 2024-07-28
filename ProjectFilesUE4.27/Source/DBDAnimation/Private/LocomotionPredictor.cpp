@@ -1,5 +1,6 @@
 #include "LocomotionPredictor.h"
 
-ULocomotionPredictor::ULocomotionPredictor() {
+ULocomotionPredictor::ULocomotionPredictor()
+{
+	this->_animFootData = TMap<UAnimSequence*, FFootBoneData>();
 }
-

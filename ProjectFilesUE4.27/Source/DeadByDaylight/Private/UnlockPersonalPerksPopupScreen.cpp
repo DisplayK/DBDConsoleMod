@@ -1,5 +1,6 @@
 #include "UnlockPersonalPerksPopupScreen.h"
 
-UUnlockPersonalPerksPopupScreen::UUnlockPersonalPerksPopupScreen() {
-}
+UUnlockPersonalPerksPopupScreen::UUnlockPersonalPerksPopupScreen()
+{
 
+}

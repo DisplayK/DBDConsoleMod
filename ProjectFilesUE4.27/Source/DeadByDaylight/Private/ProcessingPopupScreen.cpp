@@ -1,5 +1,6 @@
 #include "ProcessingPopupScreen.h"
 
-UProcessingPopupScreen::UProcessingPopupScreen() {
-}
+UProcessingPopupScreen::UProcessingPopupScreen()
+{
 
+}

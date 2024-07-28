@@ -1,16 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "EAIGameState.h"
 #include "EAIFleeLoopStrategy.h"
+#include "EAIGameState.h"
 #include "GameStateEvadeLoopStrategyMapContainer.generated.h"
 
-USTRUCT(BlueprintType)
-struct FGameStateEvadeLoopStrategyMapContainer {
-    GENERATED_BODY()
+USTRUCT()
+struct FGameStateEvadeLoopStrategyMapContainer
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EAIGameState, EAIFleeLoopStrategy> Map;
-    
-    DBDBOTS_API FGameStateEvadeLoopStrategyMapContainer();
+	UPROPERTY(EditDefaultsOnly)
+	TMap<EAIGameState, EAIFleeLoopStrategy> Map;
+
+public:
+	DBDBOTS_API FGameStateEvadeLoopStrategyMapContainer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FGameStateEvadeLoopStrategyMapContainer) { return 0; }

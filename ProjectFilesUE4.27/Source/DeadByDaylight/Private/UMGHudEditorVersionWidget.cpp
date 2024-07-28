@@ -1,16 +1,22 @@
 #include "UMGHudEditorVersionWidget.h"
 
-void UUMGHudEditorVersionWidget::Show() {
+void UUMGHudEditorVersionWidget::Show()
+{
+
 }
 
-void UUMGHudEditorVersionWidget::OnButtonClick() {
+void UUMGHudEditorVersionWidget::OnButtonClick()
+{
+
 }
 
-void UUMGHudEditorVersionWidget::Hide() {
+void UUMGHudEditorVersionWidget::Hide()
+{
+
 }
 
-UUMGHudEditorVersionWidget::UUMGHudEditorVersionWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->VersionButton = NULL;
-    this->_onEditWidget = NULL;
+UUMGHudEditorVersionWidget::UUMGHudEditorVersionWidget() : UUserWidget(FObjectInitializer::Get())
+{
+	this->VersionButton = NULL;
+	this->_onEditWidget = NULL;
 }
-

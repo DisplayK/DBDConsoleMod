@@ -1,5 +1,6 @@
 #include "DBDSpectator.h"
 
-ADBDSpectator::ADBDSpectator() {
-}
+ADBDSpectator::ADBDSpectator()
+{
 
+}

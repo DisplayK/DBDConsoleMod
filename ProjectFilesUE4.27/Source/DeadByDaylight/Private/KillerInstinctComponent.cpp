@@ -2,21 +2,28 @@
 
 class UNiagaraComponent;
 
-void UKillerInstinctComponent::SetParticleSystem(UNiagaraComponent* particleSystemComponent) {
+void UKillerInstinctComponent::SetParticleSystem(UNiagaraComponent* particleSystemComponent)
+{
+
 }
 
-void UKillerInstinctComponent::OnKillerLocallyObservedChanged(bool locallyObserved) {
+void UKillerInstinctComponent::OnKillerLocallyObservedChanged(bool locallyObserved)
+{
+
 }
 
-bool UKillerInstinctComponent::IsOwnerInKillerInstinctRadius() const {
-    return false;
+bool UKillerInstinctComponent::IsOwnerInKillerInstinctRadius() const
+{
+	return false;
 }
 
-UNiagaraComponent* UKillerInstinctComponent::GetParticleSystem() {
-    return NULL;
+UNiagaraComponent* UKillerInstinctComponent::GetParticleSystem()
+{
+	return NULL;
 }
 
-UKillerInstinctComponent::UKillerInstinctComponent() {
-    this->_particleSystemComponent = NULL;
+UKillerInstinctComponent::UKillerInstinctComponent()
+{
+	this->_particleSystemComponent = NULL;
+	this->_customKillerInstinctData = TArray<FCustomKillerInstinctData>();
 }
-

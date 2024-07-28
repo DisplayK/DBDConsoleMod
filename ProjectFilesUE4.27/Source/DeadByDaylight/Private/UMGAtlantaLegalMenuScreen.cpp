@@ -1,10 +1,11 @@
 #include "UMGAtlantaLegalMenuScreen.h"
 
+void UUMGAtlantaLegalMenuScreen::HandleMenuButtonClickEvent(bool isAccept)
+{
 
-
-void UUMGAtlantaLegalMenuScreen::HandleMenuButtonClickEvent(bool isAccept) {
 }
 
-UUMGAtlantaLegalMenuScreen::UUMGAtlantaLegalMenuScreen() {
-}
+UUMGAtlantaLegalMenuScreen::UUMGAtlantaLegalMenuScreen()
+{
 
+}

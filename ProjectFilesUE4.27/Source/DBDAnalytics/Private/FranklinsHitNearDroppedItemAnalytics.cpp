@@ -1,5 +1,7 @@
 #include "FranklinsHitNearDroppedItemAnalytics.h"
 
-FFranklinsHitNearDroppedItemAnalytics::FFranklinsHitNearDroppedItemAnalytics() {
+FFranklinsHitNearDroppedItemAnalytics::FFranklinsHitNearDroppedItemAnalytics()
+{
+	this->HitSurvivorMirrorsId = TEXT("");
+	this->AttackingSlasherMirrorsId = TEXT("");
 }
-

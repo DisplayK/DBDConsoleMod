@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
 #include "StoreFeaturedBannerData.h"
@@ -6,21 +7,25 @@
 #include "StoreBannersData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FStoreBannersData : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FStoreBannersData: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FName BannerId;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FStoreFeaturedBannerData BannerData;
-    
-    UPROPERTY(EditAnywhere)
-    bool UseAsDefault;
-    
-    UPROPERTY(EditAnywhere)
-    EStoreBannerLocation DefaultLocation;
-    
-    DEADBYDAYLIGHT_API FStoreBannersData();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FName BannerId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FStoreFeaturedBannerData BannerData;
+
+	UPROPERTY(EditAnywhere)
+	bool UseAsDefault;
+
+	UPROPERTY(EditAnywhere)
+	EStoreBannerLocation DefaultLocation;
+
+public:
+	DEADBYDAYLIGHT_API FStoreBannersData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FStoreBannersData) { return 0; }

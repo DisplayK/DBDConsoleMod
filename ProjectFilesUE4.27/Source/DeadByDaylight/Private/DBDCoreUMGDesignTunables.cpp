@@ -1,5 +1,7 @@
 #include "DBDCoreUMGDesignTunables.h"
 
-UDBDCoreUMGDesignTunables::UDBDCoreUMGDesignTunables() {
+UDBDCoreUMGDesignTunables::UDBDCoreUMGDesignTunables()
+{
+	this->CoreHudRootWidgetClass = NULL;
+	this->CorePlayerControllerClass = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "LoadOutAnalytics.h"
 
-FLoadOutAnalytics::FLoadOutAnalytics() {
+FLoadOutAnalytics::FLoadOutAnalytics()
+{
+	this->MatchId = TEXT("");
 }
-

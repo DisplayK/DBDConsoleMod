@@ -1,5 +1,6 @@
 #include "ArrayExt.h"
 
-UArrayExt::UArrayExt() {
-}
+UArrayExt::UArrayExt()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "IsPerformingInteractionEvaluatorCondition.h"
 
-UIsPerformingInteractionEvaluatorCondition::UIsPerformingInteractionEvaluatorCondition() {
+UIsPerformingInteractionEvaluatorCondition::UIsPerformingInteractionEvaluatorCondition()
+{
+	this->_semanticTags = TArray<FGameplayTag>();
 }
-

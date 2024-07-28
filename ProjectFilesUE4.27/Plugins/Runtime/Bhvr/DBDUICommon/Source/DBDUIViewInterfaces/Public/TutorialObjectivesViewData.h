@@ -1,21 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "InteractionPromptViewData.h"
 #include "TutorialObjectivesViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct DBDUIVIEWINTERFACES_API FTutorialObjectivesViewData {
-    GENERATED_BODY()
+struct FTutorialObjectivesViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FString Description;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FInteractionPromptViewData PrimaryInteractionPromptViewData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FInteractionPromptViewData SecondaryInteractionPromptViewData;
-    
-    FTutorialObjectivesViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FInteractionPromptViewData PrimaryInteractionPromptViewData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FInteractionPromptViewData SecondaryInteractionPromptViewData;
+
+public:
+	DBDUIVIEWINTERFACES_API FTutorialObjectivesViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FTutorialObjectivesViewData) { return 0; }

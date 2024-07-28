@@ -1,6 +1,8 @@
 #include "DBDAuthentication.h"
 
-UDBDAuthentication::UDBDAuthentication() {
-    this->_gameInstance = NULL;
+UDBDAuthentication::UDBDAuthentication()
+{
+	this->_localInfos = TArray<FAuthenticationInfo>();
+	this->_remoteInfos = TArray<FAuthenticationInfo>();
+	this->_gameInstance = NULL;
 }
-

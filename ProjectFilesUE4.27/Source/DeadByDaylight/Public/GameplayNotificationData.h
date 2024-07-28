@@ -1,39 +1,42 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "EInventoryItemType.h"
 #include "EStatusEffectType.h"
+#include "EInventoryItemType.h"
 #include "GameplayNotificationData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FGameplayNotificationData {
-    GENERATED_BODY()
-public:
+struct FGameplayNotificationData
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName SourceID;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EInventoryItemType SourceType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 SourceIconIndex;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 SourceLevel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName EffectID;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FString EffectIconFilePath;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EStatusEffectType EffectType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText EffectDisplayName;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName SourceID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EInventoryItemType SourceType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 SourceIconIndex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 SourceLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName EffectID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString EffectIconFilePath;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EStatusEffectType EffectType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText EffectDisplayName;
+
 public:
-    DEADBYDAYLIGHT_API FGameplayNotificationData();
+	DEADBYDAYLIGHT_API FGameplayNotificationData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FGameplayNotificationData) { return 0; }

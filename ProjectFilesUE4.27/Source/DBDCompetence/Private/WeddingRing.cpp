@@ -1,5 +1,6 @@
 #include "WeddingRing.h"
 
-UWeddingRing::UWeddingRing() {
-}
+UWeddingRing::UWeddingRing()
+{
 
+}

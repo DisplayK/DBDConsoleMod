@@ -1,6 +1,7 @@
 #include "BiteTheBullet.h"
 
-UBiteTheBullet::UBiteTheBullet() {
-    this->_server_healTarget = NULL;
+UBiteTheBullet::UBiteTheBullet()
+{
+	this->_effectClass = NULL;
+	this->_server_healTarget = NULL;
 }
-

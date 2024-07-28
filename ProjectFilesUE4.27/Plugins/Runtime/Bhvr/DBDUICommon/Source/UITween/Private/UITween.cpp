@@ -1,15 +1,20 @@
 #include "UITween.h"
+#include "EEasingType.h"
 
-class UWidget;
 class UUITweenInstance;
+class UWidget;
 
-UUITweenInstance* UUITween::Create(UWidget* targetWidget, float duration, float delay, EEasingType easing) {
-    return NULL;
+UUITweenInstance* UUITween::Create(UWidget* targetWidget, float duration, float delay, EEasingType easing)
+{
+	return NULL;
 }
 
-void UUITween::Clear(UWidget* targetWidget) {
+void UUITween::Clear(UWidget* targetWidget)
+{
+
 }
 
-UUITween::UUITween() {
+UUITween::UUITween()
+{
+	this->ActiveInstances = TArray<UUITweenInstance*>();
 }
-

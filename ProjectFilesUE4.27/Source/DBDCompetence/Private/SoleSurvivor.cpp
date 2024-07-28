@@ -2,12 +2,17 @@
 
 class ACamperPlayer;
 
-void USoleSurvivor::Authority_OnSurvivorAdded(const ACamperPlayer* survivor) {
+void USoleSurvivor::Authority_OnSurvivorAdded(const ACamperPlayer* survivor)
+{
+
 }
 
-USoleSurvivor::USoleSurvivor() {
-    this->_auraHideDistancePerDeadOrDisconnectedSurvivor[0] = 0.00f;
-    this->_auraHideDistancePerDeadOrDisconnectedSurvivor[1] = 0.00f;
-    this->_auraHideDistancePerDeadOrDisconnectedSurvivor[2] = 0.00f;
+USoleSurvivor::USoleSurvivor()
+{
+	this->_modifyActionSpeedWhenRepairingEffect = NULL;
+	this->_modifyActionSpeedWhenOpeningGateOrHatchEffect = NULL;
+	this->_actionSpeedsRepairing = 0.000000;
+	this->_actionSpeedsOpeningGateOrHatch = 0.000000;
+	this->_auraHideDistancePerDeadOrDisconnectedSurvivor = 0.000000;
+	this->_otherSurvivors = TArray<ACamperPlayer*>();
 }
-

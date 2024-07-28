@@ -2,9 +2,12 @@
 
 class USkeletalMeshComponent;
 
-void UGFXUtilities::ActivateVFX(USkeletalMeshComponent* skeletalMeshComponent, bool active) {
+void UGFXUtilities::ActivateVFX(USkeletalMeshComponent* skeletalMeshComponent, bool active)
+{
+
 }
 
-UGFXUtilities::UGFXUtilities() {
-}
+UGFXUtilities::UGFXUtilities()
+{
 
+}

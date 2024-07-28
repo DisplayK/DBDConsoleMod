@@ -1,5 +1,6 @@
 #include "ControllerPairingManager.h"
 
-UControllerPairingManager::UControllerPairingManager() {
+UControllerPairingManager::UControllerPairingManager()
+{
+	this->_gameInstance = NULL;
 }
-

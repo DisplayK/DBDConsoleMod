@@ -1,5 +1,6 @@
 #include "TwinJumpAttackMissSubstate.h"
 
-UTwinJumpAttackMissSubstate::UTwinJumpAttackMissSubstate() {
-}
+UTwinJumpAttackMissSubstate::UTwinJumpAttackMissSubstate()
+{
 
+}

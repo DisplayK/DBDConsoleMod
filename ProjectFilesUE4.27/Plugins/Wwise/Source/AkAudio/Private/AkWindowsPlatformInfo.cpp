@@ -1,5 +1,6 @@
 #include "AkWindowsPlatformInfo.h"
 
-UAkWindowsPlatformInfo::UAkWindowsPlatformInfo() {
-}
+UAkWindowsPlatformInfo::UAkWindowsPlatformInfo()
+{
 
+}

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseProjectile.h"
 #include "PhysicsBasedProjectile.generated.h"
@@ -6,14 +7,16 @@
 class UPhysicsBasedProjectileMovementComponent;
 
 UCLASS()
-class PROJECTILE_API APhysicsBasedProjectile : public ABaseProjectile {
-    GENERATED_BODY()
-public:
+class PROJECTILE_API APhysicsBasedProjectile : public ABaseProjectile
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UPhysicsBasedProjectileMovementComponent* Movement;
-    
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UPhysicsBasedProjectileMovementComponent* Movement;
+
 public:
-    APhysicsBasedProjectile();
+	APhysicsBasedProjectile();
 };
 
+FORCEINLINE uint32 GetTypeHash(const APhysicsBasedProjectile) { return 0; }

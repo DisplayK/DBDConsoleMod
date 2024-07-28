@@ -1,5 +1,6 @@
 #include "InGameLoadoutAssetGatherer.h"
 
-UInGameLoadoutAssetGatherer::UInGameLoadoutAssetGatherer() {
-}
+UInGameLoadoutAssetGatherer::UInGameLoadoutAssetGatherer()
+{
 
+}

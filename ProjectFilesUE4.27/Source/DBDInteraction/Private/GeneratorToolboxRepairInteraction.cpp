@@ -2,14 +2,17 @@
 
 class ADBDPlayer;
 
-bool UGeneratorToolboxRepairInteraction::HasChargedToolBox(const ADBDPlayer* player) const {
-    return false;
+bool UGeneratorToolboxRepairInteraction::HasChargedToolBox(const ADBDPlayer* player) const
+{
+	return false;
 }
 
-FString UGeneratorToolboxRepairInteraction::GetInteractionTextWhenEmpty() const {
-    return TEXT("");
+FString UGeneratorToolboxRepairInteraction::GetInteractionTextWhenEmpty() const
+{
+	return TEXT("");
 }
 
-UGeneratorToolboxRepairInteraction::UGeneratorToolboxRepairInteraction() {
+UGeneratorToolboxRepairInteraction::UGeneratorToolboxRepairInteraction()
+{
+	this->_interactionTextWhenEmpty = FText::GetEmpty();
 }
-

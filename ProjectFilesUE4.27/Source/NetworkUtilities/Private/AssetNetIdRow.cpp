@@ -1,6 +1,6 @@
 #include "AssetNetIdRow.h"
 
-FAssetNetIdRow::FAssetNetIdRow() {
-    this->NetId = 0;
+FAssetNetIdRow::FAssetNetIdRow()
+{
+	this->NetId = 0;
 }
-

@@ -1,8 +1,11 @@
 #include "TwinAOELingeringStatusEffect.h"
 
-void UTwinAOELingeringStatusEffect::Authority_OnInRangeChanged(const bool inRange) {
+void UTwinAOELingeringStatusEffect::Authority_OnInRangeChanged(const bool inRange)
+{
+
 }
 
-UTwinAOELingeringStatusEffect::UTwinAOELingeringStatusEffect() {
-}
+UTwinAOELingeringStatusEffect::UTwinAOELingeringStatusEffect()
+{
 
+}

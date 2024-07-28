@@ -1,5 +1,6 @@
 #include "AnalyticsManager.h"
 
-UAnalyticsManager::UAnalyticsManager() {
-}
+UAnalyticsManager::UAnalyticsManager()
+{
 
+}

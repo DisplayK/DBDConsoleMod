@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UObject/NoExportTypes.h"
@@ -9,38 +10,40 @@ class UImage;
 class UCanvasPanel;
 
 UCLASS(Abstract, EditInlineNew)
-class DEADBYDAYLIGHT_API UUMGMonthlyPassRewardItemWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UUMGMonthlyPassRewardItemWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* ItemAmount;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* ItemName;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* ItemIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* CheckIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* ItemFrame;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* ItemRarityBackground;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* ItemPaintPanel;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor ActiveItemFrameColor;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor NonActiveItemFrameColor;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* ItemAmount;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* ItemName;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* ItemIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* CheckIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* ItemFrame;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* ItemRarityBackground;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* ItemPaintPanel;
+
+	UPROPERTY(EditDefaultsOnly)
+	FLinearColor ActiveItemFrameColor;
+
+	UPROPERTY(EditDefaultsOnly)
+	FLinearColor NonActiveItemFrameColor;
+
 public:
-    UUMGMonthlyPassRewardItemWidget();
+	UUMGMonthlyPassRewardItemWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGMonthlyPassRewardItemWidget) { return 0; }

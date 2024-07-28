@@ -1,5 +1,6 @@
 #include "TestActorImplementingTestInterface.h"
 
-ATestActorImplementingTestInterface::ATestActorImplementingTestInterface() {
-}
+ATestActorImplementingTestInterface::ATestActorImplementingTestInterface()
+{
 
+}

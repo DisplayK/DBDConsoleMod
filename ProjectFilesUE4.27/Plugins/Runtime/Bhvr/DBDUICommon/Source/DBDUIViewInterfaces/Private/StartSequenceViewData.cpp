@@ -1,6 +1,8 @@
 #include "StartSequenceViewData.h"
 
-FStartSequenceViewData::FStartSequenceViewData() {
-    this->ThemeColorId = EThemeColorId::Invalid;
+FStartSequenceViewData::FStartSequenceViewData()
+{
+	this->ThemeName = TEXT("");
+	this->MapName = TEXT("");
+	this->ThemeColorId = EThemeColorId::Invalid;
 }
-

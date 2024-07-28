@@ -1,20 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "CharmIdSlot.h"
+#include "CharacterCustomization.h"
 #include "EquippedPlayerCustomization.generated.h"
 
 USTRUCT(BlueprintType)
-struct CUSTOMIZATION_API FEquippedPlayerCustomization {
-    GENERATED_BODY()
-public:
+struct FEquippedPlayerCustomization
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY()
-    TArray<FName> _customizationItemIds;
-    
-    UPROPERTY()
-    TArray<FCharmIdSlot> _customizationCharms;
-    
+	UPROPERTY()
+	FCharacterCustomization _equippedCustomization;
+
+	UPROPERTY()
+	TArray<FCharmIdSlot> _equippedCharms;
+
 public:
-    FEquippedPlayerCustomization();
+	CUSTOMIZATION_API FEquippedPlayerCustomization();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FEquippedPlayerCustomization) { return 0; }

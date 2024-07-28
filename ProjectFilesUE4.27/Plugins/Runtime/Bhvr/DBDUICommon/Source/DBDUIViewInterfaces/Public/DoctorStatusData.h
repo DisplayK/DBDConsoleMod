@@ -1,15 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "KillerStatusData.h"
 #include "EAfflictionLevel.h"
 #include "DoctorStatusData.generated.h"
 
-USTRUCT(BlueprintType)
-struct FDoctorStatusData {
-    GENERATED_BODY()
+UCLASS()
+class DBDUIVIEWINTERFACES_API UDoctorStatusData : public UKillerStatusData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EAfflictionLevel AfflictionLevel;
-    
-    DBDUIVIEWINTERFACES_API FDoctorStatusData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EAfflictionLevel AfflictionLevel;
+
+public:
+	UDoctorStatusData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDoctorStatusData) { return 0; }

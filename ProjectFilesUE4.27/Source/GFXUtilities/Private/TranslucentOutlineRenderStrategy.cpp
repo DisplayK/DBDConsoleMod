@@ -1,5 +1,6 @@
 #include "TranslucentOutlineRenderStrategy.h"
 
-UTranslucentOutlineRenderStrategy::UTranslucentOutlineRenderStrategy() {
+UTranslucentOutlineRenderStrategy::UTranslucentOutlineRenderStrategy()
+{
+	this->_replacementMaterials = TArray<UMaterialInterface*>();
 }
-

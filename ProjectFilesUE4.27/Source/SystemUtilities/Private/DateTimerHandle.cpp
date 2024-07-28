@@ -1,5 +1,5 @@
 #include "DateTimerHandle.h"
 
-FDateTimerHandle::FDateTimerHandle() {
+FDateTimerHandle::FDateTimerHandle()
+{
 }
-

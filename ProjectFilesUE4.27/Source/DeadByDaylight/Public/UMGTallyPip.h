@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGTallyPip.generated.h"
@@ -6,18 +7,20 @@
 class UImage;
 
 UCLASS(EditInlineNew)
-class UUMGTallyPip : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGTallyPip : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* Filling;
-    
-public:
-    UUMGTallyPip();
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* Filling;
+
 protected:
-    UFUNCTION()
-    void HideFilling();
-    
+	UFUNCTION()
+	void HideFilling();
+
+public:
+	UUMGTallyPip();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGTallyPip) { return 0; }

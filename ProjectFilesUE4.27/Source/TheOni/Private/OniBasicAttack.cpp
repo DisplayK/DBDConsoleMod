@@ -1,5 +1,6 @@
 #include "OniBasicAttack.h"
 
-UOniBasicAttack::UOniBasicAttack() {
-}
+UOniBasicAttack::UOniBasicAttack()
+{
 
+}

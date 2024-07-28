@@ -1,5 +1,6 @@
 #include "ActivatableMock.h"
 
-UActivatableMock::UActivatableMock() {
-}
+UActivatableMock::UActivatableMock()
+{
 
+}

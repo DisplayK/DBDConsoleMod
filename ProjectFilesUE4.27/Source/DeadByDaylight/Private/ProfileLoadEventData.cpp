@@ -1,6 +1,7 @@
 #include "ProfileLoadEventData.h"
 
-FProfileLoadEventData::FProfileLoadEventData() {
-    this->FirstTimePlaying = false;
+FProfileLoadEventData::FProfileLoadEventData()
+{
+	this->FirstTimePlaying = false;
+	this->Timestamp = FDateTime{};
 }
-

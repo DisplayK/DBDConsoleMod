@@ -1,5 +1,5 @@
 #include "HtmlRichTextTag.h"
 
-FHtmlRichTextTag::FHtmlRichTextTag() {
+FHtmlRichTextTag::FHtmlRichTextTag()
+{
 }
-

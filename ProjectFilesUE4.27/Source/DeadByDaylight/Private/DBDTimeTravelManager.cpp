@@ -1,5 +1,6 @@
 #include "DBDTimeTravelManager.h"
 
-UDBDTimeTravelManager::UDBDTimeTravelManager() {
-}
+UDBDTimeTravelManager::UDBDTimeTravelManager()
+{
 
+}

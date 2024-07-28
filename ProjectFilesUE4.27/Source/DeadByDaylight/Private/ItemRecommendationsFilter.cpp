@@ -1,5 +1,6 @@
 #include "ItemRecommendationsFilter.h"
 
-UItemRecommendationsFilter::UItemRecommendationsFilter() {
-}
+UItemRecommendationsFilter::UItemRecommendationsFilter()
+{
 
+}

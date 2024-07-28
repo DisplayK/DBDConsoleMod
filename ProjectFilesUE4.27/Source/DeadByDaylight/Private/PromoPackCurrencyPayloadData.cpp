@@ -1,5 +1,5 @@
 #include "PromoPackCurrencyPayloadData.h"
 
-FPromoPackCurrencyPayloadData::FPromoPackCurrencyPayloadData() {
+FPromoPackCurrencyPayloadData::FPromoPackCurrencyPayloadData()
+{
 }
-

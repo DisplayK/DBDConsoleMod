@@ -1,5 +1,6 @@
 #include "SubscriptionRewardTypeData.h"
 
-FSubscriptionRewardTypeData::FSubscriptionRewardTypeData() {
+FSubscriptionRewardTypeData::FSubscriptionRewardTypeData()
+{
+	this->RewardItemWidget = NULL;
 }
-

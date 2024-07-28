@@ -1,5 +1,6 @@
 #include "DBDParadiseGameMode.h"
 
-ADBDParadiseGameMode::ADBDParadiseGameMode() {
-}
+ADBDParadiseGameMode::ADBDParadiseGameMode()
+{
 
+}

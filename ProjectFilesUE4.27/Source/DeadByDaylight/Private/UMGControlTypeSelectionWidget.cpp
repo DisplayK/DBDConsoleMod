@@ -1,9 +1,8 @@
 #include "UMGControlTypeSelectionWidget.h"
 
-
-UUMGControlTypeSelectionWidget::UUMGControlTypeSelectionWidget() {
-    this->SnapOnJoystick = NULL;
-    this->CameraFullScreen = NULL;
-    this->TitleText = NULL;
+UUMGControlTypeSelectionWidget::UUMGControlTypeSelectionWidget()
+{
+	this->SnapOnJoystick = NULL;
+	this->CameraFullScreen = NULL;
+	this->TitleText = NULL;
 }
-

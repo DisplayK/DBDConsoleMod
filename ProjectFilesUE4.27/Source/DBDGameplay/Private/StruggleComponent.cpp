@@ -1,12 +1,19 @@
 #include "StruggleComponent.h"
+#include "ESkillCheckCustomType.h"
 
-void UStruggleComponent::OnSkillCheckEnd(bool hadInput, bool success, bool bonus, ESkillCheckCustomType type) {
+class ADBDPlayer;
+
+void UStruggleComponent::OnSkillCheckEnd(bool hadInput, bool success, bool bonus, ESkillCheckCustomType type, ADBDPlayer* player)
+{
+
 }
 
-void UStruggleComponent::Local_TryActivateSkillCheck() {
+void UStruggleComponent::Authority_TryActivateSkillCheck()
+{
+
 }
 
-UStruggleComponent::UStruggleComponent() {
-    this->_skillCheckCount = 0;
+UStruggleComponent::UStruggleComponent()
+{
+	this->_skillCheckCount = 0;
 }
-

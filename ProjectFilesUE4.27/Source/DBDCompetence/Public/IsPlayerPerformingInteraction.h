@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EventDrivenModifierCondition.h"
 #include "GameplayTagContainer.h"
@@ -6,23 +7,28 @@
 
 class UInteractionDefinition;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
-class DBDCOMPETENCE_API UIsPlayerPerformingInteraction : public UEventDrivenModifierCondition {
-    GENERATED_BODY()
-public:
+UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+class DBDCOMPETENCE_API UIsPlayerPerformingInteraction : public UEventDrivenModifierCondition
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGameplayTagContainer _interactionSemantics;
-    
-public:
-    UIsPlayerPerformingInteraction();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Replicated)
+	FGameplayTagContainer _interactionSemantics;
+
 private:
-    UFUNCTION()
-    void UpdateIsTrue(UInteractionDefinition* interactionDefinition);
-    
+	UFUNCTION()
+	void UpdateIsTrue(UInteractionDefinition* interactionDefinition);
+
 public:
-    UFUNCTION(BlueprintCallable)
-    void SetInteractionSemantics(const FGameplayTagContainer& interactionSemantics);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetInteractionSemantics(const FGameplayTagContainer& interactionSemantics);
+
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UIsPlayerPerformingInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UIsPlayerPerformingInteraction) { return 0; }

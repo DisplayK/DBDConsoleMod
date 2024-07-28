@@ -2,20 +2,36 @@
 
 class AGenerator;
 
-void USurge::Client_TriggerEffects_Implementation(const TArray<AGenerator*>& generators) {
+float USurge::GetZoneRadius() const
+{
+	return 0.0f;
 }
 
-USurge::USurge() {
-    this->_zoneRadius[0] = 0.00f;
-    this->_zoneRadius[1] = 0.00f;
-    this->_zoneRadius[2] = 0.00f;
-    this->_instantRegression[0] = 0.00f;
-    this->_instantRegression[1] = 0.00f;
-    this->_instantRegression[2] = 0.00f;
-    this->_cooldownDuration[0] = 0.00f;
-    this->_cooldownDuration[1] = 0.00f;
-    this->_cooldownDuration[2] = 0.00f;
-    this->_hasCooldown = true;
-    this->_useTerrorRadiusInsteadOfFixedDistance = false;
+float USurge::GetInstantRegressionAtLevel() const
+{
+	return 0.0f;
 }
 
+bool USurge::GetHasCooldown() const
+{
+	return false;
+}
+
+float USurge::GetCooldownDurationAtLevel() const
+{
+	return 0.0f;
+}
+
+void USurge::Client_TriggerEffects_Implementation(const TArray<AGenerator*>& generators)
+{
+
+}
+
+USurge::USurge()
+{
+	this->_zoneRadius = 0.000000;
+	this->_instantRegression = 0.000000;
+	this->_cooldownDuration = 0.000000;
+	this->_hasCooldown = true;
+	this->_useTerrorRadiusInsteadOfFixedDistance = false;
+}

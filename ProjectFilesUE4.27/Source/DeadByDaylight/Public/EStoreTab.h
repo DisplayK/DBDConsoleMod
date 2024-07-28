@@ -1,13 +1,14 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EStoreTab.generated.h"
 
-UENUM()
-enum class EStoreTab {
-    Featured,
-    Characters,
-    Currency,
-    ShrineOfSecrets,
-    TabCount,
+UENUM(BlueprintType)
+enum class EStoreTab : uint8
+{
+	Featured,
+	Characters,
+	Currency,
+	ShrineOfSecrets,
+	TabCount,
 };
-

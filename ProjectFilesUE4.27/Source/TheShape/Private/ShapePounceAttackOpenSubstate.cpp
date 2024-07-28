@@ -1,5 +1,6 @@
 #include "ShapePounceAttackOpenSubstate.h"
 
-UShapePounceAttackOpenSubstate::UShapePounceAttackOpenSubstate() {
+UShapePounceAttackOpenSubstate::UShapePounceAttackOpenSubstate()
+{
+	this->_tierDurations = TArray<FDBDTunableRowHandle>();
 }
-

@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "TestActorComponent.generated.h"
 
-UCLASS(HideDropdown, NotPlaceable, meta=(BlueprintSpawnableComponent))
-class UNITTESTUTILITIES_API UTestActorComponent : public UActorComponent {
-    GENERATED_BODY()
+UCLASS(NotPlaceable, meta=(BlueprintSpawnableComponent))
+class UNITTESTUTILITIES_API UTestActorComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    UTestActorComponent();
+	UTestActorComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTestActorComponent) { return 0; }

@@ -1,6 +1,6 @@
 #include "TargetOfEventRecentlyQEEvaluator.h"
 
-UTargetOfEventRecentlyQEEvaluator::UTargetOfEventRecentlyQEEvaluator() {
-    this->_secondEventOnSelf = false;
+UTargetOfEventRecentlyQEEvaluator::UTargetOfEventRecentlyQEEvaluator()
+{
+	this->_secondEventOnSelf = false;
 }
-

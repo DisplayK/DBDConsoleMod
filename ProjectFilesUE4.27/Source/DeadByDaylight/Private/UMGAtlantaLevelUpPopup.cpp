@@ -1,6 +1,6 @@
 #include "UMGAtlantaLevelUpPopup.h"
 
+UUMGAtlantaLevelUpPopup::UUMGAtlantaLevelUpPopup()
+{
 
-UUMGAtlantaLevelUpPopup::UUMGAtlantaLevelUpPopup() {
 }
-

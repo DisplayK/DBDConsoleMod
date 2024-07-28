@@ -1,106 +1,109 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "EInteractionAnimation.h"
 #include "PlayerAnimInstance.h"
+#include "EInteractionAnimation.h"
 #include "EAttackSubstate.h"
 #include "ConjoinedTwinAnimInstance.generated.h"
 
+class AConjoinedTwin;
 class UTwinLockerBlockerComponent;
 class UDBDAttackerComponent;
-class AConjoinedTwin;
 class UTwinAttachmentComponent;
 
 UCLASS(NonTransient)
-class UConjoinedTwinAnimInstance : public UPlayerAnimInstance {
-    GENERATED_BODY()
-public:
+class UConjoinedTwinAnimInstance : public UPlayerAnimInstance
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly)
-    AConjoinedTwin* _owningConjoinedTwin;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _firstPersonView;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _forwardVelocity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _lateralVelocity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EInteractionAnimation _interactionType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isInAir;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isIdle;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _idleTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isAttacking;
-    
-    UPROPERTY(Export, Transient)
-    UDBDAttackerComponent* _attackerComponent;
-    
-    UPROPERTY(Export, Transient)
-    UTwinAttachmentComponent* _twinAttachmentComponent;
-    
-    UPROPERTY(Export, Transient)
-    UTwinLockerBlockerComponent* _twinLockerBlockerComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _animYaw;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _animPitch;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isSpectator;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _animDirection;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _animSpeed;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isAttachedToSister;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isAttachedToSurvivor;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isAttachedToFemaleSurvivor;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isChargingTwinJump;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isPossessing;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isWakingUpFromPossess;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isDormant;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isBeingAutoPossessedAfterRelease;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isAttachedToLocker;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EAttackSubstate _attackState;
-    
-public:
-    UConjoinedTwinAnimInstance();
+	UPROPERTY(BlueprintReadOnly)
+	AConjoinedTwin* _owningConjoinedTwin;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _firstPersonView;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _forwardVelocity;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _lateralVelocity;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EInteractionAnimation _interactionType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isInAir;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isIdle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _idleTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isAttacking;
+
+	UPROPERTY(Transient, meta=(BindWidgetOptional))
+	UDBDAttackerComponent* _attackerComponent;
+
+	UPROPERTY(Transient, meta=(BindWidgetOptional))
+	UTwinAttachmentComponent* _twinAttachmentComponent;
+
+	UPROPERTY(Transient, meta=(BindWidgetOptional))
+	UTwinLockerBlockerComponent* _twinLockerBlockerComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _animYaw;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _animPitch;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isSpectator;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _animDirection;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _animSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isAttachedToSister;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isAttachedToSurvivor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isAttachedToFemaleSurvivor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isChargingTwinJump;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isPossessing;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isWakingUpFromPossess;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isDormant;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isBeingAutoPossessedAfterRelease;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isAttachedToLocker;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EAttackSubstate _attackState;
+
 protected:
-    UFUNCTION(BlueprintPure)
-    AConjoinedTwin* GetOwningConjoinedTwin() const;
-    
+	UFUNCTION(BlueprintPure)
+	AConjoinedTwin* GetOwningConjoinedTwin() const;
+
+public:
+	UConjoinedTwinAnimInstance();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UConjoinedTwinAnimInstance) { return 0; }

@@ -1,5 +1,7 @@
 #include "AkWwiseItemToControl.h"
 
-FAkWwiseItemToControl::FAkWwiseItemToControl() {
+FAkWwiseItemToControl::FAkWwiseItemToControl()
+{
+	this->ItemPicked = FAkWwiseObjectDetails{};
+	this->ItemPath = TEXT("");
 }
-

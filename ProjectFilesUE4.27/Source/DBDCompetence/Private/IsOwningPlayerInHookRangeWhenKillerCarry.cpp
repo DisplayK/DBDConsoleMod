@@ -1,5 +1,6 @@
 #include "IsOwningPlayerInHookRangeWhenKillerCarry.h"
 
-UIsOwningPlayerInHookRangeWhenKillerCarry::UIsOwningPlayerInHookRangeWhenKillerCarry() {
-}
+UIsOwningPlayerInHookRangeWhenKillerCarry::UIsOwningPlayerInHookRangeWhenKillerCarry()
+{
 
+}

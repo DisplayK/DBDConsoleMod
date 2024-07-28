@@ -1,5 +1,6 @@
 #include "GameplayNotificationUtilities.h"
 
-UGameplayNotificationUtilities::UGameplayNotificationUtilities() {
-}
+UGameplayNotificationUtilities::UGameplayNotificationUtilities()
+{
 
+}

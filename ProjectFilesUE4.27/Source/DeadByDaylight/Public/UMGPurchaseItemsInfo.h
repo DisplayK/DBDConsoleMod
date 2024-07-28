@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGPurchaseItemsInfo.generated.h"
@@ -7,20 +8,22 @@ class UImage;
 class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGPurchaseItemsInfo : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGPurchaseItemsInfo : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* Icon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* Quantity;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* ItemName;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* Icon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* Quantity;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* ItemName;
+
 public:
-    UUMGPurchaseItemsInfo();
+	UUMGPurchaseItemsInfo();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGPurchaseItemsInfo) { return 0; }

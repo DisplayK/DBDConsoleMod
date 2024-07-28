@@ -1,5 +1,6 @@
 #include "DBDOutlineComponentStencilConfiguration.h"
 
-UDBDOutlineComponentStencilConfiguration::UDBDOutlineComponentStencilConfiguration() {
-}
+UDBDOutlineComponentStencilConfiguration::UDBDOutlineComponentStencilConfiguration()
+{
 
+}

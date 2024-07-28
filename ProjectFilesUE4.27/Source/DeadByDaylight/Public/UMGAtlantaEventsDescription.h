@@ -1,50 +1,58 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGAtlantaEventsDescription.generated.h"
 
 class UCanvasPanel;
+class UUMGBaseButtonWidget;
+class UUMGAtlantaBaseEventsTemplate;
 class UAtlantaEventsTemplateDataAsset;
 class UTextBlock;
-class UUMGBaseButtonWidget;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGAtlantaEventsDescription : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGAtlantaEventsDescription : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditAnywhere)
-    UAtlantaEventsTemplateDataAsset* widgetData;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* ItemsRewards;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* Title;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* Description;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TimePeriodTitle;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TimePeriodStart;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TimePeriodEnd;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGBaseButtonWidget* DeepLinkButton;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* TimePeriodCanvas;
-    
-public:
-    UUMGAtlantaEventsDescription();
+	UPROPERTY(EditAnywhere)
+	UAtlantaEventsTemplateDataAsset* widgetData;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* ItemsRewards;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* Title;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* Description;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TimePeriodTitle;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TimePeriodStart;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TimePeriodEnd;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGBaseButtonWidget* DeepLinkButton;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* TimePeriodCanvas;
+
 private:
-    UFUNCTION()
-    void HandleButtonClicked();
-    
+	UPROPERTY(Transient, Export)
+	UUMGAtlantaBaseEventsTemplate* _eventTemplate;
+
+private:
+	UFUNCTION()
+	void HandleButtonClicked();
+
+public:
+	UUMGAtlantaEventsDescription();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlantaEventsDescription) { return 0; }

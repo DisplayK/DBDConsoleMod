@@ -1,5 +1,6 @@
 #include "BaseOutlineRenderStrategy.h"
 
-UBaseOutlineRenderStrategy::UBaseOutlineRenderStrategy() {
+UBaseOutlineRenderStrategy::UBaseOutlineRenderStrategy()
+{
+	this->_batchCommands = TArray<UBatchMeshCommands*>();
 }
-

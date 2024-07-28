@@ -1,5 +1,6 @@
 #include "AtlCookedMaps.h"
 
-UAtlCookedMaps::UAtlCookedMaps() {
+UAtlCookedMaps::UAtlCookedMaps()
+{
+	this->Descriptions = TArray<FAtlCookedMapDescription>();
 }
-

@@ -1,5 +1,6 @@
 #include "OnboardingUtilities.h"
 
-UOnboardingUtilities::UOnboardingUtilities() {
-}
+UOnboardingUtilities::UOnboardingUtilities()
+{
 
+}

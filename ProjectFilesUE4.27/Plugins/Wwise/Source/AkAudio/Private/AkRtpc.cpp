@@ -1,5 +1,6 @@
 #include "AkRtpc.h"
 
-UAkRtpc::UAkRtpc() {
-}
+UAkRtpc::UAkRtpc()
+{
 
+}

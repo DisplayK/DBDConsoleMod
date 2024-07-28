@@ -3,46 +3,65 @@
 
 class UFlashlightableComponent;
 
-void UFlashlightComponent::TurnOn() {
+void UFlashlightComponent::TurnOn()
+{
+
 }
 
-void UFlashlightComponent::TurnOff() {
+void UFlashlightComponent::TurnOff()
+{
+
 }
 
-void UFlashlightComponent::Server_SetAndUpdateAutonomousLitFlashlightables_Implementation(const TArray<UFlashlightableComponent*>& newLitFlashlightables) {
-}
-bool UFlashlightComponent::Server_SetAndUpdateAutonomousLitFlashlightables_Validate(const TArray<UFlashlightableComponent*>& newLitFlashlightables) {
-    return true;
+void UFlashlightComponent::Server_SetAndUpdateAutonomousLitFlashlightables_Implementation(const TArray<UFlashlightableComponent*>& newLitFlashlightables)
+{
+
 }
 
-void UFlashlightComponent::OnRep_ReplicatedLitFlashlightables() {
+bool UFlashlightComponent::Server_SetAndUpdateAutonomousLitFlashlightables_Validate(const TArray<UFlashlightableComponent*>& newLitFlashlightables)
+{
+	return true;
 }
 
-void UFlashlightComponent::OnRep_IsOwnerLagging() {
+void UFlashlightComponent::OnRep_ReplicatedLitFlashlightables()
+{
+
 }
 
-bool UFlashlightComponent::IsOn() const {
-    return false;
+void UFlashlightComponent::OnRep_IsOwnerLagging()
+{
+
 }
 
-float UFlashlightComponent::GetEffectiveTimeToBlindModifier() const {
-    return 0.0f;
+bool UFlashlightComponent::IsOn() const
+{
+	return false;
 }
 
-float UFlashlightComponent::GetEffectiveBlindnessDuration() const {
-    return 0.0f;
+float UFlashlightComponent::GetEffectiveTimeToBlindModifier() const
+{
+	return 0.0f;
 }
 
-void UFlashlightComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UFlashlightComponent, _replicatedLitFlashlightables);
-    DOREPLIFETIME(UFlashlightComponent, _isOwnerLagging);
+float UFlashlightComponent::GetEffectiveBlindnessDuration() const
+{
+	return 0.0f;
 }
 
-UFlashlightComponent::UFlashlightComponent() {
-    this->_baseAccuracy = 1.00f;
-    this->_lagDuration = 0.20f;
-    this->_isOwnerLagging = false;
+void UFlashlightComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UFlashlightComponent, _replicatedLitFlashlightables);
+	DOREPLIFETIME(UFlashlightComponent, _isOwnerLagging);
 }
 
+UFlashlightComponent::UFlashlightComponent()
+{
+	this->_baseAccuracy = 1.000000;
+	this->_lagDuration = 0.200000;
+	this->_flashlightables = TSet<UFlashlightableComponent*>();
+	this->_autonomousLitFlashlightables = TSet<UFlashlightableComponent*>();
+	this->_replicatedLitFlashlightables = TArray<UFlashlightableComponent*>();
+	this->_isOwnerLagging = false;
+}

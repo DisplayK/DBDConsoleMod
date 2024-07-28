@@ -1,27 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGCharacterFreeTicketButton.generated.h"
 
+class UImage;
 class UWidgetSwitcher;
 class UTextBlock;
-class UImage;
 
 UCLASS(EditInlineNew)
-class UUMGCharacterFreeTicketButton : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGCharacterFreeTicketButton : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UWidgetSwitcher* ButtonSwitcher;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* FreeTicketLeftSecondsText;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* FreeTicketLeftSecondsBG;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UWidgetSwitcher* ButtonSwitcher;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* FreeTicketLeftSecondsText;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* FreeTicketLeftSecondsBG;
+
 public:
-    UUMGCharacterFreeTicketButton();
+	UUMGCharacterFreeTicketButton();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGCharacterFreeTicketButton) { return 0; }

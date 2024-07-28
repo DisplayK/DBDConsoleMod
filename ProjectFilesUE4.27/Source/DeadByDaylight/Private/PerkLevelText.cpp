@@ -1,5 +1,7 @@
 #include "PerkLevelText.h"
 
-FPerkLevelText::FPerkLevelText() {
+FPerkLevelText::FPerkLevelText()
+{
+	this->Tunables = TArray<FString>();
+	this->TextOverride = FText::GetEmpty();
 }
-

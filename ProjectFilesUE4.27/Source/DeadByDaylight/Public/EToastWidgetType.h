@@ -1,10 +1,11 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EToastWidgetType.generated.h"
 
-UENUM()
-enum class EToastWidgetType {
-    Simple,
-    Interactable,
+UENUM(BlueprintType)
+enum class EToastWidgetType : uint8
+{
+	Simple,
+	Interactable,
 };
-

@@ -1,16 +1,20 @@
 #include "UMGLobbyScreen.h"
 
-void UUMGLobbyScreen::HandleSearchingLobbyCancel() {
+void UUMGLobbyScreen::HandleSearchingLobbyCancel()
+{
+
 }
 
-void UUMGLobbyScreen::HandleJoinedLobbyLeave() {
+void UUMGLobbyScreen::HandleJoinedLobbyLeave()
+{
+
 }
 
-UUMGLobbyScreen::UUMGLobbyScreen() {
-    this->LobbySearchingWidget = NULL;
-    this->LobbySwitcher = NULL;
-    this->LobbyJoinedWidget = NULL;
-    this->OfferingWidget = NULL;
-    this->FogWidget = NULL;
+UUMGLobbyScreen::UUMGLobbyScreen()
+{
+	this->LobbySearchingWidget = NULL;
+	this->LobbySwitcher = NULL;
+	this->LobbyJoinedWidget = NULL;
+	this->OfferingWidget = NULL;
+	this->FogWidget = NULL;
 }
-

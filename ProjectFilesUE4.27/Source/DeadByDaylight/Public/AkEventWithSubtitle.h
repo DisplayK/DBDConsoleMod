@@ -1,22 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkEventWithSubtitle.generated.h"
 
 class UAkAudioEvent;
 
 USTRUCT(BlueprintType)
-struct FAkEventWithSubtitle {
-    GENERATED_BODY()
+struct FAkEventWithSubtitle
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAudioEvent* AudioEvent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint8 Weight;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool HasSubtitles;
-    
-    DEADBYDAYLIGHT_API FAkEventWithSubtitle();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UAkAudioEvent* AudioEvent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 Weight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool HasSubtitles;
+
+	UPROPERTY(EditAnywhere)
+	uint32 DelayMsBeforeSubtitles;
+
+public:
+	DEADBYDAYLIGHT_API FAkEventWithSubtitle();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkEventWithSubtitle) { return 0; }

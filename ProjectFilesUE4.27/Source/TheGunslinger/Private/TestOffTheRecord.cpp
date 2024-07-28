@@ -1,5 +1,6 @@
 #include "TestOffTheRecord.h"
 
-UTestOffTheRecord::UTestOffTheRecord() {
-}
+UTestOffTheRecord::UTestOffTheRecord()
+{
 
+}

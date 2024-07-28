@@ -1,60 +1,64 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
+#include "UObject/SoftObjectPtr.h"
 #include "UMGCustomizationItemWidget.generated.h"
 
-class UUMGCustomizationItemPriceWidget;
 class UImage;
 class UCanvasPanel;
 class UVerticalBox;
+class UUMGCustomizationItemPriceWidget;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGCustomizationItemWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGCustomizationItemWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* RarityBackground;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* PaintOverlay;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* Icon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* NewIndicator;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* OutfitIndicator;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UVerticalBox* PricesContainer;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* ItemSelectedBorder;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* EquippedContainer;
-    
-    UPROPERTY(EditDefaultsOnly, NoClear)
-    TSoftClassPtr<UUMGCustomizationItemPriceWidget> _customizationItemPriceWidgetClass;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* RarityBackground;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* PaintOverlay;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* Icon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* NewIndicator;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* OutfitIndicator;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UVerticalBox* PricesContainer;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* ItemSelectedBorder;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* EquippedContainer;
+
+	UPROPERTY(EditDefaultsOnly, NoClear)
+	TSoftClassPtr<UUMGCustomizationItemPriceWidget> _customizationItemPriceWidgetClass;
+
 private:
-    UPROPERTY(Export, Transient)
-    TArray<UUMGCustomizationItemPriceWidget*> _priceWidgets;
-    
-    UPROPERTY(Transient)
-    int32 _itemIndex;
-    
-    UPROPERTY(Transient)
-    FName _itemId;
-    
-public:
-    UUMGCustomizationItemWidget();
+	UPROPERTY(Transient, Export)
+	TArray<UUMGCustomizationItemPriceWidget*> _priceWidgets;
+
+	UPROPERTY(Transient)
+	int32 _itemIndex;
+
+	UPROPERTY(Transient)
+	FName _itemId;
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void BroadcastAvailableItemSelected();
-    
+	UFUNCTION(BlueprintCallable)
+	void BroadcastAvailableItemSelected();
+
+public:
+	UUMGCustomizationItemWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGCustomizationItemWidget) { return 0; }

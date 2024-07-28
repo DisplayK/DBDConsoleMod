@@ -1,5 +1,6 @@
 #include "PlayerDataStorageFacade.h"
 
-UPlayerDataStorageFacade::UPlayerDataStorageFacade() {
-}
+UPlayerDataStorageFacade::UPlayerDataStorageFacade()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "NotExhaustedActivationTimerElapsedIconStrategy.h"
 
-UNotExhaustedActivationTimerElapsedIconStrategy::UNotExhaustedActivationTimerElapsedIconStrategy() {
-}
+UNotExhaustedActivationTimerElapsedIconStrategy::UNotExhaustedActivationTimerElapsedIconStrategy()
+{
 
+}

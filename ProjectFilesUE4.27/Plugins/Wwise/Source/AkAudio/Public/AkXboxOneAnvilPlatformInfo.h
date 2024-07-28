@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkXboxOneGDKPlatformInfo.h"
 #include "AkXboxOneAnvilPlatformInfo.generated.h"
 
 UCLASS()
-class UAkXboxOneAnvilPlatformInfo : public UAkXboxOneGDKPlatformInfo {
-    GENERATED_BODY()
+class UAkXboxOneAnvilPlatformInfo : public UAkXboxOneGDKPlatformInfo
+{
+	GENERATED_BODY()
+
 public:
-    UAkXboxOneAnvilPlatformInfo();
+	UAkXboxOneAnvilPlatformInfo();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkXboxOneAnvilPlatformInfo) { return 0; }

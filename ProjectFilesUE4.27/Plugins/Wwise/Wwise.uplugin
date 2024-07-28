@@ -1,25 +1,29 @@
 {
-	"FileVersion": 3,
-	"Version": 201921747,
-	"VersionName": "2019.2.5.7349.1747",
-	"FriendlyName": "Wwise Unreal Engine 4 Integration",
-	"Description": "Wwise integration for Unreal Engine 4",
-	"Category": "Audio",
-	"CreatedBy": "Audiokinetic, Inc.",
-	"CreatedByURL": "http://audiokinetic.com",
-	"DocsURL": "",
-	"MarketplaceURL": "",
-	"SupportURL": "",
-	"EnabledByDefault": true,
-	"CanContainContent": true,
-	"IsBetaVersion": false,
-	"IsExperimentalVersion": false,
-	"Installed": false,
-	"Modules": [
-		{
-			"Name": "AkAudio",
-			"Type": "Runtime",
-			"LoadingPhase": "PreDefault"
-		}
-	]
+  "FileVersion": "1",
+  "Version": 202112171,
+  "VersionName": "2021.1.5.7749.2171",
+  "FriendlyName": "Wwise Unreal Engine 4 Integration",
+  "Description": "Wwise integration for Unreal Engine 4",
+  "Category": "Audio",
+  "CreatedBy": "Audiokinetic, Inc.",
+  "CreatedByURL": "http://audiokinetic.com",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": true,
+  "CanContainContent": true,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "AkAudio",
+      "Type": "Runtime",
+      "LoadingPhase": "PreDefault"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "GeometryMode",
+      "Enabled": true
+    }
+  ]
 }

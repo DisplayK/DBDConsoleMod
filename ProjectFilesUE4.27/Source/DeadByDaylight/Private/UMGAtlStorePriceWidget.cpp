@@ -1,6 +1,6 @@
 #include "UMGAtlStorePriceWidget.h"
 
-UUMGAtlStorePriceWidget::UUMGAtlStorePriceWidget() {
-    this->PriceText = NULL;
+UUMGAtlStorePriceWidget::UUMGAtlStorePriceWidget()
+{
+	this->PriceText = NULL;
 }
-

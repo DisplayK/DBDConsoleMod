@@ -1,5 +1,7 @@
 #include "AtlCookedMapDescription.h"
 
-FAtlCookedMapDescription::FAtlCookedMapDescription() {
+FAtlCookedMapDescription::FAtlCookedMapDescription()
+{
+	this->ThemeName = NAME_None;
+	this->MapAsset = NULL;
 }
-

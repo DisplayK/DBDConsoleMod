@@ -1,25 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "EHudScreenIndicatorType.h"
 #include "UObject/NoExportTypes.h"
+#include "EHudScreenIndicatorType.h"
 #include "ScreenIndicatorWorldMarker.generated.h"
 
 class UTexture2D;
 
 UCLASS()
-class AScreenIndicatorWorldMarker : public AActor {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API AScreenIndicatorWorldMarker : public AActor
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UTexture2D* HudScreenIndicatorIcon;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EHudScreenIndicatorType HudScreenIndicatorType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FFloatRange VisibleDistanceRange;
-    
-    AScreenIndicatorWorldMarker();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UTexture2D* HudScreenIndicatorIcon;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EHudScreenIndicatorType HudScreenIndicatorType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FFloatRange VisibleDistanceRange;
+
+public:
+	AScreenIndicatorWorldMarker();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AScreenIndicatorWorldMarker) { return 0; }

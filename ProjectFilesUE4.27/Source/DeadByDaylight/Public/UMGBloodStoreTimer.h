@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "Styling/SlateColor.h"
@@ -8,23 +9,25 @@ class UTextBlock;
 class UImage;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGBloodStoreTimer : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGBloodStoreTimer : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FSlateColor _normalColor;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FSlateColor _warningColor;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* RemainingTimeTextBlock;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* RefreshImage;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FSlateColor _normalColor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FSlateColor _warningColor;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* RemainingTimeTextBlock;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* RefreshImage;
+
 public:
-    UUMGBloodStoreTimer();
+	UUMGBloodStoreTimer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGBloodStoreTimer) { return 0; }

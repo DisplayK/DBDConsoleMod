@@ -1,10 +1,12 @@
 #include "TestWidget.h"
 
-void UTestWidget::SetShowWorkbench(bool NewShowWorkbench) {
+void UTestWidget::SetShowWorkbench(bool showWorkbenchNew)
+{
+
 }
 
-UTestWidget::UTestWidget() : UUserWidget(FObjectInitializer::Get()) {
-    this->Workbench = NULL;
-    this->ShowWorkbench = false;
+UTestWidget::UTestWidget()
+{
+	this->Workbench = NULL;
+	this->ShowWorkbench = false;
 }
-

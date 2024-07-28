@@ -1,17 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseStat.h"
 #include "NonTunableStat.generated.h"
 
 USTRUCT(BlueprintType)
-struct STATSYSTEM_API FNonTunableStat : public FBaseStat {
-    GENERATED_BODY()
-public:
+struct FNonTunableStat: public FBaseStat
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditDefaultsOnly)
-    float _baseValue;
-    
+	UPROPERTY(EditDefaultsOnly)
+	float _baseValue;
+
 public:
-    FNonTunableStat();
+	STATSYSTEM_API FNonTunableStat();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FNonTunableStat) { return 0; }

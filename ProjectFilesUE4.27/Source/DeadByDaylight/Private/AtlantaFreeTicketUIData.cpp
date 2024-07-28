@@ -1,5 +1,6 @@
 #include "AtlantaFreeTicketUIData.h"
 
-FAtlantaFreeTicketUIData::FAtlantaFreeTicketUIData() {
+FAtlantaFreeTicketUIData::FAtlantaFreeTicketUIData()
+{
+	this->IconColor = FSlateColor{};
 }
-

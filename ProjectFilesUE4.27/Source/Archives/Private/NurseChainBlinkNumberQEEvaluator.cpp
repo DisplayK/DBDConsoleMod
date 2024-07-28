@@ -1,5 +1,6 @@
 #include "NurseChainBlinkNumberQEEvaluator.h"
 
-UNurseChainBlinkNumberQEEvaluator::UNurseChainBlinkNumberQEEvaluator() {
-}
+UNurseChainBlinkNumberQEEvaluator::UNurseChainBlinkNumberQEEvaluator()
+{
 
+}

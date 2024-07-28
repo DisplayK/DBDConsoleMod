@@ -1,5 +1,6 @@
 #include "HasTokenPerkIconStrategy.h"
 
-UHasTokenPerkIconStrategy::UHasTokenPerkIconStrategy() {
-}
+UHasTokenPerkIconStrategy::UHasTokenPerkIconStrategy()
+{
 
+}

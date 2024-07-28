@@ -1,7 +1,9 @@
 #include "AITerrorEvent.h"
 
-FAITerrorEvent::FAITerrorEvent() {
-    this->Instigator = NULL;
-    this->TerrorEmitter = NULL;
+FAITerrorEvent::FAITerrorEvent()
+{
+	this->Location = FVector{};
+	this->Instigator = NULL;
+	this->TerrorEmitter = NULL;
+	this->TeamIdentifier = FGenericTeamId{};
 }
-

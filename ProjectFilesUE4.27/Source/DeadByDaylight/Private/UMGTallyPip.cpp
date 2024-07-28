@@ -1,9 +1,11 @@
 #include "UMGTallyPip.h"
 
-void UUMGTallyPip::HideFilling() {
+void UUMGTallyPip::HideFilling()
+{
+
 }
 
-UUMGTallyPip::UUMGTallyPip() {
-    this->Filling = NULL;
+UUMGTallyPip::UUMGTallyPip()
+{
+	this->Filling = NULL;
 }
-

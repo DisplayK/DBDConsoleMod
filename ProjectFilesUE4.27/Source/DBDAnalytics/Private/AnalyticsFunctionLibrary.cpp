@@ -1,8 +1,11 @@
 #include "AnalyticsFunctionLibrary.h"
 
-void UAnalyticsFunctionLibrary::IncrementHookSpawned() {
+void UAnalyticsFunctionLibrary::IncrementHookSpawned()
+{
+
 }
 
-UAnalyticsFunctionLibrary::UAnalyticsFunctionLibrary() {
-}
+UAnalyticsFunctionLibrary::UAnalyticsFunctionLibrary()
+{
 
+}

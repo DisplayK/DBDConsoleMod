@@ -1,5 +1,6 @@
 #include "WwiseUtilities.h"
 
-UWwiseUtilities::UWwiseUtilities() {
-}
+UWwiseUtilities::UWwiseUtilities()
+{
 
+}

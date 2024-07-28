@@ -1,5 +1,6 @@
 #include "IsCooldownTimerActive.h"
 
-UIsCooldownTimerActive::UIsCooldownTimerActive() {
-}
+UIsCooldownTimerActive::UIsCooldownTimerActive()
+{
 
+}

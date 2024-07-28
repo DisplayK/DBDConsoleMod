@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ESecondaryActionRequestTypes.generated.h"
 
-UENUM()
-enum class ESecondaryActionRequestTypes {
-    None,
-    SecondaryActionRequested,
-    SecondaryActionRequestedFromCancel,
+UENUM(BlueprintType)
+enum class ESecondaryActionRequestTypes : uint8
+{
+	None,
+	SecondaryActionRequested,
+	SecondaryActionRequestedFromCancel,
 };
-

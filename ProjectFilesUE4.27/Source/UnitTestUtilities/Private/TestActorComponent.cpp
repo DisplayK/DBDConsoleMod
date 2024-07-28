@@ -1,5 +1,6 @@
 #include "TestActorComponent.h"
 
-UTestActorComponent::UTestActorComponent() {
-}
+UTestActorComponent::UTestActorComponent()
+{
 
+}

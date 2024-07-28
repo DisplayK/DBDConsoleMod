@@ -1,5 +1,5 @@
 #include "AuthenticationRequestState.h"
 
-FAuthenticationRequestState::FAuthenticationRequestState() {
+FAuthenticationRequestState::FAuthenticationRequestState()
+{
 }
-

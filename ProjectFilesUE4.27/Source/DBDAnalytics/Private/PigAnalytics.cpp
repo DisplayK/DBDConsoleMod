@@ -3,18 +3,27 @@
 class ACamperPlayer;
 class ASlasherPlayer;
 
-void UPigAnalytics::RecordRBTSearch(ACamperPlayer* searchingPlayer, bool success) {
+void UPigAnalytics::RecordRBTSearch(ACamperPlayer* searchingPlayer, bool success)
+{
+
 }
 
-void UPigAnalytics::OnRBTAttached_Analytics(ASlasherPlayer* attacher, ACamperPlayer* attachee) {
+void UPigAnalytics::OnRBTAttached_Analytics(ASlasherPlayer* attacher, ACamperPlayer* attachee)
+{
+
 }
 
-void UPigAnalytics::IncrementRBTTimerActived(ACamperPlayer* attachedPlayer) {
+void UPigAnalytics::IncrementRBTTimerActived(ACamperPlayer* attachedPlayer)
+{
+
 }
 
-void UPigAnalytics::IncrementRBTKilledCount(ACamperPlayer* playerKilled, bool killedByExecutionZone) {
+void UPigAnalytics::IncrementRBTKilledCount(ACamperPlayer* playerKilled, bool killedByExecutionZone)
+{
+
 }
 
-UPigAnalytics::UPigAnalytics() {
-}
+UPigAnalytics::UPigAnalytics()
+{
 
+}

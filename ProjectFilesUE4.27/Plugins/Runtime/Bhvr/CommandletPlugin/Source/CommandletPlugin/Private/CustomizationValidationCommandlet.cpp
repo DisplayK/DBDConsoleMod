@@ -1,5 +1,6 @@
 #include "CustomizationValidationCommandlet.h"
 
-UCustomizationValidationCommandlet::UCustomizationValidationCommandlet() {
-}
+UCustomizationValidationCommandlet::UCustomizationValidationCommandlet()
+{
 
+}

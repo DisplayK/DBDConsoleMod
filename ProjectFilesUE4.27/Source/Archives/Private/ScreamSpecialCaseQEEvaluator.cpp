@@ -1,5 +1,6 @@
 #include "ScreamSpecialCaseQEEvaluator.h"
 
-UScreamSpecialCaseQEEvaluator::UScreamSpecialCaseQEEvaluator() {
-}
+UScreamSpecialCaseQEEvaluator::UScreamSpecialCaseQEEvaluator()
+{
 
+}

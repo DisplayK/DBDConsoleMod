@@ -1,5 +1,5 @@
 #include "EACServerValidateAnalytics.h"
 
-FEACServerValidateAnalytics::FEACServerValidateAnalytics() {
+FEACServerValidateAnalytics::FEACServerValidateAnalytics()
+{
 }
-

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ChargeableInteractionDefinition.h"
 #include "DBDTunableRowHandle.h"
@@ -8,24 +9,26 @@ class UK25SurvivorChainAttachmentComponent;
 class AK25Chain;
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class UK25RemoveChainInteraction : public UChargeableInteractionDefinition {
-    GENERATED_BODY()
-public:
+class UK25RemoveChainInteraction : public UChargeableInteractionDefinition
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FDBDTunableRowHandle _interactionTimePerChainsAttached;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FDBDTunableRowHandle _interactionTimePerChainsAttached;
+
 private:
-    UPROPERTY(Export, Transient)
-    UK25SurvivorChainAttachmentComponent* _cachedSurvivorChainAttachmentComponent;
-    
-    UPROPERTY(Transient)
-    TWeakObjectPtr<AK25Chain> _chainBeingRemoved;
-    
-    UPROPERTY(Export, Transient)
-    TWeakObjectPtr<UK25SurvivorChainAttachmentComponent> _chainAttachmentComponent;
-    
+	UPROPERTY(Transient, Export)
+	UK25SurvivorChainAttachmentComponent* _cachedSurvivorChainAttachmentComponent;
+
+	UPROPERTY(Transient)
+	TWeakObjectPtr<AK25Chain> _chainBeingRemoved;
+
+	UPROPERTY(Transient, Export)
+	TWeakObjectPtr<UK25SurvivorChainAttachmentComponent> _chainAttachmentComponent;
+
 public:
-    UK25RemoveChainInteraction();
+	UK25RemoveChainInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UK25RemoveChainInteraction) { return 0; }

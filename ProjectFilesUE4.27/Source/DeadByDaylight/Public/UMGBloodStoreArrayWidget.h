@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGBloodStoreArrayWidget.generated.h"
@@ -6,30 +7,36 @@
 class UUMGBloodStoreRowWidget;
 
 UCLASS(EditInlineNew)
-class DEADBYDAYLIGHT_API UUMGBloodStoreArrayWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UUMGBloodStoreArrayWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGBloodStoreRowWidget* FirstBloodStoreRowWidget;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGBloodStoreRowWidget* SecondBloodStoreRowWidget;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGBloodStoreRowWidget* ThirdBloodStoreRowWidget;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGBloodStoreRowWidget* FourthBloodStoreRowWidget;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGBloodStoreRowWidget* FifthBloodStoreRowWidget;
-    
-public:
-    UUMGBloodStoreArrayWidget();
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGBloodStoreRowWidget* FirstBloodStoreRowWidget;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGBloodStoreRowWidget* SecondBloodStoreRowWidget;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGBloodStoreRowWidget* ThirdBloodStoreRowWidget;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGBloodStoreRowWidget* FourthBloodStoreRowWidget;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGBloodStoreRowWidget* FifthBloodStoreRowWidget;
+
 private:
-    UFUNCTION()
-    void BroadcastBloodNodeSelected(const FString& id);
-    
+	UPROPERTY(Transient, Export)
+	TArray<UUMGBloodStoreRowWidget*> _bloodStoreRowArray;
+
+private:
+	UFUNCTION()
+	void BroadcastBloodNodeSelected(const FString& id);
+
+public:
+	UUMGBloodStoreArrayWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGBloodStoreArrayWidget) { return 0; }

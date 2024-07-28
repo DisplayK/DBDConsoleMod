@@ -1,5 +1,7 @@
 #include "PromoPackContentTypeData.h"
 
-FPromoPackContentTypeData::FPromoPackContentTypeData() {
+FPromoPackContentTypeData::FPromoPackContentTypeData()
+{
+	this->CorrespondingWidget = NULL;
+	this->ContentTypeIcon = NULL;
 }
-

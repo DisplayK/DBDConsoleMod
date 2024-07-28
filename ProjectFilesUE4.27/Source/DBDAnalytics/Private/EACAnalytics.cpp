@@ -1,5 +1,6 @@
 #include "EACAnalytics.h"
 
-FEACAnalytics::FEACAnalytics() {
+FEACAnalytics::FEACAnalytics()
+{
+	this->LogMessage = TEXT("");
 }
-

@@ -1,91 +1,96 @@
 #include "Hatch.h"
+#include "EHatchState.h"
 #include "Net/UnrealNetwork.h"
+#include "GameplayTagContainer.h"
+#include "GameEventData.h"
 
-void AHatch::SetIsSurvivorEscaping(bool escaping) {
+void AHatch::OnRep_HatchState(EHatchState oldState)
+{
+
 }
 
-void AHatch::SetForceIsOpen(bool forceIsOpen) {
+void AHatch::OnHatchStateUnhidden()
+{
+
 }
 
-void AHatch::ResetTimer(float duration) {
+bool AHatch::IsOpen() const
+{
+	return false;
 }
 
-void AHatch::OnSurvivorsLeftChanged(int32 survivorRemaining) {
+EHatchState AHatch::GetHatchState() const
+{
+	return EHatchState::Hidden;
 }
 
-void AHatch::OnSurvivorEscaping() {
+void AHatch::Authority_SetIsForceOpen(bool isForcedOpen)
+{
+
 }
 
-void AHatch::OnSurvivorEscapeInterrupted() {
+void AHatch::Authority_SetHatchState(EHatchState newState)
+{
+
 }
 
-void AHatch::OnSurvivorEscaped() {
+void AHatch::Authority_ResetTimer(float duration)
+{
+
 }
 
-void AHatch::OnRep_HatchState(EHatchState oldState) {
+void AHatch::Authority_OnSurvivorsLeftChanged(int32 survivorRemaining)
+{
+
 }
 
-void AHatch::OnHatchVisibilityChanged(bool isVisible) {
+void AHatch::Authority_OnHatchVisibilityChanged(bool isVisible)
+{
+
 }
 
+void AHatch::Authority_OnEndGameOver(FGameplayTag gameEventType, const FGameEventData& gameEventData)
+{
 
-void AHatch::OnEndGameOver(FGameplayTag gameEventType, const FGameEventData& gameEventData) {
 }
 
-void AHatch::Local_SetHatchState(bool open) {
+void AHatch::Authority_OnCloseTimerComplete()
+{
+
 }
 
-bool AHatch::IsSurvivorEscaping() const {
-    return false;
+void AHatch::Authority_CheckedOpenHatch()
+{
+
 }
 
-bool AHatch::IsOpen() const {
-    return false;
+void AHatch::Authority_CheckedOpenForceClosedHatch()
+{
+
 }
 
-EHatchState AHatch::GetHatchState() const {
-    return EHatchState::Hidden;
+void AHatch::Authority_CheckedCloseHatch()
+{
+
 }
 
+void AHatch::Authority_CheckedChangeActiveState()
+{
 
-
-
-
-
-
-void AHatch::Authority_SetIsForceOpen(bool isForcedOpen) {
 }
 
-void AHatch::Authority_SetHatchState(EHatchState newState) {
+void AHatch::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(AHatch, _hatchState);
 }
 
-void AHatch::Authority_OnCloseTimerComplete() {
+AHatch::AHatch()
+{
+	this->_hatchState = EHatchState::Hidden;
+	this->_isEndGameOver = false;
+	this->_isForceOpen = false;
+	this->_attemptToCloseHatchOnNextEscape = false;
+	this->_baseCollision = NULL;
 }
-
-void AHatch::Authority_CheckedOpenHatch() {
-}
-
-void AHatch::Authority_CheckedOpenForceClosedHatch() {
-}
-
-void AHatch::Authority_CheckedCloseHatch() {
-}
-
-void AHatch::Authority_CheckedChangeActiveState() {
-}
-
-void AHatch::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(AHatch, _hatchState);
-}
-
-AHatch::AHatch() {
-    this->_hatchState = EHatchState::Hidden;
-    this->_isSurvivorEscaping = false;
-    this->_isEndGameOver = false;
-    this->_isForceOpen = false;
-    this->_attemptToCloseHatchOnNextEscape = false;
-    this->_baseCollision = NULL;
-}
-

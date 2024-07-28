@@ -1,5 +1,6 @@
 #include "DBDHostSettingsParamsBase.h"
 
-UDBDHostSettingsParamsBase::UDBDHostSettingsParamsBase() {
-}
+UDBDHostSettingsParamsBase::UDBDHostSettingsParamsBase()
+{
 
+}

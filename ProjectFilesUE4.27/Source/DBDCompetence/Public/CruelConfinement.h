@@ -1,30 +1,40 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Perk.h"
-#include "UObject/NoExportTypes.h"
 #include "WindowBlockableList.h"
+#include "UObject/NoExportTypes.h"
 #include "CruelConfinement.generated.h"
 
 class AGenerator;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DBDCOMPETENCE_API UCruelConfinement : public UPerk {
-    GENERATED_BODY()
-public:
+class DBDCOMPETENCE_API UCruelConfinement : public UPerk
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditAnywhere, EditFixedSize)
-    float _effectiveRadius[3];
-    
-    UPROPERTY(EditAnywhere, EditFixedSize)
-    float _blockDuration[3];
-    
-    UPROPERTY(EditAnywhere)
-    FLinearColor _windowAuraColor;
-    
-    UPROPERTY(Transient)
-    TMap<AGenerator*, FWindowBlockableList> _blockableLists;
-    
+	UPROPERTY(EditAnywhere, EditFixedSize)
+	float _effectiveRadius;
+
+	UPROPERTY(EditAnywhere, EditFixedSize)
+	float _blockDuration;
+
+	UPROPERTY(EditAnywhere)
+	FLinearColor _windowAuraColor;
+
+	UPROPERTY(Transient)
+	TMap<AGenerator*, FWindowBlockableList> _blockableLists;
+
 public:
-    UCruelConfinement();
+	UFUNCTION(BlueprintCallable)
+	float GetEffectiveRadiusAtLevel();
+
+	UFUNCTION(BlueprintCallable)
+	float GetBlockDurationAtLevel();
+
+public:
+	UCruelConfinement();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCruelConfinement) { return 0; }

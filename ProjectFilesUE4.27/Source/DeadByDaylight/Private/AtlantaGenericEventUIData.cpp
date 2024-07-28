@@ -1,5 +1,6 @@
 #include "AtlantaGenericEventUIData.h"
 
-FAtlantaGenericEventUIData::FAtlantaGenericEventUIData() {
+FAtlantaGenericEventUIData::FAtlantaGenericEventUIData()
+{
+	this->elementsUIData = TArray<FAtlantaEventElementUIData>();
 }
-

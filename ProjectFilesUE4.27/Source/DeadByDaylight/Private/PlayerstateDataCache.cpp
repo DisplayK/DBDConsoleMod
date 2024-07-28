@@ -1,6 +1,7 @@
 #include "PlayerstateDataCache.h"
 
-FPlayerstateDataCache::FPlayerstateDataCache() {
-    this->IsDataCacheValid = false;
+FPlayerstateDataCache::FPlayerstateDataCache()
+{
+	this->awardedScoresByType = TMap<FName, FAwardedScores>();
+	this->IsDataCacheValid = false;
 }
-

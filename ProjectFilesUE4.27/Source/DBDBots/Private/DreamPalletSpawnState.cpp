@@ -1,5 +1,5 @@
 #include "DreamPalletSpawnState.h"
 
-FDreamPalletSpawnState::FDreamPalletSpawnState() {
+FDreamPalletSpawnState::FDreamPalletSpawnState()
+{
 }
-

@@ -1,5 +1,6 @@
 #include "FirecrackerStateMachine.h"
 
-UFirecrackerStateMachine::UFirecrackerStateMachine() {
-}
+UFirecrackerStateMachine::UFirecrackerStateMachine()
+{
 
+}

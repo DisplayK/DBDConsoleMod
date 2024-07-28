@@ -1,6 +1,6 @@
 #include "CoreCurrencyProgressionRewardWidget.h"
 
+UCoreCurrencyProgressionRewardWidget::UCoreCurrencyProgressionRewardWidget()
+{
 
-UCoreCurrencyProgressionRewardWidget::UCoreCurrencyProgressionRewardWidget() {
 }
-

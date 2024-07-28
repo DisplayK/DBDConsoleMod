@@ -1,7 +1,7 @@
 #include "AkMidiCc.h"
 
-FAkMidiCc::FAkMidiCc() {
-    this->Cc = EAkMidiCcValues::AkMidiCcBankSelectCoarse;
-    this->Value = 0;
+FAkMidiCc::FAkMidiCc()
+{
+	this->Cc = EAkMidiCcValues::AkMidiCcBankSelectCoarse;
+	this->Value = 0;
 }
-

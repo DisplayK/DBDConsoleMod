@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EFriendSuggestionType.generated.h"
 
-UENUM()
-enum class EFriendSuggestionType {
-    None,
-    Facebook,
-    Google,
+UENUM(BlueprintType)
+enum class EFriendSuggestionType : uint8
+{
+	None,
+	Facebook,
+	Google,
 };
-

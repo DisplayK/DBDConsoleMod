@@ -1,5 +1,7 @@
 #include "MatchOptionAssetData.h"
 
-FMatchOptionAssetData::FMatchOptionAssetData() {
+FMatchOptionAssetData::FMatchOptionAssetData()
+{
+	this->TextName = FText::GetEmpty();
+	this->Icon = NULL;
 }
-

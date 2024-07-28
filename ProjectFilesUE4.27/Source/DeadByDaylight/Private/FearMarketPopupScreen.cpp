@@ -1,5 +1,6 @@
 #include "FearMarketPopupScreen.h"
 
-UFearMarketPopupScreen::UFearMarketPopupScreen() {
-}
+UFearMarketPopupScreen::UFearMarketPopupScreen()
+{
 
+}

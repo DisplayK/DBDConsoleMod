@@ -1,5 +1,6 @@
 #include "PresentationGeneratorTeleportProgressComponent.h"
 
-UPresentationGeneratorTeleportProgressComponent::UPresentationGeneratorTeleportProgressComponent() {
-}
+UPresentationGeneratorTeleportProgressComponent::UPresentationGeneratorTeleportProgressComponent()
+{
 
+}

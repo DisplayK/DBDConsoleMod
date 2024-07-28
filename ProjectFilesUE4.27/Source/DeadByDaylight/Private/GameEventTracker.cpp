@@ -1,14 +1,20 @@
 #include "GameEventTracker.h"
+#include "EDBDScoreTypes.h"
 
-class AActor;
 class ADBDPlayerState;
+class AActor;
 
-void UGameEventTracker::FireGameflowEvent(EDBDScoreTypes eventType, float amount, const ADBDPlayerState* instigator, FName data) {
+void UGameEventTracker::FireGameflowEvent(EDBDScoreTypes eventType, float amount, const ADBDPlayerState* instigator, FName data)
+{
+
 }
 
-void UGameEventTracker::FireGameEvent(EDBDScoreTypes eventType, float amount, AActor* instigator, AActor* target) {
+void UGameEventTracker::FireGameEvent(EDBDScoreTypes eventType, float amount, AActor* instigator, AActor* target)
+{
+
 }
 
-UGameEventTracker::UGameEventTracker() {
-}
+UGameEventTracker::UGameEventTracker()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "CannibalChainsawHitEventAddon.h"
 
-UCannibalChainsawHitEventAddon::UCannibalChainsawHitEventAddon() {
-}
+UCannibalChainsawHitEventAddon::UCannibalChainsawHitEventAddon()
+{
 
+}

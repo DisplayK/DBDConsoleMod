@@ -1,106 +1,113 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "BaseKillerAnimInstance.h"
 #include "EInteractionAnimation.h"
+#include "BaseKillerAnimInstance.h"
+#include "UObject/NoExportTypes.h"
 #include "EAttackSubstate.h"
 #include "KillerAnimInstance.generated.h"
 
 class UArmIKSensorComponent;
 
 UCLASS(NonTransient)
-class DBDANIMATION_API UKillerAnimInstance : public UBaseKillerAnimInstance {
-    GENERATED_BODY()
-public:
+class DBDANIMATION_API UKillerAnimInstance : public UBaseKillerAnimInstance
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly)
-    FVector _leftHandIKLocationFPV;
-    
-    UPROPERTY(BlueprintReadOnly)
-    FVector _rightHandIKLocationFPV;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isAnyMontagePlaying;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isCarrying;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector _firstPersonCarryOffset;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector _firstPersonCarryOffsetLookingDown;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isInAir;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isSpectator;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isIdle;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _animDirection;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _animSpeed;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _animPitch;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _animYaw;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _pelvisHeight;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _idleTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 _directionSwitch;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isAttacking;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isPlayingAnyMontage;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isKilling;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector _leftClearFrontSpaceVector;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector _rightClearFrontSpaceVector;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector _velocity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector _rightFootEffectorLocation;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector _leftFootEffectorLocation;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EInteractionAnimation _interactionType;
-    
-    UPROPERTY(Export, Transient)
-    UArmIKSensorComponent* _armIKSensorComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EAttackSubstate _attackState;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _forwardVelocity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _lateralVelocity;
-    
+	UPROPERTY(BlueprintReadOnly)
+	FVector _leftHandIKLocationFPV;
+
+	UPROPERTY(BlueprintReadOnly)
+	FVector _rightHandIKLocationFPV;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isAnyMontagePlaying;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isCarrying;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector _firstPersonCarryOffset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector _firstPersonCarryOffsetLookingDown;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isInAir;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isSpectator;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isIdle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _animDirection;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _animSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _animPitch;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _animYaw;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _pelvisHeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _idleTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 _directionSwitch;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isAttacking;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isPlayingAnyMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isKilling;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector _leftClearFrontSpaceVector;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector _rightClearFrontSpaceVector;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector _velocity;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector _rightFootEffectorLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector _leftFootEffectorLocation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EInteractionAnimation _interactionType;
+
+	UPROPERTY(Transient, meta=(BindWidgetOptional))
+	UArmIKSensorComponent* _armIKSensorComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EAttackSubstate _attackState;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _forwardVelocity;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _lateralVelocity;
+
+protected:
+	UFUNCTION(BlueprintPure)
+	FName GetWeaponCustomizationId() const;
+
 public:
-    UKillerAnimInstance();
+	UKillerAnimInstance();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UKillerAnimInstance) { return 0; }

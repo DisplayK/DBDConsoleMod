@@ -1,6 +1,11 @@
 #include "OwningSlasherHasBeenStill.h"
 
-UOwningSlasherHasBeenStill::UOwningSlasherHasBeenStill() {
-    this->_secondsOfStillnessRequired = 0.00f;
+float UOwningSlasherHasBeenStill::GetSecondsOfStillnessRequired()
+{
+	return 0.0f;
 }
 
+UOwningSlasherHasBeenStill::UOwningSlasherHasBeenStill()
+{
+	this->_secondsOfStillnessRequired = 0.000000;
+}

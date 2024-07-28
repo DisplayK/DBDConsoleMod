@@ -1,5 +1,6 @@
 #include "OngoingGameEvent.h"
 
-UOngoingGameEvent::UOngoingGameEvent() {
-}
+UOngoingGameEvent::UOngoingGameEvent()
+{
 
+}

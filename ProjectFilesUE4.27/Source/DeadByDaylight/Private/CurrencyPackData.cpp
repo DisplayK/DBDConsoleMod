@@ -1,6 +1,6 @@
 #include "CurrencyPackData.h"
 
-FCurrencyPackData::FCurrencyPackData() {
-    this->CurrencyType = ECurrencyType::None;
+FCurrencyPackData::FCurrencyPackData()
+{
+	this->CurrencyType = ECurrencyType::None;
 }
-

@@ -1,5 +1,6 @@
 #include "DefaultObjectPlacementValidationStrategy.h"
 
-UDefaultObjectPlacementValidationStrategy::UDefaultObjectPlacementValidationStrategy() {
-}
+UDefaultObjectPlacementValidationStrategy::UDefaultObjectPlacementValidationStrategy()
+{
 
+}

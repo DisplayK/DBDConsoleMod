@@ -1,5 +1,5 @@
 #include "MatchEndMessage.h"
 
-FMatchEndMessage::FMatchEndMessage() {
+FMatchEndMessage::FMatchEndMessage()
+{
 }
-

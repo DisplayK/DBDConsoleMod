@@ -1,8 +1,11 @@
 #include "AkAndroidInitializationSettings.h"
 
-void UAkAndroidInitializationSettings::MigrateMultiCoreRendering(bool NewValue) {
+void UAkAndroidInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
+{
+
 }
 
-UAkAndroidInitializationSettings::UAkAndroidInitializationSettings() {
-}
+UAkAndroidInitializationSettings::UAkAndroidInitializationSettings()
+{
 
+}

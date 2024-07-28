@@ -1,5 +1,6 @@
 #include "InboxUtilities.h"
 
-UInboxUtilities::UInboxUtilities() {
-}
+UInboxUtilities::UInboxUtilities()
+{
 
+}

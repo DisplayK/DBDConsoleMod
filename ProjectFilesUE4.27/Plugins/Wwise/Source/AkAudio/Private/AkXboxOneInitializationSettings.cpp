@@ -1,8 +1,11 @@
 #include "AkXboxOneInitializationSettings.h"
 
-void UAkXboxOneInitializationSettings::MigrateMultiCoreRendering(bool NewValue) {
+void UAkXboxOneInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
+{
+
 }
 
-UAkXboxOneInitializationSettings::UAkXboxOneInitializationSettings() {
-}
+UAkXboxOneInitializationSettings::UAkXboxOneInitializationSettings()
+{
 
+}

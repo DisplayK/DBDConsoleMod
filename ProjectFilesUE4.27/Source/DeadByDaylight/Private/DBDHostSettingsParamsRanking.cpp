@@ -1,5 +1,6 @@
 #include "DBDHostSettingsParamsRanking.h"
 
-UDBDHostSettingsParamsRanking::UDBDHostSettingsParamsRanking() {
-}
+UDBDHostSettingsParamsRanking::UDBDHostSettingsParamsRanking()
+{
 
+}

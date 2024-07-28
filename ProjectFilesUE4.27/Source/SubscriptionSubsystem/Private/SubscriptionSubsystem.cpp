@@ -1,5 +1,6 @@
 #include "SubscriptionSubsystem.h"
 
-USubscriptionSubsystem::USubscriptionSubsystem() {
-}
+USubscriptionSubsystem::USubscriptionSubsystem()
+{
 
+}

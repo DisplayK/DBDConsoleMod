@@ -1,26 +1,31 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "OfferingEffect.h"
 #include "ItemData.h"
 #include "EOfferingType.h"
-#include "OfferingEffect.h"
 #include "OfferingProperties.generated.h"
 
 USTRUCT(BlueprintType)
-struct FOfferingProperties : public FItemData {
-    GENERATED_BODY()
+struct FOfferingProperties: public FItemData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EOfferingType OfferingType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FName> Tags;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FOfferingEffect> Effects;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FString BigIconFilePath;
-    
-    DEADBYDAYLIGHT_API FOfferingProperties();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EOfferingType OfferingType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FName> Tags;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FOfferingEffect> Effects;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString BigIconFilePath;
+
+public:
+	DEADBYDAYLIGHT_API FOfferingProperties();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FOfferingProperties) { return 0; }

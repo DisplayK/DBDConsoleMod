@@ -1,6 +1,6 @@
 #include "BlightPowerStateLethalDash.h"
 
-UBlightPowerStateLethalDash::UBlightPowerStateLethalDash() {
-    this->_smashBreakables = false;
+UBlightPowerStateLethalDash::UBlightPowerStateLethalDash()
+{
+	this->_smashBreakables = false;
 }
-

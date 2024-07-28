@@ -1,6 +1,8 @@
 #include "FriendStatusUIData.h"
 
-FFriendStatusUIData::FFriendStatusUIData() {
-    this->FriendStatus = EAtlantaFriendUIStatus::Undefined;
+FFriendStatusUIData::FFriendStatusUIData()
+{
+	this->FriendStatus = EAtlantaFriendUIStatus::Undefined;
+	this->StatusIcon = NULL;
+	this->StatusText = FText::GetEmpty();
 }
-

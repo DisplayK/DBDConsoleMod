@@ -1,5 +1,6 @@
 #include "DlcHelper.h"
 
-UDlcHelper::UDlcHelper() {
-}
+UDlcHelper::UDlcHelper()
+{
 
+}

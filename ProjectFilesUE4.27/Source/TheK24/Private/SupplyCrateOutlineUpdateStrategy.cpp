@@ -1,5 +1,6 @@
 #include "SupplyCrateOutlineUpdateStrategy.h"
 
-USupplyCrateOutlineUpdateStrategy::USupplyCrateOutlineUpdateStrategy() {
-}
+USupplyCrateOutlineUpdateStrategy::USupplyCrateOutlineUpdateStrategy()
+{
 
+}

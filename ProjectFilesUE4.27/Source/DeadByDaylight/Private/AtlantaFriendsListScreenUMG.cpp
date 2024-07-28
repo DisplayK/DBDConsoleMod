@@ -1,12 +1,16 @@
 #include "AtlantaFriendsListScreenUMG.h"
 
-void UAtlantaFriendsListScreenUMG::HandleResearchButtonClicked(const FText& searchInput) {
+void UAtlantaFriendsListScreenUMG::HandleResearchButtonClicked(const FText& searchInput)
+{
+
 }
 
-void UAtlantaFriendsListScreenUMG::HandleClosedButtonClicked() {
+void UAtlantaFriendsListScreenUMG::HandleClosedButtonClicked()
+{
+
 }
 
-UAtlantaFriendsListScreenUMG::UAtlantaFriendsListScreenUMG() {
-    this->_atlantaFriendListScreen = NULL;
+UAtlantaFriendsListScreenUMG::UAtlantaFriendsListScreenUMG()
+{
+	this->_atlantaFriendListScreen = NULL;
 }
-

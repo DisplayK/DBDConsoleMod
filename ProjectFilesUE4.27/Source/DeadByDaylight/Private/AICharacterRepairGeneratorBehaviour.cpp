@@ -1,15 +1,21 @@
 #include "AICharacterRepairGeneratorBehaviour.h"
+#include "AITypes.h"
+#include "Navigation/PathFollowingComponent.h"
 
-void UAICharacterRepairGeneratorBehaviour::OnMovementFinished(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult::Type> Result) {
+void UAICharacterRepairGeneratorBehaviour::OnMovementFinished(FAIRequestID RequestID, TEnumAsByte<EPathFollowingResult::Type> Result)
+{
+
 }
 
-void UAICharacterRepairGeneratorBehaviour::OnGeneratorRepairedEventHandler(bool isAutoCompleted) {
+void UAICharacterRepairGeneratorBehaviour::OnGeneratorRepairedEventHandler(bool isAutoCompleted)
+{
+
 }
 
-UAICharacterRepairGeneratorBehaviour::UAICharacterRepairGeneratorBehaviour() {
-    this->_aiPlayer = NULL;
-    this->_aiPlayerController = NULL;
-    this->_targetInteractor = NULL;
-    this->_characterRepairGeneratorData = NULL;
+UAICharacterRepairGeneratorBehaviour::UAICharacterRepairGeneratorBehaviour()
+{
+	this->_aiPlayer = NULL;
+	this->_aiPlayerController = NULL;
+	this->_targetInteractor = NULL;
+	this->_characterRepairGeneratorData = NULL;
 }
-

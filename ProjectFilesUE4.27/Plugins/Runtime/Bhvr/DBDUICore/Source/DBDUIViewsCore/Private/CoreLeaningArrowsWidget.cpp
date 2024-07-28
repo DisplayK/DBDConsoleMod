@@ -1,5 +1,6 @@
 #include "CoreLeaningArrowsWidget.h"
 
-UCoreLeaningArrowsWidget::UCoreLeaningArrowsWidget() {
-}
+UCoreLeaningArrowsWidget::UCoreLeaningArrowsWidget()
+{
 
+}

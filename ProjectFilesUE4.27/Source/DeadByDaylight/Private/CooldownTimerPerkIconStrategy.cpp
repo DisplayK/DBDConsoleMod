@@ -1,5 +1,6 @@
 #include "CooldownTimerPerkIconStrategy.h"
 
-UCooldownTimerPerkIconStrategy::UCooldownTimerPerkIconStrategy() {
-}
+UCooldownTimerPerkIconStrategy::UCooldownTimerPerkIconStrategy()
+{
 
+}

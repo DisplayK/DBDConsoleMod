@@ -1,5 +1,6 @@
 #include "SoftBanManager.h"
 
-USoftBanManager::USoftBanManager() {
-}
+USoftBanManager::USoftBanManager()
+{
 
+}

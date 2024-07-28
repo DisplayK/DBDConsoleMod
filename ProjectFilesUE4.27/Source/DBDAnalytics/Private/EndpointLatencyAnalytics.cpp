@@ -1,5 +1,6 @@
 #include "EndpointLatencyAnalytics.h"
 
-FEndpointLatencyAnalytics::FEndpointLatencyAnalytics() {
+FEndpointLatencyAnalytics::FEndpointLatencyAnalytics()
+{
+	this->Endpoints = TArray<FEndpointLatencyData>();
 }
-

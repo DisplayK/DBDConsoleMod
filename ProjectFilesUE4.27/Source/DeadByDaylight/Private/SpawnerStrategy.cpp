@@ -1,5 +1,6 @@
 #include "SpawnerStrategy.h"
 
-USpawnerStrategy::USpawnerStrategy() {
-}
+USpawnerStrategy::USpawnerStrategy()
+{
 
+}

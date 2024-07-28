@@ -1,21 +1,19 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ActionPredictionKey.generated.h"
 
-USTRUCT(BlueprintType)
-struct REVERSIBLEACTIONSYSTEM_API FActionPredictionKey {
-    GENERATED_BODY()
-public:
-private:
-    UPROPERTY()
-    int32 _keyValue;
-    
-public:
-    FActionPredictionKey();
+USTRUCT()
+struct FActionPredictionKey
+{
+	GENERATED_BODY()
 
-    friend uint32 GetTypeHash(const FActionPredictionKey& Key)
-    {
-        return Key._keyValue;
-    }
+private:
+	UPROPERTY()
+	int32 _keyValue;
+
+public:
+	REVERSIBLEACTIONSYSTEM_API FActionPredictionKey();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FActionPredictionKey) { return 0; }

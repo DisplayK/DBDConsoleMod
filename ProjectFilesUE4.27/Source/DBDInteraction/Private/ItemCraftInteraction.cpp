@@ -1,6 +1,7 @@
 #include "ItemCraftInteraction.h"
 
-UItemCraftInteraction::UItemCraftInteraction() {
-    this->_collectableClass = NULL;
+UItemCraftInteraction::UItemCraftInteraction()
+{
+	this->_attachToSocketName = NAME_None;
+	this->_collectableClass = NULL;
 }
-

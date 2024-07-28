@@ -1,5 +1,5 @@
 #include "PromoPackCharacterPayloadData.h"
 
-FPromoPackCharacterPayloadData::FPromoPackCharacterPayloadData() {
+FPromoPackCharacterPayloadData::FPromoPackCharacterPayloadData()
+{
 }
-

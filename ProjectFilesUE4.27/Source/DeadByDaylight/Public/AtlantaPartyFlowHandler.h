@@ -1,16 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "AtlantaPartyFlowHandler.generated.h"
 
 UCLASS()
-class UAtlantaPartyFlowHandler : public UObject {
-    GENERATED_BODY()
-public:
-    UAtlantaPartyFlowHandler();
+class UAtlantaPartyFlowHandler : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UFUNCTION()
-    void DisplayPartyFlowHandlerInfo();
-    
+	UFUNCTION()
+	void DisplayPartyFlowHandlerInfo();
+
+public:
+	UAtlantaPartyFlowHandler();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAtlantaPartyFlowHandler) { return 0; }

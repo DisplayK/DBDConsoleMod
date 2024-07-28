@@ -1,8 +1,11 @@
 #include "RangeToActorsTrackerComponent.h"
 
-void URangeToActorsTrackerComponent::OnLevelReadyToPlay() {
+void URangeToActorsTrackerComponent::OnLevelReadyToPlay()
+{
+
 }
 
-URangeToActorsTrackerComponent::URangeToActorsTrackerComponent() {
+URangeToActorsTrackerComponent::URangeToActorsTrackerComponent()
+{
+	this->_rangeTrackers = TArray<URangeToActorsTrackerStrategy*>();
 }
-

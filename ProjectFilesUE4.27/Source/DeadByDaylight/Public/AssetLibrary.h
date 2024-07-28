@@ -1,22 +1,25 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "AssetLibrary.generated.h"
 
 class UObjectLibrary;
 
-UCLASS(Config=Game)
-class UAssetLibrary : public UObject {
-    GENERATED_BODY()
-public:
+UCLASS()
+class UAssetLibrary : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UObjectLibrary* _objectLibrary;
-    
-    UPROPERTY(Config)
-    float SecondsDelayBetweenBatch;
-    
+	UPROPERTY(Transient)
+	UObjectLibrary* _objectLibrary;
+
+	UPROPERTY()
+	float SecondsDelayBetweenBatch;
+
 public:
-    UAssetLibrary();
+	UAssetLibrary();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAssetLibrary) { return 0; }

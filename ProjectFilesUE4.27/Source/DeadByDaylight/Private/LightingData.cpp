@@ -1,5 +1,9 @@
 #include "LightingData.h"
 
-ULightingData::ULightingData() {
+ULightingData::ULightingData()
+{
+	this->DefaultLighting = NULL;
+	this->DefaultAtlantaLighting = NULL;
+	this->Descriptions = TArray<FSceneLightingDescription>();
+	this->AdaptiveShadowMapControllersActor = NULL;
 }
-

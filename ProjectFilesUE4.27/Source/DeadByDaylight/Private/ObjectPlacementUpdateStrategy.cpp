@@ -1,5 +1,6 @@
 #include "ObjectPlacementUpdateStrategy.h"
 
-UObjectPlacementUpdateStrategy::UObjectPlacementUpdateStrategy() {
-}
+UObjectPlacementUpdateStrategy::UObjectPlacementUpdateStrategy()
+{
 
+}

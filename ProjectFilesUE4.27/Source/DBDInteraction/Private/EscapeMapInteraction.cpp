@@ -1,5 +1,6 @@
 #include "EscapeMapInteraction.h"
 
-UEscapeMapInteraction::UEscapeMapInteraction() {
-}
+UEscapeMapInteraction::UEscapeMapInteraction()
+{
 
+}

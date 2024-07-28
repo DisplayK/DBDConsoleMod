@@ -1,5 +1,6 @@
 #include "TriggerWithSameTargetWithinTimeQEEvaluator.h"
 
-UTriggerWithSameTargetWithinTimeQEEvaluator::UTriggerWithSameTargetWithinTimeQEEvaluator() {
-}
+UTriggerWithSameTargetWithinTimeQEEvaluator::UTriggerWithSameTargetWithinTimeQEEvaluator()
+{
 
+}

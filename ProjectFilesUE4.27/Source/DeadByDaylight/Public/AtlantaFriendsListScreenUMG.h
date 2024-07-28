@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ScreenBase.h"
 #include "AtlantaFriendsListScreenUMG.generated.h"
@@ -6,21 +7,23 @@
 class UUMGAtlantaFriendListScreen;
 
 UCLASS()
-class UAtlantaFriendsListScreenUMG : public UScreenBase {
-    GENERATED_BODY()
-public:
+class UAtlantaFriendsListScreenUMG : public UScreenBase
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    UUMGAtlantaFriendListScreen* _atlantaFriendListScreen;
-    
-public:
-    UAtlantaFriendsListScreenUMG();
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGAtlantaFriendListScreen* _atlantaFriendListScreen;
+
 protected:
-    UFUNCTION()
-    void HandleResearchButtonClicked(const FText& searchInput);
-    
-    UFUNCTION()
-    void HandleClosedButtonClicked();
-    
+	UFUNCTION()
+	void HandleResearchButtonClicked(const FText& searchInput);
+
+	UFUNCTION()
+	void HandleClosedButtonClicked();
+
+public:
+	UAtlantaFriendsListScreenUMG();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAtlantaFriendsListScreenUMG) { return 0; }

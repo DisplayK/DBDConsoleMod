@@ -1,5 +1,6 @@
 #include "AIBotsManager.h"
 
-UAIBotsManager::UAIBotsManager() {
-}
+UAIBotsManager::UAIBotsManager()
+{
 
+}

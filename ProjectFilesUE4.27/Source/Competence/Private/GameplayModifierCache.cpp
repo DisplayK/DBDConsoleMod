@@ -1,5 +1,5 @@
 #include "GameplayModifierCache.h"
 
-FGameplayModifierCache::FGameplayModifierCache() {
+FGameplayModifierCache::FGameplayModifierCache()
+{
 }
-

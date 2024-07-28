@@ -1,5 +1,7 @@
 #include "ConditionalMaterialReplacer.h"
 
-FConditionalMaterialReplacer::FConditionalMaterialReplacer() {
+FConditionalMaterialReplacer::FConditionalMaterialReplacer()
+{
+	this->ItemTag = NAME_None;
+	this->ConditionalMaterials = TMap<FName, FMaterialReplacerArray>();
 }
-

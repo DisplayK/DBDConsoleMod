@@ -1,5 +1,6 @@
 #include "DBDOutlineComponentCustomDepthConfiguration.h"
 
-UDBDOutlineComponentCustomDepthConfiguration::UDBDOutlineComponentCustomDepthConfiguration() {
-}
+UDBDOutlineComponentCustomDepthConfiguration::UDBDOutlineComponentCustomDepthConfiguration()
+{
 
+}

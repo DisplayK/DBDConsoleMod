@@ -1,5 +1,6 @@
 #include "AtlantaRitualEvaluatorBase.h"
 
-UAtlantaRitualEvaluatorBase::UAtlantaRitualEvaluatorBase() {
-}
+UAtlantaRitualEvaluatorBase::UAtlantaRitualEvaluatorBase()
+{
 
+}

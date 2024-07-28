@@ -3,15 +3,19 @@
 
 class UPerk;
 
-void UPerkCollectionComponent::OnRep_Array(const TArray<UPerk*>& oldArray) {
+void UPerkCollectionComponent::OnRep_Array(const TArray<UPerk*>& oldArray)
+{
+
 }
 
-void UPerkCollectionComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UPerkCollectionComponent, _array);
+void UPerkCollectionComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UPerkCollectionComponent, _array);
 }
 
-UPerkCollectionComponent::UPerkCollectionComponent() {
+UPerkCollectionComponent::UPerkCollectionComponent()
+{
+	this->_array = TArray<UPerk*>();
 }
-

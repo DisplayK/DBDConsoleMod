@@ -1,9 +1,11 @@
 #include "UMGAtlLandingPageStorefrontWidget.h"
 
-void UUMGAtlLandingPageStorefrontWidget::OnPromoCodeButtonPressed() {
+void UUMGAtlLandingPageStorefrontWidget::OnPromoCodeButtonPressed()
+{
+
 }
 
-UUMGAtlLandingPageStorefrontWidget::UUMGAtlLandingPageStorefrontWidget() {
-    this->AtlantaRedeemCodeBtn = NULL;
+UUMGAtlLandingPageStorefrontWidget::UUMGAtlLandingPageStorefrontWidget()
+{
+	this->AtlantaRedeemCodeBtn = NULL;
 }
-

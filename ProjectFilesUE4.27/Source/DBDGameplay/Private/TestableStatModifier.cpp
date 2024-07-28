@@ -1,5 +1,5 @@
 #include "TestableStatModifier.h"
 
-FTestableStatModifier::FTestableStatModifier() {
+FTestableStatModifier::FTestableStatModifier()
+{
 }
-

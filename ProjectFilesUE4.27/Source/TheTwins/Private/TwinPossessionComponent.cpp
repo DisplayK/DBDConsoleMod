@@ -1,5 +1,6 @@
 #include "TwinPossessionComponent.h"
 
-UTwinPossessionComponent::UTwinPossessionComponent() {
-}
+UTwinPossessionComponent::UTwinPossessionComponent()
+{
 
+}

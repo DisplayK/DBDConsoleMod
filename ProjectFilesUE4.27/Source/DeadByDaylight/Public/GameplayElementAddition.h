@@ -1,28 +1,32 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EGameplayElementType.h"
+#include "UObject/SoftObjectPtr.h"
 #include "GameplayElementAddition.generated.h"
 
 class AActor;
 
 USTRUCT(BlueprintType)
-struct FGameplayElementAddition {
-    GENERATED_BODY()
-public:
+struct FGameplayElementAddition
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSoftClassPtr<AActor> _elementToAdd;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
-    EGameplayElementType _spawnerType;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 _numberToAdd;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool _numberToAddAffectedByOffering;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	TSoftClassPtr<AActor> _elementToAdd;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	EGameplayElementType _spawnerType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	int32 _numberToAdd;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	bool _numberToAddAffectedByOffering;
+
 public:
-    DEADBYDAYLIGHT_API FGameplayElementAddition();
+	DEADBYDAYLIGHT_API FGameplayElementAddition();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FGameplayElementAddition) { return 0; }

@@ -1,31 +1,32 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "StandDisplayable.h"
+#include "GameFramework/Actor.h"
 #include "Charm.generated.h"
 
 class USkeletalMeshComponent;
 class AItemVfx;
 
 UCLASS()
-class ACharm : public AActor, public IStandDisplayable {
-    GENERATED_BODY()
-public:
+class ACharm : public AActor, public IStandDisplayable
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    USkeletalMeshComponent* _skeletalMeshComponent;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	USkeletalMeshComponent* _skeletalMeshComponent;
+
 private:
-    UPROPERTY(Transient)
-    AItemVfx* _actorVfx;
-    
-public:
-    ACharm();
+	UPROPERTY(Transient)
+	AItemVfx* _actorVfx;
+
 protected:
-    UFUNCTION(BlueprintNativeEvent)
-    void BeginDestroySequence_Internal();
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintNativeEvent)
+	void BeginDestroySequence_Internal();
+
+public:
+	ACharm();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ACharm) { return 0; }

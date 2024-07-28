@@ -1,44 +1,49 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkAssetDataSwitchContainer.h"
 #include "AkAudioEventData.generated.h"
 
-class UAkGroupValue;
-class UAkTrigger;
 class UAkAudioEvent;
 class UAkAuxBus;
+class UAkGroupValue;
+class UAkTrigger;
 
 UCLASS(BlueprintType)
-class AKAUDIO_API UAkAudioEventData : public UAkAssetDataSwitchContainer {
-    GENERATED_BODY()
+class AKAUDIO_API UAkAudioEventData : public UAkAssetDataSwitchContainer
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float MaxAttenuationRadius;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool IsInfinite;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float MinimumDuration;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float MaximumDuration;
-    
-    UPROPERTY(VisibleAnywhere)
-    TMap<FString, UAkAssetDataSwitchContainer*> LocalizedMedia;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TSet<UAkAudioEvent*> PostedEvents;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TSet<UAkAuxBus*> UserDefinedSends;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TSet<UAkTrigger*> PostedTriggers;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TSet<UAkGroupValue*> GroupValues;
-    
-    UAkAudioEventData();
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	float MaxAttenuationRadius;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool IsInfinite;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	float MinimumDuration;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	float MaximumDuration;
+
+	UPROPERTY(VisibleAnywhere)
+	TMap<FString, UAkAssetDataSwitchContainer*> LocalizedMedia;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TSet<UAkAudioEvent*> PostedEvents;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TSet<UAkAuxBus*> UserDefinedSends;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TSet<UAkTrigger*> PostedTriggers;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TSet<UAkGroupValue*> GroupValues;
+
+public:
+	UAkAudioEventData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkAudioEventData) { return 0; }

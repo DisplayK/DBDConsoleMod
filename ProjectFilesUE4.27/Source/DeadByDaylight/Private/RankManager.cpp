@@ -1,5 +1,6 @@
 #include "RankManager.h"
 
-URankManager::URankManager() {
-}
+URankManager::URankManager()
+{
 
+}

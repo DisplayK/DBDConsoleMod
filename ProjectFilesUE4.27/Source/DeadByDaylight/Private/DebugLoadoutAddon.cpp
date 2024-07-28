@@ -1,5 +1,6 @@
 #include "DebugLoadoutAddon.h"
 
-FDebugLoadoutAddon::FDebugLoadoutAddon() {
+FDebugLoadoutAddon::FDebugLoadoutAddon()
+{
+	this->AddonDropdown = FAddonDropdown{};
 }
-

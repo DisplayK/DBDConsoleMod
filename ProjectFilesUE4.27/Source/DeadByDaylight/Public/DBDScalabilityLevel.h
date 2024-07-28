@@ -1,13 +1,14 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDScalabilityLevel.generated.h"
 
-UENUM()
-enum class DBDScalabilityLevel {
-    LOW,
-    MEDIUM,
-    HIGH,
-    EPIC,
-    ULTRA,
+UENUM(BlueprintType)
+enum class DBDScalabilityLevel : uint8
+{
+	LOW,
+	MEDIUM,
+	HIGH,
+	EPIC,
+	ULTRA,
 };
-

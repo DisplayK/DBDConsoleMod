@@ -1,7 +1,6 @@
 #include "BlessedVignetteController.h"
 
+UBlessedVignetteController::UBlessedVignetteController()
+{
 
-
-UBlessedVignetteController::UBlessedVignetteController() {
 }
-

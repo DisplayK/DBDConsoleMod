@@ -1,9 +1,11 @@
 #include "VaultableOutlineUpdateStrategy.h"
 
-void UVaultableOutlineUpdateStrategy::SetCanBeRevealedToLocalPlayer(bool canBeRevealedToLocalPlayer) {
+void UVaultableOutlineUpdateStrategy::SetCanBeRevealedToLocalPlayer(bool canBeRevealedToLocalPlayer)
+{
+
 }
 
-UVaultableOutlineUpdateStrategy::UVaultableOutlineUpdateStrategy() {
-    this->_canBeRevealedToLocalPlayer = true;
+UVaultableOutlineUpdateStrategy::UVaultableOutlineUpdateStrategy()
+{
+	this->_canBeRevealedToLocalPlayer = true;
 }
-

@@ -1,8 +1,9 @@
 #include "BuckleUp.h"
 
-UBuckleUp::UBuckleUp() {
-    this->_revealDuration[0] = 0.00f;
-    this->_revealDuration[1] = 0.00f;
-    this->_revealDuration[2] = 0.00f;
+UBuckleUp::UBuckleUp()
+{
+	this->_perkDuration = 0.000000;
+	this->_hasteValue = 0.100000;
+	this->_revealKillerStatusEffect = NULL;
+	this->_hasteStatusEffect = NULL;
 }
-

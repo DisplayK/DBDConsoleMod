@@ -1,5 +1,5 @@
 #include "UserCenterMessage.h"
 
-FUserCenterMessage::FUserCenterMessage() {
+FUserCenterMessage::FUserCenterMessage()
+{
 }
-

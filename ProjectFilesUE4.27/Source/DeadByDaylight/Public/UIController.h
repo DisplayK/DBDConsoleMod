@@ -1,23 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "UIController.generated.h"
 
-class UGFxObject;
 class UMobileBaseUserWidget;
+class UGFxObject;
 
 UCLASS()
-class DEADBYDAYLIGHT_API UUIController : public UObject {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UUIController : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UGFxObject* m_UIControllerObj;
-    
-    UPROPERTY(Export, Transient)
-    UMobileBaseUserWidget* _atlantaLoadingWidget;
-    
+	UPROPERTY(Transient)
+	UGFxObject* m_UIControllerObj;
+
+	UPROPERTY(Transient, Export)
+	UMobileBaseUserWidget* _atlantaLoadingWidget;
+
 public:
-    UUIController();
+	UUIController();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUIController) { return 0; }

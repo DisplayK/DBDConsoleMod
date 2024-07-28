@@ -1,6 +1,6 @@
 #include "UMGTallyBloodpointsScoreWidget.h"
 
+UUMGTallyBloodpointsScoreWidget::UUMGTallyBloodpointsScoreWidget()
+{
 
-UUMGTallyBloodpointsScoreWidget::UUMGTallyBloodpointsScoreWidget() {
 }
-

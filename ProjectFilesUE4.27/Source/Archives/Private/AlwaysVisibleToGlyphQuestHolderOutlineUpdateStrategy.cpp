@@ -1,5 +1,6 @@
 #include "AlwaysVisibleToGlyphQuestHolderOutlineUpdateStrategy.h"
 
-UAlwaysVisibleToGlyphQuestHolderOutlineUpdateStrategy::UAlwaysVisibleToGlyphQuestHolderOutlineUpdateStrategy() {
+UAlwaysVisibleToGlyphQuestHolderOutlineUpdateStrategy::UAlwaysVisibleToGlyphQuestHolderOutlineUpdateStrategy()
+{
+	this->_glyphQuestId = NAME_None;
 }
-

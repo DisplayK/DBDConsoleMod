@@ -1,26 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
+#include "CoreBaseUserWidget.h"
 #include "TestWidget.generated.h"
 
 class UPanelWidget;
 
 UCLASS(EditInlineNew)
-class UTestWidget : public UUserWidget {
-    GENERATED_BODY()
-public:
+class UTestWidget : public UCoreBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UPanelWidget* Workbench;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UPanelWidget* Workbench;
+
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool ShowWorkbench;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool ShowWorkbench;
+
 public:
-    UTestWidget();
-    UFUNCTION(BlueprintCallable)
-    void SetShowWorkbench(bool NewShowWorkbench);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetShowWorkbench(bool showWorkbenchNew);
+
+public:
+	UTestWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTestWidget) { return 0; }

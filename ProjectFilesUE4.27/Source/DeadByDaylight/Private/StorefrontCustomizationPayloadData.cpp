@@ -1,5 +1,5 @@
 #include "StorefrontCustomizationPayloadData.h"
 
-FStorefrontCustomizationPayloadData::FStorefrontCustomizationPayloadData() {
+FStorefrontCustomizationPayloadData::FStorefrontCustomizationPayloadData()
+{
 }
-

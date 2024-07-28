@@ -1,5 +1,6 @@
 #include "OwningPlayerInDullTotemRange.h"
 
-UOwningPlayerInDullTotemRange::UOwningPlayerInDullTotemRange() {
-}
+UOwningPlayerInDullTotemRange::UOwningPlayerInDullTotemRange()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "AssetUtilities.h"
 
-UAssetUtilities::UAssetUtilities() {
-}
+UAssetUtilities::UAssetUtilities()
+{
 
+}

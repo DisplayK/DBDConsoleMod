@@ -1,5 +1,6 @@
 #include "PigAmbushAttack.h"
 
-UPigAmbushAttack::UPigAmbushAttack() {
-}
+UPigAmbushAttack::UPigAmbushAttack()
+{
 
+}

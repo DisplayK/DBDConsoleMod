@@ -1,5 +1,6 @@
 #include "LevelAISetupComponent.h"
 
-ULevelAISetupComponent::ULevelAISetupComponent() {
-}
+ULevelAISetupComponent::ULevelAISetupComponent()
+{
 
+}

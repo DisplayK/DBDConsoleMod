@@ -1,5 +1,6 @@
 #include "DBDPlayerPositionOffsetComponent.h"
 
-UDBDPlayerPositionOffsetComponent::UDBDPlayerPositionOffsetComponent() {
-}
+UDBDPlayerPositionOffsetComponent::UDBDPlayerPositionOffsetComponent()
+{
 
+}

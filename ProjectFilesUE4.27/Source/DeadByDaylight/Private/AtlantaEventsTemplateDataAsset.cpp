@@ -1,5 +1,6 @@
 #include "AtlantaEventsTemplateDataAsset.h"
 
-UAtlantaEventsTemplateDataAsset::UAtlantaEventsTemplateDataAsset() {
+UAtlantaEventsTemplateDataAsset::UAtlantaEventsTemplateDataAsset()
+{
+	this->Data = TMap<EEventsType, TSubclassOf<UUMGAtlantaBaseEventsTemplate>>();
 }
-

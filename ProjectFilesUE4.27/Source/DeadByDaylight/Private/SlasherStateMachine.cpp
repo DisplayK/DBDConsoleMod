@@ -1,5 +1,6 @@
 #include "SlasherStateMachine.h"
 
-USlasherStateMachine::USlasherStateMachine() {
-}
+USlasherStateMachine::USlasherStateMachine()
+{
 
+}

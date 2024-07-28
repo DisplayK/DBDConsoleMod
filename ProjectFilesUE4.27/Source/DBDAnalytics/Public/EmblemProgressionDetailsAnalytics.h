@@ -1,17 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EmblemProgressionDetailsAnalytics.generated.h"
 
-USTRUCT(BlueprintType)
-struct FEmblemProgressionDetailsAnalytics {
-    GENERATED_BODY()
+USTRUCT()
+struct FEmblemProgressionDetailsAnalytics
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    FString ProgressionType;
-    
-    UPROPERTY()
-    float ProgressionPoint;
-    
-    DBDANALYTICS_API FEmblemProgressionDetailsAnalytics();
+	UPROPERTY()
+	FString ProgressionType;
+
+	UPROPERTY()
+	float ProgressionPoint;
+
+public:
+	DBDANALYTICS_API FEmblemProgressionDetailsAnalytics();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FEmblemProgressionDetailsAnalytics) { return 0; }

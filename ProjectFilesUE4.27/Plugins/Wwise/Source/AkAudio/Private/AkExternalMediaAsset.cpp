@@ -1,5 +1,6 @@
 #include "AkExternalMediaAsset.h"
 
-UAkExternalMediaAsset::UAkExternalMediaAsset() {
-}
+UAkExternalMediaAsset::UAkExternalMediaAsset()
+{
 
+}

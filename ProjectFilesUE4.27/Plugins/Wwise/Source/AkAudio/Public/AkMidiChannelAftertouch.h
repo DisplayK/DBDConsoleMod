@@ -1,15 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkMidiEventBase.h"
 #include "AkMidiChannelAftertouch.generated.h"
 
 USTRUCT(BlueprintType)
-struct FAkMidiChannelAftertouch : public FAkMidiEventBase {
-    GENERATED_BODY()
+struct FAkMidiChannelAftertouch: public FAkMidiEventBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint8 Value;
-    
-    AKAUDIO_API FAkMidiChannelAftertouch();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	uint8 Value;
+
+public:
+	AKAUDIO_API FAkMidiChannelAftertouch();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkMidiChannelAftertouch) { return 0; }

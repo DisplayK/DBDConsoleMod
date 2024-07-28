@@ -1,5 +1,6 @@
 #include "InjectSerumSelf.h"
 
-UInjectSerumSelf::UInjectSerumSelf() {
-}
+UInjectSerumSelf::UInjectSerumSelf()
+{
 
+}

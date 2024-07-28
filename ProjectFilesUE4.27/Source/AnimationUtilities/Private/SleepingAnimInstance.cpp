@@ -2,15 +2,22 @@
 
 class UAnimMontage;
 
-void USleepingAnimInstance::Wakeup() {
+void USleepingAnimInstance::Wakeup()
+{
+
 }
 
-void USleepingAnimInstance::SetNeverIdle(bool neverIdle) {
+void USleepingAnimInstance::SetNeverIdle(bool neverIdle)
+{
+
 }
 
-void USleepingAnimInstance::OnMontageStart(UAnimMontage* montage) {
+void USleepingAnimInstance::OnMontageStart(UAnimMontage* montage)
+{
+
 }
 
-USleepingAnimInstance::USleepingAnimInstance() {
-}
+USleepingAnimInstance::USleepingAnimInstance()
+{
 
+}

@@ -1,14 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "KillerStatusData.h"
 #include "ExecutionerStatusData.generated.h"
 
-USTRUCT(BlueprintType)
-struct FExecutionerStatusData {
-    GENERATED_BODY()
+UCLASS()
+class DBDUIVIEWINTERFACES_API UExecutionerStatusData : public UKillerStatusData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float AgonyProgress;
-    
-    DBDUIVIEWINTERFACES_API FExecutionerStatusData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AgonyProgress;
+
+public:
+	UExecutionerStatusData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UExecutionerStatusData) { return 0; }

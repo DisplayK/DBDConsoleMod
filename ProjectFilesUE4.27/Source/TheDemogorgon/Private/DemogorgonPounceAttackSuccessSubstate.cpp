@@ -1,5 +1,6 @@
 #include "DemogorgonPounceAttackSuccessSubstate.h"
 
-UDemogorgonPounceAttackSuccessSubstate::UDemogorgonPounceAttackSuccessSubstate() {
-}
+UDemogorgonPounceAttackSuccessSubstate::UDemogorgonPounceAttackSuccessSubstate()
+{
 
+}

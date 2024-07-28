@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "NetEaseAnalyticsUtil.generated.h"
 
 UCLASS()
-class NETEASEANALYTICS_API UNetEaseAnalyticsUtil : public UObject {
-    GENERATED_BODY()
+class NETEASEANALYTICS_API UNetEaseAnalyticsUtil : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UNetEaseAnalyticsUtil();
+	UNetEaseAnalyticsUtil();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UNetEaseAnalyticsUtil) { return 0; }

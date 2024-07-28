@@ -2,10 +2,12 @@
 
 class ACollectable;
 
-ACollectable* UCollectItemInteraction::GetItem() const {
-    return NULL;
+ACollectable* UCollectItemInteraction::GetItem() const
+{
+	return NULL;
 }
 
-UCollectItemInteraction::UCollectItemInteraction() {
-}
+UCollectItemInteraction::UCollectItemInteraction()
+{
 
+}

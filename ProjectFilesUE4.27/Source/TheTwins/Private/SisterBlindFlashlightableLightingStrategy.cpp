@@ -2,9 +2,12 @@
 
 class AConjoinedTwin;
 
-void USisterBlindFlashlightableLightingStrategy::OnTwinSet(AConjoinedTwin* twin) {
+void USisterBlindFlashlightableLightingStrategy::OnTwinSet(AConjoinedTwin* twin)
+{
+
 }
 
-USisterBlindFlashlightableLightingStrategy::USisterBlindFlashlightableLightingStrategy() {
-}
+USisterBlindFlashlightableLightingStrategy::USisterBlindFlashlightableLightingStrategy()
+{
 
+}

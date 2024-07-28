@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EBloodDisplayType.generated.h"
 
-UENUM()
-enum class EBloodDisplayType {
-    Hidden,
-    Bottom,
-    Top,
+UENUM(BlueprintType)
+enum class EBloodDisplayType : uint8
+{
+	Hidden,
+	Bottom,
+	Top,
 };
-

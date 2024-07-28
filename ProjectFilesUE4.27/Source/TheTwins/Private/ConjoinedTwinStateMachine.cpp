@@ -1,5 +1,6 @@
 #include "ConjoinedTwinStateMachine.h"
 
-UConjoinedTwinStateMachine::UConjoinedTwinStateMachine() {
-}
+UConjoinedTwinStateMachine::UConjoinedTwinStateMachine()
+{
 
+}

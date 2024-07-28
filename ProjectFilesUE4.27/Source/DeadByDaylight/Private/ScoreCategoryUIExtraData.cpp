@@ -1,7 +1,8 @@
 #include "ScoreCategoryUIExtraData.h"
 
-FScoreCategoryUIExtraData::FScoreCategoryUIExtraData() {
-    this->ScoreCategoryAsset = NULL;
-    this->ScoreValue = 0;
+FScoreCategoryUIExtraData::FScoreCategoryUIExtraData()
+{
+	this->ScoreCategoryName = FText::GetEmpty();
+	this->ScoreCategoryAsset = NULL;
+	this->ScoreValue = 0;
 }
-

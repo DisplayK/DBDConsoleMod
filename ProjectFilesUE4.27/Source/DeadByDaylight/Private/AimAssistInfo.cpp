@@ -1,5 +1,5 @@
 #include "AimAssistInfo.h"
 
-FAimAssistInfo::FAimAssistInfo() {
+FAimAssistInfo::FAimAssistInfo()
+{
 }
-

@@ -1,6 +1,6 @@
 #include "HatchAnimInstance.h"
 
-UHatchAnimInstance::UHatchAnimInstance() {
-    this->_isOpen = false;
+UHatchAnimInstance::UHatchAnimInstance()
+{
+	this->_isOpen = false;
 }
-

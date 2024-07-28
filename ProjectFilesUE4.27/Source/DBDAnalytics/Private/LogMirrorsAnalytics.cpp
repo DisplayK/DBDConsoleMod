@@ -1,5 +1,6 @@
 #include "LogMirrorsAnalytics.h"
 
-FLogMirrorsAnalytics::FLogMirrorsAnalytics() {
+FLogMirrorsAnalytics::FLogMirrorsAnalytics()
+{
+	this->LogMirrors = TEXT("");
 }
-

@@ -1,5 +1,6 @@
 #include "GlassCollectionSubsystem.h"
 
-UGlassCollectionSubsystem::UGlassCollectionSubsystem() {
+UGlassCollectionSubsystem::UGlassCollectionSubsystem()
+{
+	this->_glassCollection = TArray<UGlassStaticMesh*>();
 }
-

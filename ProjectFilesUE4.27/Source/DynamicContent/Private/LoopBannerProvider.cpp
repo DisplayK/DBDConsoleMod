@@ -1,6 +1,6 @@
 #include "LoopBannerProvider.h"
 
-ULoopBannerProvider::ULoopBannerProvider() {
-    this->_currentLoopIndex = 0;
+ULoopBannerProvider::ULoopBannerProvider()
+{
+	this->_currentLoopIndex = 0;
 }
-

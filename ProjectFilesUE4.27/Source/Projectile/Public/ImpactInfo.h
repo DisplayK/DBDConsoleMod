@@ -1,28 +1,36 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
+#include "Chaos/ChaosEngineInterface.h"
 #include "ImpactInfo.generated.h"
 
-class AActor;
 class UPrimitiveComponent;
+class AActor;
 
 USTRUCT(BlueprintType)
-struct PROJECTILE_API FImpactInfo {
-    GENERATED_BODY()
+struct FImpactInfo
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector Position;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    AActor* Actor;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export)
-    UPrimitiveComponent* Component;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector ImpactNormal;
-    
-    FImpactInfo();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector Position;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	AActor* Actor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export)
+	UPrimitiveComponent* Component;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TEnumAsByte<EPhysicalSurface> SurfaceType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector ImpactNormal;
+
+public:
+	PROJECTILE_API FImpactInfo();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FImpactInfo) { return 0; }

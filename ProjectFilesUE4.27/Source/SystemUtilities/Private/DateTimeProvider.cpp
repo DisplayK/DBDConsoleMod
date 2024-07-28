@@ -1,5 +1,6 @@
 #include "DateTimeProvider.h"
 
-UDateTimeProvider::UDateTimeProvider() {
-}
+UDateTimeProvider::UDateTimeProvider()
+{
 
+}

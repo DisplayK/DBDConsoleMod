@@ -1,5 +1,6 @@
 #include "IridescentLeatherAddon.h"
 
-UIridescentLeatherAddon::UIridescentLeatherAddon() {
-}
+UIridescentLeatherAddon::UIridescentLeatherAddon()
+{
 
+}

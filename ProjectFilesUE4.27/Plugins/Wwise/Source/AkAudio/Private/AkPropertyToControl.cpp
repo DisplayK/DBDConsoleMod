@@ -1,5 +1,6 @@
 #include "AkPropertyToControl.h"
 
-FAkPropertyToControl::FAkPropertyToControl() {
+FAkPropertyToControl::FAkPropertyToControl()
+{
+	this->ItemProperty = TEXT("");
 }
-

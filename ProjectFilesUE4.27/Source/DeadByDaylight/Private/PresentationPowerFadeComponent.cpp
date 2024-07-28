@@ -1,5 +1,6 @@
 #include "PresentationPowerFadeComponent.h"
 
-UPresentationPowerFadeComponent::UPresentationPowerFadeComponent() {
-}
+UPresentationPowerFadeComponent::UPresentationPowerFadeComponent()
+{
 
+}

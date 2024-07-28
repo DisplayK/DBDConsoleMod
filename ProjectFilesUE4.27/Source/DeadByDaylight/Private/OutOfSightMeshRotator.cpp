@@ -2,13 +2,16 @@
 
 class UMeshComponent;
 
-void UOutOfSightMeshRotator::SetMeshesToRotate(TArray<UMeshComponent*> meshesToRotate) {
+void UOutOfSightMeshRotator::SetMeshesToRotate(TArray<UMeshComponent*> meshesToRotate)
+{
+
 }
 
-UOutOfSightMeshRotator::UOutOfSightMeshRotator() {
-    this->_maxDistance = 3200.00f;
-    this->_dotProductThreshold = -0.10f;
-    this->_locallyObservedPlayer = NULL;
-    this->_rotationOffset = 0.00f;
+UOutOfSightMeshRotator::UOutOfSightMeshRotator()
+{
+	this->_maxDistance = 3200.000000;
+	this->_dotProductThreshold = -0.100000;
+	this->_locallyObservedPlayer = NULL;
+	this->_meshesToRotate = TArray<UMeshComponent*>();
+	this->_rotationOffset = 0.000000;
 }
-

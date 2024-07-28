@@ -1,5 +1,6 @@
 #include "TargetNearPalletVaultWallQEEvaluator.h"
 
-UTargetNearPalletVaultWallQEEvaluator::UTargetNearPalletVaultWallQEEvaluator() {
-}
+UTargetNearPalletVaultWallQEEvaluator::UTargetNearPalletVaultWallQEEvaluator()
+{
 
+}

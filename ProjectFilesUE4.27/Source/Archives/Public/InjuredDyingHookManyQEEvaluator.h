@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "QuestEventEvaluatorBase.h"
 #include "InjuredDyingHookManyQEEvaluator.generated.h"
 
 UCLASS()
-class UInjuredDyingHookManyQEEvaluator : public UQuestEventEvaluatorBase {
-    GENERATED_BODY()
+class UInjuredDyingHookManyQEEvaluator : public UQuestEventEvaluatorBase
+{
+	GENERATED_BODY()
+
 public:
-    UInjuredDyingHookManyQEEvaluator();
+	UInjuredDyingHookManyQEEvaluator();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UInjuredDyingHookManyQEEvaluator) { return 0; }

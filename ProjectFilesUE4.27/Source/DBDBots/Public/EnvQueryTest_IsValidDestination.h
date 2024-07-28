@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
 #include "EnvironmentQuery/EnvQueryTest.h"
@@ -8,18 +9,22 @@
 class UEnvQueryContext;
 
 UCLASS(MinimalAPI)
-class UEnvQueryTest_IsValidDestination : public UEnvQueryTest {
-    GENERATED_BODY()
+class UEnvQueryTest_IsValidDestination : public UEnvQueryTest
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditDefaultsOnly)
-    TSubclassOf<UEnvQueryContext> QuerierContext;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FAIDataProviderBoolValue Invert;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FAIDataProviderBoolValue ExcludeEscapeZoneIfReverseBearTrapIsActivated;
-    
-    UEnvQueryTest_IsValidDestination();
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UEnvQueryContext> QuerierContext;
+
+	UPROPERTY(EditDefaultsOnly)
+	FAIDataProviderBoolValue Invert;
+
+	UPROPERTY(EditDefaultsOnly)
+	FAIDataProviderBoolValue ExcludeEscapeZoneIfReverseBearTrapIsActivated;
+
+public:
+	UEnvQueryTest_IsValidDestination();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UEnvQueryTest_IsValidDestination) { return 0; }

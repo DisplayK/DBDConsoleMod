@@ -1,5 +1,6 @@
 #include "AllHexTotemsAreActive.h"
 
-UAllHexTotemsAreActive::UAllHexTotemsAreActive() {
-}
+UAllHexTotemsAreActive::UAllHexTotemsAreActive()
+{
 
+}

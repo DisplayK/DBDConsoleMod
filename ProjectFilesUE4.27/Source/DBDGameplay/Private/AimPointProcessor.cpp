@@ -1,5 +1,6 @@
 #include "AimPointProcessor.h"
 
-UAimPointProcessor::UAimPointProcessor() {
-}
+UAimPointProcessor::UAimPointProcessor()
+{
 
+}

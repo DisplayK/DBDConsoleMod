@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "RewardLayoutWidgetToGenerate.h"
@@ -8,47 +9,49 @@ class UHorizontalBox;
 class UUMGRewardSlotTutorialPopupRewardWidget;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGRewardPopupLayout : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGRewardPopupLayout : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UHorizontalBox* TopHorizontalBox;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UHorizontalBox* BottomHorizontalBox;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGRewardSlotTutorialPopupRewardWidget* FirstCharacter;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGRewardSlotTutorialPopupRewardWidget* SecondCharacter;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGRewardSlotTutorialPopupRewardWidget* ThirdCharacter;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGRewardSlotTutorialPopupRewardWidget* FourthCharacter;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGRewardSlotTutorialPopupRewardWidget* FifthCharacter;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGRewardSlotTutorialPopupRewardWidget* AuricCells;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGRewardSlotTutorialPopupRewardWidget* IridescentShards;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGRewardSlotTutorialPopupRewardWidget* Bloodpoints;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FRewardLayoutWidgetToGenerate TopWidgetToGenerate;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FRewardLayoutWidgetToGenerate BottomWidgetToGenerate;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UHorizontalBox* TopHorizontalBox;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UHorizontalBox* BottomHorizontalBox;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGRewardSlotTutorialPopupRewardWidget* FirstCharacter;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGRewardSlotTutorialPopupRewardWidget* SecondCharacter;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGRewardSlotTutorialPopupRewardWidget* ThirdCharacter;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGRewardSlotTutorialPopupRewardWidget* FourthCharacter;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGRewardSlotTutorialPopupRewardWidget* FifthCharacter;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGRewardSlotTutorialPopupRewardWidget* AuricCells;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGRewardSlotTutorialPopupRewardWidget* IridescentShards;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGRewardSlotTutorialPopupRewardWidget* Bloodpoints;
+
+	UPROPERTY(EditDefaultsOnly)
+	FRewardLayoutWidgetToGenerate TopWidgetToGenerate;
+
+	UPROPERTY(EditDefaultsOnly)
+	FRewardLayoutWidgetToGenerate BottomWidgetToGenerate;
+
 public:
-    UUMGRewardPopupLayout();
+	UUMGRewardPopupLayout();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGRewardPopupLayout) { return 0; }

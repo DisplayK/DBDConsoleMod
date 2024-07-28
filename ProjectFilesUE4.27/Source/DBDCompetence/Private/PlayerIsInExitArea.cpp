@@ -1,11 +1,16 @@
 #include "PlayerIsInExitArea.h"
 
-void UPlayerIsInExitArea::PlayerExitExitArea() {
+void UPlayerIsInExitArea::PlayerExitExitArea()
+{
+
 }
 
-void UPlayerIsInExitArea::PlayerEnterExitArea() {
+void UPlayerIsInExitArea::PlayerEnterExitArea()
+{
+
 }
 
-UPlayerIsInExitArea::UPlayerIsInExitArea() {
-}
+UPlayerIsInExitArea::UPlayerIsInExitArea()
+{
 
+}
