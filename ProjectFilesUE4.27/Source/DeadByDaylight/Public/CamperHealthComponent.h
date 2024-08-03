@@ -31,22 +31,22 @@ public:
 	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDamageStateChangedCosmetic);
 
 public:
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintAssignable)
 	FOnHealedEvent OnHealedDelegate;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintAssignable)
 	FInjuredBleedoutDelegate OnInjuredBleedoutStarted;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintAssignable)
 	FInjuredBleedoutDelegate OnInjuredBleedoutEnded;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintAssignable)
 	FInjuredBleedoutDelegate OnInjuredBleedoutKO;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintAssignable)
 	FOnDamageStateChanged OnDamageStateChanged;
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	UPROPERTY(BlueprintAssignable)
 	FOnDamageStateChangedCosmetic OnDamageStateChangedCosmetic;
 
 public:

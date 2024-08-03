@@ -5,22 +5,22 @@
 
 class ADBDPlayer;
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FLevelReadyToPlayRequirements
 {
 	GENERATED_BODY()
 
 public:
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	ADBDPlayer* player;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	uint8 perkCount;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	uint8 itemCount;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	uint8 addonCount;
 
 public:
