@@ -131,10 +131,10 @@ public:
 	bool TriggerAfflictionHUDIntro;
 
 protected:
-	UPROPERTY(Transient)
+	UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
 	APlayerController* _storedPlayerController;
 
-	UPROPERTY(VisibleInstanceOnly, Transient, meta=(BindWidgetOptional))
+	UPROPERTY(Transient, meta=(BindWidgetOptional), BlueprintReadWrite, EditAnywhere)
 	UCamperStillnessTrackerComponent* _stillnessTracker;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

@@ -10,11 +10,11 @@ struct FEquippedPlayerCustomization
 {
 	GENERATED_BODY()
 
-private:
-	UPROPERTY()
+public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FCharacterCustomization _equippedCustomization;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<FCharmIdSlot> _equippedCharms;
 
 public:

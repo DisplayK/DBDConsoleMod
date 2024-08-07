@@ -575,7 +575,7 @@ public:
 	UFUNCTION(Server, Reliable)
 	void Server_Drop(ACollectable* item, const FVector& location, const FRotator& rotation, bool onDeath);
 
-	UFUNCTION(Server, Reliable)
+	UFUNCTION(Server, Reliable, BlueprintCallable)
 	void Server_DebugSetCustomization(const FEquippedPlayerCustomization& customization);
 
 protected:
@@ -700,7 +700,7 @@ public:
 	void Multicast_SetDebugCarry(bool enabled);
 
 protected:
-	UFUNCTION(NetMulticast, Reliable)
+	UFUNCTION(NetMulticast, Reliable, BlueprintCallable)
 	void Multicast_SetCustomization(const FEquippedPlayerCustomization& customization);
 
 public:

@@ -23,20 +23,20 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float LoudNoiseTime;
 
-private:
-	UPROPERTY(Transient)
+public:
+	UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
 	TArray<float> ExposerSpawnTimes;
 
-	UPROPERTY(Transient)
+	UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
 	TArray<float> ExposerDespawnTimes;
 
-	UPROPERTY(Transient)
+	UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
 	TSubclassOf<ACamperExposerInstance> _exposerInstanceToSpawn;
 
-	UPROPERTY(Transient)
+	UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
 	TArray<ACamperExposerInstance*> _exposerInstances;
 
-	UPROPERTY(Transient, Export)
+	UPROPERTY(Transient, Export, BlueprintReadWrite, EditAnywhere)
 	UExposerInteriorZoneComponent* _interiorZone;
 
 protected:

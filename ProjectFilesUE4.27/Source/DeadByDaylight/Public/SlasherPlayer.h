@@ -113,7 +113,7 @@ protected:
 	UPROPERTY(Transient)
 	TMap<ADBDPlayer*, FTargetFocusTimer> _stalkTimers;
 
-	UPROPERTY(VisibleInstanceOnly, Transient, meta=(BindWidgetOptional))
+	UPROPERTY(Transient, meta=(BindWidgetOptional), BlueprintReadWrite, EditAnywhere)
 	UStillnessTrackerComponent* _stillnessTracker;
 
 	UPROPERTY(Transient, meta=(BindWidgetOptional))
@@ -131,7 +131,7 @@ protected:
 	UPROPERTY(Transient)
 	TMap<ADBDPlayer*, FAnimationMontageDescriptor> _predictedCamperHitMontages;
 
-private:
+public:
 	UPROPERTY(Transient, Export)
 	USlasherTREmitterComponent* _terrorRadiusEmitter;
 
@@ -147,7 +147,7 @@ private:
 	UPROPERTY(Transient)
 	float _stealthDecreaseRate;
 
-	UPROPERTY(Transient)
+	UPROPERTY(Transient, BlueprintReadWrite, EditAnywhere)
 	FDateTime _stillnessStartTime;
 
 	UPROPERTY(Replicated)
@@ -183,7 +183,7 @@ private:
 	UPROPERTY(EditAnywhere)
 	bool _canStartAttackWhileCrouched;
 
-	UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowpublicAccess=true))
 	ACamperPlayer* _carriedCamper;
 
 	UPROPERTY(VisibleAnywhere, Export)
@@ -204,10 +204,10 @@ private:
 	UPROPERTY(EditDefaultsOnly)
 	EAttackType _basicAttackType;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Export, meta=(AllowPrivateAccess=true))
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Export, meta=(AllowpublicAccess=true))
 	UArmIKSensorComponent* _armIKSensorComponent;
 
-	UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	UPROPERTY(BlueprintReadWrite, Transient, meta=(AllowpublicAccess=true))
 	ACamperPlayer* _survivorBeingKilled;
 
 	UPROPERTY(EditAnywhere, Transient, Export)
@@ -216,7 +216,7 @@ private:
 	UPROPERTY(EditAnywhere, Transient, Export)
 	UKillerIntroComponent* _killerIntroComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Export, meta=(AllowpublicAccess=true))
 	UKillerBlindingFXComponent* _blindingFXComponent;
 
 	UPROPERTY(VisibleAnywhere, Export)
@@ -288,7 +288,7 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintCosmetic)
 	void PlayBloodHitsEffects();
 
-private:
+public:
 	UFUNCTION()
 	void OnSurvivorsLeftChanged(int32 survivorRemaining);
 
@@ -315,7 +315,7 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
 	void OnPerformingChargableInteraction(float Progress);
 
-private:
+public:
 	UFUNCTION()
 	void OnLoudNoiseTriggered(AActor* originator, AActor* instigatingActor, FVector location, bool shouldTrack, float& audibleRange, bool isQuickAction, bool isDeceivingNoise);
 
@@ -344,7 +344,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnCamperHit(ACamperPlayer* camper);
 
-private:
+public:
 	UFUNCTION()
 	void OnAttackStart(const EAttackType attackType);
 
