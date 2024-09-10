@@ -2,9 +2,12 @@
 
 class ADBDPlayer;
 
-void USurvivorDisconnectionComponent::Authority_OnPlayerDisconnected(ADBDPlayer* player) {
+void USurvivorDisconnectionComponent::Authority_OnPlayerDisconnected(ADBDPlayer* player)
+{
+
 }
 
-USurvivorDisconnectionComponent::USurvivorDisconnectionComponent() {
-}
+USurvivorDisconnectionComponent::USurvivorDisconnectionComponent()
+{
 
+}

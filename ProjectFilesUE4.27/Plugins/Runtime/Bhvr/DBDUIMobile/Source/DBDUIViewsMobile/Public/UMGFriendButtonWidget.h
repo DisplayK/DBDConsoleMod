@@ -1,41 +1,44 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UMGBaseButtonWidget.h"
-#include "EFriendTypeButton.h"
 #include "Styling/SlateBrush.h"
+#include "EFriendTypeButton.h"
 #include "UMGFriendButtonWidget.generated.h"
 
-class UImage;
 class UCanvasPanel;
 class UTextBlock;
+class UImage;
 
 UCLASS(Abstract, EditInlineNew)
-class DBDUIVIEWSMOBILE_API UUMGFriendButtonWidget : public UUMGBaseButtonWidget {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSMOBILE_API UUMGFriendButtonWidget : public UUMGBaseButtonWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    UCanvasPanel* InteractableButtonStatePanel;
-    
-    UPROPERTY(Export)
-    UCanvasPanel* NonInteractableButtonStatePanel;
-    
-    UPROPERTY(Export)
-    UTextBlock* NonInteractableExplanationText;
-    
-    UPROPERTY(Export)
-    UTextBlock* NonInteractableActionText;
-    
-    UPROPERTY(Transient)
-    bool _isInteractable;
-    
-    UPROPERTY(Export)
-    UImage* NonInteractableImage;
-    
-    UPROPERTY(EditDefaultsOnly, NoClear)
-    TMap<EFriendTypeButton, FSlateBrush> _nonInteractableImages;
-    
+	UPROPERTY(meta=(BindWidgetOptional))
+	UCanvasPanel* InteractableButtonStatePanel;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UCanvasPanel* NonInteractableButtonStatePanel;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* NonInteractableExplanationText;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* NonInteractableActionText;
+
+	UPROPERTY(Transient)
+	bool _isInteractable;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UImage* NonInteractableImage;
+
+	UPROPERTY(EditDefaultsOnly, NoClear)
+	TMap<EFriendTypeButton, FSlateBrush> _nonInteractableImages;
+
 public:
-    UUMGFriendButtonWidget();
+	UUMGFriendButtonWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGFriendButtonWidget) { return 0; }

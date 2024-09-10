@@ -1,5 +1,6 @@
 #include "MultipleGamepadsControlModeInfo.h"
 
-UMultipleGamepadsControlModeInfo::UMultipleGamepadsControlModeInfo() {
-}
+UMultipleGamepadsControlModeInfo::UMultipleGamepadsControlModeInfo()
+{
 
+}

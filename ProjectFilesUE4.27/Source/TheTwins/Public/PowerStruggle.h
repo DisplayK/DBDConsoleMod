@@ -1,17 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Perk.h"
 #include "PowerStruggle.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UPowerStruggle : public UPerk {
-    GENERATED_BODY()
-public:
+class UPowerStruggle : public UPerk
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    float _wigglePercentToActivatePerk[3];
-    
+	UPROPERTY(EditDefaultsOnly)
+	float _wigglePercentToActivatePerk;
+
 public:
-    UPowerStruggle();
+	UPowerStruggle();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPowerStruggle) { return 0; }

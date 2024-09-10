@@ -1,5 +1,6 @@
 #include "GenyReflectionCaptureComponent.h"
 
-UGenyReflectionCaptureComponent::UGenyReflectionCaptureComponent() {
+UGenyReflectionCaptureComponent::UGenyReflectionCaptureComponent()
+{
+	this->generatorDrivenReflectionCapture = TArray<FReflectionCaptureTwoStates>();
 }
-

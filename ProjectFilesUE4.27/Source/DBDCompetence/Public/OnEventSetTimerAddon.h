@@ -1,17 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "OnEventBaseAddon.h"
 #include "OnEventSetTimerAddon.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DBDCOMPETENCE_API UOnEventSetTimerAddon : public UOnEventBaseAddon {
-    GENERATED_BODY()
-public:
+class DBDCOMPETENCE_API UOnEventSetTimerAddon : public UOnEventBaseAddon
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    float _addonEffectTime;
-    
+	UPROPERTY(EditDefaultsOnly)
+	float _addonEffectTime;
+
 public:
-    UOnEventSetTimerAddon();
+	UOnEventSetTimerAddon();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UOnEventSetTimerAddon) { return 0; }

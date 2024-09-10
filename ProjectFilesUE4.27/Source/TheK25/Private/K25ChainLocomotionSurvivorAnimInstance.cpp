@@ -1,54 +1,35 @@
 #include "K25ChainLocomotionSurvivorAnimInstance.h"
+#include "EK25ChainDetachmentReason.h"
 
 class AK25Chain;
-class UChargeableComponent;
 class AK25SurvivorChainAttachmentAnchor;
-class UK25SurvivorChainAttachmentComponent;
 
-void UK25ChainLocomotionSurvivorAnimInstance::OnRemoveChainChargePercentageChanged(UChargeableComponent* chargeableComponent, float completionPercentage) {
+void UK25ChainLocomotionSurvivorAnimInstance::OnChainDetached(AK25Chain* chain, AK25SurvivorChainAttachmentAnchor* chainAttachmentAnchor, EK25ChainDetachmentReason detachmentReason)
+{
+
 }
 
-void UK25ChainLocomotionSurvivorAnimInstance::OnChainDetached(AK25Chain* chain, AK25SurvivorChainAttachmentAnchor* chainAttachmentAnchor, EK25ChainDetachmentReason detachmentReason) {
+void UK25ChainLocomotionSurvivorAnimInstance::OnChainAttached(AK25Chain* chain, AK25SurvivorChainAttachmentAnchor* chainAttachmentAnchor)
+{
+
 }
 
-void UK25ChainLocomotionSurvivorAnimInstance::OnChainAttached(AK25Chain* chain, AK25SurvivorChainAttachmentAnchor* chainAttachmentAnchor) {
+UK25ChainLocomotionSurvivorAnimInstance::UK25ChainLocomotionSurvivorAnimInstance()
+{
+	this->_hasChainsAttached = false;
+	this->_isPerformingBreakChainInteraction = false;
+	this->_forwardDirectionDotProductResult = 0.000000;
+	this->_lateralDirectionDotProductResult = 0.000000;
+	this->_currentChainBeingDetached = NULL;
+	this->_chainDirection = EK25ChainAnchorPointDirection::Front;
+	this->_hasBrokenFreeFromChain = false;
+	this->_hasBrokenFreeTime = 0.500000;
+	this->_hasBeenHitByChain = false;
+	this->_isIdle = false;
+	this->_IsCrouched = false;
+	this->_isMale = false;
+	this->_isBeingCarried = false;
+	this->_hasBeenHitByChainTime = 0.350000;
+	this->_hitChainName = NAME_None;
+	this->_detachedChainAnchorName = NAME_None;
 }
-
-bool UK25ChainLocomotionSurvivorAnimInstance::IsSolvingLamentConfiguration() const {
-    return false;
-}
-
-bool UK25ChainLocomotionSurvivorAnimInstance::HasChainsAttached() const {
-    return false;
-}
-
-UK25SurvivorChainAttachmentComponent* UK25ChainLocomotionSurvivorAnimInstance::GetSurvivorChainAttachmentComponent() const {
-    return NULL;
-}
-
-FK25SurvivorChainAttachmentData UK25ChainLocomotionSurvivorAnimInstance::GetDetachingChainAnchorData() const {
-    return FK25SurvivorChainAttachmentData{};
-}
-
-TArray<AK25SurvivorChainAttachmentAnchor*> UK25ChainLocomotionSurvivorAnimInstance::GetChainAttachmentAnchors() const {
-    return TArray<AK25SurvivorChainAttachmentAnchor*>();
-}
-
-
-
-UK25ChainLocomotionSurvivorAnimInstance::UK25ChainLocomotionSurvivorAnimInstance() {
-    this->_hasChainsAttached = false;
-    this->_breakChainInteractionCompletionPercentage = 0.00f;
-    this->_isPerformingBreakChainInteraction = false;
-    this->_forwardDirectionDotProductResult = 0.00f;
-    this->_lateralDirectionDotProductResult = 0.00f;
-    this->_currentChainBeingDetached = NULL;
-    this->_chainDirection = EK25ChainAnchorPointDirection::Front;
-    this->_lastDetatchedChainDirection = EK25ChainAnchorPointDirection::Front;
-    this->_hasBrokenFreeFromChain = false;
-    this->_hasBrokenFreeTime = 0.50f;
-    this->_hasBeenHitByChain = false;
-    this->_hasBeenHitByChainTime = 0.35f;
-    this->_numberOfChainsAttached = 0;
-}
-

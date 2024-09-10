@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseReversibleInstantActionHandler.h"
 #include "AnimationMontageDescriptor.h"
@@ -7,18 +8,20 @@
 class UNiagaraComponent;
 
 UCLASS()
-class USurvivorHitCosmeticHandler : public UBaseReversibleInstantActionHandler {
-    GENERATED_BODY()
-public:
+class USurvivorHitCosmeticHandler : public UBaseReversibleInstantActionHandler
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UNiagaraComponent* _bloodSpurts;
-    
-public:
-    USurvivorHitCosmeticHandler();
+	UPROPERTY(Transient, Export)
+	UNiagaraComponent* _bloodSpurts;
+
 private:
-    UFUNCTION()
-    void OnMontageStarted(const FAnimationMontageDescriptor animMontageID, const float playRate);
-    
+	UFUNCTION()
+	void OnMontageStarted(const FAnimationMontageDescriptor animMontageID, const float playRate);
+
+public:
+	USurvivorHitCosmeticHandler();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USurvivorHitCosmeticHandler) { return 0; }

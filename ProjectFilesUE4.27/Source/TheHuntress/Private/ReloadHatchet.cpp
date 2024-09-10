@@ -2,10 +2,12 @@
 
 class ADBDPlayer;
 
-bool UReloadHatchet::IsInteractionPossible_Shared(const ADBDPlayer* player) const {
-    return false;
+bool UReloadHatchet::IsInteractionPossible_Shared(const ADBDPlayer* player) const
+{
+	return false;
 }
 
-UReloadHatchet::UReloadHatchet() {
-}
+UReloadHatchet::UReloadHatchet()
+{
 
+}

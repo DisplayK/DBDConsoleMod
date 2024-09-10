@@ -1,5 +1,7 @@
 #include "DedicatedServerPlayerEquipDisabledItemAnalytics.h"
 
-FDedicatedServerPlayerEquipDisabledItemAnalytics::FDedicatedServerPlayerEquipDisabledItemAnalytics() {
+FDedicatedServerPlayerEquipDisabledItemAnalytics::FDedicatedServerPlayerEquipDisabledItemAnalytics()
+{
+	this->PlayerMirrorsId = TEXT("");
+	this->EquipedDisabledItemIds = TEXT("");
 }
-

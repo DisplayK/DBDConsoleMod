@@ -1,9 +1,11 @@
 #include "UMGCurrencyWidget.h"
 
-void UUMGCurrencyWidget::HandleTooltipLongPressEvent() {
+void UUMGCurrencyWidget::HandleTooltipLongPressEvent()
+{
+
 }
 
-UUMGCurrencyWidget::UUMGCurrencyWidget() {
-    this->currencyType = ECurrencyType::None;
+UUMGCurrencyWidget::UUMGCurrencyWidget()
+{
+	this->currencyType = ECurrencyType::None;
 }
-

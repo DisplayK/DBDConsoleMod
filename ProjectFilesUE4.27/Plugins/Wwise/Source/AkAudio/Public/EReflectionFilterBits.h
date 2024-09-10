@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EReflectionFilterBits.generated.h"
 
-UENUM()
-enum class EReflectionFilterBits {
-    Wall,
-    Ceiling,
-    Floor,
+UENUM(BlueprintType)
+enum class EReflectionFilterBits : uint8
+{
+	Wall,
+	Ceiling,
+	Floor,
 };
-

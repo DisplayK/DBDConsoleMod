@@ -1,19 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PlayerFloatTuple.generated.h"
 
 class ACharacter;
 
 USTRUCT(BlueprintType)
-struct FPlayerFloatTuple {
-    GENERATED_BODY()
+struct FPlayerFloatTuple
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    ACharacter* Player;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float Value;
-    
-    DEADBYDAYLIGHT_API FPlayerFloatTuple();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ACharacter* Player;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Value;
+
+public:
+	DEADBYDAYLIGHT_API FPlayerFloatTuple();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FPlayerFloatTuple) { return 0; }

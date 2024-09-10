@@ -1,34 +1,37 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "EStatusEffectType.h"
 #include "InteractionProficiency.generated.h"
 
-class UChargeableInteractionDefinition;
 class ADBDPlayer;
+class UChargeableInteractionDefinition;
 
 UCLASS(Blueprintable)
-class UInteractionProficiency : public UObject {
-    GENERATED_BODY()
-public:
+class UInteractionProficiency : public UObject
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<FString> InteractionIDs;
-    
-public:
-    UInteractionProficiency();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<FString> InteractionIDs;
+
 protected:
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    float GetValue(const UChargeableInteractionDefinition* chargeableInteraction, const ADBDPlayer* player) const;
-    
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    EStatusEffectType GetType(const float value) const;
-    
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    int32 GetLevel(const UChargeableInteractionDefinition* chargeableInteraction, const ADBDPlayer* player) const;
-    
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    bool GetIsActive(const UChargeableInteractionDefinition* chargeableInteraction, const ADBDPlayer* player) const;
-    
+	UFUNCTION(BlueprintPure, BlueprintNativeEvent)
+	float GetValue(const UChargeableInteractionDefinition* chargeableInteraction, const ADBDPlayer* player) const;
+
+	UFUNCTION(BlueprintPure, BlueprintNativeEvent)
+	EStatusEffectType GetType(const float value) const;
+
+	UFUNCTION(BlueprintPure, BlueprintNativeEvent)
+	int32 GetLevel(const UChargeableInteractionDefinition* chargeableInteraction, const ADBDPlayer* player) const;
+
+	UFUNCTION(BlueprintPure, BlueprintNativeEvent)
+	bool GetIsActive(const UChargeableInteractionDefinition* chargeableInteraction, const ADBDPlayer* player) const;
+
+public:
+	UInteractionProficiency();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UInteractionProficiency) { return 0; }

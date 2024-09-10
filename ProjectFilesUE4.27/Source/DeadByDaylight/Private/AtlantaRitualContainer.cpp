@@ -1,5 +1,6 @@
 #include "AtlantaRitualContainer.h"
 
-FAtlantaRitualContainer::FAtlantaRitualContainer() {
+FAtlantaRitualContainer::FAtlantaRitualContainer()
+{
+	this->RitualsMap = TMap<FString, FAtlantaRitualSetArray>();
 }
-

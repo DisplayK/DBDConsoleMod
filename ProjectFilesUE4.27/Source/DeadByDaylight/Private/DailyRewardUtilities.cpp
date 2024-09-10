@@ -1,5 +1,6 @@
 #include "DailyRewardUtilities.h"
 
-UDailyRewardUtilities::UDailyRewardUtilities() {
-}
+UDailyRewardUtilities::UDailyRewardUtilities()
+{
 
+}

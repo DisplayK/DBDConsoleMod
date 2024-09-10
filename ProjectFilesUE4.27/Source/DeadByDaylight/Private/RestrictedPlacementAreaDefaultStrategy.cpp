@@ -1,6 +1,6 @@
 #include "RestrictedPlacementAreaDefaultStrategy.h"
 
-URestrictedPlacementAreaDefaultStrategy::URestrictedPlacementAreaDefaultStrategy() {
-    this->RestrictedActor = NULL;
+URestrictedPlacementAreaDefaultStrategy::URestrictedPlacementAreaDefaultStrategy()
+{
+	this->RestrictedActor = NULL;
 }
-

@@ -1,7 +1,8 @@
 #include "SpecialBehaviourObjectsInfo.h"
 
-FSpecialBehaviourObjectsInfo::FSpecialBehaviourObjectsInfo() {
-    this->AmountRequired = 0;
-    this->TimesInteractedWith = 0;
+FSpecialBehaviourObjectsInfo::FSpecialBehaviourObjectsInfo()
+{
+	this->SpecialBehaviourId = NAME_None;
+	this->AmountRequired = 0;
+	this->TimesInteractedWith = 0;
 }
-

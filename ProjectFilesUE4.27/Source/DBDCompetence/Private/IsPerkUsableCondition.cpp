@@ -1,5 +1,6 @@
 #include "IsPerkUsableCondition.h"
 
-UIsPerkUsableCondition::UIsPerkUsableCondition() {
-}
+UIsPerkUsableCondition::UIsPerkUsableCondition()
+{
 
+}

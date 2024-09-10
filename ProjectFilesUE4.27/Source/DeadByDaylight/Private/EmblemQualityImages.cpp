@@ -1,5 +1,7 @@
 #include "EmblemQualityImages.h"
 
-FEmblemQualityImages::FEmblemQualityImages() {
+FEmblemQualityImages::FEmblemQualityImages()
+{
+	this->HighlightImage = FSlateBrush{};
+	this->DarkImage = FSlateBrush{};
 }
-

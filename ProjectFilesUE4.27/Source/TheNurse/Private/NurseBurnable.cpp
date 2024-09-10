@@ -1,5 +1,6 @@
 #include "NurseBurnable.h"
 
-UNurseBurnable::UNurseBurnable() {
-}
+UNurseBurnable::UNurseBurnable()
+{
 
+}

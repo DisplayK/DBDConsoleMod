@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
 #include "TormentAttackDamageCooldownInterface.generated.h"
 
-UINTERFACE(MinimalAPI)
-class UTormentAttackDamageCooldownInterface : public UInterface {
-    GENERATED_BODY()
+UINTERFACE()
+class DEADBYDAYLIGHT_API UTormentAttackDamageCooldownInterface : public UInterface
+{
+	GENERATED_BODY()
 };
 
-class ITormentAttackDamageCooldownInterface : public IInterface {
-    GENERATED_BODY()
-public:
-};
+class DEADBYDAYLIGHT_API ITormentAttackDamageCooldownInterface : public IInterface
+{
+	GENERATED_BODY()
 
+};

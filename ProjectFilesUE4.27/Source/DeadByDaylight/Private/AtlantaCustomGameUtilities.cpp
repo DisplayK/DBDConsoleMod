@@ -2,14 +2,17 @@
 
 class UDBDGameInstance;
 
-bool UAtlantaCustomGameUtilities::IsInCustomGameLobby(const UDBDGameInstance* gameInstance) {
-    return false;
+bool UAtlantaCustomGameUtilities::IsInCustomGameLobby(const UDBDGameInstance* gameInstance)
+{
+	return false;
 }
 
-bool UAtlantaCustomGameUtilities::IsCustomGameEnabled() {
-    return false;
+bool UAtlantaCustomGameUtilities::IsCustomGameEnabled()
+{
+	return false;
 }
 
-UAtlantaCustomGameUtilities::UAtlantaCustomGameUtilities() {
-}
+UAtlantaCustomGameUtilities::UAtlantaCustomGameUtilities()
+{
 
+}

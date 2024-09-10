@@ -1,5 +1,5 @@
 #include "ElementSubstitutions.h"
 
-FElementSubstitutions::FElementSubstitutions() {
+FElementSubstitutions::FElementSubstitutions()
+{
 }
-

@@ -1,6 +1,12 @@
 #include "CoreCustomizationRewardWidget.h"
+#include "EItemRarity.h"
 
+void UCoreCustomizationRewardWidget::SetRarity(EItemRarity rarity)
+{
 
-UCoreCustomizationRewardWidget::UCoreCustomizationRewardWidget() {
 }
 
+UCoreCustomizationRewardWidget::UCoreCustomizationRewardWidget()
+{
+	this->RarityIMG = NULL;
+}

@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "RewardTrackContainer.generated.h"
 
 UCLASS()
-class URewardTrackContainer : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API URewardTrackContainer : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    URewardTrackContainer();
+	URewardTrackContainer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const URewardTrackContainer) { return 0; }

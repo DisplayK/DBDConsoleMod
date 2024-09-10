@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EventDrivenModifierCondition.h"
 #include "BaseLacerationLevelCondition.generated.h"
 
 UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
-class THEK23_API UBaseLacerationLevelCondition : public UEventDrivenModifierCondition {
-    GENERATED_BODY()
+class THEK23_API UBaseLacerationLevelCondition : public UEventDrivenModifierCondition
+{
+	GENERATED_BODY()
+
 public:
-    UBaseLacerationLevelCondition();
+	UBaseLacerationLevelCondition();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBaseLacerationLevelCondition) { return 0; }

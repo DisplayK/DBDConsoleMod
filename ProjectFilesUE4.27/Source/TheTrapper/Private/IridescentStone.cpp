@@ -1,5 +1,6 @@
 #include "IridescentStone.h"
 
-UIridescentStone::UIridescentStone() {
-}
+UIridescentStone::UIridescentStone()
+{
 
+}

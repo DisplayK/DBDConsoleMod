@@ -1,5 +1,6 @@
 #include "DataTableToCsvCommandlet.h"
 
-UDataTableToCsvCommandlet::UDataTableToCsvCommandlet() {
-}
+UDataTableToCsvCommandlet::UDataTableToCsvCommandlet()
+{
 
+}

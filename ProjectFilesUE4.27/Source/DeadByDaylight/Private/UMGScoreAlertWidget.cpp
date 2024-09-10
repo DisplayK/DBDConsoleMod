@@ -1,6 +1,6 @@
 #include "UMGScoreAlertWidget.h"
 
+UUMGScoreAlertWidget::UUMGScoreAlertWidget()
+{
 
-UUMGScoreAlertWidget::UUMGScoreAlertWidget() {
 }
-

@@ -2,17 +2,22 @@
 
 class AActor;
 
-void UDBDSpringArmComponent::IgnoreActor(AActor* Actor, bool bShouldIgnore) {
+void UDBDSpringArmComponent::IgnoreActor(AActor* Actor, bool bShouldIgnore)
+{
+
 }
 
-void UDBDSpringArmComponent::ClearIgnoreActors() {
+void UDBDSpringArmComponent::ClearIgnoreActors()
+{
+
 }
 
-UDBDSpringArmComponent::UDBDSpringArmComponent() {
-    this->bEnableComponentwiseCameraLag = false;
-    this->TargetArmMinLength = 0.00f;
-    this->bEnableDistanceCameraLag = false;
-    this->CameraDistanceLagSpeed = 0.00f;
-    this->bDrawDebugTraceMarkers = false;
+UDBDSpringArmComponent::UDBDSpringArmComponent()
+{
+	this->bEnableComponentwiseCameraLag = false;
+	this->TargetArmMinLength = 0.000000;
+	this->bEnableDistanceCameraLag = false;
+	this->CameraDistanceLagSpeed = 0.000000;
+	this->bDrawDebugTraceMarkers = false;
+	this->IgnoreActors = TArray<TWeakObjectPtr<AActor>>();
 }
-

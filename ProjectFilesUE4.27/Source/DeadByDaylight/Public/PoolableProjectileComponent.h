@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AuthoritativePoolableActorComponent.h"
 #include "PoolableProjectileComponent.generated.h"
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UPoolableProjectileComponent : public UAuthoritativePoolableActorComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UPoolableProjectileComponent : public UAuthoritativePoolableActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPoolableProjectileComponent();
+	UPoolableProjectileComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPoolableProjectileComponent) { return 0; }

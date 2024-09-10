@@ -1,6 +1,7 @@
 #include "AccessNode.h"
 
-FAccessNode::FAccessNode() {
-    this->AccessCost = 0;
+FAccessNode::FAccessNode()
+{
+	this->Id = TEXT("");
+	this->AccessCost = 0;
 }
-

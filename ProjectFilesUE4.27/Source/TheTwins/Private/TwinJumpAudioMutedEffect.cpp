@@ -1,7 +1,6 @@
 #include "TwinJumpAudioMutedEffect.h"
 
+UTwinJumpAudioMutedEffect::UTwinJumpAudioMutedEffect()
+{
 
-
-UTwinJumpAudioMutedEffect::UTwinJumpAudioMutedEffect() {
 }
-

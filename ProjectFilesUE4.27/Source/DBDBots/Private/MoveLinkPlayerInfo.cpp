@@ -1,5 +1,5 @@
 #include "MoveLinkPlayerInfo.h"
 
-FMoveLinkPlayerInfo::FMoveLinkPlayerInfo() {
+FMoveLinkPlayerInfo::FMoveLinkPlayerInfo()
+{
 }
-

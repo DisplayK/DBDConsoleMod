@@ -1,6 +1,7 @@
 #include "DBDOutlineRenderStrategySelector.h"
 
-FDBDOutlineRenderStrategySelector::FDBDOutlineRenderStrategySelector() {
-    this->_actorForStrategy = NULL;
+FDBDOutlineRenderStrategySelector::FDBDOutlineRenderStrategySelector()
+{
+	this->_actorForStrategy = NULL;
+	this->_selectedStrategy = NULL;
 }
-

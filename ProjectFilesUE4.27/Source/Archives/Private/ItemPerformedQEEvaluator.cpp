@@ -1,5 +1,6 @@
 #include "ItemPerformedQEEvaluator.h"
 
-UItemPerformedQEEvaluator::UItemPerformedQEEvaluator() {
-}
+UItemPerformedQEEvaluator::UItemPerformedQEEvaluator()
+{
 
+}

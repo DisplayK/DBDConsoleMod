@@ -1,5 +1,6 @@
 #include "CannibalChainsawAttackMissSubstate.h"
 
-UCannibalChainsawAttackMissSubstate::UCannibalChainsawAttackMissSubstate() {
-}
+UCannibalChainsawAttackMissSubstate::UCannibalChainsawAttackMissSubstate()
+{
 
+}

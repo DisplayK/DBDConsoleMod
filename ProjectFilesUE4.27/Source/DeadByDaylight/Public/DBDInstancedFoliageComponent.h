@@ -1,24 +1,29 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "DBDFoliageInfo.h"
+#include "Components/ActorComponent.h"
 #include "DBDInstancedFoliageComponent.generated.h"
 
 class USceneComponent;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UDBDInstancedFoliageComponent : public UActorComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UDBDInstancedFoliageComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    int32 NextBaseId;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    TMap<int32, USceneComponent*> InstanceBaseMap;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TArray<FDBDFoliageInfo> foliage;
-    
-    UDBDInstancedFoliageComponent();
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	int32 NextBaseId;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Export)
+	TMap<int32, USceneComponent*> InstanceBaseMap;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TArray<FDBDFoliageInfo> foliage;
+
+public:
+	UDBDInstancedFoliageComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDInstancedFoliageComponent) { return 0; }

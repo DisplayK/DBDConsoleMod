@@ -1,21 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "ChainPlayerMovementStatusEffect.h"
 #include "DBDTunableRowHandle.h"
+#include "ChainPlayerMovementStatusEffect.h"
 #include "ChainKillerMovementStatusEffect.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UChainKillerMovementStatusEffect : public UChainPlayerMovementStatusEffect {
-    GENERATED_BODY()
-public:
+class UChainKillerMovementStatusEffect : public UChainPlayerMovementStatusEffect
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditAnywhere)
-    FDBDTunableRowHandle _backwardMovementSpeedMultiplier;
-    
-    UPROPERTY(EditAnywhere)
-    FDBDTunableRowHandle _backwardMovementAngle;
-    
+	UPROPERTY(EditAnywhere)
+	FDBDTunableRowHandle _backwardMovementSpeedMultiplier;
+
+	UPROPERTY(EditAnywhere)
+	FDBDTunableRowHandle _backwardMovementAngle;
+
 public:
-    UChainKillerMovementStatusEffect();
+	UChainKillerMovementStatusEffect();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UChainKillerMovementStatusEffect) { return 0; }

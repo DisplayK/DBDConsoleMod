@@ -1,5 +1,6 @@
 #include "DBDAttackHittingSubstate.h"
 
-UDBDAttackHittingSubstate::UDBDAttackHittingSubstate() {
-}
+UDBDAttackHittingSubstate::UDBDAttackHittingSubstate()
+{
 
+}

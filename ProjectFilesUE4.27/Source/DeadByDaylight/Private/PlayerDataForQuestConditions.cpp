@@ -1,5 +1,5 @@
 #include "PlayerDataForQuestConditions.h"
 
-FPlayerDataForQuestConditions::FPlayerDataForQuestConditions() {
+FPlayerDataForQuestConditions::FPlayerDataForQuestConditions()
+{
 }
-

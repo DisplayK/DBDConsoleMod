@@ -2,14 +2,18 @@
 
 class ARespawnableInteractable;
 
-void URespawningEventComponent::DBD_ForceRespawnSpecialEventObject() {
+void URespawningEventComponent::DBD_ForceRespawnSpecialEventObject()
+{
+
 }
 
-void URespawningEventComponent::Authority_OnIsInteractingWithAnyRespawnableInteractableChanged(ARespawnableInteractable* respawnableInteractable, bool isInteracting) {
+void URespawningEventComponent::Authority_OnIsInteractingWithAnyRespawnableInteractableChanged(ARespawnableInteractable* respawnableInteractable, bool isInteracting)
+{
+
 }
 
-URespawningEventComponent::URespawningEventComponent() {
-    this->_respawnableStrategy = NULL;
-    this->_respawnablePositioner = NULL;
+URespawningEventComponent::URespawningEventComponent()
+{
+	this->_respawnableStrategy = NULL;
+	this->_respawnablePositioner = NULL;
 }
-

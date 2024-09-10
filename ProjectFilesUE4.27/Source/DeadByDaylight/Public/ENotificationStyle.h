@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ENotificationStyle.generated.h"
 
-UENUM()
-enum class ENotificationStyle {
-    None,
-    Game,
-    Tutorial,
+UENUM(BlueprintType)
+enum class ENotificationStyle : uint8
+{
+	None,
+	Game,
+	Tutorial,
 };
-

@@ -1,5 +1,6 @@
 #include "ZombieEscapeDoorPointsActor.h"
 
-AZombieEscapeDoorPointsActor::AZombieEscapeDoorPointsActor() {
+AZombieEscapeDoorPointsActor::AZombieEscapeDoorPointsActor()
+{
+	this->_availablePoints = TArray<UArrowComponent*>();
 }
-

@@ -1,7 +1,6 @@
 #include "RewardViewData.h"
 
-FRewardViewData::FRewardViewData() {
-    this->IsLocked = false;
-    this->IsHighlighted = false;
+FRewardViewData::FRewardViewData()
+{
+	this->IsHighlighted = false;
 }
-

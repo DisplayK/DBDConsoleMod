@@ -1,5 +1,6 @@
 #include "MaterialHelperUnaffectedStaticMeshComp.h"
 
-UMaterialHelperUnaffectedStaticMeshComp::UMaterialHelperUnaffectedStaticMeshComp() {
-}
+UMaterialHelperUnaffectedStaticMeshComp::UMaterialHelperUnaffectedStaticMeshComp()
+{
 
+}

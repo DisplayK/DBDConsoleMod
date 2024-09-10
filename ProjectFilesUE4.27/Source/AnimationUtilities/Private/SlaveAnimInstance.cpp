@@ -2,13 +2,17 @@
 
 class USkeletalMeshComponent;
 
-void USlaveAnimInstance::SetMasterMesh(USkeletalMeshComponent* masterMesh) {
+void USlaveAnimInstance::SetMasterMesh(USkeletalMeshComponent* masterMesh)
+{
+
 }
 
-USkeletalMeshComponent* USlaveAnimInstance::GetMasterMesh() const {
-    return NULL;
+USkeletalMeshComponent* USlaveAnimInstance::GetMasterMesh() const
+{
+	return NULL;
 }
 
-USlaveAnimInstance::USlaveAnimInstance() {
+USlaveAnimInstance::USlaveAnimInstance()
+{
+	this->_masterMesh = NULL;
 }
-

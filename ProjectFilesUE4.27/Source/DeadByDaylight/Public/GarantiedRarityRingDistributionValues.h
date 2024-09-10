@@ -1,120 +1,125 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
 #include "GarantiedRarityRingDistributionValues.generated.h"
 
 USTRUCT(BlueprintType)
-struct FGarantiedRarityRingDistributionValues : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FGarantiedRarityRingDistributionValues: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingCommonItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingCommonItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingCommonItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingUncommonItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingUncommonItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingUncommonItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingRareItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingRareItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingRareItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingVeryRareItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingVeryRareItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingVeryRareItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingUltraRareItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingUltraRareItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingUltraRareItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingArtifactItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingArtifactItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingArtifactItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingSpectralItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingSpectralItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingSpectralItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingSpecialEventItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingSpecialEventItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingSpecialEventItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingLegendaryItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingLegendaryItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingLegendaryItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingEpicItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingEpicItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingEpicItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingSuperEpicItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingSuperEpicItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingSuperEpicItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 InnerRingUltraEpicItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MiddleRingUltraEpicItemProbability;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 OuterRingUltraEpicItemProbability;
-    
-    DEADBYDAYLIGHT_API FGarantiedRarityRingDistributionValues();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingCommonItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingCommonItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingCommonItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingUncommonItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingUncommonItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingUncommonItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingRareItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingRareItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingRareItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingVeryRareItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingVeryRareItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingVeryRareItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingUltraRareItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingUltraRareItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingUltraRareItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingArtifactItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingArtifactItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingArtifactItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingSpectralItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingSpectralItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingSpectralItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingSpecialEventItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingSpecialEventItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingSpecialEventItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingLegendaryItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingLegendaryItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingLegendaryItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingEpicItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingEpicItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingEpicItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingSuperEpicItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingSuperEpicItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingSuperEpicItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 InnerRingUltraEpicItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MiddleRingUltraEpicItemProbability;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 OuterRingUltraEpicItemProbability;
+
+public:
+	DEADBYDAYLIGHT_API FGarantiedRarityRingDistributionValues();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FGarantiedRarityRingDistributionValues) { return 0; }

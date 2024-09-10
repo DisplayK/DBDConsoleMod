@@ -1,5 +1,6 @@
 #include "PlayerNameMessage.h"
 
-FPlayerNameMessage::FPlayerNameMessage() {
+FPlayerNameMessage::FPlayerNameMessage()
+{
+	this->Name = TEXT("");
 }
-

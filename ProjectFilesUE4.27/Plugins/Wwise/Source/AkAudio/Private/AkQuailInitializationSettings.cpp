@@ -1,5 +1,6 @@
 #include "AkQuailInitializationSettings.h"
 
-UAkQuailInitializationSettings::UAkQuailInitializationSettings() {
-}
+UAkQuailInitializationSettings::UAkQuailInitializationSettings()
+{
 
+}

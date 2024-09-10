@@ -1,5 +1,6 @@
 #include "InFrustumComponent.h"
 
-UInFrustumComponent::UInFrustumComponent() {
-}
+UInFrustumComponent::UInFrustumComponent()
+{
 
+}

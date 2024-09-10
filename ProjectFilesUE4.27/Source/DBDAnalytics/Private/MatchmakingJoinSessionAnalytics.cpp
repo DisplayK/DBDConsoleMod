@@ -1,5 +1,6 @@
 #include "MatchmakingJoinSessionAnalytics.h"
 
-FMatchmakingJoinSessionAnalytics::FMatchmakingJoinSessionAnalytics() {
+FMatchmakingJoinSessionAnalytics::FMatchmakingJoinSessionAnalytics()
+{
+	this->Log = TEXT("");
 }
-

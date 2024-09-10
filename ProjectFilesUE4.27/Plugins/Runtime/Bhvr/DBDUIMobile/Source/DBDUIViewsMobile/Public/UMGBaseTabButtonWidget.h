@@ -1,41 +1,44 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UMGBaseButtonWidget.h"
 #include "UMGBaseTabButtonWidget.generated.h"
 
-class UImage;
-class UTextBlock;
 class URichTextBlock;
 class UCanvasPanel;
+class UTextBlock;
+class UImage;
 
 UCLASS(Abstract, EditInlineNew)
-class DBDUIVIEWSMOBILE_API UUMGBaseTabButtonWidget : public UUMGBaseButtonWidget {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSMOBILE_API UUMGBaseTabButtonWidget : public UUMGBaseButtonWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    URichTextBlock* TabText;
-    
-    UPROPERTY(Export)
-    UTextBlock* NotificationCountText;
-    
-    UPROPERTY(Export)
-    UCanvasPanel* NotificationPanel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* TabButtonSelected;
-    
-    UPROPERTY(EditInstanceOnly)
-    uint8 TabIndex;
-    
-    UPROPERTY(EditInstanceOnly)
-    FText TitleOfTab;
-    
+	UPROPERTY(meta=(BindWidgetOptional))
+	URichTextBlock* TabText;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* NotificationCountText;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UCanvasPanel* NotificationPanel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* TabButtonSelected;
+
+	UPROPERTY(EditInstanceOnly)
+	uint8 TabIndex;
+
+	UPROPERTY(EditInstanceOnly)
+	FText TitleOfTab;
+
 private:
-    UPROPERTY(Transient)
-    FString _tabTextParameter;
-    
+	UPROPERTY(Transient)
+	FString _tabTextParameter;
+
 public:
-    UUMGBaseTabButtonWidget();
+	UUMGBaseTabButtonWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGBaseTabButtonWidget) { return 0; }

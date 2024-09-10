@@ -1,21 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ESleepingUIState.h"
+#include "KillerStatusData.h"
 #include "NightmareStatusData.generated.h"
 
-USTRUCT(BlueprintType)
-struct FNightmareStatusData {
-    GENERATED_BODY()
+UCLASS()
+class DBDUIVIEWINTERFACES_API UNightmareStatusData : public UKillerStatusData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    ESleepingUIState SleepingState;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float SleepingProgress;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float SleepProtectionRemainingDuration;
-    
-    DBDUIVIEWINTERFACES_API FNightmareStatusData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ESleepingUIState SleepingState;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SleepingProgress;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SleepProtectionRemainingDuration;
+
+public:
+	UNightmareStatusData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UNightmareStatusData) { return 0; }

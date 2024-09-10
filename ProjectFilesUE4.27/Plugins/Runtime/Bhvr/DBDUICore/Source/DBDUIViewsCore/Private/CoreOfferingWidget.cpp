@@ -1,5 +1,6 @@
 #include "CoreOfferingWidget.h"
 
-UCoreOfferingWidget::UCoreOfferingWidget() {
-}
+UCoreOfferingWidget::UCoreOfferingWidget()
+{
 
+}

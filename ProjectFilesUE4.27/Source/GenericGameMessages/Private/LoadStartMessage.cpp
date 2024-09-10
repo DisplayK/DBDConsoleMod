@@ -1,5 +1,5 @@
 #include "LoadStartMessage.h"
 
-FLoadStartMessage::FLoadStartMessage() {
+FLoadStartMessage::FLoadStartMessage()
+{
 }
-

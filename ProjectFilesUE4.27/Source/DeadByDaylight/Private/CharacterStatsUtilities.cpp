@@ -1,5 +1,6 @@
 #include "CharacterStatsUtilities.h"
 
-UCharacterStatsUtilities::UCharacterStatsUtilities() {
-}
+UCharacterStatsUtilities::UCharacterStatsUtilities()
+{
 
+}

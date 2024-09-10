@@ -2,16 +2,17 @@
 
 class ADBDPlayer;
 
+void UPounceAttackOpenSubstateCosmetic::OnLocallyObservedChanged(ADBDPlayer* slasherPlayer)
+{
 
-
-
-void UPounceAttackOpenSubstateCosmetic::OnLocallyObservedChanged(ADBDPlayer* slasherPlayer) {
 }
 
-bool UPounceAttackOpenSubstateCosmetic::IsLungeAttackAugmented(ADBDPlayer* slasherPlayer) const {
-    return false;
+bool UPounceAttackOpenSubstateCosmetic::IsLungeAttackAugmented(ADBDPlayer* slasherPlayer) const
+{
+	return false;
 }
 
-UPounceAttackOpenSubstateCosmetic::UPounceAttackOpenSubstateCosmetic() {
-}
+UPounceAttackOpenSubstateCosmetic::UPounceAttackOpenSubstateCosmetic()
+{
 
+}

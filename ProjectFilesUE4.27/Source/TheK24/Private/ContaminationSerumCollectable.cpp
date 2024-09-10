@@ -1,5 +1,6 @@
 #include "ContaminationSerumCollectable.h"
 
-AContaminationSerumCollectable::AContaminationSerumCollectable() {
-}
+AContaminationSerumCollectable::AContaminationSerumCollectable()
+{
 
+}

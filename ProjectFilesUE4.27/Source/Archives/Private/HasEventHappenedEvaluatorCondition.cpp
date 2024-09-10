@@ -1,5 +1,6 @@
 #include "HasEventHappenedEvaluatorCondition.h"
 
-UHasEventHappenedEvaluatorCondition::UHasEventHappenedEvaluatorCondition() {
-}
+UHasEventHappenedEvaluatorCondition::UHasEventHappenedEvaluatorCondition()
+{
 
+}

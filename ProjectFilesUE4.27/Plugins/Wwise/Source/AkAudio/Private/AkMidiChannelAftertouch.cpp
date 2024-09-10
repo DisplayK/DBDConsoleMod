@@ -1,6 +1,6 @@
 #include "AkMidiChannelAftertouch.h"
 
-FAkMidiChannelAftertouch::FAkMidiChannelAftertouch() {
-    this->Value = 0;
+FAkMidiChannelAftertouch::FAkMidiChannelAftertouch()
+{
+	this->Value = 0;
 }
-

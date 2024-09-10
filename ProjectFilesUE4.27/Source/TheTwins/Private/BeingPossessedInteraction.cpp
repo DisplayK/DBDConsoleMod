@@ -1,8 +1,11 @@
 #include "BeingPossessedInteraction.h"
 
-void UBeingPossessedInteraction::OnLevelReadyToPlay() {
+void UBeingPossessedInteraction::OnLevelReadyToPlay()
+{
+
 }
 
-UBeingPossessedInteraction::UBeingPossessedInteraction() {
-}
+UBeingPossessedInteraction::UBeingPossessedInteraction()
+{
 
+}

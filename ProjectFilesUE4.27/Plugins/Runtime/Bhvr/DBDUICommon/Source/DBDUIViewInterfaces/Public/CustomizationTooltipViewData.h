@@ -1,59 +1,70 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EPlayerRole.h"
-#include "PriceViewData.h"
 #include "EItemRarity.h"
+#include "PriceViewData.h"
 #include "CustomizationTooltipViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct DBDUIVIEWINTERFACES_API FCustomizationTooltipViewData {
-    GENERATED_BODY()
+struct FCustomizationTooltipViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    FText DisplayName;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
-    FText ParentName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    FText RarityPartInfo;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    FText CollectionDisplayName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    FText Description;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    FText RoleCategoryInfo;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    bool IsLocked;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    bool IsUnbreakable;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    bool IsEquipped;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    bool IsOwned;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Transient)
-    EPlayerRole AssociatedRole;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    EItemRarity Rarity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    TArray<FPriceViewData> Prices;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    bool IsEnabled;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    FText CustomizationDisabledMessage;
-    
-    FCustomizationTooltipViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText DisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Transient)
+	FText ParentName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText RarityPartInfo;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText CollectionDisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText RoleCategoryInfo;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsLocked;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsUnbreakable;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsEquipped;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsOwned;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	bool IsOutfitPart;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FText OutfitInfoText;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Transient)
+	EPlayerRole AssociatedRole;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	EItemRarity Rarity;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TArray<FPriceViewData> Prices;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	bool IsEnabled;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	FText CustomizationDisabledMessage;
+
+public:
+	DBDUIVIEWINTERFACES_API FCustomizationTooltipViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCustomizationTooltipViewData) { return 0; }

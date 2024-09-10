@@ -1,5 +1,6 @@
 #include "DBDEngineUtils.h"
 
-UDBDEngineUtils::UDBDEngineUtils() {
-}
+UDBDEngineUtils::UDBDEngineUtils()
+{
 
+}

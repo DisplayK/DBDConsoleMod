@@ -1,5 +1,6 @@
 #include "WithPulledUpPalletQEEvaluator.h"
 
-UWithPulledUpPalletQEEvaluator::UWithPulledUpPalletQEEvaluator() {
+UWithPulledUpPalletQEEvaluator::UWithPulledUpPalletQEEvaluator()
+{
+	this->_resetPallets = TArray<APallet*>();
 }
-

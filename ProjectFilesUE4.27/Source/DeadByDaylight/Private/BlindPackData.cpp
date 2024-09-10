@@ -1,5 +1,5 @@
 #include "BlindPackData.h"
 
-FBlindPackData::FBlindPackData() {
+FBlindPackData::FBlindPackData()
+{
 }
-

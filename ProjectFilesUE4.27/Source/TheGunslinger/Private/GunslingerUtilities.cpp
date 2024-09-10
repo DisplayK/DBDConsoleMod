@@ -1,12 +1,14 @@
 #include "GunslingerUtilities.h"
 
-class ADBDPlayer;
 class AHarpoonRifle;
+class ADBDPlayer;
 
-AHarpoonRifle* UGunslingerUtilities::GetHarpoonRifle(ADBDPlayer* player) {
-    return NULL;
+AHarpoonRifle* UGunslingerUtilities::GetHarpoonRifle(ADBDPlayer* player)
+{
+	return NULL;
 }
 
-UGunslingerUtilities::UGunslingerUtilities() {
-}
+UGunslingerUtilities::UGunslingerUtilities()
+{
 
+}

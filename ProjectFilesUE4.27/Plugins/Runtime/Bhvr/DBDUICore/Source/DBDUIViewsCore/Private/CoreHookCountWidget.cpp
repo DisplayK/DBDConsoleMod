@@ -1,5 +1,6 @@
 #include "CoreHookCountWidget.h"
 
-UCoreHookCountWidget::UCoreHookCountWidget() {
-}
+UCoreHookCountWidget::UCoreHookCountWidget()
+{
 
+}

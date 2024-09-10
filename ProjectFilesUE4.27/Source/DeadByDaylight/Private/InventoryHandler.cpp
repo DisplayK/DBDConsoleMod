@@ -1,5 +1,6 @@
 #include "InventoryHandler.h"
 
-UInventoryHandler::UInventoryHandler() {
-}
+UInventoryHandler::UInventoryHandler()
+{
 
+}

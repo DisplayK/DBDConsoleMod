@@ -1,5 +1,5 @@
 #include "DBDBidirectionalTimer.h"
 
-FDBDBidirectionalTimer::FDBDBidirectionalTimer() {
+FDBDBidirectionalTimer::FDBDBidirectionalTimer()
+{
 }
-

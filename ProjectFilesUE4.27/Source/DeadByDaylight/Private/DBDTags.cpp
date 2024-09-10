@@ -1,5 +1,6 @@
 #include "DBDTags.h"
 
-UDBDTags::UDBDTags() {
-}
+UDBDTags::UDBDTags()
+{
 
+}

@@ -1,6 +1,6 @@
 #include "PostProcessUpdate.h"
 
+APostProcessUpdate::APostProcessUpdate()
+{
 
-APostProcessUpdate::APostProcessUpdate() {
 }
-

@@ -1,6 +1,6 @@
 #include "TestObjectStateProviderComponent.h"
 
-UTestObjectStateProviderComponent::UTestObjectStateProviderComponent() {
-    this->GameplayTagContainerComponent = NULL;
+UTestObjectStateProviderComponent::UTestObjectStateProviderComponent()
+{
+	this->GameplayTagContainerComponent = NULL;
 }
-

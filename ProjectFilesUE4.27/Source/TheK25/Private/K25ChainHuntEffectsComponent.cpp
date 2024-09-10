@@ -2,13 +2,12 @@
 
 class ADBDPlayer;
 
-ADBDPlayer* UK25ChainHuntEffectsComponent::GetOwningPlayer() const {
-    return NULL;
+ADBDPlayer* UK25ChainHuntEffectsComponent::GetOwningPlayer() const
+{
+	return NULL;
 }
 
+UK25ChainHuntEffectsComponent::UK25ChainHuntEffectsComponent()
+{
 
-
-
-UK25ChainHuntEffectsComponent::UK25ChainHuntEffectsComponent() {
 }
-

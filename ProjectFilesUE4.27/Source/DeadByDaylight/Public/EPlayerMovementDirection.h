@@ -1,12 +1,13 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EPlayerMovementDirection.generated.h"
 
-UENUM()
-enum class EPlayerMovementDirection {
-    Left,
-    Right,
-    Forward,
-    Backward,
+UENUM(BlueprintType)
+enum class EPlayerMovementDirection : uint8
+{
+	Left,
+	Right,
+	Forward,
+	Backward,
 };
-

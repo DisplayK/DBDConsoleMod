@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EInputInteractionType.h"
 #include "InteractionPlayerProperties.h"
@@ -7,20 +8,22 @@
 class UInteractionDefinition;
 
 USTRUCT(BlueprintType)
-struct DEADBYDAYLIGHT_API FStoredInteraction {
-    GENERATED_BODY()
-public:
+struct FStoredInteraction
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    TWeakObjectPtr<UInteractionDefinition> _interaction;
-    
-    UPROPERTY(Transient)
-    EInputInteractionType _inputType;
-    
-    UPROPERTY(Transient)
-    FInteractionPlayerProperties _playerProperties;
-    
+	UPROPERTY(Transient, Export)
+	TWeakObjectPtr<UInteractionDefinition> _interaction;
+
+	UPROPERTY(Transient)
+	EInputInteractionType _inputType;
+
+	UPROPERTY(Transient)
+	FInteractionPlayerProperties _playerProperties;
+
 public:
-    FStoredInteraction();
+	DEADBYDAYLIGHT_API FStoredInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FStoredInteraction) { return 0; }

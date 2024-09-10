@@ -1,5 +1,6 @@
 #include "InstigatorInBasementQEEvaluator.h"
 
-UInstigatorInBasementQEEvaluator::UInstigatorInBasementQEEvaluator() {
-}
+UInstigatorInBasementQEEvaluator::UInstigatorInBasementQEEvaluator()
+{
 
+}

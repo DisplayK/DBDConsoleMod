@@ -1,6 +1,7 @@
 #include "WeightedItem.h"
 
-FWeightedItem::FWeightedItem() {
-    this->Weight = 0.00f;
+FWeightedItem::FWeightedItem()
+{
+	this->Element = NULL;
+	this->Weight = 0.0f;
 }
-

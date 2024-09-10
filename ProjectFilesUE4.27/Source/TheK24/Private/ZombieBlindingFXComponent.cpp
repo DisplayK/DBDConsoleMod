@@ -1,5 +1,6 @@
 #include "ZombieBlindingFXComponent.h"
 
-UZombieBlindingFXComponent::UZombieBlindingFXComponent() {
-}
+UZombieBlindingFXComponent::UZombieBlindingFXComponent()
+{
 
+}

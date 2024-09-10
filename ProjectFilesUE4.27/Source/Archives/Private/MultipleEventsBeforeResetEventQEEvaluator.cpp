@@ -1,5 +1,6 @@
 #include "MultipleEventsBeforeResetEventQEEvaluator.h"
 
-UMultipleEventsBeforeResetEventQEEvaluator::UMultipleEventsBeforeResetEventQEEvaluator() {
+UMultipleEventsBeforeResetEventQEEvaluator::UMultipleEventsBeforeResetEventQEEvaluator()
+{
+	this->_gameEventsResettingProgress = TArray<FGameplayTag>();
 }
-

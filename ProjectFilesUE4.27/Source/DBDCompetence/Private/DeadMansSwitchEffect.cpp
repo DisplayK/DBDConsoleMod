@@ -1,5 +1,6 @@
 #include "DeadMansSwitchEffect.h"
 
-UDeadMansSwitchEffect::UDeadMansSwitchEffect() {
-}
+UDeadMansSwitchEffect::UDeadMansSwitchEffect()
+{
 
+}

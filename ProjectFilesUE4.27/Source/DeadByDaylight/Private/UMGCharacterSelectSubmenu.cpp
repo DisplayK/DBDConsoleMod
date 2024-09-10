@@ -1,13 +1,16 @@
 #include "UMGCharacterSelectSubmenu.h"
 
+void UUMGCharacterSelectSubmenu::BroadcastRoleButtonClicked()
+{
 
-
-void UUMGCharacterSelectSubmenu::BroadcastRoleButtonClicked() {
 }
 
-void UUMGCharacterSelectSubmenu::BroadcastInfoButtonClicked() {
+void UUMGCharacterSelectSubmenu::BroadcastInfoButtonClicked()
+{
+
 }
 
-UUMGCharacterSelectSubmenu::UUMGCharacterSelectSubmenu() {
-}
+UUMGCharacterSelectSubmenu::UUMGCharacterSelectSubmenu()
+{
 
+}

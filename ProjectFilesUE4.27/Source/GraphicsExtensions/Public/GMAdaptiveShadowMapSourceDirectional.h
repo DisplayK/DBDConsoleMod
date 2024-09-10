@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GMAdaptiveShadowMapSource.h"
 #include "GMAdaptiveShadowMapSourceDirectional.generated.h"
@@ -6,14 +7,16 @@
 class UDirectionalLightComponent;
 
 UCLASS()
-class GRAPHICSEXTENSIONS_API UGMAdaptiveShadowMapSourceDirectional : public UGMAdaptiveShadowMapSource {
-    GENERATED_BODY()
-public:
+class GRAPHICSEXTENSIONS_API UGMAdaptiveShadowMapSourceDirectional : public UGMAdaptiveShadowMapSource
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UDirectionalLightComponent* _directionalLightComponent;
-    
+	UPROPERTY(Transient, Export)
+	UDirectionalLightComponent* _directionalLightComponent;
+
 public:
-    UGMAdaptiveShadowMapSourceDirectional();
+	UGMAdaptiveShadowMapSourceDirectional();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UGMAdaptiveShadowMapSourceDirectional) { return 0; }

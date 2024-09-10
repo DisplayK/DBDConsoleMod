@@ -1,5 +1,6 @@
 #include "RichTextFreeTicketImageInfo.h"
 
-FRichTextFreeTicketImageInfo::FRichTextFreeTicketImageInfo() {
+FRichTextFreeTicketImageInfo::FRichTextFreeTicketImageInfo()
+{
+	this->Padding = FMargin{};
 }
-

@@ -1,5 +1,6 @@
 #include "EditorMeshVisualization.h"
 
-UEditorMeshVisualization::UEditorMeshVisualization() {
+UEditorMeshVisualization::UEditorMeshVisualization()
+{
+	this->MeshVisualization = NULL;
 }
-

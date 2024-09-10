@@ -1,5 +1,6 @@
 #include "RewardTrackContainer.h"
 
-URewardTrackContainer::URewardTrackContainer() {
-}
+URewardTrackContainer::URewardTrackContainer()
+{
 
+}

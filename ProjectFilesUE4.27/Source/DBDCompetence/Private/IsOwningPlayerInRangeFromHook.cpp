@@ -1,8 +1,11 @@
 #include "IsOwningPlayerInRangeFromHook.h"
 
-void UIsOwningPlayerInRangeFromHook::OnLevelReadyToPlay() {
+void UIsOwningPlayerInRangeFromHook::OnLevelReadyToPlay()
+{
+
 }
 
-UIsOwningPlayerInRangeFromHook::UIsOwningPlayerInRangeFromHook() {
-}
+UIsOwningPlayerInRangeFromHook::UIsOwningPlayerInRangeFromHook()
+{
 
+}

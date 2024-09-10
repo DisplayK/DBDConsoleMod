@@ -1,5 +1,6 @@
 #include "PartyEventsManager.h"
 
-UPartyEventsManager::UPartyEventsManager() {
-}
+UPartyEventsManager::UPartyEventsManager()
+{
 
+}

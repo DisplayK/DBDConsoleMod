@@ -1,5 +1,6 @@
 #include "BlightDashAttackObstructSubstate.h"
 
-UBlightDashAttackObstructSubstate::UBlightDashAttackObstructSubstate() {
-}
+UBlightDashAttackObstructSubstate::UBlightDashAttackObstructSubstate()
+{
 
+}

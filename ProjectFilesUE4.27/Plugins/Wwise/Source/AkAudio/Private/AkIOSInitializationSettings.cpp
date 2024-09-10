@@ -1,5 +1,6 @@
 #include "AkIOSInitializationSettings.h"
 
-UAkIOSInitializationSettings::UAkIOSInitializationSettings() {
-}
+UAkIOSInitializationSettings::UAkIOSInitializationSettings()
+{
 
+}

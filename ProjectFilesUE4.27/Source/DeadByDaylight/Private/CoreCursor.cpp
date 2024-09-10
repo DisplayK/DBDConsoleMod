@@ -1,6 +1,6 @@
 #include "CoreCursor.h"
 
-UCoreCursor::UCoreCursor() : UUserWidget(FObjectInitializer::Get()) {
-    this->CursorScaleBox = NULL;
+UCoreCursor::UCoreCursor() : UUserWidget(FObjectInitializer::Get())
+{
+	this->CursorScaleBox = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "AkXboxOneGDKPlatformInfo.h"
 
-UAkXboxOneGDKPlatformInfo::UAkXboxOneGDKPlatformInfo() {
-}
+UAkXboxOneGDKPlatformInfo::UAkXboxOneGDKPlatformInfo()
+{
 
+}

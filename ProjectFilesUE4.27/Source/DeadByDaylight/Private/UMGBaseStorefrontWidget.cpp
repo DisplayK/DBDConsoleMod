@@ -1,5 +1,6 @@
 #include "UMGBaseStorefrontWidget.h"
 
-UUMGBaseStorefrontWidget::UUMGBaseStorefrontWidget() {
-}
+UUMGBaseStorefrontWidget::UUMGBaseStorefrontWidget()
+{
 
+}

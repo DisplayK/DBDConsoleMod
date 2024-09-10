@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EvaluatorCondition.h"
 #include "SurvivorNearMeEvaluatorCondition.generated.h"
 
 UCLASS()
-class USurvivorNearMeEvaluatorCondition : public UEvaluatorCondition {
-    GENERATED_BODY()
+class USurvivorNearMeEvaluatorCondition : public UEvaluatorCondition
+{
+	GENERATED_BODY()
+
 public:
-    USurvivorNearMeEvaluatorCondition();
+	USurvivorNearMeEvaluatorCondition();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USurvivorNearMeEvaluatorCondition) { return 0; }

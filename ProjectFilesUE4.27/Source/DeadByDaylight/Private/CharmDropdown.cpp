@@ -1,5 +1,6 @@
 #include "CharmDropdown.h"
 
-FCharmDropdown::FCharmDropdown() {
+FCharmDropdown::FCharmDropdown()
+{
+	this->CharmId = NAME_None;
 }
-

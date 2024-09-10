@@ -1,5 +1,6 @@
 #include "EscapeTile.h"
 
-AEscapeTile::AEscapeTile() {
-}
+AEscapeTile::AEscapeTile()
+{
 
+}

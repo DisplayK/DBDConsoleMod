@@ -1,5 +1,6 @@
 #include "UniqueTargetIncrementQEEvaluator.h"
 
-UUniqueTargetIncrementQEEvaluator::UUniqueTargetIncrementQEEvaluator() {
+UUniqueTargetIncrementQEEvaluator::UUniqueTargetIncrementQEEvaluator()
+{
+	this->_targetList = TSet<TWeakObjectPtr<AActor>>();
 }
-

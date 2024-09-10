@@ -2,14 +2,12 @@
 
 class ADBDPlayer;
 
+void AAtlantaHeartbeatActor::OnLocallyObservedChanged(ADBDPlayer* player)
+{
 
-
-
-void AAtlantaHeartbeatActor::OnLocallyObservedChanged(ADBDPlayer* player) {
 }
 
-
-AAtlantaHeartbeatActor::AAtlantaHeartbeatActor() {
-    this->IsHeartbeatShown = false;
+AAtlantaHeartbeatActor::AAtlantaHeartbeatActor()
+{
+	this->IsHeartbeatShown = false;
 }
-

@@ -1,5 +1,6 @@
 #include "SubscriptionRewardDataAsset.h"
 
-USubscriptionRewardDataAsset::USubscriptionRewardDataAsset() {
+USubscriptionRewardDataAsset::USubscriptionRewardDataAsset()
+{
+	this->Data = TMap<ESubscriptionRewardType, FSubscriptionRewardTypeData>();
 }
-

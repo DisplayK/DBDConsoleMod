@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseTooltipWidget.h"
 #include "RankTooltipWidget.generated.h"
@@ -8,26 +9,28 @@ class UTextBlock;
 class UGridPanel;
 
 UCLASS(Abstract, EditInlineNew)
-class URankTooltipWidget : public UBaseTooltipWidget {
-    GENERATED_BODY()
-public:
+class URankTooltipWidget : public UBaseTooltipWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* RankInfoLabel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* ResetInfoLabel;
-    
-    UPROPERTY(Export)
-    UGridPanel* RankInfoSlotsContainer;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGPlayerRankInfo* SurvivorRankInfoWidget;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGPlayerRankInfo* KillerRankInfoWidget;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* RankInfoLabel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* ResetInfoLabel;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UGridPanel* RankInfoSlotsContainer;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGPlayerRankInfo* SurvivorRankInfoWidget;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGPlayerRankInfo* KillerRankInfoWidget;
+
 public:
-    URankTooltipWidget();
+	URankTooltipWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const URankTooltipWidget) { return 0; }

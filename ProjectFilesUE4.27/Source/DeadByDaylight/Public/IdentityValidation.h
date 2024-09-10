@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "IdentityValidation.generated.h"
 
 UCLASS()
-class UIdentityValidation : public UObject {
-    GENERATED_BODY()
+class UIdentityValidation : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UIdentityValidation();
+	UIdentityValidation();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UIdentityValidation) { return 0; }

@@ -1,43 +1,68 @@
 #include "UMGAtlantaSettingScreen.h"
 
+void UUMGAtlantaSettingScreen::HandleSurvivorCameraSensitivityChanged(int32 value)
+{
 
-
-void UUMGAtlantaSettingScreen::HandleSurvivorCameraSensitivityChanged(int32 value) {
 }
 
-void UUMGAtlantaSettingScreen::HandleSettingTabClick(int32 tabIndex) {
+void UUMGAtlantaSettingScreen::HandleSettingTabClick(int32 tabIndex)
+{
+
 }
 
-void UUMGAtlantaSettingScreen::HandleLeaveButtonClick() {
+void UUMGAtlantaSettingScreen::HandleLeaveButtonClick()
+{
+
 }
 
-void UUMGAtlantaSettingScreen::HandleLanguageButtonClick(int32 index) {
+void UUMGAtlantaSettingScreen::HandleLanguageButtonClick(int32 index)
+{
+
 }
 
-void UUMGAtlantaSettingScreen::HandleKillerCameraSensitivityChanged(int32 value) {
+void UUMGAtlantaSettingScreen::HandleKillerCameraSensitivityChanged(int32 value)
+{
+
 }
 
-void UUMGAtlantaSettingScreen::HandleInvertYToggleClick(bool toggleValue) {
+void UUMGAtlantaSettingScreen::HandleInvertYToggleClick(bool toggleValue)
+{
+
 }
 
-void UUMGAtlantaSettingScreen::HandleInteractionButtonToggleClick(int32 index) {
+void UUMGAtlantaSettingScreen::HandleInteractionButtonToggleClick(int32 index)
+{
+
 }
 
-void UUMGAtlantaSettingScreen::HandleHandSideToggleClick(int32 index) {
+void UUMGAtlantaSettingScreen::HandleHandSideToggleClick(int32 index)
+{
+
 }
 
-void UUMGAtlantaSettingScreen::HandleContextButtonClickEvent(int32 index) {
+void UUMGAtlantaSettingScreen::HandleContextButtonClickEvent(int32 index)
+{
+
 }
 
-void UUMGAtlantaSettingScreen::HandleAlwaysDisplayButtonClick(int32 tabIndex) {
+void UUMGAtlantaSettingScreen::HandleAlwaysDisplayButtonClick(int32 tabIndex)
+{
+
 }
 
-void UUMGAtlantaSettingScreen::HandleAimAssistToggleClick(bool toggleValue) {
+void UUMGAtlantaSettingScreen::HandleAimAssistToggleClick(bool toggleValue)
+{
+
 }
 
-UUMGAtlantaSettingScreen::UUMGAtlantaSettingScreen() {
-    this->SettingContextSwitcher = NULL;
-    this->SettingTabBox = NULL;
-    this->AlwaysDisplayButtonBox = NULL;
+UUMGAtlantaSettingScreen::UUMGAtlantaSettingScreen()
+{
+	this->SettingContextSwitcher = NULL;
+	this->SettingTabBox = NULL;
+	this->AlwaysDisplayButtonBox = NULL;
+	this->_settingTabButtonClass = NULL;
+	this->_settingAlwaysDisplayButtonClass = NULL;
+	this->_buttonBoxDividerAsset = NULL;
+	this->_overlayContextWidgetMap = TMap<EOverlayTabs, TSoftClassPtr<UUMGSettingContextWidget>>();
+	this->_contextWidgetMap = TMap<EOverlayTabs, UUMGSettingContextWidget*>();
 }
-

@@ -1,5 +1,6 @@
 #include "SpawnerElement.h"
 
-FSpawnerElement::FSpawnerElement() {
+FSpawnerElement::FSpawnerElement()
+{
+	this->ObjectsToBeSpawned = TArray<FActorSpawnerProperties>();
 }
-

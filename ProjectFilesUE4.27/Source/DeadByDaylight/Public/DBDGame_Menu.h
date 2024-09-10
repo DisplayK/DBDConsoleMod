@@ -1,32 +1,36 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDBaseGameMode.h"
 #include "DBDGame_Menu.generated.h"
 
+class ALevelSequenceActor;
 class UAtlantaPartyFlowHandler;
-class AMatineeActor;
 
 UCLASS(NonTransient)
-class ADBDGame_Menu : public ADBDBaseGameMode {
-    GENERATED_BODY()
+class ADBDGame_Menu : public ADBDBaseGameMode
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    bool StartWithSlasher;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool StartWithSlasher;
+
 private:
-    UPROPERTY(Transient)
-    UAtlantaPartyFlowHandler* _partyFlowHandler;
-    
-    UPROPERTY(Transient)
-    AMatineeActor* _matineeFadeActor;
-    
-    UPROPERTY(Transient)
-    AMatineeActor* _matineeIntroActor;
-    
-    UPROPERTY(Transient)
-    AMatineeActor* _matineeLoopActor;
-    
+	UPROPERTY(Transient)
+	UAtlantaPartyFlowHandler* _partyFlowHandler;
+
+	UPROPERTY(Transient)
+	ALevelSequenceActor* _sequenceFadeActor;
+
+	UPROPERTY(Transient)
+	ALevelSequenceActor* _sequenceIntroActor;
+
+	UPROPERTY(Transient)
+	ALevelSequenceActor* _sequenceLoopActor;
+
 public:
-    ADBDGame_Menu();
+	ADBDGame_Menu();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ADBDGame_Menu) { return 0; }

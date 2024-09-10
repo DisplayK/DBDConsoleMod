@@ -1,6 +1,6 @@
 #include "MapSoundsToAvoid.h"
 
-FMapSoundsToAvoid::FMapSoundsToAvoid() {
-    this->Component = NULL;
+FMapSoundsToAvoid::FMapSoundsToAvoid()
+{
+	this->Component = NULL;
 }
-

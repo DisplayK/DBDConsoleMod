@@ -1,5 +1,6 @@
 #include "FoliageDensityHISM.h"
 
-UFoliageDensityHISM::UFoliageDensityHISM() {
-}
+UFoliageDensityHISM::UFoliageDensityHISM()
+{
 
+}

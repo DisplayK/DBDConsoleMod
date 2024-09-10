@@ -1,5 +1,6 @@
 #include "DidGameEventOccurred.h"
 
-UDidGameEventOccurred::UDidGameEventOccurred() {
-}
+UDidGameEventOccurred::UDidGameEventOccurred()
+{
 
+}

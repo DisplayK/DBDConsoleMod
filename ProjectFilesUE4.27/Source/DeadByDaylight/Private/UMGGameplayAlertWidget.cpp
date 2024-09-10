@@ -1,6 +1,6 @@
 #include "UMGGameplayAlertWidget.h"
 
+UUMGGameplayAlertWidget::UUMGGameplayAlertWidget()
+{
 
-UUMGGameplayAlertWidget::UUMGGameplayAlertWidget() {
 }
-

@@ -1,6 +1,6 @@
 #include "MenuIndexChangeEventData.h"
 
-FMenuIndexChangeEventData::FMenuIndexChangeEventData() {
-    this->Index = 0;
+FMenuIndexChangeEventData::FMenuIndexChangeEventData()
+{
+	this->Index = 0;
 }
-

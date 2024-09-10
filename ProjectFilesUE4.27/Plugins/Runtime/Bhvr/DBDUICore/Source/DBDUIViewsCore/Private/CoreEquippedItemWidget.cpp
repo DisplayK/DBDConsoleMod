@@ -1,6 +1,6 @@
 #include "CoreEquippedItemWidget.h"
 
-UCoreEquippedItemWidget::UCoreEquippedItemWidget() {
-    this->ItemDisappearSfx = NULL;
+UCoreEquippedItemWidget::UCoreEquippedItemWidget()
+{
+	this->ItemDisappearSfx = NULL;
 }
-

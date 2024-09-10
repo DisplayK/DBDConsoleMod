@@ -1,7 +1,6 @@
 #include "CoreTutorialObjectiveItem.h"
 
+UCoreTutorialObjectiveItem::UCoreTutorialObjectiveItem()
+{
 
-
-UCoreTutorialObjectiveItem::UCoreTutorialObjectiveItem() {
 }
-

@@ -1,5 +1,6 @@
 #include "TwinBeingPossessedInteraction.h"
 
-UTwinBeingPossessedInteraction::UTwinBeingPossessedInteraction() {
-}
+UTwinBeingPossessedInteraction::UTwinBeingPossessedInteraction()
+{
 
+}

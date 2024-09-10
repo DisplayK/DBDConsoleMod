@@ -1,5 +1,6 @@
 #include "StatusEffectDataAsset.h"
 
-UStatusEffectDataAsset::UStatusEffectDataAsset() {
-}
+UStatusEffectDataAsset::UStatusEffectDataAsset()
+{
 
+}

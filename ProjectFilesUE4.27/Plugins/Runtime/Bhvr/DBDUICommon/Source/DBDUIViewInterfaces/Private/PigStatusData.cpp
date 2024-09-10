@@ -1,7 +1,7 @@
 #include "PigStatusData.h"
 
-FPigStatusData::FPigStatusData() {
-    this->ReverseBearTrapState = EReverseBearTrapUIState::Off;
-    this->TimerProgress = 0.00f;
+UPigStatusData::UPigStatusData()
+{
+	this->ReverseBearTrapState = EReverseBearTrapUIState::Off;
+	this->TimerProgress = 0.000000;
 }
-

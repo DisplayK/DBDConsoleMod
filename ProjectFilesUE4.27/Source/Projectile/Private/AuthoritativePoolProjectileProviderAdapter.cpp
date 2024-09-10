@@ -2,10 +2,12 @@
 
 class UAuthoritativeActorPoolComponent;
 
-void UAuthoritativePoolProjectileProviderAdapter::Init(UAuthoritativeActorPoolComponent* pool) {
+void UAuthoritativePoolProjectileProviderAdapter::Init(UAuthoritativeActorPoolComponent* pool)
+{
+
 }
 
-UAuthoritativePoolProjectileProviderAdapter::UAuthoritativePoolProjectileProviderAdapter() {
-    this->_pool = NULL;
+UAuthoritativePoolProjectileProviderAdapter::UAuthoritativePoolProjectileProviderAdapter()
+{
+	this->_pool = NULL;
 }
-

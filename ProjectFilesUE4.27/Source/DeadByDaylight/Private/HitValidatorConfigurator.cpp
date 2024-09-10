@@ -1,5 +1,6 @@
 #include "HitValidatorConfigurator.h"
 
-UHitValidatorConfigurator::UHitValidatorConfigurator() {
-}
+UHitValidatorConfigurator::UHitValidatorConfigurator()
+{
 
+}

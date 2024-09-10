@@ -1,5 +1,6 @@
 #include "ActivationTimerRemainingPercentIconStrategy.h"
 
-UActivationTimerRemainingPercentIconStrategy::UActivationTimerRemainingPercentIconStrategy() {
-}
+UActivationTimerRemainingPercentIconStrategy::UActivationTimerRemainingPercentIconStrategy()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "AICharacterBehaviourDropPallet.h"
 
-UAICharacterBehaviourDropPallet::UAICharacterBehaviourDropPallet() {
+UAICharacterBehaviourDropPallet::UAICharacterBehaviourDropPallet()
+{
+	this->_targetPallet = NULL;
 }
-

@@ -1,5 +1,8 @@
 #include "LegacySavedFearMarketOfferingInstance.h"
 
-FLegacySavedFearMarketOfferingInstance::FLegacySavedFearMarketOfferingInstance() {
+FLegacySavedFearMarketOfferingInstance::FLegacySavedFearMarketOfferingInstance()
+{
+	this->ObjectsForSale = TArray<FLegacySavedFearMarketItemInstance>();
+	this->StartTime = FDateTime{};
+	this->EndTime = FDateTime{};
 }
-

@@ -1,5 +1,6 @@
 #include "BlightAttackPicker.h"
 
-UBlightAttackPicker::UBlightAttackPicker() {
-}
+UBlightAttackPicker::UBlightAttackPicker()
+{
 
+}

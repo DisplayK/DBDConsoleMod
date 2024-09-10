@@ -1,5 +1,6 @@
 #include "KillerHitCosmeticHandler.h"
 
-UKillerHitCosmeticHandler::UKillerHitCosmeticHandler() {
-}
+UKillerHitCosmeticHandler::UKillerHitCosmeticHandler()
+{
 
+}

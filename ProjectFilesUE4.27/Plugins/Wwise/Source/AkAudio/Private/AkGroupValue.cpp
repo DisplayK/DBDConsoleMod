@@ -1,6 +1,7 @@
 #include "AkGroupValue.h"
 
-UAkGroupValue::UAkGroupValue() {
-    this->GroupShortID = 0;
+UAkGroupValue::UAkGroupValue()
+{
+	this->MediaDependencies = TArray<TSoftObjectPtr<UAkMediaAsset>>();
+	this->GroupShortID = 0;
 }
-

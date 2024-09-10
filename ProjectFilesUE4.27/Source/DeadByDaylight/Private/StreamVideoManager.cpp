@@ -1,8 +1,11 @@
 #include "StreamVideoManager.h"
 
-void UStreamVideoManager::OnStreamVideoDone() {
+void UStreamVideoManager::OnStreamVideoDone()
+{
+
 }
 
-UStreamVideoManager::UStreamVideoManager() {
-}
+UStreamVideoManager::UStreamVideoManager()
+{
 
+}

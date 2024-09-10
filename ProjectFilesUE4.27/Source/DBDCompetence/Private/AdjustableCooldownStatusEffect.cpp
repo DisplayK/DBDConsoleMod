@@ -1,5 +1,6 @@
 #include "AdjustableCooldownStatusEffect.h"
 
-UAdjustableCooldownStatusEffect::UAdjustableCooldownStatusEffect() {
-}
+UAdjustableCooldownStatusEffect::UAdjustableCooldownStatusEffect()
+{
 
+}

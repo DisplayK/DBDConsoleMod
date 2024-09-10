@@ -1,5 +1,5 @@
 #include "VaultData.h"
 
-FVaultData::FVaultData() {
+FVaultData::FVaultData()
+{
 }
-

@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DependencyBasedActivationStrategy.generated.h"
 
 USTRUCT()
-struct ACTIVATION_API FDependencyBasedActivationStrategy {
-    GENERATED_BODY()
+struct FDependencyBasedActivationStrategy
+{
+	GENERATED_BODY()
+
 public:
-    FDependencyBasedActivationStrategy();
+	ACTIVATION_API FDependencyBasedActivationStrategy();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FDependencyBasedActivationStrategy) { return 0; }

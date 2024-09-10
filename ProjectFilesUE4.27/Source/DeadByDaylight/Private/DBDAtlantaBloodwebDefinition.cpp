@@ -1,5 +1,6 @@
 #include "DBDAtlantaBloodwebDefinition.h"
 
-UDBDAtlantaBloodwebDefinition::UDBDAtlantaBloodwebDefinition() {
-}
+UDBDAtlantaBloodwebDefinition::UDBDAtlantaBloodwebDefinition()
+{
 
+}

@@ -1,7 +1,8 @@
 #include "StatModifier.h"
 
-FStatModifier::FStatModifier() {
-    this->OperationStrategy = EModifierOperationStrategy::Add;
-    this->CompoundStrategy = EModifierCompoundStrategy::Add;
+FStatModifier::FStatModifier()
+{
+	this->OperationStrategy = EModifierOperationStrategy::Add;
+	this->ModifierTag = FGameplayTag{};
+	this->CompoundStrategy = EModifierCompoundStrategy::Add;
 }
-

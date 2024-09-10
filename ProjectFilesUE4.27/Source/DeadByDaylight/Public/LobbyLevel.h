@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Engine/LevelScriptActor.h"
 #include "EWorldFlowEvent.h"
@@ -7,24 +8,29 @@
 class ADisplayStand;
 
 UCLASS()
-class DEADBYDAYLIGHT_API ALobbyLevel : public ALevelScriptActor {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API ALobbyLevel : public ALevelScriptActor
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    TArray<ADisplayStand*> _registeredDisplayStands;
-    
-    UPROPERTY(EditAnywhere)
-    EWorldFlowEvent LobbyLoadedEvent;
-    
-public:
-    ALobbyLevel();
+	UPROPERTY(Transient)
+	TArray<ADisplayStand*> _registeredDisplayStands;
+
+	UPROPERTY(EditAnywhere)
+	EWorldFlowEvent LobbyLoadedEvent;
+
 private:
-    UFUNCTION()
-    void OnShopSubLevelLoaded();
-    
-    UFUNCTION()
-    void OnLobbySubLevelLoaded();
-    
+	UFUNCTION()
+	void OnShopSubLevelLoaded();
+
+	UFUNCTION()
+	void OnLobbySubLevelLoaded();
+
+	UFUNCTION()
+	void OnAdditionalSubLevelsLoaded();
+
+public:
+	ALobbyLevel();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ALobbyLevel) { return 0; }

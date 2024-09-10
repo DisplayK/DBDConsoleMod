@@ -1,6 +1,7 @@
 #include "MovieSceneAkAudioRTPCSection.h"
 
-UMovieSceneAkAudioRTPCSection::UMovieSceneAkAudioRTPCSection() {
-    this->RTPC = NULL;
+UMovieSceneAkAudioRTPCSection::UMovieSceneAkAudioRTPCSection()
+{
+	this->RTPC = NULL;
+	this->Name = TEXT("");
 }
-

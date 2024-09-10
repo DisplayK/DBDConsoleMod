@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EStatusEffectSpawnerReceiverStrategy.generated.h"
 
-UENUM()
-enum class EStatusEffectSpawnerReceiverStrategy : int32 {
-    AllCharacter,
-    PawnType,
-    OriginatingPlayer,
+UENUM(BlueprintType)
+enum class EStatusEffectSpawnerReceiverStrategy : uint8
+{
+	AllCharacter,
+	PawnType,
+	OriginatingPlayer,
 };
-

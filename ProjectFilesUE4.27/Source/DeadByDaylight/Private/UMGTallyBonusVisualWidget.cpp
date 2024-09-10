@@ -1,6 +1,7 @@
 #include "UMGTallyBonusVisualWidget.h"
 
-UUMGTallyBonusVisualWidget::UUMGTallyBonusVisualWidget() {
-    this->MultiplierImage = NULL;
+UUMGTallyBonusVisualWidget::UUMGTallyBonusVisualWidget()
+{
+	this->MultiplierTextureMap = TMap<int32, TSoftObjectPtr<UTexture2D>>();
+	this->MultiplierImage = NULL;
 }
-

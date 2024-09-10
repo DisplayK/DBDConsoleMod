@@ -1,5 +1,6 @@
 #include "BaseInputAccelerationConstraintStrategy.h"
 
-UBaseInputAccelerationConstraintStrategy::UBaseInputAccelerationConstraintStrategy() {
-}
+UBaseInputAccelerationConstraintStrategy::UBaseInputAccelerationConstraintStrategy()
+{
 
+}

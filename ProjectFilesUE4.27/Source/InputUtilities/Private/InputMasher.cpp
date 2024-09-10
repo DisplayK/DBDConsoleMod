@@ -1,6 +1,6 @@
 #include "InputMasher.h"
 
-UInputMasher::UInputMasher() {
-    this->_inputComponent = NULL;
+UInputMasher::UInputMasher()
+{
+	this->_inputComponent = NULL;
 }
-

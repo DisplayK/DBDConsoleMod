@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "FSM_Condition.h"
 #include "K25ChainStrike_IsGatewayOrientationTimerExpired.generated.h"
 
 UCLASS(EditInlineNew)
-class UK25ChainStrike_IsGatewayOrientationTimerExpired : public UFSM_Condition {
-    GENERATED_BODY()
+class UK25ChainStrike_IsGatewayOrientationTimerExpired : public UFSM_Condition
+{
+	GENERATED_BODY()
+
 public:
-    UK25ChainStrike_IsGatewayOrientationTimerExpired();
+	UK25ChainStrike_IsGatewayOrientationTimerExpired();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UK25ChainStrike_IsGatewayOrientationTimerExpired) { return 0; }

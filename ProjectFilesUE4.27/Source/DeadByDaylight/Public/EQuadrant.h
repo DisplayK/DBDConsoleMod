@@ -1,13 +1,14 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EQuadrant.generated.h"
 
-UENUM()
-enum class EQuadrant {
-    BottomRight,
-    BottomLeft,
-    TopLeft,
-    TopRight,
-    Count,
+UENUM(BlueprintType)
+enum class EQuadrant : uint8
+{
+	BottomRight,
+	BottomLeft,
+	TopLeft,
+	TopRight,
+	Count,
 };
-

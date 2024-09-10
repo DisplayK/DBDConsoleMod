@@ -1,6 +1,6 @@
 #include "RestrictedPlacementAreaStrategy.h"
 
-URestrictedPlacementAreaStrategy::URestrictedPlacementAreaStrategy() {
-    this->MaxHeightRestriction = 0.00f;
+URestrictedPlacementAreaStrategy::URestrictedPlacementAreaStrategy()
+{
+	this->MaxHeightRestriction = 0.000000;
 }
-

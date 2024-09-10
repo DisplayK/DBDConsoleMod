@@ -1,5 +1,6 @@
 #include "IsOriginatingPerkUsableCondition.h"
 
-UIsOriginatingPerkUsableCondition::UIsOriginatingPerkUsableCondition() {
-}
+UIsOriginatingPerkUsableCondition::UIsOriginatingPerkUsableCondition()
+{
 
+}

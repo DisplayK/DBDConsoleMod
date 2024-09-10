@@ -1,5 +1,6 @@
 #include "NightmareAnimInstance.h"
 
-UNightmareAnimInstance::UNightmareAnimInstance() {
-}
+UNightmareAnimInstance::UNightmareAnimInstance()
+{
 
+}

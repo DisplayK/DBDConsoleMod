@@ -1,5 +1,6 @@
 #include "AtlantaCamperInitializer.h"
 
-UAtlantaCamperInitializer::UAtlantaCamperInitializer() {
-}
+UAtlantaCamperInitializer::UAtlantaCamperInitializer()
+{
 
+}

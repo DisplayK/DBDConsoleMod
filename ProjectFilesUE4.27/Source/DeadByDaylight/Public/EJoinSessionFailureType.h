@@ -1,16 +1,18 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EJoinSessionFailureType.generated.h"
 
-UENUM()
-enum class EJoinSessionFailureType {
-    None,
-    JoiningAlreadyStartedGame,
-    JoiningPrivateGame,
-    JoiningAlreadyFullGame,
-    JoiningInvitation,
-    JoiningFailedOnDisconnect,
-    JoiningHostUnreachable,
-    JoiningIncompatibleServer,
+UENUM(BlueprintType)
+enum class EJoinSessionFailureType : uint8
+{
+	None,
+	JoiningAlreadyStartedGame,
+	JoiningPrivateGame,
+	JoiningAlreadyFullGame,
+	JoiningInvitation,
+	JoiningFailedOnDisconnect,
+	JoiningHostUnreachable,
+	JoiningIncompatibleServer,
+	MatchmakingInfoExpired,
 };
-

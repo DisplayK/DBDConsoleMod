@@ -1,5 +1,6 @@
 #include "StreamVideoFactory.h"
 
-UStreamVideoFactory::UStreamVideoFactory() {
-}
+UStreamVideoFactory::UStreamVideoFactory()
+{
 
+}

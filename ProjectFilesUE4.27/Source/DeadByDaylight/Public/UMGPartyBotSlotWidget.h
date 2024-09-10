@@ -1,52 +1,55 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
-#include "EAIDifficultyLevel.h"
 #include "Styling/SlateColor.h"
+#include "EAIDifficultyLevel.h"
 #include "UMGPartyBotSlotWidget.generated.h"
 
+class UCanvasPanel;
+class UUMGBaseButtonWidget;
 class UTextBlock;
 class UImage;
-class UUMGBaseButtonWidget;
-class UCanvasPanel;
 
 UCLASS(Abstract, EditInlineNew)
-class DEADBYDAYLIGHT_API UUMGPartyBotSlotWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UUMGPartyBotSlotWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    UTextBlock* RoleText;
-    
-    UPROPERTY(Export)
-    UTextBlock* BotDifficultyText;
-    
-    UPROPERTY(Export)
-    UTextBlock* CharacterNameText;
-    
-    UPROPERTY(Export)
-    UUMGBaseButtonWidget* EditButton;
-    
-    UPROPERTY(Export)
-    UImage* EditIcon;
-    
-    UPROPERTY(Export)
-    UUMGBaseButtonWidget* InvitePartyButton;
-    
-    UPROPERTY(Export)
-    UCanvasPanel* InvitePartyCanvas;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TMap<EAIDifficultyLevel, FSlateColor> DifficultyColors;
-    
-public:
-    UUMGPartyBotSlotWidget();
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* RoleText;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* BotDifficultyText;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* CharacterNameText;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGBaseButtonWidget* EditButton;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UImage* EditIcon;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGBaseButtonWidget* InvitePartyButton;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UCanvasPanel* InvitePartyCanvas;
+
+	UPROPERTY(EditDefaultsOnly)
+	TMap<EAIDifficultyLevel, FSlateColor> DifficultyColors;
+
 private:
-    UFUNCTION()
-    void HandleInvitePartyButtonEvent();
-    
-    UFUNCTION()
-    void HandleEditButtonEvent();
-    
+	UFUNCTION()
+	void HandleInvitePartyButtonEvent();
+
+	UFUNCTION()
+	void HandleEditButtonEvent();
+
+public:
+	UUMGPartyBotSlotWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGPartyBotSlotWidget) { return 0; }

@@ -1,32 +1,37 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "DBDRankDesignTunables.generated.h"
 
 class UCurveFloat;
 
-UCLASS(BlueprintType, Config=Design)
-class DEADBYDAYLIGHT_API UDBDRankDesignTunables : public UObject {
-    GENERATED_BODY()
+UCLASS(BlueprintType)
+class DEADBYDAYLIGHT_API UDBDRankDesignTunables : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UCurveFloat* UnbrokenTimeAlivePointsCurve;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UCurveFloat* EvaderStealthPointsByDistanceWhileKillerNotChasingCurve;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UCurveFloat* EvaderStealthPointsByDistanceWhileKillerIsChasingCurve;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UCurveFloat* EvaderChasePointsByDurationCurve;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UCurveFloat* EvaderZAxisDistanceScalingCurve;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UCurveFloat* ChaserChasePointsByDurationCurve;
-    
-    UDBDRankDesignTunables();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCurveFloat* UnbrokenTimeAlivePointsCurve;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCurveFloat* EvaderStealthPointsByDistanceWhileKillerNotChasingCurve;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCurveFloat* EvaderStealthPointsByDistanceWhileKillerIsChasingCurve;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCurveFloat* EvaderChasePointsByDurationCurve;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCurveFloat* EvaderZAxisDistanceScalingCurve;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCurveFloat* ChaserChasePointsByDurationCurve;
+
+public:
+	UDBDRankDesignTunables();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDRankDesignTunables) { return 0; }

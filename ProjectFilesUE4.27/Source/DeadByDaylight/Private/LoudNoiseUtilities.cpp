@@ -1,5 +1,6 @@
 #include "LoudNoiseUtilities.h"
 
-ULoudNoiseUtilities::ULoudNoiseUtilities() {
-}
+ULoudNoiseUtilities::ULoudNoiseUtilities()
+{
 
+}

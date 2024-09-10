@@ -1,5 +1,6 @@
 #include "SearchableOutlineUpdateStrategy.h"
 
-USearchableOutlineUpdateStrategy::USearchableOutlineUpdateStrategy() {
-}
+USearchableOutlineUpdateStrategy::USearchableOutlineUpdateStrategy()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "OniBasicAttackSuccessSubstate.h"
 
-UOniBasicAttackSuccessSubstate::UOniBasicAttackSuccessSubstate() {
-}
+UOniBasicAttackSuccessSubstate::UOniBasicAttackSuccessSubstate()
+{
 
+}

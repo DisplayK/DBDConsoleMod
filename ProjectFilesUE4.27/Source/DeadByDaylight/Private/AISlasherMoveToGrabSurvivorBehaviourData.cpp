@@ -2,10 +2,12 @@
 
 class ACamperPlayer;
 
-void UAISlasherMoveToGrabSurvivorBehaviourData::Init(ACamperPlayer* targetSurvivor) {
+void UAISlasherMoveToGrabSurvivorBehaviourData::Init(ACamperPlayer* targetSurvivor)
+{
+
 }
 
-UAISlasherMoveToGrabSurvivorBehaviourData::UAISlasherMoveToGrabSurvivorBehaviourData() {
-    this->_targetSurvivor = NULL;
+UAISlasherMoveToGrabSurvivorBehaviourData::UAISlasherMoveToGrabSurvivorBehaviourData()
+{
+	this->_targetSurvivor = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "BlightDashAttack.h"
 
-UBlightDashAttack::UBlightDashAttack() {
-}
+UBlightDashAttack::UBlightDashAttack()
+{
 
+}

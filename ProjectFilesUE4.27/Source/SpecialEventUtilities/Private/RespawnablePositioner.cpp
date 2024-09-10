@@ -2,13 +2,17 @@
 
 class ARespawnableInteractable;
 
-void URespawnablePositioner::Authority_OnIsInteractingChangedEvent(ARespawnableInteractable* respawnableInteractable, bool isInteracting) {
+void URespawnablePositioner::Authority_OnIsInteractingChangedEvent(ARespawnableInteractable* respawnableInteractable, bool isInteracting)
+{
+
 }
 
-TArray<ARespawnableInteractable*> URespawnablePositioner::Authority_GetRespawnables() const {
-    return TArray<ARespawnableInteractable*>();
+TArray<ARespawnableInteractable*> URespawnablePositioner::Authority_GetRespawnables() const
+{
+	return TArray<ARespawnableInteractable*>();
 }
 
-URespawnablePositioner::URespawnablePositioner() {
+URespawnablePositioner::URespawnablePositioner()
+{
+	this->_respawnableInteractables = TArray<ARespawnableInteractable*>();
 }
-

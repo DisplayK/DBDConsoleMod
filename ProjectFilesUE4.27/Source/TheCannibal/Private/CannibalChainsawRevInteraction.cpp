@@ -1,5 +1,6 @@
 #include "CannibalChainsawRevInteraction.h"
 
-UCannibalChainsawRevInteraction::UCannibalChainsawRevInteraction() {
-}
+UCannibalChainsawRevInteraction::UCannibalChainsawRevInteraction()
+{
 
+}

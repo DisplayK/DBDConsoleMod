@@ -2,9 +2,12 @@
 
 class UCanvasPanel;
 
-void UNoiseIndicatorWidget::SetIndicatorPanel(UCanvasPanel* panel) {
+void UNoiseIndicatorWidget::SetIndicatorPanel(UCanvasPanel* panel)
+{
+
 }
 
-UNoiseIndicatorWidget::UNoiseIndicatorWidget() {
-}
+UNoiseIndicatorWidget::UNoiseIndicatorWidget()
+{
 
+}

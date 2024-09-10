@@ -1,45 +1,49 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "MaterialOriginalState.h"
 #include "UObject/NoExportTypes.h"
 #include "ClipManager.generated.h"
 
-class UMaterialInterface;
-class UMeshComponent;
 class UDBDClipRegionComponent;
+class UMaterialInterface;
 class UDataTable;
+class UMeshComponent;
 
 UCLASS()
-class DEADBYDAYLIGHT_API AClipManager : public AActor {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API AClipManager : public AActor
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    TArray<UDBDClipRegionComponent*> _clippingZones;
-    
-    UPROPERTY(Export, Transient)
-    TSet<UMeshComponent*> _meshComponents;
-    
-    UPROPERTY(Transient)
-    TArray<FMaterialOriginalState> _dissolvedMeshes;
-    
-    UPROPERTY(Transient)
-    TMap<UMaterialInterface*, UMaterialInterface*> _normal2dissolve;
-    
-    UPROPERTY(Transient)
-    TMap<UMaterialInterface*, UMaterialInterface*> _dissolve2normal;
-    
-    UPROPERTY(Transient)
-    UDataTable* _sphericalDissolveMaterials;
-    
+	UPROPERTY(Transient, Export)
+	TArray<UDBDClipRegionComponent*> _clippingZones;
+
+	UPROPERTY(Transient, Export)
+	TSet<UMeshComponent*> _meshComponents;
+
+	UPROPERTY(Transient)
+	TArray<FMaterialOriginalState> _dissolvedMeshes;
+
+	UPROPERTY(Transient)
+	TMap<UMaterialInterface*, UMaterialInterface*> _normal2dissolve;
+
+	UPROPERTY(Transient)
+	TMap<UMaterialInterface*, UMaterialInterface*> _dissolve2normal;
+
+	UPROPERTY(Transient)
+	UDataTable* _sphericalDissolveMaterials;
+
 public:
-    AClipManager();
-    UFUNCTION(BlueprintCallable)
-    void SphericalDissolveAt(FVector Location, float radius);
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveDissolveMaterials();
-    
+	UFUNCTION(BlueprintCallable)
+	void SphericalDissolveAt(FVector Location, float radius);
+
+	UFUNCTION(BlueprintCallable)
+	void RemoveDissolveMaterials();
+
+public:
+	AClipManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AClipManager) { return 0; }

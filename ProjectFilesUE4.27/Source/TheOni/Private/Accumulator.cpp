@@ -1,5 +1,5 @@
 #include "Accumulator.h"
 
-FAccumulator::FAccumulator() {
+FAccumulator::FAccumulator()
+{
 }
-

@@ -2,9 +2,12 @@
 
 class UStatusEffect;
 
-void UIsHighestLevelAndClosestOriginatingEffect::OnStatusEffectAddedOrRemoved(UStatusEffect* effect, bool valid) {
+void UIsHighestLevelAndClosestOriginatingEffect::OnStatusEffectAddedOrRemoved(UStatusEffect* effect, bool valid)
+{
+
 }
 
-UIsHighestLevelAndClosestOriginatingEffect::UIsHighestLevelAndClosestOriginatingEffect() {
+UIsHighestLevelAndClosestOriginatingEffect::UIsHighestLevelAndClosestOriginatingEffect()
+{
+	this->_applicableEffects = TArray<UStatusEffect*>();
 }
-

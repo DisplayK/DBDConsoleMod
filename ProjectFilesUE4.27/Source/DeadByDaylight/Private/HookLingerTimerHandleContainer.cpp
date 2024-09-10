@@ -1,6 +1,6 @@
 #include "HookLingerTimerHandleContainer.h"
 
-FHookLingerTimerHandleContainer::FHookLingerTimerHandleContainer() {
-    this->Hook = NULL;
+FHookLingerTimerHandleContainer::FHookLingerTimerHandleContainer()
+{
+	this->Hook = NULL;
 }
-

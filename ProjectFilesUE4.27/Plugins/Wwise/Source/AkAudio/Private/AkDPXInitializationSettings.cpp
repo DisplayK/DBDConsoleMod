@@ -1,5 +1,6 @@
 #include "AkDPXInitializationSettings.h"
 
-UAkDPXInitializationSettings::UAkDPXInitializationSettings() {
-}
+UAkDPXInitializationSettings::UAkDPXInitializationSettings()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "ExecutionerTormentAttackSuccessSubstate.h"
 
-UExecutionerTormentAttackSuccessSubstate::UExecutionerTormentAttackSuccessSubstate() {
-}
+UExecutionerTormentAttackSuccessSubstate::UExecutionerTormentAttackSuccessSubstate()
+{
 
+}

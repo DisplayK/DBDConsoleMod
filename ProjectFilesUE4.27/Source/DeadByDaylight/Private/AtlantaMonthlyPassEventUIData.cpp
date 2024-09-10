@@ -1,5 +1,5 @@
 #include "AtlantaMonthlyPassEventUIData.h"
 
-FAtlantaMonthlyPassEventUIData::FAtlantaMonthlyPassEventUIData() {
+FAtlantaMonthlyPassEventUIData::FAtlantaMonthlyPassEventUIData()
+{
 }
-

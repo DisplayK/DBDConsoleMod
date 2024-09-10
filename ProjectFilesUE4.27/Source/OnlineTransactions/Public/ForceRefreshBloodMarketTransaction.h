@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "OnlineTransaction.h"
+#include "UObject/NoExportTypes.h"
 #include "ForceRefreshBloodMarketTransaction.generated.h"
 
 UCLASS()
-class ONLINETRANSACTIONS_API UForceRefreshBloodMarketTransaction : public UObject, public IOnlineTransaction {
-    GENERATED_BODY()
+class ONLINETRANSACTIONS_API UForceRefreshBloodMarketTransaction : public UObject, public IOnlineTransaction
+{
+	GENERATED_BODY()
+
 public:
-    UForceRefreshBloodMarketTransaction();
-    
-    // Fix for true pure virtual functions not being implemented
+	UForceRefreshBloodMarketTransaction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UForceRefreshBloodMarketTransaction) { return 0; }

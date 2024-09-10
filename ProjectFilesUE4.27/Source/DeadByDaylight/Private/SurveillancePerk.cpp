@@ -3,10 +3,12 @@
 class AGenerator;
 class ADBDPlayer;
 
-void USurveillancePerk::HandleGeneratorIsDamagedChanged(AGenerator* generator, ADBDPlayer* player) {
+void USurveillancePerk::HandleGeneratorIsDamagedChanged(AGenerator* generator, ADBDPlayer* player)
+{
+
 }
 
-USurveillancePerk::USurveillancePerk() {
-    this->generatorRegressionStopRevealTime = 0.00f;
+USurveillancePerk::USurveillancePerk()
+{
+	this->generatorRegressionStopRevealTime = 0.000000;
 }
-

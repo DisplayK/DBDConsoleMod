@@ -1,27 +1,19 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkCodecId.generated.h"
 
 UENUM(BlueprintType)
-enum class AkCodecId : uint8 {
-    Bank,
-    PCM,
-    ADPCM,
-    XMA,
-    Vorbis,
-    WiiADPCM,
-    PCMEX = 0x7,
-    ExternalSource,
-    XWMA,
-    AAC,
-    FilePackage,
-    ATRAC9,
-    VAG,
-    ProfilerCapture,
-    AnalysisFile,
-    MIDI,
-    OpusNX,
-    CAF,
-    AkOpus,
+enum class AkCodecId : uint8
+{
+	None,
+	PCM,
+	ADPCM,
+	XMA,
+	Vorbis,
+	AAC = 10,
+	ATRAC9 = 12,
+	OpusNX = 17,
+	AkOpus = 19,
+	AkOpusWEM,
 };
-

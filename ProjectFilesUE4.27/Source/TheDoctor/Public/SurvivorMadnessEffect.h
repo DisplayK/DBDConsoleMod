@@ -1,80 +1,72 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "SurvivorStatusInterface.h"
+#include "DBDTunableRowHandle.h"
+#include "GameplayTagContainer.h"
 #include "StatusEffect.h"
-#include "Madness.h"
 #include "SurvivorMadnessEffect.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class USurvivorMadnessEffect : public UStatusEffect, public IMadness {
-    GENERATED_BODY()
-public:
+class USurvivorMadnessEffect : public UStatusEffect, public ISurvivorStatusInterface
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Replicated)
-    float _madness;
-    
-public:
-    USurvivorMadnessEffect();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_AddMadness(float madnessToAdd);
-    
+	UPROPERTY(ReplicatedUsing=OnRep_MadnessAmount)
+	float _madnessAmount;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _maxMadnessTier;
+
+	UPROPERTY(EditDefaultsOnly)
+	TArray<FDBDTunableRowHandle> _madnessThresholds;
+
+	UPROPERTY(EditDefaultsOnly)
+	TArray<FDBDTunableRowHandle> _insaneSkillCheckChances;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _screamDelayMin;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _screamDelayMax;
+
+	UPROPERTY(EditDefaultsOnly)
+	FName madnessStatusViewId;
+
+	UPROPERTY(EditDefaultsOnly)
+	FGameplayTagContainer _survivorOperatingLockerSemanticTags;
+
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnStaticBlastReceived_BP();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void OnStaticBlastReceived();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnSnapOutOfIt_BP();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void OnSnapOutOfIt();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnShockTherapyReceived_BP();
-    
-public:
-    UFUNCTION(BlueprintCallable)
-    void OnShockTherapyReceived();
-    
-protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnMadnessTierUp_BP();
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnMadnessTierDown_BP();
-    
+	UFUNCTION(BlueprintImplementableEvent)
+	void SpawnMadnessBubbleIndicator();
+
 private:
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_UpdateMadnessPlayerTags(int32 newMadness);
-    
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_OnMadnessTierUp();
-    
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_OnMadnessTierDown();
-    
+	UFUNCTION()
+	void OnRep_MadnessAmount();
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_OnMadnessTierChanged(const int32 newMadnessTier, const int32 oldMadnessTier);
+
 public:
-    UFUNCTION(BlueprintPure)
-    float GetMadnessValue() const;
-    
-    UFUNCTION(BlueprintPure)
-    int32 GetMadnessTier() const;
-    
+	UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+	void Multicast_MadnessIntermittentScream();
+
+	UFUNCTION(BlueprintPure)
+	int32 GetMadnessTier() const;
+
+	UFUNCTION(BlueprintCallable)
+	void Authority_AddMadness(float amountToAdd);
+
 protected:
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintImplementableEvent)
-    void ChangeMadnessAudio_Cosmetic(const int32 madnessTier);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void Authority_OnMadnessScreamTimerEnd_BP();
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintImplementableEvent)
+	void ActivateMadnessBubbleIndicator();
+
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	USurvivorMadnessEffect();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USurvivorMadnessEffect) { return 0; }

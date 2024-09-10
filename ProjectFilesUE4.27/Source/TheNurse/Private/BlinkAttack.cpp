@@ -1,5 +1,6 @@
 #include "BlinkAttack.h"
 
-UBlinkAttack::UBlinkAttack() {
-}
+UBlinkAttack::UBlinkAttack()
+{
 
+}

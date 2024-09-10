@@ -1,14 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "KillerStatusData.h"
 #include "TwinsStatusData.generated.h"
 
-USTRUCT(BlueprintType)
-struct FTwinsStatusData {
-    GENERATED_BODY()
+UCLASS()
+class DBDUIVIEWINTERFACES_API UTwinsStatusData : public UKillerStatusData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool TwinsActive;
-    
-    DBDUIVIEWINTERFACES_API FTwinsStatusData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool TwinsActive;
+
+public:
+	UTwinsStatusData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTwinsStatusData) { return 0; }

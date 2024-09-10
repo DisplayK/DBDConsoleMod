@@ -1,5 +1,5 @@
 #include "NavMovePathPoint.h"
 
-FNavMovePathPoint::FNavMovePathPoint() {
+FNavMovePathPoint::FNavMovePathPoint()
+{
 }
-

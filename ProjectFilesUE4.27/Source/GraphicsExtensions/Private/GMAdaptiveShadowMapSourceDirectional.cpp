@@ -1,6 +1,6 @@
 #include "GMAdaptiveShadowMapSourceDirectional.h"
 
-UGMAdaptiveShadowMapSourceDirectional::UGMAdaptiveShadowMapSourceDirectional() {
-    this->_directionalLightComponent = NULL;
+UGMAdaptiveShadowMapSourceDirectional::UGMAdaptiveShadowMapSourceDirectional()
+{
+	this->_directionalLightComponent = NULL;
 }
-

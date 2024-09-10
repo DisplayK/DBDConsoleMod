@@ -1,31 +1,38 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "AkPlatformInitialisationSettingsBase.h"
 #include "AkXboxOneGDKApuHeapInitializationSettings.h"
-#include "UObject/Object.h"
-#include "AkCommonInitializationSettings.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
 #include "AkXboxOneGDKAdvancedInitializationSettings.h"
+#include "UObject/NoExportTypes.h"
+#include "AkCommonInitializationSettings.h"
 #include "AkXboxOneGDKInitializationSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
-class AKAUDIO_API UAkXboxOneGDKInitializationSettings : public UObject {
-    GENERATED_BODY()
+UCLASS()
+class AKAUDIO_API UAkXboxOneGDKInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommonInitializationSettings CommonSettings;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FAkXboxOneGDKApuHeapInitializationSettings ApuHeapSettings;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
-    
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
-    FAkXboxOneGDKAdvancedInitializationSettings AdvancedSettings;
-    
-    UAkXboxOneGDKInitializationSettings();
-    UFUNCTION()
-    void MigrateMultiCoreRendering(bool NewValue);
-    
+	UPROPERTY(EditAnywhere)
+	FAkCommonInitializationSettings CommonSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkXboxOneGDKApuHeapInitializationSettings ApuHeapSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkXboxOneGDKAdvancedInitializationSettings AdvancedSettings;
+
+public:
+	UFUNCTION()
+	void MigrateMultiCoreRendering(bool NewValue);
+
+public:
+	UAkXboxOneGDKInitializationSettings();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkXboxOneGDKInitializationSettings) { return 0; }

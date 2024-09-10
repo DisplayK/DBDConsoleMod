@@ -1,5 +1,6 @@
 #include "DBDAtlantaStructuredData.h"
 
-UDBDAtlantaStructuredData::UDBDAtlantaStructuredData() {
+UDBDAtlantaStructuredData::UDBDAtlantaStructuredData()
+{
+	this->AtlantaHeartbeatActor = NULL;
 }
-

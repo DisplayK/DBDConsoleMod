@@ -1,10 +1,11 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EAkCommSystem.generated.h"
 
-UENUM()
-enum class EAkCommSystem : int32 {
-    Socket,
-    HTCS,
+UENUM(BlueprintType)
+enum class EAkCommSystem : uint8
+{
+	Socket,
+	HTCS,
 };
-

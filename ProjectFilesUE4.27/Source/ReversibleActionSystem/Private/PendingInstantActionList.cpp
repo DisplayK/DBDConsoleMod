@@ -1,5 +1,6 @@
 #include "PendingInstantActionList.h"
 
-FPendingInstantActionList::FPendingInstantActionList() {
+FPendingInstantActionList::FPendingInstantActionList()
+{
+	this->Actions = TArray<FPendingInstantAction>();
 }
-

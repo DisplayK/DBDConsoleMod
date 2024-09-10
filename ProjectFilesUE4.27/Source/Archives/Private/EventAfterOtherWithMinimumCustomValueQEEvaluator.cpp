@@ -1,5 +1,6 @@
 #include "EventAfterOtherWithMinimumCustomValueQEEvaluator.h"
 
-UEventAfterOtherWithMinimumCustomValueQEEvaluator::UEventAfterOtherWithMinimumCustomValueQEEvaluator() {
-}
+UEventAfterOtherWithMinimumCustomValueQEEvaluator::UEventAfterOtherWithMinimumCustomValueQEEvaluator()
+{
 
+}

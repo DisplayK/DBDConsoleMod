@@ -1,5 +1,5 @@
 #include "ForceLogoutMessage.h"
 
-FForceLogoutMessage::FForceLogoutMessage() {
+FForceLogoutMessage::FForceLogoutMessage()
+{
 }
-

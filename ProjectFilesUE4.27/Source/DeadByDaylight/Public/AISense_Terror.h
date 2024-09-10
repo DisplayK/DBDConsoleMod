@@ -1,26 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "AITerrorEvent.h"
 #include "Perception/AISense.h"
+#include "AITerrorEvent.h"
+#include "UObject/NoExportTypes.h"
 #include "AISense_Terror.generated.h"
 
 class UTerrorRadiusEmitterComponent;
-class UObject;
 class AActor;
+class UObject;
 
 UCLASS()
-class DEADBYDAYLIGHT_API UAISense_Terror : public UAISense {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UAISense_Terror : public UAISense
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY()
-    TArray<FAITerrorEvent> _events;
-    
+	UPROPERTY()
+	TArray<FAITerrorEvent> _events;
+
 public:
-    UAISense_Terror();
-    UFUNCTION(BlueprintCallable)
-    static void ReportTerrorEvent(UObject* worldContextObj, FVector location, AActor* instigator, UTerrorRadiusEmitterComponent* terrorEmitter);
-    
+	UFUNCTION(BlueprintCallable)
+	static void ReportTerrorEvent(UObject* worldContextObj, FVector location, AActor* instigator, UTerrorRadiusEmitterComponent* terrorEmitter);
+
+public:
+	UAISense_Terror();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAISense_Terror) { return 0; }

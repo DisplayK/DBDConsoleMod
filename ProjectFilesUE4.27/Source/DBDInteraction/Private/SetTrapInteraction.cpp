@@ -1,5 +1,6 @@
 #include "SetTrapInteraction.h"
 
-USetTrapInteraction::USetTrapInteraction() {
-}
+USetTrapInteraction::USetTrapInteraction()
+{
 
+}

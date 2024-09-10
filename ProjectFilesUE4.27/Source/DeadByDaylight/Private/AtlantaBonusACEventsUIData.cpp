@@ -1,5 +1,6 @@
 #include "AtlantaBonusACEventsUIData.h"
 
-FAtlantaBonusACEventsUIData::FAtlantaBonusACEventsUIData() {
+FAtlantaBonusACEventsUIData::FAtlantaBonusACEventsUIData()
+{
+	this->auricPacksData = FAtlantaAuricCellPacksUIData{};
 }
-

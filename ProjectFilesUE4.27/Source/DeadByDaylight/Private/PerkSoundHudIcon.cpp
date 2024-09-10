@@ -1,11 +1,16 @@
 #include "PerkSoundHudIcon.h"
 
-void UPerkSoundHudIcon::ClearPerk() {
+void UPerkSoundHudIcon::ClearPerk()
+{
+
 }
 
-void UPerkSoundHudIcon::ActivatePerk(float percentage) {
+void UPerkSoundHudIcon::ActivatePerk(float percentage)
+{
+
 }
 
-UPerkSoundHudIcon::UPerkSoundHudIcon() {
+UPerkSoundHudIcon::UPerkSoundHudIcon()
+{
+	this->PerkID = NAME_None;
 }
-

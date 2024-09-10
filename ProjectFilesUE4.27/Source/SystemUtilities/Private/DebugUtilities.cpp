@@ -1,5 +1,6 @@
 #include "DebugUtilities.h"
 
-UDebugUtilities::UDebugUtilities() {
-}
+UDebugUtilities::UDebugUtilities()
+{
 
+}

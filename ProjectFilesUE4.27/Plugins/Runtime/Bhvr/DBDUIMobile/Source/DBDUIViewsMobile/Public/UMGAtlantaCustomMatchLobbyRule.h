@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGAtlantaCustomMatchLobbyRule.generated.h"
@@ -6,17 +7,19 @@
 class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGAtlantaCustomMatchLobbyRule : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGAtlantaCustomMatchLobbyRule : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* RuleName;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* OptionName;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* RuleName;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* OptionName;
+
 public:
-    UUMGAtlantaCustomMatchLobbyRule();
+	UUMGAtlantaCustomMatchLobbyRule();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlantaCustomMatchLobbyRule) { return 0; }

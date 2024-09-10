@@ -1,42 +1,53 @@
 #include "K25SurvivorChainAttachmentAnchor.h"
+#include "UObject/NoExportTypes.h"
 #include "Net/UnrealNetwork.h"
+#include "K25SurvivorChainAttachmentData.h"
 
-void AK25SurvivorChainAttachmentAnchor::OnRep_AttachmentData() {
+void AK25SurvivorChainAttachmentAnchor::OnRep_AttachmentData()
+{
+
 }
 
-int32 AK25SurvivorChainAttachmentAnchor::GetNumberOfChainsAttached() const {
-    return 0;
+int32 AK25SurvivorChainAttachmentAnchor::GetNumberOfChainsAttached() const
+{
+	return 0;
 }
 
-FVector AK25SurvivorChainAttachmentAnchor::GetChainsPullLocation() const {
-    return FVector{};
+FVector AK25SurvivorChainAttachmentAnchor::GetChainsPullLocation() const
+{
+	return FVector{};
 }
 
-FVector AK25SurvivorChainAttachmentAnchor::GetChainsPullDirection() const {
-    return FVector{};
+FVector AK25SurvivorChainAttachmentAnchor::GetChainsPullDirection() const
+{
+	return FVector{};
 }
 
-float AK25SurvivorChainAttachmentAnchor::GetChainPullDirectionAngle() const {
-    return 0.0f;
+float AK25SurvivorChainAttachmentAnchor::GetChainPullDirectionAngle() const
+{
+	return 0.0f;
 }
 
-FVector AK25SurvivorChainAttachmentAnchor::GetChainAttachmentLocation_Implementation() const {
-    return FVector{};
+FVector AK25SurvivorChainAttachmentAnchor::GetChainAttachmentLocation_Implementation() const
+{
+	return FVector{};
 }
 
-FK25SurvivorChainAttachmentData AK25SurvivorChainAttachmentAnchor::GetChainAttachmentData() const {
-    return FK25SurvivorChainAttachmentData{};
+FK25SurvivorChainAttachmentData AK25SurvivorChainAttachmentAnchor::GetChainAttachmentData() const
+{
+	return FK25SurvivorChainAttachmentData{};
 }
 
+void AK25SurvivorChainAttachmentAnchor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-
-void AK25SurvivorChainAttachmentAnchor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(AK25SurvivorChainAttachmentAnchor, _attachmentData);
+	DOREPLIFETIME(AK25SurvivorChainAttachmentAnchor, _attachmentData);
 }
 
-AK25SurvivorChainAttachmentAnchor::AK25SurvivorChainAttachmentAnchor() {
-    this->_timeBetweenTrace = 0.10f;
+AK25SurvivorChainAttachmentAnchor::AK25SurvivorChainAttachmentAnchor()
+{
+	this->_timeBetweenTrace = 0.100000;
+	this->_owningSurvivor = NULL;
+	this->_attachedChain = NULL;
 }
-

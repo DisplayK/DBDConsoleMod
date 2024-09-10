@@ -1,53 +1,58 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UMGTallyListElementWidget.h"
 #include "Layout/Margin.h"
+#include "UMGTallyListElementWidget.h"
+#include "UObject/SoftObjectPtr.h"
 #include "TallyScorePipsData.h"
 #include "UMGTallyRankWidget.generated.h"
 
-class UUMGTallyProgressBar;
 class UUMGTallyEmblemWidget;
 class UHorizontalBox;
 class UTextBlock;
 class UUMGTallyRankBanner;
+class UUMGTallyProgressBar;
 
 UCLASS(EditInlineNew)
-class UUMGTallyRankWidget : public UUMGTallyListElementWidget {
-    GENERATED_BODY()
-public:
+class UUMGTallyRankWidget : public UUMGTallyListElementWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditDefaultsOnly)
-    FMargin _emblemsPadding;
-    
-    UPROPERTY(EditAnywhere, NoClear)
-    TSoftClassPtr<UUMGTallyEmblemWidget> EmblemWidgetClass;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UHorizontalBox* EmblemsContainer;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGTallyProgressBar* ProgressBar;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGTallyRankBanner* RankBanner;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* RankProgressLabel;
-    
+	UPROPERTY(EditDefaultsOnly)
+	FMargin _emblemsPadding;
+
+	UPROPERTY(EditAnywhere, NoClear)
+	TSoftClassPtr<UUMGTallyEmblemWidget> EmblemWidgetClass;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UHorizontalBox* EmblemsContainer;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGTallyProgressBar* ProgressBar;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGTallyRankBanner* RankBanner;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* RankProgressLabel;
+
 private:
-    UPROPERTY(Export, Transient)
-    TArray<UUMGTallyEmblemWidget*> _emblems;
-    
-    UPROPERTY(Transient)
-    FTallyScorePipsData _scoreData;
-    
+	UPROPERTY(Transient, Export)
+	TArray<UUMGTallyEmblemWidget*> _emblems;
+
+	UPROPERTY(Transient)
+	FTallyScorePipsData _scoreData;
+
 public:
-    UUMGTallyRankWidget();
-    UFUNCTION(BlueprintPure)
-    FTallyScorePipsData GetScoreData() const;
-    
-    UFUNCTION(BlueprintPure)
-    TArray<UUMGTallyEmblemWidget*> GetEmblems() const;
-    
+	UFUNCTION(BlueprintPure)
+	FTallyScorePipsData GetScoreData() const;
+
+	UFUNCTION(BlueprintPure)
+	TArray<UUMGTallyEmblemWidget*> GetEmblems() const;
+
+public:
+	UUMGTallyRankWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGTallyRankWidget) { return 0; }

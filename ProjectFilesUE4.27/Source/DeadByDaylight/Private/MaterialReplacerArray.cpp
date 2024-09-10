@@ -1,5 +1,6 @@
 #include "MaterialReplacerArray.h"
 
-FMaterialReplacerArray::FMaterialReplacerArray() {
+FMaterialReplacerArray::FMaterialReplacerArray()
+{
+	this->MaterialsMap = TArray<FMaterialReplacerData>();
 }
-

@@ -1,7 +1,8 @@
 #include "PrestigeIconData.h"
 
-FPrestigeIconData::FPrestigeIconData() {
-    this->PlayerRole = EPlayerRole::VE_None;
-    this->PrestigeLevel = 0;
+FPrestigeIconData::FPrestigeIconData()
+{
+	this->PlayerRole = EPlayerRole::VE_None;
+	this->PrestigeLevel = 0;
+	this->Icon = NULL;
 }
-

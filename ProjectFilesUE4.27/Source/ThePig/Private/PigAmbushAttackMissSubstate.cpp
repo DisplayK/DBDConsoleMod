@@ -1,5 +1,6 @@
 #include "PigAmbushAttackMissSubstate.h"
 
-UPigAmbushAttackMissSubstate::UPigAmbushAttackMissSubstate() {
-}
+UPigAmbushAttackMissSubstate::UPigAmbushAttackMissSubstate()
+{
 
+}

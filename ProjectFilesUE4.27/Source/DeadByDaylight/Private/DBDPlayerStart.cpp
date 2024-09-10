@@ -1,5 +1,6 @@
 #include "DBDPlayerStart.h"
 
-ADBDPlayerStart::ADBDPlayerStart() : APlayerStart(FObjectInitializer::Get()) {
-}
+ADBDPlayerStart::ADBDPlayerStart() : APlayerStart(FObjectInitializer::Get())
+{
 
+}

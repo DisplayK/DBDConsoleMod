@@ -1,5 +1,6 @@
 #include "ArrayOfATile.h"
 
-FArrayOfATile::FArrayOfATile() {
+FArrayOfATile::FArrayOfATile()
+{
+	this->ArrayOfTiles = TArray<ATile*>();
 }
-

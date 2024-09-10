@@ -1,36 +1,41 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDTableRowBase.h"
 #include "EDBDScoreCategory.h"
+#include "DBDTableRowBase.h"
 #include "ScoreValue.generated.h"
 
 class UCurveFloat;
 
 USTRUCT(BlueprintType)
-struct FScoreValue : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FScoreValue: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName ID;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EDBDScoreCategory Category;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 BloodpointValue;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 MaxBloodpointValue;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UCurveFloat* BloodpointDepreciationCurve;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float OngoingWaitTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText DisplayName;
-    
-    DEADBYDAYLIGHT_API FScoreValue();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName ID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EDBDScoreCategory Category;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 BloodpointValue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MaxBloodpointValue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UCurveFloat* BloodpointDepreciationCurve;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float OngoingWaitTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText DisplayName;
+
+public:
+	DEADBYDAYLIGHT_API FScoreValue();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FScoreValue) { return 0; }

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EK25ProjectileDeactivateReason.h"
 #include "K25ProjectileDeactivationData.generated.h"
@@ -6,24 +7,28 @@
 class ACamperPlayer;
 
 USTRUCT(BlueprintType)
-struct FK25ProjectileDeactivationData {
-    GENERATED_BODY()
+struct FK25ProjectileDeactivationData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EK25ProjectileDeactivateReason DeactivationReason;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FName PhysicalSurfaceName;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool ShouldReelBackProjectile;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool HasAppliedDamage;
-    
-    UPROPERTY(BlueprintReadOnly)
-    ACamperPlayer* _survivorHit;
-    
-    THEK25_API FK25ProjectileDeactivationData();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	EK25ProjectileDeactivateReason DeactivationReason;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FName PhysicalSurfaceName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool ShouldReelBackProjectile;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool HasAppliedDamage;
+
+	UPROPERTY(BlueprintReadOnly)
+	ACamperPlayer* _survivorHit;
+
+public:
+	THEK25_API FK25ProjectileDeactivationData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FK25ProjectileDeactivationData) { return 0; }

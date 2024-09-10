@@ -2,9 +2,12 @@
 
 class AActor;
 
-void UColorBlindFunctionLibrary::CallOnColorBlindSettingsChange(AActor* callingActor) {
+void UColorBlindFunctionLibrary::CallOnColorBlindSettingsChange(AActor* callingActor)
+{
+
 }
 
-UColorBlindFunctionLibrary::UColorBlindFunctionLibrary() {
-}
+UColorBlindFunctionLibrary::UColorBlindFunctionLibrary()
+{
 
+}

@@ -1,35 +1,38 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "AnimSequenceSelector.h"
 #include "Engine/DataAsset.h"
 #include "GameplayTagContainer.h"
-#include "AnimSequenceSelector.h"
 #include "AnimCollection.generated.h"
 
-class UAnimCollection;
-class UAnimSequence;
 class UBlendSpaceBase;
+class UAnimSequence;
+class UAnimCollection;
 
 UCLASS(BlueprintType)
-class ANIMATIONUTILITIES_API UAnimCollection : public UDataAsset {
-    GENERATED_BODY()
-public:
+class ANIMATIONUTILITIES_API UAnimCollection : public UDataAsset
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    TMap<FGameplayTag, UAnimSequence*> _taggedAnimSequences;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    TMap<FGameplayTag, UBlendSpaceBase*> _taggedAnimBlendspaces;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    TMap<FGameplayTag, FAnimSequenceSelector> _taggedAnimSelectors;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UAnimCollection* _parent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<UAnimCollection*> _children;
-    
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	TMap<FGameplayTag, UAnimSequence*> _taggedAnimSequences;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	TMap<FGameplayTag, UBlendSpaceBase*> _taggedAnimBlendspaces;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	TMap<FGameplayTag, FAnimSequenceSelector> _taggedAnimSelectors;
+
+	UPROPERTY(EditDefaultsOnly)
+	UAnimCollection* _parent;
+
+	UPROPERTY(EditDefaultsOnly)
+	TArray<UAnimCollection*> _children;
+
 public:
-    UAnimCollection();
+	UAnimCollection();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAnimCollection) { return 0; }

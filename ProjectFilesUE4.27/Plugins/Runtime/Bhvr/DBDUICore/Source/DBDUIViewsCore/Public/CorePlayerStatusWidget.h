@@ -1,77 +1,88 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "CoreBaseHudWidget.h"
-#include "PlayerStatusViewInterface.h"
-#include "EPlayerStatus.h"
-#include "PlayerStatusAssets.h"
-#include "GameplayTagContainer.h"
-#include "PlayerStatusViewData.h"
-#include "ESleepingUIState.h"
-#include "EObsessionUIState.h"
 #include "EPlayerStateChangeType.h"
+#include "PlayerStatusViewInterface.h"
+#include "ESleepingUIState.h"
+#include "CoreBaseHudWidget.h"
+#include "PlayerStatusAssets.h"
+#include "EPlayerStatus.h"
+#include "PlayerStatusViewData.h"
+#include "EObsessionUIState.h"
 #include "CorePlayerStatusWidget.generated.h"
 
+class UCorePlayerStatusKillerEffectWidget;
+class UDBDTextBlock;
 class UAkAudioEvent;
 class UOverlay;
-class UDBDTextBlock;
-class UCorePlayerStatusKillerEffectWidget;
+class UDataTable;
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCorePlayerStatusWidget : public UCoreBaseHudWidget, public IPlayerStatusViewInterface {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSCORE_API UCorePlayerStatusWidget : public UCoreBaseHudWidget, public IPlayerStatusViewInterface
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TMap<EPlayerStatus, FPlayerStatusAssets> PlayerStatusAssets;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    UAkAudioEvent* ObsessionSfx;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Export)
-    UDBDTextBlock* PlayerNameTextfield;
-    
-    UPROPERTY(EditAnywhere, Export)
-    UOverlay* KillerStatusContainer;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TMap<FGameplayTag, TSubclassOf<UCorePlayerStatusKillerEffectWidget>> KillerStatusEffectWidgetClasses;
-    
-    UPROPERTY(BlueprintReadWrite, Transient)
-    FPlayerStatusViewData _cachedViewData;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 MaxNameLength;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TMap<EPlayerStatus, FPlayerStatusAssets> PlayerStatusAssets;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UAkAudioEvent* ObsessionSfx;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDBDTextBlock* PlayerNameTextfield;
+
+	UPROPERTY(EditAnywhere, meta=(BindWidgetOptional))
+	UOverlay* KillerStatusContainer;
+
+	UPROPERTY(BlueprintReadWrite, Transient)
+	FPlayerStatusViewData _cachedViewData;
+
 private:
-    UPROPERTY(BlueprintReadOnly, Export, Transient, meta=(AllowPrivateAccess=true))
-    UCorePlayerStatusKillerEffectWidget* _killerStatusEffectWidget;
-    
-public:
-    UCorePlayerStatusWidget();
+	UPROPERTY(BlueprintReadOnly, Transient, Export, meta=(AllowPrivateAccess=true))
+	UCorePlayerStatusKillerEffectWidget* _killerStatusEffectWidget;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	UDataTable* _killerStatusDataMappingDB;
+
 protected:
-    UFUNCTION(BlueprintPure)
-    bool ShouldPlaySleepAnimation(ESleepingUIState newSleepState) const;
-    
-    UFUNCTION(BlueprintPure)
-    bool HasTimerProgressChanged(float newTimerProgress) const;
-    
-    UFUNCTION(BlueprintPure)
-    bool HasPlayerStatusDataChanged(const FPlayerStatusViewData& newViewData) const;
-    
-    UFUNCTION(BlueprintPure)
-    bool HasPlayerStateChanged(EPlayerStatus newPlayerState) const;
-    
-    UFUNCTION(BlueprintPure)
-    bool HasObsessionStateChanged(EObsessionUIState newObsessionState) const;
-    
-    UFUNCTION(BlueprintPure)
-    bool HasKillerStatusDataChanged(const FPlayerStatusViewData& newViewData) const;
-    
-    UFUNCTION(BlueprintPure)
-    EPlayerStateChangeType GetPlayerStateChangeType(const FPlayerStatusViewData& newViewData) const;
-    
-    UFUNCTION(BlueprintPure)
-    UCorePlayerStatusKillerEffectWidget* GetKillerStatusEffectWidget() const;
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintPure)
+	bool ShouldPlaySleepAnimation(ESleepingUIState newSleepState) const;
+
+	UFUNCTION(BlueprintPure)
+	bool HasTimerProgressChanged(float newTimerProgress) const;
+
+	UFUNCTION(BlueprintPure)
+	bool HasPlayerStatusDataChanged(const FPlayerStatusViewData& newViewData) const;
+
+	UFUNCTION(BlueprintPure)
+	bool HasPlayerStateChanged(EPlayerStatus newPlayerState) const;
+
+	UFUNCTION(BlueprintPure)
+	bool HasObsessionStateChanged(EObsessionUIState newObsessionState) const;
+
+	UFUNCTION(BlueprintPure)
+	bool HasKillerStatusDataChanged(const FPlayerStatusViewData& newViewData) const;
+
+	UFUNCTION(BlueprintPure)
+	EPlayerStateChangeType GetPlayerStateChangeType(const FPlayerStatusViewData& newViewData) const;
+
+	UFUNCTION(BlueprintPure)
+	UCorePlayerStatusKillerEffectWidget* GetKillerStatusEffectWidget() const;
+
+public:
+	UFUNCTION(BlueprintPure)
+	UDataTable* GetKillerStatusDataMappingDB() const;
+
+protected:
+	UFUNCTION(BlueprintCallable)
+	FPlayerStatusViewData CacheViewData(FPlayerStatusViewData data);
+
+public:
+	UCorePlayerStatusWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCorePlayerStatusWidget) { return 0; }

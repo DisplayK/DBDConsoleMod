@@ -1,5 +1,6 @@
 #include "BloodwebSettings.h"
 
-UBloodwebSettings::UBloodwebSettings() {
+UBloodwebSettings::UBloodwebSettings()
+{
+	this->_duplicableItems = TArray<FName>();
 }
-

@@ -1,6 +1,6 @@
 #include "NearMeEvaluatorCondition.h"
 
-UNearMeEvaluatorCondition::UNearMeEvaluatorCondition() {
-    this->_questOwnerCanBeSubjectOfEvent = true;
+UNearMeEvaluatorCondition::UNearMeEvaluatorCondition()
+{
+	this->_questOwnerCanBeSubjectOfEvent = true;
 }
-

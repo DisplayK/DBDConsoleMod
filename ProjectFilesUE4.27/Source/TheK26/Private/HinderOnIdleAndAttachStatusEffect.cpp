@@ -1,5 +1,6 @@
 #include "HinderOnIdleAndAttachStatusEffect.h"
 
-UHinderOnIdleAndAttachStatusEffect::UHinderOnIdleAndAttachStatusEffect() {
-}
+UHinderOnIdleAndAttachStatusEffect::UHinderOnIdleAndAttachStatusEffect()
+{
 
+}

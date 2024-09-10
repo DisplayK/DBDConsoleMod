@@ -1,5 +1,6 @@
 #include "DangerStateGameStateMapContainer.h"
 
-FDangerStateGameStateMapContainer::FDangerStateGameStateMapContainer() {
+FDangerStateGameStateMapContainer::FDangerStateGameStateMapContainer()
+{
+	this->Map = TMap<EAIDangerState, EAIGameState>();
 }
-

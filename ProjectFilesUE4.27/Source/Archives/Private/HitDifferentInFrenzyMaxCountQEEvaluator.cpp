@@ -1,5 +1,6 @@
 #include "HitDifferentInFrenzyMaxCountQEEvaluator.h"
 
-UHitDifferentInFrenzyMaxCountQEEvaluator::UHitDifferentInFrenzyMaxCountQEEvaluator() {
+UHitDifferentInFrenzyMaxCountQEEvaluator::UHitDifferentInFrenzyMaxCountQEEvaluator()
+{
+	this->_targetList = TSet<TWeakObjectPtr<AActor>>();
 }
-

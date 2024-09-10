@@ -2,10 +2,12 @@
 
 class ATheHuntressPower;
 
-ATheHuntressPower* UHatchetThrow::GetOwningHatchetSpawner() const {
-    return NULL;
+ATheHuntressPower* UHatchetThrow::GetOwningHatchetSpawner() const
+{
+	return NULL;
 }
 
-UHatchetThrow::UHatchetThrow() {
-}
+UHatchetThrow::UHatchetThrow()
+{
 
+}

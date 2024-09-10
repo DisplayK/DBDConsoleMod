@@ -1,6 +1,6 @@
 #include "DiscernibleCharacter.h"
 
-FDiscernibleCharacter::FDiscernibleCharacter() {
-    this->_character = NULL;
+FDiscernibleCharacter::FDiscernibleCharacter()
+{
+	this->_character = NULL;
 }
-

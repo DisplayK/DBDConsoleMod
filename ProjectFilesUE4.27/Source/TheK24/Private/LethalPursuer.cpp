@@ -1,14 +1,17 @@
 #include "LethalPursuer.h"
 
-void ULethalPursuer::Server_ActivatePerk_Implementation() {
+void ULethalPursuer::Server_ActivatePerk_Implementation()
+{
+
 }
 
-void ULethalPursuer::Local_OnIntroCompleted() {
+void ULethalPursuer::Local_OnIntroCompleted()
+{
+
 }
 
-ULethalPursuer::ULethalPursuer() {
-    this->_survivorRevealDuration[0] = 0.00f;
-    this->_survivorRevealDuration[1] = 0.00f;
-    this->_survivorRevealDuration[2] = 0.00f;
+ULethalPursuer::ULethalPursuer()
+{
+	this->_survivorRevealDuration = 0.000000;
+	this->_timedRevealEffect = NULL;
 }
-

@@ -1,6 +1,6 @@
 #include "CoreHudStatusEffectAlertItem.h"
 
+UCoreHudStatusEffectAlertItem::UCoreHudStatusEffectAlertItem()
+{
 
-UCoreHudStatusEffectAlertItem::UCoreHudStatusEffectAlertItem() {
 }
-

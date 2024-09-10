@@ -1,9 +1,19 @@
 #include "CoreKeyListenerButtontWidget.h"
+#include "EUIActionType.h"
+#include "InputCoreTypes.h"
 
-void UCoreKeyListenerButtontWidget::SetUIAction(const EUIActionType actionType) {
+void UCoreKeyListenerButtontWidget::SetUIAction(const EUIActionType actionType)
+{
+
 }
 
-UCoreKeyListenerButtontWidget::UCoreKeyListenerButtontWidget() {
-    this->InputNameTB = NULL;
+void UCoreKeyListenerButtontWidget::SetKeyOverride(const FKey keyOverride)
+{
+
 }
 
+UCoreKeyListenerButtontWidget::UCoreKeyListenerButtontWidget()
+{
+	this->IsKeyboardLabelVisible = false;
+	this->InputNameTB = NULL;
+}

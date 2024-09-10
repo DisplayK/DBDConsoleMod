@@ -1,6 +1,6 @@
 #include "SurvivorBloodFXComponent.h"
 
+USurvivorBloodFXComponent::USurvivorBloodFXComponent()
+{
 
-USurvivorBloodFXComponent::USurvivorBloodFXComponent() {
 }
-

@@ -1,5 +1,6 @@
 #include "CorePowerBundleWidget.h"
 
-UCorePowerBundleWidget::UCorePowerBundleWidget() {
-}
+UCorePowerBundleWidget::UCorePowerBundleWidget()
+{
 
+}

@@ -1,6 +1,8 @@
 #include "ActorVariationSpawner.h"
 
-UActorVariationSpawner::UActorVariationSpawner() {
-    this->_toSpawn = NULL;
+UActorVariationSpawner::UActorVariationSpawner()
+{
+	this->Visualization = NULL;
+	this->Variations = TArray<FActorVariationElements>();
+	this->_toSpawn = NULL;
 }
-

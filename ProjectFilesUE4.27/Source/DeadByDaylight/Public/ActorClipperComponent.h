@@ -1,39 +1,44 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "EDBDCameraSocketID.h"
 #include "ClippedActor.h"
 #include "ActorClipperComponent.generated.h"
 
-class USphereComponent;
 class AActor;
 class UPrimitiveCollection;
+class USphereComponent;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UActorClipperComponent : public UActorComponent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UActorClipperComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export)
-    USphereComponent* Shape;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	USphereComponent* Shape;
+
 private:
-    UPROPERTY(Transient)
-    TMap<AActor*, FClippedActor> _clippedActors;
-    
-    UPROPERTY(Transient)
-    TWeakObjectPtr<UPrimitiveCollection> _clippables;
-    
+	UPROPERTY(Transient)
+	TMap<AActor*, FClippedActor> _clippedActors;
+
+	UPROPERTY(Transient)
+	TWeakObjectPtr<UPrimitiveCollection> _clippables;
+
 public:
-    UActorClipperComponent();
-    UFUNCTION(BlueprintCallable)
-    void SetPrimitiveCollection(const UPrimitiveCollection* clippables);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetClippingEnabled(bool enabled);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetPrimitiveCollection(const UPrimitiveCollection* clippables);
+
 private:
-    UFUNCTION()
-    void OnOwnerLocallyObservedChanged(bool locallyObserved);
-    
+	UFUNCTION()
+	void OnOwnerLocallyObservedChanged(bool locallyObserved);
+
+	UFUNCTION()
+	void OnCameraChanged(EDBDCameraSocketID socketId);
+
+public:
+	UActorClipperComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UActorClipperComponent) { return 0; }

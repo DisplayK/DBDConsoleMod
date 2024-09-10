@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UMGSettingContextWidget.h"
 #include "UMGSettingTutorialContextWidget.generated.h"
@@ -6,26 +7,28 @@
 class UUMGSettingContextButton;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGSettingTutorialContextWidget : public UUMGSettingContextWidget {
-    GENERATED_BODY()
-public:
+class UUMGSettingTutorialContextWidget : public UUMGSettingContextWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGSettingContextButton* SurvivorTutorialButton;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGSettingContextButton* KillerTutorialButton;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGSettingContextButton* SurvivorCinematicButton;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGSettingContextButton* KillerCinematicButton;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGSettingContextButton* LoreCinematicButton;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGSettingContextButton* SurvivorTutorialButton;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGSettingContextButton* KillerTutorialButton;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGSettingContextButton* SurvivorCinematicButton;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGSettingContextButton* KillerCinematicButton;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGSettingContextButton* LoreCinematicButton;
+
 public:
-    UUMGSettingTutorialContextWidget();
+	UUMGSettingTutorialContextWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGSettingTutorialContextWidget) { return 0; }

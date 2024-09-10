@@ -1,5 +1,6 @@
 #include "CleanseTotem.h"
 
-UCleanseTotem::UCleanseTotem() {
-}
+UCleanseTotem::UCleanseTotem()
+{
 
+}

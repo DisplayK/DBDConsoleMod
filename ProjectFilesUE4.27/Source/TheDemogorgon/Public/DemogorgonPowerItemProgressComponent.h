@@ -1,19 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PresentationItemProgressComponent.h"
 #include "DemogorgonPowerItemProgressComponent.generated.h"
 
-class UPortalPlacerStateComponent;
+class UDemogorgonPortalPlacerStateComponent;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UDemogorgonPowerItemProgressComponent : public UPresentationItemProgressComponent {
-    GENERATED_BODY()
-public:
+class UDemogorgonPowerItemProgressComponent : public UPresentationItemProgressComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UPortalPlacerStateComponent* _portalPlacerState;
-    
+	UPROPERTY(Transient, Export)
+	UDemogorgonPortalPlacerStateComponent* _portalPlacerState;
+
 public:
-    UDemogorgonPowerItemProgressComponent();
+	UDemogorgonPowerItemProgressComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDemogorgonPowerItemProgressComponent) { return 0; }

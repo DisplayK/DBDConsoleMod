@@ -1,5 +1,6 @@
 #include "DBDHostSettingsParamsJoinabilityPreset.h"
 
-UDBDHostSettingsParamsJoinabilityPreset::UDBDHostSettingsParamsJoinabilityPreset() {
-}
+UDBDHostSettingsParamsJoinabilityPreset::UDBDHostSettingsParamsJoinabilityPreset()
+{
 
+}

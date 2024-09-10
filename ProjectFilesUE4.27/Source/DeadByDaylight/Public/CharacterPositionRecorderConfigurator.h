@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseHitValidationConfigurator.h"
 #include "CharacterPositionRecorderConfigurator.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UCharacterPositionRecorderConfigurator : public UBaseHitValidationConfigurator {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UCharacterPositionRecorderConfigurator : public UBaseHitValidationConfigurator
+{
+	GENERATED_BODY()
+
 public:
-    UCharacterPositionRecorderConfigurator();
+	UCharacterPositionRecorderConfigurator();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCharacterPositionRecorderConfigurator) { return 0; }

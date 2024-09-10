@@ -1,15 +1,19 @@
 #include "UMGStreamVideoWidget.h"
 
-void UUMGStreamVideoWidget::OnTapButtonClicked() {
+void UUMGStreamVideoWidget::OnTapButtonClicked()
+{
+
 }
 
-void UUMGStreamVideoWidget::OnSkipButtonClicked() {
+void UUMGStreamVideoWidget::OnSkipButtonClicked()
+{
+
 }
 
-UUMGStreamVideoWidget::UUMGStreamVideoWidget() {
-    this->VideoImage = NULL;
-    this->TapButton = NULL;
-    this->SkipButton = NULL;
-    this->_timerShowSkipButton = 5.00f;
+UUMGStreamVideoWidget::UUMGStreamVideoWidget()
+{
+	this->VideoImage = NULL;
+	this->TapButton = NULL;
+	this->SkipButton = NULL;
+	this->_timerShowSkipButton = 5.000000;
 }
-

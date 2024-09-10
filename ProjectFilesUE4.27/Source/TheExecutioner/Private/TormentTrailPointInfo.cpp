@@ -1,5 +1,5 @@
 #include "TormentTrailPointInfo.h"
 
-FTormentTrailPointInfo::FTormentTrailPointInfo() {
+FTormentTrailPointInfo::FTormentTrailPointInfo()
+{
 }
-

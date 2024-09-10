@@ -1,14 +1,13 @@
 #include "FirecrackerEffectHandlerComponent.h"
 
-class AFirecracker;
 class AActor;
 
-void UFirecrackerEffectHandlerComponent::SetFirecrackerInRange(AFirecracker* firecracker, bool inRange) {
+void UFirecrackerEffectHandlerComponent::OnFirecrackerDestroyed(AActor* destroyedActor)
+{
+
 }
 
-void UFirecrackerEffectHandlerComponent::OnFirecrackerDestroyed(AActor* DestroyedActor) {
+UFirecrackerEffectHandlerComponent::UFirecrackerEffectHandlerComponent()
+{
+	this->_inRangeFirecrackers = TSet<AFirecracker*>();
 }
-
-UFirecrackerEffectHandlerComponent::UFirecrackerEffectHandlerComponent() {
-}
-

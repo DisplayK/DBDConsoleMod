@@ -2,9 +2,12 @@
 
 class UItemAddon;
 
-void UUMGAddonButton::UpdateAddonButton(UItemAddon* addon) {
+void UUMGAddonButton::UpdateAddonButton(UItemAddon* addon)
+{
+
 }
 
-UUMGAddonButton::UUMGAddonButton() {
-}
+UUMGAddonButton::UUMGAddonButton()
+{
 
+}

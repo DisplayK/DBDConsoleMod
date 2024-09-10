@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AICharacterBehaviourData.h"
 #include "ECharacterMovementTypes.h"
@@ -7,23 +8,26 @@
 class AActor;
 
 UCLASS(BlueprintType)
-class UAIMoveToInteractData : public UAICharacterBehaviourData {
-    GENERATED_BODY()
-public:
+class UAIMoveToInteractData : public UAICharacterBehaviourData
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    AActor* _interactActor;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    AActor* _targetPositionActor;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    ECharacterMovementTypes _characterMovementTypes;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	AActor* _interactActor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	AActor* _targetPositionActor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	ECharacterMovementTypes _characterMovementTypes;
+
 public:
-    UAIMoveToInteractData();
-    UFUNCTION(BlueprintCallable)
-    void Init(AActor* interactActor, ECharacterMovementTypes characterMovementTypes, AActor* targetPositionActor);
-    
+	UFUNCTION(BlueprintCallable)
+	void Init(AActor* interactActor, ECharacterMovementTypes characterMovementTypes, AActor* targetPositionActor);
+
+public:
+	UAIMoveToInteractData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAIMoveToInteractData) { return 0; }

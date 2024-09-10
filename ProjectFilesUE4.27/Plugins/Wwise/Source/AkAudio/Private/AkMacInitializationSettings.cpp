@@ -1,8 +1,11 @@
 #include "AkMacInitializationSettings.h"
 
-void UAkMacInitializationSettings::MigrateMultiCoreRendering(bool NewValue) {
+void UAkMacInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
+{
+
 }
 
-UAkMacInitializationSettings::UAkMacInitializationSettings() {
-}
+UAkMacInitializationSettings::UAkMacInitializationSettings()
+{
 
+}

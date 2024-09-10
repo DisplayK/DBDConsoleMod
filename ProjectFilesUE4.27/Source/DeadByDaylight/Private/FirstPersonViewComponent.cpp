@@ -1,5 +1,6 @@
 #include "FirstPersonViewComponent.h"
 
-UFirstPersonViewComponent::UFirstPersonViewComponent() {
-}
+UFirstPersonViewComponent::UFirstPersonViewComponent()
+{
 
+}

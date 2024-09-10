@@ -1,5 +1,6 @@
 #include "NurseAttackPicker.h"
 
-UNurseAttackPicker::UNurseAttackPicker() {
-}
+UNurseAttackPicker::UNurseAttackPicker()
+{
 
+}

@@ -1,6 +1,6 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
 #include "Components/SceneComponent.h"
 #include "TriplanarDecalComponent.generated.h"
 
@@ -9,44 +9,48 @@ class UDecalComponent;
 class UMaterial;
 
 UCLASS(Blueprintable, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UTriplanarDecalComponent : public USceneComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UTriplanarDecalComponent : public USceneComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float MinHeight;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float Height;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float MaskIntensity;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UTexture2D* TopTexture;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UTexture2D* BottomTexture;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UTexture2D* MaskTexture;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TEnumAsByte<EDetailMode> MinQualitySetting;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MinHeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Height;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaskIntensity;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UTexture2D* TopTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UTexture2D* BottomTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UTexture2D* MaskTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TEnumAsByte<EDetailMode> MinQualitySetting;
+
 private:
-    UPROPERTY(Export, Transient)
-    UDecalComponent* _triPlanarDecal;
-    
-    UPROPERTY(Transient)
-    UClass* _triPlanarDecalClass;
-    
-    UPROPERTY(Transient)
-    UMaterial* _decalMaterial;
-    
+	UPROPERTY(Transient, Export)
+	UDecalComponent* _triPlanarDecal;
+
+	UPROPERTY(Transient)
+	UClass* _triPlanarDecalClass;
+
+	UPROPERTY(Transient)
+	UMaterial* _decalMaterial;
+
 public:
-    UTriplanarDecalComponent();
-    UFUNCTION(BlueprintImplementableEvent)
-    void UpdateTriplanarDecal();
-    
+	UFUNCTION(BlueprintImplementableEvent)
+	void UpdateTriplanarDecal();
+
+public:
+	UTriplanarDecalComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTriplanarDecalComponent) { return 0; }

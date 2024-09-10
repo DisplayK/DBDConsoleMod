@@ -1,42 +1,45 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGPromoPackSelectedItemWidget.generated.h"
 
-class UUMGHtmlRichText;
-class UImage;
-class UTextBlock;
 class UNamedSlot;
+class UImage;
+class UUMGHtmlRichText;
 class UUMGPromoPackItemWidget;
+class UTextBlock;
 class UScrollBox;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGPromoPackSelectedItemWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGPromoPackSelectedItemWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGHtmlRichText* ItemDescription;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* ItemTypeIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* ItemName;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* ItemSubtitle;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UNamedSlot* SelectedItemSlot;
-    
-    UPROPERTY(Export, Transient)
-    UUMGPromoPackItemWidget* SelectedItem;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UScrollBox* ScrollBox;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGHtmlRichText* ItemDescription;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* ItemTypeIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* ItemName;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* ItemSubtitle;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UNamedSlot* SelectedItemSlot;
+
+	UPROPERTY(Transient, meta=(BindWidgetOptional))
+	UUMGPromoPackItemWidget* SelectedItem;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UScrollBox* ScrollBox;
+
 public:
-    UUMGPromoPackSelectedItemWidget();
+	UUMGPromoPackSelectedItemWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGPromoPackSelectedItemWidget) { return 0; }

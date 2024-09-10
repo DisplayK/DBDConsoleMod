@@ -1,5 +1,7 @@
 #include "TinkererUndetectableInterruptAnalytics.h"
 
-FTinkererUndetectableInterruptAnalytics::FTinkererUndetectableInterruptAnalytics() {
+FTinkererUndetectableInterruptAnalytics::FTinkererUndetectableInterruptAnalytics()
+{
+	this->InterruptedSurvivorMirrorsId = TEXT("");
+	this->InterruptingSlasherMirrorsId = TEXT("");
 }
-

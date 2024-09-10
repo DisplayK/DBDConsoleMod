@@ -1,5 +1,6 @@
 #include "DBDMapFoliageDensityTunables.h"
 
-UDBDMapFoliageDensityTunables::UDBDMapFoliageDensityTunables() {
+UDBDMapFoliageDensityTunables::UDBDMapFoliageDensityTunables()
+{
+	this->FoliageToAutomateDensity = TArray<FTypeFoliageToAutomateDensity>();
 }
-

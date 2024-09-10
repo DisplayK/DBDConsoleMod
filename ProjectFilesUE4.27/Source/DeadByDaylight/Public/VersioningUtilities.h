@@ -1,15 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "VersioningUtilities.generated.h"
 
-UCLASS(BlueprintType)
-class DEADBYDAYLIGHT_API UVersioningUtilities : public UBlueprintFunctionLibrary {
-    GENERATED_BODY()
+UCLASS()
+class DEADBYDAYLIGHT_API UVersioningUtilities : public UBlueprintFunctionLibrary
+{
+	GENERATED_BODY()
+
 public:
-    UVersioningUtilities();
-    UFUNCTION(BlueprintPure)
-    static bool IsVisualRework();
-    
+	UVersioningUtilities();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UVersioningUtilities) { return 0; }

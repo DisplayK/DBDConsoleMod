@@ -1,39 +1,46 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
+#include "UObject/SoftObjectPtr.h"
 #include "EStatusEffectType.h"
 #include "StatusViewProperties.generated.h"
 
-class UTexture2D;
 class AStatusView;
+class UTexture2D;
 
 USTRUCT(BlueprintType)
-struct FStatusViewProperties : public FDBDTableRowBase {
-    GENERATED_BODY()
-public:
+struct FStatusViewProperties: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FName StatusViewID;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText Description;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText DisplayName;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSoftClassPtr<AStatusView> StatusViewBlueprint;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EStatusEffectType StatusType;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FString IconFilePath;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSoftObjectPtr<UTexture2D> IconAsset;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FName StatusViewID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText DisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TSoftClassPtr<AStatusView> StatusViewBlueprint;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	EStatusEffectType StatusType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FString IconFilePath;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TSoftObjectPtr<UTexture2D> IconAsset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool PlayIntroAnimmation;
+
 public:
-    DEADBYDAYLIGHT_API FStatusViewProperties();
+	DEADBYDAYLIGHT_API FStatusViewProperties();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FStatusViewProperties) { return 0; }

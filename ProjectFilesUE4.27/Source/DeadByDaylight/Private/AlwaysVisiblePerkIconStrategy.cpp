@@ -1,5 +1,6 @@
 #include "AlwaysVisiblePerkIconStrategy.h"
 
-UAlwaysVisiblePerkIconStrategy::UAlwaysVisiblePerkIconStrategy() {
-}
+UAlwaysVisiblePerkIconStrategy::UAlwaysVisiblePerkIconStrategy()
+{
 
+}

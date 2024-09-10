@@ -1,5 +1,6 @@
 #include "OniDemonDashAttack.h"
 
-UOniDemonDashAttack::UOniDemonDashAttack() {
-}
+UOniDemonDashAttack::UOniDemonDashAttack()
+{
 
+}

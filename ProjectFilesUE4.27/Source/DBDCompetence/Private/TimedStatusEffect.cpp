@@ -1,5 +1,6 @@
 #include "TimedStatusEffect.h"
 
-UTimedStatusEffect::UTimedStatusEffect() {
-}
+UTimedStatusEffect::UTimedStatusEffect()
+{
 
+}

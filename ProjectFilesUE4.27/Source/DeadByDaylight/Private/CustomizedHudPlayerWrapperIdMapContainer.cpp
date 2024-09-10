@@ -1,5 +1,6 @@
 #include "CustomizedHudPlayerWrapperIdMapContainer.h"
 
-FCustomizedHudPlayerWrapperIdMapContainer::FCustomizedHudPlayerWrapperIdMapContainer() {
+FCustomizedHudPlayerWrapperIdMapContainer::FCustomizedHudPlayerWrapperIdMapContainer()
+{
+	this->Ids = TArray<FGameplayTag>();
 }
-

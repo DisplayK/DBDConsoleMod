@@ -1,20 +1,38 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EventObjectComponent.h"
+#include "GameplayTagContainer.h"
+#include "EOfferingEffectType.h"
 #include "EventGeneratorComponent.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UEventGeneratorComponent : public UEventObjectComponent {
-    GENERATED_BODY()
-public:
+class UEventGeneratorComponent : public UEventObjectComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditAnywhere)
-    bool _updateOultineForSurvivor;
-    
-    UPROPERTY(EditAnywhere)
-    bool _updateOultineForSlasher;
-    
+	UPROPERTY(EditDefaultsOnly)
+	FGameplayTag _genCompletedScoreEvent;
+
+	UPROPERTY(EditDefaultsOnly)
+	FGameplayTag _genCompletedNoOfferingScoreEvent;
+
+	UPROPERTY(EditDefaultsOnly)
+	EOfferingEffectType _offeringEffectTypeNeeded;
+
+	UPROPERTY(EditAnywhere)
+	bool _updateOutlineForSurvivor;
+
+	UPROPERTY(EditAnywhere)
+	bool _updateOutlineForSlasher;
+
+private:
+	UFUNCTION()
+	void Authority_FireGenCompletedEventScore(bool isAutoCompleted);
+
 public:
-    UEventGeneratorComponent();
+	UEventGeneratorComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UEventGeneratorComponent) { return 0; }

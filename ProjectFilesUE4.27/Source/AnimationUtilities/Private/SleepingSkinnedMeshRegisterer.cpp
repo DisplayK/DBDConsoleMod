@@ -1,5 +1,6 @@
 #include "SleepingSkinnedMeshRegisterer.h"
 
-USleepingSkinnedMeshRegisterer::USleepingSkinnedMeshRegisterer() {
-}
+USleepingSkinnedMeshRegisterer::USleepingSkinnedMeshRegisterer()
+{
 
+}

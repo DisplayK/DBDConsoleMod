@@ -1,5 +1,6 @@
 #include "BaseCharacterRotationStrategy.h"
 
-UBaseCharacterRotationStrategy::UBaseCharacterRotationStrategy() {
-}
+UBaseCharacterRotationStrategy::UBaseCharacterRotationStrategy()
+{
 
+}

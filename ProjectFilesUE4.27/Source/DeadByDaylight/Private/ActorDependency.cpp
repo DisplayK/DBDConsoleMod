@@ -1,5 +1,6 @@
 #include "ActorDependency.h"
 
-UActorDependency::UActorDependency() {
+UActorDependency::UActorDependency()
+{
+	this->Dependencies = TArray<FDependency>();
 }
-

@@ -1,13 +1,14 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EQuitGameReason.generated.h"
 
-UENUM()
-enum class EQuitGameReason {
-    None,
-    Logout,
-    Suspend,
-    Shutdown,
-    Count,
+UENUM(BlueprintType)
+enum class EQuitGameReason : uint8
+{
+	None,
+	Logout,
+	Suspend,
+	Shutdown,
+	Count,
 };
-

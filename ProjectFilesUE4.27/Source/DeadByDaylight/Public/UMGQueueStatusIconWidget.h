@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UObject/NoExportTypes.h"
@@ -7,23 +8,25 @@
 class UImage;
 
 UCLASS(Abstract, EditInlineNew)
-class DEADBYDAYLIGHT_API UUMGQueueStatusIconWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UUMGQueueStatusIconWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(BlueprintReadOnly, Export, meta=(AllowPrivateAccess=true))
-    UImage* StatusIndicator;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor AcceptableColor;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor ModerateColor;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FLinearColor LongColor;
-    
+	UPROPERTY(BlueprintReadOnly, Export, meta=(AllowPrivateAccess=true))
+	UImage* StatusIndicator;
+
+	UPROPERTY(EditDefaultsOnly)
+	FLinearColor AcceptableColor;
+
+	UPROPERTY(EditDefaultsOnly)
+	FLinearColor ModerateColor;
+
+	UPROPERTY(EditDefaultsOnly)
+	FLinearColor LongColor;
+
 public:
-    UUMGQueueStatusIconWidget();
+	UUMGQueueStatusIconWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGQueueStatusIconWidget) { return 0; }

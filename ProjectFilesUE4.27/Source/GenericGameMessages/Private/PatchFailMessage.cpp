@@ -1,5 +1,5 @@
 #include "PatchFailMessage.h"
 
-FPatchFailMessage::FPatchFailMessage() {
+FPatchFailMessage::FPatchFailMessage()
+{
 }
-

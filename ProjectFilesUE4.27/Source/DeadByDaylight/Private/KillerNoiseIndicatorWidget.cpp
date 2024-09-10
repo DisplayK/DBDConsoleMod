@@ -1,6 +1,6 @@
 #include "KillerNoiseIndicatorWidget.h"
 
+UKillerNoiseIndicatorWidget::UKillerNoiseIndicatorWidget()
+{
 
-UKillerNoiseIndicatorWidget::UKillerNoiseIndicatorWidget() {
 }
-

@@ -1,6 +1,7 @@
 #include "ExecExecutedAnalytics.h"
 
-FExecExecutedAnalytics::FExecExecutedAnalytics() {
-    this->Executed = false;
+FExecExecutedAnalytics::FExecExecutedAnalytics()
+{
+	this->Command = TEXT("");
+	this->Executed = false;
 }
-

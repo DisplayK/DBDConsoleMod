@@ -1,5 +1,6 @@
 #include "UniqueTargetsInTimeQEEvaluator.h"
 
-UUniqueTargetsInTimeQEEvaluator::UUniqueTargetsInTimeQEEvaluator() {
-}
+UUniqueTargetsInTimeQEEvaluator::UUniqueTargetsInTimeQEEvaluator()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "AimAssistComponent.h"
 
-UAimAssistComponent::UAimAssistComponent() {
-}
+UAimAssistComponent::UAimAssistComponent()
+{
 
+}

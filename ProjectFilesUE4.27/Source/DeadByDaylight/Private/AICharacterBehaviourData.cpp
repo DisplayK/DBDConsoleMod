@@ -1,5 +1,6 @@
 #include "AICharacterBehaviourData.h"
 
-UAICharacterBehaviourData::UAICharacterBehaviourData() {
-}
+UAICharacterBehaviourData::UAICharacterBehaviourData()
+{
 
+}

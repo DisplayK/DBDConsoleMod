@@ -1,5 +1,6 @@
 #include "TormentModeCooldownInteraction.h"
 
-UTormentModeCooldownInteraction::UTormentModeCooldownInteraction() {
-}
+UTormentModeCooldownInteraction::UTormentModeCooldownInteraction()
+{
 
+}

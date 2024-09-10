@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "GameFlowContextSystem.generated.h"
@@ -6,14 +7,16 @@
 class URootMovie;
 
 UCLASS(Transient)
-class DEADBYDAYLIGHT_API UGameFlowContextSystem : public UGameInstanceSubsystem {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UGameFlowContextSystem : public UGameInstanceSubsystem
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    URootMovie* m_RootMovie;
-    
+	UPROPERTY(Transient)
+	URootMovie* m_RootMovie;
+
 public:
-    UGameFlowContextSystem();
+	UGameFlowContextSystem();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UGameFlowContextSystem) { return 0; }

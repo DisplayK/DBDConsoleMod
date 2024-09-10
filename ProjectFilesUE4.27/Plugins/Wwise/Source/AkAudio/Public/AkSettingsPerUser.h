@@ -1,32 +1,42 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
-#include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "AkSettingsPerUser.generated.h"
 
-UCLASS(Config=EditorPerProjectUserSettings)
-class AKAUDIO_API UAkSettingsPerUser : public UObject {
-    GENERATED_BODY()
+UCLASS()
+class AKAUDIO_API UAkSettingsPerUser : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(Config, EditAnywhere)
-    FDirectoryPath WwiseWindowsInstallationPath;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FFilePath WwiseMacInstallationPath;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FString WaapiIPAddress;
-    
-    UPROPERTY(Config, EditAnywhere)
-    uint32 WaapiPort;
-    
-    UPROPERTY(Config, EditAnywhere)
-    bool AutoSyncSelection;
-    
-    UPROPERTY(Config)
-    bool SoundDataGenerationSkipLanguage;
-    
-    UAkSettingsPerUser();
+	UPROPERTY(EditAnywhere)
+	FDirectoryPath WwiseWindowsInstallationPath;
+
+	UPROPERTY(EditAnywhere)
+	FFilePath WwiseMacInstallationPath;
+
+	UPROPERTY(EditAnywhere)
+	bool EnableAutomaticAssetSynchronization;
+
+	UPROPERTY(EditAnywhere)
+	FString WaapiIPAddress;
+
+	UPROPERTY(EditAnywhere)
+	uint32 WaapiPort;
+
+	UPROPERTY(EditAnywhere)
+	bool bAutoConnectToWAAPI;
+
+	UPROPERTY(EditAnywhere)
+	bool AutoSyncSelection;
+
+	UPROPERTY()
+	bool SoundDataGenerationSkipLanguage;
+
+public:
+	UAkSettingsPerUser();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkSettingsPerUser) { return 0; }

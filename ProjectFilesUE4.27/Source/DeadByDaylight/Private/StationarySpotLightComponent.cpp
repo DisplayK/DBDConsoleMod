@@ -1,5 +1,6 @@
 #include "StationarySpotLightComponent.h"
 
-UStationarySpotLightComponent::UStationarySpotLightComponent() {
-}
+UStationarySpotLightComponent::UStationarySpotLightComponent()
+{
 
+}

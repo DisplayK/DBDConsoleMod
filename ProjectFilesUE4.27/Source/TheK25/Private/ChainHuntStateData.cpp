@@ -1,6 +1,7 @@
 #include "ChainHuntStateData.h"
 
-FChainHuntStateData::FChainHuntStateData() {
-    this->ChainHuntState = EChainHuntState::Inactive;
+FChainHuntStateData::FChainHuntStateData()
+{
+	this->StartTime = FDateTime{};
+	this->ChainHuntState = EChainHuntState::Inactive;
 }
-

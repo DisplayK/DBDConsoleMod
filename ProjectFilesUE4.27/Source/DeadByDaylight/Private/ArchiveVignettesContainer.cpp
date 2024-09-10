@@ -1,5 +1,6 @@
 #include "ArchiveVignettesContainer.h"
 
-UArchiveVignettesContainer::UArchiveVignettesContainer() {
-}
+UArchiveVignettesContainer::UArchiveVignettesContainer()
+{
 
+}

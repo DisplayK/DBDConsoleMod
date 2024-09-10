@@ -1,6 +1,6 @@
 #include "CoreHudScoreAlertItem.h"
 
+UCoreHudScoreAlertItem::UCoreHudScoreAlertItem()
+{
 
-UCoreHudScoreAlertItem::UCoreHudScoreAlertItem() {
 }
-

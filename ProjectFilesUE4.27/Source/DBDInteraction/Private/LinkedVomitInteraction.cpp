@@ -2,19 +2,17 @@
 
 class UVomitStateComponent;
 
-bool ULinkedVomitInteraction::IsVomiting() const {
-    return false;
+bool ULinkedVomitInteraction::IsVomiting() const
+{
+	return false;
 }
 
-bool ULinkedVomitInteraction::IsChargeComplete() const {
-    return false;
+UVomitStateComponent* ULinkedVomitInteraction::GetVomitStateComponent() const
+{
+	return NULL;
 }
 
-UVomitStateComponent* ULinkedVomitInteraction::GetVomitStateComponent() const {
-    return NULL;
-}
+ULinkedVomitInteraction::ULinkedVomitInteraction()
+{
 
-ULinkedVomitInteraction::ULinkedVomitInteraction() {
-    this->_chargeComplete = false;
 }
-

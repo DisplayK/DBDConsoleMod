@@ -1,5 +1,8 @@
 #include "LandingPageTabsDataAsset.h"
 
-ULandingPageTabsDataAsset::ULandingPageTabsDataAsset() {
+ULandingPageTabsDataAsset::ULandingPageTabsDataAsset()
+{
+	this->BigButtonsData = TMap<EStorefrontState, FLandingPageTabData>();
+	this->MediumButtonsData = TMap<EStorefrontState, FLandingPageTabData>();
+	this->SmallButtonsData = TMap<EStorefrontState, FLandingPageTabData>();
 }
-

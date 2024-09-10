@@ -1,5 +1,6 @@
 #include "UMGBaseTabListWidget.h"
 
-UUMGBaseTabListWidget::UUMGBaseTabListWidget() {
-}
+UUMGBaseTabListWidget::UUMGBaseTabListWidget()
+{
 
+}

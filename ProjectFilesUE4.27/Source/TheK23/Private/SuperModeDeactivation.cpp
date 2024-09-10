@@ -1,5 +1,6 @@
 #include "SuperModeDeactivation.h"
 
-USuperModeDeactivation::USuperModeDeactivation() {
-}
+USuperModeDeactivation::USuperModeDeactivation()
+{
 
+}

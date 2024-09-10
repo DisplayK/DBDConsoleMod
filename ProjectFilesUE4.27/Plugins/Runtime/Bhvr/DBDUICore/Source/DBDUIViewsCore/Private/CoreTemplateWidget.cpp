@@ -1,5 +1,6 @@
 #include "CoreTemplateWidget.h"
 
-UCoreTemplateWidget::UCoreTemplateWidget() : UUserWidget(FObjectInitializer::Get()) {
-}
+UCoreTemplateWidget::UCoreTemplateWidget() : UUserWidget(FObjectInitializer::Get())
+{
 
+}

@@ -1,5 +1,6 @@
 #include "HagAnimInstance.h"
 
-UHagAnimInstance::UHagAnimInstance() {
-}
+UHagAnimInstance::UHagAnimInstance()
+{
 
+}

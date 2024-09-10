@@ -1,76 +1,76 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "OnPalletStunned_AuthorityDelegate.h"
-#include "UObject/NoExportTypes.h"
-#include "TriggerDecoyVisibilityVFXDelegate.h"
+#include "StunnableInterface.h"
+#include "OnStunned.h"
+#include "TriggerDecoyVisibilityVFX.h"
 #include "UObject/NoExportTypes.h"
 #include "DecoySlasherComponent.generated.h"
 
-class ASlasherPlayer;
 class UTerrorRadiusEmitterComponent;
-class AActor;
+class ASlasherPlayer;
 class URedStainComponent;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UDecoySlasherComponent : public UActorComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UDecoySlasherComponent : public UActorComponent, public IStunnableInterface
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintAssignable)
-    FOnPalletStunned_Authority OnPalletStunned_Authority;
-    
-    UPROPERTY(BlueprintAssignable)
-    FTriggerDecoyVisibilityVFX TriggerDecoyVisibilityVFX;
-    
+	UPROPERTY(BlueprintAssignable)
+	FOnStunned OnStunned;
+
+	UPROPERTY(BlueprintAssignable)
+	FTriggerDecoyVisibilityVFX TriggerDecoyVisibilityVFX;
+
 protected:
-    UPROPERTY(EditAnywhere)
-    bool HasTerrorRadius;
-    
-    UPROPERTY(EditAnywhere)
-    bool HasRedGlow;
-    
+	UPROPERTY(EditAnywhere)
+	bool HasTerrorRadius;
+
+	UPROPERTY(EditAnywhere)
+	bool HasRedGlow;
+
 private:
-    UPROPERTY(Transient)
-    bool _isActive;
-    
-    UPROPERTY(Transient)
-    bool _initialized;
-    
-    UPROPERTY(Export, Transient)
-    UTerrorRadiusEmitterComponent* _terrorRadiusEmitter;
-    
-    UPROPERTY(Export, Transient)
-    URedStainComponent* _redStainComponent;
-    
+	UPROPERTY(Transient)
+	bool _isActive;
+
+	UPROPERTY(Transient)
+	bool _initialized;
+
+	UPROPERTY(Transient, Export)
+	UTerrorRadiusEmitterComponent* _terrorRadiusEmitter;
+
+	UPROPERTY(Transient, Export)
+	URedStainComponent* _redStainComponent;
+
 public:
-    UDecoySlasherComponent();
-    UFUNCTION(BlueprintCallable)
-    void SetDecoyIsActive(bool isActive, const FVector& location, const FRotator& rotation, bool visibleRedGlow);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetDecoyIsActive(bool isActive, const FVector& location, const FRotator& rotation, bool visibleRedGlow);
+
 private:
-    UFUNCTION()
-    void OnRealSlasherTerrorRadiusChanged(float newValue);
-    
+	UFUNCTION()
+	void OnRealSlasherTerrorRadiusChanged(float newValue);
+
 public:
-    UFUNCTION(BlueprintPure)
-    bool IsDecoyActive() const;
-    
-    UFUNCTION(BlueprintPure)
-    UTerrorRadiusEmitterComponent* GetTerrorRadiusEmitter() const;
-    
-    UFUNCTION(BlueprintPure)
-    ASlasherPlayer* GetRealSlasher() const;
-    
-    UFUNCTION(BlueprintCallable)
-    void DoPostVFXUpdates(const FVector& location, const FRotator& rotation);
-    
+	UFUNCTION(BlueprintPure)
+	bool IsDecoyActive() const;
+
+	UFUNCTION(BlueprintPure)
+	UTerrorRadiusEmitterComponent* GetTerrorRadiusEmitter() const;
+
+	UFUNCTION(BlueprintPure)
+	ASlasherPlayer* GetRealSlasher() const;
+
+	UFUNCTION(BlueprintCallable)
+	void DoPostVFXUpdates(const FVector& location, const FRotator& rotation);
+
 private:
-    UFUNCTION()
-    void CopyCustomizationFromSlasher();
-    
+	UFUNCTION()
+	void CopyCustomizationFromSlasher();
+
 public:
-    UFUNCTION(BlueprintAuthorityOnly, BlueprintCallable)
-    void Authority_PalletStun(AActor* instigator);
-    
+	UDecoySlasherComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDecoySlasherComponent) { return 0; }

@@ -1,5 +1,7 @@
 #include "TaggedAnimCollection.h"
 
-FTaggedAnimCollection::FTaggedAnimCollection() {
+FTaggedAnimCollection::FTaggedAnimCollection()
+{
+	this->Tag = FGameplayTag{};
+	this->AnimCollection = NULL;
 }
-

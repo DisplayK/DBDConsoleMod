@@ -1,5 +1,6 @@
 #include "ActiveWhenApplicablePerkIconStrategy.h"
 
-UActiveWhenApplicablePerkIconStrategy::UActiveWhenApplicablePerkIconStrategy() {
-}
+UActiveWhenApplicablePerkIconStrategy::UActiveWhenApplicablePerkIconStrategy()
+{
 
+}

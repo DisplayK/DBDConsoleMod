@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "HexPerk.h"
 #include "FastTimer.h"
@@ -7,18 +8,29 @@
 class AGenerator;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UHexRuin : public UHexPerk {
-    GENERATED_BODY()
-public:
+class UHexRuin : public UHexPerk
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    TMap<AGenerator*, FFastTimer> _curseActivationTimers;
-    
-public:
-    UHexRuin();
+	UPROPERTY(Transient)
+	TMap<AGenerator*, FFastTimer> _curseActivationTimers;
+
+	UPROPERTY(EditDefaultsOnly)
+	float _regressionModifier;
+
+	UPROPERTY(Transient)
+	TMap<AGenerator*, uint64> _gameplayModifierHandles;
+
 private:
-    UFUNCTION()
-    void Authority_ConstructActivationTimersMap();
-    
+	UFUNCTION(BlueprintPure)
+	float GetRegressionModifierByLevel(int32 perkLevel) const;
+
+	UFUNCTION()
+	void Authority_SetupCurseOnAllGenerators();
+
+public:
+	UHexRuin();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UHexRuin) { return 0; }

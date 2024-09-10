@@ -1,5 +1,6 @@
 #include "CinematicScreen.h"
 
-UCinematicScreen::UCinematicScreen() {
-}
+UCinematicScreen::UCinematicScreen()
+{
 
+}

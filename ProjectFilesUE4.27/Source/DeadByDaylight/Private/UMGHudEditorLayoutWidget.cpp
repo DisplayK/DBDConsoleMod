@@ -1,49 +1,69 @@
 #include "UMGHudEditorLayoutWidget.h"
 
-class UAkAudioEvent;
 class UUMGDragWidget_HudEditor;
-class UUMGHudEditorScreen;
+class UAkAudioEvent;
 class UCustomWidgetWrapper_HudEditor;
+class UUMGHudEditorScreen;
 
-void UUMGHudEditorLayoutWidget::ShowSurvivorLayout() {
+void UUMGHudEditorLayoutWidget::ShowSurvivorLayout()
+{
+
 }
 
-void UUMGHudEditorLayoutWidget::ShowKillerLayout() {
+void UUMGHudEditorLayoutWidget::ShowKillerLayout()
+{
+
 }
 
-void UUMGHudEditorLayoutWidget::SetWidgetToEdit_Implementation(UUMGDragWidget_HudEditor* widget) {
+void UUMGHudEditorLayoutWidget::SetWidgetToEdit_Implementation(UUMGDragWidget_HudEditor* widget)
+{
+
 }
 
-void UUMGHudEditorLayoutWidget::SetSaveOverlapSound(UAkAudioEvent* onSaveOverlapSound) {
+void UUMGHudEditorLayoutWidget::SetSaveOverlapSound(UAkAudioEvent* onSaveOverlapSound)
+{
+
 }
 
-void UUMGHudEditorLayoutWidget::SetHudEditorScreen_Implementation(UUMGHudEditorScreen* NewHudEditorScreen) {
+void UUMGHudEditorLayoutWidget::SetHudEditorScreen_Implementation(UUMGHudEditorScreen* hudEditorScreenNew)
+{
+
 }
 
-void UUMGHudEditorLayoutWidget::SaveLayout() {
+void UUMGHudEditorLayoutWidget::SaveLayout()
+{
+
 }
 
-void UUMGHudEditorLayoutWidget::ResetLayout() {
+void UUMGHudEditorLayoutWidget::ResetLayout()
+{
+
 }
 
-
-UCustomWidgetWrapper_HudEditor* UUMGHudEditorLayoutWidget::GetHudEditorWrapperToEdit() const {
-    return NULL;
+UCustomWidgetWrapper_HudEditor* UUMGHudEditorLayoutWidget::GetHudEditorWrapperToEdit() const
+{
+	return NULL;
 }
 
-UUMGDragWidget_HudEditor* UUMGHudEditorLayoutWidget::GetCurrentDragWidget() const {
-    return NULL;
+UUMGDragWidget_HudEditor* UUMGHudEditorLayoutWidget::GetCurrentDragWidget() const
+{
+	return NULL;
 }
 
-void UUMGHudEditorLayoutWidget::FlipLayout() {
+void UUMGHudEditorLayoutWidget::FlipLayout()
+{
+
 }
 
-void UUMGHudEditorLayoutWidget::FlagSaveAsDirty() {
+void UUMGHudEditorLayoutWidget::FlagSaveAsDirty()
+{
+
 }
 
-UUMGHudEditorLayoutWidget::UUMGHudEditorLayoutWidget() {
-    this->HudEditorScreen = NULL;
-    this->_onSaveOverlapSound = NULL;
-    this->_currentWidgetToEdit = NULL;
+UUMGHudEditorLayoutWidget::UUMGHudEditorLayoutWidget()
+{
+	this->HudEditorScreen = NULL;
+	this->_onSaveOverlapSound = NULL;
+	this->_currentWidgetToEdit = NULL;
+	this->_isSaveDirtyMap = TMap<UUMGHudEditorLayoutScreen*, bool>();
 }
-

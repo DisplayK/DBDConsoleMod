@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "VideoPlayer.h"
+#include "GameFramework/Actor.h"
 #include "VideoNativePlayer.generated.h"
 
 UCLASS()
-class AVideoNativePlayer : public AActor, public IVideoPlayer {
-    GENERATED_BODY()
+class AVideoNativePlayer : public AActor, public IVideoPlayer
+{
+	GENERATED_BODY()
+
 public:
-    AVideoNativePlayer();
-    
-    // Fix for true pure virtual functions not being implemented
+	AVideoNativePlayer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AVideoNativePlayer) { return 0; }

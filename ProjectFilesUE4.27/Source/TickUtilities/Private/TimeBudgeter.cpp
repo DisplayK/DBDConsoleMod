@@ -1,5 +1,6 @@
 #include "TimeBudgeter.h"
 
-UTimeBudgeter::UTimeBudgeter() {
-}
+UTimeBudgeter::UTimeBudgeter()
+{
 
+}

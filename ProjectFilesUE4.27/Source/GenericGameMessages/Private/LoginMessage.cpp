@@ -1,5 +1,6 @@
 #include "LoginMessage.h"
 
-FLoginMessage::FLoginMessage() {
+FLoginMessage::FLoginMessage()
+{
+	this->MirrorsId = TEXT("");
 }
-

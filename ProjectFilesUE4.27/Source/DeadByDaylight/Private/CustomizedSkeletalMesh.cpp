@@ -1,53 +1,77 @@
 #include "CustomizedSkeletalMesh.h"
+#include "ECustomizationCategory.h"
 
-class USkeletalMeshComponent;
 class USkinnedMeshComponent;
+class USkeletalMeshComponent;
 class UCustomizedSkeletalMesh;
 
-void UCustomizedSkeletalMesh::SetVfxsVisibility(ECustomizationCategory category, bool visible) {
+void UCustomizedSkeletalMesh::SetVfxsVisibility(ECustomizationCategory category, bool visible)
+{
+
 }
 
-void UCustomizedSkeletalMesh::SetMeshVisibility(bool visible) {
+void UCustomizedSkeletalMesh::SetMeshVisibility(bool visible)
+{
+
 }
 
-void UCustomizedSkeletalMesh::SetMeshOwner(USkinnedMeshComponent* mesh) {
+void UCustomizedSkeletalMesh::SetMeshOwner(USkinnedMeshComponent* mesh)
+{
+
 }
 
-void UCustomizedSkeletalMesh::SetCastShadow(bool castShadow) {
+void UCustomizedSkeletalMesh::SetCastShadow(bool castShadow)
+{
+
 }
 
-void UCustomizedSkeletalMesh::SetAllVfxsVisibility(bool visible) {
+void UCustomizedSkeletalMesh::SetAllVfxsVisibility(bool visible)
+{
+
 }
 
-USkeletalMeshComponent* UCustomizedSkeletalMesh::GetSkeletalMesh(ECustomizationCategory category) const {
-    return NULL;
+USkeletalMeshComponent* UCustomizedSkeletalMesh::GetSkeletalMesh(ECustomizationCategory category) const
+{
+	return NULL;
 }
 
-USkinnedMeshComponent* UCustomizedSkeletalMesh::GetMeshOwner() {
-    return NULL;
+USkinnedMeshComponent* UCustomizedSkeletalMesh::GetMeshOwner()
+{
+	return NULL;
 }
 
-TArray<FName> UCustomizedSkeletalMesh::GetCurrentCustomizationItems() const {
-    return TArray<FName>();
+TArray<FName> UCustomizedSkeletalMesh::GetCurrentCustomizationItems() const
+{
+	return TArray<FName>();
 }
 
-TArray<USkeletalMeshComponent*> UCustomizedSkeletalMesh::GetComponents() const {
-    return TArray<USkeletalMeshComponent*>();
+TArray<USkeletalMeshComponent*> UCustomizedSkeletalMesh::GetComponents() const
+{
+	return TArray<USkeletalMeshComponent*>();
 }
 
-void UCustomizedSkeletalMesh::CopyCustomization(const UCustomizedSkeletalMesh* copyFrom) {
+void UCustomizedSkeletalMesh::CopyCustomization(const UCustomizedSkeletalMesh* copyFrom)
+{
+
 }
 
-bool UCustomizedSkeletalMesh::Contains(TArray<FName> itemIds) const {
-    return false;
+bool UCustomizedSkeletalMesh::Contains(TArray<FName> itemIds) const
+{
+	return false;
 }
 
-void UCustomizedSkeletalMesh::ClearAllVfxs() {
+void UCustomizedSkeletalMesh::ClearAllVfxs()
+{
+
 }
 
-UCustomizedSkeletalMesh::UCustomizedSkeletalMesh() {
-    this->SlaveAnimInstanceClass = NULL;
-    this->_meshOwner = NULL;
-    this->_characterIdOverride = -1;
+UCustomizedSkeletalMesh::UCustomizedSkeletalMesh()
+{
+	this->_meshOwner = NULL;
+	this->_ignoredItemCategories = TSet<ECustomizationCategory>();
+	this->Components = TArray<USkeletalMeshComponent*>();
+	this->_customizationBasePartMeshes = TMap<ECustomizationCategory, USkeletalMeshComponent*>();
+	this->Slaves = TArray<USkeletalMeshComponent*>();
+	this->_itemVfxs = TMap<ECustomizationCategory, AItemVfx*>();
+	this->_characterIdOverride = -1;
 }
-

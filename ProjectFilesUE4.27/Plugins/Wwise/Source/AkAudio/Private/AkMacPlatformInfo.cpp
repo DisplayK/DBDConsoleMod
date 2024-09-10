@@ -1,5 +1,6 @@
 #include "AkMacPlatformInfo.h"
 
-UAkMacPlatformInfo::UAkMacPlatformInfo() {
-}
+UAkMacPlatformInfo::UAkMacPlatformInfo()
+{
 
+}

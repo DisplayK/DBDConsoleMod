@@ -1,5 +1,6 @@
 #include "EventDrivenModifierCondition.h"
 
-UEventDrivenModifierCondition::UEventDrivenModifierCondition() {
-}
+UEventDrivenModifierCondition::UEventDrivenModifierCondition()
+{
 
+}

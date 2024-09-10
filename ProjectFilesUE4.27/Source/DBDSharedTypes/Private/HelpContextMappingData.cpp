@@ -1,5 +1,7 @@
 #include "HelpContextMappingData.h"
 
-FHelpContextMappingData::FHelpContextMappingData() {
+FHelpContextMappingData::FHelpContextMappingData()
+{
+	this->ContextName = TEXT("");
+	this->TopicIds = TArray<FName>();
 }
-

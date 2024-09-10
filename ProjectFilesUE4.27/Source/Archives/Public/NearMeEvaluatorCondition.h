@@ -1,17 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EvaluatorCondition.h"
 #include "NearMeEvaluatorCondition.generated.h"
 
 UCLASS()
-class UNearMeEvaluatorCondition : public UEvaluatorCondition {
-    GENERATED_BODY()
-public:
+class UNearMeEvaluatorCondition : public UEvaluatorCondition
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    bool _questOwnerCanBeSubjectOfEvent;
-    
+	UPROPERTY(EditDefaultsOnly)
+	bool _questOwnerCanBeSubjectOfEvent;
+
 public:
-    UNearMeEvaluatorCondition();
+	UNearMeEvaluatorCondition();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UNearMeEvaluatorCondition) { return 0; }

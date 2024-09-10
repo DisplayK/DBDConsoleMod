@@ -1,11 +1,16 @@
 #include "KillerBloodFXComponent.h"
 
-void UKillerBloodFXComponent::StopBloodSplatter() {
+void UKillerBloodFXComponent::StopBloodSplatter()
+{
+
 }
 
-void UKillerBloodFXComponent::PlayBloodSplatter() {
+void UKillerBloodFXComponent::PlayBloodSplatter()
+{
+
 }
 
-UKillerBloodFXComponent::UKillerBloodFXComponent() {
-}
+UKillerBloodFXComponent::UKillerBloodFXComponent()
+{
 
+}

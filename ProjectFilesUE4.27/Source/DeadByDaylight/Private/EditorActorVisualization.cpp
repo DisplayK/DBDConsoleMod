@@ -1,5 +1,6 @@
 #include "EditorActorVisualization.h"
 
-UEditorActorVisualization::UEditorActorVisualization() {
+UEditorActorVisualization::UEditorActorVisualization()
+{
+	this->ActorVisualization = NULL;
 }
-

@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EFogScreenButton.generated.h"
 
-UENUM()
-enum class EFogScreenButton {
-    AddCurrency,
-    Setting,
-    Chat,
+UENUM(BlueprintType)
+enum class EFogScreenButton : uint8
+{
+	AddCurrency,
+	Setting,
+	Chat,
 };
-

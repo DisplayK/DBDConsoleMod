@@ -1,5 +1,6 @@
 #include "AntidoteCloudProjectile.h"
 
-AAntidoteCloudProjectile::AAntidoteCloudProjectile() {
-}
+AAntidoteCloudProjectile::AAntidoteCloudProjectile()
+{
 
+}

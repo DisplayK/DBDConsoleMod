@@ -1,5 +1,6 @@
 #include "PlayerReelInputAccelerationConstraintStrategy.h"
 
-UPlayerReelInputAccelerationConstraintStrategy::UPlayerReelInputAccelerationConstraintStrategy() {
-}
+UPlayerReelInputAccelerationConstraintStrategy::UPlayerReelInputAccelerationConstraintStrategy()
+{
 
+}

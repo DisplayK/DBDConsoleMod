@@ -1,6 +1,6 @@
 #include "UMGRichTextRewardItemDecorator.h"
 
-UUMGRichTextRewardItemDecorator::UUMGRichTextRewardItemDecorator() : URichTextBlockDecorator(FObjectInitializer::Get()) {
-    this->RewardSet = NULL;
+UUMGRichTextRewardItemDecorator::UUMGRichTextRewardItemDecorator() : URichTextBlockDecorator(FObjectInitializer::Get())
+{
+	this->RewardSet = NULL;
 }
-

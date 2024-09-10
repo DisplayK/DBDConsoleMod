@@ -1,28 +1,34 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/SoftObjectPtr.h"
 #include "AkAssetDataSwitchContainerData.generated.h"
 
+class UAkMediaAsset;
 class UAkGroupValue;
 class UAkAssetDataSwitchContainerData;
-class UAkMediaAsset;
 
 UCLASS(EditInlineNew)
-class AKAUDIO_API UAkAssetDataSwitchContainerData : public UObject {
-    GENERATED_BODY()
+class AKAUDIO_API UAkAssetDataSwitchContainerData : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(VisibleAnywhere)
-    TSoftObjectPtr<UAkGroupValue> GroupValue;
-    
-    UPROPERTY(VisibleAnywhere)
-    UAkGroupValue* DefaultGroupValue;
-    
-    UPROPERTY(VisibleAnywhere)
-    TArray<TSoftObjectPtr<UAkMediaAsset>> MediaList;
-    
-    UPROPERTY(VisibleAnywhere)
-    TArray<UAkAssetDataSwitchContainerData*> Children;
-    
-    UAkAssetDataSwitchContainerData();
+	UPROPERTY(VisibleAnywhere)
+	TSoftObjectPtr<UAkGroupValue> GroupValue;
+
+	UPROPERTY(VisibleAnywhere)
+	UAkGroupValue* DefaultGroupValue;
+
+	UPROPERTY(VisibleAnywhere)
+	TArray<UAkMediaAsset*> MediaList;
+
+	UPROPERTY(VisibleAnywhere)
+	TArray<UAkAssetDataSwitchContainerData*> Children;
+
+public:
+	UAkAssetDataSwitchContainerData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkAssetDataSwitchContainerData) { return 0; }

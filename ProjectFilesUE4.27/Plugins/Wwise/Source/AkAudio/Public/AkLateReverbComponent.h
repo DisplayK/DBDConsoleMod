@@ -1,36 +1,49 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
 #include "AkLateReverbComponent.generated.h"
 
 class UAkAuxBus;
-class UAkLateReverbComponent;
+class UAkAcousticTextureSetComponent;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class AKAUDIO_API UAkLateReverbComponent : public USceneComponent {
-    GENERATED_BODY()
+class AKAUDIO_API UAkLateReverbComponent : public USceneComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint8 bEnable: 1;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAuxBus* AuxBus;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
-    FString AuxBusName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float SendLevel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float FadeRate;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float Priority;
-    
-    UPROPERTY(Export, Transient)
-    UAkLateReverbComponent* NextLowerPriorityComponent;
-    
-    UAkLateReverbComponent();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 bEnable : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SendLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float FadeRate;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Priority;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool AutoAssignAuxBus;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UAkAuxBus* AuxBus;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString AuxBusName;
+
+private:
+	UPROPERTY(VisibleAnywhere)
+	UAkAuxBus* AuxBusManual;
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void AssociateAkTextureSetComponent(UAkAcousticTextureSetComponent* textureSetComponent);
+
+public:
+	UAkLateReverbComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkLateReverbComponent) { return 0; }

@@ -2,9 +2,12 @@
 
 class ACamperPlayer;
 
-void UZombieCustomizationComponent::Multicast_SetZombieCustomization_Implementation(ACamperPlayer* survivor) {
+void UZombieCustomizationComponent::Multicast_SetZombieCustomization_Implementation(ACamperPlayer* survivor)
+{
+
 }
 
-UZombieCustomizationComponent::UZombieCustomizationComponent() {
+UZombieCustomizationComponent::UZombieCustomizationComponent()
+{
+	this->_survivorSource = NULL;
 }
-

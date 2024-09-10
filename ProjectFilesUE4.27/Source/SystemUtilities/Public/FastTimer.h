@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "FastTimer.generated.h"
 
 USTRUCT(BlueprintType)
-struct SYSTEMUTILITIES_API FFastTimer {
-    GENERATED_BODY()
+struct FFastTimer
+{
+	GENERATED_BODY()
+
 public:
-    FFastTimer();
+	SYSTEMUTILITIES_API FFastTimer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FFastTimer) { return 0; }

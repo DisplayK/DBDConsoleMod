@@ -1,27 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UniquelyIdentifiedAnalytic.h"
+#include "BaseCheatAnalytics.h"
 #include "ExecExecutedAnalytics.generated.h"
 
 USTRUCT()
-struct FExecExecutedAnalytics : public FUniquelyIdentifiedAnalytic {
-    GENERATED_BODY()
+struct FExecExecutedAnalytics: public FBaseCheatAnalytics
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    FString Location;
-    
-    UPROPERTY()
-    FString NetMode;
-    
-    UPROPERTY()
-    FString Requester;
-    
-    UPROPERTY()
-    FString Command;
-    
-    UPROPERTY()
-    bool Executed;
-    
-    DBDANALYTICS_API FExecExecutedAnalytics();
+	UPROPERTY()
+	FString Command;
+
+	UPROPERTY()
+	bool Executed;
+
+public:
+	DBDANALYTICS_API FExecExecutedAnalytics();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FExecExecutedAnalytics) { return 0; }

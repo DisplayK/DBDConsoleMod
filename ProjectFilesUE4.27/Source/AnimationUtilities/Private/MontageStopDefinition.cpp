@@ -1,6 +1,7 @@
 #include "MontageStopDefinition.h"
 
-FMontageStopDefinition::FMontageStopDefinition() {
-    this->BlendOutTime = 0.00f;
+FMontageStopDefinition::FMontageStopDefinition()
+{
+	this->Descriptor = FAnimationMontageDescriptor{};
+	this->BlendOutTime = 0.0f;
 }
-

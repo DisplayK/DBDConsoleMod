@@ -1,6 +1,6 @@
 #include "AccessKeys.h"
 
-UAccessKeys::UAccessKeys() {
-    this->AccessKeys.AddDefaulted(18);
+UAccessKeys::UAccessKeys()
+{
+	this->AccessKeys = TArray<FAccessKey>();
 }
-

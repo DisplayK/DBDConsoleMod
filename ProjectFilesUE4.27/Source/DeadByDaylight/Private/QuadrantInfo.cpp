@@ -1,5 +1,5 @@
 #include "QuadrantInfo.h"
 
-FQuadrantInfo::FQuadrantInfo() {
+FQuadrantInfo::FQuadrantInfo()
+{
 }
-

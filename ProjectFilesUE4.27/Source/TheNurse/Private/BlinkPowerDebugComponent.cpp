@@ -1,5 +1,6 @@
 #include "BlinkPowerDebugComponent.h"
 
-UBlinkPowerDebugComponent::UBlinkPowerDebugComponent() {
-}
+UBlinkPowerDebugComponent::UBlinkPowerDebugComponent()
+{
 
+}

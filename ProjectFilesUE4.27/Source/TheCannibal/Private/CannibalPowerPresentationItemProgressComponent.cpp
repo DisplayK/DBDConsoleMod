@@ -2,10 +2,12 @@
 
 class UCannibalChainsawPowerComponent;
 
-void UCannibalPowerPresentationItemProgressComponent::SetCannibalChainsawPowerComponent(UCannibalChainsawPowerComponent* cannibalPowerChainsawComponent) {
+void UCannibalPowerPresentationItemProgressComponent::SetCannibalChainsawPowerComponent(UCannibalChainsawPowerComponent* cannibalPowerChainsawComponent)
+{
+
 }
 
-UCannibalPowerPresentationItemProgressComponent::UCannibalPowerPresentationItemProgressComponent() {
-    this->_cannibalPowerChainsawComponent = NULL;
+UCannibalPowerPresentationItemProgressComponent::UCannibalPowerPresentationItemProgressComponent()
+{
+	this->_cannibalPowerChainsawComponent = NULL;
 }
-

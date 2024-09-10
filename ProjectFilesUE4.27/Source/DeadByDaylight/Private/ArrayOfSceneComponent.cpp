@@ -1,5 +1,6 @@
 #include "ArrayOfSceneComponent.h"
 
-FArrayOfSceneComponent::FArrayOfSceneComponent() {
+FArrayOfSceneComponent::FArrayOfSceneComponent()
+{
+	this->sceneComp = TArray<USceneComponent*>();
 }
-

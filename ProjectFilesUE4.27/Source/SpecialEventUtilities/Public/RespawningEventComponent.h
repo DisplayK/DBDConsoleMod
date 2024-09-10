@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "RespawningEventComponent.generated.h"
@@ -8,26 +9,28 @@ class URespawnablePositioner;
 class ARespawnableInteractable;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class SPECIALEVENTUTILITIES_API URespawningEventComponent : public UActorComponent {
-    GENERATED_BODY()
-public:
+class SPECIALEVENTUTILITIES_API URespawningEventComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export, Transient)
-    URespawnableStrategy* _respawnableStrategy;
-    
+	UPROPERTY(Transient, meta=(BindWidgetOptional))
+	URespawnableStrategy* _respawnableStrategy;
+
 private:
-    UPROPERTY(Export, Transient)
-    URespawnablePositioner* _respawnablePositioner;
-    
-public:
-    URespawningEventComponent();
+	UPROPERTY(Transient, Export)
+	URespawnablePositioner* _respawnablePositioner;
+
 private:
-    UFUNCTION(Exec)
-    void DBD_ForceRespawnSpecialEventObject();
-    
+	UFUNCTION(Exec)
+	void DBD_ForceRespawnSpecialEventObject();
+
 protected:
-    UFUNCTION()
-    void Authority_OnIsInteractingWithAnyRespawnableInteractableChanged(ARespawnableInteractable* respawnableInteractable, bool isInteracting);
-    
+	UFUNCTION()
+	void Authority_OnIsInteractingWithAnyRespawnableInteractableChanged(ARespawnableInteractable* respawnableInteractable, bool isInteracting);
+
+public:
+	URespawningEventComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const URespawningEventComponent) { return 0; }

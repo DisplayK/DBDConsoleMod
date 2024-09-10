@@ -1,6 +1,7 @@
 #include "ToastButton.h"
 
-FToastButton::FToastButton() {
-    this->IsRegression = false;
+FToastButton::FToastButton()
+{
+	this->ButtonText = FText::GetEmpty();
+	this->IsRegression = false;
 }
-

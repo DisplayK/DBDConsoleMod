@@ -1,5 +1,6 @@
 #include "EnsureLoggingSubsystem.h"
 
-UEnsureLoggingSubsystem::UEnsureLoggingSubsystem() {
-}
+UEnsureLoggingSubsystem::UEnsureLoggingSubsystem()
+{
 
+}

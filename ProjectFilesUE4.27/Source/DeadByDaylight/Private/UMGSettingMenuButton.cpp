@@ -1,10 +1,11 @@
 #include "UMGSettingMenuButton.h"
 
+void UUMGSettingMenuButton::HandleSettingTabButtonClick()
+{
 
-
-void UUMGSettingMenuButton::HandleSettingTabButtonClick() {
 }
 
-UUMGSettingMenuButton::UUMGSettingMenuButton() {
-}
+UUMGSettingMenuButton::UUMGSettingMenuButton()
+{
 
+}

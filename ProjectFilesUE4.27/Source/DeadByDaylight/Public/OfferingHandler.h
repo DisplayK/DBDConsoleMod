@@ -1,24 +1,28 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "OfferingHandler.generated.h"
 
 class UDBDGameInstance;
 
 UCLASS()
-class DEADBYDAYLIGHT_API UOfferingHandler : public UObject {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UOfferingHandler : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UDBDGameInstance* _gameInstance;
-    
-    UPROPERTY(Replicated, Transient)
-    TArray<FName> _levelPerkIDs;
-    
+	UPROPERTY(Transient)
+	UDBDGameInstance* _gameInstance;
+
+	UPROPERTY(Replicated, Transient)
+	TArray<FName> _levelPerkIDs;
+
 public:
-    UOfferingHandler();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UOfferingHandler();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UOfferingHandler) { return 0; }

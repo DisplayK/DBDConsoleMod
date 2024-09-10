@@ -1,5 +1,6 @@
 #include "BoxPlayerOverlapComponent.h"
 
-UBoxPlayerOverlapComponent::UBoxPlayerOverlapComponent() {
-}
+UBoxPlayerOverlapComponent::UBoxPlayerOverlapComponent()
+{
 
+}

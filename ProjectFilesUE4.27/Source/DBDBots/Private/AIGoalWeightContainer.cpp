@@ -1,5 +1,6 @@
 #include "AIGoalWeightContainer.h"
 
-FAIGoalWeightContainer::FAIGoalWeightContainer() {
+FAIGoalWeightContainer::FAIGoalWeightContainer()
+{
+	this->WeightedGoals = TArray<FAIGoalWeight>();
 }
-

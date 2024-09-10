@@ -1,11 +1,13 @@
 #include "UMGCharacterFreeTicketWidget.h"
 
+void UUMGCharacterFreeTicketWidget::HandleButtonClickEvent(const FString& ticketID, const FString& characterName)
+{
 
-void UUMGCharacterFreeTicketWidget::HandleButtonClickEvent(const FString& ticketID, const FString& characterName) {
 }
 
-UUMGCharacterFreeTicketWidget::UUMGCharacterFreeTicketWidget() {
-    this->PanelSwitcher = NULL;
-    this->FreeTicketItemButtonBox = NULL;
+UUMGCharacterFreeTicketWidget::UUMGCharacterFreeTicketWidget()
+{
+	this->PanelSwitcher = NULL;
+	this->FreeTicketItemButtonBox = NULL;
+	this->_buttonClass = NULL;
 }
-

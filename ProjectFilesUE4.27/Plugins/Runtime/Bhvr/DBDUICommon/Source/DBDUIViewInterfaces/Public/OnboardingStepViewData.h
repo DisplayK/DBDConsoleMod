@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EOnboardingStepStatus.h"
 #include "OnboardingTutorialViewData.h"
 #include "OnboardingStepViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct DBDUIVIEWINTERFACES_API FOnboardingStepViewData {
-    GENERATED_BODY()
+struct FOnboardingStepViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    FString StepId;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    EOnboardingStepStatus Status;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    TArray<FOnboardingTutorialViewData> Tutorials;
-    
-    FOnboardingStepViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	FString StepId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	EOnboardingStepStatus Status;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TArray<FOnboardingTutorialViewData> Tutorials;
+
+public:
+	DBDUIVIEWINTERFACES_API FOnboardingStepViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FOnboardingStepViewData) { return 0; }

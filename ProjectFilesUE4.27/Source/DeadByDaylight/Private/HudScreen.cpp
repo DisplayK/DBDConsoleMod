@@ -1,32 +1,54 @@
 #include "HudScreen.h"
 
-void UHudScreen::OnTutorialNotificationClosedByUserInput() {
+void UHudScreen::OnTutorialHudFadeOutTriggered()
+{
+
 }
 
-void UHudScreen::OnSpectatePlayerClick(const FString& name) {
+void UHudScreen::OnTutorialHudFadeInTriggered()
+{
+
 }
 
-void UHudScreen::OnSettingsClicked() {
+void UHudScreen::OnSpectateRightArrowClicked()
+{
+
 }
 
-void UHudScreen::OnQuitGameButtonClick() {
+void UHudScreen::OnSpectateLeftArrowClicked()
+{
+
 }
 
-void UHudScreen::OnPreviousButtonClick() {
+void UHudScreen::OnSpectateLeaveButtonClicked()
+{
+
 }
 
-void UHudScreen::OnPerkClicked(FName perkID, bool clickedOnPerkWidget) {
+void UHudScreen::OnNotifTutoConfirmButtonClicked()
+{
+
 }
 
-void UHudScreen::OnNextButtonClick() {
+void UHudScreen::OnHUDWidgetFadeOutCompleted()
+{
+
 }
 
-void UHudScreen::OnLeaveButtonClick() {
+void UHudScreen::OnHideStartSequenceCompleted()
+{
+
 }
 
-void UHudScreen::OnCancelQuitGameButtonClick() {
+void UHudScreen::OnHemorrhageAnimationComplete()
+{
+
 }
 
-UHudScreen::UHudScreen() {
+UHudScreen::UHudScreen()
+{
+	this->_rootWidget = NULL;
+	this->_tutorialsUtilities = NULL;
+	this->_playerStatusInterfaces = TArray<TScriptInterface<IPlayerStatusViewInterface>>();
+	this->_playerStatusViewData = TArray<FPlayerStatusViewData>();
 }
-

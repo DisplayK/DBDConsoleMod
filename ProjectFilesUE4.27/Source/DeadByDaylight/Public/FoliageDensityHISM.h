@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/HierarchicalInstancedStaticMeshComponent.h"
 #include "FoliageDensityHISM.generated.h"
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UFoliageDensityHISM : public UHierarchicalInstancedStaticMeshComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UFoliageDensityHISM : public UHierarchicalInstancedStaticMeshComponent
+{
+	GENERATED_BODY()
+
 public:
-    UFoliageDensityHISM();
+	UFoliageDensityHISM();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UFoliageDensityHISM) { return 0; }

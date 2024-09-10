@@ -1,50 +1,54 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "AtlantaFriendUIData.h"
 #include "EActionOnFriendType.h"
 #include "UMGBaseFriendListElement.generated.h"
 
-class UUMGBaseButtonWidget;
-class UImage;
-class UTextBlock;
 class UCanvasPanel;
+class UUMGBaseButtonWidget;
 class UDataTable;
 class UNamedSlot;
+class UImage;
+class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class DBDUIVIEWSMOBILE_API UUMGBaseFriendListElement : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSMOBILE_API UUMGBaseFriendListElement : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    UImage* StatusPicture;
-    
-    UPROPERTY(Export)
-    UTextBlock* FriendName;
-    
-    UPROPERTY(Export)
-    UTextBlock* FriendStatus;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* SelectionHighlight;
-    
-    UPROPERTY(Export)
-    UUMGBaseButtonWidget* ItemSelectionBaseButton;
-    
-    UPROPERTY(Export)
-    UNamedSlot* ContextualMenuPosition;
-    
-    UPROPERTY()
-    FAtlantaFriendUIData _cachedFriendData;
-    
-    UPROPERTY(EditAnywhere)
-    UDataTable* FriendUIStatusDataTable;
-    
+	UPROPERTY(meta=(BindWidgetOptional))
+	UImage* StatusPicture;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* FriendName;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* FriendStatus;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* SelectionHighlight;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGBaseButtonWidget* ItemSelectionBaseButton;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UNamedSlot* ContextualMenuPosition;
+
+	UPROPERTY()
+	FAtlantaFriendUIData _cachedFriendData;
+
+	UPROPERTY(EditAnywhere)
+	UDataTable* FriendUIStatusDataTable;
+
 public:
-    UUMGBaseFriendListElement();
-    UFUNCTION(BlueprintCallable)
-    void TriggerActionOnThisFriend(EActionOnFriendType actionType);
-    
+	UFUNCTION(BlueprintCallable)
+	void TriggerActionOnThisFriend(EActionOnFriendType actionType);
+
+public:
+	UUMGBaseFriendListElement();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGBaseFriendListElement) { return 0; }

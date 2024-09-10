@@ -1,10 +1,11 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EFrameRateLimitButtonSetting.generated.h"
 
-UENUM()
-enum class EFrameRateLimitButtonSetting {
-    ThirtyFPS,
-    SixtyFPS,
+UENUM(BlueprintType)
+enum class EFrameRateLimitButtonSetting : uint8
+{
+	ThirtyFPS,
+	SixtyFPS,
 };
-

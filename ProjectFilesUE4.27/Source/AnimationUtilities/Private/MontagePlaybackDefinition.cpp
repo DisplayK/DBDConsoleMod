@@ -1,7 +1,8 @@
 #include "MontagePlaybackDefinition.h"
 
-FMontagePlaybackDefinition::FMontagePlaybackDefinition() {
-    this->PlayRate = 0.00f;
-    this->Follower = false;
+FMontagePlaybackDefinition::FMontagePlaybackDefinition()
+{
+	this->Descriptor = FAnimationMontageDescriptor{};
+	this->PlayRate = 0.0f;
+	this->Follower = false;
 }
-

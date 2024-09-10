@@ -2,9 +2,12 @@
 
 class UProveThyselfEffect;
 
-void UIsBestProveThyselfEffectInRange::OnInRangeChanged(const bool inRange, UProveThyselfEffect* proveThyselfEffect) {
+void UIsBestProveThyselfEffectInRange::OnInRangeChanged(const bool inRange, UProveThyselfEffect* proveThyselfEffect)
+{
+
 }
 
-UIsBestProveThyselfEffectInRange::UIsBestProveThyselfEffectInRange() {
-}
+UIsBestProveThyselfEffectInRange::UIsBestProveThyselfEffectInRange()
+{
 
+}

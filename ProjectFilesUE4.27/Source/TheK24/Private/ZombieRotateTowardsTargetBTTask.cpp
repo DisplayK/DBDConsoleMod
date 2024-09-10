@@ -1,5 +1,6 @@
 #include "ZombieRotateTowardsTargetBTTask.h"
 
-UZombieRotateTowardsTargetBTTask::UZombieRotateTowardsTargetBTTask() {
-}
+UZombieRotateTowardsTargetBTTask::UZombieRotateTowardsTargetBTTask()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "AkSwitchPlatformInfo.h"
 
-UAkSwitchPlatformInfo::UAkSwitchPlatformInfo() {
-}
+UAkSwitchPlatformInfo::UAkSwitchPlatformInfo()
+{
 
+}

@@ -1,6 +1,6 @@
 #include "OnEventBaseAddon.h"
 
+UOnEventBaseAddon::UOnEventBaseAddon()
+{
 
-UOnEventBaseAddon::UOnEventBaseAddon() {
 }
-

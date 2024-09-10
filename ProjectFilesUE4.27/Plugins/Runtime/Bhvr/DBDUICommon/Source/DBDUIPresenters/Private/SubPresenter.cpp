@@ -1,5 +1,6 @@
 #include "SubPresenter.h"
 
-USubPresenter::USubPresenter() {
-}
+USubPresenter::USubPresenter()
+{
 
+}

@@ -1,16 +1,19 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Float_NetQuantize8.generated.h"
 
 USTRUCT(BlueprintType)
-struct NETWORKUTILITIES_API FFloat_NetQuantize8 {
-    GENERATED_BODY()
-public:
+struct FFloat_NetQuantize8
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY()
-    float _value;
-    
+	UPROPERTY()
+	float _value;
+
 public:
-    FFloat_NetQuantize8();
+	NETWORKUTILITIES_API FFloat_NetQuantize8();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FFloat_NetQuantize8) { return 0; }

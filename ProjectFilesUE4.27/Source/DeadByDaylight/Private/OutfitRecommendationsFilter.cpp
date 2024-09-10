@@ -1,5 +1,6 @@
 #include "OutfitRecommendationsFilter.h"
 
-UOutfitRecommendationsFilter::UOutfitRecommendationsFilter() {
-}
+UOutfitRecommendationsFilter::UOutfitRecommendationsFilter()
+{
 
+}

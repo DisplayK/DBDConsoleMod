@@ -1,5 +1,6 @@
 #include "HooksWithSurvivorRangeTrackerStrategy.h"
 
-UHooksWithSurvivorRangeTrackerStrategy::UHooksWithSurvivorRangeTrackerStrategy() {
-}
+UHooksWithSurvivorRangeTrackerStrategy::UHooksWithSurvivorRangeTrackerStrategy()
+{
 
+}

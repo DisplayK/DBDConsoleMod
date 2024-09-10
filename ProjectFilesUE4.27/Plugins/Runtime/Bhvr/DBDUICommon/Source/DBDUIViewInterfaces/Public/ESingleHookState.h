@@ -1,12 +1,13 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ESingleHookState.generated.h"
 
-UENUM()
-enum class ESingleHookState {
-    EMPTY,
-    UNHOOKED,
-    HOOKED,
-    DISCONNECTED,
+UENUM(BlueprintType)
+enum class ESingleHookState : uint8
+{
+	EMPTY,
+	UNHOOKED,
+	HOOKED,
+	DISCONNECTED,
 };
-

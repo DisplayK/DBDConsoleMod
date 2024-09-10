@@ -1,6 +1,7 @@
 #include "AtlantaNoiseIndicatorDistanceData.h"
 
-FAtlantaNoiseIndicatorDistanceData::FAtlantaNoiseIndicatorDistanceData() {
-    this->DistanceForNoiseIndicatorToAppear = 0.00f;
+FAtlantaNoiseIndicatorDistanceData::FAtlantaNoiseIndicatorDistanceData()
+{
+	this->Description = TEXT("");
+	this->DistanceForNoiseIndicatorToAppear = 0.0f;
 }
-

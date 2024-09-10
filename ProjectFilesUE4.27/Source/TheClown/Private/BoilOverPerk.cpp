@@ -2,16 +2,19 @@
 
 class ADBDPlayer;
 
-void UBoilOverPerk::Authority_OnWiggleEnd() {
+void UBoilOverPerk::Authority_OnWiggleEnd()
+{
+
 }
 
-void UBoilOverPerk::Authority_OnPlayerPickedUpEnd(ADBDPlayer* picker) {
+void UBoilOverPerk::Authority_OnPlayerPickedUpEnd(ADBDPlayer* picker)
+{
+
 }
 
-UBoilOverPerk::UBoilOverPerk() {
-    this->_additionnalWigglingProgressWhenFalling[0] = 0.00f;
-    this->_additionnalWigglingProgressWhenFalling[1] = 0.00f;
-    this->_additionnalWigglingProgressWhenFalling[2] = 0.00f;
-    this->_greatHeightsValue = 100.00f;
+UBoilOverPerk::UBoilOverPerk()
+{
+	this->_effectsToSpawn = TArray<FStatusEffectSpawnData>();
+	this->_additionnalWigglingProgressWhenFalling = 0.000000;
+	this->_greatHeightsValue = 100.000000;
 }
-

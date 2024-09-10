@@ -1,5 +1,6 @@
 #include "OwningPlayerInLamentConfigurationRange.h"
 
-UOwningPlayerInLamentConfigurationRange::UOwningPlayerInLamentConfigurationRange() {
-}
+UOwningPlayerInLamentConfigurationRange::UOwningPlayerInLamentConfigurationRange()
+{
 
+}

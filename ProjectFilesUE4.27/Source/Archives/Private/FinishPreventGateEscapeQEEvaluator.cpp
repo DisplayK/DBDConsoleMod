@@ -1,5 +1,6 @@
 #include "FinishPreventGateEscapeQEEvaluator.h"
 
-UFinishPreventGateEscapeQEEvaluator::UFinishPreventGateEscapeQEEvaluator() {
-}
+UFinishPreventGateEscapeQEEvaluator::UFinishPreventGateEscapeQEEvaluator()
+{
 
+}

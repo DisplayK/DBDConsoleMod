@@ -1,5 +1,6 @@
 #include "HatchetCooldown.h"
 
-UHatchetCooldown::UHatchetCooldown() {
-}
+UHatchetCooldown::UHatchetCooldown()
+{
 
+}

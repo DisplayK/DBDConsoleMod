@@ -1,5 +1,5 @@
 #include "AtlantaCalendarEventsUIData.h"
 
-FAtlantaCalendarEventsUIData::FAtlantaCalendarEventsUIData() {
+FAtlantaCalendarEventsUIData::FAtlantaCalendarEventsUIData()
+{
 }
-

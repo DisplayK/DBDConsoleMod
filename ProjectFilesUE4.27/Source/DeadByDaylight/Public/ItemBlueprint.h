@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Animation/SkeletalMeshActor.h"
+#include "SkeletalMeshActorBudgeted.h"
 #include "ItemBlueprint.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API AItemBlueprint : public ASkeletalMeshActor {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API AItemBlueprint : public ASkeletalMeshActorBudgeted
+{
+	GENERATED_BODY()
+
 public:
-    AItemBlueprint();
+	AItemBlueprint();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AItemBlueprint) { return 0; }

@@ -1,5 +1,6 @@
 #include "DBDDebugCameraController.h"
 
-ADBDDebugCameraController::ADBDDebugCameraController() {
-}
+ADBDDebugCameraController::ADBDDebugCameraController()
+{
 
+}

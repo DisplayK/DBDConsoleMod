@@ -2,10 +2,12 @@
 
 class ASlasherPlayer;
 
-ASlasherPlayer* UKillerProjectileLauncher::GetOwningKiller() const {
-    return NULL;
+ASlasherPlayer* UKillerProjectileLauncher::GetOwningKiller() const
+{
+	return NULL;
 }
 
-UKillerProjectileLauncher::UKillerProjectileLauncher() {
-}
+UKillerProjectileLauncher::UKillerProjectileLauncher()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "ReflectionCaptureTwoStates.h"
 
-FReflectionCaptureTwoStates::FReflectionCaptureTwoStates() {
+FReflectionCaptureTwoStates::FReflectionCaptureTwoStates()
+{
+	this->ComponentReference = FComponentReference{};
 }
-

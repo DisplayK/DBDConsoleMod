@@ -1,5 +1,6 @@
 #include "Insidious.h"
 
-UInsidious::UInsidious() {
-}
+UInsidious::UInsidious()
+{
 
+}

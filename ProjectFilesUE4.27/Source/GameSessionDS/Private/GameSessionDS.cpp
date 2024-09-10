@@ -1,5 +1,6 @@
 #include "GameSessionDS.h"
 
-UGameSessionDS::UGameSessionDS() {
-}
+UGameSessionDS::UGameSessionDS()
+{
 
+}

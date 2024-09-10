@@ -1,5 +1,5 @@
 #include "EACClientInfo.h"
 
-FEACClientInfo::FEACClientInfo() {
+FEACClientInfo::FEACClientInfo()
+{
 }
-

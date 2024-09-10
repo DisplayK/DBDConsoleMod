@@ -1,5 +1,6 @@
 #include "AtlantaRitualEvaluatorInvalid.h"
 
-UAtlantaRitualEvaluatorInvalid::UAtlantaRitualEvaluatorInvalid() {
-}
+UAtlantaRitualEvaluatorInvalid::UAtlantaRitualEvaluatorInvalid()
+{
 
+}

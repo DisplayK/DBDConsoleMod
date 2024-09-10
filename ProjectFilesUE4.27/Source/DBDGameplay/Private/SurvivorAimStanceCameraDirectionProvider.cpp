@@ -1,5 +1,6 @@
 #include "SurvivorAimStanceCameraDirectionProvider.h"
 
-USurvivorAimStanceCameraDirectionProvider::USurvivorAimStanceCameraDirectionProvider() {
-}
+USurvivorAimStanceCameraDirectionProvider::USurvivorAimStanceCameraDirectionProvider()
+{
 
+}

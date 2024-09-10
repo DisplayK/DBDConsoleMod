@@ -1,20 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AICharacterBehaviourData.h"
 #include "AICharacterEscapeCarriedData.generated.h"
 
 UCLASS(BlueprintType)
-class UAICharacterEscapeCarriedData : public UAICharacterBehaviourData {
-    GENERATED_BODY()
-public:
+class UAICharacterEscapeCarriedData : public UAICharacterBehaviourData
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    bool _preventWiggleSuccess;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient, meta=(AllowPrivateAccess=true))
+	bool _preventWiggleSuccess;
+
 public:
-    UAICharacterEscapeCarriedData();
-    UFUNCTION(BlueprintCallable)
-    void Init(bool preventWiggleSuccess);
-    
+	UFUNCTION(BlueprintCallable)
+	void Init(bool preventWiggleSuccess);
+
+public:
+	UAICharacterEscapeCarriedData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAICharacterEscapeCarriedData) { return 0; }

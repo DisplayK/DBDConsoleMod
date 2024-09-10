@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EventDrivenModifierCondition.h"
 #include "GameplayTagContainer.h"
@@ -6,23 +7,25 @@
 
 class UInteractionDefinition;
 
-UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
-class UBaseIsPlayerPerformingInteraction : public UEventDrivenModifierCondition {
-    GENERATED_BODY()
-public:
+UCLASS(BlueprintType, Abstract, meta=(BlueprintSpawnableComponent))
+class UBaseIsPlayerPerformingInteraction : public UEventDrivenModifierCondition
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FGameplayTagContainer _interactionSemantics;
-    
-public:
-    UBaseIsPlayerPerformingInteraction();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FGameplayTagContainer _interactionSemantics;
+
 protected:
-    UFUNCTION()
-    void UpdateIsTrue(UInteractionDefinition* interactionDefinition);
-    
+	UFUNCTION()
+	void UpdateIsTrue(UInteractionDefinition* interactionDefinition);
+
 public:
-    UFUNCTION(BlueprintCallable)
-    void SetInteractionSemantics(const FGameplayTagContainer& interactionSemantics);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetInteractionSemantics(const FGameplayTagContainer& interactionSemantics);
+
+public:
+	UBaseIsPlayerPerformingInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBaseIsPlayerPerformingInteraction) { return 0; }

@@ -1,5 +1,6 @@
 #include "ShopAnalytics.h"
 
-FShopAnalytics::FShopAnalytics() {
+FShopAnalytics::FShopAnalytics()
+{
+	this->LogMessage = TEXT("");
 }
-

@@ -1,5 +1,6 @@
 #include "PossessTheKiller.h"
 
-UPossessTheKiller::UPossessTheKiller() {
-}
+UPossessTheKiller::UPossessTheKiller()
+{
 
+}

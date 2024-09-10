@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
 #include "TaggedAnimSequence.generated.h"
@@ -6,15 +7,19 @@
 class UAnimSequence;
 
 USTRUCT(BlueprintType)
-struct ANIMATIONUTILITIES_API FTaggedAnimSequence {
-    GENERATED_BODY()
+struct FTaggedAnimSequence
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    UAnimSequence* Sequence;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    FGameplayTagContainer Tags;
-    
-    FTaggedAnimSequence();
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	UAnimSequence* Sequence;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	FGameplayTagContainer Tags;
+
+public:
+	ANIMATIONUTILITIES_API FTaggedAnimSequence();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FTaggedAnimSequence) { return 0; }

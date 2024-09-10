@@ -1,5 +1,6 @@
 #include "BoonTotemIsActive.h"
 
-UBoonTotemIsActive::UBoonTotemIsActive() {
-}
+UBoonTotemIsActive::UBoonTotemIsActive()
+{
 
+}

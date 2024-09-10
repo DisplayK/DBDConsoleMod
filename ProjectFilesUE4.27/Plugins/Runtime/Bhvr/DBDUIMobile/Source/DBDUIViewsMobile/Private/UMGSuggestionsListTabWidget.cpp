@@ -1,7 +1,7 @@
 #include "UMGSuggestionsListTabWidget.h"
 
-UUMGSuggestionsListTabWidget::UUMGSuggestionsListTabWidget() {
-    this->PlayedWithFriendsExpandableList = NULL;
-    this->SocialFriendsExpandableList = NULL;
+UUMGSuggestionsListTabWidget::UUMGSuggestionsListTabWidget()
+{
+	this->PlayedWithFriendsExpandableList = NULL;
+	this->SocialFriendsExpandableList = NULL;
 }
-

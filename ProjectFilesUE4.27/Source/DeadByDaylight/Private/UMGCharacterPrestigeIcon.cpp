@@ -1,6 +1,6 @@
 #include "UMGCharacterPrestigeIcon.h"
 
-UUMGCharacterPrestigeIcon::UUMGCharacterPrestigeIcon() {
-    this->PrestigeImage = NULL;
+UUMGCharacterPrestigeIcon::UUMGCharacterPrestigeIcon()
+{
+	this->PrestigeImage = NULL;
 }
-

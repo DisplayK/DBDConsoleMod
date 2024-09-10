@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "PromptManager.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API UPromptManager : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UPromptManager : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPromptManager();
+	UPromptManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPromptManager) { return 0; }

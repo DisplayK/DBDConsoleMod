@@ -1,12 +1,16 @@
 #include "BloodOrbAbsorberComponent.h"
 
-void UBloodOrbAbsorberComponent::SetInAbsorbMode(const bool inAbsorptionMode) {
+void UBloodOrbAbsorberComponent::SetInAbsorbMode(const bool inAbsorptionMode)
+{
+
 }
 
-bool UBloodOrbAbsorberComponent::IsInAbsorbMode() const {
-    return false;
+bool UBloodOrbAbsorberComponent::IsInAbsorbMode() const
+{
+	return false;
 }
 
-UBloodOrbAbsorberComponent::UBloodOrbAbsorberComponent() {
+UBloodOrbAbsorberComponent::UBloodOrbAbsorberComponent()
+{
+	this->_camperBloodOrbDropperComponents = TArray<UBloodOrbDropperComponent*>();
 }
-

@@ -1,5 +1,6 @@
 #include "PlayerReportManager.h"
 
-UPlayerReportManager::UPlayerReportManager() {
+UPlayerReportManager::UPlayerReportManager()
+{
+	this->_gameInstance = NULL;
 }
-

@@ -1,6 +1,6 @@
 #include "MovieSceneAkAudioRTPCTemplate.h"
 
-FMovieSceneAkAudioRTPCTemplate::FMovieSceneAkAudioRTPCTemplate() {
-    this->Section = NULL;
+FMovieSceneAkAudioRTPCTemplate::FMovieSceneAkAudioRTPCTemplate()
+{
+	this->Section = NULL;
 }
-

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "KillerAnimInstance.h"
 #include "EWallGrabState.h"
@@ -7,23 +8,25 @@
 class UBlightPowerStateComponent;
 
 UCLASS(NonTransient)
-class UBlightAnimInstance : public UKillerAnimInstance {
-    GENERATED_BODY()
-public:
+class UBlightAnimInstance : public UKillerAnimInstance
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, Export)
-    UBlightPowerStateComponent* _blightPowerStateComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EWallGrabState _powerState;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _stateTimeRemaining;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _lookAngle;
-    
+	UPROPERTY(BlueprintReadWrite, meta=(BindWidgetOptional))
+	UBlightPowerStateComponent* _blightPowerStateComponent;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EWallGrabState _powerState;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _stateTimeRemaining;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _lookAngle;
+
 public:
-    UBlightAnimInstance();
+	UBlightAnimInstance();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBlightAnimInstance) { return 0; }

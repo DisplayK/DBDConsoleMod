@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EAkMidiEventType.h"
 #include "AkMidiEventBase.generated.h"
 
 USTRUCT(BlueprintType)
-struct FAkMidiEventBase {
-    GENERATED_BODY()
+struct FAkMidiEventBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EAkMidiEventType Type;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint8 Chan;
-    
-    AKAUDIO_API FAkMidiEventBase();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	EAkMidiEventType Type;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	uint8 Chan;
+
+public:
+	AKAUDIO_API FAkMidiEventBase();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkMidiEventBase) { return 0; }

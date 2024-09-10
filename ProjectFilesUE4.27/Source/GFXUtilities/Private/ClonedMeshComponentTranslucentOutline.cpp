@@ -1,5 +1,6 @@
 #include "ClonedMeshComponentTranslucentOutline.h"
 
-UClonedMeshComponentTranslucentOutline::UClonedMeshComponentTranslucentOutline() {
-}
+UClonedMeshComponentTranslucentOutline::UClonedMeshComponentTranslucentOutline()
+{
 
+}

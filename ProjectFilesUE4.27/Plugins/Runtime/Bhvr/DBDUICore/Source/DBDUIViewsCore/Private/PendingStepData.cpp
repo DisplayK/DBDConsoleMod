@@ -1,5 +1,6 @@
 #include "PendingStepData.h"
 
-FPendingStepData::FPendingStepData() {
+FPendingStepData::FPendingStepData()
+{
+	this->tutorialData = TArray<FPendingTutorialData>();
 }
-

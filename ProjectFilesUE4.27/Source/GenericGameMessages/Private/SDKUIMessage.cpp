@@ -1,5 +1,5 @@
 #include "SDKUIMessage.h"
 
-FSDKUIMessage::FSDKUIMessage() {
+FSDKUIMessage::FSDKUIMessage()
+{
 }
-

@@ -1,5 +1,6 @@
 #include "NetEaseAnalyticsUtil.h"
 
-UNetEaseAnalyticsUtil::UNetEaseAnalyticsUtil() {
-}
+UNetEaseAnalyticsUtil::UNetEaseAnalyticsUtil()
+{
 
+}

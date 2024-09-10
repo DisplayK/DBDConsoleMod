@@ -1,5 +1,6 @@
 #include "CoreItemInteractionWidget.h"
 
-UCoreItemInteractionWidget::UCoreItemInteractionWidget() {
-}
+UCoreItemInteractionWidget::UCoreItemInteractionWidget()
+{
 
+}

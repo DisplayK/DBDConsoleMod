@@ -1,13 +1,15 @@
 #include "DBDProjectileUtilities.h"
 
+class UAuthoritativePoolProjectileProviderAdapter;
 class UObject;
 class UAuthoritativeActorPoolComponent;
-class UAuthoritativePoolProjectileProviderAdapter;
 
-UAuthoritativePoolProjectileProviderAdapter* UDBDProjectileUtilities::CreateProjectilePoolAdapter(UObject* outer, UAuthoritativeActorPoolComponent* pool) {
-    return NULL;
+UAuthoritativePoolProjectileProviderAdapter* UDBDProjectileUtilities::CreateProjectilePoolAdapter(UObject* outer, UAuthoritativeActorPoolComponent* pool)
+{
+	return NULL;
 }
 
-UDBDProjectileUtilities::UDBDProjectileUtilities() {
-}
+UDBDProjectileUtilities::UDBDProjectileUtilities()
+{
 
+}

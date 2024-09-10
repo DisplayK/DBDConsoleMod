@@ -1,5 +1,6 @@
 #include "DBDSlasherData.h"
 
-UDBDSlasherData::UDBDSlasherData() {
-}
+UDBDSlasherData::UDBDSlasherData()
+{
 
+}

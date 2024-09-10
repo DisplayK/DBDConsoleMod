@@ -1,5 +1,6 @@
 #include "SlasherAttackPickerComponent.h"
 
-USlasherAttackPickerComponent::USlasherAttackPickerComponent() {
-}
+USlasherAttackPickerComponent::USlasherAttackPickerComponent()
+{
 
+}

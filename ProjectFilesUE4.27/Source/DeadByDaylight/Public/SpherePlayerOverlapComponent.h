@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/SphereComponent.h"
 #include "SpherePlayerOverlapComponent.generated.h"
 
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API USpherePlayerOverlapComponent : public USphereComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API USpherePlayerOverlapComponent : public USphereComponent
+{
+	GENERATED_BODY()
+
 public:
-    USpherePlayerOverlapComponent();
+	USpherePlayerOverlapComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USpherePlayerOverlapComponent) { return 0; }

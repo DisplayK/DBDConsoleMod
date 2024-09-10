@@ -1,5 +1,5 @@
 #include "RoleUnlockMessage.h"
 
-FRoleUnlockMessage::FRoleUnlockMessage() {
+FRoleUnlockMessage::FRoleUnlockMessage()
+{
 }
-

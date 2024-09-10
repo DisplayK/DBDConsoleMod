@@ -1,6 +1,6 @@
 #include "TwinsStatusData.h"
 
-FTwinsStatusData::FTwinsStatusData() {
-    this->TwinsActive = false;
+UTwinsStatusData::UTwinsStatusData()
+{
+	this->TwinsActive = false;
 }
-

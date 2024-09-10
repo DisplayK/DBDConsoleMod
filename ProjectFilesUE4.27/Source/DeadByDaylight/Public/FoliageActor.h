@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "FoliageActor.generated.h"
@@ -6,14 +7,16 @@
 class UFoliageDensityHISM;
 
 UCLASS()
-class AFoliageActor : public AActor {
-    GENERATED_BODY()
-public:
+class AFoliageActor : public AActor
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export)
-    UFoliageDensityHISM* _foliageHISM;
-    
+	UPROPERTY(Export)
+	UFoliageDensityHISM* _foliageHISM;
+
 public:
-    AFoliageActor();
+	AFoliageActor();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AFoliageActor) { return 0; }

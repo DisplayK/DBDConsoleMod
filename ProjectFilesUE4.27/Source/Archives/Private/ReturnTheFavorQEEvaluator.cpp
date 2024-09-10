@@ -1,5 +1,7 @@
 #include "ReturnTheFavorQEEvaluator.h"
 
-UReturnTheFavorQEEvaluator::UReturnTheFavorQEEvaluator() {
+UReturnTheFavorQEEvaluator::UReturnTheFavorQEEvaluator()
+{
+	this->_favorToReturnEvents = TSet<FGameplayTag>();
+	this->_instigatorList = TSet<TWeakObjectPtr<ADBDPlayer>>();
 }
-

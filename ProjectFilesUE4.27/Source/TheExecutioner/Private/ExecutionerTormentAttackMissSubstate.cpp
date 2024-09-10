@@ -1,5 +1,6 @@
 #include "ExecutionerTormentAttackMissSubstate.h"
 
-UExecutionerTormentAttackMissSubstate::UExecutionerTormentAttackMissSubstate() {
-}
+UExecutionerTormentAttackMissSubstate::UExecutionerTormentAttackMissSubstate()
+{
 
+}

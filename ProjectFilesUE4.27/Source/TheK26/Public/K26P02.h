@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Perk.h"
 #include "GameEventData.h"
@@ -8,32 +9,28 @@ class AGenerator;
 class ADBDPlayer;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UK26P02 : public UPerk {
-    GENERATED_BODY()
-public:
+class UK26P02 : public UPerk
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    float _generatorRegressPercentage[3];
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, meta=(AllowPrivateAccess=true))
-    float _screamRevealLocationDuration;
-    
-public:
-    UK26P02();
+	UPROPERTY(EditDefaultsOnly)
+	float _generatorRegressPercentage;
+
 private:
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_TriggerPerk(AGenerator* explodingGenerator);
-    
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_TriggerPerk(AGenerator* explodingGenerator);
+
 protected:
-    UFUNCTION(BlueprintPure)
-    float GetScreamRevealLocationDuration() const;
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_MakeSurvivorScream(const ADBDPlayer* screamingSurvivor);
-    
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_MakeSurvivorScream(const ADBDPlayer* screamingSurvivor);
+
 private:
-    UFUNCTION()
-    void Authority_OnSurvivorHookedOnScourgeHook(const FGameEventData& gameEventData);
-    
+	UFUNCTION()
+	void Authority_OnSurvivorHookedOnScourgeHook(const FGameEventData& gameEventData);
+
+public:
+	UK26P02();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UK26P02) { return 0; }

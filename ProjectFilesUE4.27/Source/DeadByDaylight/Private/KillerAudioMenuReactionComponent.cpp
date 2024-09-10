@@ -1,9 +1,11 @@
 #include "KillerAudioMenuReactionComponent.h"
 
-void UKillerAudioMenuReactionComponent::OnLobbyTimeChanged() {
+void UKillerAudioMenuReactionComponent::OnLobbyTimeChanged()
+{
+
 }
 
+UKillerAudioMenuReactionComponent::UKillerAudioMenuReactionComponent()
+{
 
-UKillerAudioMenuReactionComponent::UKillerAudioMenuReactionComponent() {
 }
-

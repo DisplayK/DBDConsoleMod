@@ -1,5 +1,6 @@
 #include "DBDAIBTUtilities.h"
 
-UDBDAIBTUtilities::UDBDAIBTUtilities() {
-}
+UDBDAIBTUtilities::UDBDAIBTUtilities()
+{
 
+}

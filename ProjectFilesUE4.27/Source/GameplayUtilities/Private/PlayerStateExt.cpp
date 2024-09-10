@@ -1,5 +1,6 @@
 #include "PlayerStateExt.h"
 
-UPlayerStateExt::UPlayerStateExt() {
-}
+UPlayerStateExt::UPlayerStateExt()
+{
 
+}

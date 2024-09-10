@@ -1,7 +1,6 @@
 #include "UMGStatusEffectIcon.h"
 
+UUMGStatusEffectIcon::UUMGStatusEffectIcon()
+{
 
-
-UUMGStatusEffectIcon::UUMGStatusEffectIcon() {
 }
-

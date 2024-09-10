@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "DBDBloodwebDefinitionBase.h"
+#include "UObject/NoExportTypes.h"
 #include "DBDAtlantaBloodwebDefinition.generated.h"
 
 UCLASS()
-class UDBDAtlantaBloodwebDefinition : public UObject, public IDBDBloodwebDefinitionBase {
-    GENERATED_BODY()
+class UDBDAtlantaBloodwebDefinition : public UObject, public IDBDBloodwebDefinitionBase
+{
+	GENERATED_BODY()
+
 public:
-    UDBDAtlantaBloodwebDefinition();
-    
-    // Fix for true pure virtual functions not being implemented
+	UDBDAtlantaBloodwebDefinition();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDAtlantaBloodwebDefinition) { return 0; }

@@ -1,21 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "ClaimStatus.generated.h"
 
 USTRUCT()
-struct RETENTIONREWARDSUTILITIES_API FClaimStatus {
-    GENERATED_BODY()
+struct FClaimStatus
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(Transient)
-    bool isSet;
-    
-    UPROPERTY(Transient)
-    int32 LastClaimedIndex;
-    
-    UPROPERTY(Transient)
-    FDateTime NextClaimTime;
-    
-    FClaimStatus();
+	UPROPERTY(Transient)
+	bool isSet;
+
+	UPROPERTY(Transient)
+	int32 LastClaimedIndex;
+
+	UPROPERTY(Transient)
+	FDateTime NextClaimTime;
+
+public:
+	RETENTIONREWARDSUTILITIES_API FClaimStatus();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FClaimStatus) { return 0; }

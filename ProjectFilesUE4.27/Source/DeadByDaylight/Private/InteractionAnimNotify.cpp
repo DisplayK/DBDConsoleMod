@@ -1,5 +1,6 @@
 #include "InteractionAnimNotify.h"
 
-UInteractionAnimNotify::UInteractionAnimNotify() {
+UInteractionAnimNotify::UInteractionAnimNotify()
+{
+	this->NotifyID = NAME_None;
 }
-

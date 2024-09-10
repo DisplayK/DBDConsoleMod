@@ -1,5 +1,6 @@
 #include "HillbillyChainsawRevInteraction.h"
 
-UHillbillyChainsawRevInteraction::UHillbillyChainsawRevInteraction() {
-}
+UHillbillyChainsawRevInteraction::UHillbillyChainsawRevInteraction()
+{
 
+}

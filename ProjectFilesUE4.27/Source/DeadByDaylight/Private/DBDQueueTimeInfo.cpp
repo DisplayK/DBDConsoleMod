@@ -1,5 +1,5 @@
 #include "DBDQueueTimeInfo.h"
 
-FDBDQueueTimeInfo::FDBDQueueTimeInfo() {
+FDBDQueueTimeInfo::FDBDQueueTimeInfo()
+{
 }
-

@@ -1,7 +1,7 @@
 #include "RarityMaterialData.h"
 
-FRarityMaterialData::FRarityMaterialData() {
-    this->Rarity = EItemRarity::Common;
-    this->Material = NULL;
+FRarityMaterialData::FRarityMaterialData()
+{
+	this->LoadoutPartMaterial = NULL;
+	this->CustomizationMaterial = NULL;
 }
-

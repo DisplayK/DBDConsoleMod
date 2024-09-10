@@ -1,17 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PerkLevelText.generated.h"
 
 USTRUCT(BlueprintType)
-struct FPerkLevelText {
-    GENERATED_BODY()
+struct FPerkLevelText
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FString> Tunables;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText TextOverride;
-    
-    DEADBYDAYLIGHT_API FPerkLevelText();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FString> Tunables;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText TextOverride;
+
+public:
+	DEADBYDAYLIGHT_API FPerkLevelText();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FPerkLevelText) { return 0; }

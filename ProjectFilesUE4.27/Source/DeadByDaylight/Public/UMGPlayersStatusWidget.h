@@ -1,35 +1,43 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
-#include "EPlayerRole.h"
 #include "CustomizedHudPlayerWrapperIdMapContainer.h"
+#include "EPlayerRole.h"
+#include "UObject/SoftObjectPtr.h"
 #include "UMGPlayersStatusWidget.generated.h"
 
 class UHorizontalBox;
 class UUMGPlayerStatusIcon;
 
 UCLASS(EditInlineNew)
-class DEADBYDAYLIGHT_API UUMGPlayersStatusWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UUMGPlayersStatusWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditAnywhere)
-    TMap<EPlayerRole, FCustomizedHudPlayerWrapperIdMapContainer> CustomizedHudWrapperIdMap;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSoftClassPtr<UUMGPlayerStatusIcon> PlayerStatusIconClass;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UHorizontalBox* playersContainer;
-    
+	UPROPERTY(EditAnywhere)
+	TMap<EPlayerRole, FCustomizedHudPlayerWrapperIdMapContainer> CustomizedHudWrapperIdMap;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSoftClassPtr<UUMGPlayerStatusIcon> PlayerStatusIconClass;
+
+	UPROPERTY(BlueprintReadOnly, Export)
+	UHorizontalBox* playersContainer;
+
 private:
-    UPROPERTY(Export, Transient)
-    TMap<FString, UUMGPlayerStatusIcon*> playerIconsByName;
-    
+	UPROPERTY(Transient, Export)
+	TMap<FString, UUMGPlayerStatusIcon*> playerIconsByName;
+
+	UPROPERTY(Transient, Export)
+	TArray<UUMGPlayerStatusIcon*> _playerIcons;
+
+private:
+	UFUNCTION()
+	void OnPlayerStatusClicked(UUMGPlayerStatusIcon* playerStatusIcon);
+
 public:
-    UUMGPlayersStatusWidget();
-private:
-    UFUNCTION()
-    void OnPlayerStatusClicked(UUMGPlayerStatusIcon* playerStatusIcon);
-    
+	UUMGPlayersStatusWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGPlayersStatusWidget) { return 0; }

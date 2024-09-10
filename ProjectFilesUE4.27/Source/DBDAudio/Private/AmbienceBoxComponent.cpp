@@ -1,5 +1,6 @@
 #include "AmbienceBoxComponent.h"
 
-UAmbienceBoxComponent::UAmbienceBoxComponent() {
-}
+UAmbienceBoxComponent::UAmbienceBoxComponent()
+{
 
+}

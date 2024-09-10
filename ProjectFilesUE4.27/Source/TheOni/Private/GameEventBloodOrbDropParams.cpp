@@ -1,6 +1,7 @@
 #include "GameEventBloodOrbDropParams.h"
 
-FGameEventBloodOrbDropParams::FGameEventBloodOrbDropParams() {
-    this->ImpulseFactor = 0.00f;
+FGameEventBloodOrbDropParams::FGameEventBloodOrbDropParams()
+{
+	this->GameEvent = FGameplayTag{};
+	this->ImpulseFactor = 0.0f;
 }
-

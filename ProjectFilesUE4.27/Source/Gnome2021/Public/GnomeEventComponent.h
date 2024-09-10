@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
 #include "RespawningEventComponent.h"
@@ -9,21 +10,23 @@ class UInteractionRespawnableTrigger;
 class UTimedRespawnableTrigger;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UGnomeEventComponent : public URespawningEventComponent {
-    GENERATED_BODY()
-public:
+class UGnomeEventComponent : public URespawningEventComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UInteractionRespawnableTrigger* _interactionRespawnableTrigger;
-    
-    UPROPERTY(Export, Transient)
-    UTimedRespawnableTrigger* _timedRespawnableTrigger;
-    
-public:
-    UGnomeEventComponent();
+	UPROPERTY(Transient, Export)
+	UInteractionRespawnableTrigger* _interactionRespawnableTrigger;
+
+	UPROPERTY(Transient, Export)
+	UTimedRespawnableTrigger* _timedRespawnableTrigger;
+
 private:
-    UFUNCTION()
-    void Authority_OnEndGameStarted(FGameplayTag gameEventType, const FGameEventData& gameEventData);
-    
+	UFUNCTION()
+	void Authority_OnEndGameStarted(FGameplayTag gameEventType, const FGameEventData& gameEventData);
+
+public:
+	UGnomeEventComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UGnomeEventComponent) { return 0; }

@@ -1,5 +1,6 @@
 #include "IsSubjectInteractingWithOriginatingPlayer.h"
 
-UIsSubjectInteractingWithOriginatingPlayer::UIsSubjectInteractingWithOriginatingPlayer() {
-}
+UIsSubjectInteractingWithOriginatingPlayer::UIsSubjectInteractingWithOriginatingPlayer()
+{
 
+}

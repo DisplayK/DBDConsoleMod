@@ -2,12 +2,17 @@
 
 class ADBDPlayer;
 
-void UDemonModeCooldownInteraction::SetPlayerOwner(const ADBDPlayer* owner) {
+void UDemonModeCooldownInteraction::SetPlayerOwner(const ADBDPlayer* owner)
+{
+
 }
 
-void UDemonModeCooldownInteraction::OnLevelReadyToPlay() {
+void UDemonModeCooldownInteraction::OnLevelReadyToPlay()
+{
+
 }
 
-UDemonModeCooldownInteraction::UDemonModeCooldownInteraction() {
-}
+UDemonModeCooldownInteraction::UDemonModeCooldownInteraction()
+{
 
+}

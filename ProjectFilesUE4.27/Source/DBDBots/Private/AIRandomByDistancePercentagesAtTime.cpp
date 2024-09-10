@@ -1,5 +1,8 @@
 #include "AIRandomByDistancePercentagesAtTime.h"
 
-FAIRandomByDistancePercentagesAtTime::FAIRandomByDistancePercentagesAtTime() {
+FAIRandomByDistancePercentagesAtTime::FAIRandomByDistancePercentagesAtTime()
+{
+	this->PercentageAtStartDistance = FAITunableParameter{};
+	this->PercentageAtEndDistance = FAITunableParameter{};
+	this->AtRelativeTime = FAITunableParameter{};
 }
-

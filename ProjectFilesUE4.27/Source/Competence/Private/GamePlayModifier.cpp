@@ -1,6 +1,7 @@
 #include "GamePlayModifier.h"
 
-FGamePlayModifier::FGamePlayModifier() {
-    this->ModifierValue = 0.00f;
+FGamePlayModifier::FGamePlayModifier()
+{
+	this->Type = FGameplayTag{};
+	this->ModifierValue = 0.0f;
 }
-

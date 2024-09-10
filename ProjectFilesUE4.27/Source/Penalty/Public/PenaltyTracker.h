@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "PenaltyTracker.generated.h"
 
 UCLASS()
-class PENALTY_API UPenaltyTracker : public UObject {
-    GENERATED_BODY()
+class PENALTY_API UPenaltyTracker : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPenaltyTracker();
+	UPenaltyTracker();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPenaltyTracker) { return 0; }

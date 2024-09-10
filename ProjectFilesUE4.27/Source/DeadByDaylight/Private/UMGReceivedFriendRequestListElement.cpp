@@ -1,6 +1,6 @@
 #include "UMGReceivedFriendRequestListElement.h"
 
-UUMGReceivedFriendRequestListElement::UUMGReceivedFriendRequestListElement() {
-    this->FriendRequestStatusRichText = NULL;
+UUMGReceivedFriendRequestListElement::UUMGReceivedFriendRequestListElement()
+{
+	this->FriendRequestStatusRichText = NULL;
 }
-

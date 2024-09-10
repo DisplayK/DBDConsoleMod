@@ -1,6 +1,7 @@
 #include "DebugLoadoutPerk.h"
 
-FDebugLoadoutPerk::FDebugLoadoutPerk() {
-    this->PerkLevel = 0;
+FDebugLoadoutPerk::FDebugLoadoutPerk()
+{
+	this->PerkDropdown = FPerkDropdown{};
+	this->PerkLevel = 0;
 }
-

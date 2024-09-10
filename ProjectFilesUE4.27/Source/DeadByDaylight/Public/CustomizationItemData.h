@@ -1,78 +1,101 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "CustomizationData.h"
 #include "ECustomizationCategory.h"
-#include "ConditionalMaterialReplacer.h"
+#include "GameplayTagContainer.h"
 #include "MaterialReplacerData.h"
-#include "CustomSoundFXData.h"
+#include "CustomizationData.h"
+#include "UObject/SoftObjectPtr.h"
+#include "ConditionalMaterialReplacer.h"
+#include "TextureReplacerData.h"
 #include "ECharmCategory.h"
 #include "BPAttachementSocketData.h"
-#include "UnlockSaveStatCondition.h"
 #include "CustomAnimData.h"
+#include "UnlockSaveStatCondition.h"
+#include "CustomSoundFXData.h"
 #include "CustomizationItemData.generated.h"
 
 class USkeletalMesh;
 class UAnimInstance;
 class AActor;
 
-USTRUCT()
-struct DEADBYDAYLIGHT_API FCustomizationItemData : public FCustomizationData {
-    GENERATED_BODY()
+USTRUCT(BlueprintType)
+struct FCustomizationItemData: public FCustomizationData
+{
+	GENERATED_BODY()
+
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	ECustomizationCategory Category;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TSoftObjectPtr<USkeletalMesh> ItemMesh;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSoftObjectPtr<UBlueprint> ItemBlueprint;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TSoftClassPtr<UAnimInstance> AnimClass;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TSoftClassPtr<AActor> ItemBlueprint;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<FMaterialReplacerData> MaterialsMap;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FConditionalMaterialReplacer ConditionalMaterialReplacer;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<FTextureReplacerData> TexturesMap;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<FName> SkeletalComponentTags;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FGameplayTagContainer CosmeticOverrideSemanticTags;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FText CollectionName;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FText CollectionDescription;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int32 PrestigeUlockLevel;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FString PrestigeUnlockDate;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FName EventId;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<FBPAttachementSocketData> SocketAttachments;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	ECharmCategory CharmCategory;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FUnlockSaveStatCondition UnlockingConditions;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<FBPAttachementSocketData> SocketAttachements;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<FUnlockSaveStatCondition> UnlockingConditions;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	bool IsInStore;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	bool IsInNonViolentBuild;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	uint8 PlatformExclusiveFlag;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	bool IsAvailableInAtlantaBuild;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere)
+	uint32 PlatformExclusiveFlag;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<FCustomSoundFXData> CustomSFXs;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FCustomAnimData AnimationData;
 
-    FCustomizationItemData();
+public:
+	DEADBYDAYLIGHT_API FCustomizationItemData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCustomizationItemData) { return 0; }

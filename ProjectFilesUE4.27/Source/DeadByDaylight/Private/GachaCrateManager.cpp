@@ -1,5 +1,6 @@
 #include "GachaCrateManager.h"
 
-UGachaCrateManager::UGachaCrateManager() {
-}
+UGachaCrateManager::UGachaCrateManager()
+{
 
+}

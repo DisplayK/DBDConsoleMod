@@ -2,10 +2,12 @@
 
 class UObject;
 
-bool UNetUtils::IsDedicatedServerInstance(const UObject* worldContextObject) {
-    return false;
+bool UNetUtils::IsDedicatedServerInstance(const UObject* worldContextObject)
+{
+	return false;
 }
 
-UNetUtils::UNetUtils() {
-}
+UNetUtils::UNetUtils()
+{
 
+}

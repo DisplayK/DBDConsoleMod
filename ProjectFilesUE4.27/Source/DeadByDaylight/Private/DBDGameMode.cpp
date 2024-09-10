@@ -1,36 +1,63 @@
 #include "DBDGameMode.h"
+#include "EGameState.h"
 
 class APlayerState;
+class ADBDPlayerState;
 
-void ADBDGameMode::SetEscapeOpened(bool val) {
+void ADBDGameMode::SetPlayerCount(int32 playerAmount)
+{
+
 }
 
-void ADBDGameMode::RegisterOnPlayerStateChanged(APlayerState* playerState) {
+void ADBDGameMode::SetEscapeOpened(bool val)
+{
+
 }
 
-void ADBDGameMode::OnPlayerGameStateChanged(EGameState playerGameState) {
+void ADBDGameMode::RegisterOnPlayerStateChanged(APlayerState* playerState)
+{
+
 }
 
-void ADBDGameMode::LevelLoaded(const FString& levelName) {
+void ADBDGameMode::OnPlayerGameStateChanged(ADBDPlayerState* playerState, EGameState playerGameState)
+{
+
 }
 
-bool ADBDGameMode::IsEscapeOpen() const {
-    return false;
+void ADBDGameMode::LevelLoaded(const FString& levelName)
+{
+
 }
 
-void ADBDGameMode::HostGame() {
+bool ADBDGameMode::IsEscapeOpen() const
+{
+	return false;
 }
 
-void ADBDGameMode::DBD_BlockCamperEscape(bool shouldBlock) {
+void ADBDGameMode::InitializeEscapeRequirements()
+{
+
 }
 
-bool ADBDGameMode::AreLoadoutsCreated() const {
-    return false;
+void ADBDGameMode::HostGame()
+{
+
 }
 
-ADBDGameMode::ADBDGameMode() {
-    this->_killerPlayerControllerClass = NULL;
-    this->_survivorPlayerControllerClass = NULL;
-    this->KillerCreationPositionOrder = 0;
+void ADBDGameMode::DBD_BlockCamperEscape(bool shouldBlock)
+{
+
 }
 
+bool ADBDGameMode::AreLoadoutsCreated() const
+{
+	return false;
+}
+
+ADBDGameMode::ADBDGameMode()
+{
+	this->_killerPlayerControllerClass = NULL;
+	this->_survivorPlayerControllerClass = NULL;
+	this->_initialPlayerStarts = TArray<APlayerStart*>();
+	this->KillerCreationPositionOrder = 0;
+}

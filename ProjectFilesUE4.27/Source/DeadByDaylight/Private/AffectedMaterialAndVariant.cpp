@@ -1,7 +1,7 @@
 #include "AffectedMaterialAndVariant.h"
 
-FAffectedMaterialAndVariant::FAffectedMaterialAndVariant() {
-    this->AffectedMaterial = NULL;
-    this->MaterialVariant = NULL;
+FAffectedMaterialAndVariant::FAffectedMaterialAndVariant()
+{
+	this->AffectedMaterial = NULL;
+	this->MaterialVariant = NULL;
 }
-

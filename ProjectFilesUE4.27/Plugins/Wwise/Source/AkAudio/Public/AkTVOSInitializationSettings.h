@@ -1,28 +1,34 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "AkPlatformInitialisationSettingsBase.h"
 #include "AkAudioSession.h"
+#include "AkAdvancedInitializationSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "AkCommonInitializationSettingsWithSampleRate.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
-#include "AkAdvancedInitializationSettings.h"
 #include "AkTVOSInitializationSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
-class AKAUDIO_API UAkTVOSInitializationSettings : public UObject {
-    GENERATED_BODY()
+UCLASS()
+class AKAUDIO_API UAkTVOSInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommonInitializationSettingsWithSampleRate CommonSettings;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FAkAudioSession AudioSession;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
-    
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
-    FAkAdvancedInitializationSettings AdvancedSettings;
-    
-    UAkTVOSInitializationSettings();
+	UPROPERTY(EditAnywhere)
+	FAkCommonInitializationSettingsWithSampleRate CommonSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkAudioSession AudioSession;
+
+	UPROPERTY(EditAnywhere)
+	FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkAdvancedInitializationSettings AdvancedSettings;
+
+public:
+	UAkTVOSInitializationSettings();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkTVOSInitializationSettings) { return 0; }

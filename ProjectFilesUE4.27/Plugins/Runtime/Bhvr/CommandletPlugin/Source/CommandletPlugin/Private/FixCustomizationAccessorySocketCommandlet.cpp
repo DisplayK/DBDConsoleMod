@@ -1,5 +1,6 @@
 #include "FixCustomizationAccessorySocketCommandlet.h"
 
-UFixCustomizationAccessorySocketCommandlet::UFixCustomizationAccessorySocketCommandlet() {
-}
+UFixCustomizationAccessorySocketCommandlet::UFixCustomizationAccessorySocketCommandlet()
+{
 
+}

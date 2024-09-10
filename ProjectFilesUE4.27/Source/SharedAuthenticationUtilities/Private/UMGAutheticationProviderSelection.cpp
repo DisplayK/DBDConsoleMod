@@ -1,8 +1,12 @@
 #include "UMGAutheticationProviderSelection.h"
+#include "ESharedAuthenticationProvider.h"
 
-void UUMGAutheticationProviderSelection::SetSelectedAuthenticationProvider(ESharedAuthenticationProvider provider) {
+void UUMGAutheticationProviderSelection::SetSelectedAuthenticationProvider(ESharedAuthenticationProvider provider)
+{
+
 }
 
-UUMGAutheticationProviderSelection::UUMGAutheticationProviderSelection() : UUserWidget(FObjectInitializer::Get()) {
-}
+UUMGAutheticationProviderSelection::UUMGAutheticationProviderSelection() : UUserWidget(FObjectInitializer::Get())
+{
 
+}

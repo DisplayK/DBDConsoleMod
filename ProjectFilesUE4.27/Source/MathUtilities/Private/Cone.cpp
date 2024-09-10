@@ -1,5 +1,5 @@
 #include "Cone.h"
 
-FCone::FCone() {
+FCone::FCone()
+{
 }
-

@@ -1,5 +1,5 @@
 #include "CustomerSupportAnalytics.h"
 
-FCustomerSupportAnalytics::FCustomerSupportAnalytics() {
+FCustomerSupportAnalytics::FCustomerSupportAnalytics()
+{
 }
-

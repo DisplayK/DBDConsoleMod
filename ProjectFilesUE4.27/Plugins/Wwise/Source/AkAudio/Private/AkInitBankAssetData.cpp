@@ -1,5 +1,6 @@
 #include "AkInitBankAssetData.h"
 
-UAkInitBankAssetData::UAkInitBankAssetData() {
+UAkInitBankAssetData::UAkInitBankAssetData()
+{
+	this->PluginInfos = TArray<FAkPluginInfo>();
 }
-

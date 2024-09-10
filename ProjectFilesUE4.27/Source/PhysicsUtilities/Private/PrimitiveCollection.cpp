@@ -2,12 +2,17 @@
 
 class UPrimitiveComponent;
 
-void UPrimitiveCollection::Remove(UPrimitiveComponent* primitive) {
+void UPrimitiveCollection::Remove(UPrimitiveComponent* primitive)
+{
+
 }
 
-void UPrimitiveCollection::Add(UPrimitiveComponent* primitive) {
+void UPrimitiveCollection::Add(UPrimitiveComponent* primitive)
+{
+
 }
 
-UPrimitiveCollection::UPrimitiveCollection() {
+UPrimitiveCollection::UPrimitiveCollection()
+{
+	this->_primitives = TSet<TWeakObjectPtr<UPrimitiveComponent>>();
 }
-

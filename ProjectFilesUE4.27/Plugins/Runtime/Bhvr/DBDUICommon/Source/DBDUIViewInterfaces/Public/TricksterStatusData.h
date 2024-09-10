@@ -1,23 +1,29 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "KillerStatusData.h"
 #include "TricksterStatusData.generated.h"
 
-USTRUCT(BlueprintType)
-struct FTricksterStatusData {
-    GENERATED_BODY()
+UCLASS()
+class DBDUIVIEWINTERFACES_API UTricksterStatusData : public UKillerStatusData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float CurrentLacerationLevel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float MaximumLacerationLevel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsDangerousLacerationLevel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool WasRecentlyDamagedByLaceration;
-    
-    DBDUIVIEWINTERFACES_API FTricksterStatusData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float CurrentLacerationLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float MaximumLacerationLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsDangerousLacerationLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool WasRecentlyDamagedByLaceration;
+
+public:
+	UTricksterStatusData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTricksterStatusData) { return 0; }

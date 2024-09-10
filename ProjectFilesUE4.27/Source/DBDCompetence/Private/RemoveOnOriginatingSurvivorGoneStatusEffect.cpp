@@ -2,9 +2,12 @@
 
 class ACamperPlayer;
 
-void URemoveOnOriginatingSurvivorGoneStatusEffect::Authority_OnSurvivorRemoved(ACamperPlayer* survivor) {
+void URemoveOnOriginatingSurvivorGoneStatusEffect::Authority_OnSurvivorRemoved(ACamperPlayer* survivor)
+{
+
 }
 
-URemoveOnOriginatingSurvivorGoneStatusEffect::URemoveOnOriginatingSurvivorGoneStatusEffect() {
-}
+URemoveOnOriginatingSurvivorGoneStatusEffect::URemoveOnOriginatingSurvivorGoneStatusEffect()
+{
 
+}

@@ -1,29 +1,32 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "KillerAnimInstance.h"
 #include "TwinsAnimInstance.generated.h"
 
 UCLASS(NonTransient)
-class UTwinsAnimInstance : public UKillerAnimInstance {
-    GENERATED_BODY()
-public:
+class UTwinsAnimInstance : public UKillerAnimInstance
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isDormant;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _hasBrotherAttached;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isPossessing;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isWakingUpFromPossess;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool _isAutoPossessingAfterRelease;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isDormant;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _hasBrotherAttached;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isPossessing;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isWakingUpFromPossess;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool _isAutoPossessingAfterRelease;
+
 public:
-    UTwinsAnimInstance();
+	UTwinsAnimInstance();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTwinsAnimInstance) { return 0; }

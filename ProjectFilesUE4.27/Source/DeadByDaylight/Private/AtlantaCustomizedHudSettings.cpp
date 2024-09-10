@@ -1,8 +1,11 @@
 #include "AtlantaCustomizedHudSettings.h"
 
-FAtlantaCustomizedHudSettings::FAtlantaCustomizedHudSettings() {
-    this->Scale = 0.00f;
-    this->RenderOpacity = 0.00f;
-    this->Version = 0;
+FAtlantaCustomizedHudSettings::FAtlantaCustomizedHudSettings()
+{
+	this->Id = FGameplayTag{};
+	this->NormalizedOffset = FVector2D{};
+	this->Scale = 0.0f;
+	this->RenderOpacity = 0.0f;
+	this->Version = 0;
+	this->OverlapWrapperIds = FGameplayTagContainer{};
 }
-

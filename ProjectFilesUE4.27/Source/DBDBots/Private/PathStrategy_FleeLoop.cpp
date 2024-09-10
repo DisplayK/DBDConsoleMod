@@ -1,10 +1,13 @@
 #include "PathStrategy_FleeLoop.h"
 
-UPathStrategy_FleeLoop::UPathStrategy_FleeLoop() {
-    this->CanBranchUnderEndPathDistance = 500.00f;
-    this->RejectLoopBranchUnderEndPointsDistance = 800.00f;
-    this->RejectBranchPointNearerHostileSourceDistance = 800.00f;
-    this->RejectBranchUnderNavLinkDistance = 600.00f;
-    this->AddDistanceToRequiredBranchEvadeGap = 200.00f;
+UPathStrategy_FleeLoop::UPathStrategy_FleeLoop()
+{
+	this->GameStateFleeLoopStrategyTable = TMap<EAIDifficultyLevel, FGameStateEvadeLoopStrategyMapContainer>();
+	this->FleeLoopStrategyPathBuilders = TMap<EAIFleeLoopStrategy, UPathBuilder_EvadeLoop*>();
+	this->CanBranchUnderEndPathDistance = 500.000000;
+	this->BranchRolls = TMap<EAIFleeLoopStrategy, FAIRoll>();
+	this->RejectLoopBranchUnderEndPointsDistance = 800.000000;
+	this->RejectBranchPointNearerHostileSourceDistance = 800.000000;
+	this->RejectBranchUnderNavLinkDistance = 600.000000;
+	this->AddDistanceToRequiredBranchEvadeGap = 200.000000;
 }
-

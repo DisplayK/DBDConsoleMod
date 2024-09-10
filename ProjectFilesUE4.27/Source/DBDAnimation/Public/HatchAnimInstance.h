@@ -1,17 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "SleepingAnimInstance.h"
 #include "HatchAnimInstance.generated.h"
 
 UCLASS(NonTransient)
-class DBDANIMATION_API UHatchAnimInstance : public USleepingAnimInstance {
-    GENERATED_BODY()
-public:
+class DBDANIMATION_API UHatchAnimInstance : public USleepingAnimInstance
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool _isOpen;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool _isOpen;
+
 public:
-    UHatchAnimInstance();
+	UHatchAnimInstance();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UHatchAnimInstance) { return 0; }

@@ -1,53 +1,91 @@
 #include "NavigationScreen.h"
 
-void UNavigationScreen::OnToggleChatVisibility() {
+void UNavigationScreen::OnToggleChatVisibility()
+{
+
 }
 
-void UNavigationScreen::OnStartButtonClick() {
+void UNavigationScreen::OnStartButtonClick()
+{
+
 }
 
-void UNavigationScreen::OnSettingsClick() {
+void UNavigationScreen::OnSettingsClick()
+{
+
 }
 
-void UNavigationScreen::OnSendChatMsgButtonClick(const FString& message) {
+void UNavigationScreen::OnSendChatMsgButtonClick(const FString& message)
+{
+
 }
 
-void UNavigationScreen::OnReadyButtonClick() {
+void UNavigationScreen::OnReadyButtonClick()
+{
+
 }
 
-void UNavigationScreen::OnPlayerOptionSelected(const FString& krakenId, const FString& playerId, uint8 option) {
+void UNavigationScreen::OnPlayerOptionSelected(const FString& krakenId, const FString& playerId, uint8 option)
+{
+
 }
 
-void UNavigationScreen::OnPlayerInfoClick(int32 playerId) {
+void UNavigationScreen::OnPlayerInfoClick(int32 playerId)
+{
+
 }
 
-void UNavigationScreen::OnMatchManagementButtonClick() {
+void UNavigationScreen::OnMatchManagementButtonClick()
+{
+
 }
 
-void UNavigationScreen::OnMatchMakingBanTimeout() {
+void UNavigationScreen::OnMatchMakingBanTimeout()
+{
+
 }
 
-void UNavigationScreen::OnInviteFriendClick() {
+void UNavigationScreen::OnInviteFriendClick()
+{
+
 }
 
-void UNavigationScreen::OnDailyRitualsClick() {
+void UNavigationScreen::OnFadeOutEnded()
+{
+
 }
 
-void UNavigationScreen::OnCrowdPlayButtonClick() {
+void UNavigationScreen::OnDailyRitualsClick()
+{
+
 }
 
-void UNavigationScreen::OnChatInputMouseOver(bool isMouseOver) {
+void UNavigationScreen::OnCrowdPlayButtonClick()
+{
+
 }
 
-void UNavigationScreen::OnCharacterSwapArrowClick(bool isNext) {
+void UNavigationScreen::OnChatInputMouseOver(bool isMouseOver)
+{
+
 }
 
-void UNavigationScreen::OnCharacterInfoClick() {
+void UNavigationScreen::OnCharacterSwapArrowClick(bool isNext)
+{
+
 }
 
-void UNavigationScreen::OnCancelButtonClick() {
+void UNavigationScreen::OnCancelButtonClick()
+{
+
 }
 
-UNavigationScreen::UNavigationScreen() {
+void UNavigationScreen::OnAddPlayerClick(int32 buttonId)
+{
+
 }
 
+UNavigationScreen::UNavigationScreen()
+{
+
+}

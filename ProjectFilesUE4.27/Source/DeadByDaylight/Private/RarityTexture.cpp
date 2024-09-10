@@ -1,6 +1,8 @@
 #include "RarityTexture.h"
 
-FRarityTexture::FRarityTexture() {
-    this->Rarity = EItemRarity::Common;
+FRarityTexture::FRarityTexture()
+{
+	this->Type = NAME_None;
+	this->Rarity = EItemRarity::Common;
+	this->Texture = FSoftObjectPath{};
 }
-

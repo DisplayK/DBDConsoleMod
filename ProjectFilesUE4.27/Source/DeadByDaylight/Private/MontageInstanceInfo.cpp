@@ -1,5 +1,5 @@
 #include "MontageInstanceInfo.h"
 
-FMontageInstanceInfo::FMontageInstanceInfo() {
+FMontageInstanceInfo::FMontageInstanceInfo()
+{
 }
-

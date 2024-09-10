@@ -1,16 +1,18 @@
 #include "SetDreamSnareInteraction.h"
 
-bool USetDreamSnareInteraction::HasCancelledDreamSnare() const {
-    return false;
+bool USetDreamSnareInteraction::HasCancelledDreamSnare() const
+{
+	return false;
 }
 
-float USetDreamSnareInteraction::GetTrapDistanceFromControlRotation() const {
-    return 0.0f;
+float USetDreamSnareInteraction::GetTrapDistanceFromControlRotation() const
+{
+	return 0.0f;
 }
 
-USetDreamSnareInteraction::USetDreamSnareInteraction() {
-    this->MinPitch = 70.00f;
-    this->MinPlacementDistance = 50.00f;
-    this->MaxPlacementDistance = 450.00f;
+USetDreamSnareInteraction::USetDreamSnareInteraction()
+{
+	this->MinPitch = 70.000000;
+	this->MinPlacementDistance = 50.000000;
+	this->MaxPlacementDistance = 450.000000;
 }
-

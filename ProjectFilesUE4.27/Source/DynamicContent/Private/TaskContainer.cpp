@@ -1,6 +1,6 @@
 #include "TaskContainer.h"
 
-FTaskContainer::FTaskContainer() {
-    this->DownloadTask = NULL;
+FTaskContainer::FTaskContainer()
+{
+	this->DownloadTask = NULL;
 }
-

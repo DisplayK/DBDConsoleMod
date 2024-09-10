@@ -1,32 +1,35 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "AutoQualityAdjuster.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API AAutoQualityAdjuster : public AActor {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API AAutoQualityAdjuster : public AActor
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float TargetResolutionScale;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float MinimumMS;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float MaximumMS;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float ScaleIncreaseRate;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float ScaleDecreaseRate;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float MinimumAllowableScale;
-    
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float TargetResolutionScale;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float MinimumMS;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float MaximumMS;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float ScaleIncreaseRate;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float ScaleDecreaseRate;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float MinimumAllowableScale;
+
 public:
-    AAutoQualityAdjuster();
+	AAutoQualityAdjuster();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AAutoQualityAdjuster) { return 0; }

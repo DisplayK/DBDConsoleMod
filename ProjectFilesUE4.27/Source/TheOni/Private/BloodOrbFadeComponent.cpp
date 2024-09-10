@@ -1,5 +1,6 @@
 #include "BloodOrbFadeComponent.h"
 
-UBloodOrbFadeComponent::UBloodOrbFadeComponent() {
-}
+UBloodOrbFadeComponent::UBloodOrbFadeComponent()
+{
 
+}

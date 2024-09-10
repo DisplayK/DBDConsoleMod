@@ -1,6 +1,6 @@
 #include "UMGAuricCellsButton.h"
 
-UUMGAuricCellsButton::UUMGAuricCellsButton() {
-    this->PlusImage = NULL;
+UUMGAuricCellsButton::UUMGAuricCellsButton()
+{
+	this->PlusImage = NULL;
 }
-

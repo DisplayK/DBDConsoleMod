@@ -1,16 +1,21 @@
 #include "AkItemProperties.h"
 
-void UAkItemProperties::SetSearchText(const FString& newText) {
+void UAkItemProperties::SetSearchText(const FString& newText)
+{
+
 }
 
-FString UAkItemProperties::GetSelectedProperty() const {
-    return TEXT("");
+FString UAkItemProperties::GetSelectedProperty() const
+{
+	return TEXT("");
 }
 
-FString UAkItemProperties::GetSearchText() const {
-    return TEXT("");
+FString UAkItemProperties::GetSearchText() const
+{
+	return TEXT("");
 }
 
-UAkItemProperties::UAkItemProperties() {
-}
+UAkItemProperties::UAkItemProperties()
+{
 
+}

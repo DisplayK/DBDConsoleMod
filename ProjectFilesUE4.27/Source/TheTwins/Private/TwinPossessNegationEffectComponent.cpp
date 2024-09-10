@@ -1,5 +1,6 @@
 #include "TwinPossessNegationEffectComponent.h"
 
-UTwinPossessNegationEffectComponent::UTwinPossessNegationEffectComponent() {
-}
+UTwinPossessNegationEffectComponent::UTwinPossessNegationEffectComponent()
+{
 
+}

@@ -1,31 +1,34 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "AtlantaTooltipManager.generated.h"
 
-class UUMGCloseTooltipWidget;
 class UBaseTooltipWidget;
+class UUMGCloseTooltipWidget;
 
 UCLASS()
-class UAtlantaTooltipManager : public UObject {
-    GENERATED_BODY()
-public:
+class UAtlantaTooltipManager : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UBaseTooltipWidget* _activeTooltip;
-    
-    UPROPERTY(Export, Transient)
-    UUMGCloseTooltipWidget* _closeTooltipWidget;
-    
-public:
-    UAtlantaTooltipManager();
+	UPROPERTY(Transient, Export)
+	UBaseTooltipWidget* _activeTooltip;
+
+	UPROPERTY(Transient, Export)
+	UUMGCloseTooltipWidget* _closeTooltipWidget;
+
 private:
-    UFUNCTION()
-    void TryCloseActiveTooltipWithWidget();
-    
+	UFUNCTION()
+	void TryCloseActiveTooltipWithWidget();
+
 public:
-    UFUNCTION()
-    bool TryCloseActiveTooltip();
-    
+	UFUNCTION()
+	bool TryCloseActiveTooltip();
+
+public:
+	UAtlantaTooltipManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAtlantaTooltipManager) { return 0; }

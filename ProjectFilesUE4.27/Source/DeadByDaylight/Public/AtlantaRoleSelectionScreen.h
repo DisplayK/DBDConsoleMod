@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ScreenBase.h"
 #include "AtlantaRoleSelectionScreen.generated.h"
@@ -6,14 +7,16 @@
 class UUMGRoleSelectionScreen;
 
 UCLASS()
-class UAtlantaRoleSelectionScreen : public UScreenBase {
-    GENERATED_BODY()
-public:
+class UAtlantaRoleSelectionScreen : public UScreenBase
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export)
-    UUMGRoleSelectionScreen* _umgScreen;
-    
+	UPROPERTY(Export)
+	UUMGRoleSelectionScreen* _umgScreen;
+
 public:
-    UAtlantaRoleSelectionScreen();
+	UAtlantaRoleSelectionScreen();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAtlantaRoleSelectionScreen) { return 0; }

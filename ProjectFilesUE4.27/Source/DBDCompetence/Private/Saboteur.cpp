@@ -1,11 +1,9 @@
 #include "Saboteur.h"
 
-USaboteur::USaboteur() {
-    this->_cooldownDuration[0] = 0.00f;
-    this->_cooldownDuration[1] = 0.00f;
-    this->_cooldownDuration[2] = 0.00f;
-    this->_revealHookDistance[0] = 0.00f;
-    this->_revealHookDistance[1] = 0.00f;
-    this->_revealHookDistance[2] = 0.00f;
+USaboteur::USaboteur()
+{
+	this->_cooldownDuration = 0.000000;
+	this->_revealHookDistance = 0.000000;
+	this->_saboteurEffect = NULL;
+	this->_revealedMeatHooksOultineStrategy = TArray<UMeatHookOutlineUpdateStrategy*>();
 }
-

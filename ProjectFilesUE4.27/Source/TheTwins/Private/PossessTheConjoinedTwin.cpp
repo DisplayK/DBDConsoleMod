@@ -1,14 +1,19 @@
 #include "PossessTheConjoinedTwin.h"
 
-class AConjoinedTwin;
 class ADBDPlayer;
+class AConjoinedTwin;
 
-void UPossessTheConjoinedTwin::OnTwinSet(AConjoinedTwin* twin) {
+void UPossessTheConjoinedTwin::OnTwinSet(AConjoinedTwin* twin)
+{
+
 }
 
-void UPossessTheConjoinedTwin::OnPowerCollected(ADBDPlayer* collector) {
+void UPossessTheConjoinedTwin::OnPowerCollected(ADBDPlayer* collector)
+{
+
 }
 
-UPossessTheConjoinedTwin::UPossessTheConjoinedTwin() {
-}
+UPossessTheConjoinedTwin::UPossessTheConjoinedTwin()
+{
 
+}

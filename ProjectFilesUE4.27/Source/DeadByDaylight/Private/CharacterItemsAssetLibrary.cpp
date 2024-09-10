@@ -1,5 +1,6 @@
 #include "CharacterItemsAssetLibrary.h"
 
-UCharacterItemsAssetLibrary::UCharacterItemsAssetLibrary() {
-}
+UCharacterItemsAssetLibrary::UCharacterItemsAssetLibrary()
+{
 
+}

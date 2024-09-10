@@ -1,5 +1,6 @@
 #include "TargetTriggeredEventRecentlyQEEvaluator.h"
 
-UTargetTriggeredEventRecentlyQEEvaluator::UTargetTriggeredEventRecentlyQEEvaluator() {
-}
+UTargetTriggeredEventRecentlyQEEvaluator::UTargetTriggeredEventRecentlyQEEvaluator()
+{
 
+}

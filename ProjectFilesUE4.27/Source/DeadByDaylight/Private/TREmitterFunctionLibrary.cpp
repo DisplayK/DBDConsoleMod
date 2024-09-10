@@ -2,10 +2,12 @@
 
 class UObject;
 
-int32 UTREmitterFunctionLibrary::GetActiveFakeTerrorRadiusEmittersCount(const UObject* WorldContextObject) {
-    return 0;
+int32 UTREmitterFunctionLibrary::GetActiveFakeTerrorRadiusEmittersCount(const UObject* WorldContextObject)
+{
+	return 0;
 }
 
-UTREmitterFunctionLibrary::UTREmitterFunctionLibrary() {
-}
+UTREmitterFunctionLibrary::UTREmitterFunctionLibrary()
+{
 
+}

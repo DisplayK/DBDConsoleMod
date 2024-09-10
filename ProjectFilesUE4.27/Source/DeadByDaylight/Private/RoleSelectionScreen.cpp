@@ -1,11 +1,21 @@
 #include "RoleSelectionScreen.h"
 
-void URoleSelectionScreen::OnChangeUserButtonClick() {
+void URoleSelectionScreen::OnEventButtonClick()
+{
+
 }
 
-void URoleSelectionScreen::OnButtonSelected(int32 buttonId) {
+void URoleSelectionScreen::OnChangeUserButtonClick()
+{
+
 }
 
-URoleSelectionScreen::URoleSelectionScreen() {
+void URoleSelectionScreen::OnButtonSelected(int32 buttonId)
+{
+
 }
 
+URoleSelectionScreen::URoleSelectionScreen()
+{
+
+}

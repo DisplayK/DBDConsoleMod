@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PathStrategySelector.h"
 #include "EAIFleePathStrategy.h"
@@ -7,17 +8,20 @@
 class UPathStrategy;
 
 UCLASS(Abstract)
-class DBDBOTS_API UPathStrategySelector_Flee : public UPathStrategySelector {
-    GENERATED_BODY()
+class DBDBOTS_API UPathStrategySelector_Flee : public UPathStrategySelector
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditDefaultsOnly, Export)
-    TMap<EAIFleePathStrategy, UPathStrategy*> FleePathStrategies;
-    
+	UPROPERTY(EditDefaultsOnly, Export)
+	TMap<EAIFleePathStrategy, UPathStrategy*> FleePathStrategies;
+
 private:
-    UPROPERTY(Transient)
-    TMap<EAIFleePathStrategy, UPathStrategy*> _activeFleePathStrategiesMap;
-    
+	UPROPERTY(Transient)
+	TMap<EAIFleePathStrategy, UPathStrategy*> _activeFleePathStrategiesMap;
+
 public:
-    UPathStrategySelector_Flee();
+	UPathStrategySelector_Flee();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPathStrategySelector_Flee) { return 0; }

@@ -1,8 +1,11 @@
 #include "AlertsScreen.h"
 
-void UAlertsScreen::RewardAlertSequenceCompleted() const {
+void UAlertsScreen::RewardAlertSequenceCompleted() const
+{
+
 }
 
-UAlertsScreen::UAlertsScreen() {
-}
+UAlertsScreen::UAlertsScreen()
+{
 
+}

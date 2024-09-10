@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkMidiEventBase.h"
 #include "AkMidiGeneric.generated.h"
 
 USTRUCT(BlueprintType)
-struct FAkMidiGeneric : public FAkMidiEventBase {
-    GENERATED_BODY()
+struct FAkMidiGeneric: public FAkMidiEventBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint8 Param1;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint8 Param2;
-    
-    AKAUDIO_API FAkMidiGeneric();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	uint8 Param1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	uint8 Param2;
+
+public:
+	AKAUDIO_API FAkMidiGeneric();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkMidiGeneric) { return 0; }

@@ -1,14 +1,19 @@
 #include "DailyRitualInstance.h"
 
-FDailyRitualInstance::FDailyRitualInstance() {
-    this->DifficultyTier = 0;
-    this->Progress = 0.00f;
-    this->Threshold = 0.00f;
-    this->Tolerance = 0.00f;
-    this->DisplayThreshold = 0.00f;
-    this->ExpReward = 0.00f;
-    this->Active = false;
-    this->IsNew = false;
-    this->NbGameElapsed = 0;
+FDailyRitualInstance::FDailyRitualInstance()
+{
+	this->RitualId = TEXT("");
+	this->TrackedEvents = TArray<EDBDScoreTypes>();
+	this->TrackedGameEvents = TArray<FGameplayTag>();
+	this->CharacterIDs = TArray<int32>();
+	this->Roles = TArray<EPlayerRole>();
+	this->Progress = 0.0f;
+	this->Threshold = 0.0f;
+	this->Tolerance = 0.0f;
+	this->DisplayThreshold = 0.0f;
+	this->ExpReward = 0.0f;
+	this->Active = false;
+	this->IsTemporary = false;
+	this->DateAssigned = FDateTime{};
+	this->Evaluator = NULL;
 }
-

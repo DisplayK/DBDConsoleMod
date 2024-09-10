@@ -1,5 +1,6 @@
 #include "AbstractGameFlowHandler.h"
 
-UAbstractGameFlowHandler::UAbstractGameFlowHandler() {
-}
+UAbstractGameFlowHandler::UAbstractGameFlowHandler()
+{
 
+}

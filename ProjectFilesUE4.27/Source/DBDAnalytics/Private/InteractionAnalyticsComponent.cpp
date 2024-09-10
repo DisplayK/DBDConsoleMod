@@ -1,5 +1,6 @@
 #include "InteractionAnalyticsComponent.h"
 
-UInteractionAnalyticsComponent::UInteractionAnalyticsComponent() {
-}
+UInteractionAnalyticsComponent::UInteractionAnalyticsComponent()
+{
 
+}

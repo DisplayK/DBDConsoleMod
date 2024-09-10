@@ -1,5 +1,7 @@
 #include "HtmlTagConvertRow.h"
 
-FHtmlTagConvertRow::FHtmlTagConvertRow() {
+FHtmlTagConvertRow::FHtmlTagConvertRow()
+{
+	this->HtmlTag = TEXT("");
+	this->RichTextTag = TEXT("");
 }
-

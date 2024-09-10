@@ -1,5 +1,6 @@
 #include "CollectableOwnerSubjectProvider.h"
 
-UCollectableOwnerSubjectProvider::UCollectableOwnerSubjectProvider() {
-}
+UCollectableOwnerSubjectProvider::UCollectableOwnerSubjectProvider()
+{
 
+}

@@ -1,45 +1,48 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "Styling/SlateColor.h"
 #include "UMGAtlantaDailyRewardsScreen.generated.h"
 
-class UUMGPopupButton;
-class UCanvasPanel;
 class UUMGAtlantaDailyRewardsGrid;
+class UCanvasPanel;
+class UUMGPopupButton;
 class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGAtlantaDailyRewardsScreen : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGAtlantaDailyRewardsScreen : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGAtlantaDailyRewardsGrid* DailyRewardWidgetsGrid;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* ContinueButtonPanel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGPopupButton* ContinueButton;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* RemainingTimeTextBlock;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FSlateColor NormalColor;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FSlateColor WarningColor;
-    
-public:
-    UUMGAtlantaDailyRewardsScreen();
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGAtlantaDailyRewardsGrid* DailyRewardWidgetsGrid;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* ContinueButtonPanel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGPopupButton* ContinueButton;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* RemainingTimeTextBlock;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FSlateColor NormalColor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FSlateColor WarningColor;
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void HandleCurrentActiveDailyRewardStateChanged(int32 dailyRewardIndex, int32 dailyRewardNewState);
-    
-    UFUNCTION(BlueprintCallable)
-    void HandleContinueButtonClick();
-    
+	UFUNCTION(BlueprintCallable)
+	void HandleCurrentActiveDailyRewardStateChanged(int32 dailyRewardIndex, int32 dailyRewardNewState);
+
+	UFUNCTION(BlueprintCallable)
+	void HandleContinueButtonClick();
+
+public:
+	UUMGAtlantaDailyRewardsScreen();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlantaDailyRewardsScreen) { return 0; }

@@ -2,9 +2,12 @@
 
 class UGameplayModifierContainer;
 
-void UEnduranceVFXComponent::Authority_ShowHighlight(UGameplayModifierContainer* preventKOSource) {
+void UEnduranceVFXComponent::ShowHighlight(UGameplayModifierContainer* preventKOSource)
+{
+
 }
 
-UEnduranceVFXComponent::UEnduranceVFXComponent() {
-}
+UEnduranceVFXComponent::UEnduranceVFXComponent()
+{
 
+}

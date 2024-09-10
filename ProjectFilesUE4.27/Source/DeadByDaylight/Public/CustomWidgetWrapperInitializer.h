@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "CustomWidgetWrapperInitializer.generated.h"
@@ -6,14 +7,16 @@
 class UCustomWidgetWrapper;
 
 UCLASS(EditInlineNew)
-class DEADBYDAYLIGHT_API UCustomWidgetWrapperInitializer : public UUserWidget {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UCustomWidgetWrapperInitializer : public UUserWidget
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UCustomWidgetWrapper* ListeningWrapper;
-    
+	UPROPERTY(Transient, Export)
+	UCustomWidgetWrapper* ListeningWrapper;
+
 public:
-    UCustomWidgetWrapperInitializer();
+	UCustomWidgetWrapperInitializer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCustomWidgetWrapperInitializer) { return 0; }

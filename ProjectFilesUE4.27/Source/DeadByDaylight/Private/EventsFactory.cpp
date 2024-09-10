@@ -1,5 +1,6 @@
 #include "EventsFactory.h"
 
-UEventsFactory::UEventsFactory() {
-}
+UEventsFactory::UEventsFactory()
+{
 
+}

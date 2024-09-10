@@ -1,9 +1,11 @@
 #include "StartScreenBase.h"
 
-void AStartScreenBase::TravelToMenu() {
+void AStartScreenBase::TravelToMenu()
+{
+
 }
 
+AStartScreenBase::AStartScreenBase()
+{
 
-AStartScreenBase::AStartScreenBase() {
 }
-

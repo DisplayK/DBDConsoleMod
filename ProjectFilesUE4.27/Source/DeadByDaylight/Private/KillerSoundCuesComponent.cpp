@@ -2,15 +2,22 @@
 
 class AActor;
 
-void UKillerSoundCuesComponent::StopTrackingActor(AActor* actorToStopTracking) {
+void UKillerSoundCuesComponent::StopTrackingActor(AActor* actorToStopTracking)
+{
+
 }
 
-void UKillerSoundCuesComponent::StartTrackingActorWithLifetime(AActor* actorToStartTracking, FName distanceDataID, float trackerLifetime) {
+void UKillerSoundCuesComponent::StartTrackingActorWithLifetime(AActor* actorToStartTracking, FName distanceDataID, float trackerLifetime)
+{
+
 }
 
-void UKillerSoundCuesComponent::StartTrackingActor(AActor* actorToStartTracking, FName distanceDataID) {
+void UKillerSoundCuesComponent::StartTrackingActor(AActor* actorToStartTracking, FName distanceDataID)
+{
+
 }
 
-UKillerSoundCuesComponent::UKillerSoundCuesComponent() {
-}
+UKillerSoundCuesComponent::UKillerSoundCuesComponent()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "CorePowerWidget.h"
 
-UCorePowerWidget::UCorePowerWidget() {
-}
+UCorePowerWidget::UCorePowerWidget()
+{
 
+}

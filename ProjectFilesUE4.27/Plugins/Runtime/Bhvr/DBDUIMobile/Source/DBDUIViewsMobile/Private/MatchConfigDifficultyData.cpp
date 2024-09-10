@@ -1,5 +1,6 @@
 #include "MatchConfigDifficultyData.h"
 
-FMatchConfigDifficultyData::FMatchConfigDifficultyData() {
+FMatchConfigDifficultyData::FMatchConfigDifficultyData()
+{
+	this->DifficultyIcon = NULL;
 }
-

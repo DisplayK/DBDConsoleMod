@@ -2,9 +2,12 @@
 
 class AActor;
 
-void UDBDHud::RemoveStatusViewOnDestroy(AActor* actor) {
+void UDBDHud::RemoveStatusViewOnDestroy(AActor* actor)
+{
+
 }
 
-UDBDHud::UDBDHud() {
+UDBDHud::UDBDHud()
+{
+	this->_statusViews = TMap<FName, AStatusView*>();
 }
-

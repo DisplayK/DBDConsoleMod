@@ -1,8 +1,11 @@
 #include "PlayerMoveBackAndForthComponent.h"
 
-void UPlayerMoveBackAndForthComponent::OnMoveTimerDone() {
+void UPlayerMoveBackAndForthComponent::OnMoveTimerDone()
+{
+
 }
 
-UPlayerMoveBackAndForthComponent::UPlayerMoveBackAndForthComponent() {
-}
+UPlayerMoveBackAndForthComponent::UPlayerMoveBackAndForthComponent()
+{
 
+}

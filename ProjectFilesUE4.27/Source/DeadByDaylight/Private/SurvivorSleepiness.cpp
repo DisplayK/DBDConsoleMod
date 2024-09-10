@@ -1,7 +1,7 @@
 #include "SurvivorSleepiness.h"
 
-FSurvivorSleepiness::FSurvivorSleepiness() {
-    this->_sleepiness = 0.00f;
-    this->_sleepThreshold = 0.00f;
+FSurvivorSleepiness::FSurvivorSleepiness()
+{
+	this->_sleepiness = 0.0f;
+	this->_sleepThreshold = 0.0f;
 }
-

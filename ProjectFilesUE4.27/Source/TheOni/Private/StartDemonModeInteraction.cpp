@@ -2,13 +2,17 @@
 
 class ADBDPlayer;
 
-void UStartDemonModeInteraction::SetPlayerOwner(const ADBDPlayer* owner) {
+void UStartDemonModeInteraction::SetPlayerOwner(const ADBDPlayer* owner)
+{
+
 }
 
-void UStartDemonModeInteraction::OnLevelReadyToPlay() {
+void UStartDemonModeInteraction::OnLevelReadyToPlay()
+{
+
 }
 
-UStartDemonModeInteraction::UStartDemonModeInteraction() {
-    this->YawAdjustTime = 0.20f;
+UStartDemonModeInteraction::UStartDemonModeInteraction()
+{
+	this->YawAdjustTime = 0.200000;
 }
-

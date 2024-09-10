@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EGameplayElementType.h"
 #include "ManagedGameplayElementData.generated.h"
@@ -6,42 +7,46 @@
 class UActorSpawner;
 
 USTRUCT(BlueprintType)
-struct FManagedGameplayElementData {
-    GENERATED_BODY()
+struct FManagedGameplayElementData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Export)
-    TArray<UActorSpawner*> ActivatedSpawners;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Export)
-    TArray<UActorSpawner*> RemovedSpawners;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EGameplayElementType PopulationType;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float CurrentPopulationCost;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    int32 MaxPopulationCost;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    int32 MinPopulationCost;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float MapWidth;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float MinProximityBetweenElements;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float MinDistSqrBetweenElements;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float TileWidth;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float FactorToAdjustToWhenOutOfProximity;
-    
-    DEADBYDAYLIGHT_API FManagedGameplayElementData();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Export)
+	TArray<UActorSpawner*> ActivatedSpawners;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Export)
+	TArray<UActorSpawner*> RemovedSpawners;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	EGameplayElementType PopulationType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float CurrentPopulationCost;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int32 MaxPopulationCost;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int32 MinPopulationCost;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float MapWidth;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float MinProximityBetweenElements;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float MinDistSqrBetweenElements;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float TileWidth;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float FactorToAdjustToWhenOutOfProximity;
+
+public:
+	DEADBYDAYLIGHT_API FManagedGameplayElementData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FManagedGameplayElementData) { return 0; }

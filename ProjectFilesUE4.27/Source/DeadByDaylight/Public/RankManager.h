@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "RankManager.generated.h"
 
 UCLASS()
-class URankManager : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API URankManager : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    URankManager();
+	URankManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const URankManager) { return 0; }

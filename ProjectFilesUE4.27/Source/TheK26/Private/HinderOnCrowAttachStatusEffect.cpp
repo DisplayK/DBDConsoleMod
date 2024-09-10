@@ -2,9 +2,12 @@
 
 class ASlasherPlayer;
 
-void UHinderOnCrowAttachStatusEffect::OnKillerSet(ASlasherPlayer* killer) {
+void UHinderOnCrowAttachStatusEffect::OnKillerSet(ASlasherPlayer* killer)
+{
+
 }
 
-UHinderOnCrowAttachStatusEffect::UHinderOnCrowAttachStatusEffect() {
-}
+UHinderOnCrowAttachStatusEffect::UHinderOnCrowAttachStatusEffect()
+{
 
+}

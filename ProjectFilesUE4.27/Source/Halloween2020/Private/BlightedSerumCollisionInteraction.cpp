@@ -2,11 +2,13 @@
 
 class UBlightedSerumCooldownInteraction;
 
-void UBlightedSerumCollisionInteraction::SetCooldownInteraction(UBlightedSerumCooldownInteraction* cooldownInteraction) {
+void UBlightedSerumCollisionInteraction::SetCooldownInteraction(UBlightedSerumCooldownInteraction* cooldownInteraction)
+{
+
 }
 
-UBlightedSerumCollisionInteraction::UBlightedSerumCollisionInteraction() {
-    this->_cooldownInteraction = NULL;
-    this->_bounceTime = 0.20f;
+UBlightedSerumCollisionInteraction::UBlightedSerumCollisionInteraction()
+{
+	this->_cooldownInteraction = NULL;
+	this->_bounceTime = 0.200000;
 }
-

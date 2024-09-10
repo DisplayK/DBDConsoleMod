@@ -1,66 +1,71 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "Components/SceneComponent.h"
 #include "WeightedElement.h"
 #include "SpawnElement.h"
+#include "Components/SceneComponent.h"
+#include "Templates/SubclassOf.h"
+#include "UObject/SoftObjectPtr.h"
 #include "ETileSpawnPointType.h"
 #include "TileSpawnPoint.generated.h"
 
 class AActor;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UTileSpawnPoint : public USceneComponent, public IWeightedElement, public ISpawnElement {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UTileSpawnPoint : public USceneComponent, public IWeightedElement, public ISpawnElement
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    ETileSpawnPointType TileSpawnPointType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float Weight;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSoftClassPtr<AActor> Visualization;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ETileSpawnPointType TileSpawnPointType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Weight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSoftClassPtr<AActor> Visualization;
+
 protected:
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_SpawnObject)
-    AActor* _spawnedObject;
-    
+	UPROPERTY(ReplicatedUsing=OnRep_SpawnObject, Transient)
+	AActor* _spawnedObject;
+
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<TSubclassOf<AActor>> ObjectSpawnModifier;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 _spawnPriorityTier;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool _weightInfluenceable;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool _weightInfluencer;
-    
-    UPROPERTY(Transient)
-    bool _activated;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	TArray<TSubclassOf<AActor>> ObjectSpawnModifier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	int32 _spawnPriorityTier;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool _weightInfluenceable;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool _weightInfluencer;
+
+	UPROPERTY(Transient)
+	bool _activated;
+
 public:
-    UTileSpawnPoint();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
-    UFUNCTION(BlueprintCallable)
-    void SetActivated(bool activated);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetActivated(bool activated);
+
 protected:
-    UFUNCTION()
-    void OnRep_SpawnObject();
-    
+	UFUNCTION()
+	void OnRep_SpawnObject();
+
 public:
-    UFUNCTION(BlueprintPure)
-    bool IsActivated() const;
-    
-    UFUNCTION(BlueprintPure)
-    AActor* GetSpawnedObject() const;
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintPure)
+	bool IsActivated() const;
+
+	UFUNCTION(BlueprintPure)
+	AActor* GetSpawnedObject() const;
+
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UTileSpawnPoint();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTileSpawnPoint) { return 0; }

@@ -1,5 +1,5 @@
 #include "ParadiseData.h"
 
-FParadiseData::FParadiseData() {
+FParadiseData::FParadiseData()
+{
 }
-

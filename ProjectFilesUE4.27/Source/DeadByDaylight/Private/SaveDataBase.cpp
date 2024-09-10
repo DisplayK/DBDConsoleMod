@@ -1,6 +1,6 @@
 #include "SaveDataBase.h"
 
-FSaveDataBase::FSaveDataBase() {
-    this->VersionNumber = 0;
+FSaveDataBase::FSaveDataBase()
+{
+	this->VersionNumber = 0;
 }
-

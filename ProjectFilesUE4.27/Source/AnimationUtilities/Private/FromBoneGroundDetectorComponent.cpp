@@ -1,5 +1,6 @@
 #include "FromBoneGroundDetectorComponent.h"
 
-UFromBoneGroundDetectorComponent::UFromBoneGroundDetectorComponent() {
-}
+UFromBoneGroundDetectorComponent::UFromBoneGroundDetectorComponent()
+{
 
+}

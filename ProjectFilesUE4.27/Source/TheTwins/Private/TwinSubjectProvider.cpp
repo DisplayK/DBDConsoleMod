@@ -1,14 +1,19 @@
 #include "TwinSubjectProvider.h"
 
-class AConjoinedTwin;
 class ASlasherPlayer;
+class AConjoinedTwin;
 
-void UTwinSubjectProvider::OnTwinSet(AConjoinedTwin* twin) {
+void UTwinSubjectProvider::OnTwinSet(AConjoinedTwin* twin)
+{
+
 }
 
-void UTwinSubjectProvider::ListenToTwinSet(ASlasherPlayer* killer) {
+void UTwinSubjectProvider::ListenToTwinSet(ASlasherPlayer* killer)
+{
+
 }
 
-UTwinSubjectProvider::UTwinSubjectProvider() {
-}
+UTwinSubjectProvider::UTwinSubjectProvider()
+{
 
+}

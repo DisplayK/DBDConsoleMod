@@ -1,5 +1,6 @@
 #include "LegacySavedBloodWebRingPersistentData.h"
 
-FLegacySavedBloodWebRingPersistentData::FLegacySavedBloodWebRingPersistentData() {
+FLegacySavedBloodWebRingPersistentData::FLegacySavedBloodWebRingPersistentData()
+{
+	this->NodeData = TArray<FLegacySavedBloodwebNode>();
 }
-

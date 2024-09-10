@@ -1,5 +1,8 @@
 #include "KillerClosetActorsTypes.h"
 
-FKillerClosetActorsTypes::FKillerClosetActorsTypes() {
+FKillerClosetActorsTypes::FKillerClosetActorsTypes()
+{
+	this->KillerPresenceTag = FGameplayTag{};
+	this->ClosetActorClass = NULL;
+	this->SocketToSpawnOn = NAME_None;
 }
-

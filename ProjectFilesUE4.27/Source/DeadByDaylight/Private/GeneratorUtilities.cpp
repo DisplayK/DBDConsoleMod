@@ -1,5 +1,6 @@
 #include "GeneratorUtilities.h"
 
-UGeneratorUtilities::UGeneratorUtilities() {
-}
+UGeneratorUtilities::UGeneratorUtilities()
+{
 
+}

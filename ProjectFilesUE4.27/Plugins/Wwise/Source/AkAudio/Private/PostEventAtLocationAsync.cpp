@@ -1,16 +1,21 @@
 #include "PostEventAtLocationAsync.h"
+#include "UObject/NoExportTypes.h"
 
-class UObject;
-class UAkAudioEvent;
 class UPostEventAtLocationAsync;
+class UAkAudioEvent;
+class UObject;
 
-UPostEventAtLocationAsync* UPostEventAtLocationAsync::PostEventAtLocationAsync(const UObject* WorldContextObject, UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation) {
-    return NULL;
+UPostEventAtLocationAsync* UPostEventAtLocationAsync::PostEventAtLocationAsync(const UObject* WorldContextObject, UAkAudioEvent* AkEvent, FVector Location, FRotator Orientation)
+{
+	return NULL;
 }
 
-void UPostEventAtLocationAsync::PollPostEventFuture() {
+void UPostEventAtLocationAsync::PollPostEventFuture()
+{
+
 }
 
-UPostEventAtLocationAsync::UPostEventAtLocationAsync() {
-}
+UPostEventAtLocationAsync::UPostEventAtLocationAsync()
+{
 
+}

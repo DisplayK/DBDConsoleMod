@@ -1,17 +1,20 @@
 #include "PawnUtilities.h"
 
-class AActor;
-class APawn;
 class UObject;
+class APawn;
+class AActor;
 
-APawn* UPawnUtilities::GetOwningPawn(const AActor* origin) {
-    return NULL;
+APawn* UPawnUtilities::GetOwningPawn(const AActor* origin)
+{
+	return NULL;
 }
 
-APawn* UPawnUtilities::GetLocallyObservedPawn(const UObject* worldContext) {
-    return NULL;
+APawn* UPawnUtilities::GetLocallyObservedPawn(const UObject* worldContext)
+{
+	return NULL;
 }
 
-UPawnUtilities::UPawnUtilities() {
-}
+UPawnUtilities::UPawnUtilities()
+{
 
+}

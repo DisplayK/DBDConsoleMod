@@ -1,9 +1,11 @@
 #include "TwinHuskStateComponent.h"
 
-bool UTwinHuskStateComponent::IsDeadFromSurvivorBack() const {
-    return false;
+bool UTwinHuskStateComponent::IsDeadFromSurvivorBack() const
+{
+	return false;
 }
 
-UTwinHuskStateComponent::UTwinHuskStateComponent() {
-}
+UTwinHuskStateComponent::UTwinHuskStateComponent()
+{
 
+}

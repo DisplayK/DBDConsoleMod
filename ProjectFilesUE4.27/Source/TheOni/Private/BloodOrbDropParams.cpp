@@ -1,5 +1,5 @@
 #include "BloodOrbDropParams.h"
 
-FBloodOrbDropParams::FBloodOrbDropParams() {
+FBloodOrbDropParams::FBloodOrbDropParams()
+{
 }
-

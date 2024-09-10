@@ -1,5 +1,6 @@
 #include "DBDPartyFacade.h"
 
-UDBDPartyFacade::UDBDPartyFacade() {
-}
+UDBDPartyFacade::UDBDPartyFacade()
+{
 
+}

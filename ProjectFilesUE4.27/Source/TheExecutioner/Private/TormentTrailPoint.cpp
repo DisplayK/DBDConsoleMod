@@ -1,28 +1,36 @@
 #include "TormentTrailPoint.h"
 #include "AuthoritativePoolableActorComponent.h"
+#include "UObject/NoExportTypes.h"
 
 class USplineComponent;
 
-void ATormentTrailPoint::Server_RemoveTrailPoint_Implementation() {
-}
-bool ATormentTrailPoint::Server_RemoveTrailPoint_Validate() {
-    return true;
-}
+void ATormentTrailPoint::Server_RemoveTrailPoint_Implementation()
+{
 
-
-void ATormentTrailPoint::OnAcquireChanged(const bool acquired) {
 }
 
-void ATormentTrailPoint::Multicast_TriggerTrailPointDisappear_Implementation() {
+bool ATormentTrailPoint::Server_RemoveTrailPoint_Validate()
+{
+	return true;
 }
 
-void ATormentTrailPoint::GetTrailLocationAndTangeant(const int32 indexInTrail, const USplineComponent* splineComponent, FVector& outStartLocation, FVector& outStartTangent, FVector& outEndLocation, FVector& outEndTangent) const {
+void ATormentTrailPoint::OnAcquireChanged(const bool acquired)
+{
+
 }
 
+void ATormentTrailPoint::Multicast_TriggerTrailPointDisappear_Implementation()
+{
 
-
-ATormentTrailPoint::ATormentTrailPoint() {
-    this->_poolableComponent = CreateDefaultSubobject<UAuthoritativePoolableActorComponent>(TEXT("PollableComponent"));
-    this->_splineMeshOverlapDistance = 0.00f;
 }
 
+void ATormentTrailPoint::GetTrailLocationAndTangeant(const int32 indexInTrail, const USplineComponent* splineComponent, FVector& outStartLocation, FVector& outStartTangent, FVector& outEndLocation, FVector& outEndTangent) const
+{
+
+}
+
+ATormentTrailPoint::ATormentTrailPoint()
+{
+	this->_poolableComponent = CreateDefaultSubobject<UAuthoritativePoolableActorComponent>(TEXT("PollableComponent"));
+	this->_splineMeshOverlapDistance = 0.000000;
+}

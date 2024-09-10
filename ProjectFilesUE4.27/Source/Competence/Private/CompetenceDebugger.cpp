@@ -1,5 +1,6 @@
 #include "CompetenceDebugger.h"
 
-UCompetenceDebugger::UCompetenceDebugger() {
-}
+UCompetenceDebugger::UCompetenceDebugger()
+{
 
+}

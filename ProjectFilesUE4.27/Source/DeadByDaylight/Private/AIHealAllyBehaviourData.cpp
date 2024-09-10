@@ -2,10 +2,12 @@
 
 class ACamperPlayer;
 
-void UAIHealAllyBehaviourData::Init(ACamperPlayer* allyToHealTarget) {
+void UAIHealAllyBehaviourData::Init(ACamperPlayer* allyToHealTarget)
+{
+
 }
 
-UAIHealAllyBehaviourData::UAIHealAllyBehaviourData() {
-    this->_targetAlly = NULL;
+UAIHealAllyBehaviourData::UAIHealAllyBehaviourData()
+{
+	this->_targetAlly = NULL;
 }
-

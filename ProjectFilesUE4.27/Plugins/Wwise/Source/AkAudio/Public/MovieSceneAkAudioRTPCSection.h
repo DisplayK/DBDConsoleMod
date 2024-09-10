@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MovieSceneSection.h"
 #include "Channels/MovieSceneFloatChannel.h"
@@ -9,26 +10,28 @@
 class UAkRtpc;
 
 UCLASS()
-class AKAUDIO_API UMovieSceneAkAudioRTPCSection : public UMovieSceneSection {
-    GENERATED_BODY()
-public:
+class AKAUDIO_API UMovieSceneAkAudioRTPCSection : public UMovieSceneSection
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditAnywhere)
-    UAkRtpc* RTPC;
-    
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
-    FString Name;
-    
-    UPROPERTY()
-    FRichCurve FloatCurve;
-    
-    UPROPERTY()
-    FMovieSceneFloatChannelSerializationHelper FloatChannelSerializationHelper;
-    
-    UPROPERTY()
-    FMovieSceneFloatChannel RTPCChannel;
-    
+	UPROPERTY(EditAnywhere)
+	UAkRtpc* RTPC;
+
+	UPROPERTY(EditAnywhere)
+	FString Name;
+
+	UPROPERTY()
+	FRichCurve FloatCurve;
+
+	UPROPERTY()
+	FMovieSceneFloatChannelSerializationHelper FloatChannelSerializationHelper;
+
+	UPROPERTY()
+	FMovieSceneFloatChannel RTPCChannel;
+
 public:
-    UMovieSceneAkAudioRTPCSection();
+	UMovieSceneAkAudioRTPCSection();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UMovieSceneAkAudioRTPCSection) { return 0; }

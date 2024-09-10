@@ -1,34 +1,42 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseLoadoutPartViewData.h"
 #include "InputCoreTypes.h"
 #include "PowerViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FPowerViewData : public FBaseLoadoutPartViewData {
-    GENERATED_BODY()
+struct FPowerViewData: public FBaseLoadoutPartViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FKey InputKey;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsRechargeable;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsActivated;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 Count;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float ProgressValue;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool ShowKeyPrompt;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsCountDisplayForced;
-    
-    DBDUIVIEWINTERFACES_API FPowerViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FKey InputKey;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsRechargeable;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsActivated;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Count;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ProgressValue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool ShowKeyPrompt;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsCountDisplayForced;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsAvailable;
+
+public:
+	DBDUIVIEWINTERFACES_API FPowerViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FPowerViewData) { return 0; }

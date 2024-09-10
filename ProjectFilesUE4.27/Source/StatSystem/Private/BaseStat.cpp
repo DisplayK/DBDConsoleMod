@@ -1,5 +1,6 @@
 #include "BaseStat.h"
 
-FBaseStat::FBaseStat() {
+FBaseStat::FBaseStat()
+{
+	this->_statModifiers = TArray<FStatModifier>();
 }
-

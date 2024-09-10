@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Engine/NetSerialization.h"
 #include "UObject/NoExportTypes.h"
@@ -7,36 +8,40 @@
 class ADBDPlayer;
 
 USTRUCT(BlueprintType)
-struct FInteractionPlayerProperties {
-    GENERATED_BODY()
+struct FInteractionPlayerProperties
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FVector_NetQuantize AverageVelocityAtStart;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FVector_NetQuantize PlayerPositionAtStart;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FRotator PlayerRotationAtStart;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    TWeakObjectPtr<ADBDPlayer> Requester;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FVector_NetQuantize SnapPositionAtStart;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    FRotator SnapRotationAtStart;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float SnapDistanceAtStart;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    float SnapTimeAtStart;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
-    bool ShouldSnapPosition;
-    
-    DEADBYDAYLIGHT_API FInteractionPlayerProperties();
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FVector_NetQuantize AverageVelocityAtStart;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FVector_NetQuantize PlayerPositionAtStart;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FRotator PlayerRotationAtStart;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TWeakObjectPtr<ADBDPlayer> Requester;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FVector_NetQuantize SnapPositionAtStart;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	FRotator SnapRotationAtStart;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	float SnapDistanceAtStart;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	float SnapTimeAtStart;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	bool ShouldSnapPosition;
+
+public:
+	DEADBYDAYLIGHT_API FInteractionPlayerProperties();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FInteractionPlayerProperties) { return 0; }

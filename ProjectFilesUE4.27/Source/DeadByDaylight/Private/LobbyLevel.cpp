@@ -1,12 +1,22 @@
 #include "LobbyLevel.h"
 
-void ALobbyLevel::OnShopSubLevelLoaded() {
+void ALobbyLevel::OnShopSubLevelLoaded()
+{
+
 }
 
-void ALobbyLevel::OnLobbySubLevelLoaded() {
+void ALobbyLevel::OnLobbySubLevelLoaded()
+{
+
 }
 
-ALobbyLevel::ALobbyLevel() {
-    this->LobbyLoadedEvent = EWorldFlowEvent::None;
+void ALobbyLevel::OnAdditionalSubLevelsLoaded()
+{
+
 }
 
+ALobbyLevel::ALobbyLevel()
+{
+	this->_registeredDisplayStands = TArray<ADisplayStand*>();
+	this->LobbyLoadedEvent = EWorldFlowEvent::None;
+}

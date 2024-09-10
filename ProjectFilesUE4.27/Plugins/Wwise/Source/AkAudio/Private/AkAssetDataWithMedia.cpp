@@ -1,5 +1,6 @@
 #include "AkAssetDataWithMedia.h"
 
-UAkAssetDataWithMedia::UAkAssetDataWithMedia() {
+UAkAssetDataWithMedia::UAkAssetDataWithMedia()
+{
+	this->MediaList = TArray<UAkMediaAsset*>();
 }
-

@@ -1,36 +1,52 @@
 #include "DecisiveStrike.h"
+#include "ESkillCheckCustomType.h"
 #include "Net/UnrealNetwork.h"
 
 class ADBDPlayer;
 
-void UDecisiveStrike::OnUnhookedTimerEnded() {
+void UDecisiveStrike::OnUnhookedTimerEnded()
+{
+
 }
 
-void UDecisiveStrike::OnSkillCheck(bool hadInput, bool success, bool bonus, ESkillCheckCustomType type) {
+void UDecisiveStrike::OnSkillCheck(bool hadInput, bool success, bool bonus, ESkillCheckCustomType type, ADBDPlayer* player)
+{
+
 }
 
-void UDecisiveStrike::OnRep_HasBeenAttempted() {
+void UDecisiveStrike::OnRep_HasBeenAttempted()
+{
+
 }
 
-void UDecisiveStrike::OnPickUpEnded(ADBDPlayer* picker) {
+void UDecisiveStrike::OnPickUpEnded(ADBDPlayer* picker)
+{
+
 }
 
-void UDecisiveStrike::OnOwnerPickedUp(ADBDPlayer* picker) {
+void UDecisiveStrike::OnOwnerPickedUp(ADBDPlayer* picker)
+{
+
 }
 
-void UDecisiveStrike::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UDecisiveStrike, _hasBeenAttempted);
+float UDecisiveStrike::GetDurationAfterUnhook() const
+{
+	return 0.0f;
 }
 
-UDecisiveStrike::UDecisiveStrike() {
-    this->_timeAfterUnhook[0] = 0.00f;
-    this->_timeAfterUnhook[1] = 0.00f;
-    this->_timeAfterUnhook[2] = 0.00f;
-    this->_skillCheckDelay = 0.70f;
-    this->_skillCheckBuffer = 0.00f;
-    this->_killerHearsSkillCheckCue = false;
-    this->_hasBeenAttempted = false;
+void UDecisiveStrike::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UDecisiveStrike, _hasBeenAttempted);
 }
 
+UDecisiveStrike::UDecisiveStrike()
+{
+	this->_timeAfterUnhook = 0.000000;
+	this->_skillCheckDelay = 0.700000;
+	this->_skillCheckBuffer = 0.000000;
+	this->_killerHearsSkillCheckCue = false;
+	this->_increaseObsessionChanceEffect = NULL;
+	this->_hasBeenAttempted = false;
+}

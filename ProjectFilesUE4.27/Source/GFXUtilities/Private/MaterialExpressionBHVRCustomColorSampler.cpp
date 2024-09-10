@@ -1,5 +1,6 @@
 #include "MaterialExpressionBHVRCustomColorSampler.h"
 
-UMaterialExpressionBHVRCustomColorSampler::UMaterialExpressionBHVRCustomColorSampler() {
-}
+UMaterialExpressionBHVRCustomColorSampler::UMaterialExpressionBHVRCustomColorSampler()
+{
 
+}

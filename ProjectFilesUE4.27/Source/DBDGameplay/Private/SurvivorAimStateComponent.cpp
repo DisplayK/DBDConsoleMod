@@ -1,6 +1,6 @@
 #include "SurvivorAimStateComponent.h"
 
-USurvivorAimStateComponent::USurvivorAimStateComponent() {
-    this->_aimableCollectable = NULL;
+USurvivorAimStateComponent::USurvivorAimStateComponent()
+{
+	this->_aimableCollectable = NULL;
 }
-

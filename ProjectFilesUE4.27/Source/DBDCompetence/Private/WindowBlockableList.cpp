@@ -1,5 +1,6 @@
 #include "WindowBlockableList.h"
 
-FWindowBlockableList::FWindowBlockableList() {
+FWindowBlockableList::FWindowBlockableList()
+{
+	this->Blockables = TArray<UBlockableComponent*>();
 }
-

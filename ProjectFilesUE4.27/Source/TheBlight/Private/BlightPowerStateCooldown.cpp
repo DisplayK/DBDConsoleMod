@@ -1,5 +1,6 @@
 #include "BlightPowerStateCooldown.h"
 
-UBlightPowerStateCooldown::UBlightPowerStateCooldown() {
-}
+UBlightPowerStateCooldown::UBlightPowerStateCooldown()
+{
 
+}

@@ -1,5 +1,5 @@
 #include "PatchEndMessage.h"
 
-FPatchEndMessage::FPatchEndMessage() {
+FPatchEndMessage::FPatchEndMessage()
+{
 }
-

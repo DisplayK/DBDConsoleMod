@@ -1,6 +1,6 @@
 #include "UMGAtlEndDateTimerWidget.h"
 
-UUMGAtlEndDateTimerWidget::UUMGAtlEndDateTimerWidget() {
-    this->TextEndIn = NULL;
+UUMGAtlEndDateTimerWidget::UUMGAtlEndDateTimerWidget()
+{
+	this->TextEndIn = NULL;
 }
-

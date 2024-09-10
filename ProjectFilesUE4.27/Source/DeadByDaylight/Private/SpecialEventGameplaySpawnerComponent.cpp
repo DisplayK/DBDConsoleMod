@@ -1,5 +1,11 @@
 #include "SpecialEventGameplaySpawnerComponent.h"
 
-USpecialEventGameplaySpawnerComponent::USpecialEventGameplaySpawnerComponent() {
+void USpecialEventGameplaySpawnerComponent::Multicast_OnComponentSpawned_Implementation()
+{
+
 }
 
+USpecialEventGameplaySpawnerComponent::USpecialEventGameplaySpawnerComponent()
+{
+
+}

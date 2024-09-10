@@ -1,19 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "ChunkingManager.generated.h"
 
 class UDBDGameInstance;
 
 UCLASS()
-class DEADBYDAYLIGHT_API UChunkingManager : public UObject {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UChunkingManager : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UDBDGameInstance* _gameInstance;
-    
+	UPROPERTY(Transient)
+	UDBDGameInstance* _gameInstance;
+
 public:
-    UChunkingManager();
+	UChunkingManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UChunkingManager) { return 0; }

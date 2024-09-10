@@ -1,6 +1,6 @@
 #include "PopupSequencer.h"
 
-UPopupSequencer::UPopupSequencer() {
-    this->_gameInstance = NULL;
+UPopupSequencer::UPopupSequencer()
+{
+	this->_gameInstance = NULL;
 }
-

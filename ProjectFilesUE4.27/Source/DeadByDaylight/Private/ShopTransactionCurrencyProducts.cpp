@@ -1,5 +1,6 @@
 #include "ShopTransactionCurrencyProducts.h"
 
-FShopTransactionCurrencyProducts::FShopTransactionCurrencyProducts() {
+FShopTransactionCurrencyProducts::FShopTransactionCurrencyProducts()
+{
+	this->virtualCurrencies = TArray<FShopTransactionVirtualCurrency>();
 }
-

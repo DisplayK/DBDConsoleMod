@@ -1,31 +1,39 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseLoadoutPartViewData.h"
 #include "InputCoreTypes.h"
 #include "ItemViewData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FItemViewData : public FBaseLoadoutPartViewData {
-    GENERATED_BODY()
+struct FItemViewData: public FBaseLoadoutPartViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsEnergyTypeValid;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float EnergyLevel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 Count;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FKey InputKey;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool ShowKeyPrompt;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsLimitedItem;
-    
-    DBDUIVIEWINTERFACES_API FItemViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsEnergyTypeValid;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float EnergyLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Count;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FKey InputKey;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool ShowKeyPrompt;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsLimitedItem;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsAvailable;
+
+public:
+	DBDUIVIEWINTERFACES_API FItemViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FItemViewData) { return 0; }

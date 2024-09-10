@@ -1,17 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "SharedAuthenticationMigrateComponent.generated.h"
 
 UCLASS()
-class SHAREDAUTHENTICATIONUTILITIES_API USharedAuthenticationMigrateComponent : public UObject {
-    GENERATED_BODY()
-public:
+class SHAREDAUTHENTICATIONUTILITIES_API USharedAuthenticationMigrateComponent : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UObject* _worldContextObject;
-    
+	UPROPERTY(Transient)
+	UObject* _worldContextObject;
+
 public:
-    USharedAuthenticationMigrateComponent();
+	USharedAuthenticationMigrateComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USharedAuthenticationMigrateComponent) { return 0; }

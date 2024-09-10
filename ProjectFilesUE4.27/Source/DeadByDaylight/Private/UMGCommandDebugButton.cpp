@@ -1,10 +1,13 @@
 #include "UMGCommandDebugButton.h"
 
-void UUMGCommandDebugButton::TriggerCommand() {
+void UUMGCommandDebugButton::TriggerCommand()
+{
+
 }
 
-UUMGCommandDebugButton::UUMGCommandDebugButton() {
-    this->CommandLabel = NULL;
-    this->CommandButton = NULL;
+UUMGCommandDebugButton::UUMGCommandDebugButton()
+{
+	this->CommandLabel = NULL;
+	this->CommandButton = NULL;
+	this->CommandName = TEXT("");
 }
-

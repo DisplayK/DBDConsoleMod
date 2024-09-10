@@ -1,92 +1,123 @@
 #include "GeneratorTeleportInteraction.h"
+#include "UObject/NoExportTypes.h"
 #include "Net/UnrealNetwork.h"
 
 class AGenerator;
-class ADBDPlayer;
 class ASlasherPlayer;
+class ADBDPlayer;
 
-void UGeneratorTeleportInteraction::StopBloodSpurts() {
+void UGeneratorTeleportInteraction::StopBloodSpurts()
+{
+
 }
 
-void UGeneratorTeleportInteraction::StartBloodSpurts() {
+void UGeneratorTeleportInteraction::StartBloodSpurts()
+{
+
 }
 
+void UGeneratorTeleportInteraction::Server_SetSelectedGenerator_Implementation(AGenerator* generator)
+{
 
-void UGeneratorTeleportInteraction::Server_SetSelectedGenerator_Implementation(AGenerator* generator) {
-}
-bool UGeneratorTeleportInteraction::Server_SetSelectedGenerator_Validate(AGenerator* generator) {
-    return true;
 }
 
-
-
-
-
-void UGeneratorTeleportInteraction::OnRep_TeleportCooldownTimer() {
+bool UGeneratorTeleportInteraction::Server_SetSelectedGenerator_Validate(AGenerator* generator)
+{
+	return true;
 }
 
-void UGeneratorTeleportInteraction::OnRep_SelectedGenerator() {
+void UGeneratorTeleportInteraction::OnRep_TeleportCooldownTimer()
+{
+
 }
 
+void UGeneratorTeleportInteraction::OnRep_SelectedGenerator()
+{
 
-void UGeneratorTeleportInteraction::OnIntroCompleted() {
 }
 
-void UGeneratorTeleportInteraction::OnBloodSpurts() {
+void UGeneratorTeleportInteraction::OnIntroCompleted()
+{
+
 }
 
-void UGeneratorTeleportInteraction::Multicast_TeleportPlayer_Implementation(FVector location, FRotator rotation) {
+void UGeneratorTeleportInteraction::OnBloodSpurts()
+{
+
 }
 
-void UGeneratorTeleportInteraction::Multicast_OnTeleportLocationChosen_Implementation(AGenerator* generator, FTransform location) {
+void UGeneratorTeleportInteraction::Multicast_TeleportPlayer_Implementation(FVector location, FRotator rotation)
+{
+
 }
 
-bool UGeneratorTeleportInteraction::IsTeleportAvailable() const {
-    return false;
+void UGeneratorTeleportInteraction::Multicast_OnTeleportLocationChosen_Implementation(AGenerator* generator, FTransform location)
+{
+
 }
 
-void UGeneratorTeleportInteraction::InitializeTunableValues(ASlasherPlayer* killer) {
+bool UGeneratorTeleportInteraction::IsTeleportAvailable() const
+{
+	return false;
 }
 
-ADBDPlayer* UGeneratorTeleportInteraction::GetOwningPlayer() const {
-    return NULL;
+void UGeneratorTeleportInteraction::InitializeTunableValues(ASlasherPlayer* killer)
+{
+
 }
 
-AGenerator* UGeneratorTeleportInteraction::GetInlineGenerator(const ADBDPlayer* player) const {
-    return NULL;
+bool UGeneratorTeleportInteraction::HasTeleportFailed() const
+{
+	return false;
 }
 
-bool UGeneratorTeleportInteraction::CanTeleportAtGenerator(AGenerator* generator) const {
-    return false;
+ADBDPlayer* UGeneratorTeleportInteraction::GetOwningPlayer() const
+{
+	return NULL;
 }
 
-bool UGeneratorTeleportInteraction::Authority_TeleportPlayerToGenerator(ADBDPlayer* playerToTeleport, AGenerator* generator) {
-    return false;
+AGenerator* UGeneratorTeleportInteraction::GetInlineGenerator(const ADBDPlayer* player) const
+{
+	return NULL;
 }
 
-void UGeneratorTeleportInteraction::Authority_StartTeleportCooldown(bool teleported) {
+bool UGeneratorTeleportInteraction::CanTeleportAtGenerator(AGenerator* generator) const
+{
+	return false;
 }
 
-void UGeneratorTeleportInteraction::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UGeneratorTeleportInteraction, _teleportCooldownTimer);
-    DOREPLIFETIME(UGeneratorTeleportInteraction, _selectedGenerator);
-    DOREPLIFETIME(UGeneratorTeleportInteraction, _selectedTeleportLocation);
+bool UGeneratorTeleportInteraction::Authority_TeleportPlayerToGenerator(ADBDPlayer* playerToTeleport, AGenerator* generator)
+{
+	return false;
 }
 
-UGeneratorTeleportInteraction::UGeneratorTeleportInteraction() {
-    this->OnBloodSpurtsAINoiseEventRange = 1600.00f;
-    this->_teleportCooldownTimer = NULL;
-    this->_selectedGenerator = NULL;
-    this->_locallySelectedGenerator = NULL;
-    this->_isInteractionOngoing = false;
-    this->_teleportFailed = false;
-    this->_bloodSpurtInterval = 0.50f;
-    this->_collisionCheckCapsuleHalfHeight = 80.00f;
-    this->_collisionCheckCapsuleRadius = 60.00f;
-    this->_capsuleTraceAngleIncrement = 10.00f;
-    this->_generatorTeleportMaxAngle = 60.00f;
-    this->_downRaycastLength = 80.00f;
+void UGeneratorTeleportInteraction::Authority_StartTeleportCooldown(bool teleported)
+{
+
 }
 
+void UGeneratorTeleportInteraction::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UGeneratorTeleportInteraction, _teleportCooldownTimer);
+	DOREPLIFETIME(UGeneratorTeleportInteraction, _selectedGenerator);
+	DOREPLIFETIME(UGeneratorTeleportInteraction, _selectedTeleportLocation);
+}
+
+UGeneratorTeleportInteraction::UGeneratorTeleportInteraction()
+{
+	this->OnBloodSpurtsAINoiseEventRange = 1600.000000;
+	this->_teleportCooldownTimer = NULL;
+	this->_selectedGenerator = NULL;
+	this->_locallySelectedGenerator = NULL;
+	this->_isInteractionOngoing = false;
+	this->_teleportFailed = false;
+	this->_noTeleportableGenerators = false;
+	this->_bloodSpurtInterval = 0.500000;
+	this->_collisionCheckCapsuleHalfHeight = 80.000000;
+	this->_collisionCheckCapsuleRadius = 60.000000;
+	this->_capsuleTraceAngleIncrement = 10.000000;
+	this->_generatorTeleportMaxAngle = 60.000000;
+	this->_downRaycastLength = 80.000000;
+}

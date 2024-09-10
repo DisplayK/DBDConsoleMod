@@ -1,5 +1,6 @@
 #include "ExposedEffect.h"
 
-UExposedEffect::UExposedEffect() {
-}
+UExposedEffect::UExposedEffect()
+{
 
+}

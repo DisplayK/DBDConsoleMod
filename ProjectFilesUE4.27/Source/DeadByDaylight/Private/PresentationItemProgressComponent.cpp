@@ -1,5 +1,6 @@
 #include "PresentationItemProgressComponent.h"
 
-UPresentationItemProgressComponent::UPresentationItemProgressComponent() {
-}
+UPresentationItemProgressComponent::UPresentationItemProgressComponent()
+{
 
+}

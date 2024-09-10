@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "DisplayStandController.h"
 #include "LobbyDisplayStandController.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API ULobbyDisplayStandController : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API ULobbyDisplayStandController : public UDisplayStandController
+{
+	GENERATED_BODY()
+
 public:
-    ULobbyDisplayStandController();
+	ULobbyDisplayStandController();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ULobbyDisplayStandController) { return 0; }

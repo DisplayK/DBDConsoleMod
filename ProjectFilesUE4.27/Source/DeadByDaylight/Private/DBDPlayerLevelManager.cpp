@@ -1,5 +1,6 @@
 #include "DBDPlayerLevelManager.h"
 
-UDBDPlayerLevelManager::UDBDPlayerLevelManager() {
-}
+UDBDPlayerLevelManager::UDBDPlayerLevelManager()
+{
 
+}

@@ -1,6 +1,6 @@
 #include "LacerationAlmostFullCondition.h"
 
-ULacerationAlmostFullCondition::ULacerationAlmostFullCondition() {
-    this->_missingLacerationThreshold = 1.00f;
+ULacerationAlmostFullCondition::ULacerationAlmostFullCondition()
+{
+	this->_missingLacerationThreshold = 1.000000;
 }
-

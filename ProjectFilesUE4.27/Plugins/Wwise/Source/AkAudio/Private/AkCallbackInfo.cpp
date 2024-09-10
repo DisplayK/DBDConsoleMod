@@ -1,6 +1,6 @@
 #include "AkCallbackInfo.h"
 
-UAkCallbackInfo::UAkCallbackInfo() {
-    this->AkComponent = NULL;
+UAkCallbackInfo::UAkCallbackInfo()
+{
+	this->AkComponent = NULL;
 }
-

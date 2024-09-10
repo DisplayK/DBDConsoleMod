@@ -1,8 +1,8 @@
 #include "DBDBoxReflectionCaptureSpawnerComponent.h"
 
-UDBDBoxReflectionCaptureSpawnerComponent::UDBDBoxReflectionCaptureSpawnerComponent() {
-    this->BoxTransitionDistance = 100.00f;
-    this->PreviewInfluenceBox = NULL;
-    this->PreviewCaptureBox = NULL;
+UDBDBoxReflectionCaptureSpawnerComponent::UDBDBoxReflectionCaptureSpawnerComponent()
+{
+	this->BoxTransitionDistance = 100.000000;
+	this->PreviewInfluenceBox = NULL;
+	this->PreviewCaptureBox = NULL;
 }
-

@@ -2,9 +2,12 @@
 
 class UGameEventDispatcher;
 
-void ULegionKillerAnalyticsComponent::SetGameEventDispatcher(UGameEventDispatcher* gameEventDispatcher) {
+void ULegionKillerAnalyticsComponent::SetGameEventDispatcher(UGameEventDispatcher* gameEventDispatcher)
+{
+
 }
 
-ULegionKillerAnalyticsComponent::ULegionKillerAnalyticsComponent() {
-}
+ULegionKillerAnalyticsComponent::ULegionKillerAnalyticsComponent()
+{
 
+}

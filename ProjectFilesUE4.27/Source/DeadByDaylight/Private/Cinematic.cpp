@@ -1,6 +1,5 @@
 #include "Cinematic.h"
 
-FCinematic::FCinematic() {
-    this->SourceHasAudio = false;
+FCinematic::FCinematic()
+{
 }
-

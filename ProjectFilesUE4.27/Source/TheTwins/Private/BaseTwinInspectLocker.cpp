@@ -1,5 +1,6 @@
 #include "BaseTwinInspectLocker.h"
 
-UBaseTwinInspectLocker::UBaseTwinInspectLocker() {
-}
+UBaseTwinInspectLocker::UBaseTwinInspectLocker()
+{
 
+}

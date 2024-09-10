@@ -1,5 +1,6 @@
 #include "RPCMonitor.h"
 
-URPCMonitor::URPCMonitor() {
-}
+URPCMonitor::URPCMonitor()
+{
 
+}

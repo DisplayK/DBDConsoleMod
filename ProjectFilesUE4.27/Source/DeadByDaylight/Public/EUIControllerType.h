@@ -1,10 +1,11 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EUIControllerType.generated.h"
 
-UENUM()
-enum class EUIControllerType {
-    KeyboardMouse,
-    GamePad,
+UENUM(BlueprintType)
+enum class EUIControllerType : uint8
+{
+	KeyboardMouse,
+	GamePad,
 };
-

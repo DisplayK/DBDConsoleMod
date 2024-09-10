@@ -2,10 +2,12 @@
 
 class AGenerator;
 
-void UZombieAttractedByGeneratorBTService::OnInRangeChanged(const bool inRange, AGenerator* generator) {
+void UZombieAttractedByGeneratorBTService::OnInRangeChanged(const bool inRange, AGenerator* generator)
+{
+
 }
 
-UZombieAttractedByGeneratorBTService::UZombieAttractedByGeneratorBTService() {
-    this->_genRepairingHearingRange = 500.00f;
+UZombieAttractedByGeneratorBTService::UZombieAttractedByGeneratorBTService()
+{
+	this->_genRepairingHearingRange = 500.000000;
 }
-

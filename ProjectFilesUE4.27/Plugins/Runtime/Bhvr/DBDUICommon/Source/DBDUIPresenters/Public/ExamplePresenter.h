@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "HudPresenter.h"
+#include "Templates/SubclassOf.h"
 #include "ExamplePresenter.generated.h"
 
 class UUserWidget;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DBDUIPRESENTERS_API UExamplePresenter : public UHudPresenter {
-    GENERATED_BODY()
+UCLASS(EditInlineNew)
+class DBDUIPRESENTERS_API UExamplePresenter : public UHudPresenter
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSubclassOf<UUserWidget> ExampleWidgetClass;
-    
-    UExamplePresenter();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TSubclassOf<UUserWidget> ExampleWidgetClass;
+
 private:
-    UFUNCTION()
-    void OnButtonClick();
-    
+	UFUNCTION()
+	void OnButtonClick();
+
+public:
+	UExamplePresenter();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UExamplePresenter) { return 0; }

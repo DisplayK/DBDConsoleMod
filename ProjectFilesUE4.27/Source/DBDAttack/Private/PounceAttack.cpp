@@ -1,5 +1,6 @@
 #include "PounceAttack.h"
 
-UPounceAttack::UPounceAttack() {
-}
+UPounceAttack::UPounceAttack()
+{
 
+}

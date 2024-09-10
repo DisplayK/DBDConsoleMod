@@ -1,24 +1,28 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintAsyncActionBase.h"
 #include "Blueprint/AsyncTaskDownloadImage.h"
+#include "Kismet/BlueprintAsyncActionBase.h"
 #include "AsyncTaskDownloadCacheImage.generated.h"
 
 UCLASS()
-class DYNAMICCONTENT_API UAsyncTaskDownloadCacheImage : public UBlueprintAsyncActionBase {
-    GENERATED_BODY()
+class DYNAMICCONTENT_API UAsyncTaskDownloadCacheImage : public UBlueprintAsyncActionBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintAssignable)
-    FDownloadImageDelegate OnSuccess;
-    
-    UPROPERTY(BlueprintAssignable)
-    FDownloadImageDelegate OnFail;
-    
+	UPROPERTY(BlueprintAssignable)
+	FDownloadImageDelegate OnSuccess;
+
+	UPROPERTY(BlueprintAssignable)
+	FDownloadImageDelegate OnFail;
+
 private:
-    UPROPERTY(Transient)
-    FString _url;
-    
+	UPROPERTY(Transient)
+	FString _url;
+
 public:
-    UAsyncTaskDownloadCacheImage();
+	UAsyncTaskDownloadCacheImage();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAsyncTaskDownloadCacheImage) { return 0; }

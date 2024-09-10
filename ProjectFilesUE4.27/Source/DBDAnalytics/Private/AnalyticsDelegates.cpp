@@ -1,5 +1,6 @@
 #include "AnalyticsDelegates.h"
 
-UAnalyticsDelegates::UAnalyticsDelegates() {
-}
+UAnalyticsDelegates::UAnalyticsDelegates()
+{
 
+}

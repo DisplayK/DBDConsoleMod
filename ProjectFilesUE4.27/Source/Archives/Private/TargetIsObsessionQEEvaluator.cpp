@@ -1,5 +1,6 @@
 #include "TargetIsObsessionQEEvaluator.h"
 
-UTargetIsObsessionQEEvaluator::UTargetIsObsessionQEEvaluator() {
-}
+UTargetIsObsessionQEEvaluator::UTargetIsObsessionQEEvaluator()
+{
 
+}

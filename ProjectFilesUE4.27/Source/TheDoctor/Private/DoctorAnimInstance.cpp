@@ -1,5 +1,6 @@
 #include "DoctorAnimInstance.h"
 
-UDoctorAnimInstance::UDoctorAnimInstance() {
-}
+UDoctorAnimInstance::UDoctorAnimInstance()
+{
 
+}

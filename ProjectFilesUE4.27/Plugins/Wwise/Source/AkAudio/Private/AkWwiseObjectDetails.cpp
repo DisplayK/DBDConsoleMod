@@ -1,5 +1,8 @@
 #include "AkWwiseObjectDetails.h"
 
-FAkWwiseObjectDetails::FAkWwiseObjectDetails() {
+FAkWwiseObjectDetails::FAkWwiseObjectDetails()
+{
+	this->ItemName = TEXT("");
+	this->ItemPath = TEXT("");
+	this->ItemId = TEXT("");
 }
-

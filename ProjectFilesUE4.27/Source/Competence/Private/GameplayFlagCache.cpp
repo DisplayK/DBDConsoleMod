@@ -1,5 +1,5 @@
 #include "GameplayFlagCache.h"
 
-FGameplayFlagCache::FGameplayFlagCache() {
+FGameplayFlagCache::FGameplayFlagCache()
+{
 }
-

@@ -1,5 +1,7 @@
 #include "ArchivesJournal.h"
 
-FArchivesJournal::FArchivesJournal() {
+FArchivesJournal::FArchivesJournal()
+{
+	this->Title = FText::GetEmpty();
+	this->Vignettes = TArray<FArchivesVignettes>();
 }
-

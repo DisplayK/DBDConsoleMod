@@ -1,5 +1,6 @@
 #include "GameStateEvadeLoopStrategyMapContainer.h"
 
-FGameStateEvadeLoopStrategyMapContainer::FGameStateEvadeLoopStrategyMapContainer() {
+FGameStateEvadeLoopStrategyMapContainer::FGameStateEvadeLoopStrategyMapContainer()
+{
+	this->Map = TMap<EAIGameState, EAIFleeLoopStrategy>();
 }
-

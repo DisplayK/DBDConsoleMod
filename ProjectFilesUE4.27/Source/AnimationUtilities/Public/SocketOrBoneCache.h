@@ -1,32 +1,35 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "UObject/SoftObjectPtr.h"
 #include "SocketOrBoneCache.generated.h"
 
 class UAnimSequence;
 
 USTRUCT(BlueprintType)
-struct ANIMATIONUTILITIES_API FSocketOrBoneCache {
-    GENERATED_BODY()
-public:
+struct FSocketOrBoneCache
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditAnywhere)
-    TSoftObjectPtr<UAnimSequence> _sourceAnimation;
-    
-    UPROPERTY(EditAnywhere)
-    FName _socketName;
-    
-    UPROPERTY(EditAnywhere)
-    FName _notifyName;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, meta=(AllowPrivateAccess=true))
-    FVector _location;
-    
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere, meta=(AllowPrivateAccess=true))
-    FRotator _rotation;
-    
+	UPROPERTY(EditAnywhere)
+	TSoftObjectPtr<UAnimSequence> _sourceAnimation;
+
+	UPROPERTY(EditAnywhere)
+	FName _socketName;
+
+	UPROPERTY(EditAnywhere)
+	FName _notifyName;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	FVector _location;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(AllowPrivateAccess=true))
+	FRotator _rotation;
+
 public:
-    FSocketOrBoneCache();
+	ANIMATIONUTILITIES_API FSocketOrBoneCache();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FSocketOrBoneCache) { return 0; }

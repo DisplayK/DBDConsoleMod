@@ -1,8 +1,12 @@
 #include "HasObjectState.h"
+#include "GameplayTagContainer.h"
 
-void UHasObjectState::SetState(FGameplayTag state) {
+void UHasObjectState::SetState(FGameplayTag state)
+{
+
 }
 
-UHasObjectState::UHasObjectState() {
-}
+UHasObjectState::UHasObjectState()
+{
 
+}

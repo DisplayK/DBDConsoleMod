@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
@@ -8,27 +9,31 @@
 class AActor;
 
 USTRUCT(BlueprintType)
-struct DEADBYDAYLIGHT_API FAITrailEvent {
-    GENERATED_BODY()
+struct FAITrailEvent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FVector Location;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float StartTime;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float EndTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    AActor* Instigator;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGameplayTag IgnoreOnPerkTag;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGenericTeamId TeamIdentifier;
-    
-    FAITrailEvent();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector Location;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float StartTime;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float EndTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	AActor* Instigator;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FGameplayTag IgnoreOnPerkTag;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FGenericTeamId TeamIdentifier;
+
+public:
+	DEADBYDAYLIGHT_API FAITrailEvent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAITrailEvent) { return 0; }

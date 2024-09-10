@@ -1,27 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseTooltipWidget.h"
 #include "AtlantaCustomizationTooltipWidget.generated.h"
 
 class UImage;
-class UUMGCustomizationTooltipHeaderWidget;
 class UUMGCustomizationTooltipContentWidget;
+class UUMGCustomizationTooltipHeaderWidget;
 
 UCLASS(Abstract, EditInlineNew)
-class UAtlantaCustomizationTooltipWidget : public UBaseTooltipWidget {
-    GENERATED_BODY()
-public:
+class UAtlantaCustomizationTooltipWidget : public UBaseTooltipWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* SmokeImage;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGCustomizationTooltipHeaderWidget* Header;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGCustomizationTooltipContentWidget* Content;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* SmokeImage;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGCustomizationTooltipHeaderWidget* Header;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGCustomizationTooltipContentWidget* Content;
+
 public:
-    UAtlantaCustomizationTooltipWidget();
+	UAtlantaCustomizationTooltipWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAtlantaCustomizationTooltipWidget) { return 0; }

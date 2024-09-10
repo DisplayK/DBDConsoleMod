@@ -1,5 +1,6 @@
 #include "LockerAnimInstance.h"
 
-ULockerAnimInstance::ULockerAnimInstance() {
-}
+ULockerAnimInstance::ULockerAnimInstance()
+{
 
+}

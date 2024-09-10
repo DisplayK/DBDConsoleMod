@@ -1,13 +1,14 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EStreamVideoDataType.generated.h"
 
-UENUM()
-enum class EStreamVideoDataType {
-    None,
-    LoreCinematic,
-    SurvivorTutorial,
-    KillerTutorial,
-    Count,
+UENUM(BlueprintType)
+enum class EStreamVideoDataType : uint8
+{
+	None,
+	LoreCinematic,
+	SurvivorTutorial,
+	KillerTutorial,
+	Count,
 };
-

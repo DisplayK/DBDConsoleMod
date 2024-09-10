@@ -1,53 +1,64 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Collectable.h"
+#include "Templates/SubclassOf.h"
 #include "TheHuntressPower.generated.h"
 
-class ASlasherPlayer;
-class UBaseProjectileLauncher;
-class UHatchetCooldown;
+class UReloadHatchet;
 class UAkComponent;
+class ASlasherPlayer;
+class UHatchetCooldown;
+class UBaseProjectileLauncher;
 
 UCLASS()
-class ATheHuntressPower : public ACollectable {
-    GENERATED_BODY()
+class ATheHuntressPower : public ACollectable
+{
+	GENERATED_BODY()
+
+protected:
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UReloadHatchet> _reloadHatchetClass;
+
 public:
-    ATheHuntressPower();
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintNativeEvent)
-    void StartHatchetShineCosmetic();
-    
-    UFUNCTION(BlueprintCallable)
-    void SetPercentThrowStrength(const float percentStrength);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetHatchetVisible(const bool visible);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void PrintDebugThrowInfo();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsHatchetThrowFullyCharged() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool HasHatchet() const;
-    
-    UFUNCTION(BlueprintPure)
-    ASlasherPlayer* GetOwningKiller() const;
-    
-    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
-    UBaseProjectileLauncher* GetHatchetProjectileLauncher() const;
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    UHatchetCooldown* GetHatchetCooldown() const;
-    
-    UFUNCTION(BlueprintImplementableEvent, BlueprintPure)
-    UAkComponent* GetAkAudioHatchetSpawner() const;
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_OnThrowInteractionStart();
-    
-    UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
-    void Cosmetic_OnThrowInteractionCancelled();
-    
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintCosmetic)
+	void StartHatchetShineCosmetic();
+
+	UFUNCTION(BlueprintCallable)
+	void SetPercentThrowStrength(const float percentStrength);
+
+	UFUNCTION(BlueprintCallable)
+	void SetHatchetVisible(const bool visible);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void PrintDebugThrowInfo();
+
+	UFUNCTION(BlueprintPure)
+	bool IsHatchetThrowFullyCharged() const;
+
+	UFUNCTION(BlueprintPure)
+	bool HasHatchet() const;
+
+	UFUNCTION(BlueprintPure)
+	ASlasherPlayer* GetOwningKiller() const;
+
+	UFUNCTION(BlueprintPure, BlueprintImplementableEvent)
+	UBaseProjectileLauncher* GetHatchetProjectileLauncher() const;
+
+	UFUNCTION(BlueprintImplementableEvent)
+	UHatchetCooldown* GetHatchetCooldown() const;
+
+	UFUNCTION(BlueprintPure, BlueprintImplementableEvent)
+	UAkComponent* GetAkAudioHatchetSpawner() const;
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnThrowInteractionStart();
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCosmetic)
+	void Cosmetic_OnThrowInteractionCancelled();
+
+public:
+	ATheHuntressPower();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ATheHuntressPower) { return 0; }

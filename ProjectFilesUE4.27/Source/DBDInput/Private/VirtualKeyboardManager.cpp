@@ -1,6 +1,6 @@
 #include "VirtualKeyboardManager.h"
 
-UVirtualKeyboardManager::UVirtualKeyboardManager() {
-    this->_virtualKeyboard = NULL;
+UVirtualKeyboardManager::UVirtualKeyboardManager()
+{
+	this->_virtualKeyboard = NULL;
 }
-

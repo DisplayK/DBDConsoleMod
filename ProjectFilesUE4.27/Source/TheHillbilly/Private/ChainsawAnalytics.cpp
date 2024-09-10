@@ -1,5 +1,7 @@
 #include "ChainsawAnalytics.h"
 
-FChainsawAnalytics::FChainsawAnalytics() {
+FChainsawAnalytics::FChainsawAnalytics()
+{
+	this->MatchId = TEXT("");
+	this->DownSurvivorsWithChainsawWhileCampingEvents = TArray<FChainsawEventWhileCamping>();
 }
-

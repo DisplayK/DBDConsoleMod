@@ -1,5 +1,6 @@
 #include "UMGFriendContextualMenuWidget.h"
 
-UUMGFriendContextualMenuWidget::UUMGFriendContextualMenuWidget() {
-}
+UUMGFriendContextualMenuWidget::UUMGFriendContextualMenuWidget()
+{
 
+}

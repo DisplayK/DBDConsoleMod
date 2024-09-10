@@ -1,53 +1,47 @@
 #include "SplashScreen.h"
+#include "SpecialEventUIInfo.h"
 
-void USplashScreen::UpdateShadersPrecompilingProgression(const float percentageCompleted) const {
+void USplashScreen::UpdateLoadingProgression(const FString& loadingProgression) const
+{
+
 }
 
-void USplashScreen::UpdateLoadingProgression(const FString& loadingProgression) const {
+void USplashScreen::ShowSpecialEventVisual(const FSpecialEventUIInfo& eventInfo) const
+{
+
 }
 
-void USplashScreen::UpdateDownloadProgression(const FDownloadProgression& downloadProgression) const {
+void USplashScreen::ShowSaveGamePopup() const
+{
+
 }
 
-void USplashScreen::ShowShadersPrecompilingProgression() const {
+void USplashScreen::ShowPressKeyState() const
+{
+
 }
 
-void USplashScreen::ShowSaveGamePopup() const {
+void USplashScreen::ShowLoadingState() const
+{
+
 }
 
-void USplashScreen::ShowPressKeyState() const {
+void USplashScreen::SetVersionText(const FString& versionText) const
+{
+
 }
 
-void USplashScreen::ShowLoadingState() const {
+void USplashScreen::OnSaveGamePopupComplete()
+{
+
 }
 
-void USplashScreen::ShowDownloadProgression() const {
+void USplashScreen::HidePressKeyState() const
+{
+
 }
 
-void USplashScreen::ShowCharacterSlideShow(TArray<FCharacterSlideData>& characterSlides) {
-}
+USplashScreen::USplashScreen()
+{
 
-void USplashScreen::SetVersionText(const FString& versionText) const {
 }
-
-void USplashScreen::OnSaveGamePopupComplete() {
-}
-
-void USplashScreen::HideShadersPrecompilingProgression() const {
-}
-
-void USplashScreen::HidePressKeyState() const {
-}
-
-void USplashScreen::HideLoadingState() const {
-}
-
-void USplashScreen::HideDownloadProgression() const {
-}
-
-void USplashScreen::HideCharacterSlideShow() {
-}
-
-USplashScreen::USplashScreen() {
-}
-

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "SpawnInfo.h"
@@ -7,30 +8,32 @@
 class UPaperTileMap;
 
 UCLASS()
-class ADBDClientSyncer : public AActor {
-    GENERATED_BODY()
-public:
+class ADBDClientSyncer : public AActor
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    TArray<FSpawnInfo> _actorsToSpawnLocally;
-    
-    UPROPERTY(Transient)
-    TArray<FSpawnInfo> _currentQueue;
-    
-    UPROPERTY(Transient)
-    UPaperTileMap* _tileMap;
-    
-public:
-    ADBDClientSyncer();
+	UPROPERTY(Transient)
+	TArray<FSpawnInfo> _actorsToSpawnLocally;
+
+	UPROPERTY(Transient)
+	TArray<FSpawnInfo> _currentQueue;
+
+	UPROPERTY(Transient)
+	UPaperTileMap* _tileMap;
+
 private:
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_SyncSeed(int32 seed, UPaperTileMap* tileMap, int32 generationPlayerCount, const FString& premadeMap);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_SyncFinalLocallySpawnCount(int16 numLocal);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void Multicast_SyncActorToSpawnLocally(const TArray<FSpawnInfo>& spawnInfos, int16 startIndex);
-    
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_SyncSeed(int32 seed, UPaperTileMap* tileMap, int32 generationPlayerCount, const FString& premadeMap);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_SyncFinalLocallySpawnCount(int16 numLocal);
+
+	UFUNCTION(NetMulticast, Reliable)
+	void Multicast_SyncActorToSpawnLocally(const TArray<FSpawnInfo>& spawnInfos, int16 startIndex);
+
+public:
+	ADBDClientSyncer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ADBDClientSyncer) { return 0; }

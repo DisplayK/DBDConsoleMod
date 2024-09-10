@@ -1,5 +1,6 @@
 #include "TwinLullabyRangeAdditiveEffect.h"
 
-UTwinLullabyRangeAdditiveEffect::UTwinLullabyRangeAdditiveEffect() {
-}
+UTwinLullabyRangeAdditiveEffect::UTwinLullabyRangeAdditiveEffect()
+{
 
+}

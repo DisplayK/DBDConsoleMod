@@ -1,5 +1,6 @@
 #include "SteamProfileDAL.h"
 
-USteamProfileDAL::USteamProfileDAL() {
-}
+USteamProfileDAL::USteamProfileDAL()
+{
 
+}

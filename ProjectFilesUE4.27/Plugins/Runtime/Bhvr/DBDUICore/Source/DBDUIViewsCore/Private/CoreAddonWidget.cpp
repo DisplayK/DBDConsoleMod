@@ -1,5 +1,6 @@
 #include "CoreAddonWidget.h"
 
-UCoreAddonWidget::UCoreAddonWidget() {
-}
+UCoreAddonWidget::UCoreAddonWidget()
+{
 
+}

@@ -1,5 +1,7 @@
 #include "FootstepsPerceptionComponent.h"
 
-UFootstepsPerceptionComponent::UFootstepsPerceptionComponent() {
+UFootstepsPerceptionComponent::UFootstepsPerceptionComponent()
+{
+	this->_allowFootstepsSeenPerkFlags = TArray<FGameplayTag>();
+	this->_disallowFootstepsSeenPerkFlags = TArray<FGameplayTag>();
 }
-

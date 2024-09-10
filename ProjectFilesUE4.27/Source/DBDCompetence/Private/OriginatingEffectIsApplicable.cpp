@@ -1,5 +1,6 @@
 #include "OriginatingEffectIsApplicable.h"
 
-UOriginatingEffectIsApplicable::UOriginatingEffectIsApplicable() {
-}
+UOriginatingEffectIsApplicable::UOriginatingEffectIsApplicable()
+{
 
+}

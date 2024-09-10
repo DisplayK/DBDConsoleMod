@@ -1,5 +1,6 @@
 #include "ReloadHarpoonRifleInteraction.h"
 
-UReloadHarpoonRifleInteraction::UReloadHarpoonRifleInteraction() {
-}
+UReloadHarpoonRifleInteraction::UReloadHarpoonRifleInteraction()
+{
 
+}

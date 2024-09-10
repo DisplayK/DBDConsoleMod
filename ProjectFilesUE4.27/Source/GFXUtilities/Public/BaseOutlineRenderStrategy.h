@@ -1,19 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "BaseOutlineRenderStrategy.generated.h"
 
 class UBatchMeshCommands;
 
 UCLASS()
-class GFXUTILITIES_API UBaseOutlineRenderStrategy : public UObject {
-    GENERATED_BODY()
-public:
+class GFXUTILITIES_API UBaseOutlineRenderStrategy : public UObject
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export, Transient)
-    TArray<UBatchMeshCommands*> _batchCommands;
-    
+	UPROPERTY(Transient, Export)
+	TArray<UBatchMeshCommands*> _batchCommands;
+
 public:
-    UBaseOutlineRenderStrategy();
+	UBaseOutlineRenderStrategy();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBaseOutlineRenderStrategy) { return 0; }

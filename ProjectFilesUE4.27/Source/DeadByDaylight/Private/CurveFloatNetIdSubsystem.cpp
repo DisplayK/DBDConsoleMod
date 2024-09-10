@@ -1,5 +1,6 @@
 #include "CurveFloatNetIdSubsystem.h"
 
-UCurveFloatNetIdSubsystem::UCurveFloatNetIdSubsystem() {
-}
+UCurveFloatNetIdSubsystem::UCurveFloatNetIdSubsystem()
+{
 
+}

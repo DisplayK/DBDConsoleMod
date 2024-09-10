@@ -1,5 +1,6 @@
 #include "BlightPowerStateReady.h"
 
-UBlightPowerStateReady::UBlightPowerStateReady() {
-}
+UBlightPowerStateReady::UBlightPowerStateReady()
+{
 
+}

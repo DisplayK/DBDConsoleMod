@@ -1,20 +1,29 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
-#include "AkEventWithSubtitle.h"
+#include "OnAkPostEventCallback.h"
 #include "AkExternalSourceInfo.h"
-#include "OnAkPostEventCallbackDelegate.h"
+#include "AkEventWithSubtitle.h"
 #include "SubtitlesManager.generated.h"
 
 class UAkGameObject;
+class UAkAudioEvent;
 
 UCLASS(BlueprintType)
-class DEADBYDAYLIGHT_API USubtitlesManager : public UGameInstanceSubsystem {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API USubtitlesManager : public UGameInstanceSubsystem
+{
+	GENERATED_BODY()
+
 public:
-    USubtitlesManager();
-    UFUNCTION(BlueprintCallable, BlueprintCosmetic)
-    static int32 PostAkEventWithSubtitles(UAkGameObject* target, const TArray<FAkEventWithSubtitle>& akEventRandomizer, float maxSubtitleDistance, int32 callbackMask, const FOnAkPostEventCallback& postEventCallback, const TArray<FAkExternalSourceInfo>& externalSources);
-    
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic)
+	static int32 PostAkEventWithSubtitles(UAkGameObject* target, const TArray<FAkEventWithSubtitle>& akEventRandomizer, float maxSubtitleDistance, int32 callbackMask, const FOnAkPostEventCallback& postEventCallback, const TArray<FAkExternalSourceInfo>& externalSources, UAkAudioEvent*& akEventPlayed);
+
+	UFUNCTION(BlueprintPure, BlueprintCosmetic)
+	static bool IsDebuggingSubtitles();
+
+public:
+	USubtitlesManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USubtitlesManager) { return 0; }

@@ -1,27 +1,25 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "BaseLockerInteraction.h"
 #include "DBDTunableRowHandle.h"
-#include "InteractionDefinition.h"
 #include "LockerFakeEnterInteraction.generated.h"
 
-class ALocker;
-
 UCLASS(EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DBDINTERACTION_API ULockerFakeEnterInteraction : public UInteractionDefinition {
-    GENERATED_BODY()
-public:
+class DBDINTERACTION_API ULockerFakeEnterInteraction : public UBaseLockerInteraction
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float _lockerInteractionBlockTime;
-    
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float _lockerInteractionBlockTime;
+
 private:
-    UPROPERTY(Transient)
-    ALocker* _owningLocker;
-    
-    UPROPERTY(EditAnywhere)
-    FDBDTunableRowHandle _fakeEnterLoudNoiseRange;
-    
+	UPROPERTY(EditAnywhere)
+	FDBDTunableRowHandle _fakeEnterLoudNoiseRange;
+
 public:
-    ULockerFakeEnterInteraction();
+	ULockerFakeEnterInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ULockerFakeEnterInteraction) { return 0; }

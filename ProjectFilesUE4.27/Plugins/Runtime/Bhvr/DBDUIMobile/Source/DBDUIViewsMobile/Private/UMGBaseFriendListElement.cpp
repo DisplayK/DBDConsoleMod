@@ -1,15 +1,18 @@
 #include "UMGBaseFriendListElement.h"
+#include "EActionOnFriendType.h"
 
-void UUMGBaseFriendListElement::TriggerActionOnThisFriend(EActionOnFriendType actionType) {
+void UUMGBaseFriendListElement::TriggerActionOnThisFriend(EActionOnFriendType actionType)
+{
+
 }
 
-UUMGBaseFriendListElement::UUMGBaseFriendListElement() {
-    this->StatusPicture = NULL;
-    this->FriendName = NULL;
-    this->FriendStatus = NULL;
-    this->SelectionHighlight = NULL;
-    this->ItemSelectionBaseButton = NULL;
-    this->ContextualMenuPosition = NULL;
-    this->FriendUIStatusDataTable = NULL;
+UUMGBaseFriendListElement::UUMGBaseFriendListElement()
+{
+	this->StatusPicture = NULL;
+	this->FriendName = NULL;
+	this->FriendStatus = NULL;
+	this->SelectionHighlight = NULL;
+	this->ItemSelectionBaseButton = NULL;
+	this->ContextualMenuPosition = NULL;
+	this->FriendUIStatusDataTable = NULL;
 }
-

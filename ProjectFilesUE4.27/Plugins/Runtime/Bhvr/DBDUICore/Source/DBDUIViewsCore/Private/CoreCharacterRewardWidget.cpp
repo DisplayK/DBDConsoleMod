@@ -1,6 +1,6 @@
 #include "CoreCharacterRewardWidget.h"
 
+UCoreCharacterRewardWidget::UCoreCharacterRewardWidget()
+{
 
-UCoreCharacterRewardWidget::UCoreCharacterRewardWidget() {
 }
-

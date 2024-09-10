@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "NurseHelper.generated.h"
 
-class ABlinkPowerItem;
 class ADBDPlayer;
+class ABlinkPowerItem;
 
 UCLASS(BlueprintType)
-class THENURSE_API UNurseHelper : public UBlueprintFunctionLibrary {
-    GENERATED_BODY()
+class THENURSE_API UNurseHelper : public UBlueprintFunctionLibrary
+{
+	GENERATED_BODY()
+
 public:
-    UNurseHelper();
-    UFUNCTION(BlueprintPure)
-    static ABlinkPowerItem* GetBlinkPowerItem(ADBDPlayer* player);
-    
+	UFUNCTION(BlueprintPure)
+	static ABlinkPowerItem* GetBlinkPowerItem(ADBDPlayer* player);
+
+public:
+	UNurseHelper();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UNurseHelper) { return 0; }

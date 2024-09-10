@@ -1,5 +1,5 @@
 #include "CombinedPartyFriendData.h"
 
-FCombinedPartyFriendData::FCombinedPartyFriendData() {
+FCombinedPartyFriendData::FCombinedPartyFriendData()
+{
 }
-

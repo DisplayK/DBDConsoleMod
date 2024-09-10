@@ -1,5 +1,6 @@
 #include "BuyCurrencyMessage.h"
 
-FBuyCurrencyMessage::FBuyCurrencyMessage() {
+FBuyCurrencyMessage::FBuyCurrencyMessage()
+{
+	this->ItemId = TEXT("");
 }
-

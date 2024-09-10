@@ -3,46 +3,60 @@
 
 class ADBDPlayer;
 
-void UTwinJumpAttack::Server_StopJump_Implementation() {
-}
-bool UTwinJumpAttack::Server_StopJump_Validate() {
-    return true;
-}
+void UTwinJumpAttack::Server_StopJump_Implementation()
+{
 
-void UTwinJumpAttack::Server_OnJumpStartTwin_Implementation() {
-}
-bool UTwinJumpAttack::Server_OnJumpStartTwin_Validate() {
-    return true;
 }
 
-void UTwinJumpAttack::OnRep_ShouldTwinHaveJumpObjectType() {
+bool UTwinJumpAttack::Server_StopJump_Validate()
+{
+	return true;
 }
 
-void UTwinJumpAttack::Multicast_SetIsForbiddenLandingLocation_Implementation(bool isForbiddenLocation) {
+void UTwinJumpAttack::Server_OnJumpStartTwin_Implementation()
+{
+
 }
 
-void UTwinJumpAttack::Multicast_DestroyTwinOnWrongLanding_Implementation() {
+bool UTwinJumpAttack::Server_OnJumpStartTwin_Validate()
+{
+	return true;
 }
 
-void UTwinJumpAttack::Multicast_AttachToSurvivor_Implementation(ADBDPlayer* survivorToAttachTo) {
+void UTwinJumpAttack::OnRep_ShouldTwinHaveJumpObjectType()
+{
+
 }
 
+void UTwinJumpAttack::Multicast_SetIsForbiddenLandingLocation_Implementation(bool isForbiddenLocation)
+{
 
-
-
-
-
-void UTwinJumpAttack::Client_Debug_PrintFinalDecisionOnScreen_Implementation(bool foundPath) {
 }
 
-void UTwinJumpAttack::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UTwinJumpAttack, _shouldTwinHaveJumpObjectType);
+void UTwinJumpAttack::Multicast_DestroyTwinOnWrongLanding_Implementation()
+{
+
 }
 
-UTwinJumpAttack::UTwinJumpAttack() {
-    this->_jumpAngleCurve = NULL;
-    this->_shouldTwinHaveJumpObjectType = false;
+void UTwinJumpAttack::Multicast_AttachToSurvivor_Implementation(ADBDPlayer* survivorToAttachTo)
+{
+
 }
 
+void UTwinJumpAttack::Client_Debug_PrintFinalDecisionOnScreen_Implementation(bool foundPath)
+{
+
+}
+
+void UTwinJumpAttack::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UTwinJumpAttack, _shouldTwinHaveJumpObjectType);
+}
+
+UTwinJumpAttack::UTwinJumpAttack()
+{
+	this->_jumpAngleCurve = NULL;
+	this->_shouldTwinHaveJumpObjectType = false;
+}

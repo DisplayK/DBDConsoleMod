@@ -1,5 +1,6 @@
 #include "RecommendationsFilter.h"
 
-URecommendationsFilter::URecommendationsFilter() {
-}
+URecommendationsFilter::URecommendationsFilter()
+{
 
+}

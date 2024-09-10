@@ -1,5 +1,6 @@
 #include "ActorPairQueryEvaluatorComponent.h"
 
-UActorPairQueryEvaluatorComponent::UActorPairQueryEvaluatorComponent() {
-}
+UActorPairQueryEvaluatorComponent::UActorPairQueryEvaluatorComponent()
+{
 
+}

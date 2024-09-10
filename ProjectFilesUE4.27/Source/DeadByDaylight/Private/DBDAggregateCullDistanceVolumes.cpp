@@ -1,8 +1,11 @@
 #include "DBDAggregateCullDistanceVolumes.h"
 
-void ADBDAggregateCullDistanceVolumes::SpawnCullDistanceVolumes() {
+void ADBDAggregateCullDistanceVolumes::SpawnCullDistanceVolumes()
+{
+
 }
 
-ADBDAggregateCullDistanceVolumes::ADBDAggregateCullDistanceVolumes() {
-}
+ADBDAggregateCullDistanceVolumes::ADBDAggregateCullDistanceVolumes()
+{
 
+}

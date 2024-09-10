@@ -1,5 +1,6 @@
 #include "BlinkPowerEventDispatcher.h"
 
-UBlinkPowerEventDispatcher::UBlinkPowerEventDispatcher() {
-}
+UBlinkPowerEventDispatcher::UBlinkPowerEventDispatcher()
+{
 
+}

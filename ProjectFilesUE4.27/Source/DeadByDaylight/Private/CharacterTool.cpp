@@ -1,13 +1,13 @@
 #include "CharacterTool.h"
 
-ACharacterTool::ACharacterTool() {
-    this->_animInstanceClass = NULL;
-    this->_animated = true;
-    this->UseInGameSkeleton = true;
-    this->_showPower = false;
-    this->_useMasterPoseForItems = true;
-    this->_powerSocket = TEXT("Weapon_SocketLT");
-    this->_powerAttachmentRule = EAttachmentRule::SnapToTarget;
-    this->_lighting = NULL;
+ACharacterTool::ACharacterTool()
+{
+	this->SpawnLocations = TArray<ATargetPoint*>();
+	this->_powerSocket = TEXT("Weapon_SocketLT");
+	this->_powerAttachmentRule = EAttachmentRule::KeepRelative;
+	this->_muteAudioInPIE = true;
+	this->_isUsingGameSkeleton = false;
+	this->_overallLightingClass = NULL;
+	this->_characters = TMap<ADBDMenuPlayer*, FCharacterToolSpawnParameters>();
+	this->_lighting = NULL;
 }
-

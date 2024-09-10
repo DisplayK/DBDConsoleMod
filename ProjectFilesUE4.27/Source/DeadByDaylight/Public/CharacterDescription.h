@@ -1,113 +1,117 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "ECharacterDifficulty.h"
+#include "CustomizedMeshPart.h"
 #include "DBDTableRowBase.h"
 #include "EPlayerRole.h"
-#include "CustomizedMeshPart.h"
-#include "EGender.h"
+#include "ECharacterDifficulty.h"
+#include "SlideShowDescription.h"
 #include "EKillerAbilities.h"
+#include "UObject/SoftObjectPtr.h"
+#include "EGender.h"
 #include "DataTableProxy.h"
 #include "EKillerHeight.h"
-#include "SlideShowDescription.h"
 #include "CharacterDescription.generated.h"
 
 class UTexture2D;
 class APawn;
 
 USTRUCT(BlueprintType)
-struct DEADBYDAYLIGHT_API FCharacterDescription : public FDBDTableRowBase {
+struct FCharacterDescription: public FDBDTableRowBase
+{
 	GENERATED_BODY()
 
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 CharacterIndex;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EPlayerRole Role;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    ECharacterDifficulty Difficulty;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText DisplayName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText BackStory;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FText Biography;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    FName IconFilePath;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UTexture2D* HudIcon;
-    
-    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere)
-    FName BackgroundImagePath;
-    
-    UPROPERTY(EditAnywhere)
-    TArray<FCustomizedMeshPart> CustomizationDescription;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FString ChapterDlcId;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FString> AdditionalDlcIds;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool AvailableIfDlcInstalled;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName IdName;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FName DebugName;
-    
-    UPROPERTY(EditAnywhere)
-    bool IsInChunk0;
-    
-    UPROPERTY(EditAnywhere)
-    bool IsAvailableInNonViolentBuild;
-    
-    UPROPERTY(EditAnywhere)
-    bool IsAvailableInAtlantaBuild;
-    
-    UPROPERTY(EditAnywhere)
-    uint32 PlatformExclusiveFlag;
-    
-    UPROPERTY(EditAnywhere)
-    TSoftClassPtr<APawn> GamePawn;
-    
-    UPROPERTY(EditAnywhere)
-    TSoftClassPtr<APawn> MenuPawn;
-    
-    UPROPERTY(EditAnywhere)
-    FName DefaultItem;
-    
-    UPROPERTY(EditAnywhere)
-    EGender Gender;
-    
-    UPROPERTY(EditAnywhere)
-    TArray<EKillerAbilities> KillerAbilities;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FDataTableProxy TunableDB;
-    
-    UPROPERTY(EditAnywhere)
-    EKillerHeight KillerHeight;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FSlideShowDescription SlideShowDescriptions;
-    
-    UPROPERTY(EditAnywhere)
-    bool HideStoreCustomizations;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 CharacterIndex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EPlayerRole Role;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ECharacterDifficulty Difficulty;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText DisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText BackStory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText Biography;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName IconFilePath;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UTexture2D* HudIcon;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName BackgroundImagePath;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FCustomizedMeshPart> CustomizationDescription;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString ChapterDlcId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FString> AdditionalDlcIds;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool AvailableIfDlcInstalled;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FName DebugName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsInChunk0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsAvailableInNonViolentBuild;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsAvailableInAtlantaBuild;
+
+	UPROPERTY(EditAnywhere)
+	uint32 PlatformExclusiveFlag;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TSoftClassPtr<APawn> GamePawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSoftClassPtr<APawn> MenuPawn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName DefaultItem;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EGender Gender;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<EKillerAbilities> KillerAbilities;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FDataTableProxy TunableDB;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EKillerHeight KillerHeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FSlideShowDescription SlideShowDescriptions;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool HideStoreCustomizations;
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	ECustomizationCategory CustomizationCategories;
+	TArray<FName> CustomizationCategories;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FString CharacterId;
 
 public:
-	FCharacterDescription();
+	DEADBYDAYLIGHT_API FCharacterDescription();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCharacterDescription) { return 0; }

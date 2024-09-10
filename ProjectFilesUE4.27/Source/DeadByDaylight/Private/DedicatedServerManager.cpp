@@ -1,7 +1,7 @@
 #include "DedicatedServerManager.h"
 
-UDedicatedServerManager::UDedicatedServerManager() {
-    this->_gameInstance = NULL;
-    this->_onlineSystemHandler = NULL;
+UDedicatedServerManager::UDedicatedServerManager()
+{
+	this->_startupInitializer = NULL;
+	this->_onlineSystemHandler = NULL;
 }
-

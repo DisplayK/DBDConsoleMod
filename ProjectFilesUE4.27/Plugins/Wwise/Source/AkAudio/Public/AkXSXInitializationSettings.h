@@ -1,31 +1,38 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
-#include "AkCommonInitializationSettings.h"
-#include "AkXSXApuHeapInitializationSettings.h"
-#include "AkXSXAdvancedInitializationSettings.h"
+#include "AkPlatformInitialisationSettingsBase.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
+#include "AkXSXAdvancedInitializationSettings.h"
+#include "AkXSXApuHeapInitializationSettings.h"
+#include "UObject/NoExportTypes.h"
+#include "AkCommonInitializationSettings.h"
 #include "AkXSXInitializationSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
-class AKAUDIO_API UAkXSXInitializationSettings : public UObject {
-    GENERATED_BODY()
+UCLASS()
+class AKAUDIO_API UAkXSXInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommonInitializationSettings CommonSettings;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FAkXSXApuHeapInitializationSettings ApuHeapSettings;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
-    
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
-    FAkXSXAdvancedInitializationSettings AdvancedSettings;
-    
-    UAkXSXInitializationSettings();
-    UFUNCTION()
-    void MigrateMultiCoreRendering(bool NewValue);
-    
+	UPROPERTY(EditAnywhere)
+	FAkCommonInitializationSettings CommonSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkXSXApuHeapInitializationSettings ApuHeapSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkXSXAdvancedInitializationSettings AdvancedSettings;
+
+public:
+	UFUNCTION()
+	void MigrateMultiCoreRendering(bool NewValue);
+
+public:
+	UAkXSXInitializationSettings();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkXSXInitializationSettings) { return 0; }

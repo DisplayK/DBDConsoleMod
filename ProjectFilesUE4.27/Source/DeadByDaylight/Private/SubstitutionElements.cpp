@@ -1,5 +1,7 @@
 #include "SubstitutionElements.h"
 
-FSubstitutionElements::FSubstitutionElements() {
+FSubstitutionElements::FSubstitutionElements()
+{
+	this->_elementToReplace = NULL;
+	this->_elementToReplaceWith = NULL;
 }
-

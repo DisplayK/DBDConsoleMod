@@ -1,8 +1,11 @@
 #include "AtlantaTutorialStateMachine.h"
 
-void UAtlantaTutorialStateMachine::OnBlockingNotificationDismissed(FName blockingNotificationID) {
+void UAtlantaTutorialStateMachine::OnBlockingNotificationDismissed(FName blockingNotificationID)
+{
+
 }
 
-UAtlantaTutorialStateMachine::UAtlantaTutorialStateMachine() {
-}
+UAtlantaTutorialStateMachine::UAtlantaTutorialStateMachine()
+{
 
+}

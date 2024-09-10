@@ -1,9 +1,19 @@
 #include "PawnObserver.h"
 
-void UPawnObserver::OnLocallyObservedChanged() {
+class APawn;
+class AController;
+
+void UPawnObserver::OnPawnControllerSet(APawn* pawn, AController* oldController, AController* newController)
+{
+
 }
 
-UPawnObserver::UPawnObserver() {
-    this->_pawn = NULL;
+void UPawnObserver::OnLocallyObservedChanged()
+{
+
 }
 
+UPawnObserver::UPawnObserver()
+{
+
+}

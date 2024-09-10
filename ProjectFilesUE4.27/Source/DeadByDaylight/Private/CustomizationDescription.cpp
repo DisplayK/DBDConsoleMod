@@ -1,5 +1,6 @@
 #include "CustomizationDescription.h"
 
-UCustomizationDescription::UCustomizationDescription() {
+UCustomizationDescription::UCustomizationDescription()
+{
+	this->Parts = TArray<FCustomizedMeshPart>();
 }
-

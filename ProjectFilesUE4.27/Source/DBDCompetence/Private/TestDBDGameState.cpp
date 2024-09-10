@@ -1,5 +1,6 @@
 #include "TestDBDGameState.h"
 
-ATestDBDGameState::ATestDBDGameState() {
-}
+ATestDBDGameState::ATestDBDGameState()
+{
 
+}

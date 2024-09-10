@@ -1,16 +1,23 @@
 #include "CustomWidgetWrapper.h"
 
-void UCustomWidgetWrapper::ApplyVersion(int32 version) {
+void UCustomWidgetWrapper::ApplyVersion(int32 version)
+{
+
 }
 
-void UCustomWidgetWrapper::ApplyScale(float scale) {
+void UCustomWidgetWrapper::ApplyScale(float scale)
+{
+
 }
 
-void UCustomWidgetWrapper::ApplyOpacity(float opacity) {
+void UCustomWidgetWrapper::ApplyOpacity(float opacity)
+{
+
 }
 
-UCustomWidgetWrapper::UCustomWidgetWrapper() {
-    this->ManuallyParentWrapper = NULL;
-    this->InitializerWidget = NULL;
+UCustomWidgetWrapper::UCustomWidgetWrapper()
+{
+	this->ManuallyParentWrapper = NULL;
+	this->ManuallyChildWrappers = TArray<UCustomWidgetWrapper*>();
+	this->InitializerWidget = NULL;
 }
-

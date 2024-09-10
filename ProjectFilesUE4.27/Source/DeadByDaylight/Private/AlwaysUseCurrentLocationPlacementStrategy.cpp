@@ -1,5 +1,6 @@
 #include "AlwaysUseCurrentLocationPlacementStrategy.h"
 
-UAlwaysUseCurrentLocationPlacementStrategy::UAlwaysUseCurrentLocationPlacementStrategy() {
-}
+UAlwaysUseCurrentLocationPlacementStrategy::UAlwaysUseCurrentLocationPlacementStrategy()
+{
 
+}

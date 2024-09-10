@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Blueprint/UserWidget.h"
 #include "TemplateViewInterface.h"
+#include "Blueprint/UserWidget.h"
 #include "CoreTemplateWidget.generated.h"
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreTemplateWidget : public UUserWidget, public ITemplateViewInterface {
-    GENERATED_BODY()
+class DBDUIVIEWSCORE_API UCoreTemplateWidget : public UUserWidget, public ITemplateViewInterface
+{
+	GENERATED_BODY()
+
 public:
-    UCoreTemplateWidget();
-    
-    // Fix for true pure virtual functions not being implemented
+	UCoreTemplateWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreTemplateWidget) { return 0; }

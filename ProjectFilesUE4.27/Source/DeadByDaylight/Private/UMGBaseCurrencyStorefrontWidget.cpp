@@ -1,8 +1,11 @@
 #include "UMGBaseCurrencyStorefrontWidget.h"
 
-void UUMGBaseCurrencyStorefrontWidget::BroadcastOnAuricCellButtonClicked(int32 cellIndex) {
+void UUMGBaseCurrencyStorefrontWidget::BroadcastOnAuricCellButtonClicked(int32 cellIndex)
+{
+
 }
 
-UUMGBaseCurrencyStorefrontWidget::UUMGBaseCurrencyStorefrontWidget() {
-}
+UUMGBaseCurrencyStorefrontWidget::UUMGBaseCurrencyStorefrontWidget()
+{
 
+}

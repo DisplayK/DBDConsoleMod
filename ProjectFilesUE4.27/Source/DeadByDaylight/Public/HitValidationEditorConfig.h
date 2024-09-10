@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "EHitValidatorConfigName.h"
 #include "Engine/DataTable.h"
+#include "EHitValidatorConfigName.h"
 #include "HitValidationEditorConfig.generated.h"
 
 USTRUCT(BlueprintType)
-struct FHitValidationEditorConfig : public FTableRowBase {
-    GENERATED_BODY()
+struct FHitValidationEditorConfig: public FTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EHitValidatorConfigName ConfigName;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float CapsuleInflation;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float MaximumDistance;
-    
-    DEADBYDAYLIGHT_API FHitValidationEditorConfig();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	EHitValidatorConfigName ConfigName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float CapsuleInflation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float MaximumDistance;
+
+public:
+	DEADBYDAYLIGHT_API FHitValidationEditorConfig();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FHitValidationEditorConfig) { return 0; }

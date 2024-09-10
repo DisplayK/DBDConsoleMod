@@ -2,11 +2,12 @@
 
 class ASlasherPlayer;
 
-ASlasherPlayer* UBaseKillerAttackSubAnimInstance::GetOwningKiller() const {
-    return NULL;
+ASlasherPlayer* UBaseKillerAttackSubAnimInstance::GetOwningKiller() const
+{
+	return NULL;
 }
 
-UBaseKillerAttackSubAnimInstance::UBaseKillerAttackSubAnimInstance() {
-    this->_owningKiller = NULL;
+UBaseKillerAttackSubAnimInstance::UBaseKillerAttackSubAnimInstance()
+{
+	this->_owningKiller = NULL;
 }
-

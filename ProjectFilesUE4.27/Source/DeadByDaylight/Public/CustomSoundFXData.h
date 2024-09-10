@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EAudioCustomizationCategory.h"
 #include "CustomSoundFXData.generated.h"
 
 USTRUCT(BlueprintType)
-struct FCustomSoundFXData {
-    GENERATED_BODY()
+struct FCustomSoundFXData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EAudioCustomizationCategory AudioCategory;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FString SwitchState;
-    
-    DEADBYDAYLIGHT_API FCustomSoundFXData();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	EAudioCustomizationCategory AudioCategory;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FString SwitchState;
+
+public:
+	DEADBYDAYLIGHT_API FCustomSoundFXData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCustomSoundFXData) { return 0; }

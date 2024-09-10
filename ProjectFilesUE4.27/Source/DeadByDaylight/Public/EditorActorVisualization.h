@@ -1,21 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/SoftObjectPtr.h"
 #include "EditorActorVisualization.generated.h"
 
 class AActor;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UEditorActorVisualization : public USceneComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UEditorActorVisualization : public USceneComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TSoftClassPtr<AActor> ActorVisualization;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FTransform RelativeTransform;
-    
-    UEditorActorVisualization();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSoftClassPtr<AActor> ActorVisualization;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FTransform RelativeTransform;
+
+public:
+	UEditorActorVisualization();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UEditorActorVisualization) { return 0; }

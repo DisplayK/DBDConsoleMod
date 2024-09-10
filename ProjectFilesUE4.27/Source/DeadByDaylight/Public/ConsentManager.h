@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "ConsentManager.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API UConsentManager : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UConsentManager : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UConsentManager();
+	UConsentManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UConsentManager) { return 0; }

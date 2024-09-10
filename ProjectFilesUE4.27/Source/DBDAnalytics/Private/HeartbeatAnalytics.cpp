@@ -1,5 +1,6 @@
 #include "HeartbeatAnalytics.h"
 
-FHeartbeatAnalytics::FHeartbeatAnalytics() {
+FHeartbeatAnalytics::FHeartbeatAnalytics()
+{
+	this->BeatTime = TEXT("");
 }
-

@@ -1,5 +1,6 @@
 #include "WalletUpdateTracker.h"
 
-FWalletUpdateTracker::FWalletUpdateTracker() {
+FWalletUpdateTracker::FWalletUpdateTracker()
+{
+	this->_walletChangeMap = TMap<FString, int32>();
 }
-

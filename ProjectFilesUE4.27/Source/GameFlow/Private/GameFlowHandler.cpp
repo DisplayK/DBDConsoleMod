@@ -1,5 +1,6 @@
 #include "GameFlowHandler.h"
 
-UGameFlowHandler::UGameFlowHandler() {
-}
+UGameFlowHandler::UGameFlowHandler()
+{
 
+}

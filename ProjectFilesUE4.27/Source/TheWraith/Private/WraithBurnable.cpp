@@ -1,5 +1,6 @@
 #include "WraithBurnable.h"
 
-UWraithBurnable::UWraithBurnable() {
-}
+UWraithBurnable::UWraithBurnable()
+{
 
+}

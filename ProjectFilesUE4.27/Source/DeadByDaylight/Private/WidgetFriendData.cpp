@@ -1,6 +1,6 @@
 #include "WidgetFriendData.h"
 
-FWidgetFriendData::FWidgetFriendData() {
-    this->correspondingWidget = NULL;
+FWidgetFriendData::FWidgetFriendData()
+{
+	this->correspondingWidget = NULL;
 }
-

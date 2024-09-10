@@ -1,5 +1,6 @@
 #include "AutoPossessTheConjoinedTwin.h"
 
-UAutoPossessTheConjoinedTwin::UAutoPossessTheConjoinedTwin() {
-}
+UAutoPossessTheConjoinedTwin::UAutoPossessTheConjoinedTwin()
+{
 
+}

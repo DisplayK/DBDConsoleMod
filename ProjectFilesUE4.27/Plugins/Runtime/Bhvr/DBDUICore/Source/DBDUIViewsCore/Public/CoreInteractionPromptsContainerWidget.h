@@ -1,51 +1,52 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "TutorialHighlightViewInterface.h"
+#include "InteractionPromptsContainerViewInterface.h"
+#include "CoreBaseHudWidget.h"
 #include "Templates/SubclassOf.h"
 #include "Layout/Margin.h"
-#include "CoreBaseHudWidget.h"
-#include "InteractionPromptsContainerViewInterface.h"
-#include "TutorialHighlightViewInterface.h"
 #include "CoreInteractionPromptsContainerWidget.generated.h"
 
 class UCoreInteractionPromptWidget;
 class UDBDWrapBox;
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreInteractionPromptsContainerWidget : public UCoreBaseHudWidget, public IInteractionPromptsContainerViewInterface, public ITutorialHighlightViewInterface {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSCORE_API UCoreInteractionPromptsContainerWidget : public UCoreBaseHudWidget, public IInteractionPromptsContainerViewInterface, public ITutorialHighlightViewInterface
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UDBDWrapBox* CenterContainerBox;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UDBDWrapBox* ContainerBox;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    TSubclassOf<UCoreInteractionPromptWidget> InteractionPromptWidgetClass;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    int32 MaxDisplayedPrompts;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    int32 MaxDisplayedCenterPrompts;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    FMargin SlotMargin;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDBDWrapBox* CenterContainerBox;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDBDWrapBox* ContainerBox;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	TSubclassOf<UCoreInteractionPromptWidget> InteractionPromptWidgetClass;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	int32 MaxDisplayedPrompts;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	int32 MaxDisplayedCenterPrompts;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	FMargin SlotMargin;
+
 private:
-    UPROPERTY(Export, Transient)
-    TArray<UCoreInteractionPromptWidget*> _promptWidgetPool;
-    
-    UPROPERTY(Export, Transient)
-    TArray<UCoreInteractionPromptWidget*> _centerPromptWidgetPool;
-    
-    UPROPERTY(Export, Transient)
-    TMap<FName, UCoreInteractionPromptWidget*> _displayedPromptsMap;
-    
+	UPROPERTY(Transient, Export)
+	TArray<UCoreInteractionPromptWidget*> _promptWidgetPool;
+
+	UPROPERTY(Transient, Export)
+	TArray<UCoreInteractionPromptWidget*> _centerPromptWidgetPool;
+
+	UPROPERTY(Transient, Export)
+	TMap<FName, UCoreInteractionPromptWidget*> _displayedPromptsMap;
+
 public:
-    UCoreInteractionPromptsContainerWidget();
-    
-    // Fix for true pure virtual functions not being implemented
+	UCoreInteractionPromptsContainerWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreInteractionPromptsContainerWidget) { return 0; }

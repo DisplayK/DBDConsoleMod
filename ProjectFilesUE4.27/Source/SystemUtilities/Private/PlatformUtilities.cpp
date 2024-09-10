@@ -1,9 +1,11 @@
 #include "PlatformUtilities.h"
 
-FString UPlatformUtilities::GetPlatform() {
-    return TEXT("");
+FString UPlatformUtilities::GetPlatform()
+{
+	return TEXT("");
 }
 
-UPlatformUtilities::UPlatformUtilities() {
-}
+UPlatformUtilities::UPlatformUtilities()
+{
 
+}

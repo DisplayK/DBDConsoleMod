@@ -1,40 +1,49 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDTableRowBaseWithId.h"
 #include "EOnboardingTutorialType.h"
+#include "UObject/SoftObjectPtr.h"
+#include "DBDTableRowBaseWithId.h"
 #include "EOnboardingTutorialButtonStyle.h"
 #include "OnboardingTutorialDefinition.generated.h"
 
 class UTexture2D;
 
 USTRUCT(BlueprintType)
-struct FOnboardingTutorialDefinition : public FDBDTableRowBaseWithId {
-    GENERATED_BODY()
+struct FOnboardingTutorialDefinition: public FDBDTableRowBaseWithId
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText DisplayName;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText CompletedDisplayName;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText Description;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText CompletedDescription;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EOnboardingTutorialType TutorialType;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    EOnboardingTutorialButtonStyle ButtonStyle;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FString LevelId;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSoftObjectPtr<UTexture2D> Icon;
-    
-    ONBOARDING_API FOnboardingTutorialDefinition();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText DisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText CompletedDisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText CompletedDescription;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	EOnboardingTutorialType TutorialType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	EOnboardingTutorialButtonStyle ButtonStyle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FString LevelId;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TSoftObjectPtr<UTexture2D> Icon;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int32 DefaultCharacterId;
+
+public:
+	ONBOARDING_API FOnboardingTutorialDefinition();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FOnboardingTutorialDefinition) { return 0; }

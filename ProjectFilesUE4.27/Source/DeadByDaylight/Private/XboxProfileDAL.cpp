@@ -1,5 +1,6 @@
 #include "XboxProfileDAL.h"
 
-UXboxProfileDAL::UXboxProfileDAL() {
-}
+UXboxProfileDAL::UXboxProfileDAL()
+{
 
+}

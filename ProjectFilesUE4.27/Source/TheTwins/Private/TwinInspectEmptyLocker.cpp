@@ -1,5 +1,6 @@
 #include "TwinInspectEmptyLocker.h"
 
-UTwinInspectEmptyLocker::UTwinInspectEmptyLocker() {
-}
+UTwinInspectEmptyLocker::UTwinInspectEmptyLocker()
+{
 
+}

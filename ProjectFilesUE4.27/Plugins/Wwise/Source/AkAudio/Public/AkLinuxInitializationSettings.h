@@ -1,27 +1,34 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "AkAdvancedInitializationSettingsWithMultiCoreRendering.h"
-#include "UObject/Object.h"
+#include "AkPlatformInitialisationSettingsBase.h"
+#include "UObject/NoExportTypes.h"
 #include "AkCommonInitializationSettingsWithSampleRate.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
+#include "AkAdvancedInitializationSettingsWithMultiCoreRendering.h"
 #include "AkLinuxInitializationSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
-class AKAUDIO_API UAkLinuxInitializationSettings : public UObject {
-    GENERATED_BODY()
+UCLASS()
+class AKAUDIO_API UAkLinuxInitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommonInitializationSettingsWithSampleRate CommonSettings;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
-    
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
-    FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;
-    
-    UAkLinuxInitializationSettings();
-    UFUNCTION()
-    void MigrateMultiCoreRendering(bool NewValue);
-    
+	UPROPERTY(EditAnywhere)
+	FAkCommonInitializationSettingsWithSampleRate CommonSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;
+
+public:
+	UFUNCTION()
+	void MigrateMultiCoreRendering(bool NewValue);
+
+public:
+	UAkLinuxInitializationSettings();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkLinuxInitializationSettings) { return 0; }

@@ -1,5 +1,6 @@
 #include "ContainerUtilities.h"
 
-UContainerUtilities::UContainerUtilities() {
-}
+UContainerUtilities::UContainerUtilities()
+{
 
+}

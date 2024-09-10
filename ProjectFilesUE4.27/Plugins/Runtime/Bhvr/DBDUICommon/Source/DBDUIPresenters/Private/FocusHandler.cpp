@@ -1,5 +1,6 @@
 #include "FocusHandler.h"
 
-UFocusHandler::UFocusHandler() {
-}
+UFocusHandler::UFocusHandler()
+{
 
+}

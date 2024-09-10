@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseSurvivorAnimInstance.h"
 #include "GameplayTagContainer.h"
@@ -6,26 +7,28 @@
 #include "OpenChestSurvivorSubAnimInstance.generated.h"
 
 UCLASS(NonTransient)
-class DBDANIMATION_API UOpenChestSurvivorSubAnimInstance : public UBaseSurvivorAnimInstance {
-    GENERATED_BODY()
-public:
+class DBDANIMATION_API UOpenChestSurvivorSubAnimInstance : public UBaseSurvivorAnimInstance
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Transient)
-    bool _isInteractingWithChest;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    FGameplayTag _interactionPhase;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    bool _isInteractingWithOpenChest;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    FVector _snapPosition;
-    
-    UPROPERTY(BlueprintReadOnly, Transient)
-    bool _isVomiting;
-    
+	UPROPERTY(BlueprintReadOnly, Transient)
+	bool _isInteractingWithChest;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	FGameplayTag _interactionPhase;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	bool _isInteractingWithOpenChest;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	FVector _snapPosition;
+
+	UPROPERTY(BlueprintReadOnly, Transient)
+	bool _isVomiting;
+
 public:
-    UOpenChestSurvivorSubAnimInstance();
+	UOpenChestSurvivorSubAnimInstance();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UOpenChestSurvivorSubAnimInstance) { return 0; }

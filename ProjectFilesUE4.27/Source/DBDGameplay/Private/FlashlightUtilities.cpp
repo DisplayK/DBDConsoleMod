@@ -1,5 +1,6 @@
 #include "FlashlightUtilities.h"
 
-UFlashlightUtilities::UFlashlightUtilities() {
-}
+UFlashlightUtilities::UFlashlightUtilities()
+{
 
+}

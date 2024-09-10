@@ -1,5 +1,6 @@
 #include "DBDGameViewportClient.h"
 
-UDBDGameViewportClient::UDBDGameViewportClient() {
-}
+UDBDGameViewportClient::UDBDGameViewportClient()
+{
 
+}

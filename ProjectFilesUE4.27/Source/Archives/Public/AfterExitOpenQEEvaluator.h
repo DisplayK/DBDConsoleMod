@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameEventData.h"
 #include "QuestEventEvaluatorBase.h"
@@ -6,12 +7,16 @@
 #include "AfterExitOpenQEEvaluator.generated.h"
 
 UCLASS()
-class ARCHIVES_API UAfterExitOpenQEEvaluator : public UQuestEventEvaluatorBase {
-    GENERATED_BODY()
+class ARCHIVES_API UAfterExitOpenQEEvaluator : public UQuestEventEvaluatorBase
+{
+	GENERATED_BODY()
+
 public:
-    UAfterExitOpenQEEvaluator();
-    UFUNCTION()
-    void OnExitGateOpened(const FGameplayTag gameEventType, const FGameEventData& gameEventData);
-    
+	UFUNCTION()
+	void OnExitGateOpened(const FGameplayTag gameEventType, const FGameEventData& gameEventData);
+
+public:
+	UAfterExitOpenQEEvaluator();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAfterExitOpenQEEvaluator) { return 0; }

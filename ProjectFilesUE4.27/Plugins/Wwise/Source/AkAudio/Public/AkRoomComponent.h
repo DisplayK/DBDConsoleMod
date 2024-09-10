@@ -1,32 +1,46 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkGameObject.h"
 #include "AkRoomComponent.generated.h"
 
-class UAkRoomComponent;
+class UAkAcousticTextureSetComponent;
+class UPrimitiveComponent;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class AKAUDIO_API UAkRoomComponent : public UAkGameObject {
-    GENERATED_BODY()
+class AKAUDIO_API UAkRoomComponent : public UAkGameObject
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint8 bEnable: 1;
-    
-    UPROPERTY(Export, Transient)
-    UAkRoomComponent* NextLowerPriorityComponent;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float Priority;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float WallOcclusion;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float AuxSendLevel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SimpleDisplay)
-    bool AutoPost;
-    
-    UAkRoomComponent();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 bEnable : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bDynamic;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Priority;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float WallOcclusion;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float AuxSendLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool AutoPost;
+
+private:
+	UPROPERTY(Transient, Export)
+	UAkAcousticTextureSetComponent* GeometryComponent;
+
+public:
+	UFUNCTION(BlueprintPure)
+	UPrimitiveComponent* GetPrimitiveParent() const;
+
+public:
+	UAkRoomComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkRoomComponent) { return 0; }

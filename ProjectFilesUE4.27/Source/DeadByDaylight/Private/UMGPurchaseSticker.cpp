@@ -1,6 +1,6 @@
 #include "UMGPurchaseSticker.h"
 
-UUMGPurchaseSticker::UUMGPurchaseSticker() {
-    this->TextDiscount = NULL;
+UUMGPurchaseSticker::UUMGPurchaseSticker()
+{
+	this->TextDiscount = NULL;
 }
-

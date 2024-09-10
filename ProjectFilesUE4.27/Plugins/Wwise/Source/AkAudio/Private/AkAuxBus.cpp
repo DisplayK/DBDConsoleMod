@@ -1,6 +1,6 @@
 #include "AkAuxBus.h"
 
-UAkAuxBus::UAkAuxBus() {
-    this->RequiredBank = NULL;
+UAkAuxBus::UAkAuxBus()
+{
+	this->RequiredBank = NULL;
 }
-

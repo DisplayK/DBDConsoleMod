@@ -1,5 +1,6 @@
 #include "UMGFriendBaseTabListWidget.h"
 
-UUMGFriendBaseTabListWidget::UUMGFriendBaseTabListWidget() {
-}
+UUMGFriendBaseTabListWidget::UUMGFriendBaseTabListWidget()
+{
 
+}

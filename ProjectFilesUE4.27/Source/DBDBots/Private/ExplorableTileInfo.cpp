@@ -1,5 +1,7 @@
 #include "ExplorableTileInfo.h"
 
-FExplorableTileInfo::FExplorableTileInfo() {
+FExplorableTileInfo::FExplorableTileInfo()
+{
+	this->Id = FGuid{};
+	this->Bounds = FBox{};
 }
-

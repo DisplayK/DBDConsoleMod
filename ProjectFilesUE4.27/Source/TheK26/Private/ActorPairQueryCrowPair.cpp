@@ -1,5 +1,6 @@
 #include "ActorPairQueryCrowPair.h"
 
-FActorPairQueryCrowPair::FActorPairQueryCrowPair() {
+FActorPairQueryCrowPair::FActorPairQueryCrowPair()
+{
+	this->CrowProjectile = NULL;
 }
-

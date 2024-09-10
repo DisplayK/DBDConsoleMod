@@ -1,6 +1,8 @@
 #include "CrowdChoiceVoteResultAnalytics.h"
 
-FCrowdChoiceVoteResultAnalytics::FCrowdChoiceVoteResultAnalytics() {
-    this->VoteCount = 0;
+FCrowdChoiceVoteResultAnalytics::FCrowdChoiceVoteResultAnalytics()
+{
+	this->PollId = TEXT("");
+	this->VoteOption = TEXT("");
+	this->VoteCount = 0;
 }
-

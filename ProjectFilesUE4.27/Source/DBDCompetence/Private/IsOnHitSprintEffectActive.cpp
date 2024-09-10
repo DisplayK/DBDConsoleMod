@@ -1,5 +1,6 @@
 #include "IsOnHitSprintEffectActive.h"
 
-UIsOnHitSprintEffectActive::UIsOnHitSprintEffectActive() {
-}
+UIsOnHitSprintEffectActive::UIsOnHitSprintEffectActive()
+{
 
+}

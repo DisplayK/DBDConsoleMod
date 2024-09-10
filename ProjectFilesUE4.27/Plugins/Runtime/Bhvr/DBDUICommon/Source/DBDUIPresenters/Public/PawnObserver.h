@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UIComponent.h"
 #include "PawnObserver.generated.h"
 
+class AController;
 class APawn;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
-class DBDUIPRESENTERS_API UPawnObserver : public UUIComponent {
-    GENERATED_BODY()
-public:
+UCLASS(EditInlineNew)
+class DBDUIPRESENTERS_API UPawnObserver : public UUIComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    APawn* _pawn;
-    
+	UFUNCTION()
+	void OnPawnControllerSet(APawn* pawn, AController* oldController, AController* newController);
+
 public:
-    UPawnObserver();
-    UFUNCTION()
-    void OnLocallyObservedChanged();
-    
+	UFUNCTION()
+	void OnLocallyObservedChanged();
+
+public:
+	UPawnObserver();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPawnObserver) { return 0; }

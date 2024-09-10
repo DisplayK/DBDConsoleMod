@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "AkChinookPlatformInfo.h"
+#include "AkPlatformInfo.h"
 #include "AkXSXPlatformInfo.generated.h"
 
 UCLASS()
-class UAkXSXPlatformInfo : public UAkChinookPlatformInfo {
-    GENERATED_BODY()
+class UAkXSXPlatformInfo : public UAkPlatformInfo
+{
+	GENERATED_BODY()
+
 public:
-    UAkXSXPlatformInfo();
+	UAkXSXPlatformInfo();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkXSXPlatformInfo) { return 0; }

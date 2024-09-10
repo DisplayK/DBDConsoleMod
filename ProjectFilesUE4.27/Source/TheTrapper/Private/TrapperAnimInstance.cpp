@@ -1,5 +1,6 @@
 #include "TrapperAnimInstance.h"
 
-UTrapperAnimInstance::UTrapperAnimInstance() {
-}
+UTrapperAnimInstance::UTrapperAnimInstance()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "PlayerCameraAimDirectionProvider.h"
 
-UPlayerCameraAimDirectionProvider::UPlayerCameraAimDirectionProvider() {
-}
+UPlayerCameraAimDirectionProvider::UPlayerCameraAimDirectionProvider()
+{
 
+}

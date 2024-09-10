@@ -1,17 +1,21 @@
 #include "UMGSettingContextButton.h"
 
+void UUMGSettingContextButton::SetContextButtonData(int32 buttonID)
+{
 
-void UUMGSettingContextButton::SetContextButtonData(int32 buttonID) {
 }
 
+void UUMGSettingContextButton::HandleSettingContextButtonClick()
+{
 
-void UUMGSettingContextButton::HandleSettingContextButtonClick() {
 }
 
-int32 UUMGSettingContextButton::GetContextButtonData() {
-    return 0;
+int32 UUMGSettingContextButton::GetContextButtonData()
+{
+	return 0;
 }
 
-UUMGSettingContextButton::UUMGSettingContextButton() {
-}
+UUMGSettingContextButton::UUMGSettingContextButton()
+{
 
+}

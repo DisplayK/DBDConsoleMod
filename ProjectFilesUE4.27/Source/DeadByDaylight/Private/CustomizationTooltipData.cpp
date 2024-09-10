@@ -1,5 +1,5 @@
 #include "CustomizationTooltipData.h"
 
-FCustomizationTooltipData::FCustomizationTooltipData() {
+FCustomizationTooltipData::FCustomizationTooltipData()
+{
 }
-

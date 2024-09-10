@@ -2,15 +2,17 @@
 
 class UParticleSystemComponent;
 
+void AItemVfx::ClearParticleSystems()
+{
 
-
-void AItemVfx::ClearParticleSystems() {
 }
 
+void AItemVfx::AddParticleSystemComponent(UParticleSystemComponent* particleSystemComponent)
+{
 
-void AItemVfx::AddParticleSystemComponent(UParticleSystemComponent* particleSystemComponent) {
 }
 
-AItemVfx::AItemVfx() {
+AItemVfx::AItemVfx()
+{
+	this->_particleSystems = TArray<UParticleSystemComponent*>();
 }
-

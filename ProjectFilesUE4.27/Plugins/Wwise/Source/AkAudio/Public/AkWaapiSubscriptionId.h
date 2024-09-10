@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkWaapiSubscriptionId.generated.h"
 
 USTRUCT(BlueprintType)
-struct AKAUDIO_API FAkWaapiSubscriptionId {
-    GENERATED_BODY()
+struct FAkWaapiSubscriptionId
+{
+	GENERATED_BODY()
+
 public:
-    FAkWaapiSubscriptionId();
+	AKAUDIO_API FAkWaapiSubscriptionId();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkWaapiSubscriptionId) { return 0; }

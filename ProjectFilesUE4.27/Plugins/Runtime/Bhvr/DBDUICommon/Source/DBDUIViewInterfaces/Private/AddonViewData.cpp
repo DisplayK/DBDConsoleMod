@@ -1,7 +1,9 @@
 #include "AddonViewData.h"
 
-FAddonViewData::FAddonViewData() {
-    this->Cooldown = 0.00f;
-    this->StatusEffectType = EStatusEffectType::None;
+FAddonViewData::FAddonViewData()
+{
+	this->Cooldown = 0.0f;
+	this->StatusEffectType = EStatusEffectType::None;
+	this->StackCount = 0;
+	this->LoadoutPartState = ELoadoutPartState::None;
 }
-

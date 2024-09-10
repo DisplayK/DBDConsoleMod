@@ -1,5 +1,6 @@
 #include "OnboardingManager.h"
 
-UOnboardingManager::UOnboardingManager() {
-}
+UOnboardingManager::UOnboardingManager()
+{
 
+}

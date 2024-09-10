@@ -1,5 +1,6 @@
 #include "SurvivorCollectableOutlineUpdateStrategy.h"
 
-USurvivorCollectableOutlineUpdateStrategy::USurvivorCollectableOutlineUpdateStrategy() {
-}
+USurvivorCollectableOutlineUpdateStrategy::USurvivorCollectableOutlineUpdateStrategy()
+{
 
+}

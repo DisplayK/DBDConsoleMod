@@ -1,16 +1,20 @@
 #include "UMGFriendElementWidget.h"
 
-void UUMGFriendElementWidget::HandleSelectionButton() {
+void UUMGFriendElementWidget::HandleSelectionButton()
+{
+
 }
 
-void UUMGFriendElementWidget::HandleFavoriteButtonClicked() {
+void UUMGFriendElementWidget::HandleFavoriteButtonClicked()
+{
+
 }
 
-UUMGFriendElementWidget::UUMGFriendElementWidget() {
-    this->FavoriteSlot = NULL;
-    this->FavoriteButton = NULL;
-    this->SelectionImage = NULL;
-    this->SelectedPicture = NULL;
-    this->FriendIcon = NULL;
+UUMGFriendElementWidget::UUMGFriendElementWidget()
+{
+	this->FavoriteSlot = NULL;
+	this->FavoriteButton = NULL;
+	this->SelectionImage = NULL;
+	this->SelectedPicture = NULL;
+	this->FriendIcon = NULL;
 }
-

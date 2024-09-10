@@ -1,18 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "KillerStatusData.h"
 #include "ESicknessLevel.h"
 #include "PlagueStatusData.generated.h"
 
-USTRUCT(BlueprintType)
-struct FPlagueStatusData {
-    GENERATED_BODY()
+UCLASS()
+class DBDUIVIEWINTERFACES_API UPlagueStatusData : public UKillerStatusData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    ESicknessLevel SicknessLevel;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float SicknessProgress;
-    
-    DBDUIVIEWINTERFACES_API FPlagueStatusData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	ESicknessLevel SicknessLevel;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float SicknessProgress;
+
+public:
+	UPlagueStatusData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPlagueStatusData) { return 0; }

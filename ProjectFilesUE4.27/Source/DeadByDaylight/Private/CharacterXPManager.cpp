@@ -1,5 +1,6 @@
 #include "CharacterXPManager.h"
 
-UCharacterXPManager::UCharacterXPManager() {
+UCharacterXPManager::UCharacterXPManager()
+{
+	this->_gameInstance = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "PerkDataAsset.h"
 
-UPerkDataAsset::UPerkDataAsset() {
-}
+UPerkDataAsset::UPerkDataAsset()
+{
 
+}

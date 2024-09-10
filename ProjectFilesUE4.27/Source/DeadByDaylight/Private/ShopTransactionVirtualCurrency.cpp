@@ -1,5 +1,6 @@
 #include "ShopTransactionVirtualCurrency.h"
 
-FShopTransactionVirtualCurrency::FShopTransactionVirtualCurrency() {
+FShopTransactionVirtualCurrency::FShopTransactionVirtualCurrency()
+{
+	this->virtualCurrency = FShopTransactionVirtualCurrencyParameters{};
 }
-

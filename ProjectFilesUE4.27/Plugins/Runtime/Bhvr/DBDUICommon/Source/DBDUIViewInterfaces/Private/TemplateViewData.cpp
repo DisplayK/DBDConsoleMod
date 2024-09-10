@@ -1,5 +1,5 @@
 #include "TemplateViewData.h"
 
-FTemplateViewData::FTemplateViewData() {
+FTemplateViewData::FTemplateViewData()
+{
 }
-

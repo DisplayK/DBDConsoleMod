@@ -1,6 +1,7 @@
 #include "ClaimableInboxMessage.h"
 
-FClaimableInboxMessage::FClaimableInboxMessage() {
-    this->State = EClaimableInboxMessageState::NONE;
+FClaimableInboxMessage::FClaimableInboxMessage()
+{
+	this->Data = TArray<FClaimableInboxMessageData>();
+	this->State = EClaimableInboxMessageState::NONE;
 }
-

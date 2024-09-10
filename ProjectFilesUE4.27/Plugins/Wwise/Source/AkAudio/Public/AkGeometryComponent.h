@@ -1,6 +1,7 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Components/SceneComponent.h"
+#include "AkAcousticTextureSetComponent.h"
 #include "AkMeshType.h"
 #include "AkGeometrySurfaceOverride.h"
 #include "AkGeometryData.h"
@@ -10,44 +11,57 @@ class AActor;
 class UMaterialInterface;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class AKAUDIO_API UAkGeometryComponent : public USceneComponent {
-    GENERATED_BODY()
+class AKAUDIO_API UAkGeometryComponent : public UAkAcousticTextureSetComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    AkMeshType MeshType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 LOD;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TMap<UMaterialInterface*, FAkGeometrySurfaceOverride> StaticMeshSurfaceOverride;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FAkGeometrySurfaceOverride CollisionMeshSurfaceOverride;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint8 bEnableDiffraction: 1;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint8 bEnableDiffractionOnBoundaryEdges: 1;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    AActor* AssociatedRoom;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	AkMeshType MeshType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 LOD;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float WeldingThreshold;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TMap<UMaterialInterface*, FAkGeometrySurfaceOverride> StaticMeshSurfaceOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAkGeometrySurfaceOverride CollisionMeshSurfaceOverride;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 bEnableDiffraction : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 bEnableDiffractionOnBoundaryEdges : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	AActor* AssociatedRoom;
+
 private:
-    UPROPERTY()
-    FAkGeometryData GeometryData;
-    
+	UPROPERTY()
+	FAkGeometryData GeometryData;
+
+	UPROPERTY()
+	TMap<int32, float> SurfaceAreas;
+
 public:
-    UAkGeometryComponent();
-    UFUNCTION(BlueprintCallable)
-    void UpdateGeometry();
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveGeometry();
-    
-    UFUNCTION(BlueprintCallable)
-    void ConvertMesh();
-    
+	UFUNCTION(BlueprintCallable)
+	void UpdateGeometry();
+
+	UFUNCTION(BlueprintCallable)
+	void SendGeometry();
+
+	UFUNCTION(BlueprintCallable)
+	void RemoveGeometry();
+
+	UFUNCTION(BlueprintCallable)
+	void ConvertMesh();
+
+public:
+	UAkGeometryComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkGeometryComponent) { return 0; }

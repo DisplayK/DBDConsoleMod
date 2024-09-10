@@ -1,6 +1,6 @@
 #include "SecondsToRateModifierBaseAddon.h"
 
-USecondsToRateModifierBaseAddon::USecondsToRateModifierBaseAddon() {
-    this->_secondsToAdd = 0.00f;
+USecondsToRateModifierBaseAddon::USecondsToRateModifierBaseAddon()
+{
+	this->_secondsToAdd = 0.000000;
 }
-

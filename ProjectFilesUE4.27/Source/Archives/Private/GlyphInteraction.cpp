@@ -1,5 +1,6 @@
 #include "GlyphInteraction.h"
 
-UGlyphInteraction::UGlyphInteraction() {
-}
+UGlyphInteraction::UGlyphInteraction()
+{
 
+}

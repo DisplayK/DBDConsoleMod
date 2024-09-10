@@ -1,5 +1,6 @@
 #include "DBDMenuSilhouette.h"
 
-ADBDMenuSilhouette::ADBDMenuSilhouette() {
-}
+ADBDMenuSilhouette::ADBDMenuSilhouette()
+{
 
+}

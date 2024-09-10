@@ -1,5 +1,6 @@
 #include "ZombieAttackSurvivorBTTask.h"
 
-UZombieAttackSurvivorBTTask::UZombieAttackSurvivorBTTask() {
-}
+UZombieAttackSurvivorBTTask::UZombieAttackSurvivorBTTask()
+{
 
+}

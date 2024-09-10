@@ -1,30 +1,33 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGFriendSearchBarWidget.generated.h"
 
-class UEditableTextBox;
 class UUMGBaseButtonWidget;
+class UEditableTextBox;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGFriendSearchBarWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGFriendSearchBarWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    UEditableTextBox* InputTextField;
-    
-    UPROPERTY(Export)
-    UUMGBaseButtonWidget* SearchButton;
-    
-public:
-    UUMGFriendSearchBarWidget();
+	UPROPERTY(meta=(BindWidgetOptional))
+	UEditableTextBox* InputTextField;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGBaseButtonWidget* SearchButton;
+
 private:
-    UFUNCTION()
-    void HandleTextInputChanged(const FText& textInput);
-    
-    UFUNCTION()
-    void HandleSearchButtonClicked();
-    
+	UFUNCTION()
+	void HandleTextInputChanged(const FText& textInput);
+
+	UFUNCTION()
+	void HandleSearchButtonClicked();
+
+public:
+	UUMGFriendSearchBarWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGFriendSearchBarWidget) { return 0; }

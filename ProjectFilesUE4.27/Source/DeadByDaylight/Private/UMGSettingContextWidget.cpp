@@ -1,9 +1,11 @@
 #include "UMGSettingContextWidget.h"
 
+void UUMGSettingContextWidget::HandleContextButtonClickEvent(int32 buttonData)
+{
 
-void UUMGSettingContextWidget::HandleContextButtonClickEvent(int32 buttonData) {
 }
 
-UUMGSettingContextWidget::UUMGSettingContextWidget() {
-}
+UUMGSettingContextWidget::UUMGSettingContextWidget()
+{
 
+}

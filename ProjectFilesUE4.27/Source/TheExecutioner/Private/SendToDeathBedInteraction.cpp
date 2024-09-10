@@ -1,18 +1,19 @@
 #include "SendToDeathBedInteraction.h"
 
-class ADeathBedInteractable;
 class ACamperPlayer;
+class ADeathBedInteractable;
 
-void USendToDeathBedInteraction::Multicast_SendCamperToDeathBed_Implementation(ADeathBedInteractable* deathBed) {
+void USendToDeathBedInteraction::Multicast_SendCamperToDeathBed_Implementation(ADeathBedInteractable* deathBed)
+{
+
 }
 
-ACamperPlayer* USendToDeathBedInteraction::GetOwningSurvivor() const {
-    return NULL;
+ACamperPlayer* USendToDeathBedInteraction::GetOwningSurvivor() const
+{
+	return NULL;
 }
 
-
-
-USendToDeathBedInteraction::USendToDeathBedInteraction() {
-    this->_deathBed = NULL;
+USendToDeathBedInteraction::USendToDeathBedInteraction()
+{
+	this->_deathBed = NULL;
 }
-

@@ -3,21 +3,24 @@
 
 class AThrowingKnives;
 
-AThrowingKnives* UKnivesLauncher::GetPower() const {
-    return NULL;
+AThrowingKnives* UKnivesLauncher::GetPower() const
+{
+	return NULL;
 }
 
-int32 UKnivesLauncher::GetLocallyPredictedAmmo() const {
-    return 0;
+int32 UKnivesLauncher::GetLocallyPredictedAmmo() const
+{
+	return 0;
 }
 
-void UKnivesLauncher::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UKnivesLauncher, _isInSuperModeThrow);
+void UKnivesLauncher::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UKnivesLauncher, _isInSuperModeThrow);
 }
 
-UKnivesLauncher::UKnivesLauncher() {
-    this->_isInSuperModeThrow = false;
+UKnivesLauncher::UKnivesLauncher()
+{
+	this->_isInSuperModeThrow = false;
 }
-

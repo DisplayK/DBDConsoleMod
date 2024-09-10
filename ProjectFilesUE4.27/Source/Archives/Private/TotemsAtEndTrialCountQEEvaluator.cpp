@@ -1,5 +1,6 @@
 #include "TotemsAtEndTrialCountQEEvaluator.h"
 
-UTotemsAtEndTrialCountQEEvaluator::UTotemsAtEndTrialCountQEEvaluator() {
-}
+UTotemsAtEndTrialCountQEEvaluator::UTotemsAtEndTrialCountQEEvaluator()
+{
 
+}

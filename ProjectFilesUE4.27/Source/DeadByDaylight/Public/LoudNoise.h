@@ -1,47 +1,50 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "LoudNoise.generated.h"
 
-class UDecalComponent;
-class UParticleSystemComponent;
 class UAkComponent;
 class USceneComponent;
+class UDecalComponent;
+class UParticleSystemComponent;
 
 UCLASS()
-class DEADBYDAYLIGHT_API ALoudNoise : public AActor {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API ALoudNoise : public AActor
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Export)
-    UDecalComponent* _toInfinityDecal;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Export)
-    UParticleSystemComponent* _distortionParticleSystem;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly, Export)
-    UAkComponent* _ak_audio_loudNoise;
-    
-    UPROPERTY(BlueprintReadOnly, Export, Transient)
-    USceneComponent* _rootScene;
-    
-    UPROPERTY(BlueprintReadOnly)
-    float _loudNoiseMinDistance;
-    
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDecalComponent* _toInfinityDecal;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UParticleSystemComponent* _distortionParticleSystem;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UAkComponent* _ak_audio_loudNoise;
+
+	UPROPERTY(BlueprintReadOnly, Transient, meta=(BindWidgetOptional))
+	USceneComponent* _rootScene;
+
+	UPROPERTY(BlueprintReadOnly)
+	float _loudNoiseMinDistance;
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    float _loudNoiseLifetime;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float _heightToAddToLoudNoiseLocation;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float _loudNoiseDecalDistance;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float _cameraDecalDistance;
-    
+	UPROPERTY(EditDefaultsOnly)
+	float _loudNoiseLifetime;
+
+	UPROPERTY(EditDefaultsOnly)
+	float _heightToAddToLoudNoiseLocation;
+
+	UPROPERTY(EditDefaultsOnly)
+	float _loudNoiseDecalDistance;
+
+	UPROPERTY(EditDefaultsOnly)
+	float _cameraDecalDistance;
+
 public:
-    ALoudNoise();
+	ALoudNoise();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ALoudNoise) { return 0; }

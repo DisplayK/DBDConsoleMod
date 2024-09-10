@@ -1,5 +1,7 @@
 #include "CrowdChoiceOnGameRoundStartedAnalytics.h"
 
-FCrowdChoiceOnGameRoundStartedAnalytics::FCrowdChoiceOnGameRoundStartedAnalytics() {
+FCrowdChoiceOnGameRoundStartedAnalytics::FCrowdChoiceOnGameRoundStartedAnalytics()
+{
+	this->PollId = TEXT("");
+	this->MatchId = TEXT("");
 }
-

@@ -1,5 +1,7 @@
 #include "QuadrantSpawnCategories.h"
 
-FQuadrantSpawnCategories::FQuadrantSpawnCategories() {
+FQuadrantSpawnCategories::FQuadrantSpawnCategories()
+{
+	this->QuadrantSpawnTag = NAME_None;
+	this->Items = TArray<FQuadrantSpawnItem>();
 }
-

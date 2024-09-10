@@ -1,5 +1,6 @@
 #include "BlackBox.h"
 
-UBlackBox::UBlackBox() {
-}
+UBlackBox::UBlackBox()
+{
 
+}

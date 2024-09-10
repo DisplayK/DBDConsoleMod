@@ -1,5 +1,6 @@
 #include "AkStadiaPlatformInfo.h"
 
-UAkStadiaPlatformInfo::UAkStadiaPlatformInfo() {
-}
+UAkStadiaPlatformInfo::UAkStadiaPlatformInfo()
+{
 
+}

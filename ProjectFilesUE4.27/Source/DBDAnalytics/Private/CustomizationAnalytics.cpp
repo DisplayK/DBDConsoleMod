@@ -1,5 +1,6 @@
 #include "CustomizationAnalytics.h"
 
-FCustomizationAnalytics::FCustomizationAnalytics() {
+FCustomizationAnalytics::FCustomizationAnalytics()
+{
+	this->MatchId = TEXT("");
 }
-

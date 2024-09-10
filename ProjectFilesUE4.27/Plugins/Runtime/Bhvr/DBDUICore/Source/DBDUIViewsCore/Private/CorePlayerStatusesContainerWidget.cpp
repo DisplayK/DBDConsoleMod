@@ -1,5 +1,7 @@
 #include "CorePlayerStatusesContainerWidget.h"
 
-UCorePlayerStatusesContainerWidget::UCorePlayerStatusesContainerWidget() {
+UCorePlayerStatusesContainerWidget::UCorePlayerStatusesContainerWidget()
+{
+	this->PlayerStatusWidgets = TArray<UCorePlayerStatusWidget*>();
+	this->_playerStatusViewInterfaces = TArray<TScriptInterface<IPlayerStatusViewInterface>>();
 }
-

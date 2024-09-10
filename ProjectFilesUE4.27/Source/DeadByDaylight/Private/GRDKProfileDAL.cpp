@@ -1,5 +1,6 @@
 #include "GRDKProfileDAL.h"
 
-UGRDKProfileDAL::UGRDKProfileDAL() {
-}
+UGRDKProfileDAL::UGRDKProfileDAL()
+{
 
+}

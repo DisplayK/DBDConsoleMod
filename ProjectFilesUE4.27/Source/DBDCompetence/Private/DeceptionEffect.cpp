@@ -1,6 +1,6 @@
 #include "DeceptionEffect.h"
 
-UDeceptionEffect::UDeceptionEffect() {
-    this->_hideBloodTrailsWhenCamperFakeEnterLocker = true;
+UDeceptionEffect::UDeceptionEffect()
+{
+	this->_hideBloodTrailsWhenCamperFakeEnterLocker = true;
 }
-

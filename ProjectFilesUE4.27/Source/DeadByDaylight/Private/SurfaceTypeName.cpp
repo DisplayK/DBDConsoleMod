@@ -1,5 +1,6 @@
 #include "SurfaceTypeName.h"
 
-FSurfaceTypeName::FSurfaceTypeName() {
+FSurfaceTypeName::FSurfaceTypeName()
+{
+	this->Name = NAME_None;
 }
-

@@ -1,5 +1,6 @@
 #include "CorePerkWidget.h"
 
-UCorePerkWidget::UCorePerkWidget() {
-}
+UCorePerkWidget::UCorePerkWidget()
+{
 
+}

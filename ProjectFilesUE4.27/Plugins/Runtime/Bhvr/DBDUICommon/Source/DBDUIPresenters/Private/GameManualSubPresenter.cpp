@@ -1,8 +1,12 @@
 #include "GameManualSubPresenter.h"
+#include "EHelpType.h"
 
-void UGameManualSubPresenter::OnCategoryCategoryEntered(EHelpType categoryType) {
+void UGameManualSubPresenter::OnCategoryCategoryEntered(EHelpType categoryType)
+{
+
 }
 
-UGameManualSubPresenter::UGameManualSubPresenter() {
+UGameManualSubPresenter::UGameManualSubPresenter()
+{
+	this->_gameManualWidget = NULL;
 }
-

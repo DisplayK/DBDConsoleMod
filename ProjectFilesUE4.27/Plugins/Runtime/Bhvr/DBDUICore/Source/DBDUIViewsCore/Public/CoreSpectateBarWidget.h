@@ -1,51 +1,52 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "CoreBaseHudWidget.h"
-#include "SpectateLeaveTriggeredDelegateDelegate.h"
+#include "SpectateLeftArrowTriggeredDelegate.h"
 #include "SpectateBarViewInterface.h"
-#include "SpectateRightArrowTriggeredelegateDelegate.h"
-#include "SpectateLeftArrowTriggeredDelegateDelegate.h"
+#include "CoreBaseHudWidget.h"
+#include "SpectateLeaveTriggeredDelegate.h"
+#include "SpectateRightArrowTriggeredelegate.h"
 #include "CoreSpectateBarWidget.generated.h"
 
 class UCoreInputSwitcherWidget;
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreSpectateBarWidget : public UCoreBaseHudWidget, public ISpectateBarViewInterface {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSCORE_API UCoreSpectateBarWidget : public UCoreBaseHudWidget, public ISpectateBarViewInterface
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCoreInputSwitcherWidget* LeaveInputSwitcher;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCoreInputSwitcherWidget* LeftArrowInputSwitcher;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCoreInputSwitcherWidget* RightArrowInputSwitcher;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCoreInputSwitcherWidget* LeaveInputSwitcher;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCoreInputSwitcherWidget* LeftArrowInputSwitcher;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCoreInputSwitcherWidget* RightArrowInputSwitcher;
+
 private:
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FSpectateLeaveTriggeredDelegate _leaveTriggeredDelegate;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FSpectateLeftArrowTriggeredDelegate _leftArrowTriggeredDelegate;
-    
-    UPROPERTY(BlueprintAssignable, BlueprintCallable)
-    FSpectateRightArrowTriggeredelegate _rightArrowTriggeredDelegate;
-    
+	UPROPERTY(BlueprintAssignable)
+	FSpectateLeaveTriggeredDelegate _leaveTriggeredDelegate;
+
+	UPROPERTY(BlueprintAssignable)
+	FSpectateLeftArrowTriggeredDelegate _leftArrowTriggeredDelegate;
+
+	UPROPERTY(BlueprintAssignable)
+	FSpectateRightArrowTriggeredelegate _rightArrowTriggeredDelegate;
+
+private:
+	UFUNCTION()
+	void OnRightArrowTriggered();
+
+	UFUNCTION()
+	void OnLeftArrowTriggered();
+
+	UFUNCTION()
+	void OnLeaveTriggered();
+
 public:
-    UCoreSpectateBarWidget();
-private:
-    UFUNCTION()
-    void OnRightArrowTriggered();
-    
-    UFUNCTION()
-    void OnLeftArrowTriggered();
-    
-    UFUNCTION()
-    void OnLeaveTriggered();
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UCoreSpectateBarWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreSpectateBarWidget) { return 0; }

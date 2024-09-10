@@ -1,5 +1,6 @@
 #include "AccountLinkPopupScreen.h"
 
-UAccountLinkPopupScreen::UAccountLinkPopupScreen() {
-}
+UAccountLinkPopupScreen::UAccountLinkPopupScreen()
+{
 
+}

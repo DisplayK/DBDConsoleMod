@@ -1,5 +1,6 @@
 #include "ItemsAssetLibrary.h"
 
-UItemsAssetLibrary::UItemsAssetLibrary() {
-}
+UItemsAssetLibrary::UItemsAssetLibrary()
+{
 
+}

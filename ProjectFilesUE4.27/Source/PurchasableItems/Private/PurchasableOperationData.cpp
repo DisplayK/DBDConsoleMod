@@ -1,5 +1,6 @@
 #include "PurchasableOperationData.h"
 
-FPurchasableOperationData::FPurchasableOperationData() {
+FPurchasableOperationData::FPurchasableOperationData()
+{
+	this->Id = NAME_None;
 }
-

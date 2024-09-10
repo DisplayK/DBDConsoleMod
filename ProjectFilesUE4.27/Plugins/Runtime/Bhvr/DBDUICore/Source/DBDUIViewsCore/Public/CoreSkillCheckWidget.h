@@ -1,15 +1,17 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "CoreBaseHudWidget.h"
 #include "SkillCheckViewInterface.h"
+#include "CoreBaseHudWidget.h"
 #include "CoreSkillCheckWidget.generated.h"
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCoreSkillCheckWidget : public UCoreBaseHudWidget, public ISkillCheckViewInterface {
-    GENERATED_BODY()
+class DBDUIVIEWSCORE_API UCoreSkillCheckWidget : public UCoreBaseHudWidget, public ISkillCheckViewInterface
+{
+	GENERATED_BODY()
+
 public:
-    UCoreSkillCheckWidget();
-    
-    // Fix for true pure virtual functions not being implemented
+	UCoreSkillCheckWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreSkillCheckWidget) { return 0; }

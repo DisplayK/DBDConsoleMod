@@ -1,6 +1,7 @@
 #include "XpBonusData.h"
 
-FXpBonusData::FXpBonusData() {
-    this->XpValue = 0;
+FXpBonusData::FXpBonusData()
+{
+	this->Name = TEXT("");
+	this->XpValue = 0;
 }
-

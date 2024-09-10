@@ -1,18 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseStat.h"
 #include "DBDTunableRowHandle.h"
 #include "TunableStat.generated.h"
 
 USTRUCT(BlueprintType)
-struct STATSYSTEM_API FTunableStat : public FBaseStat {
-    GENERATED_BODY()
-public:
+struct FTunableStat: public FBaseStat
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditDefaultsOnly)
-    FDBDTunableRowHandle _baseValue;
-    
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _baseValue;
+
 public:
-    FTunableStat();
+	STATSYSTEM_API FTunableStat();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FTunableStat) { return 0; }

@@ -1,31 +1,43 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "SpecialBehaviourObjectsInfo.h"
 #include "Components/ActorComponent.h"
+#include "SpecialBehaviourObjectsInfo.h"
 #include "ContextualQuestComponent.generated.h"
 
 class ADBDPlayer;
 
-UCLASS(meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UContextualQuestComponent : public UActorComponent {
-    GENERATED_BODY()
+UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+class DEADBYDAYLIGHT_API UContextualQuestComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSpecialBehaviourSet, const ADBDPlayer*, dbdPlayer);
-    
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnSpecialBehaviourSet, const ADBDPlayer*, dbdPlayer);
+
 private:
-    UPROPERTY(Transient, ReplicatedUsing=OnRep_SpecialBehaviourObjectsInfo)
-    TArray<FSpecialBehaviourObjectsInfo> _specialBehaviourObjectsInfo;
-    
-    UPROPERTY(Transient)
-    bool _isInitialized;
-    
+	UPROPERTY(ReplicatedUsing=OnRep_SpecialBehaviourObjectsInfo, Transient)
+	TArray<FSpecialBehaviourObjectsInfo> _specialBehaviourObjectsInfo;
+
+	UPROPERTY(Transient)
+	bool _isInitialized;
+
+private:
+	UFUNCTION()
+	void OnRep_SpecialBehaviourObjectsInfo();
+
 public:
-    UContextualQuestComponent();
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-    
-private:
-    UFUNCTION()
-    void OnRep_SpecialBehaviourObjectsInfo();
-    
+	UFUNCTION(BlueprintCallable)
+	void Authority_DebugRemoveSpecialBehaviour(FName id);
+
+	UFUNCTION(BlueprintCallable)
+	void Authority_DebugAddSpecialBehaviour(FName id, float amountRequired);
+
+public:
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+public:
+	UContextualQuestComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UContextualQuestComponent) { return 0; }

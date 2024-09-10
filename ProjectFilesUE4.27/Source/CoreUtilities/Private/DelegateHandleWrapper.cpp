@@ -1,5 +1,5 @@
 #include "DelegateHandleWrapper.h"
 
-FDelegateHandleWrapper::FDelegateHandleWrapper() {
+FDelegateHandleWrapper::FDelegateHandleWrapper()
+{
 }
-

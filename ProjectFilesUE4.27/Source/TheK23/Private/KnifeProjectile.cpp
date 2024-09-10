@@ -1,40 +1,50 @@
 #include "KnifeProjectile.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "PoolableProjectileComponent.h"
 
 class UPrimitiveComponent;
 class AActor;
 
-bool AKnifeProjectile::WasLaunchedDuringSuperMode() const {
-    return false;
+bool AKnifeProjectile::WasLaunchedDuringSuperMode() const
+{
+	return false;
 }
 
-bool AKnifeProjectile::ShouldPlayRicochetSound() const {
-    return false;
+bool AKnifeProjectile::ShouldPlayRicochetSound() const
+{
+	return false;
 }
 
-void AKnifeProjectile::SetKnifeAcquired(bool acquired) {
+void AKnifeProjectile::SetKnifeAcquired(bool acquired)
+{
+
 }
 
-void AKnifeProjectile::OnWorldColliderHit(UPrimitiveComponent* hitComponent, AActor* otherActor, UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hit) {
+void AKnifeProjectile::OnWorldColliderHit(UPrimitiveComponent* hitComponent, AActor* otherActor, UPrimitiveComponent* otherComp, FVector normalImpulse, const FHitResult& hit)
+{
+
 }
 
-void AKnifeProjectile::OnProjectileBounce(const FHitResult& impactResult, const FVector& impactVelocity) {
+void AKnifeProjectile::OnProjectileBounce(const FHitResult& impactResult, const FVector& impactVelocity)
+{
+
 }
 
-bool AKnifeProjectile::KnifeCanPierceCampers() const {
-    return false;
+bool AKnifeProjectile::KnifeCanPierceCampers() const
+{
+	return false;
 }
 
-float AKnifeProjectile::GetAddonExplosionRadius() const {
-    return 0.0f;
+float AKnifeProjectile::GetAddonExplosionRadius() const
+{
+	return 0.0f;
 }
 
-
-
-
-AKnifeProjectile::AKnifeProjectile() {
-    this->_worldCollider = NULL;
-    this->_camperDetector = NULL;
-    this->_poolableActorComponent = CreateDefaultSubobject<UPoolableProjectileComponent>(TEXT("PoolableComponent"));
+AKnifeProjectile::AKnifeProjectile()
+{
+	this->_worldCollider = NULL;
+	this->_camperDetector = NULL;
+	this->_playersAffectedThisThrow = TSet<ADBDPlayer*>();
+	this->_poolableActorComponent = CreateDefaultSubobject<UPoolableProjectileComponent>(TEXT("PoolableComponent"));
 }
-

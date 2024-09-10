@@ -1,9 +1,11 @@
 #include "AtlantaTooltipUtilities.h"
 
-bool UAtlantaTooltipUtilities::TryCloseActiveTooltip() {
-    return false;
+bool UAtlantaTooltipUtilities::TryCloseActiveTooltip()
+{
+	return false;
 }
 
-UAtlantaTooltipUtilities::UAtlantaTooltipUtilities() {
-}
+UAtlantaTooltipUtilities::UAtlantaTooltipUtilities()
+{
 
+}

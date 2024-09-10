@@ -1,5 +1,6 @@
 #include "HillbillyAnimInstance.h"
 
-UHillbillyAnimInstance::UHillbillyAnimInstance() {
-}
+UHillbillyAnimInstance::UHillbillyAnimInstance()
+{
 
+}

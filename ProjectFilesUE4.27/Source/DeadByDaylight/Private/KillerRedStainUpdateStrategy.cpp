@@ -1,9 +1,11 @@
 #include "KillerRedStainUpdateStrategy.h"
 
-void UKillerRedStainUpdateStrategy::OnHeadHiddenChanged(bool isHidden) {
+void UKillerRedStainUpdateStrategy::OnHeadHiddenChanged(bool isHidden)
+{
+
 }
 
-UKillerRedStainUpdateStrategy::UKillerRedStainUpdateStrategy() {
-    this->_stealthRatioToRedStainIntensityCurve = NULL;
+UKillerRedStainUpdateStrategy::UKillerRedStainUpdateStrategy()
+{
+	this->_stealthRatioToRedStainIntensityCurve = NULL;
 }
-

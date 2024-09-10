@@ -1,28 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/ScriptInterface.h"
+#include "Subsystems/GameInstanceSubsystem.h"
 #include "DedicatedServerManager.generated.h"
 
-class UDedicatedServerStartupInitializerInterface;
-class IDedicatedServerStartupInitializerInterface;
-class UDBDGameInstance;
 class UOnlineSystemHandler;
+class IDedicatedServerStartupInitializerInterface;
 
 UCLASS()
-class DEADBYDAYLIGHT_API UDedicatedServerManager : public UObject {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UDedicatedServerManager : public UGameInstanceSubsystem
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    TScriptInterface<IDedicatedServerStartupInitializerInterface> _startupInitializer;
-    
-    UPROPERTY(Transient)
-    UDBDGameInstance* _gameInstance;
-    
-    UPROPERTY(Transient)
-    UOnlineSystemHandler* _onlineSystemHandler;
-    
+	UPROPERTY(Transient)
+	TScriptInterface<IDedicatedServerStartupInitializerInterface> _startupInitializer;
+
+	UPROPERTY(Transient)
+	UOnlineSystemHandler* _onlineSystemHandler;
+
 public:
-    UDedicatedServerManager();
+	UDedicatedServerManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDedicatedServerManager) { return 0; }

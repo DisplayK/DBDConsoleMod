@@ -1,12 +1,26 @@
 #include "ChestAnimInstance.h"
 
-void UChestAnimInstance::OnSearchedChanged(bool searched) {
+class ADBDPlayer;
+
+void UChestAnimInstance::OnSearchedChanged(bool searched)
+{
+
 }
 
-UChestAnimInstance::UChestAnimInstance() {
-    this->_owningChest = NULL;
-    this->_isOpen = false;
-    this->_isBeingPriedOpen = false;
-    this->_openChestInteraction = NULL;
+void UChestAnimInstance::OnBeingPriedOpenStopped()
+{
+
 }
 
+void UChestAnimInstance::OnBeingPriedOpenStarted(ADBDPlayer* player)
+{
+
+}
+
+UChestAnimInstance::UChestAnimInstance()
+{
+	this->_owningChest = NULL;
+	this->_isOpen = false;
+	this->_isBeingPriedOpen = false;
+	this->_openChestInteraction = NULL;
+}

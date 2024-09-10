@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "AimPointProcessor.generated.h"
 
 UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
-class DBDGAMEPLAY_API UAimPointProcessor : public UActorComponent {
-    GENERATED_BODY()
+class DBDGAMEPLAY_API UAimPointProcessor : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    UAimPointProcessor();
+	UAimPointProcessor();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAimPointProcessor) { return 0; }

@@ -1,5 +1,6 @@
 #include "RetentionRewardsSubsystem.h"
 
-URetentionRewardsSubsystem::URetentionRewardsSubsystem() {
-}
+URetentionRewardsSubsystem::URetentionRewardsSubsystem()
+{
 
+}

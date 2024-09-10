@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BasePerkIconStrategy.h"
 #include "ActivationTimerRemainingCooldownElapsedIconStrategy.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API UActivationTimerRemainingCooldownElapsedIconStrategy : public UBasePerkIconStrategy {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UActivationTimerRemainingCooldownElapsedIconStrategy : public UBasePerkIconStrategy
+{
+	GENERATED_BODY()
+
 public:
-    UActivationTimerRemainingCooldownElapsedIconStrategy();
+	UActivationTimerRemainingCooldownElapsedIconStrategy();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UActivationTimerRemainingCooldownElapsedIconStrategy) { return 0; }

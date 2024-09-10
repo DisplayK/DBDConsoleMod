@@ -1,5 +1,6 @@
 #include "DBDAttackObstructSubstate.h"
 
-UDBDAttackObstructSubstate::UDBDAttackObstructSubstate() {
-}
+UDBDAttackObstructSubstate::UDBDAttackObstructSubstate()
+{
 
+}

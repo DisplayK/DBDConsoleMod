@@ -1,5 +1,6 @@
 #include "DeadByDaylightGameMode.h"
 
-ADeadByDaylightGameMode::ADeadByDaylightGameMode() {
-}
+ADeadByDaylightGameMode::ADeadByDaylightGameMode()
+{
 
+}

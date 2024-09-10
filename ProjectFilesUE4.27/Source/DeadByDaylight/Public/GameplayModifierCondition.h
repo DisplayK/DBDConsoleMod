@@ -1,30 +1,35 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseModifierCondition.h"
 #include "GameplayModifierCondition.generated.h"
 
-class ADBDPlayer;
 class UGameplayModifierContainer;
+class ADBDPlayer;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UGameplayModifierCondition : public UBaseModifierCondition {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UGameplayModifierCondition : public UBaseModifierCondition
+{
+	GENERATED_BODY()
+
 public:
-    UGameplayModifierCondition();
-    UFUNCTION(BlueprintCallable)
-    void SetOwningGameplayModifier(UGameplayModifierContainer* OwningGameplayModifier);
-    
-    UFUNCTION(BlueprintImplementableEvent)
-    void OnOwningGameplayModifierSet();
-    
-    UFUNCTION(BlueprintNativeEvent, BlueprintPure)
-    bool IsApplicable() const;
-    
-    UFUNCTION(BlueprintPure)
-    ADBDPlayer* GetOwningPlayer() const;
-    
-    UFUNCTION(BlueprintPure)
-    UGameplayModifierContainer* GetOwningGameplayModifier() const;
-    
+	UFUNCTION(BlueprintCallable)
+	void SetOwningGameplayModifier(UGameplayModifierContainer* OwningGameplayModifier);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnOwningGameplayModifierSet();
+
+	UFUNCTION(BlueprintPure, BlueprintNativeEvent)
+	bool IsApplicable() const;
+
+	UFUNCTION(BlueprintPure)
+	ADBDPlayer* GetOwningPlayer() const;
+
+	UFUNCTION(BlueprintPure)
+	UGameplayModifierContainer* GetOwningGameplayModifier() const;
+
+public:
+	UGameplayModifierCondition();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UGameplayModifierCondition) { return 0; }

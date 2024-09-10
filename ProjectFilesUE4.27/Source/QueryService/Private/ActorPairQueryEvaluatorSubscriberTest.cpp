@@ -1,8 +1,11 @@
 #include "ActorPairQueryEvaluatorSubscriberTest.h"
 
-void AActorPairQueryEvaluatorSubscriberTest::OnRangeChanged(const bool inRange) {
+void AActorPairQueryEvaluatorSubscriberTest::OnRangeChanged(const bool inRange)
+{
+
 }
 
-AActorPairQueryEvaluatorSubscriberTest::AActorPairQueryEvaluatorSubscriberTest() {
-}
+AActorPairQueryEvaluatorSubscriberTest::AActorPairQueryEvaluatorSubscriberTest()
+{
 
+}

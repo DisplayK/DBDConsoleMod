@@ -1,14 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EQuadDirection.generated.h"
 
-UENUM()
-enum class EQuadDirection {
-    None,
-    Up,
-    Down,
-    Left,
-    Right,
-    Empty,
+UENUM(BlueprintType)
+enum class EQuadDirection : uint8
+{
+	None,
+	Up,
+	Down,
+	Left,
+	Right,
+	Empty,
 };
-

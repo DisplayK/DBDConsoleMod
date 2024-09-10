@@ -1,10 +1,12 @@
 #include "DBDGeneratorDrivenReflectionCaptureActor.h"
 #include "GenyReflectionCaptureComponent.h"
 
-void ADBDGeneratorDrivenReflectionCaptureActor::SwapToSecondState() {
+void ADBDGeneratorDrivenReflectionCaptureActor::SwapToSecondState()
+{
+
 }
 
-ADBDGeneratorDrivenReflectionCaptureActor::ADBDGeneratorDrivenReflectionCaptureActor() {
-    this->genyReflectionCapture = CreateDefaultSubobject<UGenyReflectionCaptureComponent>(TEXT("GenyReflectionCapture"));
+ADBDGeneratorDrivenReflectionCaptureActor::ADBDGeneratorDrivenReflectionCaptureActor()
+{
+	this->genyReflectionCapture = CreateDefaultSubobject<UGenyReflectionCaptureComponent>(TEXT("GenyReflectionCapture"));
 }
-

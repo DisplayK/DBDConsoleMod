@@ -1,5 +1,6 @@
 #include "UnhookedSurvivorTrackerComponent.h"
 
-UUnhookedSurvivorTrackerComponent::UUnhookedSurvivorTrackerComponent() {
-}
+UUnhookedSurvivorTrackerComponent::UUnhookedSurvivorTrackerComponent()
+{
 
+}

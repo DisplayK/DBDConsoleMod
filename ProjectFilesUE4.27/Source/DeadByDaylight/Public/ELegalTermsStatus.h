@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ELegalTermsStatus.generated.h"
 
-UENUM()
-enum class ELegalTermsStatus {
-    None,
-    Accepted,
-    Declined,
+UENUM(BlueprintType)
+enum class ELegalTermsStatus : uint8
+{
+	None,
+	Accepted,
+	Declined,
 };
-

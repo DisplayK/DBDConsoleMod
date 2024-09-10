@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "AkMediaAssetData.generated.h"
 
 UCLASS()
-class AKAUDIO_API UAkMediaAssetData : public UObject {
-    GENERATED_BODY()
+class AKAUDIO_API UAkMediaAssetData : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(VisibleAnywhere)
-    bool IsStreamed;
-    
-    UPROPERTY(VisibleAnywhere)
-    bool UseDeviceMemory;
-    
-    UAkMediaAssetData();
+	UPROPERTY(VisibleAnywhere)
+	bool IsStreamed;
+
+	UPROPERTY(VisibleAnywhere)
+	bool UseDeviceMemory;
+
+public:
+	UAkMediaAssetData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkMediaAssetData) { return 0; }

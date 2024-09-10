@@ -1,13 +1,15 @@
 #include "BaseTooltipWidget.h"
 
-void UBaseTooltipWidget::OnQuitButtonClicked() {
+void UBaseTooltipWidget::OnQuitButtonClicked()
+{
+
 }
 
-UBaseTooltipWidget::UBaseTooltipWidget() {
-    this->TitleLabel = NULL;
-    this->TooltipContainer = NULL;
-    this->DescriptionLabel = NULL;
-    this->CloseButton = NULL;
-    this->TooltipOpeningSound = NULL;
+UBaseTooltipWidget::UBaseTooltipWidget()
+{
+	this->TitleLabel = NULL;
+	this->TooltipContainer = NULL;
+	this->DescriptionLabel = NULL;
+	this->CloseButton = NULL;
+	this->TooltipOpeningSound = NULL;
 }
-

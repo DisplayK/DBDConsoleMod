@@ -1,5 +1,5 @@
 #include "BloodDecal.h"
 
-FBloodDecal::FBloodDecal() {
+FBloodDecal::FBloodDecal()
+{
 }
-

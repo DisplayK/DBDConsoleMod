@@ -1,6 +1,7 @@
 #include "PendingInstantAction.h"
 
-FPendingInstantAction::FPendingInstantAction() {
-    this->Handler = NULL;
+FPendingInstantAction::FPendingInstantAction()
+{
+	this->Handler = NULL;
+	this->TimerHandle = FTimerHandle{};
 }
-

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "DownloadProgression.h"
@@ -8,23 +9,26 @@ class UProgressBar;
 class UTextBlock;
 
 UCLASS(EditInlineNew)
-class UUMGDownloadProgressionWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGDownloadProgressionWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UProgressBar* ProgressBar;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* DownloadPercentage;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* DownloadDescription;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UProgressBar* ProgressBar;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* DownloadPercentage;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* DownloadDescription;
+
 public:
-    UUMGDownloadProgressionWidget();
-    UFUNCTION()
-    void UpdateProgression(const FDownloadProgression& downloadProgression);
-    
+	UFUNCTION()
+	void UpdateProgression(const FDownloadProgression& downloadProgression);
+
+public:
+	UUMGDownloadProgressionWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGDownloadProgressionWidget) { return 0; }

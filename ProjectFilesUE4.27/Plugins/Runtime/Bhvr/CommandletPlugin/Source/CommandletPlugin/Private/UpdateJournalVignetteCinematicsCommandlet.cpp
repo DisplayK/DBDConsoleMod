@@ -1,5 +1,6 @@
 #include "UpdateJournalVignetteCinematicsCommandlet.h"
 
-UUpdateJournalVignetteCinematicsCommandlet::UUpdateJournalVignetteCinematicsCommandlet() {
-}
+UUpdateJournalVignetteCinematicsCommandlet::UUpdateJournalVignetteCinematicsCommandlet()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "ActorPathFollowingComponent.h"
 
-UActorPathFollowingComponent::UActorPathFollowingComponent() {
-}
+UActorPathFollowingComponent::UActorPathFollowingComponent()
+{
 
+}

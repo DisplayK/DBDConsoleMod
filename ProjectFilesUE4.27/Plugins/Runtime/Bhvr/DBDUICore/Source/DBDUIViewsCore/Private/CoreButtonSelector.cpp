@@ -2,34 +2,47 @@
 
 class UCoreSelectableButtonWidget;
 
-void UCoreButtonSelector::UnselectCurrent() {
+void UCoreButtonSelector::UnselectCurrent()
+{
+
 }
 
-void UCoreButtonSelector::SetAllEnabled(bool enabled) {
+void UCoreButtonSelector::SetAllEnabled(bool enabled)
+{
+
 }
 
-bool UCoreButtonSelector::SelectPrevious() {
-    return false;
+bool UCoreButtonSelector::SelectPrevious()
+{
+	return false;
 }
 
-bool UCoreButtonSelector::SelectNext() {
-    return false;
+bool UCoreButtonSelector::SelectNext()
+{
+	return false;
 }
 
-bool UCoreButtonSelector::Select(UCoreSelectableButtonWidget* buttonToSelect) {
-    return false;
+bool UCoreButtonSelector::Select(UCoreSelectableButtonWidget* buttonToSelect, bool performAction)
+{
+	return false;
 }
 
-void UCoreButtonSelector::OnButtonSelectedChanged(UCoreSelectableButtonWidget* selectedButton, bool isSelected) {
+void UCoreButtonSelector::OnButtonSelectedChanged(UCoreSelectableButtonWidget* selectedButton, bool isSelected)
+{
+
 }
 
-void UCoreButtonSelector::OnButtonSelectedAgain(UCoreSelectableButtonWidget* selectedButton) {
+void UCoreButtonSelector::OnButtonSelectedAgain(UCoreSelectableButtonWidget* selectedButton)
+{
+
 }
 
-bool UCoreButtonSelector::HasSelection() const {
-    return false;
+bool UCoreButtonSelector::HasSelection() const
+{
+	return false;
 }
 
-UCoreButtonSelector::UCoreButtonSelector() {
+UCoreButtonSelector::UCoreButtonSelector()
+{
+	this->_buttons = TArray<UCoreSelectableButtonWidget*>();
 }
-

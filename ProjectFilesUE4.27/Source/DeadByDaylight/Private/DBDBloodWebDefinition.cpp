@@ -1,5 +1,6 @@
 #include "DBDBloodWebDefinition.h"
 
-UDBDBloodWebDefinition::UDBDBloodWebDefinition() {
-}
+UDBDBloodWebDefinition::UDBDBloodWebDefinition()
+{
 
+}

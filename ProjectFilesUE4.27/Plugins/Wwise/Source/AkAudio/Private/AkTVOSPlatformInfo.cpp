@@ -1,5 +1,6 @@
 #include "AkTVOSPlatformInfo.h"
 
-UAkTVOSPlatformInfo::UAkTVOSPlatformInfo() {
-}
+UAkTVOSPlatformInfo::UAkTVOSPlatformInfo()
+{
 
+}

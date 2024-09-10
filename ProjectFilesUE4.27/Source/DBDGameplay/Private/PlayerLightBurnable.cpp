@@ -1,5 +1,6 @@
 #include "PlayerLightBurnable.h"
 
-UPlayerLightBurnable::UPlayerLightBurnable() {
-}
+UPlayerLightBurnable::UPlayerLightBurnable()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "CustomValuePercentQEEvaluator.h"
 
-UCustomValuePercentQEEvaluator::UCustomValuePercentQEEvaluator() {
-}
+UCustomValuePercentQEEvaluator::UCustomValuePercentQEEvaluator()
+{
 
+}

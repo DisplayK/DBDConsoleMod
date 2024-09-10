@@ -1,5 +1,6 @@
 #include "LoadoutExportCommandlet.h"
 
-ULoadoutExportCommandlet::ULoadoutExportCommandlet() {
+ULoadoutExportCommandlet::ULoadoutExportCommandlet()
+{
+	this->_enumPtr = NULL;
 }
-

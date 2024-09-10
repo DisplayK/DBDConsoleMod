@@ -1,5 +1,6 @@
 #include "TwinFirstPersonViewComponent.h"
 
-UTwinFirstPersonViewComponent::UTwinFirstPersonViewComponent() {
-}
+UTwinFirstPersonViewComponent::UTwinFirstPersonViewComponent()
+{
 
+}

@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
 #include "GamePlayModifier.generated.h"
 
 USTRUCT(BlueprintType)
-struct COMPETENCE_API FGamePlayModifier {
-    GENERATED_BODY()
+struct FGamePlayModifier
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FGameplayTag Type;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float ModifierValue;
-    
-    FGamePlayModifier();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FGameplayTag Type;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ModifierValue;
+
+public:
+	COMPETENCE_API FGamePlayModifier();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FGamePlayModifier) { return 0; }

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
 #include "ESubscriptionRewardType.h"
@@ -6,14 +7,16 @@
 #include "SubscriptionRewardDataAsset.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API USubscriptionRewardDataAsset : public UPrimaryDataAsset {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API USubscriptionRewardDataAsset : public UPrimaryDataAsset
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(EditAnywhere)
-    TMap<ESubscriptionRewardType, FSubscriptionRewardTypeData> Data;
-    
+	UPROPERTY(EditAnywhere)
+	TMap<ESubscriptionRewardType, FSubscriptionRewardTypeData> Data;
+
 public:
-    USubscriptionRewardDataAsset();
+	USubscriptionRewardDataAsset();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USubscriptionRewardDataAsset) { return 0; }

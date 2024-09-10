@@ -1,23 +1,29 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTableRowBase.h"
+#include "UObject/SoftObjectPtr.h"
 #include "AtlantaRitualDefinition.generated.h"
 
 class UTexture2D;
 
 USTRUCT(BlueprintType)
-struct FAtlantaRitualDefinition : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FAtlantaRitualDefinition: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText DisplayName;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    FText Description;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TSoftObjectPtr<UTexture2D> Texture;
-    
-    DEADBYDAYLIGHT_API FAtlantaRitualDefinition();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText DisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FText Description;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TSoftObjectPtr<UTexture2D> Texture;
+
+public:
+	DEADBYDAYLIGHT_API FAtlantaRitualDefinition();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAtlantaRitualDefinition) { return 0; }

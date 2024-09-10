@@ -1,5 +1,6 @@
 #include "ChargeableProgressProviderComponent.h"
 
-UChargeableProgressProviderComponent::UChargeableProgressProviderComponent() {
-}
+UChargeableProgressProviderComponent::UChargeableProgressProviderComponent()
+{
 
+}

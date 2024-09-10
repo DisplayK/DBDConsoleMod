@@ -1,5 +1,6 @@
 #include "HatchOutlineUpdateStrategy.h"
 
-UHatchOutlineUpdateStrategy::UHatchOutlineUpdateStrategy() {
-}
+UHatchOutlineUpdateStrategy::UHatchOutlineUpdateStrategy()
+{
 
+}

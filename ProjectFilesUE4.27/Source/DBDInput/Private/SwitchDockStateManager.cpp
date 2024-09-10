@@ -1,5 +1,6 @@
 #include "SwitchDockStateManager.h"
 
-USwitchDockStateManager::USwitchDockStateManager() {
-}
+USwitchDockStateManager::USwitchDockStateManager()
+{
 
+}

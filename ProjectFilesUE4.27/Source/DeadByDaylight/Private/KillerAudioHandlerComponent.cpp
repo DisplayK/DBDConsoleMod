@@ -2,13 +2,12 @@
 
 class ADBDPlayer;
 
+void UKillerAudioHandlerComponent::OnChaseStart(ADBDPlayer* chasedSurvivor)
+{
 
-
-void UKillerAudioHandlerComponent::OnChaseStart(ADBDPlayer* chasedSurvivor) {
 }
 
-
-
-UKillerAudioHandlerComponent::UKillerAudioHandlerComponent() {
+UKillerAudioHandlerComponent::UKillerAudioHandlerComponent()
+{
+	this->_shockEvent = TEXT("AudioEvent_Killer_Moving_Shock");
 }
-

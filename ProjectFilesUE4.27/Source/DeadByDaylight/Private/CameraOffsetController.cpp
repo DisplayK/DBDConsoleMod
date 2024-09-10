@@ -1,5 +1,6 @@
 #include "CameraOffsetController.h"
 
-UCameraOffsetController::UCameraOffsetController() {
-}
+UCameraOffsetController::UCameraOffsetController()
+{
 
+}

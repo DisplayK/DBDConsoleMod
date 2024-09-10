@@ -1,29 +1,42 @@
 #include "TutorialGameState.h"
+#include "ETutorialStep.h"
 
-void ATutorialGameState::TutorialEndReached() {
+void ATutorialGameState::TutorialEndReached()
+{
+
 }
 
-void ATutorialGameState::SetForcedHatchVisibility(bool isHatchVisible) {
+void ATutorialGameState::SetForcedHatchVisibility(bool isHatchVisible)
+{
+
 }
 
-void ATutorialGameState::SetEscapeRequirementsVisibility(bool isVisible) const {
+void ATutorialGameState::SetEscapeRequirementsVisibility(bool isVisible) const
+{
+
 }
 
-void ATutorialGameState::SetCurrentTutorialStep(ETutorialStep step) {
+void ATutorialGameState::SetCurrentTutorialStep(ETutorialStep step)
+{
+
 }
 
-bool ATutorialGameState::IsTutorialStarted() const {
-    return false;
+bool ATutorialGameState::IsTutorialStarted() const
+{
+	return false;
 }
 
-ETutorialStep ATutorialGameState::GetCurrentTutorialStep() const {
-    return ETutorialStep::Survivor_NotStarted;
+ETutorialStep ATutorialGameState::GetCurrentTutorialStep() const
+{
+	return ETutorialStep::Survivor_NotStarted;
 }
 
-void ATutorialGameState::CompleteLocallyControlledCharacterIntros() const {
+void ATutorialGameState::CompleteLocallyControlledCharacterIntros() const
+{
+
 }
 
-ATutorialGameState::ATutorialGameState() {
-    this->_forceHatchVisible = false;
+ATutorialGameState::ATutorialGameState()
+{
+	this->_forceHatchVisible = false;
 }
-

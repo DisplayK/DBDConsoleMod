@@ -1,5 +1,6 @@
 #include "ActivationTimerRemainingCooldownElapsedIconStrategy.h"
 
-UActivationTimerRemainingCooldownElapsedIconStrategy::UActivationTimerRemainingCooldownElapsedIconStrategy() {
-}
+UActivationTimerRemainingCooldownElapsedIconStrategy::UActivationTimerRemainingCooldownElapsedIconStrategy()
+{
 
+}

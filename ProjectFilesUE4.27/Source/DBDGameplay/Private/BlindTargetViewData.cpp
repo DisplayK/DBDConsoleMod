@@ -1,5 +1,5 @@
 #include "BlindTargetViewData.h"
 
-FBlindTargetViewData::FBlindTargetViewData() {
+FBlindTargetViewData::FBlindTargetViewData()
+{
 }
-

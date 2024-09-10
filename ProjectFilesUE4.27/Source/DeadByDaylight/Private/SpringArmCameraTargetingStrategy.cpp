@@ -1,5 +1,6 @@
 #include "SpringArmCameraTargetingStrategy.h"
 
-USpringArmCameraTargetingStrategy::USpringArmCameraTargetingStrategy() {
-}
+USpringArmCameraTargetingStrategy::USpringArmCameraTargetingStrategy()
+{
 
+}

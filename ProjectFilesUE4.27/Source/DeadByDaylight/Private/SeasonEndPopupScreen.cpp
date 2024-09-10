@@ -1,5 +1,6 @@
 #include "SeasonEndPopupScreen.h"
 
-USeasonEndPopupScreen::USeasonEndPopupScreen() {
-}
+USeasonEndPopupScreen::USeasonEndPopupScreen()
+{
 
+}

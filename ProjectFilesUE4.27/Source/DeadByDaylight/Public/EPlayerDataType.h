@@ -1,11 +1,13 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EPlayerDataType.generated.h"
 
-UENUM()
-enum class EPlayerDataType {
-    None,
-    PlayerState,
-    SocialPartyMember,
+UENUM(BlueprintType)
+enum class EPlayerDataType : uint8
+{
+	None,
+	PlayerState,
+	SocialPartyMember,
+	BotPartyMember,
 };
-

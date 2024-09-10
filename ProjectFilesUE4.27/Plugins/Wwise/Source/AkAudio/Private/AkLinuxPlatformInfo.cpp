@@ -1,5 +1,6 @@
 #include "AkLinuxPlatformInfo.h"
 
-UAkLinuxPlatformInfo::UAkLinuxPlatformInfo() {
-}
+UAkLinuxPlatformInfo::UAkLinuxPlatformInfo()
+{
 
+}

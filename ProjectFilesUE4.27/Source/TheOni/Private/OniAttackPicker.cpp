@@ -1,5 +1,6 @@
 #include "OniAttackPicker.h"
 
-UOniAttackPicker::UOniAttackPicker() {
-}
+UOniAttackPicker::UOniAttackPicker()
+{
 
+}

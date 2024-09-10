@@ -1,5 +1,6 @@
 #include "AkStateValue.h"
 
-UAkStateValue::UAkStateValue() {
-}
+UAkStateValue::UAkStateValue()
+{
 
+}

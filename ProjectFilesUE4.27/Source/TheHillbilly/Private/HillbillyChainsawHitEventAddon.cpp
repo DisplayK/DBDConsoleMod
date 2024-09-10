@@ -1,5 +1,6 @@
 #include "HillbillyChainsawHitEventAddon.h"
 
-UHillbillyChainsawHitEventAddon::UHillbillyChainsawHitEventAddon() {
-}
+UHillbillyChainsawHitEventAddon::UHillbillyChainsawHitEventAddon()
+{
 
+}

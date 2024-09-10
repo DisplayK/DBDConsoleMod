@@ -1,5 +1,6 @@
 #include "ActivateBlightPower.h"
 
-UActivateBlightPower::UActivateBlightPower() {
-}
+UActivateBlightPower::UActivateBlightPower()
+{
 
+}

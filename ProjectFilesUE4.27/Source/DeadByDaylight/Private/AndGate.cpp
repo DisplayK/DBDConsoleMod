@@ -1,5 +1,6 @@
 #include "AndGate.h"
 
-AAndGate::AAndGate() {
-}
+AAndGate::AAndGate()
+{
 
+}

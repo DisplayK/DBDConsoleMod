@@ -4,25 +4,30 @@
 class ASlasherPlayer;
 class APalletTracker;
 
+void UPlaceDreamPalletInteraction::InitializeTunableValues(ASlasherPlayer* killer)
+{
 
-void UPlaceDreamPalletInteraction::InitializeTunableValues(ASlasherPlayer* killer) {
 }
 
-APalletTracker* UPlaceDreamPalletInteraction::GetTargetedPallet() const {
-    return NULL;
+APalletTracker* UPlaceDreamPalletInteraction::GetTargetedPallet() const
+{
+	return NULL;
 }
 
-bool UPlaceDreamPalletInteraction::CanSpawnDreamPalletAtTracker(APalletTracker* tracker) const {
-    return false;
+bool UPlaceDreamPalletInteraction::CanSpawnDreamPalletAtTracker(APalletTracker* tracker) const
+{
+	return false;
 }
 
-void UPlaceDreamPalletInteraction::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UPlaceDreamPalletInteraction, _palletTrackers);
+void UPlaceDreamPalletInteraction::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UPlaceDreamPalletInteraction, _palletTrackers);
 }
 
-UPlaceDreamPalletInteraction::UPlaceDreamPalletInteraction() {
-    this->_closestTracker = NULL;
+UPlaceDreamPalletInteraction::UPlaceDreamPalletInteraction()
+{
+	this->_palletTrackers = TArray<APalletTracker*>();
+	this->_closestTracker = NULL;
 }
-

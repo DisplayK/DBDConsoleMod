@@ -1,5 +1,6 @@
 #include "SpecialEventsContainer.h"
 
-USpecialEventsContainer::USpecialEventsContainer() {
-}
+USpecialEventsContainer::USpecialEventsContainer()
+{
 
+}

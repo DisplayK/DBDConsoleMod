@@ -1,5 +1,7 @@
 #include "AIRoll.h"
 
-FAIRoll::FAIRoll() {
+FAIRoll::FAIRoll()
+{
+	this->Random = FAITunableParameter{};
+	this->OnFailCooldown = FAITunableParameter{};
 }
-

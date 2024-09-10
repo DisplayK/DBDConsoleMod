@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkMidiEventBase.h"
 #include "AkMidiNoteAftertouch.generated.h"
 
 USTRUCT(BlueprintType)
-struct FAkMidiNoteAftertouch : public FAkMidiEventBase {
-    GENERATED_BODY()
+struct FAkMidiNoteAftertouch: public FAkMidiEventBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint8 Note;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    uint8 Value;
-    
-    AKAUDIO_API FAkMidiNoteAftertouch();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	uint8 Note;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	uint8 Value;
+
+public:
+	AKAUDIO_API FAkMidiNoteAftertouch();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkMidiNoteAftertouch) { return 0; }

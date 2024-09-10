@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BloodTrailComponent.h"
 #include "ECamperDamageState.h"
@@ -7,18 +8,20 @@
 class UPerkManager;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UCamperBloodTrailComponent : public UBloodTrailComponent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UCamperBloodTrailComponent : public UBloodTrailComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UPerkManager* _camperPerkManager;
-    
-public:
-    UCamperBloodTrailComponent();
+	UPROPERTY(Transient, Export)
+	UPerkManager* _camperPerkManager;
+
 private:
-    UFUNCTION()
-    void OnDamageStateChanged(ECamperDamageState oldDamageState, ECamperDamageState currentDamageState);
-    
+	UFUNCTION()
+	void OnDamageStateChanged(ECamperDamageState oldDamageState, ECamperDamageState currentDamageState);
+
+public:
+	UCamperBloodTrailComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCamperBloodTrailComponent) { return 0; }

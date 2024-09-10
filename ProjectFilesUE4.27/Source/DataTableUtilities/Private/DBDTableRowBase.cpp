@@ -1,5 +1,5 @@
 #include "DBDTableRowBase.h"
 
-FDBDTableRowBase::FDBDTableRowBase() {
+FDBDTableRowBase::FDBDTableRowBase()
+{
 }
-

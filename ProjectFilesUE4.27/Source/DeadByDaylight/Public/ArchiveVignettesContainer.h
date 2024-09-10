@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "ArchiveVignettesContainer.generated.h"
 
 UCLASS()
-class UArchiveVignettesContainer : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UArchiveVignettesContainer : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UArchiveVignettesContainer();
+	UArchiveVignettesContainer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UArchiveVignettesContainer) { return 0; }

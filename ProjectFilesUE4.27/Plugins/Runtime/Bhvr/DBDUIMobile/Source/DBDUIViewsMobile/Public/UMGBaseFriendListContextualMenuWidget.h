@@ -1,40 +1,43 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "EActionOnFriendType.h"
 #include "UMGBaseFriendListContextualMenuWidget.generated.h"
 
-class UAkAudioEvent;
 class UUMGFriendButtonWidget;
+class UAkAudioEvent;
 
 UCLASS(Abstract, EditInlineNew)
-class DBDUIVIEWSMOBILE_API UUMGBaseFriendListContextualMenuWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSMOBILE_API UUMGBaseFriendListContextualMenuWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    UUMGFriendButtonWidget* InviteToPartyButton;
-    
-    UPROPERTY(Export)
-    UUMGFriendButtonWidget* MuteButton;
-    
-    UPROPERTY(Export)
-    UUMGFriendButtonWidget* UnmuteButton;
-    
-    UPROPERTY(Export)
-    UUMGFriendButtonWidget* RemoveFriendButton;
-    
-    UPROPERTY(Export)
-    UUMGFriendButtonWidget* RemovePlayerFromPartyButton;
-    
-    UPROPERTY(EditAnywhere)
-    UAkAudioEvent* TransitionOutAnimationSound;
-    
-public:
-    UUMGBaseFriendListContextualMenuWidget();
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGFriendButtonWidget* InviteToPartyButton;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGFriendButtonWidget* MuteButton;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGFriendButtonWidget* UnmuteButton;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGFriendButtonWidget* RemoveFriendButton;
+
+	UPROPERTY(meta=(BindWidgetOptional))
+	UUMGFriendButtonWidget* RemovePlayerFromPartyButton;
+
+	UPROPERTY(EditAnywhere)
+	UAkAudioEvent* TransitionOutAnimationSound;
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void HandleActionTriggered(EActionOnFriendType actionType);
-    
+	UFUNCTION(BlueprintCallable)
+	void HandleActionTriggered(EActionOnFriendType actionType);
+
+public:
+	UUMGBaseFriendListContextualMenuWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGBaseFriendListContextualMenuWidget) { return 0; }

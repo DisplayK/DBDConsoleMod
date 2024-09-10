@@ -2,9 +2,12 @@
 
 class AK24Power;
 
-void UK24PowerPresentationItemProgressComponent::SetK24Power(AK24Power* k24Power) {
+void UK24PowerPresentationItemProgressComponent::SetK24Power(AK24Power* k24Power)
+{
+
 }
 
-UK24PowerPresentationItemProgressComponent::UK24PowerPresentationItemProgressComponent() {
+UK24PowerPresentationItemProgressComponent::UK24PowerPresentationItemProgressComponent()
+{
+	this->_k24Power = NULL;
 }
-

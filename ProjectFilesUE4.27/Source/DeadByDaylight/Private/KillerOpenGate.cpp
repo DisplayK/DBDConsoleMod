@@ -1,6 +1,6 @@
 #include "KillerOpenGate.h"
 
+UKillerOpenGate::UKillerOpenGate()
+{
 
-UKillerOpenGate::UKillerOpenGate() {
 }
-

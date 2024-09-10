@@ -1,17 +1,26 @@
 #include "DailyRitualsScreen.h"
 
-void UDailyRitualsScreen::OnRemoveRitual(const FString& id) {
+void UDailyRitualsScreen::OnRemoveRitual(const FString& id)
+{
+
 }
 
-void UDailyRitualsScreen::OnClosed() {
+void UDailyRitualsScreen::OnClosed()
+{
+
 }
 
-void UDailyRitualsScreen::OnClaimRitual(const FString& id) {
+void UDailyRitualsScreen::OnClaimRitual(const FString& id)
+{
+
 }
 
-void UDailyRitualsScreen::OnClaimAllRituals() {
+void UDailyRitualsScreen::OnClaimAllRituals()
+{
+
 }
 
-UDailyRitualsScreen::UDailyRitualsScreen() {
-}
+UDailyRitualsScreen::UDailyRitualsScreen()
+{
 
+}

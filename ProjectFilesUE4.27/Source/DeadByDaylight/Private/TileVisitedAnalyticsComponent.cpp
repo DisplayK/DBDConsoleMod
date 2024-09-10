@@ -1,5 +1,6 @@
 #include "TileVisitedAnalyticsComponent.h"
 
-UTileVisitedAnalyticsComponent::UTileVisitedAnalyticsComponent() {
-}
+UTileVisitedAnalyticsComponent::UTileVisitedAnalyticsComponent()
+{
 
+}

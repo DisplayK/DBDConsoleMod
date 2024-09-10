@@ -1,5 +1,6 @@
 #include "CorePingStatusWidget.h"
 
-UCorePingStatusWidget::UCorePingStatusWidget() {
-}
+UCorePingStatusWidget::UCorePingStatusWidget()
+{
 
+}

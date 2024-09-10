@@ -1,5 +1,6 @@
 #include "DBDAttackSuccessSubstate.h"
 
-UDBDAttackSuccessSubstate::UDBDAttackSuccessSubstate() {
-}
+UDBDAttackSuccessSubstate::UDBDAttackSuccessSubstate()
+{
 
+}

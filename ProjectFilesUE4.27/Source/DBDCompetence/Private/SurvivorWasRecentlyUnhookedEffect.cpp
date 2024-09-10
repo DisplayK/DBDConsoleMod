@@ -1,5 +1,6 @@
 #include "SurvivorWasRecentlyUnhookedEffect.h"
 
-USurvivorWasRecentlyUnhookedEffect::USurvivorWasRecentlyUnhookedEffect() {
-}
+USurvivorWasRecentlyUnhookedEffect::USurvivorWasRecentlyUnhookedEffect()
+{
 
+}

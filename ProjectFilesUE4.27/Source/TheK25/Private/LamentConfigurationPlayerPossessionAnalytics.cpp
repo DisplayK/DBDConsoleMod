@@ -1,7 +1,9 @@
 #include "LamentConfigurationPlayerPossessionAnalytics.h"
 
-FLamentConfigurationPlayerPossessionAnalytics::FLamentConfigurationPlayerPossessionAnalytics() {
-    this->PickUpElapsedMatchTime = 0.00f;
-    this->DropElapsedMatchTime = 0.00f;
+FLamentConfigurationPlayerPossessionAnalytics::FLamentConfigurationPlayerPossessionAnalytics()
+{
+	this->MatchId = TEXT("");
+	this->PickUpElapsedMatchTime = 0.0f;
+	this->DropElapsedMatchTime = 0.0f;
+	this->Outcome = TEXT("");
 }
-

@@ -2,11 +2,17 @@
 
 class ACamperPlayer;
 
-ACamperPlayer* UBaseSurvivorAnimInstance::GetOwningSurvivor() const {
-    return NULL;
+bool UBaseSurvivorAnimInstance::IsPlayingMontageByName(FName montageId) const
+{
+	return false;
 }
 
-UBaseSurvivorAnimInstance::UBaseSurvivorAnimInstance() {
-    this->_owningSurvivor = NULL;
+ACamperPlayer* UBaseSurvivorAnimInstance::GetOwningSurvivor() const
+{
+	return NULL;
 }
 
+UBaseSurvivorAnimInstance::UBaseSurvivorAnimInstance()
+{
+	this->_owningSurvivor = NULL;
+}

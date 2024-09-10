@@ -1,21 +1,25 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "EventDrivenModifierCondition.h"
+#include "GameplayTagContainer.h"
 #include "HasObjectState.generated.h"
 
-UCLASS(meta=(BlueprintSpawnableComponent))
-class COMPETENCE_API UHasObjectState : public UEventDrivenModifierCondition {
-    GENERATED_BODY()
-public:
+UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+class COMPETENCE_API UHasObjectState : public UEventDrivenModifierCondition
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FGameplayTag _state;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	FGameplayTag _state;
+
 public:
-    UHasObjectState();
-    UFUNCTION(BlueprintCallable)
-    void SetState(FGameplayTag state);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetState(FGameplayTag state);
+
+public:
+	UHasObjectState();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UHasObjectState) { return 0; }

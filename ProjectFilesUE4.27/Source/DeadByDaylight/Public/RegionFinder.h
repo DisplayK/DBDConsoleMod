@@ -1,19 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "Region.h"
 #include "RegionFinder.generated.h"
 
-UCLASS(BlueprintType, Transient, Config=Game)
-class DEADBYDAYLIGHT_API URegionFinder : public UObject {
-    GENERATED_BODY()
+UCLASS(BlueprintType, Transient)
+class DEADBYDAYLIGHT_API URegionFinder : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    TArray<FRegion> Regions;
-    
-    UPROPERTY(Config)
-    float Timeout;
-    
-    URegionFinder();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<FRegion> Regions;
+
+	UPROPERTY()
+	float Timeout;
+
+public:
+	URegionFinder();
 };
 
+FORCEINLINE uint32 GetTypeHash(const URegionFinder) { return 0; }

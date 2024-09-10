@@ -1,8 +1,11 @@
 #include "HitValidationConfigsComponent.h"
 
-void UHitValidationConfigsComponent::DBD_PrintInGameHitValidationConfigs() {
+void UHitValidationConfigsComponent::DBD_PrintInGameHitValidationConfigs()
+{
+
 }
 
-UHitValidationConfigsComponent::UHitValidationConfigsComponent() {
-}
+UHitValidationConfigsComponent::UHitValidationConfigsComponent()
+{
 
+}

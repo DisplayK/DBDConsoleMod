@@ -1,5 +1,6 @@
 #include "GMAdaptiveShadowMapAtlas.h"
 
-UGMAdaptiveShadowMapAtlas::UGMAdaptiveShadowMapAtlas() {
-}
+UGMAdaptiveShadowMapAtlas::UGMAdaptiveShadowMapAtlas()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "AkTrigger.h"
 
-UAkTrigger::UAkTrigger() {
-}
+UAkTrigger::UAkTrigger()
+{
 
+}

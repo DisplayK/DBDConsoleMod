@@ -1,5 +1,6 @@
 #include "GhostfaceCrouchAttack.h"
 
-UGhostfaceCrouchAttack::UGhostfaceCrouchAttack() {
-}
+UGhostfaceCrouchAttack::UGhostfaceCrouchAttack()
+{
 
+}

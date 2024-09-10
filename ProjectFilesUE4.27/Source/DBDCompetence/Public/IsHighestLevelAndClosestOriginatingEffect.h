@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameplayModifierCondition.h"
 #include "IsHighestLevelAndClosestOriginatingEffect.generated.h"
@@ -6,18 +7,20 @@
 class UStatusEffect;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UIsHighestLevelAndClosestOriginatingEffect : public UGameplayModifierCondition {
-    GENERATED_BODY()
-public:
+class UIsHighestLevelAndClosestOriginatingEffect : public UGameplayModifierCondition
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    TArray<UStatusEffect*> _applicableEffects;
-    
-public:
-    UIsHighestLevelAndClosestOriginatingEffect();
+	UPROPERTY(Transient, Export)
+	TArray<UStatusEffect*> _applicableEffects;
+
 private:
-    UFUNCTION()
-    void OnStatusEffectAddedOrRemoved(UStatusEffect* effect, bool valid);
-    
+	UFUNCTION()
+	void OnStatusEffectAddedOrRemoved(UStatusEffect* effect, bool valid);
+
+public:
+	UIsHighestLevelAndClosestOriginatingEffect();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UIsHighestLevelAndClosestOriginatingEffect) { return 0; }

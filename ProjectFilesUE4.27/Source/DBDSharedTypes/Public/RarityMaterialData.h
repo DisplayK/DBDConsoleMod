@@ -1,21 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDTableRowBase.h"
-#include "EItemRarity.h"
 #include "RarityMaterialData.generated.h"
 
 class UMaterialInterface;
 
 USTRUCT()
-struct FRarityMaterialData : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FRarityMaterialData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditAnywhere)
-    EItemRarity Rarity;
-    
-    UPROPERTY(EditAnywhere)
-    UMaterialInterface* Material;
-    
-    DBDSHAREDTYPES_API FRarityMaterialData();
+	UPROPERTY(EditAnywhere)
+	UMaterialInterface* LoadoutPartMaterial;
+
+	UPROPERTY(EditAnywhere)
+	UMaterialInterface* CustomizationMaterial;
+
+public:
+	DBDSHAREDTYPES_API FRarityMaterialData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FRarityMaterialData) { return 0; }

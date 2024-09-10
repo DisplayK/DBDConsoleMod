@@ -1,30 +1,32 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "UObject/SoftObjectPtr.h"
 #include "Engine/DataAsset.h"
-#include "OutlineConfiguration.h"
+#include "OutlineConfig.h"
 #include "OutlineColourConfiguration.h"
 #include "DBDOutlineComponentConfiguration.generated.h"
 
+class UObject;
 class UMaterialInterface;
 
 UCLASS(BlueprintType)
-class DEADBYDAYLIGHT_API UDBDOutlineComponentConfiguration : public UDataAsset {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UDBDOutlineComponentConfiguration : public UDataAsset
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    TMap<UClass*, FOutlineConfiguration> OutlineConfigurations;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    TMap<FName, FOutlineColourConfiguration> OutlineColours;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UMaterialInterface* OutlineMaterial;
-    
-    UPROPERTY(EditDefaultsOnly)
-    TArray<UMaterialInterface*> DefaultTranslucencyMaterials;
-    
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TMap<TSoftClassPtr<UObject>, FOutlineConfig> OutlineConfigs;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TMap<FName, FOutlineColourConfiguration> OutlineColours;
+
+	UPROPERTY(EditDefaultsOnly)
+	TArray<TSoftObjectPtr<UMaterialInterface>> TranslucencyDefaultMaterials;
+
 public:
-    UDBDOutlineComponentConfiguration();
+	UDBDOutlineComponentConfiguration();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDOutlineComponentConfiguration) { return 0; }

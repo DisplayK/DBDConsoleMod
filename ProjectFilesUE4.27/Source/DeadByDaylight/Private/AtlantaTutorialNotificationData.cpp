@@ -1,5 +1,6 @@
 #include "AtlantaTutorialNotificationData.h"
 
-FAtlantaTutorialNotificationData::FAtlantaTutorialNotificationData() {
+FAtlantaTutorialNotificationData::FAtlantaTutorialNotificationData()
+{
+	this->Textures = TArray<TSoftObjectPtr<UPaperSprite>>();
 }
-

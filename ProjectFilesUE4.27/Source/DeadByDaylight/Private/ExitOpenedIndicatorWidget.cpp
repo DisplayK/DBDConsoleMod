@@ -1,5 +1,6 @@
 #include "ExitOpenedIndicatorWidget.h"
 
-UExitOpenedIndicatorWidget::UExitOpenedIndicatorWidget() {
-}
+UExitOpenedIndicatorWidget::UExitOpenedIndicatorWidget()
+{
 
+}

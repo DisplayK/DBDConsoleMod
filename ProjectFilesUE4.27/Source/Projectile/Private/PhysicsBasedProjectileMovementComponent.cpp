@@ -1,5 +1,6 @@
 #include "PhysicsBasedProjectileMovementComponent.h"
 
-UPhysicsBasedProjectileMovementComponent::UPhysicsBasedProjectileMovementComponent() {
-}
+UPhysicsBasedProjectileMovementComponent::UPhysicsBasedProjectileMovementComponent()
+{
 
+}

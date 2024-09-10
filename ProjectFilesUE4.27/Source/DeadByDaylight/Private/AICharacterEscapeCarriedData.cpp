@@ -1,9 +1,11 @@
 #include "AICharacterEscapeCarriedData.h"
 
-void UAICharacterEscapeCarriedData::Init(bool preventWiggleSuccess) {
+void UAICharacterEscapeCarriedData::Init(bool preventWiggleSuccess)
+{
+
 }
 
-UAICharacterEscapeCarriedData::UAICharacterEscapeCarriedData() {
-    this->_preventWiggleSuccess = false;
+UAICharacterEscapeCarriedData::UAICharacterEscapeCarriedData()
+{
+	this->_preventWiggleSuccess = false;
 }
-

@@ -1,5 +1,5 @@
 #include "SurvivorInfoData.h"
 
-FSurvivorInfoData::FSurvivorInfoData() {
+FSurvivorInfoData::FSurvivorInfoData()
+{
 }
-

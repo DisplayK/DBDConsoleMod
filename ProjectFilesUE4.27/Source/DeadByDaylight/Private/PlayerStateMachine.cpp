@@ -1,5 +1,6 @@
 #include "PlayerStateMachine.h"
 
-UPlayerStateMachine::UPlayerStateMachine() {
-}
+UPlayerStateMachine::UPlayerStateMachine()
+{
 
+}

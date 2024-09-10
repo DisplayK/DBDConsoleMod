@@ -2,9 +2,12 @@
 
 class ADBDPlayer;
 
-void UAbsorbBloodOrbsInteraction::SetPlayerOwner(const ADBDPlayer* player) {
+void UAbsorbBloodOrbsInteraction::SetPlayerOwner(const ADBDPlayer* player)
+{
+
 }
 
-UAbsorbBloodOrbsInteraction::UAbsorbBloodOrbsInteraction() {
-}
+UAbsorbBloodOrbsInteraction::UAbsorbBloodOrbsInteraction()
+{
 
+}

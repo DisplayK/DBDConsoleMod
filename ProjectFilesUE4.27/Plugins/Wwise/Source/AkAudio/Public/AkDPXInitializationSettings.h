@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkPS5InitializationSettings.h"
 #include "AkDPXInitializationSettings.generated.h"
 
 UCLASS()
-class AKAUDIO_API UAkDPXInitializationSettings : public UAkPS5InitializationSettings {
-    GENERATED_BODY()
+class AKAUDIO_API UAkDPXInitializationSettings : public UAkPS5InitializationSettings
+{
+	GENERATED_BODY()
+
 public:
-    UAkDPXInitializationSettings();
+	UAkDPXInitializationSettings();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkDPXInitializationSettings) { return 0; }

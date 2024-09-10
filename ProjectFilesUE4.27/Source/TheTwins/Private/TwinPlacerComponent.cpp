@@ -1,5 +1,6 @@
 #include "TwinPlacerComponent.h"
 
-UTwinPlacerComponent::UTwinPlacerComponent() {
-}
+UTwinPlacerComponent::UTwinPlacerComponent()
+{
 
+}

@@ -1,35 +1,39 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "UMGHudEditorVersionWidget.generated.h"
 
-class UUMGDragWidget_HudEditor;
 class UButton;
+class UUMGDragWidget_HudEditor;
 
 UCLASS(EditInlineNew)
-class DEADBYDAYLIGHT_API UUMGHudEditorVersionWidget : public UUserWidget {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UUMGHudEditorVersionWidget : public UUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UButton* VersionButton;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UButton* VersionButton;
+
 private:
-    UPROPERTY(Export, Transient)
-    UUMGDragWidget_HudEditor* _onEditWidget;
-    
+	UPROPERTY(Transient, Export)
+	UUMGDragWidget_HudEditor* _onEditWidget;
+
 public:
-    UUMGHudEditorVersionWidget();
-    UFUNCTION(BlueprintCallable)
-    void Show();
-    
+	UFUNCTION(BlueprintCallable)
+	void Show();
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void OnButtonClick();
-    
+	UFUNCTION(BlueprintCallable)
+	void OnButtonClick();
+
 public:
-    UFUNCTION(BlueprintCallable)
-    void Hide();
-    
+	UFUNCTION(BlueprintCallable)
+	void Hide();
+
+public:
+	UUMGHudEditorVersionWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGHudEditorVersionWidget) { return 0; }

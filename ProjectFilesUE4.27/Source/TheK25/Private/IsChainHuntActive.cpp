@@ -1,5 +1,6 @@
 #include "IsChainHuntActive.h"
 
-UIsChainHuntActive::UIsChainHuntActive() {
-}
+UIsChainHuntActive::UIsChainHuntActive()
+{
 
+}

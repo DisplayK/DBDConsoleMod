@@ -1,5 +1,6 @@
 #include "MaxSameTargetQEEvaluator.h"
 
-UMaxSameTargetQEEvaluator::UMaxSameTargetQEEvaluator() {
+UMaxSameTargetQEEvaluator::UMaxSameTargetQEEvaluator()
+{
+	this->_targetList = TMap<TWeakObjectPtr<AActor>, int32>();
 }
-

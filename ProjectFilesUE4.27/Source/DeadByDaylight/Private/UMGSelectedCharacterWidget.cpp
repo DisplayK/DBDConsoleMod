@@ -1,15 +1,15 @@
 #include "UMGSelectedCharacterWidget.h"
 
+void UUMGSelectedCharacterWidget::OnPrestigeButtonClicked()
+{
 
-
-void UUMGSelectedCharacterWidget::OnPrestigeButtonClicked() {
 }
 
-UUMGSelectedCharacterWidget::UUMGSelectedCharacterWidget() {
-    this->PrestigeButton = NULL;
-    this->CharacterNameText = NULL;
-    this->CharacterLevelText = NULL;
-    this->CharacterLevelVerticalBox = NULL;
-    this->LeaderIcon = NULL;
+UUMGSelectedCharacterWidget::UUMGSelectedCharacterWidget()
+{
+	this->PrestigeButton = NULL;
+	this->CharacterNameText = NULL;
+	this->CharacterLevelText = NULL;
+	this->CharacterLevelVerticalBox = NULL;
+	this->LeaderIcon = NULL;
 }
-

@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BehaviorTree/Tasks/BTTask_BlueprintBase.h"
 #include "ZombieRotateTowardsTargetBTTask.generated.h"
 
 UCLASS()
-class UZombieRotateTowardsTargetBTTask : public UBTTask_BlueprintBase {
-    GENERATED_BODY()
+class UZombieRotateTowardsTargetBTTask : public UBTTask_BlueprintBase
+{
+	GENERATED_BODY()
+
 public:
-    UZombieRotateTowardsTargetBTTask();
+	UZombieRotateTowardsTargetBTTask();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UZombieRotateTowardsTargetBTTask) { return 0; }

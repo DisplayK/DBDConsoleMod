@@ -1,26 +1,42 @@
 #include "DBDTextBlock.h"
 
-void UDBDTextBlock::SetIsUpperCase(bool isUpperCase) {
+void UDBDTextBlock::SetIsUpperCase(bool isUpperCase)
+{
+
 }
 
-void UDBDTextBlock::OnSwitchDockStateChanged(bool isDocked) {
+void UDBDTextBlock::PreviewUndocked()
+{
+
 }
 
-void UDBDTextBlock::OnLargeTextSettingsChanged(bool isLargeText) {
+void UDBDTextBlock::PreviewLargeText()
+{
+
 }
 
-bool UDBDTextBlock::GetIsUpperCase() const {
-    return false;
+void UDBDTextBlock::OnSwitchDockStateChanged(bool isDocked)
+{
+
 }
 
-UDBDTextBlock::UDBDTextBlock() {
-    this->_debugPreviewLargeTextState = false;
-    this->_debugPreviewUndockedState = false;
-    this->_switchDockStateManager = NULL;
-    this->_textManager = NULL;
-    this->_isUpperCase = false;
-    this->_hasLargeText = false;
-    this->_overrideUndockedPropertiesWithLargeText = false;
-    this->_hasUndocking = false;
+void UDBDTextBlock::OnLargeTextSettingsChanged(bool isLargeText)
+{
+
 }
 
+bool UDBDTextBlock::GetIsUpperCase() const
+{
+	return false;
+}
+
+UDBDTextBlock::UDBDTextBlock()
+{
+	this->TextStyle = TEXT("");
+	this->_switchDockStateManager = NULL;
+	this->_textManager = NULL;
+	this->_isUpperCase = false;
+	this->_hasLargeText = false;
+	this->_overrideUndockedPropertiesWithLargeText = false;
+	this->_hasUndocking = false;
+}

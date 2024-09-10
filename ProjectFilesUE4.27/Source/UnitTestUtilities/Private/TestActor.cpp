@@ -1,5 +1,6 @@
 #include "TestActor.h"
 
-ATestActor::ATestActor() {
-}
+ATestActor::ATestActor()
+{
 
+}

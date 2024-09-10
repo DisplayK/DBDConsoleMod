@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "AkPlatformInfo.generated.h"
 
 UCLASS()
-class AKAUDIO_API UAkPlatformInfo : public UObject {
-    GENERATED_BODY()
+class AKAUDIO_API UAkPlatformInfo : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UAkPlatformInfo();
+	UAkPlatformInfo();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkPlatformInfo) { return 0; }

@@ -1,5 +1,6 @@
 #include "LanguageMessage.h"
 
-FLanguageMessage::FLanguageMessage() {
+FLanguageMessage::FLanguageMessage()
+{
+	this->Language = TEXT("");
 }
-

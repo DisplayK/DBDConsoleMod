@@ -1,5 +1,6 @@
 #include "HatchetProjectile.h"
 
-AHatchetProjectile::AHatchetProjectile() {
-}
+AHatchetProjectile::AHatchetProjectile()
+{
 
+}

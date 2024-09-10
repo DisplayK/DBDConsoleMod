@@ -1,14 +1,17 @@
 #include "ThrowInteraction.h"
 
-void UThrowInteraction::InitThrowCancellationExitTime(float value) {
+void UThrowInteraction::InitThrowCancellationExitTime(float value)
+{
+
 }
 
-bool UThrowInteraction::HasCancelledThrow() const {
-    return false;
+bool UThrowInteraction::HasCancelledThrow() const
+{
+	return false;
 }
 
-UThrowInteraction::UThrowInteraction() {
-    this->_throwCancelledSpeedCurve = NULL;
-    this->_throwCancellationExitTime = 0.00f;
+UThrowInteraction::UThrowInteraction()
+{
+	this->_throwCancelledSpeedCurve = NULL;
+	this->_throwCancellationExitTime = 0.000000;
 }
-

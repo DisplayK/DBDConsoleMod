@@ -1,12 +1,18 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ETooltipType.generated.h"
 
-UENUM()
-enum class ETooltipType : uint8 {
-    None,
-    Character,
-    CurrencyProgression,
-    Customization,
+UENUM(BlueprintType)
+enum class ETooltipType : uint8
+{
+	None,
+	ArchiveCompendium,
+	ArchiveNode,
+	ArchiveRewardNode,
+	Character,
+	CurrencyProgression,
+	Customization,
+	Label,
+	Loadout,
 };
-

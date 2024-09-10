@@ -1,44 +1,45 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
-#include "CoreBaseHudWidget.h"
 #include "ScreenIndicatorsContainerViewInterface.h"
+#include "CoreBaseHudWidget.h"
 #include "CoreScreenIndicatorsContainerWidget.generated.h"
 
-class UCoreScreenIndicatorWidget;
 class UCanvasPanel;
+class UCoreScreenIndicatorWidget;
 
 UCLASS(EditInlineNew)
-class UCoreScreenIndicatorsContainerWidget : public UCoreBaseHudWidget, public IScreenIndicatorsContainerViewInterface {
-    GENERATED_BODY()
-public:
+class UCoreScreenIndicatorsContainerWidget : public UCoreBaseHudWidget, public IScreenIndicatorsContainerViewInterface
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float InactiveThreshold;
-    
-    UPROPERTY(BlueprintReadWrite, Export)
-    UCanvasPanel* Container;
-    
-    UPROPERTY(EditAnywhere, NoClear)
-    TSubclassOf<UCoreScreenIndicatorWidget> ScreenIndicatorClass;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float InactiveThreshold;
+
+	UPROPERTY(BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCanvasPanel* Container;
+
+	UPROPERTY(EditAnywhere, NoClear)
+	TSubclassOf<UCoreScreenIndicatorWidget> ScreenIndicatorClass;
+
 private:
-    UPROPERTY(Export, Transient)
-    TMap<FString, UCoreScreenIndicatorWidget*> _screenIndicatorsMap;
-    
-    UPROPERTY(Export, Transient)
-    TArray<UCoreScreenIndicatorWidget*> _screenIndicatorsPool;
-    
-public:
-    UCoreScreenIndicatorsContainerWidget();
+	UPROPERTY(Transient, Export)
+	TMap<FString, UCoreScreenIndicatorWidget*> _screenIndicatorsMap;
+
+	UPROPERTY(Transient, Export)
+	TArray<UCoreScreenIndicatorWidget*> _screenIndicatorsPool;
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    TMap<FString, UCoreScreenIndicatorWidget*> GetScreenIndicatorsMap();
-    
-    UFUNCTION(BlueprintPure)
-    FString FindScreenIndicatorKey(UCoreScreenIndicatorWidget* value) const;
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UFUNCTION(BlueprintCallable)
+	TMap<FString, UCoreScreenIndicatorWidget*> GetScreenIndicatorsMap();
+
+	UFUNCTION(BlueprintPure)
+	FString FindScreenIndicatorKey(UCoreScreenIndicatorWidget* value) const;
+
+public:
+	UCoreScreenIndicatorsContainerWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCoreScreenIndicatorsContainerWidget) { return 0; }

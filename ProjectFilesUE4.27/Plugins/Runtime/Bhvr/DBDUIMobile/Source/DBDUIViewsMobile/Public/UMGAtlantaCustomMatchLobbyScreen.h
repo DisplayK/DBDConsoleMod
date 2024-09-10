@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "UMGAtlantaCustomMatchLobbyScreen.generated.h"
@@ -8,27 +9,29 @@ class UVerticalBox;
 class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class DBDUIVIEWSMOBILE_API UUMGAtlantaCustomMatchLobbyScreen : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSMOBILE_API UUMGAtlantaCustomMatchLobbyScreen : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGBaseButtonWidget* EditButton;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UVerticalBox* RulesBox;
-    
-    UPROPERTY(BlueprintReadWrite, Export)
-    UTextBlock* CustomMatchTitle;
-    
-    UPROPERTY(BlueprintReadWrite, Export)
-    UTextBlock* MatchRulesTitle;
-    
-public:
-    UUMGAtlantaCustomMatchLobbyScreen();
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGBaseButtonWidget* EditButton;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UVerticalBox* RulesBox;
+
+	UPROPERTY(BlueprintReadWrite, meta=(BindWidgetOptional))
+	UTextBlock* CustomMatchTitle;
+
+	UPROPERTY(BlueprintReadWrite, meta=(BindWidgetOptional))
+	UTextBlock* MatchRulesTitle;
+
 protected:
-    UFUNCTION()
-    void HandleEditConfigButtonClicked();
-    
+	UFUNCTION()
+	void HandleEditConfigButtonClicked();
+
+public:
+	UUMGAtlantaCustomMatchLobbyScreen();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlantaCustomMatchLobbyScreen) { return 0; }

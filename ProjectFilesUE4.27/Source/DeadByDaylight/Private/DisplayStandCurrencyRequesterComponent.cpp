@@ -1,6 +1,6 @@
 #include "DisplayStandCurrencyRequesterComponent.h"
 
-UDisplayStandCurrencyRequesterComponent::UDisplayStandCurrencyRequesterComponent() {
-    this->_menuCurrencyDisplayableClass = NULL;
+UDisplayStandCurrencyRequesterComponent::UDisplayStandCurrencyRequesterComponent()
+{
+	this->_menuCurrencyDisplayableClass = NULL;
 }
-

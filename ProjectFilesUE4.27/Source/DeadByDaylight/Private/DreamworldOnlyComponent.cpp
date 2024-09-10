@@ -1,5 +1,6 @@
 #include "DreamworldOnlyComponent.h"
 
-UDreamworldOnlyComponent::UDreamworldOnlyComponent() {
-}
+UDreamworldOnlyComponent::UDreamworldOnlyComponent()
+{
 
+}

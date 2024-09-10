@@ -1,5 +1,6 @@
 #include "CustomValueQEEvaluator.h"
 
-UCustomValueQEEvaluator::UCustomValueQEEvaluator() {
-}
+UCustomValueQEEvaluator::UCustomValueQEEvaluator()
+{
 
+}

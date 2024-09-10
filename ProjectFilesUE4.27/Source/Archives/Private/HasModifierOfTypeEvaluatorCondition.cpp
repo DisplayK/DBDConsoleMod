@@ -1,5 +1,6 @@
 #include "HasModifierOfTypeEvaluatorCondition.h"
 
-UHasModifierOfTypeEvaluatorCondition::UHasModifierOfTypeEvaluatorCondition() {
+UHasModifierOfTypeEvaluatorCondition::UHasModifierOfTypeEvaluatorCondition()
+{
+	this->_gameplayModifierList = TArray<FGameplayTag>();
 }
-

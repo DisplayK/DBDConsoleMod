@@ -1,5 +1,6 @@
 #include "AimDirectionProvider.h"
 
-UAimDirectionProvider::UAimDirectionProvider() {
-}
+UAimDirectionProvider::UAimDirectionProvider()
+{
 
+}

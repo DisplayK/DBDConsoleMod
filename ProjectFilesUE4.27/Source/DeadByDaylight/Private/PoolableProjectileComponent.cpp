@@ -1,5 +1,6 @@
 #include "PoolableProjectileComponent.h"
 
-UPoolableProjectileComponent::UPoolableProjectileComponent() {
-}
+UPoolableProjectileComponent::UPoolableProjectileComponent()
+{
 
+}

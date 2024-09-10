@@ -1,5 +1,6 @@
 #include "BlightPowerStateAttack.h"
 
-UBlightPowerStateAttack::UBlightPowerStateAttack() {
-}
+UBlightPowerStateAttack::UBlightPowerStateAttack()
+{
 
+}

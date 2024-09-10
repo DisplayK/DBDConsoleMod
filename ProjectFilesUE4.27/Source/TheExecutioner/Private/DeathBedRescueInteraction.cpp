@@ -1,9 +1,12 @@
 #include "DeathBedRescueInteraction.h"
+#include "UObject/NoExportTypes.h"
 
-FVector UDeathBedRescueInteraction::GetRescuerSnapPosition() const {
-    return FVector{};
+FVector UDeathBedRescueInteraction::GetRescuerSnapPosition() const
+{
+	return FVector{};
 }
 
-UDeathBedRescueInteraction::UDeathBedRescueInteraction() {
-}
+UDeathBedRescueInteraction::UDeathBedRescueInteraction()
+{
 
+}

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ScreenBase.h"
 #include "TooltipScreenUMG.generated.h"
@@ -6,18 +7,20 @@
 class UBaseTooltipWidget;
 
 UCLASS()
-class UTooltipScreenUMG : public UScreenBase {
-    GENERATED_BODY()
-public:
+class UTooltipScreenUMG : public UScreenBase
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Export, Transient)
-    UBaseTooltipWidget* _tooltipWidget;
-    
-public:
-    UTooltipScreenUMG();
+	UPROPERTY(Transient, Export)
+	UBaseTooltipWidget* _tooltipWidget;
+
 private:
-    UFUNCTION()
-    void OnCloseTriggered();
-    
+	UFUNCTION()
+	void OnCloseTriggered();
+
+public:
+	UTooltipScreenUMG();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTooltipScreenUMG) { return 0; }

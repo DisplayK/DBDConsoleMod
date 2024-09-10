@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PresentationItemProgressComponent.h"
 #include "PowerChargePresentationItemProgressComponent.generated.h"
@@ -7,21 +8,23 @@ class UPowerChargeComponent;
 class UPowerToggleComponent;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DBDGAMEPLAY_API UPowerChargePresentationItemProgressComponent : public UPresentationItemProgressComponent {
-    GENERATED_BODY()
-public:
+class DBDGAMEPLAY_API UPowerChargePresentationItemProgressComponent : public UPresentationItemProgressComponent
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, Export)
-    UPowerChargeComponent* _powerChargeComponent;
-    
+	UPROPERTY(BlueprintReadWrite, meta=(BindWidgetOptional))
+	UPowerChargeComponent* _powerChargeComponent;
+
 private:
-    UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
-    UPowerToggleComponent* _powerToggleComponent;
-    
-    UPROPERTY(EditDefaultsOnly)
-    float _chargeReadyThreshold;
-    
+	UPROPERTY(BlueprintReadWrite, Export, meta=(AllowPrivateAccess=true))
+	UPowerToggleComponent* _powerToggleComponent;
+
+	UPROPERTY(EditDefaultsOnly)
+	float _chargeReadyThreshold;
+
 public:
-    UPowerChargePresentationItemProgressComponent();
+	UPowerChargePresentationItemProgressComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPowerChargePresentationItemProgressComponent) { return 0; }

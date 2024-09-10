@@ -1,5 +1,6 @@
 #include "VisibleHatchRangeTrackerStrategy.h"
 
-UVisibleHatchRangeTrackerStrategy::UVisibleHatchRangeTrackerStrategy() {
-}
+UVisibleHatchRangeTrackerStrategy::UVisibleHatchRangeTrackerStrategy()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "FriendsMenuUtilities.h"
 
-UFriendsMenuUtilities::UFriendsMenuUtilities() {
-}
+UFriendsMenuUtilities::UFriendsMenuUtilities()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "DBDOnlineSessionClient.h"
 
-UDBDOnlineSessionClient::UDBDOnlineSessionClient() {
-}
+UDBDOnlineSessionClient::UDBDOnlineSessionClient()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "AkXSXPlatformInfo.h"
 
-UAkXSXPlatformInfo::UAkXSXPlatformInfo() {
-}
+UAkXSXPlatformInfo::UAkXSXPlatformInfo()
+{
 
+}

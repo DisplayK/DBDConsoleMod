@@ -1,5 +1,6 @@
 #include "DBDInitPlayerQueryYesNoSizeWifi.h"
 
-UDBDInitPlayerQueryYesNoSizeWifi::UDBDInitPlayerQueryYesNoSizeWifi() {
-}
+UDBDInitPlayerQueryYesNoSizeWifi::UDBDInitPlayerQueryYesNoSizeWifi()
+{
 
+}

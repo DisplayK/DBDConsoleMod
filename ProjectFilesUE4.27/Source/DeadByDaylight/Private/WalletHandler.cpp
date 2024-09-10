@@ -1,5 +1,6 @@
 #include "WalletHandler.h"
 
-UWalletHandler::UWalletHandler() {
-}
+UWalletHandler::UWalletHandler()
+{
 
+}

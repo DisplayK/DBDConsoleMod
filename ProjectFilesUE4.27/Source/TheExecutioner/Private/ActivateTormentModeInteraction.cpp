@@ -2,9 +2,12 @@
 
 class ATormentMode;
 
-void UActivateTormentModeInteraction::SetTormentMode(ATormentMode* tormentModeComponent) {
+void UActivateTormentModeInteraction::SetTormentMode(ATormentMode* tormentModeComponent)
+{
+
 }
 
-UActivateTormentModeInteraction::UActivateTormentModeInteraction() {
-}
+UActivateTormentModeInteraction::UActivateTormentModeInteraction()
+{
 
+}

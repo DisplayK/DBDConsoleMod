@@ -1,15 +1,22 @@
 #include "ServerCorrectionDisablerComponent.h"
+#include "GameplayTagContainer.h"
 
-void UServerCorrectionDisablerComponent::SetServerCorrectionEnabled(const bool enabled, FGameplayTag channel) {
+void UServerCorrectionDisablerComponent::SetServerCorrectionEnabled(const bool enabled, FGameplayTag channel)
+{
+
 }
 
-void UServerCorrectionDisablerComponent::Multicast_SetServerCorrectionEnabled_Implementation(const bool enabled, FGameplayTag channel) {
+void UServerCorrectionDisablerComponent::Multicast_SetServerCorrectionEnabled_Implementation(const bool enabled, FGameplayTag channel)
+{
+
 }
 
-bool UServerCorrectionDisablerComponent::GetServerCorrectionEnabled() const {
-    return false;
+bool UServerCorrectionDisablerComponent::GetServerCorrectionEnabled() const
+{
+	return false;
 }
 
-UServerCorrectionDisablerComponent::UServerCorrectionDisablerComponent() {
-}
+UServerCorrectionDisablerComponent::UServerCorrectionDisablerComponent()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "AbstractAnalyticsManager.h"
 
-UAbstractAnalyticsManager::UAbstractAnalyticsManager() {
-}
+UAbstractAnalyticsManager::UAbstractAnalyticsManager()
+{
 
+}

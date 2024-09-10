@@ -1,17 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "AkAssetPlatformData.generated.h"
 
 class UAkAssetData;
 
 UCLASS()
-class AKAUDIO_API UAkAssetPlatformData : public UObject {
-    GENERATED_BODY()
+class AKAUDIO_API UAkAssetPlatformData : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    UAkAssetData* CurrentAssetData;
-    
-    UAkAssetPlatformData();
+	UPROPERTY(Transient)
+	UAkAssetData* CurrentAssetData;
+
+public:
+	UAkAssetPlatformData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkAssetPlatformData) { return 0; }

@@ -1,5 +1,6 @@
 #include "TwinOutlineUpdateStrategy.h"
 
-UTwinOutlineUpdateStrategy::UTwinOutlineUpdateStrategy() {
-}
+UTwinOutlineUpdateStrategy::UTwinOutlineUpdateStrategy()
+{
 
+}

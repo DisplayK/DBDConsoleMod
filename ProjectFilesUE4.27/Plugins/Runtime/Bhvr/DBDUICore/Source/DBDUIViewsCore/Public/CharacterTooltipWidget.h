@@ -1,41 +1,45 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "CharacterTooltipViewData.h"
 #include "CoreBaseUserWidget.h"
+#include "CharacterTooltipViewData.h"
 #include "ECharacterDifficulty.h"
 #include "CharacterTooltipWidget.generated.h"
 
-class UDBDRichTextBlock;
 class UDBDTextBlock;
+class UDBDRichTextBlock;
 
 UCLASS(EditInlineNew)
-class DBDUIVIEWSCORE_API UCharacterTooltipWidget : public UCoreBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DBDUIVIEWSCORE_API UCharacterTooltipWidget : public UCoreBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UDBDTextBlock* InstructionTB;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UDBDTextBlock* LevelTB;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UDBDTextBlock* MarketTB;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UDBDRichTextBlock* DifficultyRTB;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDBDTextBlock* InstructionTB;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDBDTextBlock* LevelTB;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDBDTextBlock* MarketTB;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDBDRichTextBlock* DifficultyRTB;
+
 public:
-    UCharacterTooltipWidget();
-    UFUNCTION(BlueprintImplementableEvent)
-    void SetTooltipData(const FCharacterTooltipViewData& characterViewData);
-    
+	UFUNCTION(BlueprintImplementableEvent)
+	void SetTooltipData(const FCharacterTooltipViewData& characterViewData);
+
 protected:
-    UFUNCTION(BlueprintCallable)
-    void SetLevel(int32 level);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetDifficulty(ECharacterDifficulty difficulty);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetLevel(int32 level);
+
+	UFUNCTION(BlueprintCallable)
+	void SetDifficulty(ECharacterDifficulty difficulty);
+
+public:
+	UCharacterTooltipWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCharacterTooltipWidget) { return 0; }

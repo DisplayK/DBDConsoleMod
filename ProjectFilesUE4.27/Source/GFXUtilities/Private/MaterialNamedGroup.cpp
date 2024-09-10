@@ -1,5 +1,7 @@
 #include "MaterialNamedGroup.h"
 
-FMaterialNamedGroup::FMaterialNamedGroup() {
+FMaterialNamedGroup::FMaterialNamedGroup()
+{
+	this->GroupName = TEXT("");
+	this->Maps = TArray<FMaterialMap>();
 }
-

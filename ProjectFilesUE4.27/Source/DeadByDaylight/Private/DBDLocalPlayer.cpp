@@ -1,5 +1,6 @@
 #include "DBDLocalPlayer.h"
 
-UDBDLocalPlayer::UDBDLocalPlayer() {
-}
+UDBDLocalPlayer::UDBDLocalPlayer()
+{
 
+}

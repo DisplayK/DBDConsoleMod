@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "ItemIdDropdown.h"
+#include "CustomizationItemDropdown.h"
 #include "ScreenshotViewSetting.h"
 #include "ItemViewSetting.generated.h"
 
-USTRUCT(BlueprintType)
-struct FItemViewSetting {
-    GENERATED_BODY()
+USTRUCT()
+struct FItemViewSetting
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(VisibleAnywhere)
-    FName Label;
-    
-    UPROPERTY(EditAnywhere)
-    FItemIdDropdown Item;
-    
-    UPROPERTY(EditAnywhere)
-    FScreenshotViewSetting Settings;
-    
-    DEADBYDAYLIGHT_API FItemViewSetting();
+	UPROPERTY(VisibleAnywhere)
+	FName Label;
+
+	UPROPERTY(EditAnywhere)
+	FCustomizationItemDropdown Item;
+
+	UPROPERTY(EditAnywhere)
+	FScreenshotViewSetting Settings;
+
+public:
+	DEADBYDAYLIGHT_API FItemViewSetting();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FItemViewSetting) { return 0; }

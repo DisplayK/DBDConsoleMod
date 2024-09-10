@@ -1,17 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "AnimEffectHandler.generated.h"
 
-class ACharacter;
+class AActor;
 
 UCLASS(Blueprintable)
-class ANIMATIONUTILITIES_API UAnimEffectHandler : public UObject {
-    GENERATED_BODY()
+class ANIMATIONUTILITIES_API UAnimEffectHandler : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UAnimEffectHandler();
-    UFUNCTION(BlueprintNativeEvent)
-    bool HandleAnimNotify(ACharacter* player, const FName& notifyName) const;
-    
+	UFUNCTION(BlueprintNativeEvent)
+	bool HandleAnimNotify(AActor* player, const FName& notifyName) const;
+
+public:
+	UAnimEffectHandler();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAnimEffectHandler) { return 0; }

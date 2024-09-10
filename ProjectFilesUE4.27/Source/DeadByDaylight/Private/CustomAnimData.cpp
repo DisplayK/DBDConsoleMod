@@ -1,5 +1,7 @@
 #include "CustomAnimData.h"
 
-FCustomAnimData::FCustomAnimData() {
+FCustomAnimData::FCustomAnimData()
+{
+	this->MenuAnimationBlueprint = NULL;
+	this->InGameAnimationBlueprint = NULL;
 }
-

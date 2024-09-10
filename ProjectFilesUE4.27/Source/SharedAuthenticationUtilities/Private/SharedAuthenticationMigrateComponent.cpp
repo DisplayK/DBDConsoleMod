@@ -1,6 +1,6 @@
 #include "SharedAuthenticationMigrateComponent.h"
 
-USharedAuthenticationMigrateComponent::USharedAuthenticationMigrateComponent() {
-    this->_worldContextObject = NULL;
+USharedAuthenticationMigrateComponent::USharedAuthenticationMigrateComponent()
+{
+	this->_worldContextObject = NULL;
 }
-

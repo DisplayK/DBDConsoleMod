@@ -1,5 +1,6 @@
 #include "LightingSpecifics.h"
 
-FLightingSpecifics::FLightingSpecifics() {
+FLightingSpecifics::FLightingSpecifics()
+{
+	this->LightBlueprint = NULL;
 }
-

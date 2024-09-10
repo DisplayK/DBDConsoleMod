@@ -1,5 +1,6 @@
 #include "DeathBedOutlineUpdateStrategy.h"
 
-UDeathBedOutlineUpdateStrategy::UDeathBedOutlineUpdateStrategy() {
-}
+UDeathBedOutlineUpdateStrategy::UDeathBedOutlineUpdateStrategy()
+{
 
+}

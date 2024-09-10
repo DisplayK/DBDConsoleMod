@@ -1,59 +1,63 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "CharacterSlotData.h"
 #include "UMGCharacterButton.generated.h"
 
-class UImage;
 class UUMGCharacterPrice;
+class UImage;
 class UCanvasPanel;
 class UTextBlock;
 
 UCLASS(EditInlineNew)
-class DEADBYDAYLIGHT_API UUMGCharacterButton : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UUMGCharacterButton : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* PortraitIcon;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* CharacterSelectedPanel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* LevelPanel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* CharacterLevelText;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* OwnedCustomizationText;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* TotalCustomizationText;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UCanvasPanel* PricePanel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGCharacterPrice* CellPrice;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGCharacterPrice* ShardPrice;
-    
-    UPROPERTY(BlueprintReadWrite, Transient)
-    FCharacterSlotData CharacterSlotData;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* PortraitIcon;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* CharacterSelectedPanel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* LevelPanel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* CharacterLevelText;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* OwnedCustomizationText;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* TotalCustomizationText;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UCanvasPanel* PricePanel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGCharacterPrice* CellPrice;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGCharacterPrice* ShardPrice;
+
+	UPROPERTY(BlueprintReadWrite, Transient)
+	FCharacterSlotData CharacterSlotData;
+
 public:
-    UUMGCharacterButton();
-    UFUNCTION(BlueprintCallable)
-    void SetIsSelected(bool isSelected);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetCharacterData(const FCharacterSlotData& characterData);
-    
-    UFUNCTION(BlueprintCallable)
-    void BroadcastClickedEvent(int32 characterIndex);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetIsSelected(bool isSelected);
+
+	UFUNCTION(BlueprintCallable)
+	void SetCharacterData(const FCharacterSlotData& characterData);
+
+	UFUNCTION(BlueprintCallable)
+	void BroadcastClickedEvent(int32 characterIndex);
+
+public:
+	UUMGCharacterButton();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGCharacterButton) { return 0; }

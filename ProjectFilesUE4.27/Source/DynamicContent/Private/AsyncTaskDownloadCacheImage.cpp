@@ -1,5 +1,6 @@
 #include "AsyncTaskDownloadCacheImage.h"
 
-UAsyncTaskDownloadCacheImage::UAsyncTaskDownloadCacheImage() {
+UAsyncTaskDownloadCacheImage::UAsyncTaskDownloadCacheImage()
+{
+	this->_url = TEXT("");
 }
-

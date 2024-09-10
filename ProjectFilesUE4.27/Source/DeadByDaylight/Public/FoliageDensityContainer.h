@@ -1,27 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "FoliageDensityContainer.generated.h"
 
-class UFoliageDensityHISM;
 class AFoliageActor;
+class UFoliageDensityHISM;
 class UDBDMapFoliageDensityTunables;
 
 UCLASS()
-class DEADBYDAYLIGHT_API AFoliageDensityContainer : public AActor {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API AFoliageDensityContainer : public AActor
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY()
-    TMap<FName, AFoliageActor*> _foliageActors;
-    
-    UPROPERTY(Export, Transient)
-    TMap<FName, UFoliageDensityHISM*> _foliageHISMs;
-    
-    UPROPERTY(Transient)
-    UDBDMapFoliageDensityTunables* _mapFoliageDensityTunables;
-    
+	UPROPERTY()
+	TMap<FName, AFoliageActor*> _foliageActors;
+
+	UPROPERTY(Transient, Export)
+	TMap<FName, UFoliageDensityHISM*> _foliageHISMs;
+
+	UPROPERTY(Transient)
+	UDBDMapFoliageDensityTunables* _mapFoliageDensityTunables;
+
 public:
-    AFoliageDensityContainer();
+	AFoliageDensityContainer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const AFoliageDensityContainer) { return 0; }

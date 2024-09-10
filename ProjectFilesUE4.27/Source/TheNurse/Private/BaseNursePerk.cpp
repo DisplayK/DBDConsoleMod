@@ -1,5 +1,6 @@
 #include "BaseNursePerk.h"
 
-UBaseNursePerk::UBaseNursePerk() {
-}
+UBaseNursePerk::UBaseNursePerk()
+{
 
+}

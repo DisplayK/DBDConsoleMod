@@ -1,5 +1,6 @@
 #include "CharacterPositionRecorderConfigurator.h"
 
-UCharacterPositionRecorderConfigurator::UCharacterPositionRecorderConfigurator() {
-}
+UCharacterPositionRecorderConfigurator::UCharacterPositionRecorderConfigurator()
+{
 
+}

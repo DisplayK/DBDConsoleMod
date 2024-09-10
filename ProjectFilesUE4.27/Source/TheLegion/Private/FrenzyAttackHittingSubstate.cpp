@@ -1,5 +1,6 @@
 #include "FrenzyAttackHittingSubstate.h"
 
-UFrenzyAttackHittingSubstate::UFrenzyAttackHittingSubstate() {
-}
+UFrenzyAttackHittingSubstate::UFrenzyAttackHittingSubstate()
+{
 
+}

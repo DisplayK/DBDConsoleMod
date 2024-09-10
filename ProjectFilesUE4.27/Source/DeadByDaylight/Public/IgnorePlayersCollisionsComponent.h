@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "IgnorePlayersCollisionsComponent.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UIgnorePlayersCollisionsComponent : public UActorComponent {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UIgnorePlayersCollisionsComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 public:
-    UIgnorePlayersCollisionsComponent();
+	UIgnorePlayersCollisionsComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UIgnorePlayersCollisionsComponent) { return 0; }

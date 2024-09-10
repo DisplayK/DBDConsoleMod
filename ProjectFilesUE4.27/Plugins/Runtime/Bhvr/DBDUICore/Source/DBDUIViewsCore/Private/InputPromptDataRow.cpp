@@ -1,7 +1,9 @@
 #include "InputPromptDataRow.h"
 
-FInputPromptDataRow::FInputPromptDataRow() {
-    this->PromptTexture = NULL;
-    this->ShowLabel = false;
+FInputPromptDataRow::FInputPromptDataRow()
+{
+	this->InputLabel = FText::GetEmpty();
+	this->InputKey = FKey{};
+	this->PromptTexture = NULL;
+	this->ShowLabel = false;
 }
-

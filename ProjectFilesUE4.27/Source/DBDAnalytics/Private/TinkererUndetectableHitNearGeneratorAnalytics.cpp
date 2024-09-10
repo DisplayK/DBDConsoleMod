@@ -1,5 +1,7 @@
 #include "TinkererUndetectableHitNearGeneratorAnalytics.h"
 
-FTinkererUndetectableHitNearGeneratorAnalytics::FTinkererUndetectableHitNearGeneratorAnalytics() {
+FTinkererUndetectableHitNearGeneratorAnalytics::FTinkererUndetectableHitNearGeneratorAnalytics()
+{
+	this->HitSurvivorMirrorsId = TEXT("");
+	this->AttackingSlasherMirrorsId = TEXT("");
 }
-

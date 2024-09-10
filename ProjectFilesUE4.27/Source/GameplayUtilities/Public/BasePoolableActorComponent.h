@@ -1,25 +1,29 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "OnAcquiredChanged.h"
 #include "PoolableActor.h"
-#include "OnAcquiredChangedDelegate.h"
+#include "Components/ActorComponent.h"
 #include "BasePoolableActorComponent.generated.h"
 
-UCLASS(Abstract, BlueprintType, meta=(BlueprintSpawnableComponent))
-class GAMEPLAYUTILITIES_API UBasePoolableActorComponent : public UActorComponent, public IPoolableActor {
-    GENERATED_BODY()
+UCLASS(BlueprintType, Abstract, meta=(BlueprintSpawnableComponent))
+class GAMEPLAYUTILITIES_API UBasePoolableActorComponent : public UActorComponent, public IPoolableActor
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintAssignable)
-    FOnAcquiredChanged OnAcquiredChanged;
-    
-    UBasePoolableActorComponent();
-    UFUNCTION(BlueprintCallable)
-    void SetAcquired(bool active);
-    
-    UFUNCTION(BlueprintPure)
-    bool IsAcquired() const;
-    
-    
-    // Fix for true pure virtual functions not being implemented
+	UPROPERTY(BlueprintAssignable)
+	FOnAcquiredChanged OnAcquiredChanged;
+
+public:
+	UFUNCTION(BlueprintCallable)
+	void SetAcquired(bool active);
+
+	UFUNCTION(BlueprintPure)
+	bool IsAcquired() const;
+
+public:
+	UBasePoolableActorComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBasePoolableActorComponent) { return 0; }

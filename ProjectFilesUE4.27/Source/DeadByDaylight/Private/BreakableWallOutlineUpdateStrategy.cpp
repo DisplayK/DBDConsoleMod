@@ -1,5 +1,6 @@
 #include "BreakableWallOutlineUpdateStrategy.h"
 
-UBreakableWallOutlineUpdateStrategy::UBreakableWallOutlineUpdateStrategy() {
-}
+UBreakableWallOutlineUpdateStrategy::UBreakableWallOutlineUpdateStrategy()
+{
 
+}

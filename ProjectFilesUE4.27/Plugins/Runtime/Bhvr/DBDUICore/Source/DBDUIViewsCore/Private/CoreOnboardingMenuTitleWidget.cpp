@@ -1,9 +1,6 @@
 #include "CoreOnboardingMenuTitleWidget.h"
 
+UCoreOnboardingMenuTitleWidget::UCoreOnboardingMenuTitleWidget()
+{
 
-
-
-
-UCoreOnboardingMenuTitleWidget::UCoreOnboardingMenuTitleWidget() {
 }
-

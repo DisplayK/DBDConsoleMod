@@ -1,9 +1,11 @@
 #include "UMGAuthentificationProviderListWidget.h"
 
-void UUMGAuthentificationProviderListWidget::HideGuestButton() {
+void UUMGAuthentificationProviderListWidget::HideGuestButton()
+{
+
 }
 
-UUMGAuthentificationProviderListWidget::UUMGAuthentificationProviderListWidget() {
-    this->GuestButtonContainer = NULL;
+UUMGAuthentificationProviderListWidget::UUMGAuthentificationProviderListWidget()
+{
+	this->GuestButtonContainer = NULL;
 }
-

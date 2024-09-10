@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "DBDMistManager.generated.h"
@@ -6,14 +7,16 @@
 class UDBDAggregateParticleSystemComponent;
 
 UCLASS()
-class DEADBYDAYLIGHT_API ADBDMistManager : public AActor {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API ADBDMistManager : public AActor
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere, Export)
-    UDBDAggregateParticleSystemComponent* _particleSystemComp;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDBDAggregateParticleSystemComponent* _particleSystemComp;
+
 public:
-    ADBDMistManager();
+	ADBDMistManager();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ADBDMistManager) { return 0; }

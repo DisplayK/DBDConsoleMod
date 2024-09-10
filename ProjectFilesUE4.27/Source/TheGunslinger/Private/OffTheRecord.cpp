@@ -1,8 +1,8 @@
 #include "OffTheRecord.h"
 
-UOffTheRecord::UOffTheRecord() {
-    this->_activationDurationLevels[0] = 0.00f;
-    this->_activationDurationLevels[1] = 0.00f;
-    this->_activationDurationLevels[2] = 0.00f;
+UOffTheRecord::UOffTheRecord()
+{
+	this->_activationDurationLevels = 0.000000;
+	this->_activatableEnduranceEffectClass = NULL;
+	this->_activatableEnduranceEffect = NULL;
 }
-

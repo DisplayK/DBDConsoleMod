@@ -1,5 +1,6 @@
 #include "ActiveWhenApplicableAndNotCampingPerkIconStrategy.h"
 
-UActiveWhenApplicableAndNotCampingPerkIconStrategy::UActiveWhenApplicableAndNotCampingPerkIconStrategy() {
-}
+UActiveWhenApplicableAndNotCampingPerkIconStrategy::UActiveWhenApplicableAndNotCampingPerkIconStrategy()
+{
 
+}

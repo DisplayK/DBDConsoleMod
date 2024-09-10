@@ -2,9 +2,12 @@
 
 class AConjoinedTwin;
 
-void URecallTwin::OnTwinSet(AConjoinedTwin* twin) {
+void URecallTwin::OnTwinSet(AConjoinedTwin* twin)
+{
+
 }
 
-URecallTwin::URecallTwin() {
-}
+URecallTwin::URecallTwin()
+{
 
+}

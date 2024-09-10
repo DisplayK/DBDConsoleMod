@@ -1,22 +1,31 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "AkGeometrySurfaceOverride.generated.h"
 
 class UAkAcousticTexture;
 
 USTRUCT(BlueprintType)
-struct FAkGeometrySurfaceOverride {
-    GENERATED_BODY()
+struct FAkGeometrySurfaceOverride
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    UAkAcousticTexture* AcousticTexture;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    uint8 bEnableOcclusionOverride: 1;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float OcclusionValue;
-    
-    AKAUDIO_API FAkGeometrySurfaceOverride();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UAkAcousticTexture* AcousticTexture;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	uint8 bEnableOcclusionOverride : 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float OcclusionValue;
+
+private:
+	UPROPERTY()
+	float SurfaceArea;
+
+public:
+	AKAUDIO_API FAkGeometrySurfaceOverride();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAkGeometrySurfaceOverride) { return 0; }

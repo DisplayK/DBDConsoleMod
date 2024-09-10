@@ -1,11 +1,16 @@
 #include "UMGSubscriptionsPageScrollWidget.h"
 
-void UUMGSubscriptionsPageScrollWidget::HandleSubscriptionInfoButtonClickedEvent(const FString& subscriptionDetails) {
+void UUMGSubscriptionsPageScrollWidget::HandleSubscriptionInfoButtonClickedEvent(const FString& subscriptionDetails)
+{
+
 }
 
-void UUMGSubscriptionsPageScrollWidget::HandleBuySubscriptionPackButtonClickedEvent(FName subscriptionPackID) {
+void UUMGSubscriptionsPageScrollWidget::HandleBuySubscriptionPackButtonClickedEvent(FName subscriptionPackID)
+{
+
 }
 
-UUMGSubscriptionsPageScrollWidget::UUMGSubscriptionsPageScrollWidget() {
+UUMGSubscriptionsPageScrollWidget::UUMGSubscriptionsPageScrollWidget()
+{
+	this->SubscriptionPackButtonClass = NULL;
 }
-

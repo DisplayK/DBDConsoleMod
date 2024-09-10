@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "UIComponent.generated.h"
 
-UCLASS(Abstract, meta=(BlueprintSpawnableComponent))
-class DBDUIPRESENTERS_API UUIComponent : public UActorComponent {
-    GENERATED_BODY()
+UCLASS(Abstract, DefaultToInstanced, EditInlineNew)
+class DBDUIPRESENTERS_API UUIComponent : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UUIComponent();
+	UUIComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUIComponent) { return 0; }

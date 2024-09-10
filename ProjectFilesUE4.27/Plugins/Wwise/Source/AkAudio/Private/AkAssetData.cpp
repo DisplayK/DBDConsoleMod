@@ -1,5 +1,6 @@
 #include "AkAssetData.h"
 
-UAkAssetData::UAkAssetData() {
+UAkAssetData::UAkAssetData()
+{
+	this->CachedHash = 0;
 }
-

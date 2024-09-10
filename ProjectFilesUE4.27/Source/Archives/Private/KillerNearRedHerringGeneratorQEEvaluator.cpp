@@ -1,5 +1,6 @@
 #include "KillerNearRedHerringGeneratorQEEvaluator.h"
 
-UKillerNearRedHerringGeneratorQEEvaluator::UKillerNearRedHerringGeneratorQEEvaluator() {
-}
+UKillerNearRedHerringGeneratorQEEvaluator::UKillerNearRedHerringGeneratorQEEvaluator()
+{
 
+}

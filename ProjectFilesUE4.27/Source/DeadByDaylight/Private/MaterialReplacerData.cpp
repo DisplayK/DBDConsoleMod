@@ -1,5 +1,7 @@
 #include "MaterialReplacerData.h"
 
-FMaterialReplacerData::FMaterialReplacerData() {
+FMaterialReplacerData::FMaterialReplacerData()
+{
+	this->From = NULL;
+	this->To = NULL;
 }
-

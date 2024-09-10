@@ -1,5 +1,5 @@
 #include "EditorCollectionMetadata.h"
 
-FEditorCollectionMetadata::FEditorCollectionMetadata() {
+FEditorCollectionMetadata::FEditorCollectionMetadata()
+{
 }
-

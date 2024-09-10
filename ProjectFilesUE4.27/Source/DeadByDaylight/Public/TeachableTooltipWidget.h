@@ -1,30 +1,33 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "BaseTooltipWidget.h"
 #include "TeachableTooltipWidget.generated.h"
 
-class UImage;
 class UTextBlock;
 class UUMGHtmlRichText;
+class UImage;
 
 UCLASS(Abstract, EditInlineNew)
-class UTeachableTooltipWidget : public UBaseTooltipWidget {
-    GENERATED_BODY()
-public:
+class UTeachableTooltipWidget : public UBaseTooltipWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* SubTitleLabel;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UImage* HeaderSmoke;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGHtmlRichText* EffectText;
-    
-    UPROPERTY(BlueprintReadOnly, Export)
-    UUMGHtmlRichText* AvailabilityText;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UTextBlock* SubTitleLabel;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UImage* HeaderSmoke;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGHtmlRichText* EffectText;
+
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UUMGHtmlRichText* AvailabilityText;
+
 public:
-    UTeachableTooltipWidget();
+	UTeachableTooltipWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UTeachableTooltipWidget) { return 0; }

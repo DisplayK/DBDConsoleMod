@@ -1,5 +1,6 @@
 #include "CoreItemWidget.h"
 
-UCoreItemWidget::UCoreItemWidget() {
-}
+UCoreItemWidget::UCoreItemWidget()
+{
 
+}

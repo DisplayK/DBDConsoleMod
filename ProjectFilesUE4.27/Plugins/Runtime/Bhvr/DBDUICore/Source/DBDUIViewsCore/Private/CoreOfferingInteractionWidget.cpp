@@ -1,5 +1,6 @@
 #include "CoreOfferingInteractionWidget.h"
 
-UCoreOfferingInteractionWidget::UCoreOfferingInteractionWidget() {
-}
+UCoreOfferingInteractionWidget::UCoreOfferingInteractionWidget()
+{
 
+}

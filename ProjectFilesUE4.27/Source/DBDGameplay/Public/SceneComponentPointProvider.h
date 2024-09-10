@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "PointsProvider.h"
 #include "Engine/EngineTypes.h"
@@ -7,17 +8,19 @@
 class USceneComponent;
 
 UCLASS(EditInlineNew)
-class DBDGAMEPLAY_API USceneComponentPointProvider : public UPointsProvider {
-    GENERATED_BODY()
-public:
+class DBDGAMEPLAY_API USceneComponentPointProvider : public UPointsProvider
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditAnywhere)
-    FComponentReference _sceneReference;
-    
-    UPROPERTY(Export, Transient)
-    USceneComponent* _sceneComponent;
-    
+	UPROPERTY(EditAnywhere)
+	FComponentReference _sceneReference;
+
+	UPROPERTY(Transient, Export)
+	USceneComponent* _sceneComponent;
+
 public:
-    USceneComponentPointProvider();
+	USceneComponentPointProvider();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USceneComponentPointProvider) { return 0; }

@@ -1,39 +1,45 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "PerkViewData.h"
-#include "EStatusEffectType.h"
-#include "EHudStatusEffectAlertViewType.h"
-#include "AddonViewData.h"
 #include "ItemViewData.h"
+#include "EStatusEffectType.h"
+#include "AddonViewData.h"
+#include "PerkViewData.h"
+#include "UObject/SoftObjectPtr.h"
+#include "EHudStatusEffectAlertViewType.h"
 #include "StatusEffectAlertViewData.generated.h"
 
 class UTexture2D;
 
 USTRUCT(BlueprintType)
-struct DBDUIVIEWINTERFACES_API FStatusEffectAlertViewData {
-    GENERATED_BODY()
+struct FStatusEffectAlertViewData
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FString StatusEffectName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient)
-    TSoftObjectPtr<UTexture2D> StatusEffectIcon;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EStatusEffectType StatusEffectType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EHudStatusEffectAlertViewType SourceViewType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FPerkViewData PerkViewData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FItemViewData ItemViewData;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FAddonViewData AddonViewData;
-    
-    FStatusEffectAlertViewData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FString StatusEffectName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Transient)
+	TSoftObjectPtr<UTexture2D> StatusEffectIcon;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EStatusEffectType StatusEffectType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EHudStatusEffectAlertViewType SourceViewType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FPerkViewData PerkViewData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FItemViewData ItemViewData;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FAddonViewData AddonViewData;
+
+public:
+	DBDUIVIEWINTERFACES_API FStatusEffectAlertViewData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FStatusEffectAlertViewData) { return 0; }

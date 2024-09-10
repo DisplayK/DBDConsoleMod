@@ -1,5 +1,6 @@
 #include "TileEventComponent.h"
 
-UTileEventComponent::UTileEventComponent() {
-}
+UTileEventComponent::UTileEventComponent()
+{
 
+}

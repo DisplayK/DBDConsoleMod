@@ -1,5 +1,6 @@
 #include "InteractionArray.h"
 
-FInteractionArray::FInteractionArray() {
+FInteractionArray::FInteractionArray()
+{
+	this->_interactions = TArray<TWeakObjectPtr<UInteractionDefinition>>();
 }
-

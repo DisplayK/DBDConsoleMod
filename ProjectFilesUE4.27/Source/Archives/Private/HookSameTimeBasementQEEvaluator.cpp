@@ -1,5 +1,6 @@
 #include "HookSameTimeBasementQEEvaluator.h"
 
-UHookSameTimeBasementQEEvaluator::UHookSameTimeBasementQEEvaluator() {
-}
+UHookSameTimeBasementQEEvaluator::UHookSameTimeBasementQEEvaluator()
+{
 
+}

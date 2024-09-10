@@ -2,9 +2,12 @@
 
 class ASlasherPlayer;
 
-void UK26CooldownInteractionDefinition::OnKillerSet(ASlasherPlayer* killer) {
+void UK26CooldownInteractionDefinition::OnKillerSet(ASlasherPlayer* killer)
+{
+
 }
 
-UK26CooldownInteractionDefinition::UK26CooldownInteractionDefinition() {
-}
+UK26CooldownInteractionDefinition::UK26CooldownInteractionDefinition()
+{
 
+}

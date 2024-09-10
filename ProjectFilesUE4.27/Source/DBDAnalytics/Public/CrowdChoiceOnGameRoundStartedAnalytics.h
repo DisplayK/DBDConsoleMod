@@ -1,18 +1,23 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UniquelyIdentifiedAnalytic.h"
 #include "CrowdChoiceOnGameRoundStartedAnalytics.generated.h"
 
 USTRUCT()
-struct FCrowdChoiceOnGameRoundStartedAnalytics : public FUniquelyIdentifiedAnalytic {
-    GENERATED_BODY()
+struct FCrowdChoiceOnGameRoundStartedAnalytics: public FUniquelyIdentifiedAnalytic
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    FString PollId;
-    
-    UPROPERTY()
-    FString MatchId;
-    
-    DBDANALYTICS_API FCrowdChoiceOnGameRoundStartedAnalytics();
+	UPROPERTY()
+	FString PollId;
+
+	UPROPERTY()
+	FString MatchId;
+
+public:
+	DBDANALYTICS_API FCrowdChoiceOnGameRoundStartedAnalytics();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCrowdChoiceOnGameRoundStartedAnalytics) { return 0; }

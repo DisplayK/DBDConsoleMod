@@ -1,5 +1,5 @@
 #include "AKWaapiJsonObject.h"
 
-FAKWaapiJsonObject::FAKWaapiJsonObject() {
+FAKWaapiJsonObject::FAKWaapiJsonObject()
+{
 }
-

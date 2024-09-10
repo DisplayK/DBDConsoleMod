@@ -1,7 +1,6 @@
 #include "KnifeRack.h"
 
+AKnifeRack::AKnifeRack()
+{
 
-
-AKnifeRack::AKnifeRack() {
 }
-

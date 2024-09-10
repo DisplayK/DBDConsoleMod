@@ -1,5 +1,6 @@
 #include "MeshCloningFactory.h"
 
-UMeshCloningFactory::UMeshCloningFactory() {
-}
+UMeshCloningFactory::UMeshCloningFactory()
+{
 
+}

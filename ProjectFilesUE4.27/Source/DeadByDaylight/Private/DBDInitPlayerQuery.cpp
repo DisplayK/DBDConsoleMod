@@ -1,5 +1,6 @@
 #include "DBDInitPlayerQuery.h"
 
-UDBDInitPlayerQuery::UDBDInitPlayerQuery() {
-}
+UDBDInitPlayerQuery::UDBDInitPlayerQuery()
+{
 
+}

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DBDTunableRowHandle.h"
 #include "UObject/NoExportTypes.h"
@@ -7,33 +8,37 @@
 class UStaticMesh;
 
 USTRUCT(BlueprintType)
-struct FK26ProjectileStateDetails {
-    GENERATED_BODY()
+struct FK26ProjectileStateDetails
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FDBDTunableRowHandle VisualScaleX;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FDBDTunableRowHandle VisualScaleY;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FDBDTunableRowHandle VisualScaleZ;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FDBDTunableRowHandle HitboxScaleX;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FDBDTunableRowHandle HitboxScaleY;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FDBDTunableRowHandle HitboxScaleZ;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UStaticMesh* HitBoxStaticMesh;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    FLinearColor DebugColor;
-    
-    THEK26_API FK26ProjectileStateDetails();
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FDBDTunableRowHandle VisualScaleX;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FDBDTunableRowHandle VisualScaleY;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FDBDTunableRowHandle VisualScaleZ;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FDBDTunableRowHandle HitboxScaleX;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FDBDTunableRowHandle HitboxScaleY;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FDBDTunableRowHandle HitboxScaleZ;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UStaticMesh* HitBoxStaticMesh;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FLinearColor DebugColor;
+
+public:
+	THEK26_API FK26ProjectileStateDetails();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FK26ProjectileStateDetails) { return 0; }

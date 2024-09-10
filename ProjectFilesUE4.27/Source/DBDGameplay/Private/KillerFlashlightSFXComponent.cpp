@@ -1,5 +1,6 @@
 #include "KillerFlashlightSFXComponent.h"
 
-UKillerFlashlightSFXComponent::UKillerFlashlightSFXComponent() {
+UKillerFlashlightSFXComponent::UKillerFlashlightSFXComponent()
+{
+	this->_flashlightTargets = TArray<UFlashlightTargetFXComponent*>();
 }
-

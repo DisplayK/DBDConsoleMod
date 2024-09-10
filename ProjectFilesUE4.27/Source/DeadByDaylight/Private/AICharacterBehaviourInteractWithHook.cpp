@@ -1,5 +1,6 @@
 #include "AICharacterBehaviourInteractWithHook.h"
 
-UAICharacterBehaviourInteractWithHook::UAICharacterBehaviourInteractWithHook() {
+UAICharacterBehaviourInteractWithHook::UAICharacterBehaviourInteractWithHook()
+{
+	this->_targetHook = NULL;
 }
-

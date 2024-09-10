@@ -1,18 +1,25 @@
 #include "AkSurfaceReflectorSetComponent.h"
 
-void UAkSurfaceReflectorSetComponent::UpdateSurfaceReflectorSet() {
+void UAkSurfaceReflectorSetComponent::UpdateSurfaceReflectorSet()
+{
+
 }
 
-void UAkSurfaceReflectorSetComponent::SendSurfaceReflectorSet() {
+void UAkSurfaceReflectorSetComponent::SendSurfaceReflectorSet()
+{
+
 }
 
-void UAkSurfaceReflectorSetComponent::RemoveSurfaceReflectorSet() {
+void UAkSurfaceReflectorSetComponent::RemoveSurfaceReflectorSet()
+{
+
 }
 
-UAkSurfaceReflectorSetComponent::UAkSurfaceReflectorSetComponent() {
-    this->bEnableSurfaceReflectors = true;
-    this->bEnableDiffraction = false;
-    this->bEnableDiffractionOnBoundaryEdges = false;
-    this->AssociatedRoom = NULL;
+UAkSurfaceReflectorSetComponent::UAkSurfaceReflectorSetComponent()
+{
+	this->bEnableSurfaceReflectors = true;
+	this->AcousticPolys = TArray<FAkSurfacePoly>();
+	this->bEnableDiffraction = true;
+	this->bEnableDiffractionOnBoundaryEdges = false;
+	this->AssociatedRoom = NULL;
 }
-

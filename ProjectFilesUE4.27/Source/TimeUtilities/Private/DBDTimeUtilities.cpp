@@ -1,5 +1,6 @@
 #include "DBDTimeUtilities.h"
 
-UDBDTimeUtilities::UDBDTimeUtilities() {
-}
+UDBDTimeUtilities::UDBDTimeUtilities()
+{
 
+}

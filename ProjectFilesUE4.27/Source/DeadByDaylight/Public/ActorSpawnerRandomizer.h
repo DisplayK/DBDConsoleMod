@@ -1,21 +1,24 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ObjectRandomizer.h"
 #include "SpawnerElement.h"
 #include "ActorSpawnerRandomizer.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UActorSpawnerRandomizer : public UObjectRandomizer {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UActorSpawnerRandomizer : public UObjectRandomizer
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<FSpawnerElement> ActivatedSpawnerContentLists;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    TArray<FSpawnerElement> DeactivatedSpawnerContentLists;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<FSpawnerElement> ActivatedSpawnerContentLists;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TArray<FSpawnerElement> DeactivatedSpawnerContentLists;
+
 public:
-    UActorSpawnerRandomizer();
+	UActorSpawnerRandomizer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UActorSpawnerRandomizer) { return 0; }

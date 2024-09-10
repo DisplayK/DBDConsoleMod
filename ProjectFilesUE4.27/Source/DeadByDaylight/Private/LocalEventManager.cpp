@@ -1,5 +1,6 @@
 #include "LocalEventManager.h"
 
-ULocalEventManager::ULocalEventManager() {
-}
+ULocalEventManager::ULocalEventManager()
+{
 
+}

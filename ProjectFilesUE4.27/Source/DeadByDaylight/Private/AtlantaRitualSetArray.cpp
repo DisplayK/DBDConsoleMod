@@ -1,5 +1,6 @@
 #include "AtlantaRitualSetArray.h"
 
-FAtlantaRitualSetArray::FAtlantaRitualSetArray() {
+FAtlantaRitualSetArray::FAtlantaRitualSetArray()
+{
+	this->rituals = TArray<FAtlantaRitualSet>();
 }
-

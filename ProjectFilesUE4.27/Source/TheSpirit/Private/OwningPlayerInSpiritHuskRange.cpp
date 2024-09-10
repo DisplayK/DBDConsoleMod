@@ -2,9 +2,12 @@
 
 class ASlasherPlayer;
 
-void UOwningPlayerInSpiritHuskRange::OnKillerSet(ASlasherPlayer* killer) {
+void UOwningPlayerInSpiritHuskRange::OnKillerSet(ASlasherPlayer* killer)
+{
+
 }
 
-UOwningPlayerInSpiritHuskRange::UOwningPlayerInSpiritHuskRange() {
-}
+UOwningPlayerInSpiritHuskRange::UOwningPlayerInSpiritHuskRange()
+{
 
+}

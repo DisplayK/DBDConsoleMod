@@ -1,5 +1,6 @@
 #include "SecondHookStageReachedQEEvaluator.h"
 
-USecondHookStageReachedQEEvaluator::USecondHookStageReachedQEEvaluator() {
-}
+USecondHookStageReachedQEEvaluator::USecondHookStageReachedQEEvaluator()
+{
 
+}

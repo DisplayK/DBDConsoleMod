@@ -1,12 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "OutOfOrderEnum.generated.h"
 
-UENUM()
-enum class OutOfOrderEnum {
-    Value1 = 0x2,
-    Value2 = 0x0,
-    Value3,
-    OutOfOrderEnum_MAX = 0x3,
+UENUM(BlueprintType)
+enum class OutOfOrderEnum : uint8
+{
+	Value1 = 2,
+	Value2 = 0,
+	Value3,
 };
-

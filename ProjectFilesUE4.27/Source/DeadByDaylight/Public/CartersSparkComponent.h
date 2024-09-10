@@ -1,57 +1,65 @@
 #pragma once
+
 #include "CoreMinimal.h"
+#include "DBDTunableRowHandle.h"
 #include "Components/ActorComponent.h"
 #include "CartersSparkComponent.generated.h"
 
-class ADBDPlayer;
 class UInteractionDefinition;
+class ADBDPlayer;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class DEADBYDAYLIGHT_API UCartersSparkComponent : public UActorComponent {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UCartersSparkComponent : public UActorComponent
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool _staticBlastEnabled;
-    
-    UPROPERTY(Transient)
-    TArray<ADBDPlayer*> _totallyInsanePlayers;
-    
-    UPROPERTY(Transient)
-    ADBDPlayer* _owningPlayer;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+	bool _staticBlastEnabled;
+
+	UPROPERTY(Transient)
+	TArray<ADBDPlayer*> _totallyInsanePlayers;
+
+	UPROPERTY(Transient)
+	ADBDPlayer* _owningPlayer;
+
+	UPROPERTY(EditDefaultsOnly)
+	FDBDTunableRowHandle _maxMadnessTier;
+
 public:
-    UCartersSparkComponent();
-    UFUNCTION(BlueprintCallable)
-    void TriggerStaticBlastCooldown();
-    
-    UFUNCTION(BlueprintCallable)
-    void TriggerShockTherapyCooldown();
-    
+	UFUNCTION(BlueprintCallable)
+	void TriggerStaticBlastCooldown();
+
+	UFUNCTION(BlueprintCallable)
+	void TriggerShockTherapyCooldown();
+
 private:
-    UFUNCTION()
-    void OnRequestAndBeginInteraction(UInteractionDefinition* interaction);
-    
+	UFUNCTION()
+	void OnRequestAndBeginInteraction(UInteractionDefinition* interaction);
+
 public:
-    UFUNCTION(NetMulticast, Reliable, WithValidation)
-    void Multicast_OnShockTherapyCooldownCheatEntered();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsStaticBlastOnCooldown() const;
-    
-    UFUNCTION(BlueprintPure)
-    bool IsShockTherapyOnCooldown() const;
-    
-    UFUNCTION(BlueprintPure)
-    float GetStaticBlastCooldownPercentElapsed() const;
-    
+	UFUNCTION(NetMulticast, Reliable, WithValidation)
+	void Multicast_OnShockTherapyCooldownCheatEntered();
+
+	UFUNCTION(BlueprintPure)
+	bool IsStaticBlastOnCooldown() const;
+
+	UFUNCTION(BlueprintPure)
+	bool IsShockTherapyOnCooldown() const;
+
+	UFUNCTION(BlueprintPure)
+	float GetStaticBlastCooldownPercentElapsed() const;
+
 private:
-    UFUNCTION()
-    void Authority_RegisterToGameEvents();
-    
+	UFUNCTION()
+	void Authority_RegisterToGameEvents();
+
 public:
-    UFUNCTION(BlueprintCallable)
-    void Authority_AddTotallyInsaneSurvivor(ADBDPlayer* insaneSurvivor);
-    
+	UFUNCTION(BlueprintCallable)
+	void Authority_AddTotallyInsaneSurvivor(ADBDPlayer* insaneSurvivor);
+
+public:
+	UCartersSparkComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UCartersSparkComponent) { return 0; }

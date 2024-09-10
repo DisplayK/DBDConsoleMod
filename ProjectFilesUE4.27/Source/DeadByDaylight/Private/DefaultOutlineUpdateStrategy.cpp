@@ -1,5 +1,6 @@
 #include "DefaultOutlineUpdateStrategy.h"
 
-UDefaultOutlineUpdateStrategy::UDefaultOutlineUpdateStrategy() {
-}
+UDefaultOutlineUpdateStrategy::UDefaultOutlineUpdateStrategy()
+{
 
+}

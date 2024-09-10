@@ -1,5 +1,6 @@
 #include "BaseReversibleInstantActionHandler.h"
 
-UBaseReversibleInstantActionHandler::UBaseReversibleInstantActionHandler() {
-}
+UBaseReversibleInstantActionHandler::UBaseReversibleInstantActionHandler()
+{
 
+}

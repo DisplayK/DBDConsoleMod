@@ -1,5 +1,6 @@
 #include "MoveActorToComponent.h"
 
-UMoveActorToComponent::UMoveActorToComponent() {
-}
+UMoveActorToComponent::UMoveActorToComponent()
+{
 
+}

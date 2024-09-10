@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
 #include "SpiritHuskAnimInstance.generated.h"
@@ -6,14 +7,16 @@
 class USkeletalMeshComponent;
 
 UCLASS(NonTransient)
-class USpiritHuskAnimInstance : public UAnimInstance {
-    GENERATED_BODY()
-public:
+class USpiritHuskAnimInstance : public UAnimInstance
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, Transient)
-    USkeletalMeshComponent* _killerMesh;
-    
+	UPROPERTY(BlueprintReadOnly, Transient, meta=(BindWidgetOptional))
+	USkeletalMeshComponent* _killerMesh;
+
 public:
-    USpiritHuskAnimInstance();
+	USpiritHuskAnimInstance();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USpiritHuskAnimInstance) { return 0; }

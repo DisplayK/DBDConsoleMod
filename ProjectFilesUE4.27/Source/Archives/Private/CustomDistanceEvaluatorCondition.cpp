@@ -1,5 +1,6 @@
 #include "CustomDistanceEvaluatorCondition.h"
 
-UCustomDistanceEvaluatorCondition::UCustomDistanceEvaluatorCondition() {
-}
+UCustomDistanceEvaluatorCondition::UCustomDistanceEvaluatorCondition()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "AkTVOSInitializationSettings.h"
 
-UAkTVOSInitializationSettings::UAkTVOSInitializationSettings() {
-}
+UAkTVOSInitializationSettings::UAkTVOSInitializationSettings()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "IdentityValidation.h"
 
-UIdentityValidation::UIdentityValidation() {
-}
+UIdentityValidation::UIdentityValidation()
+{
 
+}

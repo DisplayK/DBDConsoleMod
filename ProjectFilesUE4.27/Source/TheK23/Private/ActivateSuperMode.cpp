@@ -1,5 +1,6 @@
 #include "ActivateSuperMode.h"
 
-UActivateSuperMode::UActivateSuperMode() {
-}
+UActivateSuperMode::UActivateSuperMode()
+{
 
+}

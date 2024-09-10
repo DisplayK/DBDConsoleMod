@@ -1,12 +1,16 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "WalletHandler.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API UWalletHandler : public UObject {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UWalletHandler : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UWalletHandler();
+	UWalletHandler();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UWalletHandler) { return 0; }

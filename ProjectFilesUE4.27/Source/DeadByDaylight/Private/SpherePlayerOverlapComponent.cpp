@@ -1,5 +1,6 @@
 #include "SpherePlayerOverlapComponent.h"
 
-USpherePlayerOverlapComponent::USpherePlayerOverlapComponent() {
-}
+USpherePlayerOverlapComponent::USpherePlayerOverlapComponent()
+{
 
+}

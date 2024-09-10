@@ -1,15 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "AtlantaTooltipUtilities.generated.h"
 
 UCLASS(BlueprintType)
-class UAtlantaTooltipUtilities : public UObject {
-    GENERATED_BODY()
+class UAtlantaTooltipUtilities : public UObject
+{
+	GENERATED_BODY()
+
 public:
-    UAtlantaTooltipUtilities();
-    UFUNCTION(BlueprintCallable)
-    static bool TryCloseActiveTooltip();
-    
+	UFUNCTION(BlueprintCallable)
+	static bool TryCloseActiveTooltip();
+
+public:
+	UAtlantaTooltipUtilities();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAtlantaTooltipUtilities) { return 0; }

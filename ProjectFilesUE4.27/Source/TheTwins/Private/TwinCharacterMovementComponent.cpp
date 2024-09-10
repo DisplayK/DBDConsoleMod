@@ -1,5 +1,6 @@
 #include "TwinCharacterMovementComponent.h"
 
-UTwinCharacterMovementComponent::UTwinCharacterMovementComponent() {
-}
+UTwinCharacterMovementComponent::UTwinCharacterMovementComponent()
+{
 
+}

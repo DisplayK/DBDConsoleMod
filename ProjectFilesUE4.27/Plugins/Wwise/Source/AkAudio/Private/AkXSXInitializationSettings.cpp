@@ -1,8 +1,11 @@
 #include "AkXSXInitializationSettings.h"
 
-void UAkXSXInitializationSettings::MigrateMultiCoreRendering(bool NewValue) {
+void UAkXSXInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
+{
+
 }
 
-UAkXSXInitializationSettings::UAkXSXInitializationSettings() {
-}
+UAkXSXInitializationSettings::UAkXSXInitializationSettings()
+{
 
+}

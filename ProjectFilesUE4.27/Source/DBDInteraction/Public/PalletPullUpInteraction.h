@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ChargeableInteractionDefinition.h"
 #include "EPalletSide.h"
@@ -7,17 +8,20 @@
 class APallet;
 
 UCLASS(Abstract, EditInlineNew, meta=(BlueprintSpawnableComponent))
-class DBDINTERACTION_API UPalletPullUpInteraction : public UChargeableInteractionDefinition {
-    GENERATED_BODY()
+class DBDINTERACTION_API UPalletPullUpInteraction : public UChargeableInteractionDefinition
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    EPalletSide _side;
-    
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	EPalletSide _side;
+
 private:
-    UPROPERTY(Transient)
-    APallet* _owningPallet;
-    
+	UPROPERTY(Transient)
+	APallet* _owningPallet;
+
 public:
-    UPalletPullUpInteraction();
+	UPalletPullUpInteraction();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPalletPullUpInteraction) { return 0; }

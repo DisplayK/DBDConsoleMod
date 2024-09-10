@@ -1,8 +1,11 @@
 #include "CharacterInfoScreen.h"
 
-void UCharacterInfoScreen::OnBackButtonClick() {
+void UCharacterInfoScreen::OnBackButtonClick()
+{
+
 }
 
-UCharacterInfoScreen::UCharacterInfoScreen() {
-}
+UCharacterInfoScreen::UCharacterInfoScreen()
+{
 
+}

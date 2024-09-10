@@ -1,22 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "SettingsSubCategory.generated.h"
 
 UENUM()
-enum class SettingsSubCategory {
-    None = -0x1,
-    Language,
-    Tutorial,
-    Subtitles,
-    Privacy,
-    Online,
-    Graphics,
-    UIHud,
-    Audio,
-    CommonControls,
-    SurvivorControls,
-    KillerControls,
-    ColorBlindMode,
-    Atlanta,
+enum class SettingsSubCategory : int64
+{
+	None = -1,
+	Language,
+	Tutorial,
+	Privacy,
+	Accessibility,
+	InGameText,
+	ColorBlindMode,
+	MotionSickness,
+	Social,
+	GameplayPrivacy,
+	Graphics,
+	UIHud,
+	Audio,
+	CommonControls,
+	SurvivorControls,
+	KillerControls,
+	Atlanta,
 };
-

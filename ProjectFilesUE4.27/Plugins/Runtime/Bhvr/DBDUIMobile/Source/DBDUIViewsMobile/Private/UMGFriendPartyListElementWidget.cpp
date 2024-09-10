@@ -1,11 +1,13 @@
 #include "UMGFriendPartyListElementWidget.h"
 
-void UUMGFriendPartyListElementWidget::HandleCancelInviteButtonClicked() {
+void UUMGFriendPartyListElementWidget::HandleCancelInviteButtonClicked()
+{
+
 }
 
-UUMGFriendPartyListElementWidget::UUMGFriendPartyListElementWidget() {
-    this->ButtonOrStatusSwitcher = NULL;
-    this->CancelInviteButton = NULL;
-    this->PartyStatusImage = NULL;
+UUMGFriendPartyListElementWidget::UUMGFriendPartyListElementWidget()
+{
+	this->ButtonOrStatusSwitcher = NULL;
+	this->CancelInviteButton = NULL;
+	this->PartyStatusImage = NULL;
 }
-

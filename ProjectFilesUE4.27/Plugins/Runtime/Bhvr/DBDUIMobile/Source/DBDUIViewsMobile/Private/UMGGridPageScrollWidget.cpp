@@ -1,5 +1,6 @@
 #include "UMGGridPageScrollWidget.h"
 
-UUMGGridPageScrollWidget::UUMGGridPageScrollWidget() {
-}
+UUMGGridPageScrollWidget::UUMGGridPageScrollWidget()
+{
 
+}

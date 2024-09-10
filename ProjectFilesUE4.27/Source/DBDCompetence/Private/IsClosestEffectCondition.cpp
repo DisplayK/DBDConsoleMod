@@ -1,5 +1,6 @@
 #include "IsClosestEffectCondition.h"
 
-UIsClosestEffectCondition::UIsClosestEffectCondition() {
-}
+UIsClosestEffectCondition::UIsClosestEffectCondition()
+{
 
+}

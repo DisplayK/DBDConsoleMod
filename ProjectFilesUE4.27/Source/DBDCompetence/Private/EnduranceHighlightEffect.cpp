@@ -1,5 +1,6 @@
 #include "EnduranceHighlightEffect.h"
 
-UEnduranceHighlightEffect::UEnduranceHighlightEffect() {
-}
+UEnduranceHighlightEffect::UEnduranceHighlightEffect()
+{
 
+}

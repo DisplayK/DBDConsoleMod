@@ -1,14 +1,19 @@
 #include "UMGInventoryItemButton.h"
 
-class ACollectable;
 class UProgressBar;
+class ACollectable;
 
-void UUMGInventoryItemButton::UpdateItemButtonProgressBar(ACollectable* item, UProgressBar* itemProgressBar) {
+void UUMGInventoryItemButton::UpdateItemButtonProgressBar(ACollectable* item, UProgressBar* itemProgressBar)
+{
+
 }
 
-void UUMGInventoryItemButton::UpdateItemButton(ACollectable* item) {
+void UUMGInventoryItemButton::UpdateItemButton(ACollectable* item)
+{
+
 }
 
-UUMGInventoryItemButton::UUMGInventoryItemButton() {
-}
+UUMGInventoryItemButton::UUMGInventoryItemButton()
+{
 
+}

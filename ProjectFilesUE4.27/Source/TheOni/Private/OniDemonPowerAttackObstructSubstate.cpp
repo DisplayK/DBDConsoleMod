@@ -1,5 +1,6 @@
 #include "OniDemonPowerAttackObstructSubstate.h"
 
-UOniDemonPowerAttackObstructSubstate::UOniDemonPowerAttackObstructSubstate() {
-}
+UOniDemonPowerAttackObstructSubstate::UOniDemonPowerAttackObstructSubstate()
+{
 
+}

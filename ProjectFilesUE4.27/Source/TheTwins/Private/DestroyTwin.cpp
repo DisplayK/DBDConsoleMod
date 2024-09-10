@@ -1,5 +1,6 @@
 #include "DestroyTwin.h"
 
-UDestroyTwin::UDestroyTwin() {
-}
+UDestroyTwin::UDestroyTwin()
+{
 
+}

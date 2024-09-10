@@ -1,15 +1,20 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ShopTransactionVirtualCurrencyParameters.h"
 #include "ShopTransactionVirtualCurrency.generated.h"
 
-USTRUCT(BlueprintType)
-struct FShopTransactionVirtualCurrency {
-    GENERATED_BODY()
+USTRUCT()
+struct FShopTransactionVirtualCurrency
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY()
-    FShopTransactionVirtualCurrencyParameters virtualCurrency;
-    
-    DEADBYDAYLIGHT_API FShopTransactionVirtualCurrency();
+	UPROPERTY()
+	FShopTransactionVirtualCurrencyParameters virtualCurrency;
+
+public:
+	DEADBYDAYLIGHT_API FShopTransactionVirtualCurrency();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FShopTransactionVirtualCurrency) { return 0; }

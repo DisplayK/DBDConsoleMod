@@ -1,5 +1,6 @@
 #include "UMGMonthlyPassFreeTicketWidget.h"
 
-UUMGMonthlyPassFreeTicketWidget::UUMGMonthlyPassFreeTicketWidget() {
-}
+UUMGMonthlyPassFreeTicketWidget::UUMGMonthlyPassFreeTicketWidget()
+{
 
+}

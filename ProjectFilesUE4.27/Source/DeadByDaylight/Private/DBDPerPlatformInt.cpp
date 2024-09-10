@@ -1,5 +1,6 @@
 #include "DBDPerPlatformInt.h"
 
-FDBDPerPlatformInt::FDBDPerPlatformInt() {
+FDBDPerPlatformInt::FDBDPerPlatformInt()
+{
+	this->Value = FPerPlatformInt{};
 }
-

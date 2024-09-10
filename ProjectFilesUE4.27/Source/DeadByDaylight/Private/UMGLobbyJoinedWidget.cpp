@@ -1,22 +1,16 @@
 #include "UMGLobbyJoinedWidget.h"
 
+void UUMGLobbyJoinedWidget::HandleLeaveButtonClicked()
+{
 
-
-
-
-
-
-
-void UUMGLobbyJoinedWidget::HandleLeaveButtonClicked() {
 }
 
-
-UUMGLobbyJoinedWidget::UUMGLobbyJoinedWidget() {
-    this->LocalPlayerIsSlasher = false;
-    this->TextLeaveLobby = FText::FromString(TEXT("LEAVE LOBBY"));
-    this->TextPlayerNotReadyYet = FText::FromString(TEXT("NOT READY YET"));
-    this->TextWaitingPlayers = FText::FromString(TEXT("WAITING FOR PLAYERS"));
-    this->TextToBeReady = FText::FromString(TEXT("TO BE READY"));
-    this->CommandButtonsContainer = NULL;
+UUMGLobbyJoinedWidget::UUMGLobbyJoinedWidget()
+{
+	this->LocalPlayerIsSlasher = false;
+	this->TextLeaveLobby = FText::GetEmpty();
+	this->TextPlayerNotReadyYet = FText::GetEmpty();
+	this->TextWaitingPlayers = FText::GetEmpty();
+	this->TextToBeReady = FText::GetEmpty();
+	this->CommandButtonsContainer = NULL;
 }
-

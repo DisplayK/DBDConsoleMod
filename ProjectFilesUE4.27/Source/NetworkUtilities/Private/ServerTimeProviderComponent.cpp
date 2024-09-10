@@ -1,5 +1,6 @@
 #include "ServerTimeProviderComponent.h"
 
-UServerTimeProviderComponent::UServerTimeProviderComponent() {
-}
+UServerTimeProviderComponent::UServerTimeProviderComponent()
+{
 
+}

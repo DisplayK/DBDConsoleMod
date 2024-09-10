@@ -1,5 +1,6 @@
 #include "AkObservedPlayerSoundLoop.h"
 
-FAkObservedPlayerSoundLoop::FAkObservedPlayerSoundLoop() {
+FAkObservedPlayerSoundLoop::FAkObservedPlayerSoundLoop()
+{
+	this->_perspectiveComponent = NULL;
 }
-

@@ -1,5 +1,6 @@
 #include "SwitchProfileDAL.h"
 
-USwitchProfileDAL::USwitchProfileDAL() {
-}
+USwitchProfileDAL::USwitchProfileDAL()
+{
 
+}

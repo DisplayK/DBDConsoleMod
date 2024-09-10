@@ -1,5 +1,8 @@
 #include "ShopTransactionCurrencyCustomData.h"
 
-FShopTransactionCurrencyCustomData::FShopTransactionCurrencyCustomData() {
+FShopTransactionCurrencyCustomData::FShopTransactionCurrencyCustomData()
+{
+	this->productsReceived = FShopTransactionCurrencyProducts{};
+	this->transactionName = TEXT("");
+	this->transactionType = TEXT("");
 }
-

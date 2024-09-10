@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "PerkSoundHudWidget.generated.h"
@@ -6,14 +7,16 @@
 class UHorizontalBox;
 
 UCLASS(Abstract, EditInlineNew)
-class UPerkSoundHudWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UPerkSoundHudWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UHorizontalBox* PerkIcons;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UHorizontalBox* PerkIcons;
+
 public:
-    UPerkSoundHudWidget();
+	UPerkSoundHudWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPerkSoundHudWidget) { return 0; }

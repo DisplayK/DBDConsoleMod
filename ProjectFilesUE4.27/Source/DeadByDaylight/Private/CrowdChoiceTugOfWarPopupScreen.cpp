@@ -1,5 +1,6 @@
 #include "CrowdChoiceTugOfWarPopupScreen.h"
 
-UCrowdChoiceTugOfWarPopupScreen::UCrowdChoiceTugOfWarPopupScreen() {
-}
+UCrowdChoiceTugOfWarPopupScreen::UCrowdChoiceTugOfWarPopupScreen()
+{
 
+}

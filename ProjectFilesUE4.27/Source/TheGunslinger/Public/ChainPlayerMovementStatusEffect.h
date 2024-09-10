@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "StatusEffect.h"
 #include "DBDTunableRowHandle.h"
@@ -7,24 +8,26 @@
 class ARifleChain;
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class UChainPlayerMovementStatusEffect : public UStatusEffect {
-    GENERATED_BODY()
-public:
+class UChainPlayerMovementStatusEffect : public UStatusEffect
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditAnywhere)
-    FDBDTunableRowHandle _baseMovementSpeedMultiplier;
-    
-    UPROPERTY(EditAnywhere)
-    FDBDTunableRowHandle _collisionMovementSpeedMultiplier;
-    
-    UPROPERTY(Transient)
-    ARifleChain* _chain;
-    
-public:
-    UChainPlayerMovementStatusEffect();
+	UPROPERTY(EditAnywhere)
+	FDBDTunableRowHandle _baseMovementSpeedMultiplier;
+
+	UPROPERTY(EditAnywhere)
+	FDBDTunableRowHandle _collisionMovementSpeedMultiplier;
+
+	UPROPERTY(Transient)
+	ARifleChain* _chain;
+
 private:
-    UFUNCTION()
-    void OnIsChainCollidingChanged(bool isColliding);
-    
+	UFUNCTION()
+	void OnIsChainCollidingChanged(bool isColliding);
+
+public:
+	UChainPlayerMovementStatusEffect();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UChainPlayerMovementStatusEffect) { return 0; }

@@ -1,5 +1,6 @@
 #include "AxisFlick.h"
 
-UAxisFlick::UAxisFlick() {
-}
+UAxisFlick::UAxisFlick()
+{
 
+}

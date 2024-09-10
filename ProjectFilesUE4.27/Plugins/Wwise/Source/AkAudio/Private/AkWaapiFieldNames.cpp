@@ -1,5 +1,6 @@
 #include "AkWaapiFieldNames.h"
 
-FAkWaapiFieldNames::FAkWaapiFieldNames() {
+FAkWaapiFieldNames::FAkWaapiFieldNames()
+{
+	this->FieldName = TEXT("");
 }
-

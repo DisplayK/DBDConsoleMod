@@ -1,5 +1,6 @@
 #include "ChainKillerMovementStatusEffect.h"
 
-UChainKillerMovementStatusEffect::UChainKillerMovementStatusEffect() {
-}
+UChainKillerMovementStatusEffect::UChainKillerMovementStatusEffect()
+{
 
+}

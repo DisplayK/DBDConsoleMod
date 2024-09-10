@@ -1,5 +1,6 @@
 #include "ItemAddonDataAsset.h"
 
-UItemAddonDataAsset::UItemAddonDataAsset() {
-}
+UItemAddonDataAsset::UItemAddonDataAsset()
+{
 
+}

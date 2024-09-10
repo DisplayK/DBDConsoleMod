@@ -1,24 +1,30 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
-#include "AkCommonInitializationSettings.h"
+#include "AkPlatformInitialisationSettingsBase.h"
+#include "UObject/NoExportTypes.h"
 #include "AkCommunicationSettingsWithSystemInitialization.h"
+#include "AkCommonInitializationSettings.h"
 #include "AkPS5AdvancedInitializationSettings.h"
 #include "AkPS5InitializationSettings.generated.h"
 
-UCLASS(DefaultConfig, Config=Game)
-class AKAUDIO_API UAkPS5InitializationSettings : public UObject {
-    GENERATED_BODY()
+UCLASS()
+class AKAUDIO_API UAkPS5InitializationSettings : public UObject, public IAkPlatformInitialisationSettingsBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommonInitializationSettings CommonSettings;
-    
-    UPROPERTY(Config, EditAnywhere)
-    FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
-    
-    UPROPERTY(AdvancedDisplay, Config, EditAnywhere)
-    FAkPS5AdvancedInitializationSettings AdvancedSettings;
-    
-    UAkPS5InitializationSettings();
+	UPROPERTY(EditAnywhere)
+	FAkCommonInitializationSettings CommonSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;
+
+	UPROPERTY(EditAnywhere)
+	FAkPS5AdvancedInitializationSettings AdvancedSettings;
+
+public:
+	UAkPS5InitializationSettings();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAkPS5InitializationSettings) { return 0; }

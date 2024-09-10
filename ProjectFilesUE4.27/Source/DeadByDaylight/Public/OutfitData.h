@@ -1,38 +1,46 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDTableRowBase.h"
 #include "ItemUIData.h"
+#include "DBDTableRowBase.h"
 #include "ItemAvailability.h"
 #include "OutfitData.generated.h"
 
-USTRUCT()
-struct DEADBYDAYLIGHT_API FOutfitData : public FDBDTableRowBase {
-    GENERATED_BODY()
+USTRUCT(BlueprintType)
+struct FOutfitData: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditAnywhere)
-    FName ID;
-    
-    UPROPERTY(EditAnywhere)
-    FItemUIData UIData;
-    
-    UPROPERTY(EditAnywhere)
-    FItemAvailability Availability;
-    
-    UPROPERTY(EditAnywhere)
-    TArray<FName> OutfitItems;
-    
-    UPROPERTY(EditAnywhere)
-    FText CollectionName;
-    
-    UPROPERTY(EditAnywhere)
-    FText CollectionDescription;
-    
-    UPROPERTY(EditAnywhere)
-    FString InclusionVersion;
-    
-    UPROPERTY(EditAnywhere)
-    bool IsAvailableInAtlantaBuild;
-    
-    FOutfitData();
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FName ID;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FItemUIData UIData;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FItemAvailability Availability;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TArray<FName> OutfitItems;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FText CollectionName;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FText CollectionDescription;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FString InclusionVersion;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	bool IsAvailableInAtlantaBuild;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	FName CustomizedAudioStateCollection;
+
+public:
+	DEADBYDAYLIGHT_API FOutfitData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FOutfitData) { return 0; }

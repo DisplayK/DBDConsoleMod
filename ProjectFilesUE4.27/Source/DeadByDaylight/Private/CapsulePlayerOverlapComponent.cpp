@@ -1,5 +1,6 @@
 #include "CapsulePlayerOverlapComponent.h"
 
-UCapsulePlayerOverlapComponent::UCapsulePlayerOverlapComponent() {
-}
+UCapsulePlayerOverlapComponent::UCapsulePlayerOverlapComponent()
+{
 
+}

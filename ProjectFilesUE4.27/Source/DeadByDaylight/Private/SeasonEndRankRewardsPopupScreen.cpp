@@ -1,5 +1,6 @@
 #include "SeasonEndRankRewardsPopupScreen.h"
 
-USeasonEndRankRewardsPopupScreen::USeasonEndRankRewardsPopupScreen() {
-}
+USeasonEndRankRewardsPopupScreen::USeasonEndRankRewardsPopupScreen()
+{
 
+}

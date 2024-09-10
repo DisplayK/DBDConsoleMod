@@ -1,6 +1,7 @@
 #include "BlinkParams.h"
 
-FBlinkParams::FBlinkParams() {
-    this->Duration = 0.00f;
+FBlinkParams::FBlinkParams()
+{
+	this->TargetTransform = FTransform{};
+	this->Duration = 0.0f;
 }
-

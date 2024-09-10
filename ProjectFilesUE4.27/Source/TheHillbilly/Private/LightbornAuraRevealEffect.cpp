@@ -1,5 +1,6 @@
 #include "LightbornAuraRevealEffect.h"
 
-ULightbornAuraRevealEffect::ULightbornAuraRevealEffect() {
-}
+ULightbornAuraRevealEffect::ULightbornAuraRevealEffect()
+{
 
+}

@@ -2,12 +2,17 @@
 
 class USceneComponent;
 
-void UMoveComponentToComponent::Stop() {
+void UMoveComponentToComponent::Stop()
+{
+
 }
 
-void UMoveComponentToComponent::Start(USceneComponent* componentToMove, const USceneComponent* target, const float duration) {
+void UMoveComponentToComponent::Start(USceneComponent* componentToMove, const USceneComponent* target, const float duration)
+{
+
 }
 
-UMoveComponentToComponent::UMoveComponentToComponent() {
-}
+UMoveComponentToComponent::UMoveComponentToComponent()
+{
 
+}

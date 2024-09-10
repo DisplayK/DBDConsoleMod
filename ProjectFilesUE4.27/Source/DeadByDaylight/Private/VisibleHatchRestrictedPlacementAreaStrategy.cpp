@@ -1,5 +1,6 @@
 #include "VisibleHatchRestrictedPlacementAreaStrategy.h"
 
-UVisibleHatchRestrictedPlacementAreaStrategy::UVisibleHatchRestrictedPlacementAreaStrategy() {
-}
+UVisibleHatchRestrictedPlacementAreaStrategy::UVisibleHatchRestrictedPlacementAreaStrategy()
+{
 
+}

@@ -1,59 +1,64 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
-#include "UObject/NoExportTypes.h"
 #include "Components/ReflectionCaptureComponent.h"
+#include "UObject/NoExportTypes.h"
 #include "DBDReflectionCaptureSpawnerComponent.generated.h"
 
-class UTextureCube;
 class AReflectionCapture;
 class UReflectionCaptureComponent;
+class UTextureCube;
 
 UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
-class GFXUTILITIES_API UDBDReflectionCaptureSpawnerComponent : public USceneComponent {
-    GENERATED_BODY()
+class GFXUTILITIES_API UDBDReflectionCaptureSpawnerComponent : public USceneComponent
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    EReflectionSourceType ReflectionSourceType;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    UTextureCube* Cubemap;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float SourceCubemapAngle;
-    
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
-    float Brightness;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float ContributionFactor;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    float IBLMultiplicator;
-    
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
-    bool bCanBeTinted;
-    
-    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere)
-    FVector CaptureOffset;
-    
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	EReflectionSourceType ReflectionSourceType;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UTextureCube* Cubemap;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float SourceCubemapAngle;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	float Brightness;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float ContributionFactor;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float IBLMultiplicator;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool bCanBeTinted;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FVector CaptureOffset;
+
 protected:
-    UPROPERTY(Transient)
-    TArray<AReflectionCapture*> SpawnedReflectionCaptures;
-    
-    UPROPERTY(Export, Transient)
-    TArray<UReflectionCaptureComponent*> SpawnedReflectionCaptureComponents;
-    
+	UPROPERTY(Transient)
+	TArray<AReflectionCapture*> SpawnedReflectionCaptures;
+
+	UPROPERTY(Transient, Export)
+	TArray<UReflectionCaptureComponent*> SpawnedReflectionCaptureComponents;
+
 public:
-    UDBDReflectionCaptureSpawnerComponent();
-    UFUNCTION(BlueprintCallable)
-    void SetIBLMultiplicator(float NewIBLMultiplicator);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetContributionFactor(float NewContributionFactor);
-    
-    UFUNCTION(BlueprintCallable)
-    void SetBrightness(float NewBrightness);
-    
+	UFUNCTION(BlueprintCallable)
+	void SetIBLMultiplicator(float IBLMultiplicatorNew);
+
+	UFUNCTION(BlueprintCallable)
+	void SetContributionFactor(float contributionFactorNew);
+
+	UFUNCTION(BlueprintCallable)
+	void SetBrightness(float brightnessNew);
+
+public:
+	UDBDReflectionCaptureSpawnerComponent();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDReflectionCaptureSpawnerComponent) { return 0; }

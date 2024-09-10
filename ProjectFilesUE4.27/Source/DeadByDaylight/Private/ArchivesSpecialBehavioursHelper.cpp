@@ -1,5 +1,6 @@
 #include "ArchivesSpecialBehavioursHelper.h"
 
-UArchivesSpecialBehavioursHelper::UArchivesSpecialBehavioursHelper() {
-}
+UArchivesSpecialBehavioursHelper::UArchivesSpecialBehavioursHelper()
+{
 
+}

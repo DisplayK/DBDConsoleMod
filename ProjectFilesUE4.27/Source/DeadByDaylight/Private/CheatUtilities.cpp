@@ -1,5 +1,6 @@
 #include "CheatUtilities.h"
 
-UCheatUtilities::UCheatUtilities() {
-}
+UCheatUtilities::UCheatUtilities()
+{
 
+}

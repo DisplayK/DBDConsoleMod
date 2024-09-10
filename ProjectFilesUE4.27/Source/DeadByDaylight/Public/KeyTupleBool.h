@@ -1,17 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "KeyTupleBool.generated.h"
 
-USTRUCT(BlueprintType)
-struct FKeyTupleBool {
-    GENERATED_BODY()
+USTRUCT()
+struct FKeyTupleBool
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(SaveGame)
-    FName Key;
-    
-    UPROPERTY(SaveGame)
-    bool Value;
-    
-    DEADBYDAYLIGHT_API FKeyTupleBool();
+	UPROPERTY(SaveGame)
+	FName Key;
+
+	UPROPERTY(SaveGame)
+	bool Value;
+
+public:
+	DEADBYDAYLIGHT_API FKeyTupleBool();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FKeyTupleBool) { return 0; }

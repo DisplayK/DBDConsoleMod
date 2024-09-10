@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "UMGBaseButtonWidget.h"
 #include "UMGAtlantaMatchConfigTab.generated.h"
@@ -8,20 +9,22 @@ class UTextBlock;
 class UCanvasPanel;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGAtlantaMatchConfigTab : public UUMGBaseButtonWidget {
-    GENERATED_BODY()
-public:
+class UUMGAtlantaMatchConfigTab : public UUMGBaseButtonWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export)
-    USizeBox* IconSizeBox;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export)
-    UTextBlock* TabName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export)
-    UCanvasPanel* RandomPanel;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	USizeBox* IconSizeBox;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UTextBlock* TabName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UCanvasPanel* RandomPanel;
+
 public:
-    UUMGAtlantaMatchConfigTab();
+	UUMGAtlantaMatchConfigTab();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlantaMatchConfigTab) { return 0; }

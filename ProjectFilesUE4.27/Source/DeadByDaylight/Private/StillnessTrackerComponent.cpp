@@ -1,15 +1,18 @@
 #include "StillnessTrackerComponent.h"
 
-void UStillnessTrackerComponent::StartTracking() {
+void UStillnessTrackerComponent::StartTracking()
+{
+
 }
 
-UStillnessTrackerComponent::UStillnessTrackerComponent() {
-    this->SpeedThreshold = 300.00f;
-    this->DistanceThreshold = 400.00f;
-    this->DistanceDecay = 1.00f;
-    this->DecayWhileMoving = false;
-    this->StillnessThreshhold = 0.70f;
-    this->StillnessTimerLimit = 0.00f;
-    this->DecaySpeedMultiplier = 2.00f;
+UStillnessTrackerComponent::UStillnessTrackerComponent()
+{
+	this->SpeedThreshold = 300.000000;
+	this->DistanceThreshold = 400.000000;
+	this->DistanceDecay = 1.000000;
+	this->DecayWhileMoving = false;
+	this->StillnessThreshhold = 0.700000;
+	this->StillnessTimerLimit = 0.000000;
+	this->DecaySpeedMultiplier = 2.000000;
+	this->_trackedPlayer = NULL;
 }
-

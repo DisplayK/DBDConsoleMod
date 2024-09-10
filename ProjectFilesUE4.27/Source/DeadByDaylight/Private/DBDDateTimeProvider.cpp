@@ -1,5 +1,6 @@
 #include "DBDDateTimeProvider.h"
 
-UDBDDateTimeProvider::UDBDDateTimeProvider() {
-}
+UDBDDateTimeProvider::UDBDDateTimeProvider()
+{
 
+}

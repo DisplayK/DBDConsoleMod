@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "EPromptType.h"
@@ -7,17 +8,20 @@
 class UTextBlock;
 
 UCLASS(EditInlineNew)
-class DEADBYDAYLIGHT_API UAtlantaPromptWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
+class DEADBYDAYLIGHT_API UAtlantaPromptWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UTextBlock* PromptLabel;
-    
+	UPROPERTY(BlueprintReadOnly, Export)
+	UTextBlock* PromptLabel;
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    TMap<EPromptType, FString> AudioCues;
-    
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	TMap<EPromptType, FString> AudioCues;
+
 public:
-    UAtlantaPromptWidget();
+	UAtlantaPromptWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UAtlantaPromptWidget) { return 0; }

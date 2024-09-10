@@ -1,6 +1,6 @@
 #include "LoadoutSlotFloatingWidget.h"
 
-ULoadoutSlotFloatingWidget::ULoadoutSlotFloatingWidget() {
-    this->Message = NULL;
+ULoadoutSlotFloatingWidget::ULoadoutSlotFloatingWidget()
+{
+	this->Message = NULL;
 }
-

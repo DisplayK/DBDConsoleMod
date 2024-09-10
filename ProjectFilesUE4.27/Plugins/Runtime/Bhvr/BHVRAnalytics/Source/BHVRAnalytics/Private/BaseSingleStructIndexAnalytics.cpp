@@ -1,5 +1,6 @@
 #include "BaseSingleStructIndexAnalytics.h"
 
-FBaseSingleStructIndexAnalytics::FBaseSingleStructIndexAnalytics() {
+FBaseSingleStructIndexAnalytics::FBaseSingleStructIndexAnalytics()
+{
+	this->SessionGuid = TEXT("");
 }
-

@@ -1,5 +1,6 @@
 #include "HasItemNoChargesQEEvaluator.h"
 
-UHasItemNoChargesQEEvaluator::UHasItemNoChargesQEEvaluator() {
-}
+UHasItemNoChargesQEEvaluator::UHasItemNoChargesQEEvaluator()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "MenuAssetLibrary.h"
 
-UMenuAssetLibrary::UMenuAssetLibrary() {
-}
+UMenuAssetLibrary::UMenuAssetLibrary()
+{
 
+}

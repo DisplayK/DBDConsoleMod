@@ -1,14 +1,21 @@
 #include "LegalMenuScreen.h"
 
-void ULegalMenuScreen::OnOkClick() {
+void ULegalMenuScreen::OnOkClick()
+{
+
 }
 
-void ULegalMenuScreen::OnDeclineClick() {
+void ULegalMenuScreen::OnDeclineClick()
+{
+
 }
 
-void ULegalMenuScreen::OnAcceptClick() {
+void ULegalMenuScreen::OnAcceptClick()
+{
+
 }
 
-ULegalMenuScreen::ULegalMenuScreen() {
-}
+ULegalMenuScreen::ULegalMenuScreen()
+{
 
+}

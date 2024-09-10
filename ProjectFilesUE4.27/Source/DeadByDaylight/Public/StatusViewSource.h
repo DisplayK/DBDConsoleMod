@@ -1,38 +1,41 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "EInventoryItemType.h"
 #include "StatusViewSource.generated.h"
 
 USTRUCT(BlueprintType)
-struct DEADBYDAYLIGHT_API FStatusViewSource {
-    GENERATED_BODY()
-public:
+struct FStatusViewSource
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FName SourceID;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool IsActive;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float _remainingTime;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float PercentageFill;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 Level;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EInventoryItemType SourceType;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 SourceIconIndex;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    int32 SourceLevel;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FName SourceID;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool IsActive;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float _remainingTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float PercentageFill;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 Level;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EInventoryItemType SourceType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 SourceIconIndex;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int32 SourceLevel;
+
 public:
-    FStatusViewSource();
+	DEADBYDAYLIGHT_API FStatusViewSource();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FStatusViewSource) { return 0; }

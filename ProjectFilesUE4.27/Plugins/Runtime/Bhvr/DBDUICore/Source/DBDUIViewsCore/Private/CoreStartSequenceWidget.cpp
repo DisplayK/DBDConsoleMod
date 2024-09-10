@@ -2,16 +2,19 @@
 
 class UUITweenInstance;
 
-void UCoreStartSequenceWidget::OnHideStartSequenceComplete(UUITweenInstance* tween) {
+void UCoreStartSequenceWidget::OnHideStartSequenceComplete(UUITweenInstance* tween)
+{
+
 }
 
-UCoreStartSequenceWidget::UCoreStartSequenceWidget() {
-    this->FadeInDuration = 1.00f;
-    this->FadeOutDuration = 1.00f;
-    this->FadeInEasing = EEasingType::QuadOut;
-    this->FadeOutEasing = EEasingType::QuadIn;
-    this->ThemeNameTextfield = NULL;
-    this->SeparatorImage = NULL;
-    this->MapNameTextfield = NULL;
+UCoreStartSequenceWidget::UCoreStartSequenceWidget()
+{
+	this->FadeInDuration = 1.000000;
+	this->FadeOutDuration = 1.000000;
+	this->FadeInEasing = EEasingType::Linear;
+	this->FadeOutEasing = EEasingType::Linear;
+	this->BorderColors = TMap<EThemeColorId, FLinearColor>();
+	this->ThemeNameTextfield = NULL;
+	this->SeparatorImage = NULL;
+	this->MapNameTextfield = NULL;
 }
-

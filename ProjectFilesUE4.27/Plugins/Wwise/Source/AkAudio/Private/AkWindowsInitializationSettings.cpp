@@ -1,8 +1,11 @@
 #include "AkWindowsInitializationSettings.h"
 
-void UAkWindowsInitializationSettings::MigrateMultiCoreRendering(bool NewValue) {
+void UAkWindowsInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
+{
+
 }
 
-UAkWindowsInitializationSettings::UAkWindowsInitializationSettings() {
-}
+UAkWindowsInitializationSettings::UAkWindowsInitializationSettings()
+{
 
+}

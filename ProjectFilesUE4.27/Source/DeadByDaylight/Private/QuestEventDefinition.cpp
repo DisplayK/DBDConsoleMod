@@ -1,5 +1,7 @@
 #include "QuestEventDefinition.h"
 
-FQuestEventDefinition::FQuestEventDefinition() {
+FQuestEventDefinition::FQuestEventDefinition()
+{
+	this->TrackedGameEvents = TArray<FGameplayTag>();
+	this->QuestEventEvaluator = NULL;
 }
-

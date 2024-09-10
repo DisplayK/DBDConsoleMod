@@ -1,6 +1,6 @@
 #include "AssetLibraryLoader.h"
 
-FAssetLibraryLoader::FAssetLibraryLoader() {
-    this->AssetLibrary = NULL;
+FAssetLibraryLoader::FAssetLibraryLoader()
+{
+	this->AssetLibrary = NULL;
 }
-

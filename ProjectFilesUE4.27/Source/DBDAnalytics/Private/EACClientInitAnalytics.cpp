@@ -1,6 +1,6 @@
 #include "EACClientInitAnalytics.h"
 
-FEACClientInitAnalytics::FEACClientInitAnalytics() {
-    this->ValidationErrorType = 0;
+FEACClientInitAnalytics::FEACClientInitAnalytics()
+{
+	this->ValidationErrorType = 0;
 }
-

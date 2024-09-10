@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Animation/AnimInstance.h"
 #include "K26CrowProjectileAnimInstance.generated.h"
@@ -6,39 +7,41 @@
 class AK26CrowProjectile;
 
 UCLASS(NonTransient)
-class THEK26_API UK26CrowProjectileAnimInstance : public UAnimInstance {
-    GENERATED_BODY()
-public:
+class THEK26_API UK26CrowProjectileAnimInstance : public UAnimInstance
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly)
-    bool _isInInvalidState;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool _isInSummonState;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool _isInIdleState;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool _isInFollowPathState;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool _isInOffPathState;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool _isInDestroyedState;
-    
-    UPROPERTY(BlueprintReadOnly)
-    bool _isBeingFlashlighted;
-    
-    UPROPERTY(BlueprintReadOnly)
-    float _flashlightProgress;
-    
+	UPROPERTY(BlueprintReadOnly)
+	bool _isInInvalidState;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool _isInSummonState;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool _isInIdleState;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool _isInFollowPathState;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool _isInOffPathState;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool _isInDestroyedState;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool _isBeingFlashlighted;
+
+	UPROPERTY(BlueprintReadOnly)
+	float _flashlightProgress;
+
 private:
-    UPROPERTY(Transient)
-    AK26CrowProjectile* _owningCrowProjectile;
-    
+	UPROPERTY(Transient)
+	AK26CrowProjectile* _owningCrowProjectile;
+
 public:
-    UK26CrowProjectileAnimInstance();
+	UK26CrowProjectileAnimInstance();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UK26CrowProjectileAnimInstance) { return 0; }

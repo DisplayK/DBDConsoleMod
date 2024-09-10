@@ -1,5 +1,6 @@
 #include "AkQuailPlatformInfo.h"
 
-UAkQuailPlatformInfo::UAkQuailPlatformInfo() {
-}
+UAkQuailPlatformInfo::UAkQuailPlatformInfo()
+{
 
+}

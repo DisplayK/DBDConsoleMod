@@ -1,17 +1,23 @@
 #include "CoreSpectateBarWidget.h"
 
-void UCoreSpectateBarWidget::OnRightArrowTriggered() {
+void UCoreSpectateBarWidget::OnRightArrowTriggered()
+{
+
 }
 
-void UCoreSpectateBarWidget::OnLeftArrowTriggered() {
+void UCoreSpectateBarWidget::OnLeftArrowTriggered()
+{
+
 }
 
-void UCoreSpectateBarWidget::OnLeaveTriggered() {
+void UCoreSpectateBarWidget::OnLeaveTriggered()
+{
+
 }
 
-UCoreSpectateBarWidget::UCoreSpectateBarWidget() {
-    this->LeaveInputSwitcher = NULL;
-    this->LeftArrowInputSwitcher = NULL;
-    this->RightArrowInputSwitcher = NULL;
+UCoreSpectateBarWidget::UCoreSpectateBarWidget()
+{
+	this->LeaveInputSwitcher = NULL;
+	this->LeftArrowInputSwitcher = NULL;
+	this->RightArrowInputSwitcher = NULL;
 }
-

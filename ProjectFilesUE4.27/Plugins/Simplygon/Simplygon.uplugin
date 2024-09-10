@@ -1,0 +1,28 @@
+{
+  "FileVersion": "3",
+  "Version": 9,
+  "VersionName": "9.2.9300.0",
+  "FriendlyName": "Simplygon Plugin",
+  "Description": "Mesh optimization plugin with support for: Static and Skeletal mesh reduction through LOD recipes, Standin actor for kitbashing, HLOD, Actor Merging and Level LOD proxy generation.",
+  "Category": "Simplygon",
+  "CreatedBy": "Simplygon Studios (Microsoft)",
+  "CreatedByURL": "https://www.simplygon.com",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": false,
+  "CanContainContent": true,
+  "Installed": true,
+  "Modules": [
+    {
+      "Name": "SimplygonUObjects",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Name": "StandinActor",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

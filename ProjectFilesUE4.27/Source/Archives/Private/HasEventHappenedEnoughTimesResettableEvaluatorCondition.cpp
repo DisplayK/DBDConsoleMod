@@ -1,0 +1,6 @@
+#include "HasEventHappenedEnoughTimesResettableEvaluatorCondition.h"
+
+UHasEventHappenedEnoughTimesResettableEvaluatorCondition::UHasEventHappenedEnoughTimesResettableEvaluatorCondition()
+{
+
+}

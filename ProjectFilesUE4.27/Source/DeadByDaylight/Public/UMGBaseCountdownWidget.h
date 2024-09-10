@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
 #include "Styling/SlateColor.h"
@@ -7,23 +8,25 @@
 class UTextBlock;
 
 UCLASS(Abstract, EditInlineNew)
-class DEADBYDAYLIGHT_API UUMGBaseCountdownWidget : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UUMGBaseCountdownWidget : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(Export)
-    UTextBlock* TimerTextBlock;
-    
-    UPROPERTY(EditDefaultsOnly)
-    int32 _timerThreshold;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FSlateColor _timerColorBelowThreshold;
-    
-    UPROPERTY(EditDefaultsOnly)
-    FSlateColor _timerColorBeyondThreshold;
-    
+	UPROPERTY(meta=(BindWidgetOptional))
+	UTextBlock* TimerTextBlock;
+
+	UPROPERTY(EditDefaultsOnly)
+	int32 _timerThreshold;
+
+	UPROPERTY(EditDefaultsOnly)
+	FSlateColor _timerColorBelowThreshold;
+
+	UPROPERTY(EditDefaultsOnly)
+	FSlateColor _timerColorBeyondThreshold;
+
 public:
-    UUMGBaseCountdownWidget();
+	UUMGBaseCountdownWidget();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGBaseCountdownWidget) { return 0; }

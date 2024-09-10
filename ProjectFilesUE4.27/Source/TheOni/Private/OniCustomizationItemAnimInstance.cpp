@@ -1,9 +1,11 @@
 #include "OniCustomizationItemAnimInstance.h"
 
-void UOniCustomizationItemAnimInstance::SetIsInDemonMode(const bool isInDemonMode) {
+void UOniCustomizationItemAnimInstance::SetIsInDemonMode(const bool isInDemonMode)
+{
+
 }
 
-UOniCustomizationItemAnimInstance::UOniCustomizationItemAnimInstance() {
-    this->_isInDemonMode = false;
+UOniCustomizationItemAnimInstance::UOniCustomizationItemAnimInstance()
+{
+	this->_isInDemonMode = false;
 }
-

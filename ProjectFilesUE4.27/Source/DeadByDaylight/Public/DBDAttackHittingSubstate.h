@@ -1,18 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "DBDAttackSubstate.h"
 #include "StatProperty.h"
+#include "DBDAttackSubstate.h"
 #include "DBDAttackHittingSubstate.generated.h"
 
 UCLASS()
-class DEADBYDAYLIGHT_API UDBDAttackHittingSubstate : public UDBDAttackSubstate {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UDBDAttackHittingSubstate : public UDBDAttackSubstate
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    FStatProperty _hittingPercentDamageBegin;
-    
+	UPROPERTY(EditDefaultsOnly)
+	FStatProperty _hittingPercentDamageBegin;
+
 public:
-    UDBDAttackHittingSubstate();
+	UDBDAttackHittingSubstate();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDBDAttackHittingSubstate) { return 0; }

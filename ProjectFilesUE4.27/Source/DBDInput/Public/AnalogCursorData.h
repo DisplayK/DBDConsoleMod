@@ -1,22 +1,27 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "EAnalogCursorDataType.h"
 #include "DBDTableRowBase.h"
+#include "EAnalogCursorDataType.h"
 #include "AnalogCursorData.generated.h"
 
 USTRUCT(BlueprintType)
-struct DBDINPUT_API FAnalogCursorData : public FDBDTableRowBase {
-    GENERATED_BODY()
+struct FAnalogCursorData: public FDBDTableRowBase
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    EAnalogCursorDataType Type;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    float Value;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    bool ScalesWithDPI;
-    
-    FAnalogCursorData();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EAnalogCursorDataType Type;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float Value;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool ScalesWithDPI;
+
+public:
+	DBDINPUT_API FAnalogCursorData();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FAnalogCursorData) { return 0; }

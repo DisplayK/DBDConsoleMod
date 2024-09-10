@@ -1,13 +1,14 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ENavLinkPlayerStates.generated.h"
 
-UENUM()
-enum class ENavLinkPlayerStates {
-    RequestStart,
-    MoveStart,
-    Using,
-    MoveEnd,
-    Release,
+UENUM(BlueprintType)
+enum class ENavLinkPlayerStates : uint8
+{
+	RequestStart,
+	MoveStart,
+	Using,
+	MoveEnd,
+	Release,
 };
-

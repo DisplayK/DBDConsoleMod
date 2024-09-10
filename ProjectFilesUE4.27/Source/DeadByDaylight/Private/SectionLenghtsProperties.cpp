@@ -1,7 +1,7 @@
 #include "SectionLenghtsProperties.h"
 
-FSectionLenghtsProperties::FSectionLenghtsProperties() {
-    this->Direction = EDirection::Up;
-    this->Lenght = 0;
+FSectionLenghtsProperties::FSectionLenghtsProperties()
+{
+	this->Direction = EDirection::Up;
+	this->Length = 0;
 }
-

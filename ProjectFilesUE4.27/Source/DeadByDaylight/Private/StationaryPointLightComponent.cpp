@@ -1,5 +1,6 @@
 #include "StationaryPointLightComponent.h"
 
-UStationaryPointLightComponent::UStationaryPointLightComponent() {
-}
+UStationaryPointLightComponent::UStationaryPointLightComponent()
+{
 
+}

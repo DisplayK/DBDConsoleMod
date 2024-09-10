@@ -1,5 +1,6 @@
 #include "PounceAttackObstructSubstate.h"
 
-UPounceAttackObstructSubstate::UPounceAttackObstructSubstate() {
+UPounceAttackObstructSubstate::UPounceAttackObstructSubstate()
+{
+	this->_fullObstructMontage = NAME_None;
 }
-

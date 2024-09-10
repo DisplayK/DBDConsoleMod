@@ -1,5 +1,6 @@
 #include "KillerFootstepsPerceptionComponent.h"
 
-UKillerFootstepsPerceptionComponent::UKillerFootstepsPerceptionComponent() {
-}
+UKillerFootstepsPerceptionComponent::UKillerFootstepsPerceptionComponent()
+{
 
+}

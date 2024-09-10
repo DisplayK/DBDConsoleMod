@@ -1,5 +1,6 @@
 #include "PollableEventListener.h"
 
-UPollableEventListener::UPollableEventListener() {
-}
+UPollableEventListener::UPollableEventListener()
+{
 
+}

@@ -1,5 +1,6 @@
 #include "CoreItemBundleWidget.h"
 
-UCoreItemBundleWidget::UCoreItemBundleWidget() {
-}
+UCoreItemBundleWidget::UCoreItemBundleWidget()
+{
 
+}

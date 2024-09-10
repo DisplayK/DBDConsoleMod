@@ -1,11 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Cone.generated.h"
 
 USTRUCT()
-struct MATHUTILITIES_API FCone {
-    GENERATED_BODY()
+struct FCone
+{
+	GENERATED_BODY()
+
 public:
-    FCone();
+	MATHUTILITIES_API FCone();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FCone) { return 0; }

@@ -1,28 +1,32 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "MobileBaseUserWidget.h"
+#include "UObject/SoftObjectPtr.h"
 #include "UMGAtlantaRitualTab.generated.h"
 
-class UVerticalBox;
 class UUMGAltantaRitual;
+class UVerticalBox;
 
 UCLASS(Abstract, EditInlineNew)
-class UUMGAtlantaRitualTab : public UMobileBaseUserWidget {
-    GENERATED_BODY()
-public:
+class UUMGAtlantaRitualTab : public UMobileBaseUserWidget
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export)
-    UVerticalBox* ContainerBox;
-    
+	UPROPERTY(BlueprintReadOnly, meta=(BindWidgetOptional))
+	UVerticalBox* ContainerBox;
+
 private:
-    UPROPERTY(EditAnywhere, NoClear)
-    TSoftClassPtr<UUMGAltantaRitual> _itemWidgetClass;
-    
+	UPROPERTY(EditAnywhere, NoClear)
+	TSoftClassPtr<UUMGAltantaRitual> _itemWidgetClass;
+
+private:
+	UFUNCTION()
+	void BroadcastOnClaimRewardsButtonPressed(const int32 ritualId);
+
 public:
-    UUMGAtlantaRitualTab();
-private:
-    UFUNCTION()
-    void BroadcastOnClaimRewardsButtonPressed(const int32 ritualId);
-    
+	UUMGAtlantaRitualTab();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UUMGAtlantaRitualTab) { return 0; }

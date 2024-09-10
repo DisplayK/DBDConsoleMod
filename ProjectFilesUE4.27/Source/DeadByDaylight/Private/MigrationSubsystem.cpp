@@ -1,5 +1,6 @@
 #include "MigrationSubsystem.h"
 
-UMigrationSubsystem::UMigrationSubsystem() {
-}
+UMigrationSubsystem::UMigrationSubsystem()
+{
 
+}

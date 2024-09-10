@@ -1,5 +1,7 @@
 #include "LogPresencePluginAnalytics.h"
 
-FLogPresencePluginAnalytics::FLogPresencePluginAnalytics() {
+FLogPresencePluginAnalytics::FLogPresencePluginAnalytics()
+{
+	this->Context = TEXT("");
+	this->Message = TEXT("");
 }
-

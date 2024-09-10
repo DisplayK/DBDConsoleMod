@@ -1,6 +1,6 @@
 #include "UMGAtlantaMonthlyPassEventTemplate.h"
 
-UUMGAtlantaMonthlyPassEventTemplate::UUMGAtlantaMonthlyPassEventTemplate() {
-    this->MonthlyPassWidget = NULL;
+UUMGAtlantaMonthlyPassEventTemplate::UUMGAtlantaMonthlyPassEventTemplate()
+{
+	this->MonthlyPassWidget = NULL;
 }
-

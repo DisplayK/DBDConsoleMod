@@ -1,8 +1,11 @@
 #include "ArchiveTierPurchasePopupScreen.h"
 
-void UArchiveTierPurchasePopupScreen::OnConfirmPurchase(int32 tiersToPurchaseNumber) {
+void UArchiveTierPurchasePopupScreen::OnConfirmPurchase(int32 tiersToPurchaseNumber)
+{
+
 }
 
-UArchiveTierPurchasePopupScreen::UArchiveTierPurchasePopupScreen() {
-}
+UArchiveTierPurchasePopupScreen::UArchiveTierPurchasePopupScreen()
+{
 
+}

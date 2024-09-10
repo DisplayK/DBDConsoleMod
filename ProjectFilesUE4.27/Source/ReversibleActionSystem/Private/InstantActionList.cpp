@@ -1,5 +1,6 @@
 #include "InstantActionList.h"
 
-FInstantActionList::FInstantActionList() {
+FInstantActionList::FInstantActionList()
+{
+	this->Actions = TArray<UBaseReversibleInstantActionHandler*>();
 }
-

@@ -1,5 +1,6 @@
 #include "MatchConfigOptionsDataAsset.h"
 
-UMatchConfigOptionsDataAsset::UMatchConfigOptionsDataAsset() {
+UMatchConfigOptionsDataAsset::UMatchConfigOptionsDataAsset()
+{
+	this->OptionsData = TMap<ECustomMatchOptions, FMatchOptionAssetData>();
 }
-

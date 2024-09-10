@@ -1,5 +1,6 @@
 #include "AkSwitchValue.h"
 
-UAkSwitchValue::UAkSwitchValue() {
-}
+UAkSwitchValue::UAkSwitchValue()
+{
 
+}

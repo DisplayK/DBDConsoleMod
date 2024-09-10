@@ -1,5 +1,6 @@
 #include "AwardedScores.h"
 
-FAwardedScores::FAwardedScores() {
+FAwardedScores::FAwardedScores()
+{
+	this->Array = TArray<FAwardedScore>();
 }
-

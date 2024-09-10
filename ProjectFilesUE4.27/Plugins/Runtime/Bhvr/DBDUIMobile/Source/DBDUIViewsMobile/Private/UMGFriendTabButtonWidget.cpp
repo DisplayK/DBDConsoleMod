@@ -1,5 +1,6 @@
 #include "UMGFriendTabButtonWidget.h"
 
-UUMGFriendTabButtonWidget::UUMGFriendTabButtonWidget() {
-}
+UUMGFriendTabButtonWidget::UUMGFriendTabButtonWidget()
+{
 
+}

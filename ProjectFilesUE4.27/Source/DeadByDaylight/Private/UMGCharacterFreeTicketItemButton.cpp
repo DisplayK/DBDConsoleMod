@@ -1,9 +1,11 @@
 #include "UMGCharacterFreeTicketItemButton.h"
 
+void UUMGCharacterFreeTicketItemButton::BroadcastClickEvent()
+{
 
-void UUMGCharacterFreeTicketItemButton::BroadcastClickEvent() {
 }
 
-UUMGCharacterFreeTicketItemButton::UUMGCharacterFreeTicketItemButton() {
-}
+UUMGCharacterFreeTicketItemButton::UUMGCharacterFreeTicketItemButton()
+{
 
+}

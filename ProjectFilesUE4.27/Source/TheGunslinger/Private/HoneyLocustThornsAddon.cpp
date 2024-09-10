@@ -1,5 +1,6 @@
 #include "HoneyLocustThornsAddon.h"
 
-UHoneyLocustThornsAddon::UHoneyLocustThornsAddon() {
-}
+UHoneyLocustThornsAddon::UHoneyLocustThornsAddon()
+{
 
+}

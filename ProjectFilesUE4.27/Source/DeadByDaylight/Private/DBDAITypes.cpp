@@ -1,5 +1,6 @@
 #include "DBDAITypes.h"
 
-UDBDAITypes::UDBDAITypes() {
-}
+UDBDAITypes::UDBDAITypes()
+{
 
+}

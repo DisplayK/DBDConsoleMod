@@ -3,17 +3,22 @@
 class ASlasherPlayer;
 class ACamperPlayer;
 
+void UInjectSerumInteraction::OnKillerSet(ASlasherPlayer* killer)
+{
 
-void UInjectSerumInteraction::OnKillerSet(ASlasherPlayer* killer) {
 }
 
-ACamperPlayer* UInjectSerumInteraction::GetInjectionTarget() const {
-    return NULL;
+ACamperPlayer* UInjectSerumInteraction::GetInjectionTarget() const
+{
+	return NULL;
 }
 
-void UInjectSerumInteraction::Authority_CureSurvivor(ACamperPlayer* camperPlayer) {
+void UInjectSerumInteraction::Authority_CureSurvivor(ACamperPlayer* camperPlayer)
+{
+
 }
 
-UInjectSerumInteraction::UInjectSerumInteraction() {
-}
+UInjectSerumInteraction::UInjectSerumInteraction()
+{
 
+}

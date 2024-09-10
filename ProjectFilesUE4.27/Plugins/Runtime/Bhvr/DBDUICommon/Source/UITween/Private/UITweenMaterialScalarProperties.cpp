@@ -1,6 +1,6 @@
 #include "UITweenMaterialScalarProperties.h"
 
-UUITweenMaterialScalarProperties::UUITweenMaterialScalarProperties() {
-    this->MaterialInstance = NULL;
+UUITweenMaterialScalarProperties::UUITweenMaterialScalarProperties()
+{
+	this->MaterialInstance = NULL;
 }
-

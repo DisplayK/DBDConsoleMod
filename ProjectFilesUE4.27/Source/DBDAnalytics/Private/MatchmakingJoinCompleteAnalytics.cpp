@@ -1,6 +1,7 @@
 #include "MatchmakingJoinCompleteAnalytics.h"
 
-FMatchmakingJoinCompleteAnalytics::FMatchmakingJoinCompleteAnalytics() {
-    this->Result = 0;
+FMatchmakingJoinCompleteAnalytics::FMatchmakingJoinCompleteAnalytics()
+{
+	this->SessionName = TEXT("");
+	this->Result = 0;
 }
-

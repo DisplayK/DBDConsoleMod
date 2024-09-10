@@ -1,6 +1,6 @@
 #include "CameraAttachment.h"
 
-FCameraAttachment::FCameraAttachment() {
-    this->Parent = NULL;
+FCameraAttachment::FCameraAttachment()
+{
+	this->Parent = NULL;
 }
-

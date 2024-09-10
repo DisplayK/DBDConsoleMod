@@ -1,5 +1,6 @@
 #include "FrenzyAttack.h"
 
-UFrenzyAttack::UFrenzyAttack() {
-}
+UFrenzyAttack::UFrenzyAttack()
+{
 
+}

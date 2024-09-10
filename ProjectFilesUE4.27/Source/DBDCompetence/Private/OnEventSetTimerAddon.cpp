@@ -1,6 +1,6 @@
 #include "OnEventSetTimerAddon.h"
 
-UOnEventSetTimerAddon::UOnEventSetTimerAddon() {
-    this->_addonEffectTime = 0.00f;
+UOnEventSetTimerAddon::UOnEventSetTimerAddon()
+{
+	this->_addonEffectTime = 0.000000;
 }
-

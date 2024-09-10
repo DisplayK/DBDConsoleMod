@@ -1,5 +1,6 @@
 #include "RecentGameEventTracker.h"
 
-URecentGameEventTracker::URecentGameEventTracker() {
-}
+URecentGameEventTracker::URecentGameEventTracker()
+{
 
+}

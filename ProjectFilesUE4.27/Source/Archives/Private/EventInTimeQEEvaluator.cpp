@@ -1,5 +1,6 @@
 #include "EventInTimeQEEvaluator.h"
 
-UEventInTimeQEEvaluator::UEventInTimeQEEvaluator() {
-}
+UEventInTimeQEEvaluator::UEventInTimeQEEvaluator()
+{
 
+}

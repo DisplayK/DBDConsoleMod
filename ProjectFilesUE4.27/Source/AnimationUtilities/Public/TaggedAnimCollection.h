@@ -1,20 +1,26 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
+#include "UObject/SoftObjectPtr.h"
 #include "TaggedAnimCollection.generated.h"
 
 class UAnimCollection;
 
 USTRUCT(BlueprintType)
-struct ANIMATIONUTILITIES_API FTaggedAnimCollection {
-    GENERATED_BODY()
+struct FTaggedAnimCollection
+{
+	GENERATED_BODY()
+
 public:
-    UPROPERTY(EditDefaultsOnly)
-    FGameplayTag Tag;
-    
-    UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
-    TSoftObjectPtr<UAnimCollection> AnimCollection;
-    
-    FTaggedAnimCollection();
+	UPROPERTY(EditDefaultsOnly)
+	FGameplayTag Tag;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	TSoftObjectPtr<UAnimCollection> AnimCollection;
+
+public:
+	ANIMATIONUTILITIES_API FTaggedAnimCollection();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FTaggedAnimCollection) { return 0; }

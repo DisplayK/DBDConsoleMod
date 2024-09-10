@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ViewRotationStrategy.h"
 #include "BlightPowerState.h"
@@ -8,28 +9,28 @@
 class UCurveFloat;
 
 UCLASS()
-class UBlightPowerStateDash : public UBlightPowerState, public IViewRotationStrategy {
-    GENERATED_BODY()
-public:
+class UBlightPowerStateDash : public UBlightPowerState, public IViewRotationStrategy
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
-    FTunableStat _vectorInterpToSpeed;
-    
-    UPROPERTY(EditDefaultsOnly)
-    UCurveFloat* _noDashTimeLimitSpeedCurve;
-    
-    UPROPERTY(EditAnywhere)
-    UCurveFloat* _lookAngleToTurnRateCurveController;
-    
-    UPROPERTY(EditAnywhere)
-    UCurveFloat* _lookAngleToTurnRateCurveMouse;
-    
-    UPROPERTY(EditAnywhere)
-    UCurveFloat* _lookAngleToMaxTurnRateCurveMouse;
-    
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FTunableStat _vectorInterpToSpeed;
+
+	UPROPERTY(EditDefaultsOnly)
+	UCurveFloat* _noDashTimeLimitSpeedCurve;
+
+	UPROPERTY(EditAnywhere)
+	UCurveFloat* _lookAngleToTurnRateCurveController;
+
+	UPROPERTY(EditAnywhere)
+	UCurveFloat* _lookAngleToTurnRateCurveMouse;
+
+	UPROPERTY(EditAnywhere)
+	UCurveFloat* _lookAngleToMaxTurnRateCurveMouse;
+
 public:
-    UBlightPowerStateDash();
-    
-    // Fix for true pure virtual functions not being implemented
+	UBlightPowerStateDash();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UBlightPowerStateDash) { return 0; }

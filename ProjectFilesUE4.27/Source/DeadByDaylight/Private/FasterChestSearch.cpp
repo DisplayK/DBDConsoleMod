@@ -1,5 +1,6 @@
 #include "FasterChestSearch.h"
 
-UFasterChestSearch::UFasterChestSearch() {
-}
+UFasterChestSearch::UFasterChestSearch()
+{
 
+}

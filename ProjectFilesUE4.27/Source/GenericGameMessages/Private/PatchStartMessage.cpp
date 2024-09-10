@@ -1,5 +1,5 @@
 #include "PatchStartMessage.h"
 
-FPatchStartMessage::FPatchStartMessage() {
+FPatchStartMessage::FPatchStartMessage()
+{
 }
-

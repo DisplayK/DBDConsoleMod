@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "DBDObserverPlayer.generated.h"
@@ -6,17 +7,20 @@
 class UDBDPlayerData;
 
 UCLASS()
-class ADBDObserverPlayer : public ACharacter {
-    GENERATED_BODY()
-public:
+class ADBDObserverPlayer : public ACharacter
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UDBDPlayerData* _playerData;
-    
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UDBDPlayerData* _playerData;
+
 public:
-    ADBDObserverPlayer();
-    UFUNCTION(Reliable, Server, WithValidation)
-    void Server_PlayerReady();
-    
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Server_PlayerReady();
+
+public:
+	ADBDObserverPlayer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ADBDObserverPlayer) { return 0; }

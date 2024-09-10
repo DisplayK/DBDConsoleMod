@@ -1,5 +1,6 @@
 #include "ArchivePassPurchasePopupScreen.h"
 
-UArchivePassPurchasePopupScreen::UArchivePassPurchasePopupScreen() {
-}
+UArchivePassPurchasePopupScreen::UArchivePassPurchasePopupScreen()
+{
 
+}

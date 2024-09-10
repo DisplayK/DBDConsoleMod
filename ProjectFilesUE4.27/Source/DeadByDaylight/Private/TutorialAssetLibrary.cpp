@@ -1,5 +1,6 @@
 #include "TutorialAssetLibrary.h"
 
-UTutorialAssetLibrary::UTutorialAssetLibrary() {
-}
+UTutorialAssetLibrary::UTutorialAssetLibrary()
+{
 
+}

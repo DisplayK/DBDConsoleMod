@@ -1,6 +1,6 @@
 #include "ZombieOutlineUpdateStrategy.h"
 
-UZombieOutlineUpdateStrategy::UZombieOutlineUpdateStrategy() {
-    this->_zombieCharacter = NULL;
+UZombieOutlineUpdateStrategy::UZombieOutlineUpdateStrategy()
+{
+	this->_zombieCharacter = NULL;
 }
-

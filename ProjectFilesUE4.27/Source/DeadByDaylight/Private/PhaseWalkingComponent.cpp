@@ -1,99 +1,140 @@
 #include "PhaseWalkingComponent.h"
+#include "PhaseWalkInfo.h"
+#include "DBDTimer.h"
 #include "Net/UnrealNetwork.h"
 
-class AActor;
 class UDecoySlasherComponent;
+class AActor;
 
-void UPhaseWalkingComponent::UpdateSurvivorVisibility(bool visible) {
+void UPhaseWalkingComponent::UpdateSurvivorVisibility(bool visible)
+{
+
 }
 
-void UPhaseWalkingComponent::UpdateKillerVisibility() {
+void UPhaseWalkingComponent::UpdateKillerVisibility()
+{
+
 }
 
+void UPhaseWalkingComponent::Server_Broadcast_PhaseWalk_Implementation(const FPhaseWalkInfo& phaseWalkInfo)
+{
 
-void UPhaseWalkingComponent::Server_Broadcast_PhaseWalk_Implementation(const FPhaseWalkInfo& phaseWalkInfo) {
-}
-bool UPhaseWalkingComponent::Server_Broadcast_PhaseWalk_Validate(const FPhaseWalkInfo& phaseWalkInfo) {
-    return true;
 }
 
-void UPhaseWalkingComponent::RefillActivePhaseWalkCharges() {
+bool UPhaseWalkingComponent::Server_Broadcast_PhaseWalk_Validate(const FPhaseWalkInfo& phaseWalkInfo)
+{
+	return true;
 }
 
-void UPhaseWalkingComponent::OnLevelReadyToPlay() {
+void UPhaseWalkingComponent::RefillActivePhaseWalkCharges()
+{
+
 }
 
-void UPhaseWalkingComponent::Multicast_Broadcast_PhaseWalk_Implementation(const FPhaseWalkInfo& phaseWalkInfo) {
-}
-bool UPhaseWalkingComponent::Multicast_Broadcast_PhaseWalk_Validate(const FPhaseWalkInfo& phaseWalkInfo) {
-    return true;
-}
+void UPhaseWalkingComponent::OnLevelReadyToPlay()
+{
 
-void UPhaseWalkingComponent::ModifyActivePhaseWalkCharges(float delta) {
 }
 
+void UPhaseWalkingComponent::Multicast_Broadcast_PhaseWalk_Implementation(const FPhaseWalkInfo& phaseWalkInfo)
+{
 
-void UPhaseWalkingComponent::Local_PhaseWalk(const FPhaseWalkInfo& phaseWalkInfo) {
 }
 
-void UPhaseWalkingComponent::Local_EndPhaseWalks() {
+bool UPhaseWalkingComponent::Multicast_Broadcast_PhaseWalk_Validate(const FPhaseWalkInfo& phaseWalkInfo)
+{
+	return true;
 }
 
-bool UPhaseWalkingComponent::IsPhaseWalking() const {
-    return false;
+void UPhaseWalkingComponent::ModifyActivePhaseWalkCharges(float delta)
+{
+
 }
 
-bool UPhaseWalkingComponent::IsPassivePhaseWalking() const {
-    return false;
+void UPhaseWalkingComponent::Local_PhaseWalk(const FPhaseWalkInfo& phaseWalkInfo)
+{
+
 }
 
-bool UPhaseWalkingComponent::IsDecoyActive() const {
-    return false;
+void UPhaseWalkingComponent::Local_EndPhaseWalks()
+{
+
 }
 
-bool UPhaseWalkingComponent::IsActivePhaseWalking() const {
-    return false;
+bool UPhaseWalkingComponent::IsPhaseWalking() const
+{
+	return false;
 }
 
-int32 UPhaseWalkingComponent::GetSpiritPassivePhaseWalkHusksCountToSpawn() const {
-    return 0;
+bool UPhaseWalkingComponent::IsPassivePhaseWalking() const
+{
+	return false;
 }
 
-FDBDTimer UPhaseWalkingComponent::GetPassivePhaseWalkTimer() const {
-    return FDBDTimer{};
+bool UPhaseWalkingComponent::IsDecoyActive() const
+{
+	return false;
 }
 
-AActor* UPhaseWalkingComponent::GetHusk() const {
-    return NULL;
+bool UPhaseWalkingComponent::IsActivePhaseWalking() const
+{
+	return false;
 }
 
-UDecoySlasherComponent* UPhaseWalkingComponent::GetDecoySlasherComponent() const {
-    return NULL;
+int32 UPhaseWalkingComponent::GetSpiritPassivePhaseWalkHusksCountToSpawn() const
+{
+	return 0;
 }
 
-float UPhaseWalkingComponent::GetActivePhaseWalkCharges() const {
-    return 0.0f;
+FDBDTimer UPhaseWalkingComponent::GetPassivePhaseWalkTimer() const
+{
+	return FDBDTimer{};
 }
 
-float UPhaseWalkingComponent::GetActivePhaseWalkChargePercentage() const {
-    return 0.0f;
+AActor* UPhaseWalkingComponent::GetHusk() const
+{
+	return NULL;
 }
 
-bool UPhaseWalkingComponent::CanStartActivePhaseWalk() const {
-    return false;
+UDecoySlasherComponent* UPhaseWalkingComponent::GetDecoySlasherComponent() const
+{
+	return NULL;
 }
 
-void UPhaseWalkingComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(UPhaseWalkingComponent, _husk);
+float UPhaseWalkingComponent::GetActivePhaseWalkCharges() const
+{
+	return 0.0f;
 }
 
-UPhaseWalkingComponent::UPhaseWalkingComponent() {
-    this->_huskClass = NULL;
-    this->_isInteractionPhaseWalking = false;
-    this->_husk = NULL;
-    this->_survivorsAreVisible = true;
-    this->_passivePhaseWalkHusksCount = 7;
+float UPhaseWalkingComponent::GetActivePhaseWalkChargePercentage() const
+{
+	return 0.0f;
 }
 
+bool UPhaseWalkingComponent::CanStartActivePhaseWalk() const
+{
+	return false;
+}
+
+void UPhaseWalkingComponent::Authority_SetIsInPostActivePhaseWalk(bool value)
+{
+
+}
+
+void UPhaseWalkingComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UPhaseWalkingComponent, _isInPostActivePhaseWalk);
+	DOREPLIFETIME(UPhaseWalkingComponent, _husk);
+}
+
+UPhaseWalkingComponent::UPhaseWalkingComponent()
+{
+	this->_huskClass = NULL;
+	this->_isInteractionPhaseWalking = false;
+	this->_husk = NULL;
+	this->_survivorsAreVisible = true;
+	this->_passivePhaseWalkHusksCount = 7;
+	this->_isVisibleDuringPhaseWalkTags = TArray<FGameplayTag>();
+}

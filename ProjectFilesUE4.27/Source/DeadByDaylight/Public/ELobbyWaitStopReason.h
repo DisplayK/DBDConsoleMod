@@ -1,11 +1,12 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ELobbyWaitStopReason.generated.h"
 
-UENUM()
-enum class ELobbyWaitStopReason {
-    StartMatchWait,
-    PlayerCancelled,
-    Unknown,
+UENUM(BlueprintType)
+enum class ELobbyWaitStopReason : uint8
+{
+	StartMatchWait,
+	PlayerCancelled,
+	Unknown,
 };
-

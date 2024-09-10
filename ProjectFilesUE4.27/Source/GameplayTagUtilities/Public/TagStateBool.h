@@ -1,16 +1,19 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "TagStateBool.generated.h"
 
 USTRUCT(BlueprintType)
-struct GAMEPLAYTAGUTILITIES_API FTagStateBool {
-    GENERATED_BODY()
-public:
+struct FTagStateBool
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY()
-    bool _isTrue;
-    
+	UPROPERTY()
+	bool _isTrue;
+
 public:
-    FTagStateBool();
+	GAMEPLAYTAGUTILITIES_API FTagStateBool();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FTagStateBool) { return 0; }

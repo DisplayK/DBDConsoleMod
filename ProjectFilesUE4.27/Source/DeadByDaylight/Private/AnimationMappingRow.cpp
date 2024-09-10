@@ -1,5 +1,6 @@
 #include "AnimationMappingRow.h"
 
-FAnimationMappingRow::FAnimationMappingRow() {
+FAnimationMappingRow::FAnimationMappingRow()
+{
+	this->Mappings = TArray<FAnimationMapping>();
 }
-

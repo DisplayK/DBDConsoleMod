@@ -1,8 +1,12 @@
 #include "CoreInteractionProgressWidget.h"
+#include "StatusEffectViewData.h"
 
-void UCoreInteractionProgressWidget::SetProficiencies(const TArray<FStatusEffectViewData>& proficiencyDatas) {
+void UCoreInteractionProgressWidget::SetProficiencies(const TArray<FStatusEffectViewData>& proficiencyDatas)
+{
+
 }
 
-UCoreInteractionProgressWidget::UCoreInteractionProgressWidget() {
+UCoreInteractionProgressWidget::UCoreInteractionProgressWidget()
+{
+	this->Proficiencies = TArray<UCoreStatusEffectIcon*>();
 }
-

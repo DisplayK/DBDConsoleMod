@@ -1,11 +1,11 @@
 #include "UMGTallyListElementWidget.h"
 
+void UUMGTallyListElementWidget::OnInAnimationFinished()
+{
 
-
-void UUMGTallyListElementWidget::OnInAnimationFinished() {
 }
 
-UUMGTallyListElementWidget::UUMGTallyListElementWidget() {
-    this->ElementIndex = -1;
+UUMGTallyListElementWidget::UUMGTallyListElementWidget()
+{
+	this->ElementIndex = -1;
 }
-

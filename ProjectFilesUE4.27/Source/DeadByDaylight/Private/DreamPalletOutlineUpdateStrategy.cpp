@@ -2,9 +2,12 @@
 
 class ASlasherPlayer;
 
-void UDreamPalletOutlineUpdateStrategy::InitializeTunableValues(ASlasherPlayer* killer) {
+void UDreamPalletOutlineUpdateStrategy::InitializeTunableValues(ASlasherPlayer* killer)
+{
+
 }
 
-UDreamPalletOutlineUpdateStrategy::UDreamPalletOutlineUpdateStrategy() {
-}
+UDreamPalletOutlineUpdateStrategy::UDreamPalletOutlineUpdateStrategy()
+{
 
+}

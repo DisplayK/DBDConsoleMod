@@ -1,6 +1,6 @@
 #include "BuyTipsMessage.h"
 
-FBuyTipsMessage::FBuyTipsMessage() {
-    this->Result = 0;
+FBuyTipsMessage::FBuyTipsMessage()
+{
+	this->Result = 0;
 }
-

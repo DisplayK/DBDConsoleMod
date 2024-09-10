@@ -3,16 +3,19 @@
 
 class ALanternInteractable;
 
-void ALanternLightCollectable::SetParentLantern(ALanternInteractable* parentLantern) {
+void ALanternLightCollectable::SetParentLantern(ALanternInteractable* parentLantern)
+{
+
 }
 
-void ALanternLightCollectable::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(ALanternLightCollectable, _parentLantern);
+void ALanternLightCollectable::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ALanternLightCollectable, _parentLantern);
 }
 
-ALanternLightCollectable::ALanternLightCollectable() {
-    this->_parentLantern = NULL;
+ALanternLightCollectable::ALanternLightCollectable()
+{
+	this->_parentLantern = NULL;
 }
-

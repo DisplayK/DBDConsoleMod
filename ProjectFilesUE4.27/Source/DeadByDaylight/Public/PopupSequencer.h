@@ -1,19 +1,22 @@
 #pragma once
+
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "PopupSequencer.generated.h"
 
 class UDBDGameInstance;
 
 UCLASS()
-class UPopupSequencer : public UObject {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API UPopupSequencer : public UObject
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UDBDGameInstance* _gameInstance;
-    
+	UPROPERTY(Transient)
+	UDBDGameInstance* _gameInstance;
+
 public:
-    UPopupSequencer();
+	UPopupSequencer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UPopupSequencer) { return 0; }

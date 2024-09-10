@@ -1,5 +1,6 @@
 #include "FranklinsDemiseConsumedItemAnalytics.h"
 
-FFranklinsDemiseConsumedItemAnalytics::FFranklinsDemiseConsumedItemAnalytics() {
+FFranklinsDemiseConsumedItemAnalytics::FFranklinsDemiseConsumedItemAnalytics()
+{
+	this->PreviousOwnerSurvivorMirrorsId = TEXT("");
 }
-

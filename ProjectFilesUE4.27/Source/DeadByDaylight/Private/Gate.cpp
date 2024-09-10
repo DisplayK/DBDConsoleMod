@@ -1,6 +1,7 @@
 #include "Gate.h"
 
-AGate::AGate() {
-    this->InteractionOutput = 0.00f;
+AGate::AGate()
+{
+	this->InteractionInputs = TArray<float>();
+	this->InteractionOutput = 0.000000;
 }
-

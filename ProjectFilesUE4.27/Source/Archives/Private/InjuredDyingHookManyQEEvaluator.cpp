@@ -1,5 +1,6 @@
 #include "InjuredDyingHookManyQEEvaluator.h"
 
-UInjuredDyingHookManyQEEvaluator::UInjuredDyingHookManyQEEvaluator() {
-}
+UInjuredDyingHookManyQEEvaluator::UInjuredDyingHookManyQEEvaluator()
+{
 
+}

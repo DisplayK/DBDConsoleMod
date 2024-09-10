@@ -2,12 +2,17 @@
 
 class ADBDPlayer;
 
-void UVaultableComponent::SignalVault(ADBDPlayer* survivor, float interactionTime) {
+void UVaultableComponent::SignalVault(ADBDPlayer* survivor, float interactionTime)
+{
+
 }
 
-void UVaultableComponent::OnChaseEnded(ADBDPlayer* survivor, float chaseTimer) {
+void UVaultableComponent::OnChaseEnded(ADBDPlayer* survivor, float chaseTimer)
+{
+
 }
 
-UVaultableComponent::UVaultableComponent() {
-}
+UVaultableComponent::UVaultableComponent()
+{
 
+}

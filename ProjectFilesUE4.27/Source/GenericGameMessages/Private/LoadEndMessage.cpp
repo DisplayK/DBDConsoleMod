@@ -1,5 +1,5 @@
 #include "LoadEndMessage.h"
 
-FLoadEndMessage::FLoadEndMessage() {
+FLoadEndMessage::FLoadEndMessage()
+{
 }
-

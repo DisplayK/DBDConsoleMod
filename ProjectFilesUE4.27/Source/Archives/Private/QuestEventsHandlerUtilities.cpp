@@ -2,9 +2,12 @@
 
 class UQuestEventsHandler;
 
-void UQuestEventsHandlerUtilities::InitializeQuestEventHandler(UQuestEventsHandler* questEventsHandler) {
+void UQuestEventsHandlerUtilities::InitializeQuestEventHandler(UQuestEventsHandler* questEventsHandler)
+{
+
 }
 
-UQuestEventsHandlerUtilities::UQuestEventsHandlerUtilities() {
-}
+UQuestEventsHandlerUtilities::UQuestEventsHandlerUtilities()
+{
 
+}

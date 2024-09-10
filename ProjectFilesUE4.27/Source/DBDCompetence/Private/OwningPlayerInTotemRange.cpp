@@ -1,8 +1,11 @@
 #include "OwningPlayerInTotemRange.h"
 
-void UOwningPlayerInTotemRange::OnLevelReadyToPlay() {
+void UOwningPlayerInTotemRange::OnLevelReadyToPlay()
+{
+
 }
 
-UOwningPlayerInTotemRange::UOwningPlayerInTotemRange() {
-}
+UOwningPlayerInTotemRange::UOwningPlayerInTotemRange()
+{
 
+}

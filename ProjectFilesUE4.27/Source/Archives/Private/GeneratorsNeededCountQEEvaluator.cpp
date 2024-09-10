@@ -1,5 +1,6 @@
 #include "GeneratorsNeededCountQEEvaluator.h"
 
-UGeneratorsNeededCountQEEvaluator::UGeneratorsNeededCountQEEvaluator() {
-}
+UGeneratorsNeededCountQEEvaluator::UGeneratorsNeededCountQEEvaluator()
+{
 
+}

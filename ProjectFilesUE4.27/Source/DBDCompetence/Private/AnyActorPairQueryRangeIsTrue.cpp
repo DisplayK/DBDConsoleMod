@@ -1,8 +1,11 @@
 #include "AnyActorPairQueryRangeIsTrue.h"
 
-void UAnyActorPairQueryRangeIsTrue::OnInRangeChanged(const bool inRange) {
+void UAnyActorPairQueryRangeIsTrue::OnInRangeChanged(const bool inRange)
+{
+
 }
 
-UAnyActorPairQueryRangeIsTrue::UAnyActorPairQueryRangeIsTrue() {
-}
+UAnyActorPairQueryRangeIsTrue::UAnyActorPairQueryRangeIsTrue()
+{
 
+}

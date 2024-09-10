@@ -1,5 +1,7 @@
 #include "MapCoordAnalytics.h"
 
-FMapCoordAnalytics::FMapCoordAnalytics() {
+FMapCoordAnalytics::FMapCoordAnalytics()
+{
+	this->MatchId = TEXT("");
+	this->MapItem = TArray<FMapCoordData>();
 }
-

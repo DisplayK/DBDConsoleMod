@@ -2,9 +2,12 @@
 
 class ASlasherPlayer;
 
-void UKillerSubjectProvider::RegisterWhenKillerSet(ASlasherPlayer* killer) {
+void UKillerSubjectProvider::RegisterWhenKillerSet(ASlasherPlayer* killer)
+{
+
 }
 
-UKillerSubjectProvider::UKillerSubjectProvider() {
-}
+UKillerSubjectProvider::UKillerSubjectProvider()
+{
 
+}

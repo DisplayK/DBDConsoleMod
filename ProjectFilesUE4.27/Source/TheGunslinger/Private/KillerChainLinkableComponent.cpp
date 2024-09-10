@@ -1,5 +1,6 @@
 #include "KillerChainLinkableComponent.h"
 
-UKillerChainLinkableComponent::UKillerChainLinkableComponent() {
-}
+UKillerChainLinkableComponent::UKillerChainLinkableComponent()
+{
 
+}

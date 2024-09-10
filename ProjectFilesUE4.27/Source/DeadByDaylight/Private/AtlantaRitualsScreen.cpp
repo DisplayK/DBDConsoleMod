@@ -1,15 +1,21 @@
 #include "AtlantaRitualsScreen.h"
 
-void UAtlantaRitualsScreen::OnRefreshRitual() {
+void UAtlantaRitualsScreen::OnRefreshRitual()
+{
+
 }
 
-void UAtlantaRitualsScreen::OnExitRequested() {
+void UAtlantaRitualsScreen::OnExitRequested()
+{
+
 }
 
-void UAtlantaRitualsScreen::OnClaimRewards(int32 ritualId) {
+void UAtlantaRitualsScreen::OnClaimRewards(int32 ritualId)
+{
+
 }
 
-UAtlantaRitualsScreen::UAtlantaRitualsScreen() {
-    this->_umgScreen = NULL;
+UAtlantaRitualsScreen::UAtlantaRitualsScreen()
+{
+	this->_umgScreen = NULL;
 }
-

@@ -1,52 +1,56 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "Interactable.h"
-#include "EBreakableState.h"
 #include "UObject/NoExportTypes.h"
+#include "EBreakableState.h"
 #include "BreakableBase.generated.h"
 
-class UBoxComponent;
+class USceneComponent;
 class UAkComponent;
 class ADBDPlayer;
+class UBoxComponent;
 class UAkAudioEvent;
-class USceneComponent;
 
 UCLASS(Abstract)
-class DEADBYDAYLIGHT_API ABreakableBase : public AInteractable {
-    GENERATED_BODY()
-public:
+class DEADBYDAYLIGHT_API ABreakableBase : public AInteractable
+{
+	GENERATED_BODY()
+
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
-    UBoxComponent* _breakableCollision;
-    
-    UPROPERTY(BlueprintReadWrite, Transient)
-    EBreakableState _state;
-    
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
-    UAkComponent* _akAudioBreakable;
-    
-    UPROPERTY(EditAnywhere)
-    UAkAudioEvent* _akAudioBreakEvent;
-    
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta=(BindWidgetOptional))
+	UBoxComponent* _breakableCollision;
+
+	UPROPERTY(BlueprintReadWrite, Transient)
+	EBreakableState _state;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta=(BindWidgetOptional))
+	UAkComponent* _akAudioBreakable;
+
+	UPROPERTY(EditAnywhere)
+	UAkAudioEvent* _akAudioBreakEvent;
+
 private:
-    UPROPERTY(Export)
-    USceneComponent* _rootComponent;
-    
+	UPROPERTY(Export)
+	USceneComponent* _rootComponent;
+
 public:
-    ABreakableBase();
-    UFUNCTION(BlueprintCallable)
-    void PlayAudioBreakable();
-    
-    UFUNCTION(BlueprintPure)
-    bool IsUnbroken() const;
-    
+	UFUNCTION(BlueprintCallable)
+	void PlayAudioBreakable();
+
+	UFUNCTION(BlueprintPure)
+	bool IsUnbroken() const;
+
 protected:
-    UFUNCTION(BlueprintImplementableEvent)
-    void ExplodeVfxSfx(const FVector impulseDir);
-    
+	UFUNCTION(BlueprintImplementableEvent)
+	void ExplodeVfxSfx(const FVector impulseDir);
+
 public:
-    UFUNCTION(BlueprintCallable)
-    void Explode(ADBDPlayer* player);
-    
+	UFUNCTION(BlueprintCallable)
+	void Explode(ADBDPlayer* player);
+
+public:
+	ABreakableBase();
 };
 
+FORCEINLINE uint32 GetTypeHash(const ABreakableBase) { return 0; }

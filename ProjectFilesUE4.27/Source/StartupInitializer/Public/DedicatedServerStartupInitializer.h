@@ -1,4 +1,5 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "DedicatedServerStartupInitializerInterface.h"
 #include "StartupInitializer.h"
@@ -7,16 +8,16 @@
 class UDBDTimeUtilities;
 
 UCLASS()
-class STARTUPINITIALIZER_API UDedicatedServerStartupInitializer : public UStartupInitializer, public IDedicatedServerStartupInitializerInterface {
-    GENERATED_BODY()
-public:
+class STARTUPINITIALIZER_API UDedicatedServerStartupInitializer : public UStartupInitializer, public IDedicatedServerStartupInitializerInterface
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(Transient)
-    UDBDTimeUtilities* _dbdTimeUtilities;
-    
+	UPROPERTY(Transient)
+	UDBDTimeUtilities* _dbdTimeUtilities;
+
 public:
-    UDedicatedServerStartupInitializer();
-    
-    // Fix for true pure virtual functions not being implemented
+	UDedicatedServerStartupInitializer();
 };
 
+FORCEINLINE uint32 GetTypeHash(const UDedicatedServerStartupInitializer) { return 0; }

@@ -1,8 +1,11 @@
 #include "NearKillerQEEvaluator.h"
 
-void UNearKillerQEEvaluator::OnRangeChanged(const bool inRange) {
+void UNearKillerQEEvaluator::OnRangeChanged(const bool inRange)
+{
+
 }
 
-UNearKillerQEEvaluator::UNearKillerQEEvaluator() {
-}
+UNearKillerQEEvaluator::UNearKillerQEEvaluator()
+{
 
+}

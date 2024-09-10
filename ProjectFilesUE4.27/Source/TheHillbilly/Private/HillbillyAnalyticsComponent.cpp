@@ -1,5 +1,6 @@
 #include "HillbillyAnalyticsComponent.h"
 
-UHillbillyAnalyticsComponent::UHillbillyAnalyticsComponent() {
-}
+UHillbillyAnalyticsComponent::UHillbillyAnalyticsComponent()
+{
 
+}

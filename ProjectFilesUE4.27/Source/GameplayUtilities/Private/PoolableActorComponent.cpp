@@ -1,5 +1,6 @@
 #include "PoolableActorComponent.h"
 
-UPoolableActorComponent::UPoolableActorComponent() {
-}
+UPoolableActorComponent::UPoolableActorComponent()
+{
 
+}

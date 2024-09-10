@@ -1,7 +1,7 @@
 #include "LoadoutSlotUnlockLevelValue.h"
 
-FLoadoutSlotUnlockLevelValue::FLoadoutSlotUnlockLevelValue() {
-    this->LoadoutSlot = ELoadoutSlot::SKIN;
-    this->BloodwebLevel = 0;
+FLoadoutSlotUnlockLevelValue::FLoadoutSlotUnlockLevelValue()
+{
+	this->LoadoutSlot = ELoadoutSlot::SKIN;
+	this->BloodwebLevel = 0;
 }
-

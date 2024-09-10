@@ -1,5 +1,6 @@
 #include "TileSpawnPointSelector.h"
 
-UTileSpawnPointSelector::UTileSpawnPointSelector() {
+UTileSpawnPointSelector::UTileSpawnPointSelector()
+{
+	this->_tileSpawnPoints = TArray<FSelectableTileSpawnPoint>();
 }
-

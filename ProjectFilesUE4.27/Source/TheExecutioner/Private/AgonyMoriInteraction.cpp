@@ -1,5 +1,6 @@
 #include "AgonyMoriInteraction.h"
 
-UAgonyMoriInteraction::UAgonyMoriInteraction() {
-}
+UAgonyMoriInteraction::UAgonyMoriInteraction()
+{
 
+}

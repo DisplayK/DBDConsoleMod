@@ -1,5 +1,5 @@
 #include "CombinedSpecialEventData.h"
 
-FCombinedSpecialEventData::FCombinedSpecialEventData() {
+FCombinedSpecialEventData::FCombinedSpecialEventData()
+{
 }
-

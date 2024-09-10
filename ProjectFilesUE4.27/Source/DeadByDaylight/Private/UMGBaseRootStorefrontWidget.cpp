@@ -1,18 +1,26 @@
 #include "UMGBaseRootStorefrontWidget.h"
+#include "TooltipPressedData.h"
+#include "ECurrencyType.h"
 
-void UUMGBaseRootStorefrontWidget::OnPurchaseAuricCellButtonPressed() {
+void UUMGBaseRootStorefrontWidget::OnPurchaseAuricCellButtonPressed()
+{
+
 }
 
-void UUMGBaseRootStorefrontWidget::OnCurrencyButtonLongPressed(const FTooltipPressedData& tooltipPressedData, const ECurrencyType currencyType) {
+void UUMGBaseRootStorefrontWidget::OnCurrencyButtonLongPressed(const FTooltipPressedData& tooltipPressedData, const ECurrencyType currencyType)
+{
+
 }
 
-void UUMGBaseRootStorefrontWidget::OnBackButtonPressed() {
+void UUMGBaseRootStorefrontWidget::OnBackButtonPressed()
+{
+
 }
 
-UUMGBaseRootStorefrontWidget::UUMGBaseRootStorefrontWidget() {
-    this->StorePageSlot = NULL;
-    this->BackButton = NULL;
-    this->CurrencyButtonsPanel = NULL;
-    this->StorefrontTitle = NULL;
+UUMGBaseRootStorefrontWidget::UUMGBaseRootStorefrontWidget()
+{
+	this->StorePageSlot = NULL;
+	this->BackButton = NULL;
+	this->CurrencyButtonsPanel = NULL;
+	this->StorefrontTitle = NULL;
 }
-

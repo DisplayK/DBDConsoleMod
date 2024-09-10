@@ -1,18 +1,21 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "SpawnEffectsOnAllSurvivorsBaseAddon.h"
 #include "SimpleSpawnEffectsOnAllSurvivorsAddonParams.h"
 #include "SimpleSpawnEffectsOnAllSurvivorsAddon.generated.h"
 
 UCLASS(meta=(BlueprintSpawnableComponent))
-class DBDCOMPETENCE_API USimpleSpawnEffectsOnAllSurvivorsAddon : public USpawnEffectsOnAllSurvivorsBaseAddon {
-    GENERATED_BODY()
-public:
+class DBDCOMPETENCE_API USimpleSpawnEffectsOnAllSurvivorsAddon : public USpawnEffectsOnAllSurvivorsBaseAddon
+{
+	GENERATED_BODY()
+
 private:
-    UPROPERTY(EditDefaultsOnly)
-    TArray<FSimpleSpawnEffectsOnAllSurvivorsAddonParams> _statusEffectsSpawnParams;
-    
+	UPROPERTY(EditDefaultsOnly)
+	TArray<FSimpleSpawnEffectsOnAllSurvivorsAddonParams> _statusEffectsSpawnParams;
+
 public:
-    USimpleSpawnEffectsOnAllSurvivorsAddon();
+	USimpleSpawnEffectsOnAllSurvivorsAddon();
 };
 
+FORCEINLINE uint32 GetTypeHash(const USimpleSpawnEffectsOnAllSurvivorsAddon) { return 0; }

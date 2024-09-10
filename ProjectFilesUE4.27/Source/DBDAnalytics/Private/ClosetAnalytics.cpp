@@ -3,15 +3,22 @@
 class ASlasherPlayer;
 class ACamperPlayer;
 
-void UClosetAnalytics::RecordClosetSearchSuccess(ASlasherPlayer* killer) {
+void UClosetAnalytics::RecordClosetSearchSuccess(ASlasherPlayer* killer)
+{
+
 }
 
-void UClosetAnalytics::RecordClosetSearchFail(ASlasherPlayer* killer) {
+void UClosetAnalytics::RecordClosetSearchFail(ASlasherPlayer* killer)
+{
+
 }
 
-void UClosetAnalytics::IncrementClosetEnter(ACamperPlayer* survivor) {
+void UClosetAnalytics::IncrementClosetEnter(ACamperPlayer* survivor)
+{
+
 }
 
-UClosetAnalytics::UClosetAnalytics() {
-}
+UClosetAnalytics::UClosetAnalytics()
+{
 
+}

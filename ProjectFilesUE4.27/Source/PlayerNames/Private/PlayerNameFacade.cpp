@@ -1,5 +1,6 @@
 #include "PlayerNameFacade.h"
 
-UPlayerNameFacade::UPlayerNameFacade() {
-}
+UPlayerNameFacade::UPlayerNameFacade()
+{
 
+}

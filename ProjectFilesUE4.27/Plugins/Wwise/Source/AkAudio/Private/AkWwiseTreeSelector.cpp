@@ -1,5 +1,6 @@
 #include "AkWwiseTreeSelector.h"
 
-UAkWwiseTreeSelector::UAkWwiseTreeSelector() {
-}
+UAkWwiseTreeSelector::UAkWwiseTreeSelector()
+{
 
+}

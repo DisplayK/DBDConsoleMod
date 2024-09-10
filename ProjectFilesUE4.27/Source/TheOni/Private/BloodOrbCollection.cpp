@@ -1,5 +1,6 @@
 #include "BloodOrbCollection.h"
 
-UBloodOrbCollection::UBloodOrbCollection() {
+UBloodOrbCollection::UBloodOrbCollection()
+{
+	this->_bloodOrbs = TArray<ABloodOrb*>();
 }
-

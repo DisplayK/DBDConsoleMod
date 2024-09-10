@@ -1,5 +1,6 @@
 #include "BaseIsPerkUsableCondition.h"
 
-UBaseIsPerkUsableCondition::UBaseIsPerkUsableCondition() {
-}
+UBaseIsPerkUsableCondition::UBaseIsPerkUsableCondition()
+{
 
+}

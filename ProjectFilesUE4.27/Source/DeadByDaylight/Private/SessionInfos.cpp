@@ -1,5 +1,5 @@
 #include "SessionInfos.h"
 
-FSessionInfos::FSessionInfos() {
+FSessionInfos::FSessionInfos()
+{
 }
-

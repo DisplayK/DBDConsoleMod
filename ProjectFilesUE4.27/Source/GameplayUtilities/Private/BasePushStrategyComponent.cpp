@@ -1,5 +1,6 @@
 #include "BasePushStrategyComponent.h"
 
-UBasePushStrategyComponent::UBasePushStrategyComponent() {
-}
+UBasePushStrategyComponent::UBasePushStrategyComponent()
+{
 
+}

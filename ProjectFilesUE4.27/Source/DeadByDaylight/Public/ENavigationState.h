@@ -1,14 +1,15 @@
 #pragma once
+
 #include "CoreMinimal.h"
 #include "ENavigationState.generated.h"
 
-UENUM()
-enum class ENavigationState {
-    RoleSelection,
-    Customization,
-    CharacterSelection,
-    Lobby,
-    BloodStore,
-    None,
+UENUM(BlueprintType)
+enum class ENavigationState : uint8
+{
+	RoleSelection,
+	Customization,
+	CharacterSelection,
+	Lobby,
+	BloodStore,
+	None,
 };
-

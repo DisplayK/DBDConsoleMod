@@ -1,5 +1,6 @@
 #include "InjectSerumOther.h"
 
-UInjectSerumOther::UInjectSerumOther() {
-}
+UInjectSerumOther::UInjectSerumOther()
+{
 
+}

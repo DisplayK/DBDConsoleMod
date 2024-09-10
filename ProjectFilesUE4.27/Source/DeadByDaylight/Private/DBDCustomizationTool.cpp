@@ -1,5 +1,7 @@
 #include "DBDCustomizationTool.h"
 
-ADBDCustomizationTool::ADBDCustomizationTool() {
+ADBDCustomizationTool::ADBDCustomizationTool()
+{
+	this->OverallLightingClass = NULL;
+	this->_spawnedActors = TArray<AActor*>();
 }
-

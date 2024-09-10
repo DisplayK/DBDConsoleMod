@@ -1,8 +1,8 @@
 #include "NightmareStatusData.h"
 
-FNightmareStatusData::FNightmareStatusData() {
-    this->SleepingState = ESleepingUIState::Off;
-    this->SleepingProgress = 0.00f;
-    this->SleepProtectionRemainingDuration = 0.00f;
+UNightmareStatusData::UNightmareStatusData()
+{
+	this->SleepingState = ESleepingUIState::Off;
+	this->SleepingProgress = 0.000000;
+	this->SleepProtectionRemainingDuration = 0.000000;
 }
-
