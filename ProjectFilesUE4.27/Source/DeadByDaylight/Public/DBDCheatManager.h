@@ -79,7 +79,7 @@ public:
 	UFUNCTION(Exec, BlueprintCallable)
 	void DBD_TeleportWithClothHandling(float x, float y, float z);
 
-	UFUNCTION(Exec, BlueprintCallable)
+	UFUNCTION(Exec)
 	void DBD_TeleportToTile(uint32 x, uint32 y);
 
 	UFUNCTION(Exec, BlueprintCallable)
@@ -322,7 +322,7 @@ public:
 	UFUNCTION(Exec, BlueprintCallable)
 	void DBD_SetCustomizationMesh(FName itemName);
 
-	UFUNCTION(Exec, BlueprintCallable)
+	UFUNCTION(Exec)
 	void DBD_SetCustomizationCharm(FName charmId, int8 slotIndex);
 
 	UFUNCTION(Exec, BlueprintCallable)
@@ -391,13 +391,13 @@ public:
 	UFUNCTION(Exec, BlueprintCallable)
 	void DBD_SelectSpawner(int32 type);
 
-	UFUNCTION(Exec, BlueprintCallable)
+	UFUNCTION(Exec)
 	void DBD_SelectSlasher(uint32 slasherIndex);
 
 	UFUNCTION(Exec, BlueprintCallable)
 	void DBD_SelectRandomObsession();
 
-	UFUNCTION(Exec, BlueprintCallable)
+	UFUNCTION(Exec)
 	void DBD_SelectCamper(uint32 camperIndex);
 
 	UFUNCTION(Exec, BlueprintCallable)
@@ -898,10 +898,10 @@ public:
 	UFUNCTION(Exec, BlueprintCallable)
 	void DBD_CrashGameWithCheck();
 
-	UFUNCTION(Exec, BlueprintCallable)
+	UFUNCTION(Exec)
 	void DBD_ContextSystemRequestTransition(uint32 contextGroupUId, uint32 contextUId, int32 transitionId);
 
-	UFUNCTION(Exec, BlueprintCallable)
+	UFUNCTION(Exec)
 	void DBD_ContextSystemRequestEnd(uint32 contextGroupUId);
 
 	UFUNCTION(Exec, BlueprintCallable)
