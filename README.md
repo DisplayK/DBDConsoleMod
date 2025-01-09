@@ -1,8 +1,8 @@
 # Console Mod
-The Console Mod for Dead by Daylight, intended to be used only on the Private Server. Enables use of a console window on the private server. 
+The Console Mod, intended to be used only on the Private Server. Enables use of a console window on the private server. 
 
-**Works on DBD 6.5.2 (still wip)**
-**Requires Horologium Core**
+**Works on 6.5.2**
+**Requires Horoccore**
 
 Notable Features:
 - Execute commands. (duh)
@@ -18,5 +18,5 @@ Press F9 to open the console window.
 
 ## Project instructions (For use with Unreal Engine)
 
-Simply start the DeadByDaylight.uproject file. Alternatively just copy files from the content directory to another UE project. 
+Simply start the uproject file. Alternatively just copy files from the content directory to another UE project. 
 
