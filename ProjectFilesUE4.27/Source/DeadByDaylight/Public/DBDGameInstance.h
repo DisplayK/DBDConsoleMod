@@ -121,25 +121,25 @@ public:
 	UPROPERTY(Transient)
 	UPlayerProfileDAL* PlayerProfileDAL;
 
-	UPROPERTY(Transient)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int32 GenerationSeed;
 
-	UPROPERTY(Transient)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FString PaperTileAssetName;
 
-	UPROPERTY(Transient)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	int32 GenerationPlayerCount;
 
-	UPROPERTY(Transient)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FString PremadeMap;
 
-	UPROPERTY(Transient)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<FForceSpawnTileData> ForceSpawnTileData;
 
 	UPROPERTY(BlueprintReadWrite, Transient)
 	AOfferingSequenceManager* OfferingSequence;
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TArray<FParadiseData> ParadiseData;
 
 	UPROPERTY(Transient)
@@ -432,10 +432,10 @@ public:
 	UFUNCTION(BlueprintPure)
 	ULightingHelper* GetLightingHelper();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintPure)
 	ABaseSky* GetLevelLighting();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintPure)
 	UInventoryHandler* GetInventoryHandler() const;
 
 	UFUNCTION(BlueprintPure)
@@ -564,7 +564,7 @@ public:
 	UFUNCTION(BlueprintCallable, Exec)
 	void DBD_ApplyMist(const float fogModifier);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void BeginLoadingScreen(const FString& MapName);
 
 	UFUNCTION(BlueprintCallable)

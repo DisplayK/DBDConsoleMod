@@ -14,43 +14,43 @@ class DEADBYDAYLIGHT_API ADBDPlayerController_Menu : public ADBDPlayerController
 	GENERATED_BODY()
 
 public:
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void TogglePlayerReadyState();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void SetPlayerReady(bool isReady);
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void Server_SetReadyToTravel();
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void Server_SetPlayerReady(bool isReady);
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void Server_SetPlayerLoadout(FPlayerLoadoutData desiredLoadout);
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void Server_SetEquipedPerks(const TArray<FName>& perkIds, const TArray<int32>& perkLevels, bool callOnRep);
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void Server_SetCustomizationMeshes(const FCharacterCustomization& customization);
 
 	UFUNCTION(Server, Reliable, WithValidation)
 	void Server_SetCustomizationCharm(FName charmId, int8 slotIndex);
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void Server_SetCharacterLevel(int32 characterLevel, int32 prestigeLevel, bool callOnRep);
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void Server_SetCharacterData(int32 characterIndex, const FPlayerDataSync& playerDataSync);
 
-	UFUNCTION(Server, Reliable, WithValidation)
+	UFUNCTION(Server, Reliable, WithValidation, BlueprintCallable)
 	void Server_GamePresetDataFromClient(const FGamePresetData& gameState);
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void Authority_TogglePlayerReadyState();
 
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable)
 	void Authority_SetPlayerReady(bool isReady);
 
 public:

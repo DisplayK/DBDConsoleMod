@@ -16,23 +16,22 @@ struct FBaseItemData: public FDBDTableRowBase
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	EInventoryItemType Type;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FItemUIData UIData;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FText GenericDisplayName;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TSoftClassPtr<AActor> ItemBlueprint;
 
-	UPROPERTY(EditAnywhere)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	TSoftObjectPtr<UDBDPrimaryDataAsset> AssetData;
 
-protected:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FString ItemId;
 
 public:
