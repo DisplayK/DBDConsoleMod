@@ -8,9 +8,10 @@ body:
       label: What version of DBD are you using?
       multiple: false
       options:
+        - 6.7.0
+        - 6.5.2
         - 5.7.2
         - 5.6.2
-        - Both
   - type: input
     id: modversion
     attributes:
