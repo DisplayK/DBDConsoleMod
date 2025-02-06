@@ -1,7 +1,7 @@
 # Console Mod
 The Console Mod, intended to be used only on the Private Server. Enables use of a console window on the private server. 
 
-**Works on Private Server 6.7.0**  
+**Works on Private Server 6.7.2**  
 **Requires Horoccore**
 
 Notable Features:
